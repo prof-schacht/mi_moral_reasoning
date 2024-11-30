@@ -157,13 +157,15 @@ class LayerVarianceAnalyzer:
                 attn_pattern = cache[f'blocks.{layer}.attn.hook_pattern']
                 
                 # Get only the last token's activations for comparison
-                # Mean over all tokens (mean(dim=1))
                 # Last token only ([:, -1, :])
-                # First token only ([:, 0, :])
+                layer_acts.append(resid[:, -1, :])
+                attn_acts.append(attn[:, -1, :])
+                mlp_acts.append(mlp[:, -1, :])
 
-                layer_acts.append(resid.mean(dim=1))
-                attn_acts.append(attn.mean(dim=1))
-                mlp_acts.append(mlp.mean(dim=1))
+                # Mean over all tokens (mean(dim=1))
+                # layer_acts.append(resid.mean(dim=1))
+                # attn_acts.append(attn.mean(dim=1))
+                # mlp_acts.append(mlp.mean(dim=1))
                 
             # Stack activations
             layer_acts = torch.stack(layer_acts)
