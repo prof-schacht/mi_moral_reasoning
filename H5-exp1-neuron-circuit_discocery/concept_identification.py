@@ -13,6 +13,7 @@ import traceback
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# %%
 @dataclass
 class CoactivationPattern:
     neurons: Set[Tuple[int, int]]  # Set of (layer, neuron) pairs
@@ -138,10 +139,12 @@ class NeuronActivationCollector:
                     mlp_acts = cache['post', layer_idx, 'mlp']
                     batch_activations.append(mlp_acts)
                 
-                all_activations.append(torch.stack(batch_activations))
+                # Stack along the layer dimension instead of batch dimension
+                batch_stack = torch.stack(batch_activations, dim=1)  # [batch, layers, seq, neurons]
+                all_activations.append(batch_stack)
         
-        # Combine all batches
-        return torch.cat(all_activations, dim=0)
+        # Combine all batches along the batch dimension
+        return torch.cat(all_activations, dim=0)  # [total_batch, layers, seq, neurons]
 
     def compute_coactivation_matrix(self, activations: torch.Tensor) -> torch.Tensor:
         """Compute co-activation matrix across all neurons efficiently on GPU."""
@@ -437,8 +440,16 @@ class NeuronActivationCollector:
         plt.tight_layout()
         return fig
 
+
+
+# %% 
+# Idea to on moral circuit identification
+
+# %%
 # Example usage
 if __name__ == "__main__":
+
+# %%
     # Set CUDA device options for better error handling
     torch.backends.cuda.matmul.allow_tf32 = False  # For better numerical precision
     torch.backends.cudnn.allow_tf32 = False
@@ -450,7 +461,7 @@ if __name__ == "__main__":
         print(f"Error initializing collector: {e}")
         print("Trying with CPU...")
         collector = NeuronActivationCollector('gpt2', batch_size=8)
-    
+# %%
     # Example texts
     texts = [
         "The cat sat on the mat.",
@@ -459,27 +470,66 @@ if __name__ == "__main__":
         "Machine learning models process data.",
         "OpenAI released GPT-4 in 2023."
     ]
+# # %%
+#     # Perform hierarchical analysis
+#     analysis_results = collector.analyze_hierarchical_patterns(texts)
 
-    # Perform hierarchical analysis
-    analysis_results = collector.analyze_hierarchical_patterns(texts)
+#     # Print results
+#     print("\nAnalysis Results:")
+#     print(f"Found {len(analysis_results['patterns'])} co-activation patterns")
+#     print(f"Found {len(analysis_results['cross_layer_patterns'])} cross-layer patterns")
+#     print(f"Found {len(analysis_results['pattern_hierarchies'])} hierarchical relationships")
 
-    # Print results
-    print("\nAnalysis Results:")
-    print(f"Found {len(analysis_results['patterns'])} co-activation patterns")
-    print(f"Found {len(analysis_results['cross_layer_patterns'])} cross-layer patterns")
-    print(f"Found {len(analysis_results['pattern_hierarchies'])} hierarchical relationships")
+#     # Visualize patterns
+#     fig = collector.visualize_patterns()
+#     plt.show()
 
-    # Visualize patterns
-    fig = collector.visualize_patterns()
-    plt.show()
+#     # Print some example patterns
+#     print("\nExample Patterns:")
+#     for i, pattern in enumerate(collector.coactivation_patterns[:3]):  # Show first 3 patterns
+#         print(f"\nPattern {i+1}:")
+#         print(f"Size: {len(pattern.neurons)} neurons")
+#         print(f"Strength: {pattern.strength:.3f}")
+#         print(f"Frequency: {pattern.frequency}")
+#         print("Example text triggering this pattern:", pattern.exemplars[0] if pattern.exemplars else "No examples")
 
-    # Print some example patterns
-    print("\nExample Patterns:")
-    for i, pattern in enumerate(collector.coactivation_patterns[:3]):  # Show first 3 patterns
-        print(f"\nPattern {i+1}:")
-        print(f"Size: {len(pattern.neurons)} neurons")
-        print(f"Strength: {pattern.strength:.3f}")
-        print(f"Frequency: {pattern.frequency}")
-        print("Example text triggering this pattern:", pattern.exemplars[0] if pattern.exemplars else "No examples")
+# # %%
 
+
+# # %%
+#     tracer = AutomatedCircuitTracer('gpt2')
+
+
+# # %%
+#     # Find interpretable neurons
+#     interpretable_neurons = tracer.find_interpretable_neurons(texts)
+
+# # %%
+#     print(interpretable_neurons)
+
+# # %%
+#     # Trace circuits from these neurons
+#     circuits = tracer.trace_causal_paths(interpretable_neurons, texts)
+
+#     # Analyze results
+#     for circuit in circuits:
+#         print(f"Circuit starting at {circuit['source']} with strength {circuit['strength']}")
+#         print("Connections:")
+#         for conn in circuit['connections']:
+#             print(f"  → {conn['target']} (effect: {conn['effect']:.3f})")
+
+# %% Moral analysis
+    moral_pairs = [
+        ("I should help the elderly cross the street", 
+         "I should ignore the elderly crossing the street"),
+    ]
+
+# %%
+    moral_analyzer = MoralBehaviorAnalyzer('gpt2')
+
+# %%
+    results = moral_analyzer.analyze_moral_behavior(moral_pairs)
+
+# %%
+    moral_analyzer.visualize_moral_circuits(results)
 # %%
