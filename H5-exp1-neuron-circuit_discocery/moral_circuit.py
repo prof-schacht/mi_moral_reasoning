@@ -18,6 +18,21 @@ import os
 
 # %%
 
+# Load model = 
+device = "cuda" if torch.cuda.is_available() else "cpu"
+dtype = torch.float32
+model_name = 'google/gemma-2-9b-it'
+model = HookedTransformer.from_pretrained(
+                model_name,
+                device=device,
+                dtype=dtype,
+                default_padding_side="right",
+                center_writing_weights=True,
+                center_unembed=True,
+                fold_ln=True,
+                move_to_device=True
+            )
+
 # %%
 # Idea to extend this by focusing more on sparse neurons and causal invterventions to identify the connected neurons
 # For studying moral behavior in neurons/layers, we'd want to design a targeted analysis approach. Here's how we could modify the code:
@@ -44,7 +59,7 @@ class CoactivationPattern:
 
 
 class NeuronActivationCollector:
-    def __init__(self, model_name: str = 'gpt2', 
+    def __init__(self, model, 
                  activation_threshold: float = 0.7,
                  correlation_threshold: float = 0.6,
                  batch_size: int = 32):
@@ -56,16 +71,7 @@ class NeuronActivationCollector:
         try:
             # Initialize model with explicit device and dtype
             print(f"Loading model {model_name}...")
-            self.model = HookedTransformer.from_pretrained(
-                model_name,
-                device=self.device,
-                dtype=self.dtype,
-                default_padding_side="right",
-                center_writing_weights=True,
-                center_unembed=True,
-                fold_ln=True,
-                move_to_device=True
-            )
+            self.model = model
             print("Model loaded successfully")
             
         except RuntimeError as e:
@@ -446,8 +452,8 @@ class NeuronActivationCollector:
         return fig
 
 class MoralBehaviorAnalyzer(NeuronActivationCollector):
-    def __init__(self, model_name: str = 'gpt2'):
-        super().__init__(model_name)
+    def __init__(self, model):
+        super().__init__(model)
         
     def analyze_moral_behavior(self, moral_pairs: List[Tuple[str, str]], significant_diff: float = 0.5, consistency_threshold: float = 0.8) -> Dict:
         """
@@ -595,6 +601,152 @@ class MoralBehaviorAnalyzer(NeuronActivationCollector):
         
         plt.tight_layout()
         plt.show()
+
+    def visualize_neuron_components(self, results: Dict) -> None:
+        """
+        Create a network graph visualization with different colors for each connected component.
+        """
+        import networkx as nx
+        import matplotlib.pyplot as plt
+        import numpy as np
+        
+        # Create a new graph
+        G = nx.Graph()
+        
+        # Add nodes
+        all_neurons = [(n, 'moral') for n in results['moral_neurons']] + \
+                    [(n, 'immoral') for n in results['immoral_neurons']]
+        
+        for neuron, ntype in all_neurons:
+            G.add_node(f"L{neuron[0]}N{neuron[1]}", 
+                    type=ntype,
+                    layer=neuron[0])
+        
+        # Add edges using the same logic as before
+        activation_diffs = results['activation_differences']
+        nodes = list(G.nodes())
+        
+        # Add edges between neurons that have similar activation patterns
+        for i, node1 in enumerate(nodes):
+            layer1, neuron1 = map(int, node1[1:].split('N'))
+            for node2 in nodes[i+1:]:
+                layer2, neuron2 = map(int, node2[1:].split('N'))
+                
+                # Only connect neurons within 2 layers of each other
+                layer_dist = abs(layer1 - layer2)
+                if layer_dist <= 2:
+                    # Compare activation patterns between the two neurons
+                    act1 = activation_diffs[layer1, neuron1]
+                    act2 = activation_diffs[layer2, neuron2]
+                    # Calculate similarity based on mean absolute difference
+                    similarity = 1 / (1 + torch.mean(torch.abs(act1 - act2)).item())
+                    
+                    # Add edge if neurons have similar enough activation patterns
+                    if similarity > 0.3:
+                        G.add_edge(node1, node2, weight=similarity)
+        
+        # Find groups of neurons that are connected to each other through edges
+        # Each component represents a group of neurons with similar activation patterns
+        components = list(nx.connected_components(G))
+        
+        # Create a color map for components
+        # Using distinct colors for better visibility
+        colors = ['#FF9999', '#66B2FF', '#99FF99', '#FFCC99', '#FF99CC', '#99FFCC', '#FFB366', '#99FF99']
+        
+        # Set up the plot
+        plt.figure(figsize=(15, 10))
+        
+        # Use spring layout with adjusted parameters for better spacing
+        pos = nx.spring_layout(G, k=2, iterations=50)
+        
+        # Draw each component with a different color
+        for idx, component in enumerate(components):
+            subgraph = G.subgraph(component)
+            color = colors[idx % len(colors)]  # Cycle through colors if more components than colors
+            
+            # Draw nodes for this component
+            nx.draw_networkx_nodes(G, pos, 
+                                nodelist=list(component),
+                                node_color=color, 
+                                node_size=500, 
+                                alpha=0.7)
+            
+            # Draw edges within this component
+            edge_list = list(subgraph.edges())
+            if edge_list:
+                edge_weights = [subgraph[u][v]['weight'] * 2 for u, v in edge_list]
+                nx.draw_networkx_edges(G, pos,
+                                    edgelist=edge_list,
+                                    width=edge_weights,
+                                    alpha=0.5)
+        
+        # Add labels
+        nx.draw_networkx_labels(G, pos)
+        
+        # Add legend for components
+        legend_elements = [plt.Rectangle((0, 0), 1, 1, fc=colors[i], alpha=0.7, 
+                                    label=f'Component {i+1}') 
+                        for i in range(len(components))]
+        plt.legend(handles=legend_elements)
+        
+        plt.title("Network of Moral Neurons - Colored by Connected Components")
+        plt.axis('off')
+        plt.tight_layout()
+        
+        # Print component information
+        print("\nComponent Analysis:")
+        for idx, component in enumerate(components):
+            print(f"\nComponent {idx + 1} ({len(component)} neurons):")
+            print("Neurons:", ', '.join(sorted(list(component))))
+            
+            # Calculate average layer for this component
+            layers = [int(node.split('N')[0][1:]) for node in component]
+            avg_layer = sum(layers) / len(layers)
+            print(f"Average layer: {avg_layer:.2f}")
+        
+        print(components)
+        
+        # Create a new figure for layer distribution
+        plt.figure(figsize=(12, 6))
+        
+        # Create a dictionary to store layer counts for each component
+        component_layer_dist = {}
+        colors = ['#FF9999', '#66B2FF', '#99FF99', '#FFCC99', '#FF99CC', '#99FFCC', '#FFB366', '#99FF99']
+        
+        # Calculate layer distribution for each component
+        for idx, component in enumerate(components):
+            layer_counts = np.zeros(self.n_layers)
+            for node in component:
+                layer = int(node.split('N')[0][1:])
+                layer_counts[layer] += 1
+            component_layer_dist[idx] = layer_counts
+            
+            # Plot the distribution with dashed lines connecting all points
+            plt.plot(range(self.n_layers), layer_counts, '--', 
+                    color=colors[idx % len(colors)], 
+                    alpha=0.7)
+            
+            # Only plot dots for non-zero values
+            non_zero_mask = layer_counts > 0
+            plt.plot(np.arange(self.n_layers)[non_zero_mask], 
+                    layer_counts[non_zero_mask], 'o',
+                    color=colors[idx % len(colors)],
+                    label=f'Component {idx + 1}',
+                    markersize=8)
+        
+        plt.xlabel('Layer')
+        plt.ylabel('Number of Neurons')
+        plt.title('Component Distribution Across Layers')
+        plt.grid(True, linestyle='--', alpha=0.3)
+        plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+        plt.tight_layout()
+        plt.show()
+        
+        return G
+    
+    def visualize_neuron_boxplot(self, results: Dict) -> None:
+        """Visualize neuron layer distribution  differences as boxplots per component."""
+        pass
 
     def generate_text(self, input_text: str, max_new_tokens: int = 10, temperature: float = 1.0) -> str:
         """
@@ -856,13 +1008,13 @@ if os.path.exists('moral_circuit_results.pkl'):
 
 
 # %%
-moral_analyzer = MoralBehaviorAnalyzer(model_name='google/gemma-2-9b-it')
+moral_analyzer = MoralBehaviorAnalyzer(model=model)
 # %%
 # Print the output of the model for the 10 tokens after generateion
 moral_analyzer.generate_text(moral_pairs[1][1], max_new_tokens=30)
 
 # %%
-results = moral_analyzer.analyze_moral_behavior(moral_pairs[:2], significant_diff=0.2, consistency_threshold=0.5)
+results = moral_analyzer.analyze_moral_behavior(moral_pairs, significant_diff=0.2, consistency_threshold=0.5)
 
 # %% 
 # Save the results
@@ -873,6 +1025,8 @@ with open('moral_circuit_results.pkl', 'wb') as f:
 # %%
 moral_analyzer.visualize_moral_circuits(results)
 # %%
+
+moral_analyzer.visualize_neuron_components(results)
 
 # Descriptions
 # %%
