@@ -1,0 +1,2904 @@
+./extract_activations.py
+---
+# %%
+import logging
+from pathlib import Path
+from data.model_config import ModelConfig
+from data.MFRCDataProcessingPipeline import MFRCConfig
+from data.utils import initialize_model_and_dataset
+from models.activation_extractor import ActivationExtractor
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+# %%
+def main():
+    # 1. Create configurations
+    model_config = ModelConfig(
+        model_name="google/gemma-2-9b-it",
+        device_map="cuda:0",
+        max_length=768,
+        batch_size=1
+    )
+    
+    mfrc_config = MFRCConfig(
+        max_length=768,
+        batch_size=1,
+        num_workers=4,
+        test_size=0.1,
+        val_size=0.1,
+        random_state=42,
+        cache_dir='./cache',
+        min_samples_per_class=2
+    )
+    
+    # 2. Initialize model and dataset
+    model, train_loader, val_loader, test_loader, label_mapping = initialize_model_and_dataset(
+        model_config=model_config,
+        mfrc_config=mfrc_config
+    )
+    
+    # 3. Initialize activation extractor
+    extractor = ActivationExtractor(model)
+    
+    # 4. Create directory for saving activations
+    save_dir = Path("./data/activations")
+    save_dir.mkdir(parents=True, exist_ok=True)
+    
+    # 5. Extract and save activations for each split
+    logger.info("Extracting activations from training set...")
+    extractor.process_dataset(train_loader, str(save_dir / "train"))
+    
+    logger.info("Extracting activations from validation set...")
+    extractor.process_dataset(val_loader, str(save_dir / "val"))
+    
+    logger.info("Extracting activations from test set...")
+    extractor.process_dataset(test_loader, str(save_dir / "test"))
+    
+    return model, train_loader, val_loader, test_loader, label_mapping
+
+# %%
+if __name__ == "__main__":
+    model, train_loader, val_loader, test_loader, label_mapping = main()
+
+# %%
+
+
+---
+./train_probes.py
+---
+# %%
+"""
+Script to train logistic probes for each moral foundation category.
+"""
+
+import logging
+from pathlib import Path
+from models.probe_trainer import ProbeTrainer
+import torch
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+def main():
+    """Train logistic probes for all layers and moral foundation categories."""
+    # Check CUDA availability
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    logger.info(f"Using device: {device}")
+    
+    if device == "cuda":
+        # Log GPU info
+        logger.info(f"CUDA Device: {torch.cuda.get_device_name(0)}")
+        logger.info(f"Memory allocated: {torch.cuda.memory_allocated(0) / 1024**2:.2f} MB")
+        logger.info(f"Memory cached: {torch.cuda.memory_reserved(0) / 1024**2:.2f} MB")
+    
+    # Initialize trainer with optimized parameters for logistic regression
+    trainer = ProbeTrainer(
+        activation_dir="data/activations",
+        probe_dir="data/probes",
+        num_classes=8,  # Number of moral foundations
+        batch_size=256,  # Large batch size for stable gradients
+        learning_rate=0.001,  # Standard learning rate for logistic regression
+        num_epochs=50,  # Sufficient epochs with early stopping
+        device=device
+    )
+    
+    # Train logistic probes for all layers
+    trainer.train_all_probes()
+    
+    # Final GPU cleanup
+    if device == "cuda":
+        torch.cuda.empty_cache()
+        logger.info("Cleared CUDA cache")
+
+if __name__ == "__main__":
+    main() 
+# %%
+
+
+
+---
+./visualize_results.py
+---
+# %%
+"""
+Script to generate visualizations of probe performance across layers and moral foundations.
+"""
+
+import logging
+from models.visualization import plot_layer_metrics, plot_class_distribution
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+def main():
+    """Generate visualizations of probe performance."""
+    # Set paths
+    probe_dir = "data/probes"
+    output_dir = "figures"
+    
+    # Generate plots
+    logger.info("Generating layer-wise metric plots...")
+    plot_layer_metrics(probe_dir, output_dir)
+    
+    logger.info("Generating class distribution plots...")
+    plot_class_distribution(probe_dir, output_dir)
+    
+    logger.info("Visualization complete!")
+
+if __name__ == "__main__":
+    main()
+# %% 
+
+---
+./notebooks/activation_analysis_scratchpad.py
+---
+# %%
+"""
+Scratchpad for analyzing saved activation files.
+"""
+
+import logging
+from pathlib import Path
+import torch
+import numpy as np
+import matplotlib.pyplot as plt
+from collections import Counter
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+# %%
+def analyze_saved_activations(activation_dir: str = "../data/activations"):
+    """Analyze the saved activation files to check what data we're storing.
+    
+    Args:
+        activation_dir: Directory containing the saved activation files
+    """
+    activation_path = Path(activation_dir)
+    
+    # Analyze each split (train/val/test)
+    for split in ['train', 'val', 'test']:
+        split_path = activation_path / split
+        if not split_path.exists():
+            logger.warning(f"Split directory not found: {split_path}")
+            continue
+            
+        logger.info(f"\nAnalyzing {split} split activations...")
+        
+        # Get all layer files
+        layer_files = list(split_path.glob("*.pt"))
+        logger.info(f"Found {len(layer_files)} layer files")
+        
+        # Analyze each layer file
+        for layer_file in sorted(layer_files):
+            logger.info(f"\nAnalyzing {layer_file.name}...")
+            
+            # Load data
+            data = torch.load(layer_file)
+            
+            # Basic information about the data
+            logger.info("\nData contents:")
+            for key, value in data.items():
+                if isinstance(value, torch.Tensor):
+                    logger.info(f"- {key}: tensor of shape {value.shape}")
+                elif isinstance(value, list):
+                    logger.info(f"- {key}: list of length {len(value)}")
+                else:
+                    logger.info(f"- {key}: {type(value)}")
+            
+            # Analyze activations
+            activations = data['activations']
+            logger.info(f"\nActivation analysis:")
+            logger.info(f"Shape: {activations.shape}")
+            logger.info(f"Type: {activations.dtype}")
+            logger.info(f"Number of samples: {activations.shape[0]}")
+            logger.info(f"Hidden dimension: {activations.shape[1]}")
+            
+            
+            # Label distribution
+            if 'labels' in data:
+                label_counts = Counter(data['labels'])
+                logger.info("\nLabel distribution:")
+                for label, count in sorted(label_counts.items()):
+                    logger.info(f"- Label {label}: {count} samples ({count/len(data['labels'])*100:.2f}%)")
+            
+            # Text examples
+            if 'texts' in data:
+                logger.info("\nText examples (first 3):")
+                for i, text in enumerate(data['texts'][:3]):
+                    logger.info(f"Sample {i}: {text[:100]}...")
+
+            # Activation examples
+            if 'activations' in data:
+                logger.info("\nActivation examples (first 3):")
+                activations = data['activations'][:3]
+                logger.info(f"Activations shape: {activations.shape}")
+                for i, activation in enumerate(activations):
+                    logger.info(f"Activation {i} shape: {activation.shape}")
+            
+            # Memory cleanup
+            del data
+            torch.cuda.empty_cache()
+
+# %%
+if __name__ == "__main__":
+    analyze_saved_activations() 
+# %%
+
+
+---
+./notebooks/nnsight_scratchpad.py
+---
+# %%
+"""
+Scratchpad for exploring NNSight model structure and hookpoints.
+"""
+
+import logging
+from pathlib import Path
+from nnsight import LanguageModel
+import torch
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+# %%
+def explore_last_token_extraction(model_name: str = "google/gemma-2b-it"):
+    """Explore extraction of last token activations."""
+    
+    logger.info(f"Loading model: {model_name}")
+    model = LanguageModel(model_name, device_map="cuda:0")
+    
+    # Example batch with different lengths
+    example_inputs = [
+        "This is a short input.",
+        "This is a longer input with more tokens to process.",
+    ]
+    
+    # First tokenize the inputs to get input_ids and attention_mask
+    tokenized = model.tokenizer(
+        example_inputs,
+        padding='max_length',  # Explicit padding strategy
+        truncation=True,
+        max_length=256,
+        return_tensors="pt",
+        padding_side='right'  # Explicitly set padding to right side
+    ).to("cuda:0")
+    
+    # Print raw token IDs for debugging
+    logger.info("\nRaw token IDs:")
+    for i, ids in enumerate(tokenized['input_ids']):
+        logger.info(f"Input {i}: {ids.tolist()}")
+    
+    # Get attention mask and find real token positions
+    attention_mask = tokenized['attention_mask']
+    
+    # Find the last real token position (before padding starts)
+    last_token_positions = attention_mask.sum(dim=1) - 1
+    
+    logger.info("\nInput shapes and positions:")
+    logger.info(f"Input IDs shape: {tokenized['input_ids'].shape}")
+    logger.info(f"Attention mask shape: {attention_mask.shape}")
+    logger.info(f"Last token positions: {last_token_positions}")
+    
+    # Store saved items
+    saved_items = {}
+    
+    logger.info("\nExploring last token extraction...")
+    with model.trace() as model_trace:
+        with model_trace.invoke(tokenized['input_ids']) as invoker:
+            if hasattr(model, 'model'):  # Gemma
+                # Extract activations only for last tokens
+                layer_idx = 0  # Example with first layer
+                saved_items['residual'] = model.model.layers[layer_idx].output.save()
+    
+    # After trace completes, process the saved values
+    if 'residual' in saved_items:
+        residual_value = saved_items['residual'].value
+        if isinstance(residual_value, tuple):
+            residual_value = residual_value[0]
+            
+        logger.info(f"\nResidual value type: {type(residual_value)}")
+        logger.info(f"Residual value shape: {residual_value.shape}")
+        
+        # Select last token for each sequence in batch
+        batch_size = len(last_token_positions)
+        last_token_activations = torch.stack([
+            residual_value[i, pos.item(), :] 
+            for i, pos in enumerate(last_token_positions)
+        ])
+        
+        logger.info("\nActivation shapes:")
+        logger.info(f"Full residual stream: {residual_value.shape}")
+        logger.info(f"Last token only: {last_token_activations.shape}")
+        
+        # Memory size comparison
+        full_size = residual_value.element_size() * residual_value.nelement()
+        last_token_size = last_token_activations.element_size() * last_token_activations.nelement()
+        
+        logger.info("\nMemory usage:")
+        logger.info(f"Full activation size: {full_size / 1024 / 1024:.2f} MB")
+        logger.info(f"Last token only size: {last_token_size / 1024 / 1024:.2f} MB")
+        
+        # Print detailed token information for verification
+        logger.info("\nDetailed token information:")
+        for i, (text, pos) in enumerate(zip(example_inputs, last_token_positions)):
+            tokens = model.tokenizer.convert_ids_to_tokens(tokenized['input_ids'][i])
+            non_pad_tokens = [t for t in tokens if t not in [model.tokenizer.pad_token]]
+            logger.info(f"\nInput {i}: {text}")
+            logger.info(f"All tokens: {tokens}")
+            logger.info(f"Non-padding tokens: {non_pad_tokens}")
+            logger.info(f"Attention mask: {attention_mask[i].tolist()}")
+            logger.info(f"Last token position: {pos.item()}")
+            logger.info(f"Last token: {tokens[pos.item()]}")
+            logger.info(f"Last 3 tokens: {tokens[max(0, pos.item()-2):pos.item()+1]}")
+
+    # Memory cleanup
+    del model
+    torch.cuda.empty_cache()
+
+# %%
+if __name__ == "__main__":
+    explore_last_token_extraction()
+# %%
+
+
+---
+./models/activation_extractor.py
+---
+"""
+Handles the extraction of activations from language models using NNSight.
+"""
+
+import logging
+import torch
+from pathlib import Path
+from typing import Dict, List, Tuple, Optional
+from torch.utils.data import DataLoader
+from nnsight import LanguageModel
+import os
+
+logger = logging.getLogger(__name__)
+
+class ActivationExtractor:
+    """Extracts and manages model activations using NNSight."""
+    
+    def __init__(self, model, layer_stride: int = 5):
+        """Initialize the activation extractor.
+        
+        Args:
+            model: The NNSight model to extract activations from
+            layer_stride: Extract activations from every nth layer (default: 5)
+        """
+        self.model = model
+        self.layer_stride = layer_stride
+        self.logger = logging.getLogger(__name__)
+
+    def _get_layer_names(self):
+        """Get names of layers to extract activations from.
+        Always includes every nth layer (based on stride) plus the last layer.
+        """
+        if hasattr(self.model, 'model'):  # Gemma
+            num_layers = len(self.model.model.layers)
+            # Get every nth layer
+            layer_indices = list(range(0, num_layers, self.layer_stride))
+            # Add last layer if not already included
+            if (num_layers - 1) not in layer_indices:
+                layer_indices.append(num_layers - 1)
+            # Sort to maintain order
+            layer_indices.sort()
+            
+            self.logger.info(f"Extracting layers: {layer_indices}")
+            return [f"model.layers[{i}].output" for i in layer_indices]
+        else:
+            raise ValueError("Unsupported model type")
+
+    def extract_batch_activations(self, batch_inputs):
+        """Extract activations from the last token of each sequence in the batch.
+        
+        Args:
+            batch_inputs: Batch of input sequences or tokenized inputs
+            
+        Returns:
+            dict: Layer name -> tensor of shape (batch_size, hidden_dim)
+        """
+        # Handle both raw text and pre-tokenized inputs
+        if isinstance(batch_inputs, dict) and 'input_ids' in batch_inputs:
+            # Already tokenized
+            tokenized = {
+                'input_ids': batch_inputs['input_ids'].to('cuda:0'),
+                'attention_mask': batch_inputs['attention_mask'].to('cuda:0')
+            }
+        else:
+            # Raw text needs tokenization
+            tokenized = self.model.tokenizer(
+                batch_inputs,
+                padding='max_length',
+                truncation=True,
+                max_length=256,
+                return_tensors="pt",
+                padding_side='right'
+            ).to("cuda:0")
+        
+        # Find last token positions using attention mask
+        attention_mask = tokenized['attention_mask']
+        last_token_positions = attention_mask.sum(dim=1) - 1
+        
+        # Store saved items
+        saved_items = {}
+        layer_names = self._get_layer_names()
+        
+        self.logger.info(f"Extracting activations from {len(layer_names)} layers")
+        
+        with self.model.trace() as model_trace:
+            with model_trace.invoke(tokenized['input_ids']) as invoker:
+                for layer_name in layer_names:
+                    saved_items[layer_name] = eval(f"self.model.{layer_name}.save()")
+        
+        # Process saved values
+        activations = {}
+        for layer_name, saved in saved_items.items():
+            layer_value = saved.value
+            if isinstance(layer_value, tuple):
+                layer_value = layer_value[0]
+            
+            # Extract only last token activations
+            last_token_activations = torch.stack([
+                layer_value[i, pos.item(), :] 
+                for i, pos in enumerate(last_token_positions)
+            ])
+            
+            # Move to CPU to save memory
+            activations[layer_name] = last_token_activations.cpu()
+            
+            # Clear CUDA cache after processing each layer
+            torch.cuda.empty_cache()
+        
+        return activations
+
+    def process_dataset(self, dataloader, save_dir: str):
+        """Process entire dataset and save activations.
+        
+        Args:
+            dataloader: DataLoader containing text inputs or tokenized inputs
+            save_dir: Directory to save activations to
+        """
+        os.makedirs(save_dir, exist_ok=True)
+        temp_dir = os.path.join(save_dir, "temp")
+        os.makedirs(temp_dir, exist_ok=True)
+        
+        # Track total samples and which layers we've seen
+        total_samples = 0
+        layer_names = None
+        
+        # Update metadata tracking - remove texts, keep only tokens and labels
+        all_input_tokens = []
+        all_labels = []
+        
+        try:
+            # Process each batch
+            for batch_idx, batch in enumerate(dataloader):
+                self.logger.info(f"Processing batch {batch_idx}")
+                
+                try:
+                    # Handle pre-tokenized inputs and extract labels
+                    if isinstance(batch, dict):
+                        if 'input_ids' in batch:
+                            inputs = batch
+                            input_tokens = batch['input_ids']
+                        else:
+                            raise KeyError(f"No input_ids field found in batch. Available keys: {list(batch.keys())}")
+                        
+                        # Get labels
+                        if 'labels' in batch:
+                            labels = batch['labels']
+                        else:
+                            raise KeyError("No labels found in batch")
+                            
+                    elif isinstance(batch, (list, tuple)):
+                        inputs = batch[0]
+                        # Tokenize if not already tokenized
+                        if not isinstance(inputs, torch.Tensor):
+                            tokenized = self.model.tokenizer(
+                                inputs,
+                                padding='max_length',
+                                truncation=True,
+                                max_length=256,
+                                return_tensors="pt"
+                            )
+                            input_tokens = tokenized['input_ids']
+                        else:
+                            input_tokens = inputs
+                        labels = batch[1]
+                    else:
+                        raise TypeError(f"Unsupported batch type: {type(batch)}")
+                    
+                    # Ensure labels are tensors
+                    if not isinstance(labels, torch.Tensor):
+                        labels = torch.tensor(labels)
+                    
+                    # Store metadata
+                    all_input_tokens.append(input_tokens.cpu())
+                    all_labels.append(labels.cpu())
+                    
+                    # Extract activations for current batch
+                    batch_activations = self.extract_batch_activations(inputs)
+                    
+                    # Initialize layer_names if not done yet
+                    if layer_names is None:
+                        layer_names = list(batch_activations.keys())
+                    
+                    # Save each layer's activations to a temporary file
+                    for layer_name, activations in batch_activations.items():
+                        temp_path = os.path.join(temp_dir, f"{layer_name}_batch_{batch_idx}.pt")
+                        torch.save({
+                            'activations': activations,
+                            'batch_size': len(input_tokens)
+                        }, temp_path)
+                    
+                    # Update total samples count
+                    total_samples += len(input_tokens)
+                    
+                    # Clear batch memory
+                    del batch_activations
+                    torch.cuda.empty_cache()
+                    
+                    # Log progress
+                    if (batch_idx + 1) % 10 == 0:
+                        self.logger.info(f"Processed {total_samples} samples so far...")
+                    
+                except Exception as e:
+                    self.logger.error(f"Error processing batch {batch_idx}: {str(e)}")
+                    self.logger.error(f"Batch structure: {batch}")
+                    raise
+            
+            # After processing all batches, combine temporary files for each layer
+            self.logger.info("Combining activations for each layer...")
+            
+            # Combine all metadata tensors
+            all_input_tokens = torch.cat(all_input_tokens, dim=0)
+            all_labels = torch.cat(all_labels, dim=0)
+            
+            for layer_name in layer_names:
+                # Get all temporary files for this layer
+                temp_files = sorted([
+                    f for f in os.listdir(temp_dir)
+                    if f.startswith(f"{layer_name}_batch_") and f.endswith(".pt")
+                ])
+                
+                # Combine activations memory-efficiently
+                combined_activations = []
+                for temp_file in temp_files:
+                    temp_path = os.path.join(temp_dir, temp_file)
+                    data = torch.load(temp_path)
+                    combined_activations.append(data['activations'])
+                    os.remove(temp_path)  # Remove temporary file after loading
+                
+                # Concatenate and save final layer activations with metadata
+                final_activations = torch.cat(combined_activations, dim=0)
+                layer_save_path = os.path.join(save_dir, f"{layer_name}.pt")
+                torch.save({
+                    'activations': final_activations,
+                    'input_tokens': all_input_tokens,
+                    'labels': all_labels,
+                    'total_samples': total_samples
+                }, layer_save_path)
+                self.logger.info(f"Saved {final_activations.shape} activations to {layer_save_path}")
+                
+                # Clear memory
+                del combined_activations
+                del final_activations
+                torch.cuda.empty_cache()
+            
+            self.logger.info(f"Finished processing {total_samples} samples total")
+            
+        finally:
+            # Clean up temporary directory
+            import shutil
+            if os.path.exists(temp_dir):
+                shutil.rmtree(temp_dir)
+                self.logger.info("Cleaned up temporary files") 
+
+---
+./models/probe_trainer.py
+---
+"""
+Trains logistic probes on the extracted activations.
+"""
+
+import logging
+import torch
+import torch.nn as nn
+from torch.utils.data import DataLoader, TensorDataset
+from pathlib import Path
+import numpy as np
+from sklearn.metrics import precision_recall_fscore_support, accuracy_score
+from sklearn.preprocessing import StandardScaler
+from typing import Dict, Tuple, Optional
+
+logger = logging.getLogger(__name__)
+
+class LogisticProbe(nn.Module):
+    """Simple logistic probe for binary classification."""
+    
+    def __init__(self, input_dim: int):
+        super().__init__()
+        self.linear = nn.Linear(input_dim, 1)
+    
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        # Remove sigmoid since it's included in BCEWithLogitsLoss
+        return self.linear(x)
+
+class ProbeTrainer:
+    """Handles training and evaluation of logistic probes for each moral foundation."""
+    
+    def __init__(
+        self,
+        activation_dir: str = "data/activations",
+        probe_dir: str = "data/probes",
+        num_classes: int = 8,
+        batch_size: int = 256,
+        learning_rate: float = 0.001,  # Reduced learning rate
+        num_epochs: int = 50,
+        device: str = "cuda" if torch.cuda.is_available() else "cpu",
+    ):
+        self.activation_dir = Path(activation_dir)
+        self.probe_dir = Path(probe_dir)
+        self.probe_dir.mkdir(exist_ok=True)
+        
+        self.num_classes = num_classes
+        self.batch_size = batch_size
+        self.learning_rate = learning_rate
+        self.num_epochs = num_epochs
+        self.device = device
+        
+        self.logger = logging.getLogger(__name__)
+        self.logger.info(f"Using device: {self.device}")
+    
+    def _normalize_features(self, train_activations: torch.Tensor, val_activations: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
+        """Normalize features using StandardScaler."""
+        # Convert to numpy for sklearn
+        train_np = train_activations.detach().cpu().numpy()
+        val_np = val_activations.detach().cpu().numpy()
+        
+        # Fit scaler on training data
+        scaler = StandardScaler()
+        train_normalized = scaler.fit_transform(train_np)
+        val_normalized = scaler.transform(val_np)
+        
+        # Convert back to torch tensors
+        return (
+            torch.FloatTensor(train_normalized),
+            torch.FloatTensor(val_normalized)
+        )
+    
+    def _create_binary_labels(self, labels: torch.Tensor, target_class: int) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+        """Create balanced binary dataset with equal numbers of positive and negative samples."""
+        # Identify positive and negative samples
+        positive_mask = (labels == target_class)
+        negative_mask = (labels != target_class)
+        
+        # Get number of positive samples
+        n_positive = positive_mask.sum().item()
+        
+        # Randomly select equal number of negative samples
+        negative_indices = torch.where(negative_mask)[0]
+        selected_negative_indices = negative_indices[torch.randperm(len(negative_indices))[:n_positive]]
+        
+        # Create final mask combining positive samples and selected negative samples
+        final_mask = torch.zeros_like(labels, dtype=torch.bool)
+        final_mask[positive_mask] = True
+        final_mask[selected_negative_indices] = True
+        
+        # Create binary labels (1 for positive, 0 for negative)
+        binary_labels = positive_mask[final_mask].float()
+        
+        return binary_labels, final_mask, positive_mask
+    
+    def _create_dataloader(
+        self,
+        activations: torch.Tensor,
+        labels: torch.Tensor,
+        target_class: int
+    ) -> Tuple[DataLoader, Dict[str, int]]:
+        """Create a balanced dataloader with equal positive and negative samples."""
+        binary_labels, final_mask, positive_mask = self._create_binary_labels(labels, target_class)
+        
+        # Select the balanced subset of activations
+        filtered_activations = activations[final_mask]
+        
+        # Move data to device
+        filtered_activations = filtered_activations.to(self.device)
+        binary_labels = binary_labels.to(self.device)
+        
+        # Create dataset
+        dataset = TensorDataset(filtered_activations, binary_labels)
+        
+        # Count samples
+        sample_counts = {
+            'total': len(binary_labels),
+            'positive': int(binary_labels.sum().item()),
+            'negative': int((~binary_labels.bool()).sum().item())
+        }
+        
+        return DataLoader(dataset, batch_size=self.batch_size, shuffle=True), sample_counts
+    
+    def _train_epoch(
+        self,
+        model: nn.Module,
+        dataloader: DataLoader,
+        criterion: nn.Module,
+        optimizer: torch.optim.Optimizer
+    ) -> Tuple[float, float, float]:
+        """Train for one epoch and return loss and basic metrics."""
+        model.train()
+        total_loss = 0
+        total_correct = 0
+        total_samples = 0
+        total_positive = 0
+        
+        for batch_activations, batch_labels in dataloader:
+            batch_activations = batch_activations.to(self.device)
+            batch_labels = batch_labels.to(self.device)
+            
+            optimizer.zero_grad()
+            logits = model(batch_activations).squeeze()
+            loss = criterion(logits, batch_labels)
+            loss.backward()
+            optimizer.step()
+            
+            # Calculate basic metrics (apply sigmoid for predictions)
+            predictions = (torch.sigmoid(logits) >= 0.5).float()
+            total_correct += (predictions == batch_labels).sum().item()
+            total_positive += predictions.sum().item()
+            total_samples += len(batch_labels)
+            total_loss += loss.item()
+        
+        avg_loss = total_loss / len(dataloader)
+        accuracy = total_correct / total_samples
+        positive_rate = total_positive / total_samples
+        
+        return avg_loss, accuracy, positive_rate
+    
+    def _evaluate(
+        self,
+        model: nn.Module,
+        dataloader: DataLoader,
+        threshold: float = 0.5
+    ) -> Dict[str, float]:
+        """Evaluate binary classifier using sklearn metrics."""
+        model.eval()
+        all_preds = []
+        all_labels = []
+        all_probs = []
+        
+        with torch.no_grad():
+            for batch_activations, batch_labels in dataloader:
+                batch_activations = batch_activations.to(self.device)
+                logits = model(batch_activations).squeeze()
+                probs = torch.sigmoid(logits).cpu().numpy()
+                preds = (probs >= threshold).astype(int)
+                
+                all_probs.extend(probs)
+                all_preds.extend(preds)
+                all_labels.extend(batch_labels.cpu().numpy())
+        
+        # Convert to numpy arrays
+        all_preds = np.array(all_preds)
+        all_labels = np.array(all_labels)
+        all_probs = np.array(all_probs)
+        
+        # Calculate metrics using sklearn
+        precision, recall, f1, support = precision_recall_fscore_support(
+            all_labels, all_preds, average='binary', zero_division=0
+        )
+        accuracy = accuracy_score(all_labels, all_preds)
+        
+        # Count support for each class
+        support_positive = int(np.sum(all_labels == 1))
+        support_negative = int(np.sum(all_labels == 0))
+        
+        return {
+            'precision': float(precision),
+            'recall': float(recall),
+            'f1': float(f1),
+            'accuracy': float(accuracy),
+            'support_positive': support_positive,
+            'support_negative': support_negative,
+            'avg_prob': float(np.mean(all_probs)),
+            'std_prob': float(np.std(all_probs))
+        }
+    
+    def train_probe(self, layer_name: str) -> None:
+        """Train logistic probes for each moral foundation category."""
+        # Load data
+        train_path = self.activation_dir / "train" / f"{layer_name}.pt"
+        val_path = self.activation_dir / "val" / f"{layer_name}.pt"
+        
+        self.logger.info(f"Loading training data from {train_path}")
+        train_data = torch.load(train_path, weights_only=True)
+        self.logger.info(f"Loading validation data from {val_path}")
+        val_data = torch.load(val_path, weights_only=True)
+        
+        # Normalize features
+        train_activations, val_activations = self._normalize_features(
+            train_data['activations'],
+            val_data['activations']
+        )
+        
+        input_dim = train_activations.shape[1]
+        layer_results = {}
+        
+        # Train a logistic classifier for each class
+        for target_class in range(self.num_classes):
+            self.logger.info(f"\nTraining probe for class {target_class} on layer {layer_name}")
+            
+            # Create balanced dataloaders
+            train_loader, train_counts = self._create_dataloader(
+                train_activations,
+                train_data['labels'],
+                target_class
+            )
+            val_loader, val_counts = self._create_dataloader(
+                val_activations,
+                val_data['labels'],
+                target_class
+            )
+            
+            # Log sample distribution
+            self.logger.info(
+                f"Training samples for class {target_class}:"
+                f"\n  Total: {train_counts['total']}"
+                f"\n  Positive: {train_counts['positive']}"
+                f"\n  Negative: {train_counts['negative']}"
+            )
+            
+            # Initialize model and training components
+            model = LogisticProbe(input_dim).to(self.device)
+            criterion = nn.BCEWithLogitsLoss()  # No class weights needed as data is balanced
+            optimizer = torch.optim.Adam(model.parameters(), lr=self.learning_rate)
+            
+            # Training loop
+            best_val_f1 = 0
+            best_model_state = model.state_dict()
+            patience = 5
+            no_improve = 0
+            
+            for epoch in range(self.num_epochs):
+                train_loss, train_acc, train_pos_rate = self._train_epoch(
+                    model, train_loader, criterion, optimizer
+                )
+                val_metrics = self._evaluate(model, val_loader)
+                
+                self.logger.info(
+                    f"Epoch {epoch+1}/{self.num_epochs} - "
+                    f"Train Loss: {train_loss:.4f} - "
+                    f"Train Acc: {train_acc:.4f} - "
+                    f"Train Pos Rate: {train_pos_rate:.4f} - "
+                    f"Val F1: {val_metrics['f1']:.4f} - "
+                    f"Val Precision: {val_metrics['precision']:.4f} - "
+                    f"Val Recall: {val_metrics['recall']:.4f} - "
+                    f"Val Prob: {val_metrics['avg_prob']:.4f} ± {val_metrics['std_prob']:.4f}"
+                )
+                
+                if val_metrics['f1'] > best_val_f1 + 0.001:
+                    best_val_f1 = val_metrics['f1']
+                    best_model_state = model.state_dict()
+                    no_improve = 0
+                else:
+                    no_improve += 1
+                    if no_improve >= patience:
+                        self.logger.info("Early stopping triggered")
+                        break
+            
+            # Load best model and get final metrics
+            model.load_state_dict(best_model_state)
+            final_metrics = self._evaluate(model, val_loader)
+            
+            # Save results for this class
+            layer_results[target_class] = {
+                'model_state': best_model_state,
+                'metrics': final_metrics,
+                'config': {
+                    'input_dim': input_dim,
+                    'train_counts': train_counts,
+                    'val_counts': val_counts
+                }
+            }
+        
+        # Save all probes for this layer
+        save_path = self.probe_dir / f"{layer_name}_logistic_probes.pt"
+        torch.save(layer_results, save_path)
+        
+        self.logger.info(f"\nSaved logistic probes to {save_path}")
+        self.logger.info("\nFinal metrics for each class:")
+        for class_idx, results in layer_results.items():
+            metrics = results['metrics']
+            self.logger.info(
+                f"\nClass {class_idx}:"
+                f"\n  F1: {metrics['f1']:.4f}"
+                f"\n  Precision: {metrics['precision']:.4f}"
+                f"\n  Recall: {metrics['recall']:.4f}"
+                f"\n  Accuracy: {metrics['accuracy']:.4f}"
+                f"\n  Positive samples: {metrics['support_positive']}"
+                f"\n  Negative samples: {metrics['support_negative']}"
+                f"\n  Average probability: {metrics['avg_prob']:.4f} ± {metrics['std_prob']:.4f}"
+            )
+    
+    def train_all_probes(self) -> None:
+        """Train logistic probes for all available layers."""
+        layer_files = list(self.activation_dir.glob("train/*.pt"))
+        
+        for layer_file in sorted(layer_files):
+            layer_name = layer_file.stem
+            self.logger.info(f"\nTraining probes for layer: {layer_name}")
+            self.train_probe(layer_name) 
+
+---
+./models/visualization.py
+---
+"""
+Visualization utilities for probe analysis.
+"""
+
+import logging
+from pathlib import Path
+import torch
+import numpy as np
+import matplotlib.pyplot as plt
+from typing import Dict, List, Tuple
+
+logger = logging.getLogger(__name__)
+
+def load_probe_results(probe_dir: str) -> Dict[str, Dict]:
+    """Load all probe results from the probe directory."""
+    probe_dir = Path(probe_dir)
+    results = {}
+    
+    for probe_file in sorted(probe_dir.glob("*_logistic_probes.pt")):
+        layer_name = probe_file.stem.replace("_logistic_probes", "")
+        results[layer_name] = torch.load(probe_file)
+    
+    return results
+
+def extract_metrics(results: Dict[str, Dict]) -> Tuple[Dict[str, np.ndarray], List[str], List[int]]:
+    """Extract metrics for each layer and class."""
+    metrics = {
+        'f1': [],
+        'precision': [],
+        'recall': [],
+        'accuracy': [],
+        'avg_prob': []
+    }
+    
+    # Get ordered lists of layers and classes
+    layers = sorted(results.keys())
+    classes = sorted(results[layers[0]].keys())
+    
+    # Extract metrics for each layer and class
+    for layer in layers:
+        layer_metrics = {k: [] for k in metrics.keys()}
+        for class_idx in classes:
+            class_metrics = results[layer][class_idx]['metrics']
+            for metric_name in metrics.keys():
+                layer_metrics[metric_name].append(class_metrics[metric_name])
+        
+        for metric_name in metrics.keys():
+            metrics[metric_name].append(layer_metrics[metric_name])
+    
+    # Convert to numpy arrays
+    for metric_name in metrics.keys():
+        metrics[metric_name] = np.array(metrics[metric_name])
+    
+    return metrics, layers, classes
+
+def plot_layer_metrics(
+    probe_dir: str,
+    output_dir: str = "figures",
+    figsize: Tuple[int, int] = (15, 10)
+) -> None:
+    """Plot metrics across layers for each moral foundation category."""
+    # Create output directory
+    output_dir = Path(output_dir)
+    output_dir.mkdir(exist_ok=True)
+    
+    # Load results
+    results = load_probe_results(probe_dir)
+    metrics, layers, classes = extract_metrics(results)
+    
+    # Set style
+    plt.rcParams['figure.facecolor'] = 'white'
+    plt.rcParams['axes.grid'] = True
+    plt.rcParams['grid.alpha'] = 0.3
+    
+    # Colors for different classes
+    colors = plt.cm.tab10(np.linspace(0, 1, len(classes)))
+    
+    # Plot each metric
+    for metric_name, metric_values in metrics.items():
+        plt.figure(figsize=figsize)
+        
+        # Plot lines for each class
+        for class_idx in range(len(classes)):
+            plt.plot(
+                range(len(layers)),
+                metric_values[:, class_idx],
+                marker='o',
+                label=f'Class {class_idx}',
+                color=colors[class_idx],
+                linewidth=2,
+                markersize=8,
+                alpha=0.7
+            )
+        
+        # Customize plot
+        plt.title(f'{metric_name.replace("_", " ").title()} across Layers', fontsize=14, pad=20)
+        plt.xlabel('Layer Index', fontsize=12)
+        plt.ylabel(metric_name.replace("_", " ").title(), fontsize=12)
+        plt.xticks(
+            range(len(layers)),
+            [f"Layer {i}" for i in range(len(layers))],
+            rotation=45
+        )
+        plt.legend(
+            title='Moral Foundation',
+            bbox_to_anchor=(1.05, 1),
+            loc='upper left',
+            fontsize=10,
+            title_fontsize=12
+        )
+        
+        # Add grid
+        plt.grid(True, alpha=0.3, linestyle='--')
+        
+        # Adjust layout and save
+        plt.tight_layout()
+        plt.savefig(output_dir / f'{metric_name}_across_layers.png', dpi=300, bbox_inches='tight')
+        plt.close()
+    
+    # Create heatmap for each metric
+    for metric_name, metric_values in metrics.items():
+        plt.figure(figsize=figsize)
+        
+        # Create heatmap
+        im = plt.imshow(metric_values.T, aspect='auto', cmap='viridis')
+        
+        # Add colorbar
+        plt.colorbar(im)
+        
+        # Add text annotations
+        for i in range(metric_values.shape[0]):
+            for j in range(metric_values.shape[1]):
+                text = plt.text(
+                    i, j,
+                    f'{metric_values[i, j]:.3f}',
+                    ha='center',
+                    va='center',
+                    color='white' if metric_values[i, j] > np.mean(metric_values) else 'black'
+                )
+        
+        # Customize plot
+        plt.title(f'{metric_name.replace("_", " ").title()} Heatmap', fontsize=14, pad=20)
+        plt.xlabel('Layer', fontsize=12)
+        plt.ylabel('Moral Foundation', fontsize=12)
+        
+        # Set ticks
+        plt.xticks(
+            range(len(layers)),
+            [f"Layer {i}" for i in range(len(layers))],
+            rotation=45
+        )
+        plt.yticks(
+            range(len(classes)),
+            [f"Class {i}" for i in range(len(classes))]
+        )
+        
+        # Adjust layout and save
+        plt.tight_layout()
+        plt.savefig(output_dir / f'{metric_name}_heatmap.png', dpi=300, bbox_inches='tight')
+        plt.close()
+    
+    logger.info(f"Saved visualization plots to {output_dir}")
+
+def plot_class_distribution(probe_dir: str, output_dir: str = "figures") -> None:
+    """Plot class distribution and training statistics across moral foundations."""
+    # Create output directory
+    output_dir = Path(output_dir)
+    output_dir.mkdir(exist_ok=True)
+    
+    # Load results
+    results = load_probe_results(probe_dir)
+    first_layer = next(iter(results.values()))
+    
+    # Extract class statistics
+    classes = sorted(first_layer.keys())
+    train_counts = []
+    val_counts = []
+    
+    for class_idx in classes:
+        train_counts.append(first_layer[class_idx]['config']['train_counts'])
+        val_counts.append(first_layer[class_idx]['config']['val_counts'])
+    
+    # Set style
+    plt.rcParams['figure.facecolor'] = 'white'
+    plt.rcParams['axes.grid'] = True
+    plt.rcParams['grid.alpha'] = 0.3
+    
+    # Plot training sample distribution
+    plt.figure(figsize=(12, 6))
+    x = np.arange(len(classes))
+    width = 0.35
+    
+    # Plot training samples
+    plt.bar(
+        x - width/2,
+        [c['positive'] for c in train_counts],
+        width,
+        label='Positive Samples',
+        color='#2ecc71',
+        alpha=0.7
+    )
+    plt.bar(
+        x + width/2,
+        [c['negative'] for c in train_counts],
+        width,
+        label='Negative Samples (Random)',
+        color='#e74c3c',
+        alpha=0.7
+    )
+    
+    plt.title('Balanced Training Sample Distribution', fontsize=14, pad=20)
+    plt.xlabel('Moral Foundation', fontsize=12)
+    plt.ylabel('Number of Samples', fontsize=12)
+    plt.xticks(x, [f'Class {i}' for i in classes])
+    plt.legend(fontsize=10)
+    plt.grid(True, alpha=0.3, linestyle='--')
+    
+    # Add value labels
+    for i, counts in enumerate(train_counts):
+        plt.text(i - width/2, counts['positive'], str(counts['positive']), ha='center', va='bottom')
+        plt.text(i + width/2, counts['negative'], str(counts['negative']), ha='center', va='bottom')
+    
+    plt.tight_layout()
+    plt.savefig(output_dir / 'balanced_training_distribution.png', dpi=300, bbox_inches='tight')
+    plt.close()
+    
+    # Plot validation sample distribution
+    plt.figure(figsize=(12, 6))
+    
+    plt.bar(
+        x - width/2,
+        [c['positive'] for c in val_counts],
+        width,
+        label='Positive Samples',
+        color='#2ecc71',
+        alpha=0.7
+    )
+    plt.bar(
+        x + width/2,
+        [c['negative'] for c in val_counts],
+        width,
+        label='Negative Samples (Random)',
+        color='#e74c3c',
+        alpha=0.7
+    )
+    
+    plt.title('Balanced Validation Sample Distribution', fontsize=14, pad=20)
+    plt.xlabel('Moral Foundation', fontsize=12)
+    plt.ylabel('Number of Samples', fontsize=12)
+    plt.xticks(x, [f'Class {i}' for i in classes])
+    plt.legend(fontsize=10)
+    plt.grid(True, alpha=0.3, linestyle='--')
+    
+    # Add value labels
+    for i, counts in enumerate(val_counts):
+        plt.text(i - width/2, counts['positive'], str(counts['positive']), ha='center', va='bottom')
+        plt.text(i + width/2, counts['negative'], str(counts['negative']), ha='center', va='bottom')
+    
+    plt.tight_layout()
+    plt.savefig(output_dir / 'balanced_validation_distribution.png', dpi=300, bbox_inches='tight')
+    plt.close()
+    
+    # Plot total samples per class
+    plt.figure(figsize=(12, 6))
+    total_samples = [c['total'] for c in train_counts]
+    bars = plt.bar(x, total_samples, color='#3498db', alpha=0.7)
+    plt.title('Total Training Samples per Foundation', fontsize=14, pad=20)
+    plt.xlabel('Moral Foundation', fontsize=12)
+    plt.ylabel('Number of Samples', fontsize=12)
+    plt.xticks(x, [f'Class {i}' for i in classes])
+    plt.grid(True, alpha=0.3, linestyle='--')
+    
+    # Add value labels
+    for bar in bars:
+        height = bar.get_height()
+        plt.text(
+            bar.get_x() + bar.get_width()/2.,
+            height,
+            f'{int(height)}',
+            ha='center',
+            va='bottom'
+        )
+    
+    plt.tight_layout()
+    plt.savefig(output_dir / 'total_samples_per_class.png', dpi=300, bbox_inches='tight')
+    plt.close()
+    
+    logger.info(f"Saved distribution plots to {output_dir}") 
+
+---
+./data/MFRCDataProcessingPipeline.py
+---
+"""
+MFRC Dataset Preparation Module
+Handles loading, preprocessing, and batching of the MFRC dataset for LLM probing studies.
+"""
+
+import logging
+from dataclasses import dataclass
+from typing import Dict, List, Tuple, Optional
+from collections import Counter
+
+import numpy as np
+import pandas as pd
+import torch
+from datasets import load_dataset
+from sklearn.model_selection import train_test_split
+from torch.utils.data import Dataset, DataLoader
+from transformers import PreTrainedTokenizer
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+@dataclass
+class MFRCConfig:
+    """Configuration for MFRC dataset preparation."""
+    max_length: int = 256
+    batch_size: int = 16
+    num_workers: int = 4
+    test_size: float = 0.2
+    val_size: float = 0.1
+    random_state: int = 42
+    cache_dir: str = './cache'
+    min_samples_per_class: int = 2
+
+class MFRCDataset(Dataset):
+    """Custom Dataset for MFRC data handling."""
+    
+    def __init__(
+        self,
+        texts: List[str],
+        labels: List[int],
+        tokenizer: PreTrainedTokenizer,
+        max_length: int = 512
+    ):
+        """Initialize dataset with texts and labels."""
+        self.texts = texts
+        self.labels = labels
+        self.tokenizer = tokenizer
+        self.max_length = max_length
+
+    def __len__(self) -> int:
+        return len(self.texts)
+
+    def __getitem__(self, idx: int) -> Dict[str, torch.Tensor]:
+        """Get tokenized text and label for an index."""
+        text = str(self.texts[idx])
+        
+        encoding = self.tokenizer(
+            text,
+            add_special_tokens=True,
+            max_length=self.max_length,
+            padding='max_length',
+            truncation=True,
+            return_tensors='pt'
+        )
+        
+        return {
+            'input_ids': encoding['input_ids'].flatten(),
+            'attention_mask': encoding['attention_mask'].flatten(),
+            'labels': torch.tensor(self.labels[idx], dtype=torch.long)
+        }
+
+class MFRCProcessor:
+    """Handles MFRC dataset processing and preparation."""
+    
+
+    def __init__(self, config: MFRCConfig):
+        """Initialize processor with configuration."""
+        self.config = config
+        self.label_mapping = None
+        self.reverse_mapping = None
+        
+    def is_single_foundation(self, label: str) -> bool:
+        """Check if the label represents a single moral foundation."""
+        return ',' not in label
+
+    def load_dataset(self) -> pd.DataFrame:
+        """Load MFRC dataset from Hugging Face and filter for Everyday Morality bucket."""
+        logger.info("Loading MFRC dataset...")
+        dataset = load_dataset("USC-MOLA-Lab/MFRC", cache_dir=self.config.cache_dir)
+        df = pd.DataFrame(dataset['train'])
+        
+        # Filter for Everyday Morality bucket
+        everyday_morality_mask = df['bucket'] == 'Everyday Morality'
+        df = df[everyday_morality_mask].copy()
+        
+        # Filter for single-label instances
+        single_label_mask = df['annotation'].apply(self.is_single_foundation)
+        df_single = df[single_label_mask].copy()
+        df_multi = df[~single_label_mask].copy()
+        
+        # Log dataset statistics
+        total_samples = len(df)
+        single_label_samples = len(df_single)
+        multi_label_samples = len(df_multi)
+        
+        logger.info("\nDataset Statistics (Everyday Morality bucket):")
+        logger.info(f"Total samples: {total_samples}")
+        logger.info(f"Single-label samples: {single_label_samples} ({single_label_samples/total_samples*100:.2f}%)")
+        logger.info(f"Multi-label samples: {multi_label_samples} ({multi_label_samples/total_samples*100:.2f}%)")
+        
+        # Log single-label distribution
+        unique_labels = df_single['annotation'].unique()
+        logger.info(f"\nSingle-label distribution ({len(unique_labels)} categories):")
+        for label in sorted(unique_labels):
+            count = len(df_single[df_single['annotation'] == label])
+            logger.info(f"  - {label}: {count} samples")
+        
+        # Log multi-label combinations (for information)
+        logger.info(f"\nMulti-label combinations (excluded from dataset):")
+        multi_label_counts = df_multi['annotation'].value_counts()
+        for label, count in multi_label_counts.items():
+            logger.info(f"  - {label}: {count} samples")
+        
+        return df_single
+
+    def create_label_mapping(self, labels: List[str]) -> Dict[str, int]:
+        """Create a mapping from text labels to numeric indices."""
+        # Count occurrences of each label
+        label_counts = Counter(labels)
+        
+        # Log original distribution
+        logger.info("\nLabel distribution:")
+        for label, count in sorted(label_counts.items()):
+            logger.info(f"  - {label}: {count} samples")
+        
+        # Filter labels that have at least min_samples_per_class samples
+        valid_labels = [
+            label for label, count in label_counts.items() 
+            if count >= self.config.min_samples_per_class
+        ]
+        
+        if not valid_labels:
+            raise ValueError(
+                f"No labels have at least {self.config.min_samples_per_class} samples!"
+            )
+        
+        # Create and store the mapping
+        self.label_mapping = {label: idx for idx, label in enumerate(sorted(valid_labels))}
+        self.reverse_mapping = {idx: label for label, idx in self.label_mapping.items()}
+        
+        logger.info("\nLabel mapping:")
+        for label, idx in sorted(self.label_mapping.items()):
+            logger.info(f"  - {label} -> {idx}")
+        
+        return self.label_mapping
+
+    def prepare_splits(self, df: pd.DataFrame) -> Tuple[List[str], List[str], List[str], List[int], List[int], List[int]]:
+        """
+        Prepare train/val/test splits while handling classes with few samples.
+        """
+        # Filter the dataframe to only include rows with valid labels
+        valid_df = df[df['annotation'].isin(self.label_mapping.keys())].copy()
+        
+        if len(valid_df) == 0:
+            raise ValueError("No valid samples remaining after filtering!")
+        
+        texts = valid_df['text'].tolist()
+        labels = [self.label_mapping[label] for label in valid_df['annotation']]
+        
+        # Log data statistics
+        logger.info(f"Total samples after filtering: {len(texts)}")
+        label_counts = Counter(labels)
+        logger.info(f"Class distribution after filtering: {dict(label_counts)}")
+        
+        try:
+            # Attempt stratified split
+            train_texts, test_texts, train_labels, test_labels = train_test_split(
+                texts, labels,
+                test_size=self.config.test_size,
+                random_state=self.config.random_state,
+                stratify=labels
+            )
+            
+            # Split remaining data into train/val
+            val_size_adjusted = self.config.val_size / (1 - self.config.test_size)
+            train_texts, val_texts, train_labels, val_labels = train_test_split(
+                train_texts, train_labels,
+                test_size=val_size_adjusted,
+                random_state=self.config.random_state,
+                stratify=train_labels
+            )
+            
+        except ValueError as e:
+            logger.warning(f"Stratified split failed: {str(e)}")
+            logger.warning("Falling back to random split")
+            
+            # Fallback to random split
+            train_texts, test_texts, train_labels, test_labels = train_test_split(
+                texts, labels,
+                test_size=self.config.test_size,
+                random_state=self.config.random_state
+            )
+            
+            train_texts, val_texts, train_labels, val_labels = train_test_split(
+                train_texts, train_labels,
+                test_size=val_size_adjusted,
+                random_state=self.config.random_state
+            )
+        
+        # Log split sizes
+        logger.info(f"Split sizes:")
+        logger.info(f"Train: {len(train_texts)}")
+        logger.info(f"Val: {len(val_texts)}")
+        logger.info(f"Test: {len(test_texts)}")
+        
+        return train_texts, val_texts, test_texts, train_labels, val_labels, test_labels
+
+    def create_dataloaders(
+        self,
+        train_texts: List[str],
+        val_texts: List[str],
+        test_texts: List[str],
+        train_labels: List[int],
+        val_labels: List[int],
+        test_labels: List[int],
+        tokenizer: PreTrainedTokenizer
+    ) -> Tuple[DataLoader, DataLoader, DataLoader]:
+        """Create DataLoaders for train/val/test sets."""
+        train_dataset = MFRCDataset(train_texts, train_labels, tokenizer, self.config.max_length)
+        val_dataset = MFRCDataset(val_texts, val_labels, tokenizer, self.config.max_length)
+        test_dataset = MFRCDataset(test_texts, test_labels, tokenizer, self.config.max_length)
+
+        train_loader = DataLoader(
+            train_dataset,
+            batch_size=self.config.batch_size,
+            shuffle=True,
+            num_workers=self.config.num_workers
+        )
+        
+        val_loader = DataLoader(
+            val_dataset,
+            batch_size=self.config.batch_size,
+            shuffle=False,
+            num_workers=self.config.num_workers
+        )
+        
+        test_loader = DataLoader(
+            test_dataset,
+            batch_size=self.config.batch_size,
+            shuffle=False,
+            num_workers=self.config.num_workers
+        )
+
+        return train_loader, val_loader, test_loader
+
+def prepare_mfrc_data(
+    tokenizer: PreTrainedTokenizer,
+    config: Optional[MFRCConfig] = None
+) -> Tuple[DataLoader, DataLoader, DataLoader, Dict[str, int]]:
+    """Main function to prepare MFRC dataset."""
+    if config is None:
+        config = MFRCConfig()
+
+    processor = MFRCProcessor(config)
+    
+    try:
+        # Load and process data
+        df = processor.load_dataset()
+        logger.info(f"Loaded dataset with {len(df)} samples")
+        
+        # Create label mapping (this will filter out invalid classes)
+        label_mapping = processor.create_label_mapping(df['annotation'])
+        logger.info(f"Created label mapping with {len(label_mapping)} classes")
+        
+        # Create splits
+        train_texts, val_texts, test_texts, train_labels, val_labels, test_labels = \
+            processor.prepare_splits(df)
+        
+        # Create dataloaders
+        train_loader, val_loader, test_loader = processor.create_dataloaders(
+            train_texts, val_texts, test_texts,
+            train_labels, val_labels, test_labels,
+            tokenizer
+        )
+        
+        logger.info(f"Successfully created dataloaders")
+        logger.info(f"Training batches: {len(train_loader)}")
+        logger.info(f"Validation batches: {len(val_loader)}")
+        logger.info(f"Test batches: {len(test_loader)}")
+        
+        return train_loader, val_loader, test_loader, label_mapping
+        
+    except Exception as e:
+        logger.error(f"Error preparing MFRC data: {str(e)}")
+        raise
+
+---
+./data/model_config.py
+---
+"""
+Model configuration and initialization utilities.
+"""
+
+from dataclasses import dataclass
+from typing import Optional, Union
+from transformers import PreTrainedTokenizer, AutoTokenizer
+from nnsight import LanguageModel
+
+@dataclass
+class ModelConfig:
+    """Configuration for model setup and activation extraction."""
+    model_name: str = "google/gemma-2b-it"
+    device_map: str = "cuda:0"  # or "auto" for automatic device mapping
+    max_length: int = 256
+    batch_size: int = 16
+    cache_dir: str = "./cache"
+
+class ModelManager:
+    """Handles model and tokenizer initialization and management."""
+    
+    def __init__(self, config: Optional[ModelConfig] = None):
+        self.config = config or ModelConfig()
+        self.model = None
+        self.tokenizer = None
+    
+    def initialize_model(self) -> LanguageModel:
+        """Initialize the language model with NNSight wrapper."""
+        if self.model is None:
+            self.model = LanguageModel(
+                self.config.model_name,
+                device_map=self.config.device_map
+            )
+        return self.model
+    
+    def get_tokenizer(self) -> PreTrainedTokenizer:
+        """Get the tokenizer for the current model."""
+        if self.tokenizer is None:
+            self.tokenizer = AutoTokenizer.from_pretrained(
+                self.config.model_name,
+                cache_dir=self.config.cache_dir
+            )
+        return self.tokenizer 
+
+---
+./data/utils.py
+---
+"""
+Utility functions for MFRC dataset processing and model operations.
+"""
+
+import logging
+from typing import Tuple, Dict, Optional
+from torch.utils.data import DataLoader
+from transformers import PreTrainedTokenizer
+from nnsight import LanguageModel
+
+from .MFRCDataProcessingPipeline import MFRCConfig, prepare_mfrc_data
+from .model_config import ModelConfig, ModelManager
+
+logger = logging.getLogger(__name__)
+
+def initialize_model_and_dataset(
+    model_config: Optional[ModelConfig] = None,
+    mfrc_config: Optional[MFRCConfig] = None
+) -> Tuple[LanguageModel, DataLoader, DataLoader, DataLoader, Dict[str, int]]:
+    """
+    Initialize both model and dataset with the given configurations.
+    
+    Args:
+        model_config: Configuration for the model
+        mfrc_config: Configuration for the dataset
+        
+    Returns:
+        Tuple containing:
+        - model: Initialized NNSight model
+        - train_loader: DataLoader for training data
+        - val_loader: DataLoader for validation data
+        - test_loader: DataLoader for test data
+        - label_mapping: Dictionary mapping labels to indices
+    """
+    # Initialize model manager
+    model_manager = ModelManager(model_config)
+    
+    # Get model and tokenizer
+    model = model_manager.initialize_model()
+    tokenizer = model_manager.get_tokenizer()
+    
+    # Initialize dataset
+    train_loader, val_loader, test_loader, label_mapping = initialize_mfrc_dataset(
+        tokenizer=tokenizer,
+        config=mfrc_config
+    )
+    
+    return model, train_loader, val_loader, test_loader, label_mapping
+
+def initialize_mfrc_dataset(
+    tokenizer: PreTrainedTokenizer,
+    config: Optional[MFRCConfig] = None
+) -> Tuple[DataLoader, DataLoader, DataLoader, Dict[str, int]]:
+    """
+    Initialize and prepare MFRC dataset with the given configuration.
+    
+    Args:
+        tokenizer: The tokenizer to use for text processing
+        config: Optional configuration for dataset preparation
+        
+    Returns:
+        Tuple containing:
+        - train_loader: DataLoader for training data
+        - val_loader: DataLoader for validation data
+        - test_loader: DataLoader for test data
+        - label_mapping: Dictionary mapping labels to indices
+    """
+    logger.info("Initializing MFRC dataset...")
+    
+    if config is None:
+        config = MFRCConfig()
+    
+    try:
+        # Load and prepare the dataset
+        train_loader, val_loader, test_loader, label_mapping = prepare_mfrc_data(
+            tokenizer=tokenizer,
+            config=config
+        )
+        
+        # Log dataset information
+        logger.info("\nDataset Information:")
+        logger.info(f"Number of unique classes: {len(label_mapping)}")
+        logger.info("\nLabel mapping details:")
+        for label, idx in sorted(label_mapping.items()):
+            logger.info(f"  - {label} (index {idx})")
+        
+        logger.info("\nDataloader sizes:")
+        logger.info(f"Training batches: {len(train_loader)} ({len(train_loader.dataset)} samples)")
+        logger.info(f"Validation batches: {len(val_loader)} ({len(val_loader.dataset)} samples)")
+        logger.info(f"Test batches: {len(test_loader)} ({len(test_loader.dataset)} samples)")
+        
+        return train_loader, val_loader, test_loader, label_mapping
+        
+    except Exception as e:
+        logger.error(f"Error initializing MFRC dataset: {str(e)}")
+        raise 
+
+---
+./docs/project-plan.md
+---
+# Moral Foundations Theory Detection in Language Models: A Probing Study
+
+## Project Overview
+This project aims to investigate how Language Models (LLMs) internally represent and process moral reasoning across different layers of their architecture. By utilizing the Moral Foundations Reddit Comments (MFRC) dataset and probing techniques, we seek to understand where and how moral foundation categories are encoded within the model's residual stream.
+
+## Research Goals
+1. Map the representation of Moral Foundations Theory (MFT) categories across different layers of LLMs
+2. Identify specific layers or layer clusters where moral reasoning emerges
+3. Track the evolution of moral foundation detection through the model's depth
+4. Compare representation patterns across different model architectures
+5. Investigate potential correlations between model behavior and human moral intuitions
+
+## Technical Architecture
+
+### Data Pipeline
+1. Dataset Processing
+   - Load MFRC dataset from Hugging Face
+   - Clean and preprocess text data
+   - Encode MFT categories
+   - Create efficient data loading mechanisms
+   - Implement comprehensive label distribution logging
+   - Handle edge cases for underrepresented moral foundation categories
+   - Configure logging system for detailed process tracking
+   - Handle single-label and multi-label cases separately
+   - Filter dataset to focus on single-label instances
+   - Track and log multi-label combinations for future analysis
+   - Implement bidirectional label mapping (label↔index)
+   - Robust error handling for label mapping
+   - Filter dataset for Everyday Morality bucket
+   - Process single-label cases within Everyday Morality
+   - Centralized utility functions for dataset operations
+   - Reusable dataset initialization across different scripts
+
+2. Feature Extraction
+   - Hook into LLM's residual stream
+   - Extract activations from all layers
+   - Implement caching mechanisms for efficient processing
+   - Handle batch processing for large-scale analysis
+
+3. Probe Architecture
+   - Linear probes for each layer
+   - Training infrastructure with proper validation
+   - Metrics collection and logging
+   - Cross-validation setup
+
+### Implementation Steps Original Plan
+
+#### Phase 1: Data Preparation (Current)
+- [x] Dataset loading and preprocessing
+- [x] Efficient data structures for text and labels
+- [x] Batch processing setup
+- [x] Label distribution analysis and logging
+- [x] Handling of underrepresented moral foundation categories
+- [x] Fallback mechanisms for data splitting
+- [x] Logging system configuration and implementation
+- [x] Single-label vs multi-label handling
+- [x] Dataset filtering and statistics logging
+- [x] Bidirectional label mapping implementation
+- [x] Label mapping error handling
+- [x] Dataset filtering for Everyday Morality bucket
+- [x] Utility functions for dataset operations
+- [x] Centralized dataset initialization
+
+#### Phase 2: LLM Integration (Current)
+- [x] Model configuration and initialization system
+- [x] NNSight integration for activation extraction
+- [x] Flexible model switching support
+- [x] Activation extraction pipeline
+- [x] Multi-architecture support (GPT, Gemma, etc.)
+- [x] Activation storing over all layers is to big 5 GB per Batch. We must focus on some of the layers. Perhaps every 5th layer And only the activations of the last token.
+- [x] Activation storage and management
+
+#### Phase 3: Probe Implementation (Future)
+- [ ] Linear probe architecture
+- [ ] Training loop implementation
+- [ ] Cross-validation framework
+- [ ] Metrics collection system
+
+#### Phase 4: Analysis Tools (Future)
+- [ ] Visualization of layer-wise performance
+- [ ] Statistical analysis of probe results
+- [ ] Comparative analysis across models
+- [ ] Interactive exploration tools
+
+## Technical Requirements
+
+### Core Libraries
+- `torch`: Neural network implementation
+- `transformers`: LLM model access and manipulation
+- `datasets`: Efficient dataset handling
+- `numpy`: Numerical computations
+- `pandas`: Data manipulation
+- `sklearn`: Machine learning utilities
+- `wandb` (recommended): Experiment tracking
+- `matplotlib/plotly`: Visualization
+- `nnsights`: Mechanistic interpretability library used for getting activation and patching of models.
+- `logging`: Standard Python logging for process tracking and debugging
+
+
+
+## Future Extensions
+1. Multi-model Analysis
+   - Compare representations across different LLM architectures
+   - Investigate size scaling effects
+   - Cross-architecture patterns
+
+2. Advanced Probing Techniques
+   - Non-linear probes
+   - Attention-based probes
+   - Causal intervention studies
+
+3. Interpretation Tools
+   - Interactive visualization dashboard
+   - Probe analysis toolkit
+   - Case study generation system
+
+4. Dataset Extensions
+   - Additional moral reasoning datasets
+   - Cross-domain validation
+   - Synthetic data generation
+
+5. Multi-label Analysis (New)
+   - Extend pipeline to handle multi-label cases
+   - Implement multi-label classification
+   - Compare single-label vs multi-label representations
+   - Investigate moral foundation co-occurrence patterns
+
+## Project Structure
+```
+mft_probing/
+├── data/
+│   ├── preprocessing/
+│   ├── caching/
+│   └── validation/
+├── models/
+│   ├── llm_hooks/
+│   ├── probes/
+│   └── training/
+├── analysis/
+│   ├── visualization/
+│   ├── statistics/
+│   └── interpretation/
+├── configs/
+├── notebooks/
+```
+
+## Current Status
+The initial data processing pipeline has been implemented with a focus on single-label instances from the Everyday Morality bucket. Multi-label cases are currently excluded but logged for potential future analysis. The pipeline includes comprehensive label distribution analysis and handles edge cases appropriately. The next phase will focus on LLM activation extraction and probe training infrastructure.
+
+## Research Questions to Address
+1. At what layers do different moral foundations emerge?
+2. How do representation patterns differ across foundation categories?
+3. Are there clear boundaries between moral and non-moral reasoning in LLMs?
+4. How do model size and architecture affect moral reasoning representation?
+5. Can we identify specific attention patterns associated with moral reasoning?
+
+
+----
+Chronological changes - Every change should be added as a new step with a new number.
+Step 20: 
+------
+The key changes are:
+Added model type detection
+Support for different model architectures (GPT and Gemma initially)
+Dynamic layer name generation based on model type
+Better error handling and logging
+Updated project plan to reflect multi-architecture support
+This should now work with the Gemma model's architecture. The extractor will automatically detect the model type and use the appropriate layer names and structure.
+
+Step 21:
+------
+Fixed activation extraction issues:
+- Removed attention_mask from model invocation to prevent input conflicts
+- Added proper checkpoint saving with error handling
+- Added tracking of successful batch processing
+- Improved error handling and recovery
+- Added batch processing statistics
+- Implemented safe checkpoint saving mechanism
+
+Step 22:
+------
+Fixed NNSight integration issues:
+- Changed model invocation from forward() to trace() for better compatibility
+- Removed explicit input_ids passing to prevent input conflicts
+- Updated activation extraction to use NNSight's tracing mechanism
+- Added better error handling for model tracing
+
+Step 23:
+------
+Fixed layer access in activation extraction:
+- Replaced unsafe eval() with proper attribute access
+- Added safe layer access method using getattr
+- Improved error handling for layer access
+- Added granular logging for layer access issues
+- Added better error recovery for individual layer failures
+
+Step 24:
+------
+Fixed NNSight input preparation:
+- Added proper input preparation for NNSight model tracing
+- Included both input_ids and attention_mask in prepared inputs
+- Updated trace() call to use prepared inputs
+- Improved error handling for input preparation
+- Added logging for input preparation process
+
+Step 25:
+------
+Fixed NNSight tracing implementation:
+- Updated model tracing to use nested context managers (trace and invoke)
+- Removed prepared_inputs in favor of direct input_ids passing
+- Simplified input handling to match NNSight examples
+- Added proper context management for tracing
+- Improved error handling for tracing context
+
+Step 26:
+------
+Fixed NNSight activation extraction:
+- Added proper token indexing using .t[0] for activation extraction
+- Added handling for tuple outputs from model
+- Improved value extraction from NNSight saved values
+- Added proper error handling for different value types
+- Updated activation processing to handle model output format changes
+
+Step 27:
+------
+Fixed NNSight layer access and model output handling:
+- Added proper model execution before accessing layers
+- Updated logits extraction to handle model output format
+- Fixed layer initialization issue in trace context
+- Improved handling of model output types
+- Added proper error handling for empty layer access
+
+Step 28:
+------
+Fixed NNSight implementation:
+- Corrected usage of NNSight's tracing pattern
+- Properly nested trace() and invoke() contexts
+- Removed incorrect runner() call
+- Improved activation saving mechanism
+- Added proper tensor type checking
+
+The difficulty with NNSight implementation stems from:
+1. Different paradigm: NNSight uses a specific tracing/intervention pattern that's different from regular PyTorch
+2. Context management: Requires proper nesting of trace() and invoke() contexts
+3. Value access: Saved values need special handling after the trace completes
+4. Model architecture differences: Different models (GPT vs Gemma) require different access patterns
+5. Documentation interpretation: The examples in the docs need careful adaptation for our use case
+
+Step 30:
+------
+Simplified memory optimization:
+- Added immediate CPU offloading of activations
+- Implemented per-batch saving
+- Removed activation accumulation
+- Added basic memory cleanup
+- Simplified the extraction process
+
+Key changes:
+1. Move activations to CPU immediately after extraction
+2. Save each batch's results immediately
+3. Clear memory after each batch
+4. Remove unnecessary data accumulation
+
+Step 31:
+------
+Fixed NNSight value access timing:
+- Separated activation saving and value access
+- Wait for trace context to complete before accessing values
+- Added proper handling of saved items
+- Improved error handling for value access
+- Added clear separation between saving and processing phases
+
+Key changes:
+1. Store saved items during trace without accessing values
+2. Process values only after trace context completes
+3. Improved error handling for value access timing
+4. Clear separation of saving and processing phases
+
+Step 32:
+------
+Optimized layer extraction:
+- Added layer stride parameter to control extraction frequency
+- Modified layer selection to extract every 5th layer
+- Reduced memory usage by extracting fewer layers
+- Added configuration option for layer extraction frequency
+- Updated initialization to support configurable layer stride
+
+Key changes:
+1. Extract every 5th layer instead of all layers
+2. Added layer_stride parameter for flexibility
+3. Reduced memory footprint
+4. Maintained key layer coverage while reducing data size
+
+Step 33:
+------
+Added NNSight exploration tools:
+- Created scratchpad for exploring model structure
+- Added hookpoint discovery functionality
+- Implemented activation shape analysis
+- Added model architecture inspection
+- Created documentation of available intervention points
+
+Key additions:
+1. Model structure visualization
+2. Available hookpoint discovery
+3. Activation shape analysis
+4. Architecture-specific exploration
+5. Memory-efficient model inspection
+
+Step 34:
+------
+Improved batch format handling:
+- Added support for multiple batch formats
+- Handle both tuple/list and dictionary batch structures
+- More flexible input extraction
+- Better error handling for batch processing
+- Improved logging of batch structure
+
+Key changes:
+1. Support for tuple/list batches
+2. Support for dictionary batches
+3. Flexible input extraction
+4. Enhanced batch processing robustness
+
+Step 35:
+------
+Enhanced batch structure handling:
+- Added detailed batch structure logging
+- Improved error messages for batch processing
+- Support for multiple text field names
+- Better debugging information
+- Robust error handling with detailed feedback
+
+Key changes:
+1. Added batch structure logging
+2. Support for multiple text field names
+3. Improved error messages
+4. Enhanced debugging capabilities
+
+Step 36:
+------
+Added support for pre-tokenized inputs:
+- Handle both raw text and pre-tokenized inputs
+- Detect input format automatically
+- Skip unnecessary tokenization
+- Improved input handling efficiency
+- Better memory usage for pre-tokenized data
+
+Key changes:
+1. Support for pre-tokenized inputs
+2. Automatic input format detection
+3. Skip redundant tokenization
+4. Enhanced memory efficiency
+
+Step 37:
+------
+Improved activation storage strategy:
+- Consolidated activations by layer instead of by batch
+- Single file per layer per split (train/val/test)
+- More efficient for probe training
+- Better organization of activation data
+- Reduced file system overhead
+
+Key changes:
+1. Layer-wise activation accumulation
+2. Single file per layer
+3. Improved data organization
+4. Optimized for probe training
+5. Progress tracking during extraction
+
+Step 38:
+------
+Enhanced memory management for activation extraction:
+- Implemented temporary file storage for batch activations
+- Memory-efficient layer-wise combination
+- Progressive cleanup of temporary files
+- Reduced peak memory usage
+- Added safeguards for cleanup
+
+Key changes:
+1. Temporary storage of batch activations
+2. Progressive memory cleanup
+3. Layer-wise combination strategy
+4. Automatic cleanup of temporary files
+5. Improved error handling with cleanup
+
+Step 39:
+------
+Added layer analysis capabilities:
+- Layer dimension analysis
+- Memory requirement calculation
+- Activation statistics computation
+- Sparsity pattern analysis
+- Example activation storage
+- Metadata tracking for activations
+
+Key additions:
+1. Layer property analysis
+2. Memory footprint calculation
+3. Statistical analysis tools
+4. Activation visualization prep
+5. Metadata management
+
+Step 40:
+------
+Enhanced layer extraction strategy:
+- Always include last layer in extraction
+- Extract every nth layer plus final layer
+- Better coverage of model's processing stages
+- Guaranteed access to final representations
+- Improved logging of extracted layers
+
+Key changes:
+1. Last layer always included
+2. Maintain layer extraction stride
+3. Sorted layer indices
+4. Better layer selection logging
+5. Complete model coverage
+
+Step 41:
+------
+Implemented probe training:
+- Linear probes for each layer
+- 8-class classification (MFT categories)
+- Training with validation-based early stopping
+- Comprehensive evaluation metrics
+- Efficient probe storage
+
+Key features:
+1. Layer-wise probe training
+2. Best model selection based on validation
+3. Detailed performance metrics
+4. Memory-efficient implementation
+5. Automated training for all layers
+
+### Phase 2: Model Integration
+- [x] NNSight integration for activation extraction
+- [x] Memory-efficient activation storage
+- [x] Layer selection strategy (every nth layer)
+- [x] Probe training implementation
+- [ ] Evaluation metrics implementation
+
+## Updated Project Plan
+
+### Core Components
+
+- Data Pipeline
+  - [x] MFRC dataset loading and preprocessing
+  - [x] Label distribution analysis and logging
+  - [x] Handling of underrepresented categories
+  - [x] Memory-optimized activation extraction (last token only)
+  - [x] Efficient data saving and memory management
+
+### Phase 1: Data Preparation
+- [x] Implement data loading pipeline
+- [x] Add comprehensive logging
+- [x] Handle edge cases in data processing
+- [x] Optimize memory usage in activation extraction
+  - [x] Extract only last token activations
+  - [x] Implement immediate CPU offloading
+  - [x] Add layer-wise memory clearing
+
+### Phase 2: Model Integration
+- [x] NNSight integration for activation extraction
+- [x] Memory-efficient activation storage
+- [x] Layer selection strategy (every nth layer)
+- [x] Basic probe training implementation
+- [x] Enhanced probe architecture and training
+- [ ] Comprehensive evaluation metrics
+
+### Phase 3: Analysis
+- [ ] Probe performance evaluation
+- [ ] Visualization of results
+- [ ] Statistical analysis
+- [ ] Documentation of findings
+
+### Current Status
+- Implemented memory-optimized activation extraction
+  - Reduced memory usage by extracting only last token activations
+  - Added immediate CPU offloading and memory clearing
+  - Implemented layer-wise processing to manage memory
+- Improved data processing pipeline
+  - Added robust error handling
+  - Enhanced logging for better debugging
+  - Optimized storage strategy
+
+### Next Steps
+1. Monitor and analyze probe performance across layers
+   - Track performance patterns across model depth
+   - Identify layers with strongest MFT representations
+   - Compare early vs late layer performance
+
+2. Implement comprehensive evaluation metrics
+   - Per-class performance analysis
+   - Confusion matrix visualization
+   - Statistical significance testing
+   - Cross-validation for robustness
+
+3. Investigate performance bottlenecks
+   - Analyze class imbalance impact
+   - Study activation patterns
+   - Evaluate architecture choices
+   - Test alternative training strategies
+
+4. Begin analysis phase
+   - Visualize probe performance across layers
+   - Study correlation with model architecture
+   - Analyze relationship with MFT categories
+   - Document findings and insights
+
+### Core Libraries
+- PyTorch
+- NNSight
+- NumPy
+- Pandas
+- scikit-learn
+- logging
+- transformers
+
+### Notes
+- Memory optimization achieved by:
+  - Extracting only last token activations
+  - Immediate CPU offloading
+  - Layer-wise memory clearing
+  - Efficient storage strategy
+
+- Probe training challenges:
+  - Class imbalance handling
+  - Activation scaling
+  - Architecture optimization
+  - Training dynamics
+
+- Current focus:
+  - Improving probe performance
+  - Handling class imbalance
+  - Optimizing training process
+  - Comprehensive evaluation
+
+Step 42:
+------
+Enhanced probe architecture and training:
+- Improved probe architecture with hidden layers
+- Added class imbalance handling
+- Enhanced training dynamics
+- Better monitoring and logging
+
+Key changes:
+1. Probe Architecture:
+   - Layer normalization for activation scaling
+   - Hidden layer (256 dim) with GELU activation
+   - Dropout (0.2) for regularization
+   - Two-layer architecture for better representation learning
+
+2. Class Imbalance Handling:
+   - Dynamic class weight computation
+   - Weighted CrossEntropyLoss
+   - Class distribution logging
+   - Weight clamping to prevent instability
+
+3. Training Improvements:
+   - Increased batch size (128)
+   - ReduceLROnPlateau scheduler for adaptive learning rate
+   - Early stopping with small improvement threshold
+   - Increased training epochs and patience
+   - AdamW optimizer with weight decay
+   - Learning rate reduction on plateau
+   - Validation-based scheduler updates
+
+4. Monitoring Enhancements:
+   - Detailed class-wise metrics
+   - Label distribution tracking
+   - Training dynamics logging
+   - GPU utilization monitoring
+
+Findings and Observations:
+- Initial probe performance showed heavy class bias
+- Class imbalance significantly affects probe training
+- Need for careful activation normalization
+- Importance of proper architecture design
+
+### Phase 2: Model Integration
+- [x] NNSight integration for activation extraction
+- [x] Memory-efficient activation storage
+- [x] Layer selection strategy (every nth layer)
+- [x] Basic probe training implementation
+- [x] Enhanced probe architecture and training
+- [ ] Comprehensive evaluation metrics
+
+Step 43:
+------
+Implemented binary classification probes:
+- Replaced multi-class classifier with binary classifiers
+- One probe per moral foundation category
+- Better handling of class imbalance
+- Improved evaluation metrics
+
+Key changes:
+1. Probe Architecture:
+   - Separate binary classifier for each moral foundation
+   - Binary cross-entropy loss with class weighting
+   - Sigmoid activation for probability output
+   - Maintained neural architecture with hidden layer
+
+2. Training Improvements:
+   - Dynamic positive class weighting
+   - Per-class F1 optimization
+   - Independent training loops for each category
+   - Better handling of class imbalance
+
+3. Evaluation Enhancements:
+   - Precision, recall, F1 for each category
+   - Support counting for positive/negative samples
+   - Threshold-based classification
+   - Detailed per-class metrics
+
+4. Storage Changes:
+   - Separate model state for each category
+   - Comprehensive metrics storage
+   - Layer-wise organization of probes
+   - Efficient probe management
+
+### Current Status
+- Implemented binary classification approach
+  - One probe per moral foundation
+  - Better handling of imbalanced classes
+  - Independent optimization for each category
+  - Improved evaluation metrics
+- Enhanced training process
+  - Class-specific weight adjustment
+  - F1-score optimization
+  - Detailed performance tracking
+  - Threshold-based classification
+
+### Next Steps
+1. Evaluate binary classifier performance
+   - Compare with multi-class approach
+   - Analyze per-category performance
+   - Study threshold sensitivity
+   - Investigate failure cases
+
+2. Optimize binary classifiers
+   - Fine-tune thresholds
+   - Experiment with architecture variants
+   - Study learning dynamics
+   - Analyze feature importance
+
+3. Comprehensive analysis
+   - Layer-wise performance patterns
+   - Category-specific insights
+   - Model behavior analysis
+   - Correlation studies
+
+4. Documentation and reporting
+   - Performance comparisons
+   - Insights documentation
+   - Methodology description
+   - Future recommendations
+
+Step 44:
+------
+Simplified probe architecture to logistic regression:
+- Replaced neural network with simple logistic classifier
+- Fixed metrics calculation using sklearn
+- Improved training stability and speed
+
+Key changes:
+1. Probe Architecture:
+   - Single linear layer with sigmoid activation
+   - Removed unnecessary complexity (normalization, dropout, hidden layers)
+   - Direct logistic regression for binary classification
+   - Faster training and more stable convergence
+
+2. Training Improvements:
+   - Increased batch size for faster training
+   - Higher learning rate appropriate for logistic regression
+   - Fewer epochs needed for convergence
+   - Removed learning rate scheduling (unnecessary for logistic regression)
+
+3. Metrics Calculation:
+   - Using sklearn's metrics for reliable calculation
+   - Fixed zero-division issues in metric computation
+   - Added average probability monitoring
+   - More stable and accurate metrics
+
+4. Performance Optimization:
+   - Faster training due to simpler architecture
+   - More interpretable results
+   - Better numerical stability
+   - Reduced memory usage
+
+### Current Status
+- Implemented logistic regression probes
+  - One probe per moral foundation
+  - Simple and effective architecture
+  - Stable training process
+  - Reliable metrics calculation
+- Enhanced efficiency
+  - Faster training times
+  - Lower memory usage
+  - More interpretable results
+  - Better numerical stability
+
+### Next Steps
+1. Evaluate logistic probe performance
+   - Compare with previous approaches
+   - Analyze per-category effectiveness
+   - Study decision boundaries
+   - Investigate feature importance
+
+2. Analyze layer-wise patterns
+   - Track performance across layers
+   - Identify key representation layers
+   - Study feature evolution
+   - Map moral foundation encoding
+
+3. Comprehensive analysis
+   - Compare with baseline methods
+   - Statistical significance testing
+   - Error analysis
+   - Feature importance study
+
+4. Documentation and insights
+   - Performance analysis
+   - Layer-wise patterns
+   - Feature importance
+   - Recommendations for future work
+
+Step 45:
+------
+Fixed tensor gradient handling in feature normalization:
+- Added tensor detachment before numpy conversion
+- Ensures proper handling of gradients in normalization pipeline
+- Maintains numerical stability in feature scaling
+- Prevents gradient computation errors
+
+Key changes:
+1. Tensor Operations:
+   - Added detach() before numpy conversion
+   - Proper handling of tensor gradients
+   - Safe conversion between torch and numpy
+   - Maintained data precision
+
+2. Feature Normalization Pipeline:
+   - Safe tensor detachment
+   - Proper CPU transfer
+   - Efficient numpy conversion
+   - Memory-efficient processing
+
+3. Implementation Details:
+   - Updated _normalize_features method
+   - Added gradient safety checks
+   - Improved error handling
+   - Better memory management
+
+### Current Status
+- Fixed gradient computation issues
+  - Safe tensor operations
+  - Proper gradient handling
+  - Stable feature normalization
+  - Memory-efficient processing
+- Improved robustness
+  - Better error handling
+  - Safe data type conversions
+  - Stable numerical operations
+  - Efficient memory usage
+
+### Next Steps
+1. Monitor training stability
+   - Track gradient flow
+   - Verify feature scaling
+   - Check memory usage
+   - Analyze numerical stability
+
+2. Performance optimization
+   - Evaluate training speed
+   - Monitor memory usage
+   - Analyze computational efficiency
+   - Fine-tune batch processing
+
+3. Quality assurance
+   - Verify normalization effects
+   - Validate gradient handling
+   - Test edge cases
+   - Monitor system resources
+
+Step 46:
+------
+Fixed loss function implementation:
+- Switched to BCEWithLogitsLoss for proper class weighting
+- Removed sigmoid from model (now part of loss)
+- Improved numerical stability
+- Better handling of class imbalance
+
+Key changes:
+1. Loss Function:
+   - Using BCEWithLogitsLoss instead of BCELoss
+   - Integrated sigmoid into loss computation
+   - Better numerical stability
+   - Proper class weight handling
+
+2. Model Architecture:
+   - Simplified LogisticProbe
+   - Removed redundant sigmoid
+   - Cleaner logits handling
+   - More stable training
+
+3. Training Process:
+   - Improved gradient computation
+   - Better numerical stability
+   - Proper probability conversion
+   - Consistent metric calculation
+
+### Current Status
+- Improved training stability
+  - Better loss function
+  - Proper class weighting
+  - Stable gradient flow
+  - Reliable metrics
+- Enhanced architecture
+  - Simplified model
+  - Better numerical properties
+  - Stable probability computation
+  - Consistent evaluation
+
+### Next Steps
+1. Monitor training dynamics
+   - Track loss convergence
+   - Analyze class balance
+   - Verify probability distributions
+   - Check gradient behavior
+
+2. Evaluate performance
+   - Compare with previous results
+   - Analyze class-wise metrics
+   - Study probability calibration
+   - Verify stability improvements
+
+3. Fine-tune implementation
+   - Optimize class weights
+   - Adjust thresholds
+   - Tune hyperparameters
+   - Improve efficiency
+
+Step 47:
+------
+Fixed loss function implementation:
+- Switched to BCEWithLogitsLoss for proper class weighting
+- Removed sigmoid from model (now part of loss)
+- Improved numerical stability
+- Better handling of class imbalance
+
+Key changes:
+1. Loss Function:
+   - Using BCEWithLogitsLoss instead of BCELoss
+   - Integrated sigmoid into loss computation
+   - Better numerical stability
+   - Proper class weight handling
+
+2. Model Architecture:
+   - Simplified LogisticProbe
+   - Removed redundant sigmoid
+   - Cleaner logits handling
+   - More stable training
+
+3. Training Process:
+   - Improved gradient computation
+   - Better numerical stability
+   - Proper probability conversion
+   - Consistent metric calculation
+
+### Current Status
+- Improved training stability
+  - Better loss function
+  - Proper class weighting
+  - Stable gradient flow
+  - Reliable metrics
+- Enhanced architecture
+  - Simplified model
+  - Better numerical properties
+  - Stable probability computation
+  - Consistent evaluation
+
+### Next Steps
+1. Monitor training dynamics
+   - Track loss convergence
+   - Analyze class balance
+   - Verify probability distributions
+   - Check gradient behavior
+
+2. Evaluate performance
+   - Compare with previous results
+   - Analyze class-wise metrics
+   - Study probability calibration
+   - Verify stability improvements
+
+3. Fine-tune implementation
+   - Optimize class weights
+   - Adjust thresholds
+   - Tune hyperparameters
+   - Improve efficiency
+
+Step 48:
+------
+Added comprehensive visualization functionality:
+- Created visualization module for probe analysis
+- Implemented layer-wise performance plots
+- Added class distribution visualization
+- Enhanced result interpretation
+
+Key changes:
+1. Visualization Module:
+   - Layer-wise metric plots
+   - Performance heatmaps
+   - Class distribution plots
+   - Weight distribution visualization
+
+2. Metrics Visualization:
+   - F1 score across layers
+   - Precision and recall trends
+   - Accuracy progression
+   - Probability distribution
+
+3. Distribution Analysis:
+   - Class balance visualization
+   - Positive/negative sample counts
+   - Class weight distribution
+   - Layer-wise patterns
+
+4. Implementation Details:
+   - Matplotlib/Seaborn integration
+   - High-resolution output
+   - Customizable plotting
+   - Clear metric tracking
+
+### Current Status
+- Comprehensive visualization suite
+  - Layer-wise performance tracking
+  - Class distribution analysis
+  - Metric progression plots
+  - Intuitive visualizations
+- Enhanced analysis capabilities
+  - Visual performance tracking
+  - Distribution insights
+  - Pattern identification
+  - Result interpretation
+
+### Next Steps
+1. Analyze visualization results
+   - Identify performance patterns
+   - Study layer-wise trends
+   - Examine class imbalance effects
+   - Track metric progression
+
+2. Enhance visualizations
+   - Add statistical annotations
+   - Improve plot aesthetics
+   - Include confidence intervals
+   - Add interactive features
+
+3. Documentation
+   - Interpret visualization results
+   - Document key findings
+   - Update analysis insights
+   - Prepare presentation materials
+
+### Files Added
+- `models/visualization.py`: Core visualization functionality
+- `visualize_results.py`: Script to generate plots
+- `figures/`: Directory for output visualizations
+
+Step 49:
+------
+Enhanced visualization aesthetics and robustness:
+- Removed seaborn dependency for better compatibility
+- Improved plot aesthetics with native matplotlib
+- Added value annotations to plots
+- Enhanced readability and interpretation
+
+Key changes:
+1. Plot Aesthetics:
+   - Custom color schemes
+   - Improved font sizes and spacing
+   - Better grid styling
+   - Value annotations on plots
+
+2. Visualization Features:
+   - Direct value labels on bars
+   - Customized heatmap coloring
+   - Improved legend placement
+   - Better axis formatting
+
+3. Technical Improvements:
+   - Removed external style dependencies
+   - More robust plotting functions
+   - Better color contrast
+   - Enhanced readability
+
+4. User Experience:
+   - Clearer data presentation
+   - More intuitive visualizations
+   - Better value interpretation
+   - Higher quality output
+
+### Current Status
+- Enhanced visualization system
+  - Better plot aesthetics
+  - More informative displays
+  - Robust implementation
+  - High-quality output
+- Improved usability
+  - Clear value presentation
+  - Intuitive color schemes
+  - Better readability
+  - Consistent styling
+
+### Next Steps
+1. Analyze visualization output
+   - Review plot clarity
+   - Check value readability
+   - Verify color effectiveness
+   - Test with different data scales
+
+2. Further enhancements
+   - Add statistical annotations
+   - Consider interactive features
+   - Explore additional plot types
+   - Improve accessibility
+
+3. Documentation
+   - Update usage guidelines
+   - Document style choices
+   - Add interpretation guide
+   - Include example outputs
+
+### Dependencies
+Required Python packages:
+- numpy
+- matplotlib
+- torch
+- (removed seaborn dependency)
+
+Step 50:
+------
+Corrected probe training approach:
+- Removed incorrect class weighting
+- Fixed sample selection for binary classification
+- Improved training focus for each moral foundation
+- Enhanced data efficiency
+
+Key changes:
+1. Sample Selection:
+   - Only use relevant samples for each class
+   - No artificial negative samples
+   - Better focus on actual class characteristics
+   - More efficient training
+
+2. Training Process:
+   - Removed unnecessary class weights
+   - Simplified loss function
+   - More focused learning
+   - Better data utilization
+
+3. Implementation Details:
+   - Updated sample filtering
+   - Removed weight calculation
+   - Improved sample tracking
+   - Better logging of sample counts
+
+4. Conceptual Improvements:
+   - Better alignment with task goals
+   - More accurate representation learning
+   - Cleaner training signal
+   - Improved model focus
+
+### Current Status
+- Corrected training approach
+  - Proper sample selection
+  - No artificial imbalance
+  - Focused learning per class
+  - Better data efficiency
+- Improved methodology
+  - Cleaner implementation
+  - Better theoretical foundation
+  - More accurate evaluation
+  - Efficient resource use
+
+### Next Steps
+1. Evaluate new approach
+   - Compare performance
+   - Analyze training dynamics
+   - Check convergence
+   - Verify improvements
+
+2. Further optimization
+   - Fine-tune hyperparameters
+   - Study sample efficiency
+   - Analyze model behavior
+   - Improve training speed
+
+3. Documentation
+   - Update methodology description
+   - Document improvements
+   - Explain rationale
+   - Share findings
+
+### Impact
+This change should lead to:
+1. More accurate probes
+2. Better training efficiency
+3. Cleaner learning signals
+4. More interpretable results
+
+Step 51:
+------
+Implemented balanced sampling for binary classification:
+- Added balanced negative sampling
+- Equal positive and negative samples per class
+- Random selection of negative examples
+- Improved training signal
+
+Key changes:
+1. Sample Selection:
+   - Equal number of positive and negative samples
+   - Random selection of negative examples
+   - Balanced training sets
+   - Better class representation
+
+2. Training Process:
+   - No need for class weights (naturally balanced)
+   - Better discrimination learning
+   - More robust decision boundaries
+   - Improved generalization
+
+3. Implementation Details:
+   - Random negative sampling
+   - Balanced validation sets
+   - Better sample tracking
+   - Improved logging
+
+4. Conceptual Improvements:
+   - True binary classification
+   - Better foundation discrimination
+   - More reliable evaluation
+   - Proper negative examples
+
+### Current Status
+- Balanced training approach
+  - Equal class representation
+  - Random negative sampling
+  - Proper binary classification
+  - Better evaluation metrics
+- Improved methodology
+  - Better theoretical foundation
+  - More reliable training
+  - Proper discrimination learning
+  - Efficient resource use
+
+### Next Steps
+1. Evaluate balanced approach
+   - Compare with previous results
+   - Analyze discrimination ability
+   - Check negative sample impact
+   - Verify training stability
+
+2. Fine-tune implementation
+   - Study negative sampling strategies
+   - Optimize batch composition
+   - Analyze training dynamics
+   - Improve efficiency
+
+3. Analysis and documentation
+   - Compare approaches
+   - Document improvements
+   - Study negative examples
+   - Share insights
+
+### Impact
+This change should lead to:
+1. Better discrimination between foundations
+2. More reliable probe performance
+3. More meaningful evaluation metrics
+4. Better generalization
+
+
+---
