@@ -19,7 +19,7 @@ class NeuronActivationCollector:
                  correlation_threshold: float = 0.6,
                  batch_size: int = 32):
         self.model = model
-        self.device = model.device
+        self.device = model.cfg.device
         self.n_layers = model.cfg.n_layers
         self.n_neurons = model.cfg.d_mlp
         
