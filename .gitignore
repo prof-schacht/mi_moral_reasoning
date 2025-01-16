@@ -1,2 +1,4 @@
 H6-MFT-Probes/cache/*
 *.pyc
+TransformerLens/**
+llm-localization/**
