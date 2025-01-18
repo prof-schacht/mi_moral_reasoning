@@ -1081,3 +1081,10 @@ def get_moral_statements(dimension: str = None, moral: bool = True) -> list:
                 })
                 
     return statements
+
+
+def get_moral_keys():
+    moral_keys = []
+    for dimension in moral_foundations.keys():
+        moral_keys.append(dimension)
+    return moral_keys

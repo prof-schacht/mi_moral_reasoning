@@ -363,3 +363,10 @@ This differentiation happens primarily in the early parts of the text
 Different neurons specialize in different aspects or positions of moral reasoning
 The strength of moral/immoral differentiation varies across different examples
 Would you like me to explain any specific patterns or neurons in more detail?
+
+----
+Ideas - 
+- Compare the results with different moral dimensions
+- Run it on different models
+- Generate descriptions for the identified neurons
+- Ablate the neurons and try to see some impact. 
