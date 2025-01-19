@@ -214,6 +214,7 @@ class MoralBehaviorAnalyzer(NeuronActivationCollector):
         # Find consistently different neurons
         moral_neurons = []
         immoral_neurons = []
+        neuron_consistency  = []
         temporal_patterns = defaultdict(list)
         sample_wise_means = {}
         position_consistency = {}
@@ -275,6 +276,9 @@ class MoralBehaviorAnalyzer(NeuronActivationCollector):
                         moral_neurons.append((layer, neuron))
                     elif mean_neuron_diff < -significant_diff:
                         immoral_neurons.append((layer, neuron))
+                    neuron_consistency.append({"L"+str(layer)+"N"+str(neuron) : consistency})
+                    
+                    
         
         # Print enhanced statistics
         print("\nConsistency Distribution:")
@@ -347,6 +351,7 @@ class MoralBehaviorAnalyzer(NeuronActivationCollector):
         return {
             'moral_neurons': moral_neurons,
             'immoral_neurons': immoral_neurons,
+            'neuron_consistency': neuron_consistency,
             'temporal_patterns': dict(temporal_patterns),
             'key_trigger_points': key_trigger_points,
             'key_trigger_contexts': token_contexts[:5],

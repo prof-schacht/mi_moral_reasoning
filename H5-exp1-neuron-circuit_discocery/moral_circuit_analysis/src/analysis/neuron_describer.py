@@ -86,5 +86,7 @@ Here are some example texts and tokens where this neuron strongly activates:
             return response.choices[0].message.content.strip()
             
         except Exception as e:
-            print(f"Error generating description: {e}")
-            return "Description generation failed" 
+            import traceback
+            error_msg = f"Error generating description:\nType: {type(e).__name__}\nDetails: {str(e)}\nTraceback:\n{traceback.format_exc()}"
+            print(error_msg)
+            return f"Description generation failed: {type(e).__name__} - {str(e)}" 

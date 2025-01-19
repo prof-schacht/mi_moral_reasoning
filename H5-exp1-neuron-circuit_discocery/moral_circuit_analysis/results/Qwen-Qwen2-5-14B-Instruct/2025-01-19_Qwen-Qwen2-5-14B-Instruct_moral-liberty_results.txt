@@ -1,0 +1,555 @@
+Model: Qwen/Qwen2.5-14B-Instruct
+Dimension: liberty
+Timestamp: 2025-01-19
+
+Moral Neurons:
+(4, 13084)
+(7, 8963)
+(7, 13795)
+(13, 12047)
+(15, 459)
+(15, 2760)
+(15, 4762)
+(15, 4962)
+(16, 3736)
+(16, 4556)
+(16, 8395)
+(16, 8493)
+(16, 11749)
+(17, 4129)
+(17, 8717)
+(17, 9158)
+(17, 12113)
+(18, 618)
+(18, 953)
+(18, 1965)
+(18, 4471)
+(18, 5604)
+(18, 8823)
+(18, 9079)
+(18, 12370)
+(18, 13211)
+(18, 13436)
+(19, 243)
+(19, 2277)
+(19, 3338)
+(19, 4974)
+(19, 6469)
+(19, 7533)
+(19, 10236)
+(19, 10536)
+(19, 10722)
+(19, 11275)
+(20, 2805)
+(20, 3083)
+(20, 3601)
+(20, 4373)
+(20, 5760)
+(20, 6118)
+(20, 6357)
+(20, 7410)
+(20, 7454)
+(20, 7878)
+(20, 8113)
+(21, 613)
+(21, 959)
+(21, 1549)
+(21, 2098)
+(21, 2202)
+(21, 3632)
+(21, 4440)
+(21, 5947)
+(21, 6422)
+(21, 8540)
+(21, 8977)
+(21, 12040)
+(21, 12434)
+(21, 12739)
+(21, 12772)
+(21, 13482)
+(22, 54)
+(22, 645)
+(22, 4455)
+(22, 7004)
+(22, 7521)
+(22, 8785)
+(22, 10928)
+(22, 13557)
+(22, 13727)
+(23, 481)
+(23, 527)
+(23, 1166)
+(23, 2038)
+(23, 2652)
+(23, 3828)
+(23, 4794)
+(23, 5045)
+(23, 5832)
+(23, 6232)
+(23, 8572)
+(23, 8648)
+(23, 9361)
+(23, 9459)
+(23, 9551)
+(23, 10410)
+(23, 10919)
+(23, 10969)
+(23, 11857)
+(24, 333)
+(24, 980)
+(24, 1714)
+(24, 2319)
+(24, 2377)
+(24, 3613)
+(24, 3621)
+(24, 3919)
+(24, 5992)
+(24, 6078)
+(24, 6491)
+(24, 6591)
+(24, 6697)
+(24, 8397)
+(24, 8614)
+(24, 10973)
+(24, 12252)
+(24, 12798)
+(25, 7)
+(25, 44)
+(25, 318)
+(25, 2747)
+(25, 4489)
+(25, 5136)
+(25, 7931)
+(25, 9980)
+(25, 10662)
+(25, 13717)
+(26, 654)
+(26, 3885)
+(26, 5969)
+(26, 7601)
+(26, 9179)
+(26, 11235)
+(26, 11265)
+(26, 11296)
+(26, 11911)
+(27, 3246)
+(27, 4143)
+(27, 6454)
+(28, 273)
+(28, 347)
+(28, 710)
+(28, 1312)
+(28, 2691)
+(28, 3780)
+(28, 3805)
+(28, 4091)
+(28, 5862)
+(28, 6955)
+(28, 7196)
+(28, 7472)
+(28, 9589)
+(28, 12755)
+(28, 13399)
+(29, 18)
+(29, 1102)
+(29, 2254)
+(29, 2620)
+(29, 3545)
+(29, 4711)
+(29, 7597)
+(29, 9847)
+(29, 10133)
+(29, 10325)
+(29, 12669)
+(29, 13768)
+(30, 764)
+(30, 2444)
+(30, 6227)
+(30, 10077)
+(30, 10493)
+(30, 10608)
+(30, 12148)
+(30, 12551)
+(30, 13442)
+(31, 87)
+(31, 510)
+(31, 1054)
+(31, 4077)
+(31, 4081)
+(31, 6962)
+(31, 13252)
+(32, 532)
+(32, 1682)
+(32, 2837)
+(32, 3387)
+(32, 4706)
+(32, 5115)
+(32, 10447)
+(32, 10868)
+(33, 2206)
+(33, 2338)
+(33, 2596)
+(33, 3248)
+(33, 3344)
+(33, 4678)
+(33, 5693)
+(33, 12153)
+(33, 12628)
+(33, 13483)
+(34, 312)
+(34, 416)
+(34, 2120)
+(34, 2639)
+(34, 2916)
+(34, 4928)
+(34, 6658)
+(34, 7622)
+(34, 7661)
+(34, 9862)
+(34, 10140)
+(34, 12131)
+(35, 856)
+(35, 2369)
+(35, 2495)
+(35, 3253)
+(35, 3691)
+(35, 4946)
+(35, 5446)
+(35, 5797)
+(35, 6208)
+(35, 7272)
+(35, 8618)
+(35, 9819)
+(35, 10910)
+(35, 12961)
+(35, 12983)
+(35, 13034)
+(35, 13654)
+(36, 2072)
+(36, 2099)
+(36, 2833)
+(36, 3897)
+(36, 7532)
+(36, 11833)
+(36, 13489)
+(37, 98)
+(37, 2131)
+(37, 8794)
+(37, 13491)
+(38, 500)
+(39, 4860)
+(39, 12436)
+(40, 2828)
+(40, 7191)
+(41, 7482)
+(41, 10220)
+(42, 8176)
+(42, 9741)
+(46, 7915)
+(47, 8932)
+
+Immoral Neurons:
+
+Neuron Consistency:
+{'L4N13084': tensor(0.5647, device='cuda:0')}
+{'L7N783': tensor(0.5515, device='cuda:0')}
+{'L7N8963': tensor(0.5735, device='cuda:0')}
+{'L7N13795': tensor(0.5824, device='cuda:0')}
+{'L13N12047': tensor(0.5544, device='cuda:0')}
+{'L15N459': tensor(0.5515, device='cuda:0')}
+{'L15N2760': tensor(0.5515, device='cuda:0')}
+{'L15N4762': tensor(0.5544, device='cuda:0')}
+{'L15N4962': tensor(0.5662, device='cuda:0')}
+{'L16N3736': tensor(0.5824, device='cuda:0')}
+{'L16N4556': tensor(0.5721, device='cuda:0')}
+{'L16N8395': tensor(0.5529, device='cuda:0')}
+{'L16N8493': tensor(0.5676, device='cuda:0')}
+{'L16N11749': tensor(0.5544, device='cuda:0')}
+{'L17N4129': tensor(0.5544, device='cuda:0')}
+{'L17N8717': tensor(0.5559, device='cuda:0')}
+{'L17N9158': tensor(0.5618, device='cuda:0')}
+{'L17N12113': tensor(0.5544, device='cuda:0')}
+{'L18N618': tensor(0.5735, device='cuda:0')}
+{'L18N953': tensor(0.5853, device='cuda:0')}
+{'L18N1965': tensor(0.5618, device='cuda:0')}
+{'L18N4471': tensor(0.5515, device='cuda:0')}
+{'L18N5604': tensor(0.5603, device='cuda:0')}
+{'L18N8823': tensor(0.5735, device='cuda:0')}
+{'L18N9079': tensor(0.5544, device='cuda:0')}
+{'L18N12370': tensor(0.5559, device='cuda:0')}
+{'L18N13211': tensor(0.5574, device='cuda:0')}
+{'L18N13436': tensor(0.5529, device='cuda:0')}
+{'L19N243': tensor(0.5559, device='cuda:0')}
+{'L19N2277': tensor(0.5632, device='cuda:0')}
+{'L19N3338': tensor(0.5618, device='cuda:0')}
+{'L19N4974': tensor(0.5588, device='cuda:0')}
+{'L19N6469': tensor(0.5515, device='cuda:0')}
+{'L19N7533': tensor(0.5529, device='cuda:0')}
+{'L19N10236': tensor(0.5618, device='cuda:0')}
+{'L19N10536': tensor(0.5824, device='cuda:0')}
+{'L19N10722': tensor(0.5544, device='cuda:0')}
+{'L19N11275': tensor(0.5515, device='cuda:0')}
+{'L20N2805': tensor(0.5853, device='cuda:0')}
+{'L20N3083': tensor(0.5574, device='cuda:0')}
+{'L20N3601': tensor(0.5735, device='cuda:0')}
+{'L20N4373': tensor(0.5544, device='cuda:0')}
+{'L20N5760': tensor(0.5515, device='cuda:0')}
+{'L20N6118': tensor(0.5809, device='cuda:0')}
+{'L20N6357': tensor(0.5838, device='cuda:0')}
+{'L20N7410': tensor(0.5618, device='cuda:0')}
+{'L20N7454': tensor(0.5603, device='cuda:0')}
+{'L20N7878': tensor(0.5912, device='cuda:0')}
+{'L20N8113': tensor(0.5676, device='cuda:0')}
+{'L21N613': tensor(0.5515, device='cuda:0')}
+{'L21N959': tensor(0.5676, device='cuda:0')}
+{'L21N1549': tensor(0.5588, device='cuda:0')}
+{'L21N2098': tensor(0.5662, device='cuda:0')}
+{'L21N2202': tensor(0.5735, device='cuda:0')}
+{'L21N3632': tensor(0.5544, device='cuda:0')}
+{'L21N4440': tensor(0.5588, device='cuda:0')}
+{'L21N5947': tensor(0.5838, device='cuda:0')}
+{'L21N6422': tensor(0.5985, device='cuda:0')}
+{'L21N8540': tensor(0.5559, device='cuda:0')}
+{'L21N8977': tensor(0.5897, device='cuda:0')}
+{'L21N12040': tensor(0.5676, device='cuda:0')}
+{'L21N12434': tensor(0.5515, device='cuda:0')}
+{'L21N12739': tensor(0.5559, device='cuda:0')}
+{'L21N12772': tensor(0.5544, device='cuda:0')}
+{'L21N13482': tensor(0.5632, device='cuda:0')}
+{'L22N54': tensor(0.5868, device='cuda:0')}
+{'L22N645': tensor(0.5544, device='cuda:0')}
+{'L22N4455': tensor(0.5559, device='cuda:0')}
+{'L22N7004': tensor(0.5559, device='cuda:0')}
+{'L22N7521': tensor(0.5574, device='cuda:0')}
+{'L22N8785': tensor(0.5544, device='cuda:0')}
+{'L22N10928': tensor(0.5838, device='cuda:0')}
+{'L22N13557': tensor(0.5735, device='cuda:0')}
+{'L22N13727': tensor(0.5676, device='cuda:0')}
+{'L23N481': tensor(0.5544, device='cuda:0')}
+{'L23N527': tensor(0.5515, device='cuda:0')}
+{'L23N1166': tensor(0.5647, device='cuda:0')}
+{'L23N2038': tensor(0.5676, device='cuda:0')}
+{'L23N2652': tensor(0.5559, device='cuda:0')}
+{'L23N3828': tensor(0.5676, device='cuda:0')}
+{'L23N4794': tensor(0.5515, device='cuda:0')}
+{'L23N5045': tensor(0.6368, device='cuda:0')}
+{'L23N5832': tensor(0.5647, device='cuda:0')}
+{'L23N6232': tensor(0.5588, device='cuda:0')}
+{'L23N8572': tensor(0.5559, device='cuda:0')}
+{'L23N8648': tensor(0.5515, device='cuda:0')}
+{'L23N9361': tensor(0.5882, device='cuda:0')}
+{'L23N9459': tensor(0.5676, device='cuda:0')}
+{'L23N9551': tensor(0.5809, device='cuda:0')}
+{'L23N10410': tensor(0.5676, device='cuda:0')}
+{'L23N10919': tensor(0.5647, device='cuda:0')}
+{'L23N10969': tensor(0.5544, device='cuda:0')}
+{'L23N11857': tensor(0.5647, device='cuda:0')}
+{'L24N333': tensor(0.5603, device='cuda:0')}
+{'L24N980': tensor(0.5676, device='cuda:0')}
+{'L24N1714': tensor(0.5676, device='cuda:0')}
+{'L24N2319': tensor(0.5529, device='cuda:0')}
+{'L24N2377': tensor(0.5603, device='cuda:0')}
+{'L24N3613': tensor(0.5676, device='cuda:0')}
+{'L24N3621': tensor(0.5515, device='cuda:0')}
+{'L24N3919': tensor(0.5529, device='cuda:0')}
+{'L24N5992': tensor(0.5559, device='cuda:0')}
+{'L24N6078': tensor(0.5559, device='cuda:0')}
+{'L24N6491': tensor(0.5662, device='cuda:0')}
+{'L24N6591': tensor(0.5559, device='cuda:0')}
+{'L24N6697': tensor(0.5721, device='cuda:0')}
+{'L24N8397': tensor(0.5574, device='cuda:0')}
+{'L24N8614': tensor(0.5515, device='cuda:0')}
+{'L24N10973': tensor(0.5588, device='cuda:0')}
+{'L24N12252': tensor(0.5529, device='cuda:0')}
+{'L24N12798': tensor(0.5529, device='cuda:0')}
+{'L25N7': tensor(0.5941, device='cuda:0')}
+{'L25N44': tensor(0.5779, device='cuda:0')}
+{'L25N318': tensor(0.5735, device='cuda:0')}
+{'L25N2747': tensor(0.5632, device='cuda:0')}
+{'L25N4489': tensor(0.5559, device='cuda:0')}
+{'L25N5136': tensor(0.5529, device='cuda:0')}
+{'L25N7931': tensor(0.5765, device='cuda:0')}
+{'L25N9980': tensor(0.5544, device='cuda:0')}
+{'L25N10662': tensor(0.5588, device='cuda:0')}
+{'L25N13717': tensor(0.5588, device='cuda:0')}
+{'L26N654': tensor(0.5559, device='cuda:0')}
+{'L26N3885': tensor(0.5691, device='cuda:0')}
+{'L26N5969': tensor(0.5706, device='cuda:0')}
+{'L26N7601': tensor(0.5559, device='cuda:0')}
+{'L26N9179': tensor(0.5676, device='cuda:0')}
+{'L26N11235': tensor(0.5529, device='cuda:0')}
+{'L26N11265': tensor(0.5721, device='cuda:0')}
+{'L26N11296': tensor(0.5721, device='cuda:0')}
+{'L26N11911': tensor(0.5676, device='cuda:0')}
+{'L27N3246': tensor(0.5559, device='cuda:0')}
+{'L27N4143': tensor(0.5559, device='cuda:0')}
+{'L27N6454': tensor(0.5706, device='cuda:0')}
+{'L28N273': tensor(0.5559, device='cuda:0')}
+{'L28N347': tensor(0.5618, device='cuda:0')}
+{'L28N710': tensor(0.5515, device='cuda:0')}
+{'L28N1312': tensor(0.5868, device='cuda:0')}
+{'L28N2691': tensor(0.5647, device='cuda:0')}
+{'L28N3780': tensor(0.5515, device='cuda:0')}
+{'L28N3805': tensor(0.6000, device='cuda:0')}
+{'L28N4091': tensor(0.5574, device='cuda:0')}
+{'L28N5862': tensor(0.5574, device='cuda:0')}
+{'L28N6955': tensor(0.5529, device='cuda:0')}
+{'L28N7196': tensor(0.5632, device='cuda:0')}
+{'L28N7472': tensor(0.5515, device='cuda:0')}
+{'L28N9589': tensor(0.5706, device='cuda:0')}
+{'L28N12755': tensor(0.6147, device='cuda:0')}
+{'L28N13399': tensor(0.5574, device='cuda:0')}
+{'L29N18': tensor(0.5765, device='cuda:0')}
+{'L29N1102': tensor(0.5809, device='cuda:0')}
+{'L29N2254': tensor(0.5765, device='cuda:0')}
+{'L29N2620': tensor(0.5574, device='cuda:0')}
+{'L29N3545': tensor(0.5721, device='cuda:0')}
+{'L29N4711': tensor(0.5897, device='cuda:0')}
+{'L29N7597': tensor(0.5574, device='cuda:0')}
+{'L29N9847': tensor(0.5691, device='cuda:0')}
+{'L29N10133': tensor(0.5588, device='cuda:0')}
+{'L29N10325': tensor(0.5721, device='cuda:0')}
+{'L29N12669': tensor(0.6088, device='cuda:0')}
+{'L29N13768': tensor(0.5544, device='cuda:0')}
+{'L30N764': tensor(0.5632, device='cuda:0')}
+{'L30N2444': tensor(0.5662, device='cuda:0')}
+{'L30N6227': tensor(0.6279, device='cuda:0')}
+{'L30N10077': tensor(0.5632, device='cuda:0')}
+{'L30N10493': tensor(0.5588, device='cuda:0')}
+{'L30N10608': tensor(0.5765, device='cuda:0')}
+{'L30N12148': tensor(0.5574, device='cuda:0')}
+{'L30N12551': tensor(0.5662, device='cuda:0')}
+{'L30N13442': tensor(0.5529, device='cuda:0')}
+{'L31N87': tensor(0.5603, device='cuda:0')}
+{'L31N510': tensor(0.5632, device='cuda:0')}
+{'L31N1054': tensor(0.5515, device='cuda:0')}
+{'L31N4077': tensor(0.5603, device='cuda:0')}
+{'L31N4081': tensor(0.5515, device='cuda:0')}
+{'L31N6962': tensor(0.5603, device='cuda:0')}
+{'L31N13252': tensor(0.5544, device='cuda:0')}
+{'L32N532': tensor(0.5662, device='cuda:0')}
+{'L32N1682': tensor(0.5662, device='cuda:0')}
+{'L32N2837': tensor(0.5559, device='cuda:0')}
+{'L32N3387': tensor(0.5647, device='cuda:0')}
+{'L32N4706': tensor(0.5529, device='cuda:0')}
+{'L32N5115': tensor(0.5618, device='cuda:0')}
+{'L32N10447': tensor(0.5559, device='cuda:0')}
+{'L32N10868': tensor(0.5588, device='cuda:0')}
+{'L33N2206': tensor(0.5559, device='cuda:0')}
+{'L33N2338': tensor(0.6279, device='cuda:0')}
+{'L33N2596': tensor(0.5618, device='cuda:0')}
+{'L33N3248': tensor(0.5809, device='cuda:0')}
+{'L33N3344': tensor(0.5662, device='cuda:0')}
+{'L33N4678': tensor(0.5853, device='cuda:0')}
+{'L33N5693': tensor(0.5765, device='cuda:0')}
+{'L33N12153': tensor(0.5574, device='cuda:0')}
+{'L33N12628': tensor(0.6029, device='cuda:0')}
+{'L33N13483': tensor(0.5515, device='cuda:0')}
+{'L34N312': tensor(0.5529, device='cuda:0')}
+{'L34N416': tensor(0.5529, device='cuda:0')}
+{'L34N2120': tensor(0.5956, device='cuda:0')}
+{'L34N2639': tensor(0.5971, device='cuda:0')}
+{'L34N2916': tensor(0.5574, device='cuda:0')}
+{'L34N4928': tensor(0.5559, device='cuda:0')}
+{'L34N6658': tensor(0.5515, device='cuda:0')}
+{'L34N7622': tensor(0.5529, device='cuda:0')}
+{'L34N7661': tensor(0.5956, device='cuda:0')}
+{'L34N9862': tensor(0.5515, device='cuda:0')}
+{'L34N10140': tensor(0.5559, device='cuda:0')}
+{'L34N12131': tensor(0.5691, device='cuda:0')}
+{'L35N856': tensor(0.5544, device='cuda:0')}
+{'L35N2369': tensor(0.5515, device='cuda:0')}
+{'L35N2495': tensor(0.5956, device='cuda:0')}
+{'L35N3253': tensor(0.5559, device='cuda:0')}
+{'L35N3691': tensor(0.5941, device='cuda:0')}
+{'L35N4946': tensor(0.5588, device='cuda:0')}
+{'L35N5446': tensor(0.5529, device='cuda:0')}
+{'L35N5797': tensor(0.5691, device='cuda:0')}
+{'L35N6208': tensor(0.5544, device='cuda:0')}
+{'L35N7272': tensor(0.5765, device='cuda:0')}
+{'L35N8618': tensor(0.5544, device='cuda:0')}
+{'L35N9819': tensor(0.5721, device='cuda:0')}
+{'L35N10910': tensor(0.5515, device='cuda:0')}
+{'L35N12961': tensor(0.5574, device='cuda:0')}
+{'L35N12983': tensor(0.5544, device='cuda:0')}
+{'L35N13034': tensor(0.5574, device='cuda:0')}
+{'L35N13654': tensor(0.5721, device='cuda:0')}
+{'L36N2072': tensor(0.5721, device='cuda:0')}
+{'L36N2099': tensor(0.5529, device='cuda:0')}
+{'L36N2833': tensor(0.5647, device='cuda:0')}
+{'L36N3897': tensor(0.5794, device='cuda:0')}
+{'L36N7532': tensor(0.5618, device='cuda:0')}
+{'L36N11833': tensor(0.5515, device='cuda:0')}
+{'L36N13489': tensor(0.5676, device='cuda:0')}
+{'L37N98': tensor(0.5647, device='cuda:0')}
+{'L37N2131': tensor(0.5588, device='cuda:0')}
+{'L37N8794': tensor(0.5588, device='cuda:0')}
+{'L37N13491': tensor(0.5574, device='cuda:0')}
+{'L38N500': tensor(0.5794, device='cuda:0')}
+{'L39N4860': tensor(0.5588, device='cuda:0')}
+{'L39N12436': tensor(0.5574, device='cuda:0')}
+{'L40N2828': tensor(0.6103, device='cuda:0')}
+{'L40N7191': tensor(0.5618, device='cuda:0')}
+{'L41N7482': tensor(0.5515, device='cuda:0')}
+{'L41N10220': tensor(0.5779, device='cuda:0')}
+{'L42N8176': tensor(0.5750, device='cuda:0')}
+{'L42N9741': tensor(0.5529, device='cuda:0')}
+{'L46N7915': tensor(0.5559, device='cuda:0')}
+{'L47N8932': tensor(0.5529, device='cuda:0')}
+
+Layer Importance:
+(47, 0.17704811692237854)
+(46, 0.12108591943979263)
+(45, 0.08681336045265198)
+(44, 0.07394757866859436)
+(43, 0.0648169219493866)
+(42, 0.05934350565075874)
+(41, 0.05605786293745041)
+(40, 0.05551668256521225)
+(39, 0.05392911657691002)
+(38, 0.0514400489628315)
+(37, 0.04954436793923378)
+(36, 0.04798237606883049)
+(35, 0.04506896808743477)
+(34, 0.04185473173856735)
+(33, 0.03909238055348396)
+(32, 0.03305360674858093)
+(31, 0.031115615740418434)
+(30, 0.02750011906027794)
+(29, 0.025157853960990906)
+(28, 0.02363719418644905)
+(15, 0.023190636187791824)
+(16, 0.022990640252828598)
+(17, 0.022812994197010994)
+(18, 0.022322677075862885)
+(19, 0.022190868854522705)
+(14, 0.021980484947562218)
+(27, 0.02175447903573513)
+(20, 0.021591750904917717)
+(23, 0.02153511717915535)
+(21, 0.021160051226615906)
+(22, 0.020972520112991333)
+(13, 0.02077098935842514)
+(24, 0.020619850605726242)
+(26, 0.02032279595732689)
+(25, 0.02026405744254589)
+(12, 0.01859113946557045)
+(11, 0.017268290743231773)
+(10, 0.017200054600834846)
+(9, 0.017025643959641457)
+(8, 0.013775276020169258)
+(7, 0.01022147573530674)
+(0, 0.00739121763035655)
+(6, 0.00687213521450758)
+(4, 0.006657650228589773)
+(5, 0.005823029670864344)
+(3, 0.0031575290486216545)
+(2, 0.0016888858517631888)
+(1, 0.0006676174816675484)
+
+Key Trigger Points:
+(1, 0.05144135653972626)
+(2, 0.04743032157421112)
+(7, 0.04507125914096832)
+(8, 0.04455447196960449)
+(6, 0.044366177171468735)

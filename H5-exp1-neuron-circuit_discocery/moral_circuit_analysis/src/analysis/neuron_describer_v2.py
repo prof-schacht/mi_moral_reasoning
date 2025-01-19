@@ -49,14 +49,16 @@ class NeuronEvaluator:
         llm_name: str = "gpt-4o",
         top_k: int = 50,
         activation_threshold: float = 0.5,
-        batch_size: int = 32
+        batch_size: int = 32,
+        api_key: str = None
     ):
         self.model = model
         self.llm_name = llm_name
         self.top_k = top_k
         self.activation_threshold = activation_threshold
         self.batch_size = batch_size
-        self.client = openai.OpenAI()
+        self.api_key = api_key
+        self.client = openai.OpenAI(api_key=api_key)
 
     def get_neuron_activations(
         self, 
@@ -143,24 +145,18 @@ class NeuronEvaluator:
         analysis: Dict
     ) -> str:
         """Generate detailed description of neuron behavior."""
-        prompt = f"""Analyze the behavior of a neuron (layer {layer}, index {neuron_idx}) based on its activation patterns.
-
-Key Statistics:
-- Total significant activations: {analysis['total_activations']}
-- Average activation: {analysis['avg_activation']:.3f}
-- Maximum activation: {analysis['max_activation']:.3f}
-
-Top activating tokens and their frequencies:
-{'\n'.join(f'- {token}: {freq} times' for token, freq in analysis['top_tokens'])}
-
-Example activating contexts (top 5):
-{'\n'.join(f'Text: {act.text}\nToken: {act.token} (activation: {act.activation:.3f})\nContext before: {act.context_before}\nContext after: {act.context_after}\n' for act in activations[:5])}
-
-Based on these patterns, provide:
-1. A concise description of what concept or pattern this neuron detects
-2. Any notable contextual patterns
-3. Possible semantic or syntactic role of this neuron
-"""
+        prompt = (
+            f"Analyze the following neuron activation patterns:\n"
+            f"- Maximum activation: {analysis['max_activation']:.3f}\n"
+            f"Top activating tokens and their frequencies:\n"
+            f"{chr(10).join(f'- {token}: {freq} times' for token, freq in analysis['top_tokens'])}\n"
+            f"Example activating contexts (top 5):\n"
+            f"{chr(10).join(f'Text: {act.text}{chr(10)}Token: {act.token} (activation: {act.activation:.3f}){chr(10)}Context before: {act.context_before}{chr(10)}Context after: {act.context_after}{chr(10)}' for act in activations[:5])}\n"
+            f"Based on these patterns, provide:\n"
+            f"1. A concise description of what concept or pattern this neuron detects\n"
+            f"2. Any notable contextual patterns\n"
+            f"3. Possible semantic or syntactic role of this neuron"
+        )
 
         try:
             response = self.client.chat.completions.create(
@@ -174,8 +170,10 @@ Based on these patterns, provide:
             )
             return response.choices[0].message.content.strip()
         except Exception as e:
-            print(f"Error generating description: {e}")
-            return "Description generation failed"
+            import traceback
+            error_msg = f"Error generating description:\nType: {type(e).__name__}\nDetails: {str(e)}\nTraceback:\n{traceback.format_exc()}"
+            print(error_msg)
+            return f"Description generation failed: {type(e).__name__} - {str(e)}"
 
     def evaluate_neuron(
         self,
