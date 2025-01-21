@@ -977,6 +977,41 @@ moral_foundations = {
     ]
 }
 
+# Generating a list of 30 random, neutral sentences. Generates with GPT-4o Prompt: "Generate a python list, with random sentences, which does not contain moral or immoral statements. I need 30 Sentences. "
+random_sentences = [
+    "Seven trees rise behind the old library near a red bench.",
+    "Those battered books perched awkwardly on wide shelves still hold no urgent secrets.",
+    "Colorful lamps shine nightly beside narrow alleys in quaint squares.",
+    "Beneath distant clouds, travelers linger casually without urgent tasks ahead.",
+    "Whispers follow each comet drifting across the silent evening sky.",
+    "Lingering melodies drift through the quiet meadow, gently greeting each wandering ear and mind softly.",
+    "Towering silhouettes glide by the window, revealing patterns too subtle for quick glimpses.",
+    "Endless pebbles gather along the creek, shimmering faintly in late sunlight.",
+    "Delicate petals flutter whenever a strong breeze passes through the orchard.",
+    "Rolling thunder crept over distant hills, awakening shadows without clear purpose.",
+    "Rustling branches echo softly when dawn scatters light across the gray horizon.",
+    "Simple riddles drift through idle chatter, sparking brief smiles all around.",
+    "Golden reflections shimmer across calm lake waters during sunrise.",
+    "Old wooden bridges creak faintly under careful footsteps in the forest.",
+    "Gentle rain taps lightly on the glass, forming soft patterns in the evening.",
+    "Faint echoes fill the cavern as droplets splash onto the rocks below.",
+    "Paper boats float downstream, swaying in the soft currents of a lazy river.",
+    "Distant bells chime softly, marking the passage of unseen moments.",
+    "Shadows stretch long across the fields as the sun sets in a blaze of orange.",
+    "Icicles glisten under the winter sun, dripping water in slow rhythmic beats.",
+    "Leaves swirl gracefully in the autumn wind, painting the ground in shades of gold.",
+    "Tiny fireflies blink softly, creating scattered lights over the summer fields.",
+    "A faint breeze carries the scent of jasmine through the narrow village paths.",
+    "Clouds drift lazily, reflecting the golden hues of the late afternoon sun.",
+    "Ancient stone ruins stand silent, echoing stories of lives long forgotten.",
+    "Raindrops collect on windowpanes, distorting the world into soft, shifting shapes.",
+    "Waves lap gently at the shore, erasing footprints left moments before.",
+    "Stars pierce through the night sky, weaving constellations of distant wonder.",
+    "The scent of fresh bread fills the air, drifting from the corner bakery.",
+    "Silent footsteps trace the narrow trail, leaving only whispers of movement."
+]
+
+
 def generate_mc_prompts(moral_foundations, instruct_model=False ):
     """
     Generates multiple-choice prompts from a dictionary of moral foundations.
@@ -1039,6 +1074,8 @@ def generate_mc_prompts(moral_foundations, instruct_model=False ):
     return prompts
 
 
+
+
 def get_moral_statements(dimension: str = None, moral: bool = True) -> list:
     """Get moral or immoral statements, optionally filtered by dimension.
     
@@ -1081,6 +1118,10 @@ def get_moral_statements(dimension: str = None, moral: bool = True) -> list:
                 })
                 
     return statements
+
+
+def get_neutral_statements():
+    return random_sentences
 
 
 def get_moral_keys():

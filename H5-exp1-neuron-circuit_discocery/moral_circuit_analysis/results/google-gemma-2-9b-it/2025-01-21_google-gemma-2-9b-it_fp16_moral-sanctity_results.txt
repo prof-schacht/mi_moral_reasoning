@@ -1,0 +1,715 @@
+Model: google/gemma-2-9b-it
+Dimension: sanctity
+Timestamp: 2025-01-21
+
+Precision: None
+Moral Neurons:
+(0, 9462)
+(3, 8284)
+(4, 3897)
+(4, 11288)
+(4, 13490)
+(5, 10109)
+(6, 3167)
+(6, 4594)
+(6, 9738)
+(6, 13753)
+(7, 14206)
+(8, 284)
+(8, 2315)
+(8, 4681)
+(8, 7796)
+(9, 4)
+(9, 4574)
+(9, 6349)
+(9, 10156)
+(9, 12012)
+(9, 13408)
+(10, 77)
+(10, 7816)
+(10, 8226)
+(10, 12425)
+(11, 2295)
+(11, 3037)
+(11, 8864)
+(12, 1164)
+(12, 3116)
+(12, 3563)
+(12, 3750)
+(12, 4430)
+(12, 7879)
+(12, 8217)
+(12, 8416)
+(12, 9634)
+(12, 11370)
+(12, 11833)
+(12, 12834)
+(12, 13777)
+(13, 1524)
+(13, 2203)
+(13, 2536)
+(13, 5508)
+(13, 7920)
+(13, 9344)
+(13, 9714)
+(13, 10000)
+(13, 12261)
+(13, 12523)
+(14, 1225)
+(14, 2053)
+(14, 4891)
+(14, 6316)
+(14, 6761)
+(14, 9283)
+(14, 10616)
+(14, 11079)
+(14, 12828)
+(14, 12954)
+(15, 2086)
+(15, 3171)
+(15, 3838)
+(15, 4969)
+(15, 6914)
+(15, 9492)
+(15, 10407)
+(15, 10852)
+(15, 11132)
+(15, 13228)
+(16, 4543)
+(16, 12555)
+(17, 1367)
+(17, 2730)
+(17, 3279)
+(17, 3511)
+(17, 5170)
+(17, 6433)
+(17, 6581)
+(17, 7851)
+(17, 9842)
+(17, 10855)
+(17, 11204)
+(17, 11257)
+(17, 11567)
+(17, 12257)
+(18, 883)
+(18, 2875)
+(18, 2989)
+(18, 5476)
+(18, 7705)
+(18, 7823)
+(18, 7916)
+(18, 8973)
+(18, 9135)
+(18, 10798)
+(18, 11921)
+(18, 13941)
+(19, 382)
+(19, 572)
+(19, 2011)
+(19, 2108)
+(19, 2699)
+(19, 4342)
+(19, 4711)
+(19, 5400)
+(19, 6016)
+(19, 6082)
+(19, 6403)
+(19, 6828)
+(19, 7191)
+(19, 8658)
+(19, 9346)
+(19, 10089)
+(19, 10279)
+(19, 10680)
+(19, 11005)
+(19, 12194)
+(19, 12745)
+(19, 13125)
+(19, 13247)
+(19, 13807)
+(20, 877)
+(20, 1557)
+(20, 2115)
+(20, 4914)
+(20, 5077)
+(20, 8982)
+(20, 10620)
+(20, 11523)
+(20, 12225)
+(20, 13173)
+(20, 13294)
+(21, 1129)
+(21, 1585)
+(21, 2619)
+(21, 3688)
+(21, 5139)
+(21, 7558)
+(21, 8172)
+(21, 9007)
+(21, 9549)
+(21, 12385)
+(21, 13083)
+(21, 13680)
+(21, 14193)
+(22, 555)
+(22, 2838)
+(22, 3581)
+(22, 4368)
+(22, 6202)
+(22, 6504)
+(22, 7075)
+(22, 7287)
+(22, 7532)
+(22, 8090)
+(22, 8420)
+(22, 9474)
+(22, 11064)
+(22, 12973)
+(23, 86)
+(23, 128)
+(23, 214)
+(23, 860)
+(23, 1367)
+(23, 1415)
+(23, 1425)
+(23, 2436)
+(23, 2640)
+(23, 3546)
+(23, 4010)
+(23, 4444)
+(23, 5686)
+(23, 5746)
+(23, 5963)
+(23, 5979)
+(23, 6046)
+(23, 7069)
+(23, 7498)
+(23, 8315)
+(23, 10272)
+(23, 10673)
+(23, 10710)
+(23, 11217)
+(23, 12467)
+(24, 419)
+(24, 476)
+(24, 1095)
+(24, 2235)
+(24, 3107)
+(24, 3175)
+(24, 5148)
+(24, 5270)
+(24, 5781)
+(24, 6257)
+(24, 6678)
+(24, 9105)
+(24, 12858)
+(24, 13004)
+(24, 13565)
+(24, 14067)
+(25, 212)
+(25, 693)
+(25, 701)
+(25, 1203)
+(25, 1675)
+(25, 3111)
+(25, 3821)
+(25, 4018)
+(25, 6892)
+(25, 7456)
+(25, 8214)
+(25, 9649)
+(25, 9872)
+(25, 12209)
+(25, 13929)
+(26, 2140)
+(26, 3754)
+(26, 3841)
+(26, 4829)
+(26, 4843)
+(26, 4878)
+(26, 7776)
+(26, 8426)
+(26, 9451)
+(26, 10276)
+(26, 11251)
+(26, 11794)
+(26, 12469)
+(26, 12673)
+(27, 1709)
+(27, 4084)
+(27, 5890)
+(27, 10613)
+(27, 12972)
+(27, 13316)
+(28, 2669)
+(28, 3338)
+(28, 3811)
+(28, 6320)
+(28, 8428)
+(28, 9081)
+(28, 10813)
+(29, 987)
+(29, 1369)
+(29, 1553)
+(29, 2067)
+(29, 3503)
+(29, 3664)
+(29, 6002)
+(29, 11424)
+(29, 13483)
+(30, 2332)
+(30, 7760)
+(30, 10170)
+(30, 11671)
+(30, 13064)
+(30, 13241)
+(31, 339)
+(31, 4634)
+(31, 9173)
+(31, 9888)
+(31, 14256)
+(32, 1349)
+(32, 5873)
+(32, 8112)
+(32, 8179)
+(32, 10051)
+(32, 11117)
+(32, 12953)
+(33, 793)
+(33, 2739)
+(33, 6888)
+(33, 7175)
+(33, 7983)
+(34, 8546)
+(34, 12616)
+(35, 4378)
+(35, 4452)
+(35, 9342)
+(35, 13004)
+(36, 3522)
+(36, 4694)
+(36, 7370)
+(36, 7855)
+(36, 8465)
+(36, 11777)
+(37, 242)
+(37, 741)
+(37, 3558)
+(37, 6607)
+(37, 6796)
+(37, 6957)
+(37, 7513)
+(37, 8019)
+(37, 9650)
+(37, 10306)
+(37, 11689)
+(37, 13002)
+(37, 14164)
+(38, 3407)
+(38, 4399)
+(38, 5935)
+(38, 11996)
+(38, 12551)
+(39, 539)
+(39, 2358)
+(39, 5546)
+(39, 5963)
+(39, 13163)
+(39, 13361)
+(40, 3)
+(40, 2898)
+(40, 2970)
+(40, 6036)
+(40, 8159)
+(40, 8275)
+(40, 8439)
+(40, 9343)
+(40, 10254)
+(40, 11193)
+(40, 13056)
+(40, 14005)
+(41, 9123)
+(41, 11298)
+(41, 11986)
+
+Immoral Neurons:
+
+Neuron Consistency:
+{'L0N9462': tensor(0.5524, device='cuda:0')}
+{'L3N8284': tensor(0.5536, device='cuda:0')}
+{'L4N3897': tensor(0.5845, device='cuda:0')}
+{'L4N11288': tensor(0.5702, device='cuda:0')}
+{'L4N13490': tensor(0.5607, device='cuda:0')}
+{'L5N10109': tensor(0.5548, device='cuda:0')}
+{'L6N3167': tensor(0.5667, device='cuda:0')}
+{'L6N4594': tensor(0.5512, device='cuda:0')}
+{'L6N9738': tensor(0.5560, device='cuda:0')}
+{'L6N13753': tensor(0.5512, device='cuda:0')}
+{'L7N14206': tensor(0.5655, device='cuda:0')}
+{'L8N284': tensor(0.5512, device='cuda:0')}
+{'L8N2315': tensor(0.5917, device='cuda:0')}
+{'L8N4681': tensor(0.5536, device='cuda:0')}
+{'L8N7796': tensor(0.5655, device='cuda:0')}
+{'L9N4': tensor(0.5607, device='cuda:0')}
+{'L9N4574': tensor(0.5571, device='cuda:0')}
+{'L9N6349': tensor(0.5738, device='cuda:0')}
+{'L9N10156': tensor(0.5536, device='cuda:0')}
+{'L9N12012': tensor(0.5548, device='cuda:0')}
+{'L9N13408': tensor(0.5607, device='cuda:0')}
+{'L10N77': tensor(0.5595, device='cuda:0')}
+{'L10N7816': tensor(0.5810, device='cuda:0')}
+{'L10N8226': tensor(0.5583, device='cuda:0')}
+{'L10N12425': tensor(0.5631, device='cuda:0')}
+{'L11N2295': tensor(0.6167, device='cuda:0')}
+{'L11N3037': tensor(0.5571, device='cuda:0')}
+{'L11N8864': tensor(0.5548, device='cuda:0')}
+{'L12N1164': tensor(0.5690, device='cuda:0')}
+{'L12N3116': tensor(0.5774, device='cuda:0')}
+{'L12N3563': tensor(0.5536, device='cuda:0')}
+{'L12N3750': tensor(0.5702, device='cuda:0')}
+{'L12N4430': tensor(0.5786, device='cuda:0')}
+{'L12N7879': tensor(0.5583, device='cuda:0')}
+{'L12N8217': tensor(0.5774, device='cuda:0')}
+{'L12N8416': tensor(0.5607, device='cuda:0')}
+{'L12N9634': tensor(0.5536, device='cuda:0')}
+{'L12N11370': tensor(0.5583, device='cuda:0')}
+{'L12N11833': tensor(0.5750, device='cuda:0')}
+{'L12N12834': tensor(0.5631, device='cuda:0')}
+{'L12N13777': tensor(0.5571, device='cuda:0')}
+{'L13N1524': tensor(0.5631, device='cuda:0')}
+{'L13N2203': tensor(0.5571, device='cuda:0')}
+{'L13N2536': tensor(0.5655, device='cuda:0')}
+{'L13N5508': tensor(0.5548, device='cuda:0')}
+{'L13N7920': tensor(0.5702, device='cuda:0')}
+{'L13N9344': tensor(0.5786, device='cuda:0')}
+{'L13N9714': tensor(0.5583, device='cuda:0')}
+{'L13N10000': tensor(0.5607, device='cuda:0')}
+{'L13N12261': tensor(0.5714, device='cuda:0')}
+{'L13N12523': tensor(0.5512, device='cuda:0')}
+{'L14N1225': tensor(0.5643, device='cuda:0')}
+{'L14N2053': tensor(0.5619, device='cuda:0')}
+{'L14N4891': tensor(0.5583, device='cuda:0')}
+{'L14N6316': tensor(0.5750, device='cuda:0')}
+{'L14N6761': tensor(0.5560, device='cuda:0')}
+{'L14N9283': tensor(0.5524, device='cuda:0')}
+{'L14N10616': tensor(0.5524, device='cuda:0')}
+{'L14N11079': tensor(0.5560, device='cuda:0')}
+{'L14N12828': tensor(0.5512, device='cuda:0')}
+{'L14N12954': tensor(0.5536, device='cuda:0')}
+{'L15N2086': tensor(0.5679, device='cuda:0')}
+{'L15N3171': tensor(0.5536, device='cuda:0')}
+{'L15N3838': tensor(0.5595, device='cuda:0')}
+{'L15N4969': tensor(0.5512, device='cuda:0')}
+{'L15N6914': tensor(0.5548, device='cuda:0')}
+{'L15N9492': tensor(0.5929, device='cuda:0')}
+{'L15N10407': tensor(0.5690, device='cuda:0')}
+{'L15N10852': tensor(0.5702, device='cuda:0')}
+{'L15N11132': tensor(0.5524, device='cuda:0')}
+{'L15N13228': tensor(0.5512, device='cuda:0')}
+{'L16N4543': tensor(0.5667, device='cuda:0')}
+{'L16N12555': tensor(0.5726, device='cuda:0')}
+{'L17N1367': tensor(0.5536, device='cuda:0')}
+{'L17N2730': tensor(0.5631, device='cuda:0')}
+{'L17N3279': tensor(0.5881, device='cuda:0')}
+{'L17N3511': tensor(0.5726, device='cuda:0')}
+{'L17N5170': tensor(0.5655, device='cuda:0')}
+{'L17N6433': tensor(0.5571, device='cuda:0')}
+{'L17N6581': tensor(0.5512, device='cuda:0')}
+{'L17N7851': tensor(0.5536, device='cuda:0')}
+{'L17N9842': tensor(0.5571, device='cuda:0')}
+{'L17N10855': tensor(0.5548, device='cuda:0')}
+{'L17N11204': tensor(0.5548, device='cuda:0')}
+{'L17N11257': tensor(0.5512, device='cuda:0')}
+{'L17N11567': tensor(0.6262, device='cuda:0')}
+{'L17N12257': tensor(0.5798, device='cuda:0')}
+{'L18N883': tensor(0.6012, device='cuda:0')}
+{'L18N2875': tensor(0.5571, device='cuda:0')}
+{'L18N2989': tensor(0.5524, device='cuda:0')}
+{'L18N5476': tensor(0.5560, device='cuda:0')}
+{'L18N7705': tensor(0.5690, device='cuda:0')}
+{'L18N7823': tensor(0.5607, device='cuda:0')}
+{'L18N7916': tensor(0.5512, device='cuda:0')}
+{'L18N8973': tensor(0.5607, device='cuda:0')}
+{'L18N9135': tensor(0.5548, device='cuda:0')}
+{'L18N10798': tensor(0.5595, device='cuda:0')}
+{'L18N11921': tensor(0.5524, device='cuda:0')}
+{'L18N13941': tensor(0.5679, device='cuda:0')}
+{'L19N382': tensor(0.5798, device='cuda:0')}
+{'L19N572': tensor(0.6167, device='cuda:0')}
+{'L19N2011': tensor(0.5512, device='cuda:0')}
+{'L19N2108': tensor(0.5524, device='cuda:0')}
+{'L19N2699': tensor(0.5583, device='cuda:0')}
+{'L19N4342': tensor(0.5845, device='cuda:0')}
+{'L19N4711': tensor(0.5524, device='cuda:0')}
+{'L19N5400': tensor(0.5690, device='cuda:0')}
+{'L19N6016': tensor(0.5667, device='cuda:0')}
+{'L19N6082': tensor(0.5512, device='cuda:0')}
+{'L19N6403': tensor(0.5571, device='cuda:0')}
+{'L19N6828': tensor(0.5607, device='cuda:0')}
+{'L19N7191': tensor(0.5619, device='cuda:0')}
+{'L19N8658': tensor(0.5702, device='cuda:0')}
+{'L19N9346': tensor(0.5536, device='cuda:0')}
+{'L19N10089': tensor(0.6036, device='cuda:0')}
+{'L19N10279': tensor(0.5583, device='cuda:0')}
+{'L19N10680': tensor(0.5881, device='cuda:0')}
+{'L19N11005': tensor(0.5524, device='cuda:0')}
+{'L19N12194': tensor(0.5631, device='cuda:0')}
+{'L19N12745': tensor(0.5536, device='cuda:0')}
+{'L19N13125': tensor(0.5524, device='cuda:0')}
+{'L19N13247': tensor(0.5548, device='cuda:0')}
+{'L19N13807': tensor(0.5524, device='cuda:0')}
+{'L20N877': tensor(0.5607, device='cuda:0')}
+{'L20N1557': tensor(0.5583, device='cuda:0')}
+{'L20N2115': tensor(0.5655, device='cuda:0')}
+{'L20N4914': tensor(0.5560, device='cuda:0')}
+{'L20N5077': tensor(0.5524, device='cuda:0')}
+{'L20N8982': tensor(0.5583, device='cuda:0')}
+{'L20N10620': tensor(0.5821, device='cuda:0')}
+{'L20N11523': tensor(0.5512, device='cuda:0')}
+{'L20N12225': tensor(0.5976, device='cuda:0')}
+{'L20N13173': tensor(0.5619, device='cuda:0')}
+{'L20N13294': tensor(0.5679, device='cuda:0')}
+{'L21N1129': tensor(0.5750, device='cuda:0')}
+{'L21N1585': tensor(0.5643, device='cuda:0')}
+{'L21N2619': tensor(0.5643, device='cuda:0')}
+{'L21N3688': tensor(0.5738, device='cuda:0')}
+{'L21N5139': tensor(0.6012, device='cuda:0')}
+{'L21N7558': tensor(0.5905, device='cuda:0')}
+{'L21N8172': tensor(0.5524, device='cuda:0')}
+{'L21N9007': tensor(0.5643, device='cuda:0')}
+{'L21N9549': tensor(0.5679, device='cuda:0')}
+{'L21N12385': tensor(0.5560, device='cuda:0')}
+{'L21N13083': tensor(0.5714, device='cuda:0')}
+{'L21N13680': tensor(0.5583, device='cuda:0')}
+{'L21N14193': tensor(0.5548, device='cuda:0')}
+{'L22N555': tensor(0.5536, device='cuda:0')}
+{'L22N2838': tensor(0.5571, device='cuda:0')}
+{'L22N3581': tensor(0.5762, device='cuda:0')}
+{'L22N4368': tensor(0.5595, device='cuda:0')}
+{'L22N6202': tensor(0.5524, device='cuda:0')}
+{'L22N6504': tensor(0.5524, device='cuda:0')}
+{'L22N7075': tensor(0.5512, device='cuda:0')}
+{'L22N7287': tensor(0.5667, device='cuda:0')}
+{'L22N7532': tensor(0.5583, device='cuda:0')}
+{'L22N8090': tensor(0.5536, device='cuda:0')}
+{'L22N8420': tensor(0.5643, device='cuda:0')}
+{'L22N9474': tensor(0.5786, device='cuda:0')}
+{'L22N11064': tensor(0.5631, device='cuda:0')}
+{'L22N12973': tensor(0.5750, device='cuda:0')}
+{'L23N86': tensor(0.6226, device='cuda:0')}
+{'L23N128': tensor(0.5786, device='cuda:0')}
+{'L23N214': tensor(0.5738, device='cuda:0')}
+{'L23N860': tensor(0.5560, device='cuda:0')}
+{'L23N1367': tensor(0.5821, device='cuda:0')}
+{'L23N1415': tensor(0.5643, device='cuda:0')}
+{'L23N1425': tensor(0.5607, device='cuda:0')}
+{'L23N2436': tensor(0.5667, device='cuda:0')}
+{'L23N2640': tensor(0.5631, device='cuda:0')}
+{'L23N3546': tensor(0.5679, device='cuda:0')}
+{'L23N4010': tensor(0.5929, device='cuda:0')}
+{'L23N4444': tensor(0.5548, device='cuda:0')}
+{'L23N5686': tensor(0.5583, device='cuda:0')}
+{'L23N5746': tensor(0.5512, device='cuda:0')}
+{'L23N5963': tensor(0.6071, device='cuda:0')}
+{'L23N5979': tensor(0.5607, device='cuda:0')}
+{'L23N6046': tensor(0.5667, device='cuda:0')}
+{'L23N7069': tensor(0.5905, device='cuda:0')}
+{'L23N7498': tensor(0.5524, device='cuda:0')}
+{'L23N8315': tensor(0.5512, device='cuda:0')}
+{'L23N10272': tensor(0.5536, device='cuda:0')}
+{'L23N10673': tensor(0.5548, device='cuda:0')}
+{'L23N10710': tensor(0.5571, device='cuda:0')}
+{'L23N11217': tensor(0.5690, device='cuda:0')}
+{'L23N12467': tensor(0.5512, device='cuda:0')}
+{'L24N419': tensor(0.5524, device='cuda:0')}
+{'L24N476': tensor(0.5702, device='cuda:0')}
+{'L24N1095': tensor(0.5595, device='cuda:0')}
+{'L24N2235': tensor(0.5988, device='cuda:0')}
+{'L24N3107': tensor(0.5655, device='cuda:0')}
+{'L24N3175': tensor(0.5714, device='cuda:0')}
+{'L24N5148': tensor(0.5714, device='cuda:0')}
+{'L24N5270': tensor(0.5583, device='cuda:0')}
+{'L24N5781': tensor(0.6369, device='cuda:0')}
+{'L24N6257': tensor(0.5845, device='cuda:0')}
+{'L24N6678': tensor(0.5702, device='cuda:0')}
+{'L24N9105': tensor(0.5619, device='cuda:0')}
+{'L24N12858': tensor(0.5714, device='cuda:0')}
+{'L24N13004': tensor(0.5524, device='cuda:0')}
+{'L24N13565': tensor(0.5845, device='cuda:0')}
+{'L24N14067': tensor(0.5560, device='cuda:0')}
+{'L25N212': tensor(0.5774, device='cuda:0')}
+{'L25N693': tensor(0.5571, device='cuda:0')}
+{'L25N701': tensor(0.5833, device='cuda:0')}
+{'L25N1203': tensor(0.5667, device='cuda:0')}
+{'L25N1675': tensor(0.5714, device='cuda:0')}
+{'L25N3111': tensor(0.5548, device='cuda:0')}
+{'L25N3821': tensor(0.5560, device='cuda:0')}
+{'L25N4018': tensor(0.5833, device='cuda:0')}
+{'L25N6892': tensor(0.5702, device='cuda:0')}
+{'L25N7456': tensor(0.5548, device='cuda:0')}
+{'L25N8214': tensor(0.5679, device='cuda:0')}
+{'L25N9649': tensor(0.6107, device='cuda:0')}
+{'L25N9872': tensor(0.5690, device='cuda:0')}
+{'L25N12209': tensor(0.5762, device='cuda:0')}
+{'L25N13929': tensor(0.5643, device='cuda:0')}
+{'L26N2140': tensor(0.5655, device='cuda:0')}
+{'L26N3754': tensor(0.5952, device='cuda:0')}
+{'L26N3841': tensor(0.5810, device='cuda:0')}
+{'L26N4829': tensor(0.5512, device='cuda:0')}
+{'L26N4843': tensor(0.5595, device='cuda:0')}
+{'L26N4878': tensor(0.5524, device='cuda:0')}
+{'L26N7776': tensor(0.5571, device='cuda:0')}
+{'L26N8426': tensor(0.6214, device='cuda:0')}
+{'L26N9451': tensor(0.5631, device='cuda:0')}
+{'L26N10276': tensor(0.5548, device='cuda:0')}
+{'L26N11251': tensor(0.5536, device='cuda:0')}
+{'L26N11794': tensor(0.5619, device='cuda:0')}
+{'L26N12469': tensor(0.5619, device='cuda:0')}
+{'L26N12673': tensor(0.5869, device='cuda:0')}
+{'L27N1709': tensor(0.5524, device='cuda:0')}
+{'L27N4084': tensor(0.5560, device='cuda:0')}
+{'L27N5890': tensor(0.5583, device='cuda:0')}
+{'L27N10613': tensor(0.6048, device='cuda:0')}
+{'L27N12972': tensor(0.5571, device='cuda:0')}
+{'L27N13316': tensor(0.5631, device='cuda:0')}
+{'L28N2669': tensor(0.5726, device='cuda:0')}
+{'L28N3338': tensor(0.5583, device='cuda:0')}
+{'L28N3811': tensor(0.5571, device='cuda:0')}
+{'L28N6320': tensor(0.5536, device='cuda:0')}
+{'L28N8428': tensor(0.5893, device='cuda:0')}
+{'L28N9081': tensor(0.5536, device='cuda:0')}
+{'L28N10813': tensor(0.5595, device='cuda:0')}
+{'L29N987': tensor(0.5750, device='cuda:0')}
+{'L29N1369': tensor(0.5655, device='cuda:0')}
+{'L29N1553': tensor(0.6155, device='cuda:0')}
+{'L29N2067': tensor(0.5655, device='cuda:0')}
+{'L29N3503': tensor(0.5690, device='cuda:0')}
+{'L29N3664': tensor(0.5857, device='cuda:0')}
+{'L29N6002': tensor(0.5536, device='cuda:0')}
+{'L29N11424': tensor(0.5631, device='cuda:0')}
+{'L29N13483': tensor(0.5536, device='cuda:0')}
+{'L30N2332': tensor(0.5524, device='cuda:0')}
+{'L30N7760': tensor(0.5536, device='cuda:0')}
+{'L30N10170': tensor(0.5607, device='cuda:0')}
+{'L30N11671': tensor(0.5631, device='cuda:0')}
+{'L30N13064': tensor(0.5524, device='cuda:0')}
+{'L30N13241': tensor(0.5643, device='cuda:0')}
+{'L31N339': tensor(0.5548, device='cuda:0')}
+{'L31N4634': tensor(0.5560, device='cuda:0')}
+{'L31N9173': tensor(0.5869, device='cuda:0')}
+{'L31N9888': tensor(0.5548, device='cuda:0')}
+{'L31N14256': tensor(0.5583, device='cuda:0')}
+{'L32N1349': tensor(0.5548, device='cuda:0')}
+{'L32N5873': tensor(0.5524, device='cuda:0')}
+{'L32N8112': tensor(0.5548, device='cuda:0')}
+{'L32N8179': tensor(0.5571, device='cuda:0')}
+{'L32N10051': tensor(0.5524, device='cuda:0')}
+{'L32N11117': tensor(0.5536, device='cuda:0')}
+{'L32N12953': tensor(0.6048, device='cuda:0')}
+{'L33N793': tensor(0.5536, device='cuda:0')}
+{'L33N2739': tensor(0.5655, device='cuda:0')}
+{'L33N6888': tensor(0.5536, device='cuda:0')}
+{'L33N7175': tensor(0.5964, device='cuda:0')}
+{'L33N7983': tensor(0.5548, device='cuda:0')}
+{'L34N8546': tensor(0.5619, device='cuda:0')}
+{'L34N12616': tensor(0.5607, device='cuda:0')}
+{'L35N4378': tensor(0.5571, device='cuda:0')}
+{'L35N4452': tensor(0.5571, device='cuda:0')}
+{'L35N9342': tensor(0.5964, device='cuda:0')}
+{'L35N13004': tensor(0.5988, device='cuda:0')}
+{'L36N3522': tensor(0.5655, device='cuda:0')}
+{'L36N4694': tensor(0.5619, device='cuda:0')}
+{'L36N7370': tensor(0.5548, device='cuda:0')}
+{'L36N7855': tensor(0.5798, device='cuda:0')}
+{'L36N8465': tensor(0.5548, device='cuda:0')}
+{'L36N11777': tensor(0.5631, device='cuda:0')}
+{'L37N242': tensor(0.5821, device='cuda:0')}
+{'L37N741': tensor(0.5869, device='cuda:0')}
+{'L37N3558': tensor(0.5595, device='cuda:0')}
+{'L37N6607': tensor(0.5655, device='cuda:0')}
+{'L37N6796': tensor(0.5560, device='cuda:0')}
+{'L37N6957': tensor(0.5619, device='cuda:0')}
+{'L37N7513': tensor(0.5619, device='cuda:0')}
+{'L37N8019': tensor(0.5548, device='cuda:0')}
+{'L37N9650': tensor(0.5583, device='cuda:0')}
+{'L37N10306': tensor(0.5631, device='cuda:0')}
+{'L37N11689': tensor(0.5548, device='cuda:0')}
+{'L37N13002': tensor(0.5690, device='cuda:0')}
+{'L37N14164': tensor(0.5560, device='cuda:0')}
+{'L38N3407': tensor(0.5560, device='cuda:0')}
+{'L38N4399': tensor(0.5512, device='cuda:0')}
+{'L38N5935': tensor(0.5524, device='cuda:0')}
+{'L38N11996': tensor(0.5964, device='cuda:0')}
+{'L38N12551': tensor(0.5607, device='cuda:0')}
+{'L39N539': tensor(0.5714, device='cuda:0')}
+{'L39N2358': tensor(0.5536, device='cuda:0')}
+{'L39N5546': tensor(0.5857, device='cuda:0')}
+{'L39N5963': tensor(0.5702, device='cuda:0')}
+{'L39N13163': tensor(0.5976, device='cuda:0')}
+{'L39N13361': tensor(0.5560, device='cuda:0')}
+{'L40N3': tensor(0.5536, device='cuda:0')}
+{'L40N2898': tensor(0.5631, device='cuda:0')}
+{'L40N2970': tensor(0.5607, device='cuda:0')}
+{'L40N6036': tensor(0.5690, device='cuda:0')}
+{'L40N8159': tensor(0.5560, device='cuda:0')}
+{'L40N8275': tensor(0.5679, device='cuda:0')}
+{'L40N8439': tensor(0.5571, device='cuda:0')}
+{'L40N9343': tensor(0.5524, device='cuda:0')}
+{'L40N10254': tensor(0.5714, device='cuda:0')}
+{'L40N11193': tensor(0.5821, device='cuda:0')}
+{'L40N13056': tensor(0.5524, device='cuda:0')}
+{'L40N14005': tensor(0.5690, device='cuda:0')}
+{'L41N9123': tensor(0.5619, device='cuda:0')}
+{'L41N11298': tensor(0.5536, device='cuda:0')}
+{'L41N11986': tensor(0.5560, device='cuda:0')}
+
+Layer Importance:
+(0, 0.01928970403969288)
+(5, 0.01801450364291668)
+(2, 0.01788361370563507)
+(3, 0.01685854233801365)
+(1, 0.016399649903178215)
+(6, 0.016325654461979866)
+(4, 0.015819597989320755)
+(7, 0.015694107860326767)
+(9, 0.01557870116084814)
+(8, 0.015363086014986038)
+(10, 0.013218541629612446)
+(11, 0.01104014739394188)
+(12, 0.010824330151081085)
+(13, 0.010141219012439251)
+(31, 0.010046640411019325)
+(29, 0.009845692664384842)
+(30, 0.009696220979094505)
+(32, 0.009596315212547779)
+(33, 0.009539217688143253)
+(34, 0.0090550621971488)
+(14, 0.008623093366622925)
+(28, 0.008582498878240585)
+(39, 0.008392022922635078)
+(35, 0.00827729795128107)
+(38, 0.008101435378193855)
+(37, 0.00788056943565607)
+(36, 0.007815985009074211)
+(18, 0.0075367712415754795)
+(40, 0.0070669325068593025)
+(27, 0.006994469556957483)
+(15, 0.006636124569922686)
+(19, 0.006075021345168352)
+(17, 0.006003091111779213)
+(21, 0.005660063587129116)
+(26, 0.005406755022704601)
+(16, 0.005366011057049036)
+(24, 0.005063837859779596)
+(25, 0.005011750850826502)
+(23, 0.005004340782761574)
+(22, 0.004869735799729824)
+(20, 0.004635225515812635)
+(41, 0.0024461927823722363)
+
+Key Trigger Points:
+(6, 0.01433882862329483)
+(3, 0.014115441590547562)
+(2, 0.013874324969947338)
+(10, 0.013755830936133862)
+(8, 0.013668809086084366)

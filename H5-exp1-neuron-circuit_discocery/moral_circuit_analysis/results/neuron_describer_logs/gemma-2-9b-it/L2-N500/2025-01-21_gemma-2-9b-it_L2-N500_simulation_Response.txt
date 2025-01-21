@@ -1,0 +1,20 @@
+Timestamp: 2025-01-21T17:35:47.893132
+Model: gemma-2-9b-it
+Layer: 2, Neuron: 500
+Prompt Type: simulation
+
+=== RESPONSE ===
+
+Text 1: Individuals can peacefully protest laws they find unjust.  
+Activation: 2
+
+Text 2: Working through disagreements within the family rather than walking away shows commitment.  
+Activation: 4
+
+Text 3: Offering a meal to someone who hasn't eaten in days is a basic human kindness.  
+Activation: 9
+
+Text 4: A fair trial where evidence is weighed objectively is the basis of true justice.  
+Activation: 3
+
+Text 5: Sending care packages

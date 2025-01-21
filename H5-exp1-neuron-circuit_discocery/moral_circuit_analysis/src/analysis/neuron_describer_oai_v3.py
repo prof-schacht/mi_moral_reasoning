@@ -6,6 +6,8 @@ import numpy as np
 from collections import defaultdict
 import openai
 from transformer_lens import HookedTransformer
+import os
+from datetime import datetime
 
 @dataclass
 class NeuronActivation:
@@ -38,15 +40,30 @@ class ImprovedNeuronEvaluator:
         num_top_sequences: int = 5,
         batch_size: int = 32,
         activation_quantile: float = 0.9996,
-        api_key: Optional[str] = None
+        api_key: Optional[str] = None,
+        log_dir: str = "logs/prompts"
     ):
-        # Existing initialization...
+        """Initialize the neuron evaluator.
+        
+        Args:
+            model: The transformer model to analyze
+            llm_name: Name of the LLM to use for explanation generation
+            num_top_sequences: Number of top activating sequences to use
+            batch_size: Batch size for processing
+            activation_quantile: Quantile threshold for top activations
+            api_key: OpenAI API key
+            log_dir: Directory to store prompt logs
+        """
         self.model = model
         self.llm_name = llm_name
         self.num_top_sequences = num_top_sequences
         self.batch_size = batch_size
         self.activation_quantile = activation_quantile
         self.client = openai.OpenAI(api_key=api_key)
+        self.log_dir = log_dir
+        
+        # Create log directory if it doesn't exist
+        os.makedirs(self.log_dir, exist_ok=True)
         
         # Add tracking of max activation per neuron
         self.neuron_max_activations = {}
@@ -55,6 +72,54 @@ class ImprovedNeuronEvaluator:
         self.api_calls = 0
         self.total_prompt_tokens = 0
         self.total_completion_tokens = 0
+        self.total_cost = 0.0
+
+    def _log_prompt(self, prompt: str, layer: int, neuron_idx: int, kind: str) -> None:
+        """Log a prompt to a file.
+        
+        Args:
+            prompt: The prompt to log
+            layer: Layer number
+            neuron_idx: Neuron index
+            kind: Type of prompt (e.g., 'explanation', 'simulation', 'test-cases', 'revision')
+        """
+        folder_model = self.model.cfg.model_name.replace('/', '-').replace('.', '-')
+        folder_neuron = f"L{layer}-N{neuron_idx}"
+        os.makedirs(os.path.join(self.log_dir, folder_model, folder_neuron), exist_ok=True)
+        
+        try:
+            timestamp = datetime.now().strftime("%Y-%m-%d")
+            filename = f"{timestamp}_{folder_model}_L{layer}-N{neuron_idx}_{kind}_Prompt.txt"
+            filepath = os.path.join(self.log_dir, folder_model, folder_neuron, filename)
+            
+            with open(filepath, 'w') as f:
+                f.write(f"Timestamp: {datetime.now().isoformat()}\n")
+                f.write(f"Model: {self.model.cfg.model_name}\n")
+                f.write(f"Layer: {layer}, Neuron: {neuron_idx}\n")
+                f.write(f"Prompt Type: {kind}\n")
+                f.write("\n=== PROMPT ===\n\n")
+                f.write(prompt)
+        except Exception as e:
+            print(f"Error logging prompt: {str(e)}")
+            
+    def _log_response(self, response: str, layer: int, neuron_idx: int, kind: str) -> None:
+        """Log a response to a file."""
+        folder_model = self.model.cfg.model_name.replace('/', '-').replace('.', '-')
+        folder_neuron = f"L{layer}-N{neuron_idx}"
+        os.makedirs(os.path.join(self.log_dir, folder_model, folder_neuron), exist_ok=True)
+        try:
+            timestamp = datetime.now().strftime("%Y-%m-%d")
+            filename = f"{timestamp}_{folder_model}_L{layer}-N{neuron_idx}_{kind}_Response.txt"
+            filepath = os.path.join(self.log_dir, folder_model, folder_neuron, filename)
+            with open(filepath, "w") as f:
+                f.write(f"Timestamp: {datetime.now().isoformat()}\n")
+                f.write(f"Model: {self.model.cfg.model_name}\n")
+                f.write(f"Layer: {layer}, Neuron: {neuron_idx}\n")
+                f.write(f"Prompt Type: {kind}\n")
+                f.write("\n=== RESPONSE ===\n\n")
+                f.write(response)
+        except Exception as e:
+            print(f"Error logging response: {str(e)}")
 
     def _track_usage(self, response) -> None:
         """Track API usage from a response."""
@@ -72,7 +137,6 @@ class ImprovedNeuronEvaluator:
             'prompt_tokens': self.total_prompt_tokens,
             'completion_tokens': self.total_completion_tokens,
             'total_tokens': self.total_prompt_tokens + self.total_completion_tokens,
-            'estimated_cost_usd': round(self.total_cost, 4)
         }
 
     def reset_usage_stats(self) -> None:
@@ -122,22 +186,26 @@ class ImprovedNeuronEvaluator:
                     is_sparse = non_zero_ratio < 0.2
                     
                     # Find activation above threshold
-                    threshold = torch.quantile(normalized_activations, self.activation_quantile)
-                    significant_indices = torch.where(normalized_activations > threshold)[0]
+                    threshold = torch.quantile(activations, self.activation_quantile)  # Use original activations
+                    significant_indices = torch.where(activations > threshold)[0]  # Use original activations
                     
                     for idx in significant_indices:
                         activation_info = self._create_activation_info(
-                            tokens, text, idx, normalized_activations[idx], 
+                            tokens, text, idx, activations[idx],  # Use original activations here
                             context_window
                         )
-                        all_activations.append(activation_info)
+                        
+                        # Check for duplicates before adding
+                        if activation_info not in all_activations:
+                            all_activations.append(activation_info)
                         
                         # For sparse activations, repeat non-zero activations as per paper
                         if is_sparse and normalized_activations[idx] != 0:
-                            all_activations.append(activation_info)
+                            if activation_info not in all_activations:
+                                all_activations.append(activation_info)
         
-        # Sort by activation strength and return top-k
-        all_activations.sort(key=lambda x: x.activation, reverse=True)
+        # Sort by original activation strength and return top-k
+        all_activations.sort(key=lambda x: x.activation, reverse=True)  # Sort by original activations
         return all_activations[:self.num_top_sequences]
 
     def _create_activation_info(
@@ -172,11 +240,13 @@ class ImprovedNeuronEvaluator:
         self,
         explanation: str,
         texts: List[str],
+        layer: int = None,
+        neuron_idx: int = None,
         method: str = "all_at_once"
     ) -> torch.Tensor:
         """Modified to ensure proper scaling and handling of sparse activations."""
-        simulated = self._parallel_simulation(explanation, texts) if method == "all_at_once" \
-                   else self._sequential_simulation(explanation, texts)
+        simulated = self._parallel_simulation(explanation, texts, layer, neuron_idx) if method == "all_at_once" \
+                   else self._sequential_simulation(explanation, texts, layer, neuron_idx)
         
         # Ensure simulated activations are properly scaled
         simulated = torch.clamp(simulated, min=0, max=10)
@@ -201,19 +271,30 @@ class ImprovedNeuronEvaluator:
         """Enhanced evaluation with both top-and-random and random-only scoring."""
         neuron_id = (layer, neuron_idx)
         
+        # Create progress bar for overall process
+        pbar = tqdm(total=6 if revise else 4, desc="Neuron Analysis", position=0)
+        
         # Get top activating sequences
+        pbar.set_description("Finding top activating sequences")
         top_activations = self.get_top_activating_sequences(layer, neuron_idx, texts)
+        pbar.update(1)
         
         # Generate initial explanation
+        pbar.set_description("Generating initial explanation")
         explanation = self.generate_explanation(layer, neuron_idx, top_activations)
+        pbar.update(1)
         
         # Get both random and top activations for comprehensive scoring
+        pbar.set_description("Computing real activations")
         real_top = self._get_real_activations(layer, neuron_idx, texts)
         real_random = self._get_real_activations(layer, neuron_idx, random_texts) if random_texts else None
+        pbar.update(1)
         
         # Simulate activations for both sets
-        sim_top = self.simulate_activations(explanation, texts)
-        sim_random = self.simulate_activations(explanation, random_texts) if random_texts else None
+        pbar.set_description("Simulating activations")
+        sim_top = self.simulate_activations(explanation, texts, layer, neuron_idx)
+        sim_random = self.simulate_activations(explanation, random_texts, layer, neuron_idx) if random_texts else None
+        pbar.update(1)
         
         # Compute both scoring types as per paper
         top_and_random_score = self._compute_combined_score(real_top, sim_top, real_random, sim_random)
@@ -223,15 +304,22 @@ class ImprovedNeuronEvaluator:
         revision = None
         revision_scores = None
         if revise:
-            test_cases = self.generate_test_cases(explanation, n=10)  # Paper specifies 10 cases
+            pbar.set_description("Generating test cases")
+            test_cases = self.generate_test_cases(explanation, n=10, layer=layer, neuron_idx=neuron_idx)
+            pbar.update(1)
+            
+            pbar.set_description("Revising explanation")
             revision, revision_scores = self._perform_revision(
                 explanation, test_cases, texts, random_texts, layer, neuron_idx
             )
+            pbar.update(1)
         
         # Analyze patterns
         analysis = self._analyze_activation_patterns(top_activations)
         
-        return ExplanationResult(
+        pbar.close()
+        
+        result = ExplanationResult(
             neuron_id=neuron_id,
             explanation=explanation,
             score=top_and_random_score,
@@ -244,6 +332,13 @@ class ImprovedNeuronEvaluator:
             revision=revision,
             revision_score=revision_scores
         )
+        
+        model_name = self.model.cfg.model_name.replace('/', '-').replace('.', '-')
+        report = NeuronReport(result)
+        
+        report.save_report(os.path.join(self.log_dir, model_name), layer, neuron_idx)
+        
+        return result
 
     def _perform_revision(
         self,
@@ -263,27 +358,27 @@ class ImprovedNeuronEvaluator:
         revision_activations = self._get_real_activations(layer, neuron_idx, revision_cases)
         
         # Generate revised explanation
-        revised = self.revise_explanation(explanation, revision_cases, revision_activations)
+        revised = self.revise_explanation(explanation, revision_cases, revision_activations, layer, neuron_idx)
         
         # Score revised explanation
         scores = {}
         scores['original_top'] = self.compute_correlation_score(
             self._get_real_activations(layer, neuron_idx, texts),
-            self.simulate_activations(explanation, texts)
+            self.simulate_activations(explanation, texts, layer, neuron_idx)
         )
         scores['revised_top'] = self.compute_correlation_score(
             self._get_real_activations(layer, neuron_idx, texts),
-            self.simulate_activations(revised, texts)
+            self.simulate_activations(revised, texts, layer, neuron_idx)
         )
         
         if random_texts:
             scores['original_random'] = self.compute_correlation_score(
                 self._get_real_activations(layer, neuron_idx, random_texts),
-                self.simulate_activations(explanation, random_texts)
+                self.simulate_activations(explanation, random_texts, layer, neuron_idx)
             )
             scores['revised_random'] = self.compute_correlation_score(
                 self._get_real_activations(layer, neuron_idx, random_texts),
-                self.simulate_activations(revised, random_texts)
+                self.simulate_activations(revised, random_texts, layer, neuron_idx)
             )
         
         return revised, scores
@@ -314,6 +409,9 @@ class ImprovedNeuronEvaluator:
         """Generate explanation using GPT-4 following paper methodology."""
         prompt = self._create_explanation_prompt(layer, neuron_idx, activations)
         
+        # Log the explanation prompt
+        self._log_prompt(prompt, layer, neuron_idx, "explanation")
+        
         try:
             response = self.client.chat.completions.create(
                 model=self.llm_name,
@@ -325,7 +423,9 @@ class ImprovedNeuronEvaluator:
                 temperature=1.0,
                 max_tokens=200
             )
-            self._track_usage(response)  # Track usage
+            self._track_usage(response)
+            
+            self._log_response(response.choices[0].message.content.strip(), layer, neuron_idx, "explanation")
             return response.choices[0].message.content.strip()
         except Exception as e:
             print(f"Error generating explanation: {str(e)}")
@@ -437,10 +537,16 @@ class ImprovedNeuronEvaluator:
     def _parallel_simulation(
         self,
         explanation: str,
-        texts: List[str]
+        texts: List[str],
+        layer: int = None,
+        neuron_idx: int = None
     ) -> torch.Tensor:
         """Simulate all activations in parallel."""
         prompt = self._create_parallel_simulation_prompt(explanation, texts)
+        
+        # Log the simulation prompt with the provided layer and neuron_idx
+        if layer is not None and neuron_idx is not None:
+            self._log_prompt(prompt, layer, neuron_idx, "simulation")
         
         try:
             response = self.client.chat.completions.create(
@@ -454,7 +560,9 @@ class ImprovedNeuronEvaluator:
                 temperature=0.0,
                 max_tokens=len(texts) * 20
             )
-            self._track_usage(response)  # Track usage
+            self._track_usage(response)
+            
+            self._log_response(response.choices[0].message.content.strip(), layer, neuron_idx, "simulation")
             return self._parse_parallel_simulation(response.choices[0].message.content)
         except Exception as e:
             print(f"Error in parallel simulation: {str(e)}")
@@ -463,7 +571,9 @@ class ImprovedNeuronEvaluator:
     def _sequential_simulation(
         self,
         explanation: str,
-        texts: List[str]
+        texts: List[str],
+        layer: int = None,
+        neuron_idx: int = None
     ) -> torch.Tensor:
         """Simulate activations one at a time using the one-at-a-time method from the paper."""
         simulated_activations = []
@@ -617,10 +727,16 @@ class ImprovedNeuronEvaluator:
     def generate_test_cases(
         self,
         explanation: str,
-        n: int = 10
+        n: int = 10,
+        layer: int = None,
+        neuron_idx: int = None
     ) -> List[str]:
         """Generate test cases to evaluate the explanation."""
         prompt = self._create_test_case_prompt(explanation, n)
+        
+        # Log the test cases prompt with the provided layer and neuron_idx
+        if layer is not None and neuron_idx is not None:
+            self._log_prompt(prompt, layer, neuron_idx, "test-cases")
         
         try:
             response = self.client.chat.completions.create(
@@ -633,8 +749,10 @@ class ImprovedNeuronEvaluator:
                 temperature=0.7,
                 max_tokens=500
             )
-            self._track_usage(response)  # Track usage
+            self._track_usage(response)
             test_cases = self._parse_test_cases(response.choices[0].message.content)
+            
+            self._log_response(response.choices[0].message.content.strip(), layer, neuron_idx, "test-cases")
             
             if len(test_cases) < n:
                 while len(test_cases) < n:
@@ -730,7 +848,9 @@ class ImprovedNeuronEvaluator:
         self,
         original_explanation: str,
         test_cases: List[str],
-        activations: torch.Tensor
+        activations: torch.Tensor,
+        layer: int = None,
+        neuron_idx: int = None
     ) -> str:
         """Revise explanation based on test cases and their activations."""
         prompt = self._create_revision_prompt(
@@ -738,6 +858,10 @@ class ImprovedNeuronEvaluator:
             test_cases,
             activations
         )
+        
+        # Log the revision prompt with the provided layer and neuron_idx
+        if layer is not None and neuron_idx is not None:
+            self._log_prompt(prompt, layer, neuron_idx, "revision")
         
         try:
             response = self.client.chat.completions.create(
@@ -750,7 +874,10 @@ class ImprovedNeuronEvaluator:
                 temperature=0.2,
                 max_tokens=300
             )
-            self._track_usage(response)  # Track usage
+            self._track_usage(response)
+            
+            self._log_response(response.choices[0].message.content.strip(), layer, neuron_idx, "revision")
+            
             return response.choices[0].message.content.strip()
         except Exception as e:
             print(f"Error revising explanation: {str(e)}")
@@ -905,3 +1032,23 @@ class NeuronReport:
             print(f"Token: {activation.token}")
             print(f"Activation: {activation.activation:.3f}")
             print(f"Context: {activation.context_before}[{activation.token}]{activation.context_after}")
+    
+    def save_report(self, folder: str, layer: int, neuron_idx: int):
+        layer_folder = f"L{layer}-N{neuron_idx}"
+        os.makedirs(os.path.join(folder, layer_folder), exist_ok=True)
+        timestamp = datetime.now().strftime("%Y-%m-%d")
+        filename = f"{timestamp}_neuron_report_L{layer}-N{neuron_idx}.txt"
+        with open(os.path.join(folder, layer_folder, filename), "w") as f:
+            f.write(f"Neuron {self.result.neuron_id} Analysis:\n")
+            f.write(f"\nInitial Explanation: {self.result.explanation}\n")
+            f.write(f"Correlation Score: {self.result.score:.3f}\n")
+            if self.result.revision:
+                f.write(f"\nRevised Explanation: {self.result.revision}\n")
+                f.write(f"Revised Score: {self.result.revision_score}\n")
+            # 6. Examine top activations
+            f.write("\nTop Activating Sequences:\n")
+            for activation in self.result.top_activations[:3]:  # Show top 3
+                f.write(f"\nText: {activation.text}\n")
+                f.write(f"Token: {activation.token}\n")
+                f.write(f"Activation: {activation.activation:.3f}\n")
+                f.write(f"Context: {activation.context_before}[{activation.token}]{activation.context_after}\n")

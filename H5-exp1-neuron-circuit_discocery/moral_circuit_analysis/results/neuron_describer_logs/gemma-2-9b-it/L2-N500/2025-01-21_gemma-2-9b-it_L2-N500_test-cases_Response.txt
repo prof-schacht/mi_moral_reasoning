@@ -1,0 +1,26 @@
+Timestamp: 2025-01-21T17:35:29.687455
+Model: gemma-2-9b-it
+Layer: 2, Neuron: 500
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "During the storm, volunteers worked tirelessly to provide food and shelter to those who had lost their homes."
+
+Test case 2: "She offered to tutor her classmates who were struggling with math, helping to bridge educational gaps."
+
+Test case 3: "The community center organized activities to lift spirits and offer reassurance during hard times."
+
+Test case 4: "After the accident, his colleagues rallied around him, taking over his tasks when he was injured."
+
+Test case 5: "Despite the tension, her calm voice and supportive words offered a bridge during their heated discussion."
+
+Test case 6: "The nurse's gentle touch and kind words provided comfort to the injured child."
+
+Test case 7: "He sent a card to cheer her up, a small gesture but one that meant the world during her difficult recovery."
+
+Test case 8: "Even though it was a competitive environment, the team leader emphasized collaboration, saying, 'We support each other to achieve our goals.'"
+
+Test case 9: "The grant aimed to address educational disparities in underserved communities, a supportive initiative focused on long-term change."
+
+Test case 10: "While the project was demanding, the manager made sure to check in on the team's well-being, ensuring no one felt overburdened."
