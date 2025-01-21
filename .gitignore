@@ -2,3 +2,4 @@ H6-MFT-Probes/cache/*
 *.pyc
 TransformerLens/**
 llm-localization/**
+H5-exp1-neuron-circuit_discocery/moral_circuit_analysis/.env
