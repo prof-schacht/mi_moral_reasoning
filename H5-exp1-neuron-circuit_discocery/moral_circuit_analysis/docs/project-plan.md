@@ -370,3 +370,51 @@ Ideas -
 - Run it on different models
 - Generate descriptions for the identified neurons
 - Ablate the neurons and try to see some impact. 
+
+
+--- 
+IDEAS 19.1.2025
+Change Neuron Describer to OpenAI Version: https://openaipublic.blob.core.windows.net/neuron-explainer/paper/index.html
+Changes are added to the neuron_describer_oai_v3.py
+
+Focus on Top Activations:
+
+Uses a quantile-based threshold (0.9996 as per OpenAI's paper)
+Focuses on top-5 activating sequences for explanation generation
+Separates explanation and scoring sequences
+
+Improved Scoring:
+
+Implements correlation scoring with proper normalization
+Supports both "all at once" and sequential simulation
+Better handles the calibration of simulated vs. real activations
+
+Revision System:
+
+Added test case generation to challenge explanations
+Implements two-step revision process:
+
+Generates diverse test cases based on initial explanation
+Revises explanation based on actual activations of test cases
+
+Better Prompting:
+
+More structured prompts for explanation generation
+Separate prompts for simulation and revision
+System messages that specify the role (expert interpreter, simulator, etc.)
+
+Comprehensive Results:
+
+New ExplanationResult dataclass that contains:
+
+Original and revised explanations
+Correlation scores
+Top activations
+Pattern analysis
+Revision scores
+
+The main improvements follow OpenAI's findings:
+
+Using exclusively top-activating sequences for explanation generation
+Implementing proper correlation scoring with linear calibration
+Adding a revision system to refine
