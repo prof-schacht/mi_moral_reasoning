@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T10:25:06.080076
+Model: gemma-2-9b-it
+Layer: 28, Neuron: 8428
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The community gathered to celebrate and preserve their cultural heritage, ensuring that the traditions passed down through generations remain untainted."
+
+Test case 2: "Efforts to protect the sacred forest highlight the deep reverence the local people have for their environment."
+
+Test case 3: "The initiative aims to maintain the purity of the ancient texts, safeguarding them from modern misinterpretations."
+
+Test case 4: "By keeping the sacred rituals intact, the tribe honors their ancestors' beliefs and traditions."
+
+Test case 5: "The government enacted laws to ensure that the national parks remain free of industrial pollutants, emphasizing the nation's commitment to environmental sanctity."
+
+Test case 6: "While the museum focused on preserving historical artifacts, there was a debate about which pieces truly reflected cultural sanctity."
+
+Test case 7: "Although the new policy emphasizes protection of historical sites, some argue it overlooks the community's evolving needs."
+
+Test case 8: "In an attempt to maintain the purity of the language, purists resist the incorporation of foreign terms into the national lexicon."
+
+Test case 9: "The festival celebrating the harvest is seen as a crucial event to uphold the communal spirit and cultural reverence."
+
+Test case 10: "Despite modern influences, the town remains dedicated to protecting its architectural heritage, viewing the old buildings as symbols of historical reverence."

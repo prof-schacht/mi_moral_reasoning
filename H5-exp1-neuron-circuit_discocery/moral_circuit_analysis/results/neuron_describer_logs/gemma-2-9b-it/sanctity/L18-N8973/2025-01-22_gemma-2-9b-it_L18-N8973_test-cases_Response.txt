@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T20:30:17.362871
+Model: gemma-2-9b-it
+Layer: 18, Neuron: 8973
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Bowing respectfully before entering the room, he maintained eye contact with the elders, ensuring his actions were perfectly aligned with cultural expectations."
+
+Test case 2: "Writing thank you notes for all the guests, she emphasized gratitude and the importance of good manners in every word."
+
+Test case 3: "Holding the door open for others, he smiled warmly, embodying the spirit of politeness and courtesy."
+
+Test case 4: "In a formal setting, shaking hands firmly and introducing oneself with a respectful tone is considered essential."
+
+Test case 5: "While organizing the event, she ensured that every guest was greeted with a warm welcome and polite conversation."
+
+Test case 6: "Nodding in agreement during the meeting, he carefully listened to each speaker, showing his commitment to respectful discourse."
+
+Test case 7: "Apologizing profusely for the oversight, he immediately took steps to correct the mistake, demonstrating accountability and respect."
+
+Test case 8: "Laughing at a friend's joke, she maintained eye contact, reinforcing the connection and the importance of shared social moments."
+
+Test case 9: "While dancing at the party, their movements were synchronized and respectful of each other's space, embodying a mutual understanding."
+
+Test case 10: "Ignoring the queue-jumping, she simply waited patiently, choosing to uphold societal norms rather than confront the situation."

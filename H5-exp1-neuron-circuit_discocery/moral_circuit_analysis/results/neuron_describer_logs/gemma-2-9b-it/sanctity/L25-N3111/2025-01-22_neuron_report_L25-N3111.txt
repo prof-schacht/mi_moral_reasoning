@@ -1,0 +1,47 @@
+Neuron (25, 3111) Analysis:
+
+Initial Explanation: The behavior of the neuron in layer 25 at index 3111 can be understood by examining the patterns in the provided examples where it activates strongly.
+
+### Activation Pattern:
+
+1. **Function Words and Connectives**: The neuron activates on a range of function words or connectives ("your," "for," "at," "to," "no"). These words serve primarily grammatical roles rather than conveying rich semantic content.
+
+2. **Contextual Roles**: 
+   - **Possessive Pronoun ("your")**: Activates when indicating possession in a formal context, potentially relating to standards or expectations.
+   - **Prepositions ("for," "at")**: These typically introduce phrases that describe conditions, purposes, or locations in broader statements.
+   - **Infinitive Marker ("to")**: Used in contexts implying actions, intentions, or purposes being described or negated.
+   - **Adverb of Negation ("no")**: Used to emphasize inclusivity or a
+Correlation Score: 0.901
+
+Revised Explanation: Revised explanation of neuron behavior:
+
+The behavior of the neuron in layer 25 at index 3111 can be refined by integrating insights from the new test cases, which highlight specific patterns that trigger strong activation and those that do not.
+
+### Revised Activation Pattern:
+
+1. **Function Words and Connectives**: The neuron continues to show activation in the presence of function words or connectives, but the strength of activation varies significantly depending on the context in which these words appear.
+
+2. **Contextual Roles**:
+   - **Possessive Pronoun ("your")**: The neuron activates moderately when "your" is used in contexts that emphasize alignment with broader goals or standards, as seen in "Your own goals should align with the company's mission for mutual growth" (Activation: 3.000). However, it shows stronger activation when "your" is part of a statement that underscores commitment or critical involvement, as in "Your commitment to the project at this stage is crucial for its success" (Activation: 5.000).
+   
+   - **Prepositions ("for," "at")**: The neuron shows low activation when these prepositions are used in straightforward temporal or locational contexts, such as "The meeting is scheduled for 3 PM, and everyone is expected to be at the venue on time" (Activation: 1.000). This suggests that the neuron's activation is not strongly influenced by simple temporal or locational references.
+
+   - **Infinitive Marker
+Revised Score: {'original_top': 0.6454972624778748, 'revised_top': 0.6963106393814087, 'original_random': 0.8527387380599976, 'revised_random': 0.0}
+
+Top Activating Sequences:
+
+Text: Upholding your company’s reputation in public illustrates corporate loyalty.
+Token:  your
+Activation: 0.087
+Context: <bos>Upholding your[ your]’s reputation in
+
+Text: Applying the same rules for all participants in a game ensures fair competition.
+Token:  for
+Activation: 0.073
+Context: <bos>Applying the same rules[ for] all participants in a game
+
+Text: Volunteering for tasks that help your team at work, even if they’re tough, shows commitment.
+Token:  at
+Activation: 0.068
+Context:  tasks that help your team[ at] work, even if they

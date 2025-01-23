@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T21:05:40.547727
+Model: gemma-2-9b-it
+Layer: 20, Neuron: 2115
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The law was designed to ensure that all citizens are treated fairly, with justice being the guiding principle."
+
+Test case 2: "Resources were allocated proportionally to each department, ensuring that each received a fair share based on their needs."
+
+Test case 3: "A fair trial is essential to uphold the principles of justice and equity in our legal system."
+
+Test case 4: "Deciding how to fairly distribute the inheritance was challenging, but ultimately everyone agreed it should be divided equally."
+
+Test case 5: "The committee emphasized that any increase in taxes must be proportionally distributed to avoid unfair burden on any single group."
+
+Test case 6: "He argued that the rules of the game were fair, ensuring that no one had an undue advantage."
+
+Test case 7: "The allocation of tasks among team members was based on their skills to ensure a fair and balanced workflow."
+
+Test case 8: "The outcome was deemed fair by both parties involved, as it adhered to previously agreed-upon guidelines."
+
+Test case 9: "It's essential that pay raises are given proportionally, reflecting each employee's contribution to the company."
+
+Test case 10: "The debate centered around what constitutes a fair system of governance, with each side presenting arguments for their vision of justice."

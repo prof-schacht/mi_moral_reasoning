@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T19:44:47.233495
+Model: gemma-2-9b-it
+Layer: 14, Neuron: 6316
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron (layer 14, index 6316) predominantly activates around tokens that relate to expressions of moral or ethical behavior, particularly those emphasizing pro-social actions or values. Let's break down the observed patterns and context:
+
+1. **Token "protesting"**: This word appears in a context highlighting an action taken for a moral reason ("protesting cruel testing methods shows compassion"). The activation here suggests that the neuron is sensitive to language describing actions taken for ethical or advocacy purposes.
+
+2. **Repeated Activation at Beginning of Sentence ("<bos>")**: The examples show strong activation at the beginning of various sentences. Notably, these sentences begin with affirmative or motivational phrases that imply normative statements, such as "One should always," "Providing shelter," and "We should speak out." Each of these beginnings hints at socially responsible advice or actions.
+
+3. **Themes from Context**: The contexts following the beginning of sentence activations often relate to positive or socially beneficial concepts like "shel"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

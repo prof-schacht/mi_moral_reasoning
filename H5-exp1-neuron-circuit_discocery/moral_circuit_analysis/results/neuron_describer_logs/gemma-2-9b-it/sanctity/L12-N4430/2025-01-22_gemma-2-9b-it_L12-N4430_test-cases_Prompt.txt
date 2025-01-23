@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T19:19:56.904022
+Model: gemma-2-9b-it
+Layer: 12, Neuron: 4430
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron appears to be responding to linguistic constructs associated with conditions, contrasts, or notable characteristics, which are often used to emphasize certain qualities or actions in a context. Here's a breakdown of the pattern it detects:
+
+1. **Conditional or Concessive Constructs**: The activation of this neuron with tokens like "when" (in "even when it’s inconvenient" and "even when others disparage them") suggests that it is sensitive to conditional or concessive clauses. These clauses emphasize circumstances under which a particular behavior or quality is still present or notable, often highlighting perseverance, consistency, or reliability despite obstacles or varying conditions.
+
+2. **Contrast and Emphasis**: The activation on the token "but" (in "a small but significant act of loyalty") indicates a detection of contrastive conjunctions that serve to juxtapose or highlight differences, often underscoring the importance or unexpected nature of the second element in relation to the first.
+
+3. **Descriptors of Notable Qualities**:"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

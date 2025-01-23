@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T10:23:28.792993
+Model: gemma-2-9b-it
+Layer: 26, Neuron: 6625
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 26, index 6625) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  the	Activation: 10.0	Context:  helps protect the integrity of the land.
+
+Token:  a	Activation: 10.0	Context: <bos>Giving a ceremonial cleansing a to a
+
+Token:  a	Activation: 10.0	Context: <bos>Giving a comforting hug a someone who
+
+Token:  a	Activation: 10.0	Context: king personal safety to safeguard a longtime ally is the height
+
+Token:  a	Activation: 10.0	Context: <bos>We have a moral a to report and
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

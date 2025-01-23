@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T20:06:55.023348
+Model: gemma-2-9b-it
+Layer: 17, Neuron: 1367
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "In the face of adversity, maintaining honesty becomes a testament to one's ethical compass."
+
+Test case 2: "The policy ensures that each team member's contribution is valued, reflecting our commitment to fairness."
+
+Test case 3: "Choosing to remain silent in the face of injustice is a moral dilemma many struggle with."
+
+Test case 4: "Even when the circumstances are dire, protecting the environment remains a priority."
+
+Test case 5: "Her decision to return the lost wallet speaks volumes about her moral integrity."
+
+Test case 6: "In a world filled with deceit, the truth is a beacon of ethical clarity."
+
+Test case 7: "The company is dedicated to minimizing harm through sustainable practices."
+
+Test case 8: "Although it was a difficult choice, standing by his principles was ultimately rewarding."
+
+Test case 9: "Recognizing the efforts of volunteers is crucial to maintaining morale and ethical accountability."
+
+Test case 10: "In a complex world, understanding what is just and fair can be challenging yet essential."

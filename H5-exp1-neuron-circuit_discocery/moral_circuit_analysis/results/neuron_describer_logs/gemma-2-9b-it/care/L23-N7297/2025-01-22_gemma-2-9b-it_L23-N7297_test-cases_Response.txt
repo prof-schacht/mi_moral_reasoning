@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T10:15:16.977210
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 7297
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "She is the kind of person who always knows when someone needs a listening ear and offers her support without hesitation."
+
+Test case 2: "Whenever someone feels down, he's the one who brings comfort by simply being there and understanding their pain."
+
+Test case 3: "I remember a time when she stood up for a friend who was being unfairly criticized, showing unwavering support and loyalty."
+
+Test case 4: "He offered a comforting presence to those who were grieving, providing a shoulder to cry on and words of solace."
+
+Test case 5: "She is someone who, without being asked, steps in to help when you need it most, truly embodying the spirit of empathy."
+
+Test case 6: "In moments of despair, he has been the person who guides others to see hope, consistently providing encouragement."
+
+Test case 7: "She asked him, 'Who will be there for me when I need someone to lean on?' questioning the reciprocity of support."
+
+Test case 8: "The child, who had felt alone, found comfort in the teacher's affirming words, illustrating the power of simple gestures of support."
+
+Test case 9: "His actions are often misunderstood, but those who know him realize that his quiet presence is a form of steadfast support."
+
+Test case 10: "She was the one who organized a community gathering when the town needed to come together, providing a platform for collective emotional support."

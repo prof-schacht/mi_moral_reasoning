@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T19:25:30.702247
+Model: gemma-2-9b-it
+Layer: 12, Neuron: 11370
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in question appears to respond to linguistic patterns associated with the facilitation, support, or development of positive actions or attributes, often in a context that implies inclusivity, progress, or personal growth.
+
+1. **Prepositional Triggers**: The neuron activates on prepositions such as "to," "toward," and "with." These prepositional phrases often introduce or describe actions or qualities that further a cause or assist someone or something. For example, "a commitment to purity" suggests dedication, and "modeling empathy toward those who suffer" indicates an action fostering kindness.
+
+2. **Contextual Support**: In most examples, the context describes positive or constructive actions or qualities. For instance, "inclusive playgrounds" and "children with disabilities" illustrate supportiveness and inclusivity, while "cultural variety" implies diversity and enrichment.
+
+3. **Positive Outcomes**: The activation on the period in the sentence "ideas where truth can emerge" suggests a completion of"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

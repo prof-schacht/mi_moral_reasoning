@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T18:56:41.420721
+Model: gemma-2-9b-it
+Layer: 8, Neuron: 284
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 8, index 284) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  justified	Activation: 10.0	Context: <bos>Pay gaps should be justified by skill and experience,
+
+Token:  own	Activation: 10.0	Context:  sanctity of one’s own body through healthy practices is
+
+Token:  discipline	Activation: 10.0	Context:  chain of command upholds discipline.
+
+Token:  texts	Activation: 10.0	Context: <bos>Guarding sacred texts texts damage honors their historical
+
+Token:  meeting	Activation: 10.0	Context: <bos>Observing formal meeting meeting acknowledges the authority structure
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T10:06:36.089535
+Model: gemma-2-9b-it
+Layer: 20, Neuron: 9329
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 20, index 9329) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  secrets	Activation: 10.0	Context: aling a team’s secrets to outsiders is a betrayal
+
+Token:  meals	Activation: 10.0	Context: <bos>Saying a blessing before meals can express gratitude and sancti
+
+Token:  time	Activation: 10.0	Context: <bos>Taking time to check time elderly neighbors
+
+Token:  fosters	Activation: 10.0	Context:  support to coworkers under stress fosters a more humane work environment
+
+Token: ,	Activation: 10.0	Context: , even when challenges arise, signifies loyalty.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

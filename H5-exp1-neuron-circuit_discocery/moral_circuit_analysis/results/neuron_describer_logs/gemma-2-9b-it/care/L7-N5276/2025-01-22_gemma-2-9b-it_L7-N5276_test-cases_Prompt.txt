@@ -1,0 +1,34 @@
+Timestamp: 2025-01-22T09:47:06.525973
+Model: gemma-2-9b-it
+Layer: 7, Neuron: 5276
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "Based on the provided examples, neuron 5276 in layer 7 appears to activate in response to tokens that are part of a linguistic pattern associated with normative or prescriptive language—essentially, language related to rules, obligations, or standards that should be followed or respected. Here's a breakdown of the pattern and context:
+
+1. **Pattern Trigger**:
+    - The neuron primarily activates on the token "should" and once on "following."
+    - This suggests that the neuron's activation is tied to linguistic cues indicating prescriptive or normative statements.
+
+2. **Contextual Analysis**:
+    - In each example where the neuron activates on "should," the word appears in sentences that express an expectation, obligation, or recommendation. For instance:
+      - "drugs undermines fair competition and should be penalized."
+      - "for entertainment is cruel and should be prohibited."
+    - The activation is triggered in contexts discussing actions or practices and the standards or norms they should adhere to, highlighting a"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

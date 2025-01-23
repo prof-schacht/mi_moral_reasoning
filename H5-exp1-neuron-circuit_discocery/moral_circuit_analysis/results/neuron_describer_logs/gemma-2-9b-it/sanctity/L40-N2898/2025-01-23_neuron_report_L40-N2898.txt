@@ -1,0 +1,41 @@
+Neuron (40, 2898) Analysis:
+
+Initial Explanation: This neuron (layer 40, index 2898) appears to respond to tokens that are associated with societal issues or actions requiring moral or ethical awareness. The neuron activates strongly in contexts that suggest awareness, detection, or addressing of these issues. Let's break down the pattern and the context in which the neuron activates:
+
+1. **Tokens of Interest**: 
+   - The neuron activates on "it," "discrimination," "protest," "bullying," and "ceremonies." These tokens represent a mix of pronouns, negative societal issues, and actions/events.
+
+2. **Contextual Clues**:
+   - **"it" (Activation: 10.0)**: The activation is high in the context of "prevent abuse when we see it," suggesting the neuron detects pronouns referring to harmful societal issues when coupled with verbs indicating prevention, detection, or response.
+   - **"discrimination" (Activation: 10.0)**: This token directly represents a
+Correlation Score: 0.599
+
+Revised Explanation: Revised explanation of neuron behavior:
+
+This neuron (layer 40, index 2898) appears to respond to tokens associated with the detection and reporting of societal issues, particularly when these actions are framed in a context of personal responsibility or direct intervention. The neuron does not activate merely in the presence of societal issues or events but rather when there is an emphasis on individual action or response to these issues. Let's break down the pattern and the context in which the neuron activates based on both the original and new evidence:
+
+1. **Tokens of Interest**:
+   - The neuron was initially thought to activate on tokens like "it," "discrimination," "protest," "bullying," and "ceremonies." However, new evidence suggests that the presence of these tokens alone is insufficient for activation.
+
+2. **Contextual Clues**:
+   - **"it" (Activation: 3.000 in "When you witness harassment, it's important to intervene and report it.")**: The neuron activates when "it" is used in a context emphasizing personal intervention and reporting, indicating a focus on individual responsibility in addressing societal issues.
+   - **"discrimination" (Activation: 0.000 in "The protest against discrimination drew thousands who demanded equality and justice.")**: Contrary to the original explanation, the neuron does not activate merely in the presence of the term "discrimination" unless it is tied to direct action or intervention.
+   - **"bullying" (Activation:
+Revised Score: {'original_top': 0.5901466608047485, 'revised_top': 0.5987927317619324, 'original_random': 0.0, 'revised_random': 0.0}
+
+Top Activating Sequences:
+
+Text: We have a moral responsibility to report and prevent abuse when we see it.
+Token:  it
+Activation: 2.825
+Context:  prevent abuse when we see[ it].
+
+Text: Racial or ethnic discrimination in hiring is unacceptable because it denies equal opportunity.
+Token:  discrimination
+Activation: 0.860
+Context: <bos>Racial or ethnic[ discrimination] in hiring is unacceptable because
+
+Text: Peaceful protest is a fundamental expression of freedom.
+Token:  protest
+Activation: 0.263
+Context: <bos>Peaceful protest is a[ protest] expression of

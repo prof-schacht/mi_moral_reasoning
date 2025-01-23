@@ -1,0 +1,34 @@
+Timestamp: 2025-01-22T22:14:01.793203
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 1095
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron (layer 24, index 1095) seems to respond primarily to tokens that are part of contextually significant phrases related to ethical, moral, or social conduct. The common theme across the examples is that the activated tokens are integral to conveying a concept of value, principle, or social propriety within their respective contexts.
+
+Let's analyze the examples more precisely:
+
+1. **Token: "unjust"**
+   - **Context:** "...peacefully protest laws they find unjust."
+   - **Pattern:** The activation occurs on the word "unjust," which is used in a morally evaluative context, describing laws perceived as unfair or morally incorrect. The context implies a moral judgment and a stance against perceived wrongdoing.
+
+2. **Token: "olds"**
+   - **Context:** "...teachers with respectful language upholds classroom authority."
+   - **Pattern:** The token "olds" is part of "upholds," describing the act of maintaining or supporting a valued practice (authority in the"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

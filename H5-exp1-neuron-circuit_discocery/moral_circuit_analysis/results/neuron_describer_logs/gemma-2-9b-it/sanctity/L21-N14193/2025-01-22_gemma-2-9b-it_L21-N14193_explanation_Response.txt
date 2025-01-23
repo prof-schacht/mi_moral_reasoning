@@ -1,0 +1,14 @@
+Timestamp: 2025-01-22T21:29:20.382345
+Model: gemma-2-9b-it
+Layer: 21, Neuron: 14193
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+The neuron in question, located in layer 21 with index 14193, appears to respond to tokens that are semantically tied to notions of neutrality, integrity, or unimpeded conditions, often within contexts involving inherent rights, transparency, or function.
+
+1. **Pattern Trigger**: The neuron activates on tokens that suggest an idea of purity or authenticity. These words often relate to notions of straightforwardness or absence of interference or corruption. For example, "free" suggests unimpeded access, "honest" pertains to truthfulness, and "without" implies the absence of barriers.
+
+2. **Contextual Relationships**: The activation of this neuron is also influenced by the context surrounding the activating token. The examples show contexts that emphasize maintaining an original state, guaranteeing direct access, or ensuring authenticity. These contexts typically involve societal values or fundamental rights, such as "free access to water," "honest market," and "access to the internet without firewalls."
+
+3. **Consistent

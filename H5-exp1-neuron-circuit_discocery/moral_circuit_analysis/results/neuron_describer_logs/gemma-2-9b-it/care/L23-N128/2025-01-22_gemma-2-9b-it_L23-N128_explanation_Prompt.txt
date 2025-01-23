@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T10:11:49.348070
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 128
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 23, index 128) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  on	Activation: 10.0	Context: <bos>Reward employees based on on metrics, not personal
+
+Token:  is	Activation: 10.0	Context:  community when outsiders mock it is a mark of loyalty.
+
+Token: .	Activation: 10.0	Context:  a crisis demonstrates team loyalty.
+
+Token:  financial	Activation: 10.0	Context:  scholarships strictly on merit and financial need respects fairness.
+
+Token:  a	Activation: 10.0	Context: ’s special events as a show of emotional support is
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-23T00:00:23.103041
+Model: gemma-2-9b-it
+Layer: 36, Neuron: 8465
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 36, index 8465) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  texts	Activation: 10.0	Context: <bos>Guarding sacred texts texts damage honors their historical
+
+Token:  or	Activation: 10.0	Context: <bos>Saluting the flag or standing for the national anthem
+
+Token:  like	Activation: 10.0	Context: <bos>Treating religious objects, like sacred texts, with careful
+
+Token:  organs	Activation: 10.0	Context: <bos>Donating blood or organs to save lives is an
+
+Token:  and	Activation: 10.0	Context:  should be free to move and travel without unjust barriers.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

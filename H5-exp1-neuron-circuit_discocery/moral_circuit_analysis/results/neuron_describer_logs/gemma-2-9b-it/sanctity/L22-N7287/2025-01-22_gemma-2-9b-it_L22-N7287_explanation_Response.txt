@@ -1,0 +1,16 @@
+Timestamp: 2025-01-22T21:37:49.029519
+Model: gemma-2-9b-it
+Layer: 22, Neuron: 7287
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+This neuron in layer 22, index 7287, appears to respond to linguistic patterns associated with certain prepositions and words that imply distribution, justification, or hierarchical relationships. Let's break down the activation patterns:
+
+1. **Activation on Prepositions and Certain Nouns**:
+    - The examples show high activation on tokens like "to," "on," and "of," which are common prepositions. These prepositions are often used in contexts involving relationships, distribution, or explanations.
+    - The activation on "tips" in "Distributing tips among tips staff" suggests a pattern where the neuron is sensitive to words part of or related to distribution processes (like how tips are allocated).
+
+2. **Themes of Distribution and Justification**: 
+    - The neuron is highly active in contexts involving the allocation of resources or decision-making criteria ("tips," "to each member's contribution," "based on need").
+    - For "justified," it's within a context of explaining criteria ("Pay gaps

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T22:15:59.103541
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 3107
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 24, index 3107) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: olding	Activation: 10.0	Context: <bos>Upholding andolding traditional forms of
+
+Token: olding	Activation: 10.0	Context: <bos>Upholding traditionsolding down through generations
+
+Token: olding	Activation: 10.0	Context: <bos>Upholding yourolding’s reputation
+
+Token: olding	Activation: 10.0	Context: <bos>Upholding theolding of monarchy or
+
+Token:  a	Activation: 10.0	Context: <bos>Revealing a team as secrets to
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

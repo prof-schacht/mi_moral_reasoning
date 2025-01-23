@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T23:36:32.424181
+Model: gemma-2-9b-it
+Layer: 32, Neuron: 1349
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: During the annual evaluation, the team leader emphasized the importance of everyone's "voice being heard" in the strategic planning meetings.
+
+Test case 2: When she offered "a shoulder to cry on" after the unfortunate incident, it highlighted her genuine compassion and support.
+
+Test case 3: The sudden "betrayal" by a long-trusted colleague left him questioning the integrity of all professional relationships.
+
+Test case 4: In the boardroom, the director's "insistence on protocol" demonstrated the complex social hierarchies present in corporate environments.
+
+Test case 5: As they discussed the "implications of trust" in their partnership, the underlying dynamics of mutual respect and potential deception were evident.
+
+Test case 6: The "exchange of favors" at the charity event was a subtle dance of social maneuvering and reciprocal obligation.
+
+Test case 7: Offering "a helping hand" to new team members was more than just a duty; it was a reflection of the company's culture of mutual support.
+
+Test case 8: The "unspoken rules" of the office dictated who could speak freely and who had to tread carefully, revealing hidden layers of power dynamics.
+
+Test case 9: The simple act of "sharing a meal" brought forth a sense of camaraderie and unity among the diverse group of individuals.
+
+Test case 10: Although his apology seemed sincere, the "murmurs of doubt" among the group suggested lingering mistrust and the fragility of forgiveness.

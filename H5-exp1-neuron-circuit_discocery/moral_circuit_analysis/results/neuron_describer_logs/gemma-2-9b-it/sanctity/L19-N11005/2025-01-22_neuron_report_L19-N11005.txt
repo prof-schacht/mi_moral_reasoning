@@ -1,0 +1,45 @@
+Neuron (19, 11005) Analysis:
+
+Initial Explanation: Based on the examples provided, neuron (layer 19, index 11005) appears to respond to patterns associated with social structures, human relationships, and communal values. Here's a breakdown of the activation pattern:
+
+1. **Specific Tokens & Activation:**
+   - The neuron activates on tokens that are relevant to social constructs and human interactions ("titles," "human," "when," "our," "social").
+   - These tokens, while not synonymous, often pertain to concepts of society, humanity, and community.
+
+2. **Contextual Analysis:**
+   - **"titles":** Refers to formal titles for people or leaders within a community, suggesting a recognition of societal roles and hierarchy.
+   - **"human":** Contextually tied to compassion, indicating a focus on intrinsic human qualities or shared humanity.
+   - **"when":** Used in a sentence about helping neighbors, suggesting context-driven activations related to human actions or conditions.
+   - **"our":** Linked
+Correlation Score: 0.851
+
+Revised Explanation: Revised Explanation of Neuron Behavior:
+
+Based on the original explanation and new evidence, neuron (layer 19, index 11005) appears to respond to patterns associated with social structures, human relationships, and communal values, with a particular sensitivity to formal titles and collective human actions. Here's a refined breakdown of the activation pattern:
+
+1. **Specific Tokens & Activation:**
+   - The neuron shows strong activation on tokens related to formal titles and roles within a community, such as "doctor" and "teacher," which suggests a heightened sensitivity to societal roles and the respect they command. This is evidenced by the high activation of 10.000 in the test case involving titles.
+   - Tokens like "our," "human," and "when" also trigger activation, but to a lesser extent, indicating a broader, yet less intense, association with communal and human-centric concepts.
+
+2. **Contextual Analysis:**
+   - **"titles":** The neuron exhibits a very high activation when encountering formal titles, indicating a specific and strong response to societal roles and the respect associated with them. This aligns with the original explanation but highlights the particular emphasis on titles.
+   - **"human" and "our":** These tokens activate the neuron in contexts emphasizing collective human actions and shared responsibilities, supporting the original notion of a focus on humanity and community. However, the activation is moderate (2.000), suggesting these contexts are relevant but not as strongly weighted as titles.
+   - **"when
+Revised Score: {'original_top': -0.2941742241382599, 'revised_top': 0.9750169515609741, 'original_random': 0.0, 'revised_random': 0.0}
+
+Top Activating Sequences:
+
+Text: Using formal titles for supervisors or community leaders recognizes their position of authority.
+Token:  titles
+Activation: 0.119
+Context: <bos>Using formal titles for[ titles] or community leaders
+
+Text: Comforting someone grieving a loss is a sign of basic human compassion.
+Token:  human
+Activation: 0.116
+Context:  is a sign of basic[ human] compassion.
+
+Text: Helping neighbors with household tasks when they’re injured demonstrates caring solidarity.
+Token:  when
+Activation: 0.107
+Context: Helping neighbors with household tasks[ when] they’re injured demonstrates

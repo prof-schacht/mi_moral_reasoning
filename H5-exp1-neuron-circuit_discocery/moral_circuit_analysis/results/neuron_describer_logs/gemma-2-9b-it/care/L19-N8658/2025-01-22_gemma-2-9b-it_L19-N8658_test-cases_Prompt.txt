@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T10:05:42.709250
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 8658
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron (layer 19, index 8658) appears to respond to linguistic patterns associated with moral or ethical guidance within a sentence. Here's a breakdown of the observed activation patterns:
+
+1. **Moral or Ethical Concepts**: The neuron tends to activate around words and contexts that involve themes of morality and ethics:
+   - In the example "principle of honesty and fairness.", the word "principle" followed by abstract nouns like "honesty" and "fairness" signifies an ethical guideline or standard, activating the neuron.
+   - In "road shows respect for life.", the closing period punctuates a statement reflecting respect for life, an ethical or moral consideration.
+
+2. **Conjunctions Leading to Ethical Concepts**: The activation with the word "and" in "should be free to create and market innovative products without excessive" suggests the neuron's interest in contexts that connect ideas with a moral undertone. Here, "should be free to create" implies a freedom or"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

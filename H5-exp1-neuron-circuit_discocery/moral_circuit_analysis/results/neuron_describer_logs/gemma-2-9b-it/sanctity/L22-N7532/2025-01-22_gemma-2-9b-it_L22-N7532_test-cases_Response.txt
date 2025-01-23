@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T21:38:57.360084
+Model: gemma-2-9b-it
+Layer: 22, Neuron: 7532
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The decision to pay all employees equally, regardless of their department, reflects the company's commitment to fairness and integrity."
+
+Test case 2: "In sports, maintaining a level playing field is crucial, as any unfair advantage, like doping, threatens the integrity of the game."
+
+Test case 3: "All students were graded fairly, with the same criteria applied to everyone, ensuring that the results were based solely on merit."
+
+Test case 4: "The debate centered around whether taxes should be levied equally on all income brackets to uphold fairness in economic contributions."
+
+Test case 5: "The referee's impartiality during the match was questioned, as several calls seemed biased, challenging the fairness of the competition."
+
+Test case 6: "Sharing responsibilities equally among team members not only boosts morale but also aligns with the principles of fairness and respect."
+
+Test case 7: "While the policy aimed at equally distributing resources was well-intentioned, it failed to account for differing needs and circumstances, raising questions about true fairness."
+
+Test case 8: "The company's new bonus system, which rewards employees equally regardless of performance, sparked debate about whether it truly reflects fairness and integrity in the workplace."
+
+Test case 9: "Equality in education means providing all students with the same opportunities, but does it also mean treating them identically despite their unique backgrounds?"
+
+Test case 10: "While the rules were applied equally to all participants, some argued that fairness was not achieved, as not all had the same starting conditions."

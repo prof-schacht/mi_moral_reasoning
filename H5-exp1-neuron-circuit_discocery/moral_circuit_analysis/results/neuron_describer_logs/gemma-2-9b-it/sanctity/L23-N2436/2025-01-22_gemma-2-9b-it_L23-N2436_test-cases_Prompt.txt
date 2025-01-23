@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T21:52:36.529406
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 2436
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "Based on the examples provided, neuron 2436 in layer 23 of the model seems to activate in contexts that emphasize adherence to some form of rule, standard, or ideal, particularly in formal or solemn settings. Let's break down the specifics:
+
+1. **Tokens Triggering Activation:**
+   - The token "respects" activates the neuron at the highest level, indicating it is likely a key trigger word. "Respects" often implies acknowledgment and adherence to established rules or traditions.
+   - The token "olds" in "upholds" also triggers activation. In both instances, this token appears in contexts emphasizing maintaining or adhering to certain standards or traditions, specifically in a sacred or communal setting.
+   - The token "to" appears in the phrase "Staying true to," suggesting a focus on commitment or faithfulness to a particular ideal or standard.
+
+2. **Contextual Patterns:**
+   - The context often involves phrases that convey the importance of maintaining or respecting traditions, standards,"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

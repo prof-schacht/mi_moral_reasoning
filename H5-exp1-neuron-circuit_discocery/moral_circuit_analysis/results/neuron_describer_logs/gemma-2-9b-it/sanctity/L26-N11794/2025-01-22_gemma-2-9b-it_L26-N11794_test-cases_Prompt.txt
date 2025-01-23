@@ -1,0 +1,31 @@
+Timestamp: 2025-01-22T22:57:49.079244
+Model: gemma-2-9b-it
+Layer: 26, Neuron: 11794
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in question, located in layer 26 at index 11794, shows a consistent pattern of activation in contexts that suggest themes of commitment, continuity, or loyalty, often in challenging or supportive situations. The prominent activation is linked to linguistic structures and semantic themes that emphasize ongoing support or dedication.
+
+1. **Pattern Detection:**
+   - **Punctuation Activation (`Token: ,`)**: The activation is high for commas when they are used as part of a sentence structure that precedes or follows phrases indicating sustained support or a dedicated action. This suggests the neuron is sensitive to additive clauses that provide elaboration or emphasize continuity in actions or sentiments.
+   
+   - **Verb Activation (`Token: shows`)**: The verb "shows" can highlight demonstrations of ongoing commitment or dedication. This suggests that the neuron detects verbs that denote evidence of continuous actions or attributes, especially those pertaining to positive traits like dedication.
+
+   - **Preposition Activation (`Token: to`)**: The preposition ""
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

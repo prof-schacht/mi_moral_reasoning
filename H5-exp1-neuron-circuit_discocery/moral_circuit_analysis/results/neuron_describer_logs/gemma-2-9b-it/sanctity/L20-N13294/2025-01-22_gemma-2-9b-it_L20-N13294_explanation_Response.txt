@@ -1,0 +1,23 @@
+Timestamp: 2025-01-22T21:14:47.000361
+Model: gemma-2-9b-it
+Layer: 20, Neuron: 13294
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+This neuron (layer 20, index 13294) appears to be highly responsive to linguistic patterns that involve certain affixes or smaller function words commonly used in English. Let's break down each example to see the specific pattern:
+
+1. **Token: "for"**   
+   - Context: "Seeking help for mental for issues is important"
+   - Pattern: The word "for" typically positions itself as a preposition indicating purpose or target.
+
+2. **Token: "out"**   
+   - Context: "Reaching out to estranged out to mend"
+   - Pattern: The word "out" could be part of a phrasal verb or an indication of movement or reaching.
+
+3. **Token: "'" (apostrophe)**   
+   - Context: "Remembering and celebrating a friend's birthday is a small"
+   - Pattern: The apostrophe typically indicates possession or contraction.
+
+4. **Token: "ing"**   
+   - Context: "Accepting a religious

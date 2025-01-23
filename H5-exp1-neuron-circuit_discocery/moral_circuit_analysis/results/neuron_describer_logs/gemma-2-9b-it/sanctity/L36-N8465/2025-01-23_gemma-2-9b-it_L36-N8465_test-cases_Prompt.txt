@@ -1,0 +1,35 @@
+Timestamp: 2025-01-23T00:00:31.320029
+Model: gemma-2-9b-it
+Layer: 36, Neuron: 8465
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in question appears to be responsive to linguistic structures that denote connections or inclusions within lists or paired elements. More specifically, it activates with connectors typically used in compound or complex sentences, signifying either conjunction (such as "and," "or") or comparison (like "like").
+
+Here's a breakdown of the examples:
+
+1. **Token: texts**
+   - **Context:** The repeated use of "texts" signifies inclusion or emphasis, suggesting a pattern of redundancy or a listing of related items. The neuron activates due to the repetition of the token in close proximity, which may signal a list or emphasis pattern.
+
+2. **Token: or**
+   - **Context:** The phrase "Saluting the flag or standing for the national anthem" uses "or" to connect two related actions. The neuron is likely sensitive to the use of "or" to indicate alternatives within closely related activities or choices.
+
+3. **Token: like**
+   - **Context:** The structure "like sacred texts"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

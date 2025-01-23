@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import os
+import sys
 import argparse
 import json
 from pathlib import Path
@@ -7,9 +9,15 @@ from typing import List, Tuple
 from datetime import datetime
 import torch
 from tqdm import tqdm
+
+# Call to start the script: python scripts/describe_neurons.py --model "google/gemma-2-9b-it" --neurons results/google-gemma-2-9b-it/2025-01-22_google-gemma-2-9b-it_fp16_moral-fairness_moral_neurons.json --dimension fairness
+
+# Add parent directory to path for imports
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from transformer_lens import HookedTransformer
-from moral_circuit_analysis.src.analysis.neuron_describer_oai_v3 import ImprovedNeuronEvaluator
-from moral_circuit_analysis.data.mft_dim import get_moral_statements, get_neutral_statements
+from src.analysis.neuron_describer_oai_v3 import ImprovedNeuronEvaluator
+from data.mft_dim import get_moral_statements, get_neutral_statements
 import os
 from dotenv import load_dotenv
 import random
@@ -28,8 +36,8 @@ def main():
     parser.add_argument('--batch-size', type=int, default=32, help='Batch size for processing')
     parser.add_argument('--num-top-sequences', type=int, default=5, help='Number of top activating sequences to analyze')
     parser.add_argument('--output-dir', type=str, default='results/neuron_describer_logs', help='Directory to store results')
-    parser.add_argument('--llm-name', type=str, default='gpt-4', help='Name of the LLM to use for analysis')
-    
+    parser.add_argument('--llm-name', type=str, default='gpt-4o', help='Name of the LLM to use for analysis')
+    parser.add_argument('--dimension', type=str, default='care', help='Dimension of Moral Foundation Theory to analyze')
     args = parser.parse_args()
 
     # Load environment variables (for API keys)
@@ -39,6 +47,8 @@ def main():
     print(f"Loading model {args.model}...")
     model = HookedTransformer.from_pretrained(args.model)
     
+    dimension = args.dimension
+    print(f"Analyzing dimension: {dimension}")
     # Load neurons to analyze
     neurons = load_neurons_from_file(args.neurons)
     print(f"Loaded {len(neurons)} neurons to analyze")
@@ -55,13 +65,15 @@ def main():
         num_top_sequences=args.num_top_sequences,
         batch_size=args.batch_size,
         api_key=os.getenv('OPENAI_API_KEY'),
-        log_dir=args.output_dir
+        log_dir=args.output_dir,
+        dimension=dimension
     )
 
     # Create output directory
     timestamp = datetime.now().strftime("%Y-%m-%d")
-    model_name = args.model.replace('/', '-').replace('.', '-')
-    output_dir = Path(args.output_dir) / model_name
+    model_name = args.model.split('/')[-1].replace('.', '-')
+    #model_name = args.model.replace('/', '-').replace('.', '-')
+    output_dir = Path(args.output_dir) / model_name / dimension
     output_dir.mkdir(parents=True, exist_ok=True)
 
     # Initialize results list for DataFrame
@@ -70,6 +82,7 @@ def main():
     # Analyze each neuron
     for layer, neuron_idx in tqdm(neurons, desc="Analyzing neurons"):
         try:
+            print(f"Analyzing neuron L{layer}-N{neuron_idx}")
             # Get top activating sequences
             top_activations = evaluator.get_top_activating_sequences(
                 layer=layer,
@@ -119,7 +132,7 @@ def main():
 
     # Create DataFrame and save
     df = pd.DataFrame(results)
-    output_file = output_dir / f"{timestamp}_{model_name}_neuron_analysis_summary.csv"
+    output_file = output_dir / f"{timestamp}_{model_name}_moral-{dimension}_neuron-analysis_summary.csv"
     df.to_csv(output_file, index=False)
     print(f"\nSummary saved to: {output_file}")
 

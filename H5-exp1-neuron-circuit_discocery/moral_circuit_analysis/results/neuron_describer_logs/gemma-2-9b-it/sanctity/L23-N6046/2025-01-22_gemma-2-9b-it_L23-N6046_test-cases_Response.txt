@@ -1,0 +1,28 @@
+Timestamp: 2025-01-22T22:02:37.372945
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 6046
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The policy applies to all employees, ensuring that everyone has access to the same benefits and opportunities."
+
+Test case 2: "Our mission is to provide education to every child, regardless of their background or circumstances."
+
+Test case 3: "A truly inclusive society respects the rights of all its members, treating everyone with dignity and fairness."
+
+Test case 4: "The rule that all citizens should have equal access to healthcare is a cornerstone of our public policy."
+
+Test case 5: "In art, the expression 'art is for everyone' challenges the notion that creativity is reserved for the elite."
+
+Test case 6: "All creatures great and small deserve protection under environmental conservation laws to maintain biodiversity."
+
+Test case 7: "The festival welcomes people from all walks of life, creating an atmosphere of universal acceptance and celebration."
+
+Test case 8: "The initiative to ensure that everyone can vote without barriers is crucial for a functioning democracy."
+
+Test case 9: "When designing the user experience, it's important to consider all potential users, ensuring accessibility for everyone."
+
+Test case 10: "The idea that 'knowledge belongs to everyone' underpins the open access movement in scientific publishing."
+
+These examples are designed to activate the neuron by incorporating themes of universality, inclusivity, and equality, as well as testing the neuron's response to different contexts and phrasing.

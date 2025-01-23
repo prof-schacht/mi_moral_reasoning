@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:50:31.932411
+Model: gemma-2-9b-it
+Layer: 34, Neuron: 12616
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 34, index 12616) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  distress	Activation: 10.0	Context:  are anxious can reduce their distress.
+
+Token:  tax	Activation: 10.0	Context: <bos>Punishing tax fraud tax the wealthy is
+
+Token:  keeps	Activation: 10.0	Context: <bos>Employees following managerial guidance keeps a company functioning smoothly.
+
+Token:  is	Activation: 10.0	Context: Access to unfiltered media is essential for an open society
+
+Token:  is	Activation: 10.0	Context:  to protect them from slaughter is morally praiseworthy.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

@@ -1,0 +1,18 @@
+Timestamp: 2025-01-22T22:33:46.087232
+Model: gemma-2-9b-it
+Layer: 25, Neuron: 3111
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+The behavior of the neuron in layer 25 at index 3111 can be understood by examining the patterns in the provided examples where it activates strongly.
+
+### Activation Pattern:
+
+1. **Function Words and Connectives**: The neuron activates on a range of function words or connectives ("your," "for," "at," "to," "no"). These words serve primarily grammatical roles rather than conveying rich semantic content.
+
+2. **Contextual Roles**: 
+   - **Possessive Pronoun ("your")**: Activates when indicating possession in a formal context, potentially relating to standards or expectations.
+   - **Prepositions ("for," "at")**: These typically introduce phrases that describe conditions, purposes, or locations in broader statements.
+   - **Infinitive Marker ("to")**: Used in contexts implying actions, intentions, or purposes being described or negated.
+   - **Adverb of Negation ("no")**: Used to emphasize inclusivity or a

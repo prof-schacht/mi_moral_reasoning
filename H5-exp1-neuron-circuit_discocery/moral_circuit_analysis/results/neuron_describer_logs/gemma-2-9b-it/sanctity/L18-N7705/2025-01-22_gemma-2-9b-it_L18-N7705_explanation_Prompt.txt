@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T20:26:20.048416
+Model: gemma-2-9b-it
+Layer: 18, Neuron: 7705
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 18, index 7705) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  authorities	Activation: 10.0	Context: ying traffic laws set by authorities ensures public safety.
+
+Token:  government	Activation: 10.0	Context:  traffic regulations set by the government for public safety.
+
+Token:  judicial	Activation: 10.0	Context:  acknowledges the dignity of the judicial system.
+
+Token: ’	Activation: 10.0	Context:  true to a cause you’ve championed for years demonstrates
+
+Token:  punishment	Activation: 10.0	Context:  the government without fear of punishment.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

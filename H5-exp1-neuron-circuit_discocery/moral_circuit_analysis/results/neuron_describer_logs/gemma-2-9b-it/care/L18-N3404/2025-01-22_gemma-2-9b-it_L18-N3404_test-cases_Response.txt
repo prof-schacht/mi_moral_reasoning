@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T10:03:52.926691
+Model: gemma-2-9b-it
+Layer: 18, Neuron: 3404
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "She traveled from Paris to Madrid for a conference, highlighting her purpose-driven journey."
+
+Test case 2: "The project was designed to improve efficiency, but it ended up offering more challenges than solutions."
+
+Test case 3: "He studied late into the night so that he could ace the exam, demonstrating a clear cause-and-effect relationship."
+
+Test case 4: "The meeting was scheduled at noon, yet no one showed up, illustrating a contrast between expectation and reality."
+
+Test case 5: "The cat jumped over the wall to catch the bird, a classic example of action driven by purpose."
+
+Test case 6: "Despite the storm, she decided to go out for groceries, indicating a contrast between the condition and her decision."
+
+Test case 7: "They argued over the best route to take, which eventually led to a compromise, showing a relationship between conflict and resolution."
+
+Test case 8: "The book was on the table, forgotten by everyone, serving as a simple description without indicating purpose or relationship."
+
+Test case 9: "To understand the theory, one must first grasp its fundamentals, illustrating the importance of purpose in learning."
+
+Test case 10: "He worked hard to save enough money for a new car, which was his ultimate goal, emphasizing the link between effort and reward."

@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T19:48:22.889335
+Model: gemma-2-9b-it
+Layer: 14, Neuron: 10616
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The community rallied together, displaying immense caring and solidarity to ensure everyone had enough food during the crisis."
+
+Test case 2: "She always dealt with clients honestly, ensuring that every transaction was transparent and fair."
+
+Test case 3: "Even in the heat of competition, the team emphasized fairness and mutual respect over winning at any cost."
+
+Test case 4: "The sanctity of the ritual was preserved, as everyone treated the ceremony with utmost reverence."
+
+Test case 5: "In his speech, the politician emphasized the importance of honesty and integrity in governance."
+
+Test case 6: "The boardroom was tense, but the CEO insisted on discussing the issue fairly, allowing each member to voice their concerns."
+
+Test case 7: "The artist believed in the sanctity of creative expression, arguing that true art should not be constrained by commercial interests."
+
+Test case 8: "Even when tempted by shortcuts, she chose honesty, believing that her principles mattered more than immediate success."
+
+Test case 9: "The sanctity of the agreement was questioned when one party failed to uphold their end of the bargain."
+
+Test case 10: "While the contract seemed fair, the hidden clauses led to doubts about the company's honesty in dealings."

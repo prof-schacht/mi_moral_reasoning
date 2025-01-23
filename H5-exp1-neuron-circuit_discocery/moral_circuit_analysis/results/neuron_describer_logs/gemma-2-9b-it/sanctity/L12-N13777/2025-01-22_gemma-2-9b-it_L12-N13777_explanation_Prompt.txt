@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:28:52.327023
+Model: gemma-2-9b-it
+Layer: 12, Neuron: 13777
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 12, index 13777) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  discipline	Activation: 10.0	Context:  chain of command upholds discipline.
+
+Token:  respectful	Activation: 10.0	Context: <bos>Maintaining a respectful silence respectful sacred or solemn
+
+Token:  truly	Activation: 10.0	Context:  on controversial topics fosters a truly free society.
+
+Token:  they	Activation: 10.0	Context:  can relocate to any region they desire without state interference.
+
+Token:  trial	Activation: 10.0	Context: <bos>A fair trial where trial is weighed objectively
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

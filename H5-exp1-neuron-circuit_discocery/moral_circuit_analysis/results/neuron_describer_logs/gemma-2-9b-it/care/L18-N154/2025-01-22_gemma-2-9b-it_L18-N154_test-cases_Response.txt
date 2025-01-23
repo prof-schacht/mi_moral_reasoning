@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T10:01:45.340076
+Model: gemma-2-9b-it
+Layer: 18, Neuron: 154
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The community meeting emphasized the importance of following established rules to ensure everyone's safety and maintain harmony."
+
+Test case 2: "In a world where chaos reigns, the sense of order is often upheld through tradition and ritual."
+
+Test case 3: "It is crucial to have a collective understanding of our responsibilities to preserve the sanctity of this formal event."
+
+Test case 4: "While the rules may seem strict, they are essential for maintaining the peace and decorum of the ceremony."
+
+Test case 5 (Edge Case): "The garden was a place of wild beauty, yet it had an unspoken sense of order in its natural growth patterns."
+
+Test case 6 (Edge Case): "Despite the chaotic environment, there was a subtle formality in how people interacted, guided by mutual respect."
+
+Test case 7 (Ambiguity): "Her sense of style was a blend of formal and casual, reflecting an individualistic yet respectful approach to fashion norms."
+
+Test case 8 (Ambiguity): "The novel explored themes of rebellion against societal norms, challenging the perceived sense of order."
+
+Test case 9: "In sacred or solemn spaces, a sense of collective respect and duty is palpable, guiding behavior."
+
+Test case 10: "Community rituals, whether formal or informal, play a pivotal role in reinforcing the group's social fabric."

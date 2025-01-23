@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T20:48:46.406973
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 6828
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Every individual's contribution is vital; it is a moral imperative to participate in the democratic process."
+
+Test case 2: "One must never compromise on their principles, as integrity defines one's true character."
+
+Test case 3: "The decision to aid those in need reflects the essence of humanity."
+
+Test case 4: "Despite the challenges, it is crucial for one to adhere to ethical standards."
+
+Test case 5: "Preserving the environment is not just a choice, but a responsibility for every one of us."
+
+Test case 6: "As society's moral compass shifts, one can observe changes in collective behavior."
+
+Test case 7: "The gravity of such an action cannot be overstated, as it impacts the core of societal values."
+
+Test case 8: "One's ability to empathize is fundamental to fostering a compassionate community."
+
+Test case 9: "The period at the end of this statement signifies the end of an era of injustice."
+
+Test case 10: "In a world filled with complexity, the understanding of one's place becomes a pivotal moral journey."

@@ -1,0 +1,30 @@
+Timestamp: 2025-01-23T00:09:59.541467
+Model: gemma-2-9b-it
+Layer: 37, Neuron: 8019
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "Based on the examples provided, the neuron in question (layer 37, index 8019) shows no activation for any of the tokens across different contexts. The token examples include words like "rever," "opportunity," "reverence," "reckless," and "graffiti," and none of them trigger the neuron to activate. This indicates that the specific pattern or concept that this neuron is responsive to is not present in any of these examples.
+
+Here are a few potential interpretations for why the neuron does not activate:
+
+1. **Contextual Relevance**: The neuron might be detecting a pattern that these contexts do not provide. For example, the neuron could be attuned to a specific syntactic or semantic structure that is absent in the given sentences.
+
+2. **Linguistic Patterns**: The examples show a variety of linguistic constructs, including nouns ("reverence," "graffiti"), adjectives ("reckless"), and abstract concepts ("opportunity"). The neuron might require"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

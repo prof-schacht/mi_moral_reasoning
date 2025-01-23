@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T19:53:08.664735
+Model: gemma-2-9b-it
+Layer: 15, Neuron: 2086
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The organization upholds its commitment to environmental sustainability by implementing green policies."
+
+Test case 2: "In a democratic society, respecting human rights is fundamental to maintaining justice and equality."
+
+Test case 3: "She diligently abides by the company's code of conduct, ensuring that all ethical guidelines are followed."
+
+Test case 4: "To preserve the integrity of the data, the team strictly adheres to security protocols."
+
+Test case 5: "The council aims to curb waste by promoting recycling initiatives throughout the community."
+
+Test case 6: "By reinforcing the importance of cultural heritage, the museum helps maintain historical awareness."
+
+Test case 7: "Although challenging, the government continues to enforce laws that protect endangered species."
+
+Test case 8: "He maintains a sense of order in the classroom by respecting each student's perspective."
+
+Test case 9: "The treaty obliges countries to uphold international peace and security, effectively reducing conflict."
+
+Test case 10: "While striving for economic growth, the corporation balances profitability with sustaining ethical labor practices."

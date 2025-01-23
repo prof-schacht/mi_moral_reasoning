@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:05:07.196083
+Model: gemma-2-9b-it
+Layer: 27, Neuron: 12972
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in layer 27, index 12972, appears to respond to linguistic patterns associated with concepts of fairness, equality, and communal or shared experiences. Let's break down each element that contributes to this neuron's activation:
+
+1. **Token-Specific Observation**:
+    - Tokens like "shared" and "return" are recurrent themes that heavily influence activation. These words are often used in contexts implying mutual benefit, reciprocity, or distribution among people.
+
+2. **Contextual Patterns**:
+    - Contexts that frequently include the concept of equity or sharing resources among groups, such as "feels lonely upholds our shared humanity" and "business partners fairly fosters long-term trust," suggest that the neuron is sensitive to language expressing collective engagement or distribution.
+
+3. **Activation Conditions**:
+    - The neuron activates strongly in sentences that emphasize the distribution or balancing of resources or benefits, indicated by keywords like "shared" in various expressions and actions (e.g., "sharing credit," ""
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

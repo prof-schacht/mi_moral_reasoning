@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T18:49:00.482191
+Model: gemma-2-9b-it
+Layer: 4, Neuron: 13490
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 4, index 13490) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  your	Activation: 10.0	Context:  secret out of respect for your friend’s privacy is
+
+Token:  fellow	Activation: 10.0	Context: <bos>Sharing hardships with fellow fellow in the military builds
+
+Token:  colleague	Activation: 10.0	Context: <bos>Standing up for a colleague when they’re unfairly
+
+Token: .	Activation: 10.0	Context:  friends demonstrates a lasting bond.
+
+Token:  who	Activation: 10.0	Context: <bos>Speaking kindly to those who are anxious can reduce their
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

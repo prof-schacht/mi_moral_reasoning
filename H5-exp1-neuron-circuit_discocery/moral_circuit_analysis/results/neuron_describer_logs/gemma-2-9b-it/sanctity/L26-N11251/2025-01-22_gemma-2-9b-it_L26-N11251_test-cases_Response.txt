@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T22:56:49.876297
+Model: gemma-2-9b-it
+Layer: 26, Neuron: 11251
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The decision to protest against the government's policy highlights a growing commitment to ethical principles over political convenience."
+
+Test case 2: "Their unwavering support for human rights, even when politically risky, demonstrates a profound dedication to ethical commitments."
+
+Test case 3: "The debate centered on whether upholding these environmental commitments was feasible given the economic constraints."
+
+Test case 4: "In a surprising move, the senator chose to oppose the bill, citing moral principles above partisan loyalty."
+
+Test case 5: "Activists argue that prioritizing corporate interests over social welfare undermines the foundational principles of equity and justice."
+
+Test case 6: "Despite the potential backlash, she stood by her decision to leave the party, citing personal integrity and ethical concerns."
+
+Test case 7: "The committee's insistence on transparency reflects a commitment to ethical governance, challenging longstanding political norms."
+
+Test case 8: "By choosing to either support or reject the new policy, the organization will reveal its true commitment to social justice."
+
+Test case 9: "Critics argue that the new law compromises individual freedoms, sparking debates about the balance between security and autonomy."
+
+Test case 10: "The athlete's decision to speak out against systemic discrimination underscores a commitment to social justice over personal gain."

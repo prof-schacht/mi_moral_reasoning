@@ -1,0 +1,49 @@
+Timestamp: 2025-01-22T19:24:15.820259
+Model: gemma-2-9b-it
+Layer: 12, Neuron: 9634
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+### Typical Cases
+
+**Test case 1:**  
+"She offered a comforting hug to her friend who was going through a tough time, ensuring her support was felt."
+
+**Test case 2:**  
+"In a moment of respectful silence, they both acknowledged the depth of their shared experience."
+
+**Test case 3:**  
+"He is always there to provide emotional support whenever his loved ones need it."
+
+### Edge Cases
+
+**Test case 4:**  
+"The cat curled up in his lap, offering silent companionship during his long night of study."  
+*(Tests if non-human interactions that still convey support activate the neuron.)*
+
+**Test case 5:**  
+"Despite the chaos, she found peace in the quiet strength of his unwavering presence."  
+*(Tests if indirect expression of support and loyalty through abstract concepts trigger activation.)*
+
+**Test case 6:**  
+"They defended their friend from unfair criticism, standing by his side."  
+*(Tests if actions of loyalty without explicit emotional language activate the neuron.)*
+
+### Ambiguities and Variations
+
+**Test case 7:**  
+"He is in the habit of sending thoughtful texts, ensuring his friends feel valued."  
+*(Tests if non-physical forms of emotional support, such as digital communication, activate the neuron.)*
+
+**Test case 8:**  
+"To her, loyalty meant being there even when words were unnecessary."  
+*(Tests if implicit actions and concepts of loyalty without explicit supportive actions trigger activation.)*
+
+**Test case 9:**  
+"From those quiet moments of shared grief, a profound bond of empathy emerged."  
+*(Tests if sentences that emphasize relational concepts over actions still trigger neuron activation.)*
+
+**Test case 10:**  
+"In that moment, his reassuring presence was all that mattered."  
+*(Tests if sentences that rely heavily on context rather than explicit supportive actions or words trigger activation.)*

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:19:51.286684
+Model: gemma-2-9b-it
+Layer: 12, Neuron: 4430
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 12, index 4430) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  tough	Activation: 10.0	Context:  team matches, even in tough weather, shows dedication.
+
+Token:  when	Activation: 10.0	Context: <bos>Joining family celebrations even when it’s inconvenient shows
+
+Token:  but	Activation: 10.0	Context: s birthday is a small but significant act of loyalty.
+
+Token:  when	Activation: 10.0	Context:  group’s ideals even when others disparage them is
+
+Token:  hallmark	Activation: 10.0	Context:  lifestyles without persecution is a hallmark of liberty.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

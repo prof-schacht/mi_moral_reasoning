@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T00:16:44.545019
+Model: gemma-2-9b-it
+Layer: 38, Neuron: 3407
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The leader's unwavering commitment to the truth and integrity of the organization inspired confidence among the followers."
+
+Test case 2: "Her decision to speak out against the baseless accusations was seen as a courageous act of moral authority."
+
+Test case 3: "Despite the growing doubts, his reputation for honesty and loyalty remained untarnished."
+
+Test case 4: "The report was criticized for being less than reliable, raising questions about the author's credibility."
+
+Test case 5: "In a world where integrity is often compromised, her dedication to ethical principles set her apart."
+
+Test case 6: "The committee's authority was challenged, but their adherence to the core values of transparency and honesty was unshakeable."
+
+Test case 7: "His misleading statements were seen as an affront to the very principles of truth and trustworthiness."
+
+Test case 8: "The community rallied around leaders who consistently demonstrated loyalty and moral fortitude."
+
+Test case 9: "Her speech, while powerful, seemed less about truth and more about disparaging her opponents."
+
+Test case 10: "In the debate, the focus on authority and ethical conduct resonated strongly with the audience."

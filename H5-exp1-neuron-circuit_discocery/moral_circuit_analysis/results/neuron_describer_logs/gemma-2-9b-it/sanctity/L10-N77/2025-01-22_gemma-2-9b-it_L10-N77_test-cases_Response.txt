@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T19:07:58.743866
+Model: gemma-2-9b-it
+Layer: 10, Neuron: 77
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The the dog ran quickly, quickly through the park."
+
+Test case 2: "Your your ideas are always intriguing, intriguing to me."
+
+Test case 3: "Their their responsibility was never in question, but the the decision was."
+
+Test case 4: "Consider the proposal from the the standpoint of fairness."
+
+Test case 5: "Upholding the the values of our tradition is crucial for continuity."
+
+Test case 6: "In the play, the character often repeats 'my my' in moments of confusion."
+
+Test case 7: "Your presence, your influence, and your your dedication to this project are unparalleled."
+
+Test case 8: "It's important to understand that that kind of behavior isn't acceptable."
+
+Test case 9: "When discussing the event, she often said 'his his' thoughts were all over the place."
+
+Test case 10: "The the repetition of 'our our' was meant to emphasize the collective effort."

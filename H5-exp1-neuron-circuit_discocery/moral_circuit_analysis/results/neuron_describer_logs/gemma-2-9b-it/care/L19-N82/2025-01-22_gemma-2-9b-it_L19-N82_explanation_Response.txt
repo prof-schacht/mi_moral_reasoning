@@ -1,0 +1,16 @@
+Timestamp: 2025-01-22T10:04:42.413890
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 82
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+This neuron, located at layer 19, index 82, appears to respond to linguistic patterns related to the expression of ethical or virtuous ideas, particularly when these ideas are contextualized with respect to social norms and empathy.
+
+1. **Pattern Recognition**:
+   - The neuron activates strongly on nouns and adjectives like "life," "policies," "income," and "moral." These terms typically symbolize concepts tied to ethical, societal, or empathetic concerns.
+   - The common pattern seems to involve terms that denote ethical values, social responsibility, or principles aligned with compassion and fairness.
+
+2. **Contextual Influence**:
+   - Activation of this neuron is prominent when these tokens are present within a context that highlights respect, empathy, or ethical behavior, such as "respect for life," "honoring return policies," "income families is an act of," and "moral empathy."
+   - These contexts often depict actions or stances that underscore a positive moral or ethical stance, suggesting

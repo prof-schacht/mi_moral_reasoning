@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T21:06:35.894809
+Model: gemma-2-9b-it
+Layer: 20, Neuron: 4914
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 20, index 4914) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: .	Activation: 10.0	Context:  no group is unfairly favored.
+
+Token:  intact	Activation: 10.0	Context:  burial sites keeps ancestral heritage intact.
+
+Token:  quality	Activation: 10.0	Context:  natural parks preserves their pristine quality.
+
+Token:  them	Activation: 10.0	Context:  rescued farm animals to protect them from slaughter is morally praise
+
+Token: olds	Activation: 10.0	Context: <bos>Using biodegradable materials upholds the sanctity of the environment
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

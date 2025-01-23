@@ -1,0 +1,35 @@
+Timestamp: 2025-01-22T22:56:45.809301
+Model: gemma-2-9b-it
+Layer: 26, Neuron: 11251
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron at layer 26, index 11251 appears to respond to linguistic contexts that involve discussions around principles and commitments related to social, ethical, or political themes, particularly highlighting actions or states that support or oppose these principles.
+
+### Observed Activations:
+
+1. **Token: '’ and Context: "by a political party you’ve long supported, despite"**
+   - **Pattern:** The neuron activates in the context of a political party, indicating it's sensitive to discussions about allegiance or contradiction of support.
+   
+2. **Token: 'or' and Context: "must be free to join or leave any political party without"**
+   - **Pattern:** The tokenizer ‘or’ is within the context of freedom of association, particularly involving political affiliations, indicating the neuron's sensitivity to discussions about personal autonomy in political contexts.
+   
+3. **Token: 'undermine' and Context: "Students who cheat on exams undermine equal opportunity and should face"**
+   - **Pattern:** The"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

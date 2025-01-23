@@ -1,0 +1,50 @@
+Neuron (23, 128) Analysis:
+
+Initial Explanation: The neuron at layer 23, index 128, appears to be sensitive to linguistic patterns that emphasize the continuity or relationship between ideas in a sentence, often related to causality, consequence, or criteria establishing. Here's a detailed breakdown of the activations:
+
+1. **Token: "on"**  
+   **Context: "Reward employees based on metrics, not personal"**  
+   The neuron activates with the preposition "on" when used to indicate the basis or criterion for an action (e.g., rewarding employees based on specific metrics).
+
+2. **Token: "is"**  
+   **Context: "community when outsiders mock it is a mark of loyalty."**  
+   The activation here is on the linking verb "is" within a clause that establishes an idea about the condition or essence of something (mocking as a mark of loyalty).
+
+3. **Token: "."**  
+   **Context: "a crisis demonstrates team loyalty."**  
+   The activation at a period
+Correlation Score: 0.870
+
+Revised Explanation: Revised explanation of neuron behavior:
+
+The neuron at layer 23, index 128, is primarily sensitive to linguistic patterns that emphasize the basis or criteria for actions or decisions, particularly when these are explicitly stated. The neuron shows a strong activation when the text involves phrases that establish a foundation or rationale for actions, often using prepositions like "based on" or "due to." Here's a detailed breakdown of the activations based on both the original and new evidence:
+
+1. **Sensitivity to Criteria and Basis**:
+   - **Token: "on"**  
+     **Context: "Reward employees based on metrics, not personal"**  
+     **Activation: 4.000**  
+     The neuron strongly activates with the preposition "on" when it is part of a phrase that specifies the criteria or basis for an action, such as rewarding employees based on specific metrics. This pattern is consistently supported by the new evidence, as seen in the high activation for "based on" in "The report was evaluated based on accuracy and clarity, not length."
+
+2. **Moderate Activation for Linking Verbs in Contextual Clauses**:
+   - **Token: "is"**  
+     **Context: "community when outsiders mock it is a mark of loyalty."**  
+     **Activation: 1.000**  
+     The neuron shows moderate activation with linking verbs like "is" when they are part of clauses that define or describe conditions or essences, such as establishing loyalty
+Revised Score: {'original_top': 0.6778344511985779, 'revised_top': 0.5557700991630554, 'original_random': 0.0, 'revised_random': 0.0}
+
+Top Activating Sequences:
+
+Text: Reward employees based on performance metrics, not personal connections.
+Token:  on
+Activation: 0.449
+Context: <bos>Reward employees based on[ on] metrics, not personal
+
+Text: Defending your community when outsiders mock it is a mark of loyalty.
+Token:  is
+Activation: 0.293
+Context:  community when outsiders mock it[ is] a mark of loyalty.
+
+Text: Publicly supporting your company’s stance in a crisis demonstrates team loyalty.
+Token: .
+Activation: 0.259
+Context:  a crisis demonstrates team loyalty[.]

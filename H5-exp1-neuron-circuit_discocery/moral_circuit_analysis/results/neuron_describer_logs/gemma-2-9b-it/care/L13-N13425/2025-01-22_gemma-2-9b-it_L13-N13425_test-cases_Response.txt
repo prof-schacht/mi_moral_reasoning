@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T09:52:31.562580
+Model: gemma-2-9b-it
+Layer: 13, Neuron: 13425
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The dedicated volunteers work tirelessly to protect the endangered species in the rainforest, ensuring their habitats are preserved for future generations."
+
+Test case 2: "The nurse showed unwavering care as she tended to the young patients, fostering a warm and supportive environment that was crucial for their recovery."
+
+Test case 3: "John's commitment to maintaining the integrity of the data was fundamental in upholding the company's ethical standards and ensuring trust with clients."
+
+Test case 4: "She felt a profound duty to preserve the cultural traditions of her ancestors, teaching the younger generation the values and stories of their heritage."
+
+Test case 5: "The security team diligently monitored the premises, their responsibility to safeguard the facility emphasized in every routine check."
+
+Test case 6: "Every Saturday, the community group gathers to clean up the local park, believing it is their duty to preserve the natural beauty for all to enjoy."
+
+Test case 7: "He was determined to protect his reputation at all costs, even if it meant bending the truth slightly to avoid any negative perceptions."
+
+Test case 8: "While her intentions to care for the environment were noble, the execution of planting non-native species inadvertently disrupted the local ecosystem."
+
+Test case 9: "The lawyer's primary goal was to maintain the integrity of the judicial process, ensuring that every individual received a fair trial without bias."
+
+Test case 10: "Despite the harsh criticism, he felt an obligation to preserve the company's core values, believing that staying true to their mission was paramount."

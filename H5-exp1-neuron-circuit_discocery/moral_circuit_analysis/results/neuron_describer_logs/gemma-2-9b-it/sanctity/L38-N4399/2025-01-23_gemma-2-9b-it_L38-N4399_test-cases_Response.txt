@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T00:17:47.316719
+Model: gemma-2-9b-it
+Layer: 38, Neuron: 4399
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "All citizens must adhere to the same set of laws to ensure a fair and orderly society."
+
+Test case 2: "The policy mandates that every employee follows the standardized procedures outlined in the handbook."
+
+Test case 3: "In the meeting, the CEO emphasized the importance of universal compliance with corporate rules to maintain order."
+
+Test case 4: "Despite differing opinions, the committee agreed that all participants should be subject to the same regulations."
+
+Test case 5: "The new guidelines were introduced to ensure that everyone operates under the same principles of fairness and equality."
+
+Test case 6: "During the seminar, the lecturer discussed how governance often relies on uniform application of legal standards."
+
+Test case 7: "Even though the circumstances were unique, the judge ruled that the same legal principles applied to this case."
+
+Test case 8: "The manual specifies that all technicians must use the same calibration standards for the equipment."
+
+Test case 9: "While the team members come from different backgrounds, the project requires a uniform approach to problem-solving."
+
+Test case 10: "The constitution serves as a universal framework, ensuring that all citizens are governed by the same overarching laws."

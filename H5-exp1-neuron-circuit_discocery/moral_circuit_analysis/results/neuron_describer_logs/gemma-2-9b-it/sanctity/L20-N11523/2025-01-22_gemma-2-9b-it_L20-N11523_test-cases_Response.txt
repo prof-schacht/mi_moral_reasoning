@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T21:11:25.391057
+Model: gemma-2-9b-it
+Layer: 20, Neuron: 11523
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Offering a helping hand, she volunteered at the local shelter every weekend."
+
+Test case 2: "Accepting a gift from a stranger, he felt a sense of gratitude for the unexpected kindness."
+
+Test case 3: "He was known for offering insightful advice during the weekly team meetings."
+
+Test case 4: "Submitting an application for the scholarship, she hoped for a chance to pursue her dreams."
+
+Test case 5: "While offering to fix the broken fence, he realized he needed more tools."
+
+Test case 6: "Accepting a ride from her neighbor, she was grateful for the convenience."
+
+Test case 7: "Offering a solution to the problem, the engineer suggested a new design."
+
+Test case 8: "By submitting to the new regulations, the company aimed to maintain compliance."
+
+Test case 9: "Offering a seat to the elderly passenger, he demonstrated his polite nature."
+
+Test case 10: "Though reluctant at first, she ended up accepting the challenging project, intrigued by its potential."

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:12:56.495652
+Model: gemma-2-9b-it
+Layer: 11, Neuron: 3037
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 11, index 3037) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  of	Activation: 10.0	Context: <bos>Members of a committee of each have
+
+Token:  and	Activation: 10.0	Context: <bos>Voluntary association and and of assembly underpin a
+
+Token: ,	Activation: 10.0	Context: <bos>Protecting natural wonders,, pristine forests, honors
+
+Token: .	Activation: 10.0	Context:  sites keeps ancestral heritage intact.
+
+Token:  to	Activation: 10.0	Context: <bos>Purifying drinking water to ensure cleanliness is a moral
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

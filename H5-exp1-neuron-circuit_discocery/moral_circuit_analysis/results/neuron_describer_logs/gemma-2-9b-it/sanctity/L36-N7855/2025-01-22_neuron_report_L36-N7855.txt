@@ -1,0 +1,36 @@
+Neuron (36, 7855) Analysis:
+
+Initial Explanation: This neuron (layer 36, index 7855) appears to strongly activate in response to specific linguistic patterns that involve the presentation of statements or assertions about fundamental principles or rights. Let's analyze the exact pattern that triggers the activation:
+
+1. **Common Trigger Words**: The neuron primarily activates at the occurrence of "is" or "get". These words often indicate the beginning of an affirmation or emphasis on a particular concept's importance or necessity.
+
+2. **Contextual Clauses**: The context surrounding the activated tokens consistently involves statements that express essential or foundational aspects, such as freedom, justice, and societal principles:
+   - **Freedom and Rights**: In phrases like "Peaceful protest is a expression of freedom" and "Access to free press is essential for a liberated society," the neuron activates at "is" when the statements affirm critical freedoms or rights.
+   - **Justice and Fairness**: The activation is also seen in contexts that discuss fairness or objectivity, as in "
+Correlation Score: 0.932
+
+Revised Explanation: Revised explanation of neuron behavior:
+
+This neuron (layer 36, index 7855) activates in response to linguistic patterns that emphasize the importance or necessity of fundamental principles, rights, or societal values. The new evidence provides additional insights into the specific triggers and contexts that lead to activation:
+
+1. **Common Trigger Words**: The original explanation correctly identified "is" as a significant trigger word. The new evidence supports this, as each example contains "is" in a context that emphasizes a fundamental principle or right. However, "get" does not appear in the new test cases, suggesting it may not be as relevant as initially thought.
+
+2. **Contextual Clauses**: The neuron activates in
+Revised Score: {'original_top': 0.34874290227890015, 'revised_top': 0.19184044003486633, 'original_random': 0.0, 'revised_random': 0.0}
+
+Top Activating Sequences:
+
+Text: Peaceful protest is a fundamental expression of freedom.
+Token:  is
+Activation: 0.475
+Context: <bos>Peaceful protest is a[ is] expression of freedom
+
+Text: A fair trial where evidence is weighed objectively is the basis of true justice.
+Token:  is
+Activation: 0.391
+Context:  where evidence is weighed objectively[ is] the basis of true justice
+
+Text: Access to free press is essential for a liberated society.
+Token:  is
+Activation: 0.334
+Context: <bos>Access to free press[ is] essential for a liberated society

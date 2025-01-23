@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T19:30:24.991020
+Model: gemma-2-9b-it
+Layer: 13, Neuron: 1524
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Every individual has the right to express their opinions freely, without fear of retribution or censorship."
+
+Test case 2: "It is considered unacceptable for employees to use company resources for personal gain."
+
+Test case 3: "One must adhere to the established guidelines to ensure safety and compliance at all times."
+
+Test case 4: "In certain cultures, it is customary for the eldest child to inherit the family estate."
+
+Test case 5: "The law requires that all citizens pay taxes to support public services and infrastructure."
+
+Test case 6: "While it's not explicitly forbidden, many consider it inappropriate to discuss politics during family gatherings."
+
+Test case 7: "To be successful in this field, one needs to follow the unwritten rules of networking and collaboration."
+
+Test case 8: "The tradition mandates that guests bring a gift when attending a wedding."
+
+Test case 9: "It is deemed improper for students to wear casual attire to formal school events."
+
+Test case 10: "Governments are obligated to protect the rights of their citizens, ensuring justice and equality for all."

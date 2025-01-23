@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:42:54.044820
+Model: gemma-2-9b-it
+Layer: 32, Neuron: 12953
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 32, index 12953) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  to	Activation: 10.0	Context:  air traffic controllers’ instructions to maintain flight safety.
+
+Token:  than	Activation: 10.0	Context:  disagreements within the family rather than walking away shows commitment.
+
+Token:  to	Activation: 10.0	Context: <bos>Society should limit surveillance to protect individual privacy.
+
+Token:  areas	Activation: 10.0	Context: Maintaining cleanliness in food preparation areas honors the sanctity of nourishment
+
+Token:  to	Activation: 10.0	Context: Military orders must be followed to ensure a cohesive chain of
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

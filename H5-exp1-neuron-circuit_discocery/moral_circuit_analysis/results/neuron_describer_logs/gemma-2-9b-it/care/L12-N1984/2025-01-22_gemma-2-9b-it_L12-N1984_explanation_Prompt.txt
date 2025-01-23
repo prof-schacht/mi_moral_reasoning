@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T09:51:17.219568
+Model: gemma-2-9b-it
+Layer: 12, Neuron: 1984
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 12, index 1984) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  be	Activation: 10.0	Context: <bos>People must be held be for breaking promises
+
+Token:  order	Activation: 10.0	Context:  a sense of continuity and order.
+
+Token:  discipline	Activation: 10.0	Context:  of command is crucial for discipline.
+
+Token:  if	Activation: 10.0	Context: Freedom to quit a job if working conditions are poor is
+
+Token:  giving	Activation: 10.0	Context: cuing neglected pets and giving them care demonstrates moral empathy
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T21:59:16.413432
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 5746
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 23, index 5746) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  express	Activation: 10.0	Context:  a blessing before meals can express gratitude and sanctify nourishment
+
+Token:  based	Activation: 10.0	Context:  to compete for a job based on merit.
+
+Token:  reflect	Activation: 10.0	Context:  vegetarian or vegan lifestyle can reflect a commitment to purity.
+
+Token:  sites	Activation: 10.0	Context: <bos>Preserving ancient burial sites keeps ancestral heritage intact.
+
+Token:  uph	Activation: 10.0	Context: , reflective spaces in hospitals upholds the sanctity of healing
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

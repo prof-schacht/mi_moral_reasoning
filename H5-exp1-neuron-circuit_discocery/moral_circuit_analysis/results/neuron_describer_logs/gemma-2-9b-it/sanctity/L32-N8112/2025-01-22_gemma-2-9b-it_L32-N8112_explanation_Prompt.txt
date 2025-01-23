@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:38:30.058405
+Model: gemma-2-9b-it
+Layer: 32, Neuron: 8112
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 32, index 8112) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  of	Activation: 10.0	Context: ranking officials is a sign of respect in some cultures.
+
+Token:  shows	Activation: 10.0	Context:  profanity in sacred spaces shows cultural respect.
+
+Token:  rever	Activation: 10.0	Context: <bos>Speaking reverently of rever veterans honors
+
+Token: olds	Activation: 10.0	Context:  by their traditional titles upholds cultural respect.
+
+Token:  shows	Activation: 10.0	Context: Dressing formally at official ceremonies shows respect for the established protocol
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

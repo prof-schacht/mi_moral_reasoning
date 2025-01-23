@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T22:07:41.121444
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 10673
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "For your safety, avoid walking in the construction area without wearing a helmet."
+
+Test case 2: "In planning your trip, consider the restrictions on liquids in your carry-on luggage."
+
+Test case 3: "Use the following guidelines for your project submission: ensure all files are in PDF format."
+
+Test case 4: "Your success in this course depends on adhering to deadlines and participating actively in discussions."
+
+Test case 5: "To enhance your learning experience, engage in activities that encourage critical thinking and creativity."
+
+Test case 6: "The benefits of exercise include maintaining your cardiovascular health and increasing your stamina over time."
+
+Test case 7: "When crafting your resume, focus on highlighting your achievements in relevant fields."
+
+Test case 8: "In the event of an emergency, follow the instructions provided by your safety officer."
+
+Test case 9: "Your participation in this event requires compliance with the established code of conduct."
+
+Test case 10: "For achieving optimal results, integrate regular feedback into your process and adjust your strategies accordingly."

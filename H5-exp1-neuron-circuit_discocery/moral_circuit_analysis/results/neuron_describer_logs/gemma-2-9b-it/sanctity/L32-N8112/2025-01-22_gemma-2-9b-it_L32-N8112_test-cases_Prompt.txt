@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T23:38:38.072567
+Model: gemma-2-9b-it
+Layer: 32, Neuron: 8112
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron seems to activate in contexts related to expressions of respect, deference, or honor within a social or cultural framework. Let's delve into the specifics based on the examples provided:
+
+1. **Token Patterns**: The activation predominantly occurs at tokens that are indicative of verbs or nouns related to the act of showing respect, or maintaining traditional or formal practices ("of", "shows", "rever", "olds"). These words aren't inherently linked by their grammatical category, but by their function in the context—tying them to the theme of respect or reverence.
+
+2. **Contextual Cues**: The surrounding context of each activation spotlights themes of honoring cultural practices or following traditional protocols. For instance, activating around phrases like "ranking officials", "profanity in sacred spaces", "veterans honors", and "traditional titles" signifies a focus on hierarchical respect and cultural norms.
+
+3. **Consistent Themes**: The common thread across these examples is the notion of respect or"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

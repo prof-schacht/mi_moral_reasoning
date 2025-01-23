@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T20:13:41.603763
+Model: gemma-2-9b-it
+Layer: 17, Neuron: 6581
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The community was urged to heed the warnings issued by the health department to prevent the spread of the virus."
+
+Test case 2: "Following the safety protocols in the laboratory is crucial to ensure everyone's protection and prevent accidents."
+
+Test case 3: "He chose to donate his bone marrow, knowing it could potentially save lives and give hope to many families."
+
+Test case 4: "The teacher emphasized the importance of truthfulness and instructed her students to always speak honestly."
+
+Test case 5: "In a life-threatening situation, it's vital to follow the emergency instructions provided by the crew members."
+
+Test case 6: "Listening to the advice of experienced professionals and adhering to their guidance can lead to better outcomes."
+
+Test case 7: "The importance of wearing helmets while biking cannot be overstated; it is a simple precaution that saves lives."
+
+Test case 8: "The manual explicitly states to follow each step precisely to ensure the equipment operates correctly and safely."
+
+Test case 9: "She believed in the necessity of truthfulness in journalism, adhering to the ethical guidelines set by the association."
+
+Test case 10: "He was reminded to respect the customs and follow the cultural practices when visiting the sacred site, as a sign of respect and adherence to tradition."

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T10:34:34.391939
+Model: gemma-2-9b-it
+Layer: 39, Neuron: 5546
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 39, index 5546) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  water	Activation: 10.0	Context:  free access to safe drinking water is a moral priority.
+
+Token:  election	Activation: 10.0	Context: <bos>Votes in a democratic election must be counted accurately and
+
+Token: ize	Activation: 10.0	Context:  workers the right to unionize protects their freedom in the
+
+Token:  body	Activation: 10.0	Context:  of one’s own body through healthy practices is virtuous
+
+Token:  right	Activation: 10.0	Context:  personal preferences is a fundamental right.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

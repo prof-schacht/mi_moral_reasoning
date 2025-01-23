@@ -41,7 +41,8 @@ class ImprovedNeuronEvaluator:
         batch_size: int = 32,
         activation_quantile: float = 0.9996,
         api_key: Optional[str] = None,
-        log_dir: str = "logs/prompts"
+        log_dir: str = "logs/prompts",
+        dimension: str = None
     ):
         """Initialize the neuron evaluator.
         
@@ -61,9 +62,10 @@ class ImprovedNeuronEvaluator:
         self.activation_quantile = activation_quantile
         self.client = openai.OpenAI(api_key=api_key)
         self.log_dir = log_dir
-        
+        self.dimension = dimension
         # Create log directory if it doesn't exist
-        os.makedirs(self.log_dir, exist_ok=True)
+        
+        os.makedirs(os.path.join(self.log_dir, self.dimension), exist_ok=True)
         
         # Add tracking of max activation per neuron
         self.neuron_max_activations = {}
@@ -84,13 +86,14 @@ class ImprovedNeuronEvaluator:
             kind: Type of prompt (e.g., 'explanation', 'simulation', 'test-cases', 'revision')
         """
         folder_model = self.model.cfg.model_name.replace('/', '-').replace('.', '-')
+        folder_dimension = self.dimension
         folder_neuron = f"L{layer}-N{neuron_idx}"
-        os.makedirs(os.path.join(self.log_dir, folder_model, folder_neuron), exist_ok=True)
+        os.makedirs(os.path.join(self.log_dir, folder_model, folder_dimension, folder_neuron), exist_ok=True)
         
         try:
             timestamp = datetime.now().strftime("%Y-%m-%d")
             filename = f"{timestamp}_{folder_model}_L{layer}-N{neuron_idx}_{kind}_Prompt.txt"
-            filepath = os.path.join(self.log_dir, folder_model, folder_neuron, filename)
+            filepath = os.path.join(self.log_dir, folder_model, folder_dimension, folder_neuron, filename)
             
             with open(filepath, 'w') as f:
                 f.write(f"Timestamp: {datetime.now().isoformat()}\n")
@@ -105,12 +108,13 @@ class ImprovedNeuronEvaluator:
     def _log_response(self, response: str, layer: int, neuron_idx: int, kind: str) -> None:
         """Log a response to a file."""
         folder_model = self.model.cfg.model_name.replace('/', '-').replace('.', '-')
+        folder_dimension = self.dimension
         folder_neuron = f"L{layer}-N{neuron_idx}"
-        os.makedirs(os.path.join(self.log_dir, folder_model, folder_neuron), exist_ok=True)
+        os.makedirs(os.path.join(self.log_dir, folder_model, folder_dimension, folder_neuron), exist_ok=True)
         try:
             timestamp = datetime.now().strftime("%Y-%m-%d")
             filename = f"{timestamp}_{folder_model}_L{layer}-N{neuron_idx}_{kind}_Response.txt"
-            filepath = os.path.join(self.log_dir, folder_model, folder_neuron, filename)
+            filepath = os.path.join(self.log_dir, folder_model, folder_dimension, folder_neuron, filename)
             with open(filepath, "w") as f:
                 f.write(f"Timestamp: {datetime.now().isoformat()}\n")
                 f.write(f"Model: {self.model.cfg.model_name}\n")
@@ -266,7 +270,8 @@ class ImprovedNeuronEvaluator:
         neuron_idx: int,
         texts: List[str],
         random_texts: Optional[List[str]] = None,
-        revise: bool = True
+        revise: bool = True,
+        dimension: str = None
     ) -> ExplanationResult:
         """Enhanced evaluation with both top-and-random and random-only scoring."""
         neuron_id = (layer, neuron_idx)
@@ -334,9 +339,9 @@ class ImprovedNeuronEvaluator:
         )
         
         model_name = self.model.cfg.model_name.replace('/', '-').replace('.', '-')
-        report = NeuronReport(result)
+        report = NeuronReport(result, self.dimension)
         
-        report.save_report(os.path.join(self.log_dir, model_name), layer, neuron_idx)
+        report.save_report(os.path.join(self.log_dir, model_name, self.dimension), layer, neuron_idx)
         
         return result
 
@@ -1015,8 +1020,9 @@ class ImprovedNeuronEvaluator:
             }
             
 class NeuronReport:
-    def __init__(self, result: ExplanationResult ):
+    def __init__(self, result: ExplanationResult, dimension: str):
         self.result = result
+        self.dimension = dimension
 
     def generate_report(self):
         print(f"Neuron {self.result.neuron_id} Analysis:")

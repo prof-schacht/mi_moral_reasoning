@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:26:58.824444
+Model: gemma-2-9b-it
+Layer: 30, Neuron: 10170
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 30, index 10170) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  to	Activation: 10.0	Context: Military orders must be followed to ensure a cohesive chain of
+
+Token:  through	Activation: 10.0	Context: Supporting your childhood sports team through losing seasons demonstrates steadfastness
+
+Token:  even	Activation: 10.0	Context:  your group’s ideals even when others disparage them
+
+Token: .	Activation: 10.0	Context:  cleanliness is a moral obligation.
+
+Token: .	Activation: 10.0	Context:  monuments maintains their cultural sanctity.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

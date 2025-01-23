@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T21:22:17.878977
+Model: gemma-2-9b-it
+Layer: 21, Neuron: 8172
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 21, index 8172) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  loyalty	Activation: 10.0	Context:  for years demonstrates honor and loyalty.
+
+Token:  smaller	Activation: 10.0	Context:  just as important as punishing smaller offenses.
+
+Token:  objectively	Activation: 10.0	Context:  trial where evidence is weighed objectively is the basis of true
+
+Token:  contracts	Activation: 10.0	Context:  accountable for breaking promises or contracts.
+
+Token:  respecting	Activation: 10.0	Context: <bos>Upholding and respecting traditional forms of address for
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

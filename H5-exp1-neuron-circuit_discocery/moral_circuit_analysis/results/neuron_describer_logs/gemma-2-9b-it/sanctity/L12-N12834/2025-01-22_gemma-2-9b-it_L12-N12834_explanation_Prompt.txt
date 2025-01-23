@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:27:40.066926
+Model: gemma-2-9b-it
+Layer: 12, Neuron: 12834
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 12, index 12834) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  one	Activation: 10.0	Context:  and cleanliness shows respect for one’s body.
+
+Token: .	Activation: 10.0	Context:  HR to maintain organizational order.
+
+Token:  able	Activation: 10.0	Context: <bos>Individuals should be able able choose their own diet
+
+Token:  the	Activation: 10.0	Context: <bos>Individuals should have the the to make personal choices
+
+Token: .	Activation: 10.0	Context:  objectively, without favoritism.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

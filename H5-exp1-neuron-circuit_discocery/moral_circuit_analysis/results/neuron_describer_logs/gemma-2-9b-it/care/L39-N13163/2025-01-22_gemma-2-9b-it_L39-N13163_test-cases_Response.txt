@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T10:36:00.017522
+Model: gemma-2-9b-it
+Layer: 39, Neuron: 13163
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "She voluntarily chose to adhere to the new community guidelines, showing a deep respect for the established norms."
+
+Test case 2: "Despite the option to refrain, he voluntarily submitted his feedback to improve the team's process."
+
+Test case 3: "Her adherence to the code of conduct was not just obligatory but a voluntary choice that reflected her respect for the institution."
+
+Test case 4: "The voluntary submission of the report was seen as a sign of reverence for the committee's authority."
+
+Test case 5: "He refrained from making any remarks that could be seen as disrespectful, adhering to the unwritten rules of the gathering."
+
+Test case 6: "Though not required, she decided to voluntarily help organize the event, demonstrating her commitment to the group's mission."
+
+Test case 7: "The student adhered to the guidelines meticulously, out of a voluntary desire to maintain order."
+
+Test case 8: "By refraining from interrupting, he showed a voluntary submission to the speaker's authority."
+
+Test case 9: "In a surprising move, he voluntarily adhered to the new policy, despite his initial objections."
+
+Test case 10: "Her voluntary choice to refrain from speaking during the meeting was a testament to her respect for the host's leadership."

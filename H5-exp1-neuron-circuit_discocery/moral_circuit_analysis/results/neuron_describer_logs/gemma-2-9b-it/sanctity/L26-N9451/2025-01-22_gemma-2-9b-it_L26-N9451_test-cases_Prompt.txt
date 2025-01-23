@@ -1,0 +1,31 @@
+Timestamp: 2025-01-22T22:54:18.232991
+Model: gemma-2-9b-it
+Layer: 26, Neuron: 9451
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "Based on the given examples, the neuron in layer 26, index 9451 appears to respond to a linguistic pattern associated with concepts of fairness, longevity, and caretaking, often related to social or communal contexts. Here is a detailed analysis of the activations:
+
+1. **Linguistic and Semantic Patterns:**
+    - The neuron activates strongly for tokens such as "for," "fair," "lasting," "fosters," and "and." These words are often part of a broader narrative or description that conveys ideas of equity, sustainability, and nurturing within a social context.
+    
+2. **Contextual Connections:**
+    - **"for" in "be counted accurately and fairly for each candidate":** This context focuses on fairness and accuracy in counting votes, which aligns with ideas of justice and equality.
+    - **"fair" in "participants in a game ensures fair competition":** This directly references fairness in competition, a straightforward activation around concepts of equity and even-handedness"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

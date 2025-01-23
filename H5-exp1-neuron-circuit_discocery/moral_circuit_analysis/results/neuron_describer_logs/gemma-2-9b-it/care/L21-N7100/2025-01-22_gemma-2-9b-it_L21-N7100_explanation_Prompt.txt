@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T10:08:46.320723
+Model: gemma-2-9b-it
+Layer: 21, Neuron: 7100
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 21, index 7100) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  no	Activation: 10.0	Context:  under the same laws, no matter their social standing.
+
+Token:  to	Activation: 10.0	Context: Extending the same courtesy to individuals from all social ranks
+
+Token:  sense	Activation: 10.0	Context:  rest and reflection fosters a sense of holiness.
+
+Token:  sense	Activation: 10.0	Context:  across generations strengthens a shared sense of identity.
+
+Token:  that	Activation: 10.0	Context: <bos>Creating inclusive playgrounds ensures that children with disabilities can play
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T00:43:06.339790
+Model: gemma-2-9b-it
+Layer: 41, Neuron: 11298
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "In many cultures, bowing is a sign of respect and acknowledgment of the other's status or wisdom."
+
+Test case 2: "The students showed great respect towards their teacher, who had dedicated her life to their education."
+
+Test case 3: "He knelt before the altar, a gesture of respect and deep reverence to the sacred."
+
+Test case 4: "Acknowledging the sanctity of the place, visitors were expected to remove their shoes as a sign of respect."
+
+Test case 5: "Despite their disagreements, she maintained a respectful tone in her letters, showing deference to his authority."
+
+Test case 6: "The soldier saluted the flag, a traditional act of respect and loyalty to one's country."
+
+Test case 7: "Bowing to peer pressure, he reluctantly agreed, but the context lacked genuine respect."
+
+Test case 8: "The company has a policy of respecting all employees, regardless of rank or position."
+
+Test case 9: "His compliance was not out of respect, but rather a strategic move to win favor."
+
+Test case 10: "She bowed her head, not in deference, but in contemplation, reflecting on her next steps."

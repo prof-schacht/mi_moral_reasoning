@@ -1,0 +1,33 @@
+Timestamp: 2025-01-23T00:01:27.806122
+Model: gemma-2-9b-it
+Layer: 36, Neuron: 11777
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 36, index 11777) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  just	Activation: 10.0	Context:  fraud among the wealthy is just as important as punishing smaller
+
+Token:  just	Activation: 10.0	Context:  member's contribution is just.
+
+Token:  for	Activation: 10.0	Context:  hygiene and cleanliness shows respect for one’s body.
+
+Token:  the	Activation: 10.0	Context:  hardships with fellow soldiers in the military builds unbreakable bonds
+
+Token:  to	Activation: 10.0	Context:  some religions reflects a commitment to purity.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

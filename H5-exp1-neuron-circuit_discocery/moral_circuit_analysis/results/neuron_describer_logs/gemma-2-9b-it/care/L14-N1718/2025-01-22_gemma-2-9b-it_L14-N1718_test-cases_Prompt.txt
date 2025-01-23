@@ -1,0 +1,36 @@
+Timestamp: 2025-01-22T09:54:32.777043
+Model: gemma-2-9b-it
+Layer: 14, Neuron: 1718
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron (layer 14, index 1718) responds to specific patterns that involve punctuation or non-standard token sequences, often in contexts where a transition or separation is implicitly indicated. Let's break down the activation triggers:
+
+1. **Token: "of"**  
+   - **Context:** "Members of a committee of each have"
+   - **Pattern Detected:** The word "of" is often used to connect nouns or indicate possession, which could signal a transition or a boundary between ideas or entities.
+
+2. **Token: "’"**  
+   - **Context:** "work, even if they’re tough, shows commitment"
+   - **Pattern Detected:** The apostrophe is frequently used in contractions or possessives, acting as a delimiter between words or phrases, thereby indicating a linguistic boundary or transition.
+
+3. **Token: "silence"**  
+   - **Context:** "Maintaining a respectful silence silence sacred or solemn spaces"
+   - **Pattern Detected"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

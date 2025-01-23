@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T10:05:48.629036
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 8658
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The principle of justice and equality should guide our actions in society."
+
+Test case 2: "His decision to donate to charity reflects a deep-seated respect for humanity."
+
+Test case 3: "She believed in the virtue of kindness and compassion, often helping those in need."
+
+Test case 4: "Everyone should have the right to speak freely and express their beliefs without fear."
+
+Test case 5: "It is crucial to uphold honesty and transparency in all business dealings."
+
+Test case 6: "While he claimed to act with integrity, his actions showed otherwise, leading to a moral quandary."
+
+Test case 7: "The debate centered around the ethics of using artificial intelligence in surveillance."
+
+Test case 8: "The law must balance freedom of expression with the protection of individual rights."
+
+Test case 9: "His actions demonstrated a commitment to environmental sustainability and social responsibility."
+
+Test case 10: "She questioned whether their approach was truly equitable or merely convenient for the majority."

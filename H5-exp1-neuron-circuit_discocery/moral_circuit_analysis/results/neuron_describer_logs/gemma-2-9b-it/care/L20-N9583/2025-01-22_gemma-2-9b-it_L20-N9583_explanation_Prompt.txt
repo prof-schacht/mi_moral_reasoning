@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T10:07:41.172476
+Model: gemma-2-9b-it
+Layer: 20, Neuron: 9583
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 20, index 9583) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  independence	Activation: 10.0	Context: <bos>Financial independence from state independence allows individuals
+
+Token: oring	Activation: 10.0	Context: <bos>Honoring return policiesoring all customers
+
+Token: oring	Activation: 10.0	Context: <bos>Honoring one’oring homeland in
+
+Token: oring	Activation: 10.0	Context: <bos>Honoring sacred riversoring keeping them
+
+Token: ph	Activation: 10.0	Context: <bos>Upholding traditionsph down through
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

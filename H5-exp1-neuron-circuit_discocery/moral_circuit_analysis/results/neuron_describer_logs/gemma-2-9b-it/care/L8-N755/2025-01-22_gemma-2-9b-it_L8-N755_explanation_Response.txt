@@ -1,0 +1,16 @@
+Timestamp: 2025-01-22T09:48:10.834333
+Model: gemma-2-9b-it
+Layer: 8, Neuron: 755
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+This neuron (layer 8, index 755) appears to be primarily responsive to tokens that are directly involved in expressions of trust, respect, or compassion in interpersonal or ethical contexts. Let's break down the pattern based on the examples provided:
+
+1. **Token Patterns**: 
+   - The neuron activates on words like "is," "partners," "religious," and "listening," suggesting a sensitivity to tokens that relate to relationships or behavior between people, especially in a respectful or ethical way.
+
+2. **Contextual Analysis**:
+   - **"is" in "charities that feed hungry children is a compassionate act"**: Here, the neuron recognizes the completion of a phrase that describes an action as compassionate, emphasizing moral goodness.
+   - **"partners" in "Treating business partners fairly"**: The neuron activates on the notion of fairness in partnerships, which is a cornerstone of ethical interactions in business relationships.
+   - **"religious" in "Treating

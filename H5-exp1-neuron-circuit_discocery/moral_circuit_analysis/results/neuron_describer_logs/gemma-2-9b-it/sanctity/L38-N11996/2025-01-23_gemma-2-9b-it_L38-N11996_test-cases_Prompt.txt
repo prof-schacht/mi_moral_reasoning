@@ -1,0 +1,32 @@
+Timestamp: 2025-01-23T00:20:01.308608
+Model: gemma-2-9b-it
+Layer: 38, Neuron: 11996
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in layer 38, index 11996, appears to be responsive to linguistic patterns that emphasize the preservation, enhancement, or facilitation of valued concepts, often within a context of respect, support, or empowerment. Let's break down the contextual activations:
+
+1. **Token: "for"** - Activation within the phrase "championed for years," suggests a focus on enduring commitment and advocacy, particularly highlighting the positive connotation of loyalty and honor associated with sustained support.
+
+2. **Token: "down"** - Occurring within "passed down through generations," this indicates a pattern where the transmission of traditions or values across time is accentuated, underlining respect for cultural or familial identity.
+
+3. **Token: "more"** - In the phrase "fosters a more humane work environment," "more" modifies the degree of humanity in a given situation, highlighting an emphasis on enhancing positive environmental qualities through supportive actions.
+
+4. **Token: "can"** (tw"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

@@ -1,0 +1,28 @@
+Timestamp: 2025-01-22T19:29:21.205674
+Model: gemma-2-9b-it
+Layer: 12, Neuron: 13777
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The committee's decision was guided by principles of fairness, ensuring every voice was heard equally."
+
+Test case 2: "In the military, adherence to strict discipline is paramount for maintaining order and effectiveness."
+
+Test case 3: "To create a truly inclusive environment, all members must feel respected and valued."
+
+Test case 4: "During the ceremony, silence is maintained to show respect for the solemnity of the occasion."
+
+Test case 5: "Freedom of speech is essential in a truly autonomous society, where diverse opinions can be expressed."
+
+Test case 6: "The teacher emphasized the importance of autonomy in learning, allowing students to explore topics of personal interest."
+
+Test case 7: "Despite the informal setting, she insisted on maintaining a respectful tone in all interactions."
+
+Test case 8: "The project's success lies in the fair distribution of resources, ensuring no team member is overlooked."
+
+Test case 9: "A truly democratic process involves transparent decision-making and accountability at every level."
+
+Test case 10: "His leadership style focused on empowering individuals, fostering a culture of mutual respect and collaboration."
+
+These examples are designed to cover a wide range of scenarios, from typical uses of formal language and principles to more nuanced or ambiguous situations that test the neuron's sensitivity to context and variation.

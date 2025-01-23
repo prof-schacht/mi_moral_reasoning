@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:21:57.723293
+Model: gemma-2-9b-it
+Layer: 12, Neuron: 8217
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 12, index 8217) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  innovative	Activation: 10.0	Context:  free to create and market innovative products without excessive restrictions.
+
+Token:  controversial	Activation: 10.0	Context: Allowing open debate on controversial topics fosters a truly free
+
+Token:  evidence	Activation: 10.0	Context: <bos>A fair trial where evidence is weighed objectively is the
+
+Token:  for	Activation: 10.0	Context:  cause you’ve championed for years demonstrates honor and loyalty
+
+Token:  in	Activation: 10.0	Context:  your company’s stance in a crisis demonstrates team loyalty
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

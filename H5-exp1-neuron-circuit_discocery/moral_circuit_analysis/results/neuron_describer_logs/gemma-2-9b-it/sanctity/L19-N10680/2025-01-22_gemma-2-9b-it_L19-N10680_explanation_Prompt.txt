@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T20:55:25.199074
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 10680
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 19, index 10680) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  leave	Activation: 10.0	Context:  be free to join or leave any political party without repercussions
+
+Token:  the	Activation: 10.0	Context:  in food preparation areas honors the sanctity of nourishment.
+
+Token:  and	Activation: 10.0	Context:  a sacred day for rest and reflection fosters a sense of
+
+Token:  groups	Activation: 10.0	Context:  to form their own community groups affirms local autonomy.
+
+Token:  and	Activation: 10.0	Context:  burial grounds honors human dignity and sanctity.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T21:19:14.868952
+Model: gemma-2-9b-it
+Layer: 21, Neuron: 3688
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "During the emergency, the city officials emphasized the importance of adhering to established protocols to ensure public safety and order."
+
+Test case 2: "The success of the mission hinged on the team's strict compliance with the disaster response procedures outlined by the authorities."
+
+Test case 3: "By avoiding unnecessary risks and following the crisis management guidelines, the organization was able to maintain its operational integrity."
+
+Test case 4: "The conference discussed how adherence to international protocols could prevent future crises and maintain global stability."
+
+Test case 5: "After the hurricane, the community prioritized structured recovery efforts by aligning closely with governmental disaster relief protocols."
+
+Test case 6: "The CEO's decision to deviate from traditional business protocols was controversial, as it challenged established authority and risked project failure."
+
+Test case 7: "Despite the chaotic situation, the team's strategic response, which involved bypassing certain protocols, was praised for its effectiveness."
+
+Test case 8: "Citizens were urged to comply with health guidelines issued by medical authorities to avoid the spread of the disease."
+
+Test case 9: "The debate centered on whether rigid adherence to corporate protocols stifles innovation or ensures sustainable growth."
+
+Test case 10: "In a surprising turn, the new manager encouraged employees to question existing protocols to foster a more dynamic response to challenges."

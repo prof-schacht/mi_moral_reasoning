@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:56:14.356146
+Model: gemma-2-9b-it
+Layer: 15, Neuron: 4969
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 15, index 4969) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  personal	Activation: 10.0	Context: <bos>Risking personal safety personal safeguard a longtime
+
+Token: term	Activation: 10.0	Context:  supported, despite short-term setbacks, expresses loyalty.
+
+Token:  others	Activation: 10.0	Context: ’s ideals even when others disparage them is loyal
+
+Token:  inconvenient	Activation: 10.0	Context:  even when it’s inconvenient shows devotion.
+
+Token:  bribes	Activation: 10.0	Context: <bos>Refusing to take bribes upholds the principle of
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

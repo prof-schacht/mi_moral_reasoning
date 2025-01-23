@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T19:49:19.083135
+Model: gemma-2-9b-it
+Layer: 14, Neuron: 11079
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in question (layer 14, index 11079) seems to respond to contexts where a sense of inclusivity, collective action, or involvement is implied. Here's a detailed breakdown:
+
+1. **Inclusivity and Collaboration**: 
+   - Tokens like "extensive" in the context "Traveling abroad without extensive extensive hurdles is a right" and "walking" in "within the family rather than walking away shows commitment" suggest an environment or scenario in which involvement, participation, or collaboration is highlighted. The choice of words often pertains to comprehensive actions or inclusive processes.
+   
+2. **Conditional and Possessive Constructs**:
+    - The token "have" in "public condemnation, unless they have done real harm, is" appears in a conditional sentence, indicating an inclusive condition under which a state or collective understanding exists. Similarly, the use of the possessive "’" in "a group project ensures everyone’s effort is recognized" highlights group involvement and collective recognition of efforts"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T00:30:05.044281
+Model: gemma-2-9b-it
+Layer: 40, Neuron: 2898
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "We must address bullying in schools before it escalates any further."
+
+Test case 2: "The protest against discrimination drew thousands who demanded equality and justice."
+
+Test case 3: "When you witness harassment, it's important to intervene and report it."
+
+Test case 4: "The ceremony celebrated those who stood against societal injustices."
+
+Test case 5: "Sometimes, it is the subtle forms of discrimination that go unnoticed but need addressing."
+
+Test case 6: "He silently watched as the bullying continued, unsure of what to do."
+
+Test case 7: "The team's research focuses on the societal impacts of climate change, highlighting the need for action."
+
+Test case 8: "A ceremony was held to honor the activists who tirelessly worked to end discrimination."
+
+Test case 9: "It can be challenging to detect microaggressions, yet they contribute to a larger issue."
+
+Test case 10: "Despite the festive atmosphere, the protest served as a stark reminder of ongoing societal issues."

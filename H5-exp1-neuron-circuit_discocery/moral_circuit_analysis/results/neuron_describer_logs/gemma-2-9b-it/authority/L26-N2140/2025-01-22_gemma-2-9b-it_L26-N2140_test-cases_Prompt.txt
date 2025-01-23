@@ -1,0 +1,34 @@
+Timestamp: 2025-01-22T18:31:07.392367
+Model: gemma-2-9b-it
+Layer: 26, Neuron: 2140
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "Based on the examples provided, neuron 2140 in layer 26 appears to activate in response to words related to fairness, justice, equality, and bridging connections or gaps, often in socio-political or relational contexts. Let’s break down the activations:
+
+1. **Fairness and Equality**: 
+   - The word "they" activates strongly in a context where it refers to someone being unfairly criticized. This suggests the neuron's sensitivity to fairness and equitable treatment of individuals.
+   - "Each" in the phrase "counted accurately and fairly for each candidate" further emphasizes the neuron's interest in fairness and equal treatment, specifically in counting or distribution contexts.
+
+2. **Resolution and Connection**:
+   - "Bridges" is used metaphorically here to describe mending estranged relationships, indicating the neuron's responsiveness to themes of reconciliation and healing divides.
+
+3. **Oppression and Justice**:
+   - The words "oppressed" and "oppressive" are used in"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

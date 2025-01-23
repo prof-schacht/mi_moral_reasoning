@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T09:53:23.736879
+Model: gemma-2-9b-it
+Layer: 14, Neuron: 303
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 14, index 303) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: ,	Activation: 10.0	Context:  present for local team matches, even in tough weather,
+
+Token:  friendly	Activation: 10.0	Context: Designing public spaces that are friendly to those with mental and
+
+Token:  and	Activation: 10.0	Context: <bos>Voluntary association and and of assembly underpin a
+
+Token:  one	Activation: 10.0	Context:  important; we should encourage one another to do so.
+
+Token:  equitable	Activation: 10.0	Context:  based on need is more equitable than hoarding wealth.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

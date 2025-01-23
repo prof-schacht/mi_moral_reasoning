@@ -1,0 +1,37 @@
+Timestamp: 2025-01-22T23:56:12.224152
+Model: gemma-2-9b-it
+Layer: 36, Neuron: 3522
+Prompt Type: revision
+
+=== PROMPT ===
+
+Original explanation of neuron behavior:
+    "The neuron in question (layer 36, index 3522) appears to activate in the presence of linguistic patterns related to phrases that emphasize values, standards, or desirable qualities within contexts describing behaviors, qualities, or actions that uphold societal or cultural norms.
+
+1. **Precise Activation Pattern**:
+   - The neuron seems to focus on tokens that function as part of phrases indicating actions or characteristics supporting positive or valued outcomes or states. Words like "long," "bodily," "shows," and "the" are not inherently meaningful on their own in these examples, but they serve as a part of a phrase, each carrying a connotation of fostering, upholding, or representing something greater or valued when considering the surrounding words.
+
+2. **Contextual Patterns**:
+   - The context primarily involves:
+     - Descriptive actions or conditions that maintain or foster something positive or culturally important (e.g., "long-term trust," "bodily sanctity," "cultural respect").
+     -"
+
+    New evidence from test cases:
+    Text: "The team's dedication to environmental sustainability demonstrates a commitment to preserving natural resources for future generations."
+Activation: 0.000
+Text: "Her relentless pursuit of academic excellence sets a standard for her peers, inspiring a culture of intellectual growth."
+Activation: 0.000
+Text: "The tradition of honoring elders in the community fosters intergenerational respect and wisdom-sharing."
+Activation: 0.000
+Text: "His integrity in business dealings is a testament to maintaining trust and credibility in the corporate world."
+Activation: 0.000
+Text: "Participating in the charity event shows a strong sense of social responsibility and community support."
+Activation: 0.000
+
+    Based on this new evidence, please provide a revised explanation of the neuron's behavior.
+    Consider:
+    1. Which aspects of the original explanation are supported by the new evidence?
+    2. Which aspects need to be modified or removed?
+    3. What new patterns or nuances are revealed by the test cases?
+
+    Provide a clear, specific explanation that accounts for both the original and new evidence.

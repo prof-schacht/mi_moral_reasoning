@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T21:35:47.682883
+Model: gemma-2-9b-it
+Layer: 22, Neuron: 6504
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "Based on the provided examples, neuron 6504 in layer 22 is detecting linguistic patterns associated with religiosity, sanctity, or reverence within a context. Let's break down the activation pattern:
+
+1. **Common Theme**: The neuron prominently activates on words like "sacred" and "affirms" within contexts relating to religious or culturally significant practices, emphasizing respect, sanctity, or reverence. This indicates a focus on language that imparts a sense of holiness or acknowledgment of something as spiritually significant.
+
+2. **Activation Triggers**:
+   - **"sacred"**: The neuron consistently activates strongly on this token (10.0 activation), indicating a direct connection to its semantic role. Each context involves respecting or preserving cultural or religious practices.
+   - **"affirms"**: This activation, also at the maximum strength of 10.0, is within a context of validating the importance or sacredness of spiritual relics, suggesting that the neuron"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

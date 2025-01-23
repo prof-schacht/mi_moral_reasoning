@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:26:23.434214
+Model: gemma-2-9b-it
+Layer: 12, Neuron: 11833
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 12, index 11833) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  purity	Activation: 10.0	Context: tions before religious ceremonies demonstrates purity of intention.
+
+Token:  certain	Activation: 10.0	Context:  in leadership roles have earned certain privileges through their position.
+
+Token:  purity	Activation: 10.0	Context:  newborn is a tradition signifying purity.
+
+Token:  purity	Activation: 10.0	Context:  upholds community standards of purity.
+
+Token:  purity	Activation: 10.0	Context:  substances—upholds purity.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:41:38.763185
+Model: gemma-2-9b-it
+Layer: 32, Neuron: 11117
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 32, index 11117) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  move	Activation: 10.0	Context: Individuals should be free to move and travel without unjust barriers
+
+Token:  friends	Activation: 10.0	Context: Keeping in touch with childhood friends demonstrates a lasting bond.
+
+Token:  mock	Activation: 10.0	Context: ending your community when outsiders mock it is a mark of
+
+Token:  resources	Activation: 10.0	Context: <bos>Distributing resources based resources need is more
+
+Token:  organs	Activation: 10.0	Context: <bos>Donating blood or organs to save lives is an
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

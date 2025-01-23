@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T21:35:40.354671
+Model: gemma-2-9b-it
+Layer: 22, Neuron: 6504
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 22, index 6504) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  sacred	Activation: 10.0	Context: Observing holy days or sacred times with solemn respect preserves
+
+Token:  affirms	Activation: 10.0	Context:  spiritual relics as precious items affirms their sanctity.
+
+Token:  sacred	Activation: 10.0	Context:  rituals properly respects cultural and sacred traditions.
+
+Token:  to	Activation: 10.0	Context:  some religions reflects a commitment to purity.
+
+Token:  sacred	Activation: 10.0	Context: <bos>Using respectful language around sacred topics is a sign of
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

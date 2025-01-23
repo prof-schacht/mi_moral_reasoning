@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T19:09:58.506024
+Model: gemma-2-9b-it
+Layer: 10, Neuron: 8226
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The new policy strictly prohibits smoking in public areas to uphold health and safety standards."
+
+Test case 2: "Teaching children the importance of honesty and fairness is crucial for their moral development."
+
+Test case 3: "The company enforces hygiene practices to maintain a clean and healthy work environment."
+
+Test case 4: "Volunteers must submit to a background check to ensure the safety of the community."
+
+Test case 5: "It's essential for leaders to demonstrate integrity and accountability in their actions."
+
+Test case 6: "The art exhibition challenges societal norms with its provocative themes, sparking a debate on free expression."
+
+Test case 7: "In ancient times, laws were often based on religious beliefs, dictating moral conduct and societal expectations."
+
+Test case 8: "A society that values empathy and kindness is more likely to foster cooperation and unity."
+
+Test case 9: "While honesty is a valued trait, there are situations where truth-telling can be complicated by context."
+
+Test case 10: "The novel explores the tension between personal desires and societal expectations, questioning what it means to live ethically."

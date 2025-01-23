@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:53:56.040487
+Model: gemma-2-9b-it
+Layer: 35, Neuron: 9342
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 35, index 9342) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  is	Activation: 10.0	Context:  a show of emotional support is crucial.
+
+Token:  is	Activation: 10.0	Context:  each member's contribution is just.
+
+Token:  is	Activation: 10.0	Context:  respectful language around sacred topics is a sign of reverence.
+
+Token: ,	Activation: 10.0	Context:  like graduations or weddings, is a mark of devotion
+
+Token: ness	Activation: 10.0	Context:  with reverence preserves their sacredness.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

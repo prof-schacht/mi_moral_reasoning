@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T20:44:26.296856
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 5400
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Helping a stranger in need without expecting anything in return reflects the core values of compassion and empathy."
+
+Test case 2: "The principle of fairness dictates that everyone should have equal access to opportunities, regardless of their background."
+
+Test case 3: "Lying to protect a friend's feelings challenges the moral principle of honesty, raising questions about the greater good."
+
+Test case 4: "In some cultures, the act of sharing food is a deeply ingrained value, symbolizing community and togetherness."
+
+Test case 5: "When making tough decisions, leaders often weigh the ethical implications to ensure they act with integrity."
+
+Test case 6: "The debate over whether animals have rights highlights the ongoing struggle to define moral boundaries in society."
+
+Test case 7: "He argued that the pursuit of justice should never compromise the fundamental rights of individuals."
+
+Test case 8: "Volunteering at local shelters not only supports the community but also reinforces the value of altruism."
+
+Test case 9: "The conversation about sustainable practices often revolves around our responsibility to future generations."
+
+Test case 10: "The notion that 'one should never judge others' is rooted in the value of understanding and acceptance."

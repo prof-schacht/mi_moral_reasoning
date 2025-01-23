@@ -1,0 +1,14 @@
+Timestamp: 2025-01-22T20:01:51.060462
+Model: gemma-2-9b-it
+Layer: 15, Neuron: 11132
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+This neuron (layer 15, index 11132) appears to have a specific activation pattern that is sensitive to concepts of duty, loyalty, and respect within structured social or hierarchical contexts. Here's a breakdown of its activation pattern based on the given examples:
+
+1. **Token: "they"** - Activation occurs in the context of "police officers in emergencies because they are trained to handle crises." The neuron likely responds to the idea of individuals fulfilling a professional or duty-bound role in society. The use of "they" here implies a collective responsibility or function tied to preparation and response.
+
+2. **Token: "of"** - In the context "harm, is a sign of loyalty," the word "of" connects the abstract concept (loyalty) with concrete expressions or actions (sign of loyalty). The activation suggests the neuron's sensitivity to the expression of fidelity or allegiance, particularly in abstract noun forms.
+
+3. **Token: "loyalty"** - The straightforward

@@ -1,0 +1,37 @@
+Timestamp: 2025-01-22T18:57:20.305929
+Model: gemma-2-9b-it
+Layer: 8, Neuron: 284
+Prompt Type: simulation
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "Revised explanation of neuron behavior:
+
+This neuron (layer 8, index 284) activates in response to concepts and contexts related to adherence to principles, structured authority, and disciplined efforts. The new evidence supports and refines the original explanation, highlighting specific patterns that trigger the neuron:
+
+1. **Principles and Foundational Documents**: The neuron strongly activates in contexts discussing foundational documents like the constitution, which emphasize principles such as the rule of law and democratic processes. This aligns with the neuron's sensitivity to themes of governance and structured authority (Activation: 4.000).
+
+2. **Structured Authority and Protocols**: The neuron responds to discussions of strategic planning within a corporate boardroom, where balancing innovation with core values and established protocols is emphasized. This suggests the neuron's sensitivity to structured decision-making and adherence to established guidelines (Activation: 3.000).
+
+3. **Reverence for Historical or Religious Texts**: The neuron's activation in the context of a monk studying ancient scriptures indicates a response to themes of reverence for historical or religious authority, consistent with the original explanation (Activation: 3.000).
+
+4. **Justice and Legal Principles**: The neuron's activation during a trial where the importance of upholding justice and legal principles is stressed further supports its association with structured authority and adherence to principles (Activation: 3.000).
+
+5. **Discipline and Structured Effort**: The highest activation occurs in the context of an athlete's commitment to"
+
+    For each of the following texts, predict the neuron's activation on a scale of 0-10,
+    where 0 means no activation and 10 means maximum activation.
+    Only provide numerical values prefixed with "Activation:".
+
+    
+Text 1: Seven trees rise behind the old library near a red bench.
+Activation: 
+Text 2: Those battered books perched awkwardly on wide shelves still hold no urgent secrets.
+Activation: 
+Text 3: Colorful lamps shine nightly beside narrow alleys in quaint squares.
+Activation: 
+Text 4: Beneath distant clouds, travelers linger casually without urgent tasks ahead.
+Activation: 
+Text 5: Whispers follow each comet drifting across the silent evening sky.
+Activation: 

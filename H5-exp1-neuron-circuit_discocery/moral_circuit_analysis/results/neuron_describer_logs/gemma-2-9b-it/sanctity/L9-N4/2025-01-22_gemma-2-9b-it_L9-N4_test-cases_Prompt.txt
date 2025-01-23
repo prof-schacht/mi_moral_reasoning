@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T19:01:26.156837
+Model: gemma-2-9b-it
+Layer: 9, Neuron: 4
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in question (layer 9, index 4) appears to respond to concepts associated with manners, decorum, and symbolic acts that carry societal value. It activates strongly in contexts where there are references to behaviors, conditions, or actions that are often considered expressions of cultural, social, or personal ideals.
+
+Here's a breakdown of the activating patterns:
+
+1. **Contextual Association with Societal Norms**: The neuron seems to activate in contexts where the token relates to actions or qualities that are upheld as standards or ideals by society. For example, "standing for the national anthem" and "maintaining cleanliness" refer to behaviors often associated with respect and community values.
+
+2. **Emotion and Reflection**: The presence of the token "emotional" in contexts like "emotional distress" suggests the neuron's sensitivity to emotional states that are tied to social response and support. The term indicates sensitivity, care, or empathy.
+
+3. **Purity and Cleanliness**: These"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

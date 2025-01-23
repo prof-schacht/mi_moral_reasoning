@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T21:17:51.799801
+Model: gemma-2-9b-it
+Layer: 21, Neuron: 2619
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 21, index 2619) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  allows	Activation: 10.0	Context: Financial independence from state control allows individuals more freedom.
+
+Token:  day	Activation: 10.0	Context: Dedicating a sacred day for rest and reflection fosters
+
+Token:  and	Activation: 10.0	Context:  burial grounds honors human dignity and sanctity.
+
+Token:  like	Activation: 10.0	Context: ’s important milestones, like graduations or weddings,
+
+Token:  from	Activation: 10.0	Context:  farm animals to protect them from slaughter is morally praiseworthy
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

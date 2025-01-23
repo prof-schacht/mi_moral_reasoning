@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:53:58.911471
+Model: gemma-2-9b-it
+Layer: 15, Neuron: 3171
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 15, index 3171) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  of	Activation: 10.0	Context:  protest is a fundamental expression of freedom.
+
+Token:  without	Activation: 10.0	Context:  to any region they desire without state interference.
+
+Token:  or	Activation: 10.0	Context:  held accountable for breaking promises or contracts.
+
+Token:  if	Activation: 10.0	Context: Freedom to quit a job if working conditions are poor is
+
+Token:  vote	Activation: 10.0	Context:  committee should each have one vote to reflect equality.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

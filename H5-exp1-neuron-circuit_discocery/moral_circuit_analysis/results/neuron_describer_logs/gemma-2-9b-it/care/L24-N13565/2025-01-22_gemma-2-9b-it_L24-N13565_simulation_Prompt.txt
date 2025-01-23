@@ -1,0 +1,38 @@
+Timestamp: 2025-01-22T10:20:39.293281
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 13565
+Prompt Type: simulation
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "Revised explanation of neuron behavior:
+
+The neuron at layer 24, index 13565, responds to linguistic patterns associated with commitment, responsibility, and personal virtue or integrity, but with specific nuances revealed by recent test cases. Here's a detailed breakdown of its activation pattern:
+
+1. **Exact Patterns Triggering Activation**:
+   - The neuron is highly activated by nouns and adjectives that directly relate to personal commitment and lifestyle choices reflecting spiritual or ethical dedication. Words like "commitment," "lifestyle," and "spiritual" are strong activators, especially when they are part of descriptions involving consistent practices or routines.
+   - It shows significant activation when prepositions such as "in" and "through" are used in contexts that emphasize ongoing practices or states that reflect a deep, personal commitment or ethical living.
+
+2. **Context Around Activating Tokens**:
+   - The neuron is particularly sensitive to contexts where personal practices or lifestyle choices are highlighted as part of a broader narrative of moral or spiritual commitment. For example, phrases that describe regular practices like "daily meditation" or "fasting every Friday" trigger high activation.
+   - The surrounding context often involves a narrative of personal growth or ethical living, where the focus is on consistent, long-term practices rather than isolated actions or abstract principles.
+
+3. **Patterns Not Triggering Activation**:
+   - Despite the presence of words like "accountable" and "integrity," the neuron does not activate when these terms are used in abstract or generalized"
+
+    For each of the following texts, predict the neuron's activation on a scale of 0-10,
+    where 0 means no activation and 10 means maximum activation.
+    Only provide numerical values prefixed with "Activation:".
+
+    
+Text 1: Seven trees rise behind the old library near a red bench.
+Activation: 
+Text 2: Those battered books perched awkwardly on wide shelves still hold no urgent secrets.
+Activation: 
+Text 3: Colorful lamps shine nightly beside narrow alleys in quaint squares.
+Activation: 
+Text 4: Beneath distant clouds, travelers linger casually without urgent tasks ahead.
+Activation: 
+Text 5: Whispers follow each comet drifting across the silent evening sky.
+Activation: 

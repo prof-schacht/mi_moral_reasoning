@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T22:51:06.348714
+Model: gemma-2-9b-it
+Layer: 26, Neuron: 4878
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Everyone should have the right to access education, as it is fundamental to personal and societal growth."
+
+Test case 2: "She has always championed the cause of mental health, advocating for more resources and support."
+
+Test case 3: "Joan felt they should have been given the opportunity to express their opinion on the matter."
+
+Test case 4: "The community rallied around the local artist, championing their work and ensuring it received the recognition it deserved."
+
+Test case 5: "Despite the challenges, he believed they should have the ability to live freely, without fear of persecution."
+
+Test case 6 (edge case): "He has a collection of rare coins, which he has inherited from his grandfather." (Tests if "have" in possessive context without social/moral implication activates the neuron)
+
+Test case 7: "The policy was designed to ensure that citizens have the resources they need to thrive."
+
+Test case 8: "She always supported her friend's struggles, ensuring they never felt alone."
+
+Test case 9 (edge case): "In the game, players have to navigate through complex mazes to reach the goal." (Tests if context unrelated to rights or empathy triggers activation)
+
+Test case 10: "Despite everything, they believed in their right to be heard and continued to advocate for change."

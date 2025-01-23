@@ -1,0 +1,23 @@
+Timestamp: 2025-01-22T23:23:49.847136
+Model: gemma-2-9b-it
+Layer: 29, Neuron: 13483
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+This neuron (layer 29, index 13483) appears to respond to linguistic patterns related to roles, involvement, or contributions in specific contexts. Let's analyze the examples:
+
+1. **Token: bullying**  
+   **Activation: 10.0**  
+   **Context:** "We should speak out against bullying to protect vulnerable individuals."  
+   - **Pattern:** The neuron strongly activates around discussions of social roles or responsibilities, particularly those involving advocacy or protection against harmful behaviors.
+
+2. **Token: project**  
+   **Activation: 10.0**  
+   **Context:** "credit fairly for a group project ensures everyone’s effort"  
+   - **Pattern:** Here, the neuron focuses on participatory contexts where fairness and contribution are involved, possibly highlighting collaborative efforts.
+
+3. **Token: to**  
+   **Activation: 10.0**  
+   **Context:** "<bos>Donating to local to that feed hungry"  
+   - **Pattern:** This shows

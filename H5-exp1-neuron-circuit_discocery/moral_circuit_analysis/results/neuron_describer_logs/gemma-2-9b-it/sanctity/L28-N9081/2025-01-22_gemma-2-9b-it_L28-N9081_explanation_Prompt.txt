@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:12:55.258736
+Model: gemma-2-9b-it
+Layer: 28, Neuron: 9081
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 28, index 9081) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  the	Activation: 10.0	Context:  the traffic regulations set by the government for public safety.
+
+Token:  a	Activation: 10.0	Context:  rules for all participants in a game ensures fair competition.
+
+Token:  your	Activation: 10.0	Context:  in volunteer events organized by your community supports collective cohesion.
+
+Token:  about	Activation: 10.0	Context: fraining from negative gossip about friends upholds loyalty.
+
+Token:  on	Activation: 10.0	Context: <bos>Students who cheat on on undermine equal opportunity and
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

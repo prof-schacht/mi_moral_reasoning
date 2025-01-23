@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T22:42:04.366702
+Model: gemma-2-9b-it
+Layer: 25, Neuron: 9872
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The integrity of our community relies heavily on the principles of mutual respect and care."
+
+Test case 2: "Consumer rights have been a cornerstone of our societal values, emphasizing fairness and equity in all transactions."
+
+Test case 3: "In the realm of governance, the purity of intent is essential to maintaining societal order and trust."
+
+Test case 4: "A moral compass is vital for ensuring that our actions align with the ethics of the society we inhabit."
+
+Test case 5: "The concept of continuity in leadership is often linked to the stability and ethical growth of the community."
+
+Test case 6: "He spoke of the importance of community engagement in upholding societal values, but his actions seemed to contradict his words."
+
+Test case 7: "The word 'of' binds the notion of trust to the broader idea of societal integrity, forming the backbone of ethical discourse."
+
+Test case 8: "Despite the emphasis on consumer satisfaction, the business model seemed to ignore the underlying principles of equity."
+
+Test case 9: "The phrase 'a moral dilemma' often activates discussions about the conflicts between personal desires and societal expectations."
+
+Test case 10: "When discussing the purity of intentions, the conversation naturally shifts to the ethical implications on broader societal structures."

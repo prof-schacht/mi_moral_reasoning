@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T19:37:58.174271
+Model: gemma-2-9b-it
+Layer: 13, Neuron: 10000
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The leaders are expected to uphold the highest standards of integrity and transparency in their dealings."
+
+Test case 2: "By ensuring that all policies are inclusive, we demonstrate respect for diverse communities."
+
+Test case 3: "Using resources wisely is essential - it reflects a commitment to environmental stewardship."
+
+Test case 4: "The students were reminded that honesty is the cornerstone of academic achievement."
+
+Test case 5: "The committee's decision to support the charity event was a testament to their sense of social responsibility."
+
+Test case 6: "He argued that the laws are just and must be followed to maintain order."
+
+Test case 7: "It's crucial to acknowledge that actions reflecting honor and duty often lead to greater societal benefits."
+
+Test case 8: "The workers' rights are protected under several ethical guidelines, ensuring fair treatment."
+
+Test case 9: "When discussing the moral implications of their actions, they emphasized - the importance of empathy."
+
+Test case 10: "The team was reminded that their efforts are not just for profit but to contribute to the community's well-being."

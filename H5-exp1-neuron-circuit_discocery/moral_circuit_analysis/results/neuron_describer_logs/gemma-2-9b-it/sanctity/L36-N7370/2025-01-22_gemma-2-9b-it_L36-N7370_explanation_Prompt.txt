@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:58:14.098386
+Model: gemma-2-9b-it
+Layer: 36, Neuron: 7370
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 36, index 7370) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  should	Activation: 10.0	Context: <bos>Business owners should have should right to operate
+
+Token:  should	Activation: 10.0	Context: <bos>Managers should evaluate employee should objectively,
+
+Token: .	Activation: 10.0	Context:  the sanctity of the environment.
+
+Token:  should	Activation: 10.0	Context: <bos>Entrepreneurs should be should to create and
+
+Token:  always	Activation: 10.0	Context: <bos>One should always come always the aid of
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

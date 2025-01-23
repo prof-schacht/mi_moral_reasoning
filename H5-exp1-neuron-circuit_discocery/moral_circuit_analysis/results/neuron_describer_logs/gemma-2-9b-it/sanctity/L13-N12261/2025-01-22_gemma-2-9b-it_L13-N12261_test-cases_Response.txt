@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T19:39:04.557104
+Model: gemma-2-9b-it
+Layer: 13, Neuron: 12261
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: The company implemented new guidelines to prevent abuse in the workplace, ensuring all employees understood their responsibilities.
+
+Test case 2: They were committed to maintaining order during the event, providing adequate security to ensure everyone's safety.
+
+Test case 3: The organization focused on protecting their rights, emphasizing the importance of fairness and equal treatment for all members.
+
+Test case 4: Despite the challenges, she believed it was her duty to uphold the standards of care expected in her profession.
+
+Test case 5: The committee debated whether their policies were fair and equitable, considering the diverse needs of the community.
+
+Test case 6: He thought deeply about the impact of their decisions on future generations, feeling a strong sense of responsibility to act ethically.
+
+Test case 7: The new law was designed to preserve the environment, addressing the need for sustainable practices and responsible resource use.
+
+Test case 8: They argued over who was to blame for the project's failure, each side trying to protect their interests and avoid accountability.
+
+Test case 9: The chaos in the room was a stark contrast to the order he had promised to maintain, leading to questions about his leadership.
+
+Test case 10: She felt a sense of pride in their accomplishments, knowing they had acted with integrity and fairness throughout the process.

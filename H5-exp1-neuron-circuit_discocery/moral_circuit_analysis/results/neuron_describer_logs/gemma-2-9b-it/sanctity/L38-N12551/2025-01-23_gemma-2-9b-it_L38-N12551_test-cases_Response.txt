@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T00:21:10.084311
+Model: gemma-2-9b-it
+Layer: 38, Neuron: 12551
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The judge emphasized the importance of maintaining integrity within the legal system and refused to accept any bribes."
+
+Test case 2: "In the military, one must always be ready to follow orders with discipline and uphold the code of honor."
+
+Test case 3: "The board of directors unanimously agreed that transparency and fairness should guide all their decisions."
+
+Test case 4: "She decided to report the corruption because she believed deeply in the principles of justice and fairness."
+
+Test case 5: "The committee was tasked with ensuring that every member adhered strictly to the ethical guidelines set forth."
+
+Test case 6: "While it may seem trivial, making sure everyone has an equal opportunity to speak is a cornerstone of fair discussion."
+
+Test case 7: "He was known for his unwavering commitment to integrity, even when the stakes were high and the pressures immense."
+
+Test case 8: "The document outlined the strict rules against any form of bribery, ensuring all transactions were above board."
+
+Test case 9: "The athlete's commitment to fair play and integrity earned them widespread respect, despite the tough competition."
+
+Test case 10: "Though the debate was heated, both parties remained committed to reaching a conclusion that was fair and just for all involved."

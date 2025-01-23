@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T22:50:49.433920
+Model: gemma-2-9b-it
+Layer: 26, Neuron: 4878
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 26, index 4878) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  have	Activation: 10.0	Context: <bos>Business owners should have have right to operate without
+
+Token:  have	Activation: 10.0	Context: <bos>People should have the have to choose any
+
+Token:  championed	Activation: 10.0	Context:  a cause you’ve championed for years demonstrates honor and
+
+Token:  struggles	Activation: 10.0	Context: <bos>Supporting a teammate who struggles preserves team unity.
+
+Token:  who	Activation: 10.0	Context:  by modeling empathy toward those who suffer.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T22:02:24.510264
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 6046
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 23, index 6046) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  all	Activation: 10.0	Context: Honoring return policies for all customers equally respects consumer rights
+
+Token:  all	Activation: 10.0	Context: Judges and referees should treat all participants impartially.
+
+Token:  employees	Activation: 10.0	Context: <bos>All employees deserve equal employees regardless of
+
+Token:  everyone	Activation: 10.0	Context:  in scientific research apply to everyone, big or small.
+
+Token:  you	Activation: 10.0	Context: Standing by a political party you’ve long supported,
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

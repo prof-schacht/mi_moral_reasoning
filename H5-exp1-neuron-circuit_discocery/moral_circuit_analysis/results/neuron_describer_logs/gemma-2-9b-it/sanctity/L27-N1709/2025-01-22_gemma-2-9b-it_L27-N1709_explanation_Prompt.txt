@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:00:53.300495
+Model: gemma-2-9b-it
+Layer: 27, Neuron: 1709
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 27, index 1709) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  free	Activation: 10.0	Context:  sacred rivers by keeping them free from pollutants demonstrates reverence.
+
+Token:  if	Activation: 10.0	Context:  team at work, even if they’re tough,
+
+Token:  during	Activation: 10.0	Context:  deserves emotional support and reassurance during hard times.
+
+Token:  during	Activation: 10.0	Context:  to check on elderly neighbors during severe weather is morally right
+
+Token: '	Activation: 10.0	Context: Remembering and celebrating a friend's birthday is a small
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

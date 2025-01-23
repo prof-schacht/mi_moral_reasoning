@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T09:57:41.583197
+Model: gemma-2-9b-it
+Layer: 16, Neuron: 4420
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The committee emphasized the importance of integrity and honor in maintaining one's social rank."
+
+Test case 2: "In the corporate world, leadership qualities such as decisiveness and accountability are highly valued."
+
+Test case 3: "Loyalty to the organization is seen as a key trait for advancement within the hierarchical structure."
+
+Test case 4: "Despite being an informal gathering, there was a clear sense of respect for individuals based on their societal roles."
+
+Test case 5: "The community awards recognize individuals who have contributed significantly to societal values like justice and equality."
+
+Test case 6: "Her position as a mediator was respected, not just for the title, but for the fairness and empathy she consistently demonstrated."
+
+Test case 7: "In many cultures, family roles are deeply ingrained, dictating behaviors and responsibilities expected from each member."
+
+Test case 8: "While the title of 'mentor' carries weight, it is the actions and guidance provided that truly define its significance."
+
+Test case 9: "In some environments, social constructs are challenged, leading to a reevaluation of traditional roles and values."
+
+Test case 10: "The notion of 'nobility' has evolved, now encompassing qualities like compassion and service to the community."

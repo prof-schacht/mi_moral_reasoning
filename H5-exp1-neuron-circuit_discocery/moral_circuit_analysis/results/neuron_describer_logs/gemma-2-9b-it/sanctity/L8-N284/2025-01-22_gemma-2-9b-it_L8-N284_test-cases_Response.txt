@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T18:57:03.067075
+Model: gemma-2-9b-it
+Layer: 8, Neuron: 284
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The constitution is a foundational document that outlines the principles by which our nation is governed, emphasizing the rule of law and democratic processes."
+
+Test case 2: "In the boardroom, executives debated the strategic plan, seeking to balance innovation with the company's core values and established protocols."
+
+Test case 3: "The monk dedicated his life to studying ancient scriptures, believing they held the key to understanding the universe's moral order."
+
+Test case 4: "During the trial, the judge stressed the importance of upholding justice, ensuring that the legal principles were followed without bias."
+
+Test case 5: "The athlete's commitment to a strict training regimen showcases discipline and a dedication to achieving excellence through structured effort."
+
+Test case 6: "In a chaotic market, the firm adhered to its sustainable practices, illustrating a commitment to principles over short-term profit."
+
+Test case 7: "The debate on intellectual property rights highlighted the tension between individual creativity and the legal structures in place to protect it."
+
+Test case 8: "While discussing the merger, the CEO emphasized the need for transparency and ethical standards, aligning with the company's reputation for integrity."
+
+Test case 9: "The family's tradition of gathering every Sunday for dinner was seen as a way to honor their heritage and maintain familial bonds."
+
+Test case 10: "The activist spoke passionately about civil liberties, advocating for policies that uphold personal freedoms and challenge oppressive systems."

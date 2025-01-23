@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T22:16:06.588935
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 3107
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron (layer 24, index 3107) appears to be highly responsive to the linguistic context involving the token "olding," particularly as it appears at the end of certain words. The activations indicate that it is sensitive to this suffix-like appearance in various contexts. Let's break down the activation pattern:
+
+1. **Suffix Sensitivity**: The neuron activates strongly when encountering the sequence "olding" within a word, such as "Upholding." This suggests that it is attuned to words ending with this particular string of characters.
+
+2. **Contextual Consistency**: The examples show "olding" appearing consistently after forms of the verb "uphold," like "Upholding," which suggests that the neuron is recognizing the common morphological feature—likely connected to verbs or gerunds that share this ending.
+
+3. **Structural Pattern**: In each activation, the token "olding" is part of a word structure that conveys ongoing or continuous action (gerund or participle forms"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

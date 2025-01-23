@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T10:20:14.840852
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 13565
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 24, index 13565) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  in	Activation: 10.0	Context: <bos>Observing fasting traditions in some religions reflects a commitment
+
+Token:  accountable	Activation: 10.0	Context: <bos>People must be held accountable for breaking promises or contracts
+
+Token:  commitment	Activation: 10.0	Context:  and waste reduction reflect a commitment to not degrading the environment
+
+Token:  lifestyle	Activation: 10.0	Context: Maintaining a vegetarian or vegan lifestyle can reflect a commitment to
+
+Token:  through	Activation: 10.0	Context:  one’s own body through healthy practices is virtuous.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

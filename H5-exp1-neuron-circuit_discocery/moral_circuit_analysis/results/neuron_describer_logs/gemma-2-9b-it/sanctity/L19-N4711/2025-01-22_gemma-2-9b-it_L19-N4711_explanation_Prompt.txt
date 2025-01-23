@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T20:43:04.772528
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 4711
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 19, index 4711) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  conditions	Activation: 10.0	Context:  quit a job if working conditions are poor is an essential
+
+Token:  solidarity	Activation: 10.0	Context: ’re injured demonstrates caring solidarity.
+
+Token:  workers	Activation: 10.0	Context: <bos>Granting workers the workers to unionize
+
+Token:  a	Activation: 10.0	Context:  historical figures in government fosters a sense of continuity and order
+
+Token:  unjust	Activation: 10.0	Context:  to move and travel without unjust barriers.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

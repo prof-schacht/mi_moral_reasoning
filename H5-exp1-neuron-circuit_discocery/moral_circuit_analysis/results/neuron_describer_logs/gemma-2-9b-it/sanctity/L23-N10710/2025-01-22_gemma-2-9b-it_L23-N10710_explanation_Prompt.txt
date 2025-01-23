@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T22:08:28.472349
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 10710
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 23, index 10710) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  is	Activation: 10.0	Context:  ensures everyone’s effort is recognized.
+
+Token:  basic	Activation: 10.0	Context:  loss is a sign of basic human compassion.
+
+Token:  duty	Activation: 10.0	Context:  the homeless is our fundamental duty.
+
+Token:  basic	Activation: 10.0	Context:  eaten in days is a basic human kindness.
+
+Token:  right	Activation: 10.0	Context:  extensive bureaucratic hurdles is a right.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

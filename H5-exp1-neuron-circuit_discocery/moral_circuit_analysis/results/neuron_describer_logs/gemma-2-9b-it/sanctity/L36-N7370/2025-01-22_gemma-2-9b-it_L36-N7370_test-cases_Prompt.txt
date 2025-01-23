@@ -1,0 +1,28 @@
+Timestamp: 2025-01-22T23:58:22.005629
+Model: gemma-2-9b-it
+Layer: 36, Neuron: 7370
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The pattern of activation for neuron (layer 36, index 7370) indicates that it responds strongly to certain modal and adverbial verbs or concepts associated with advisability, obligation, or frequency. Here's a detailed analysis of the neuron’s behavior based on the examples provided: 
+
+1. **High Activation on "should":** In the cases where the token "should" appears with an activation of 10.0, the context suggests advisability or obligation. The neuron seems to activate in sentences where directives or recommendations are given, such as in the phrases "should have the right to operate" or "should evaluate employee objectively." This indicates a pattern where the neuron responds to contexts implying necessity or advice.
+
+2. **High Activation on "always":** When the token "always" is present, the neuron also activates with an intensity of 10.0. The context "One should always come to the aid of" suggests a habitual or continuous suggestion or rule. This indicates that the"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

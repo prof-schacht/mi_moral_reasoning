@@ -1,0 +1,39 @@
+Timestamp: 2025-01-22T21:14:50.677228
+Model: gemma-2-9b-it
+Layer: 20, Neuron: 13294
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron (layer 20, index 13294) appears to be highly responsive to linguistic patterns that involve certain affixes or smaller function words commonly used in English. Let's break down each example to see the specific pattern:
+
+1. **Token: "for"**   
+   - Context: "Seeking help for mental for issues is important"
+   - Pattern: The word "for" typically positions itself as a preposition indicating purpose or target.
+
+2. **Token: "out"**   
+   - Context: "Reaching out to estranged out to mend"
+   - Pattern: The word "out" could be part of a phrasal verb or an indication of movement or reaching.
+
+3. **Token: "'" (apostrophe)**   
+   - Context: "Remembering and celebrating a friend's birthday is a small"
+   - Pattern: The apostrophe typically indicates possession or contraction.
+
+4. **Token: "ing"**   
+   - Context: "Accepting a religious"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

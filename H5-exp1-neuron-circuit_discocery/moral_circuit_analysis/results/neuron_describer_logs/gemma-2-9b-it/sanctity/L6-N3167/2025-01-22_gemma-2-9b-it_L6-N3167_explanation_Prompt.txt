@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T18:51:03.613844
+Model: gemma-2-9b-it
+Layer: 6, Neuron: 3167
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 6, index 3167) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: ying	Activation: 10.0	Context: <bos>Obeying trafficying set by authorities
+
+Token:  damage	Activation: 10.0	Context: Guarding sacred texts from damage honors their historical and cultural
+
+Token:  topics	Activation: 10.0	Context: Using respectful language around sacred topics is a sign of reverence
+
+Token:  budgeting	Activation: 10.0	Context: <bos>Transparent public budgeting ensures budgeting group is unfairly
+
+Token:  figures	Activation: 10.0	Context: <bos>Respect for historical figures figures government fosters a sense
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T20:24:10.485473
+Model: gemma-2-9b-it
+Layer: 18, Neuron: 2989
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 18, index 2989) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  be	Activation: 10.0	Context:  entertainment is cruel and should be prohibited.
+
+Token: ’	Activation: 10.0	Context:  of respect for your friend’s privacy is loyal.
+
+Token:  water	Activation: 10.0	Context: <bos>Purifying drinking water water ensure cleanliness is a
+
+Token:  to	Activation: 10.0	Context:  foods or drinks is essential to spiritual purity.
+
+Token:  purity	Activation: 10.0	Context: tions before religious ceremonies demonstrates purity of intention.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

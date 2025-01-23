@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T23:15:36.916424
+Model: gemma-2-9b-it
+Layer: 29, Neuron: 987
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Providing emotional support to friends in distress is a moral duty that strengthens our community bonds."
+
+Test case 2: "The annual harvest festival is a ceremony that involves rituals passed down through generations, celebrating the earth's bounty."
+
+Test case 3: "Maintaining cleanliness in public spaces is crucial, as it reflects our collective responsibility for a healthy environment."
+
+Test case 4: "The tradition of fasting during holy months emphasizes purity of intention and dedication to spiritual growth."
+
+Test case 5: "Volunteering at the local shelter is not just about helping others; it reflects a fundamental societal value of empathy and compassion."
+
+Test case 6: "While competitive sports often focus on winning, they also teach the importance of teamwork and ethical conduct."
+
+Test case 7: "The concept of 'honor thy parents' is deeply embedded in many cultures, highlighting the moral duty of respect and care."
+
+Test case 8: "Artistic expression should be free, yet it often carries the responsibility of reflecting societal values and truths."
+
+Test case 9: "The debate on digital privacy underscores the balance between technological advancement and ethical considerations of individual rights."
+
+Test case 10: "Civic duties, like voting, are essential to upholding democratic values and ensuring the community's voice is heard."

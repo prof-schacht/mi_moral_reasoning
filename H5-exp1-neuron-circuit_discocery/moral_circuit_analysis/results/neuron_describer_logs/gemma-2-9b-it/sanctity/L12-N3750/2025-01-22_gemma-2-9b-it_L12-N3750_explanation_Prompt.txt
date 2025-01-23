@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:18:52.459831
+Model: gemma-2-9b-it
+Layer: 12, Neuron: 3750
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 12, index 3750) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  holy	Activation: 10.0	Context: <bos>Observing holy days holy sacred times with
+
+Token:  precious	Activation: 10.0	Context:  holy or spiritual relics as precious items affirms their sanctity.
+
+Token:  pristine	Activation: 10.0	Context: Protecting natural wonders, like pristine forests, honors the sanctity
+
+Token:  the	Activation: 10.0	Context: <bos>Extending the same the to individuals from
+
+Token:  compassionate	Activation: 10.0	Context:  is a duty of a compassionate community.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

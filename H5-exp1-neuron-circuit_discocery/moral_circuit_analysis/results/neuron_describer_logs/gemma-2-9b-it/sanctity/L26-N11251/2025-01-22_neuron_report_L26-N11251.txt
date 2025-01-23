@@ -1,0 +1,53 @@
+Neuron (26, 11251) Analysis:
+
+Initial Explanation: The neuron at layer 26, index 11251 appears to respond to linguistic contexts that involve discussions around principles and commitments related to social, ethical, or political themes, particularly highlighting actions or states that support or oppose these principles.
+
+### Observed Activations:
+
+1. **Token: '’ and Context: "by a political party you’ve long supported, despite"**
+   - **Pattern:** The neuron activates in the context of a political party, indicating it's sensitive to discussions about allegiance or contradiction of support.
+   
+2. **Token: 'or' and Context: "must be free to join or leave any political party without"**
+   - **Pattern:** The tokenizer ‘or’ is within the context of freedom of association, particularly involving political affiliations, indicating the neuron's sensitivity to discussions about personal autonomy in political contexts.
+   
+3. **Token: 'undermine' and Context: "Students who cheat on exams undermine equal opportunity and should face"**
+   - **Pattern:** The
+Correlation Score: 0.850
+
+Revised Explanation: Revised Explanation of Neuron Behavior:
+
+The neuron at layer 26, index 11251 appears to respond to linguistic contexts that involve discussions around principles, commitments, and ethical considerations, particularly in relation to social, political, or ethical themes. The neuron is sensitive to contexts where actions or decisions are framed in terms of ethical commitments or principles, especially when these are juxtaposed with political or social convenience.
+
+### Observed Activations:
+
+1. **Token: '’ and Context: "by a political party you’ve long supported, despite"**
+   - **Pattern:** The neuron activates in contexts involving political allegiance and potential contradictions, indicating sensitivity to discussions about loyalty and ethical dilemmas within political affiliations.
+
+2. **Token: 'or' and Context: "must be free to join or leave any political party without"**
+   - **Pattern:** The neuron responds to discussions about personal autonomy and freedom of association, particularly in political contexts, highlighting its sensitivity to themes of individual rights and ethical choices.
+
+3. **Token: 'undermine' and Context: "Students who cheat on exams undermine equal opportunity and should face"**
+   - **Pattern:** The neuron is triggered by discussions of actions that compromise ethical principles, such as fairness and equal opportunity, indicating sensitivity to ethical breaches.
+
+### New Evidence Analysis:
+
+1. **Text: "The decision to protest against the government's policy highlights a growing commitment to ethical principles over political convenience."**
+   - **Activation: 4.000**
+Revised Score: {'original_top': 0.7071068286895752, 'revised_top': 0.2324952781200409, 'original_random': 0.0, 'revised_random': 0.0}
+
+Top Activating Sequences:
+
+Text: Standing by a political party you’ve long supported, despite short-term setbacks, expresses loyalty.
+Token: ’
+Activation: 0.098
+Context:  by a political party you[’]ve long supported, despite
+
+Text: Citizens must be free to join or leave any political party without repercussions.
+Token:  or
+Activation: 0.091
+Context:  must be free to join[ or] leave any political party without
+
+Text: Students who cheat on exams undermine equal opportunity and should face consequences.
+Token:  undermine
+Activation: 0.083
+Context: Students who cheat on exams[ undermine] equal opportunity and should face

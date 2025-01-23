@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T20:49:39.631381
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 7191
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 19, index 7191) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  to	Activation: 10.0	Context: <bos>Offering a meal to to who hasn't
+
+Token:  children	Activation: 10.0	Context: Creating inclusive playgrounds ensures that children with disabilities can play safely
+
+Token:  modeling	Activation: 10.0	Context:  should teach children kindness by modeling empathy toward those who suffer
+
+Token:  cover	Activation: 10.0	Context: <bos>Fundraising to cover medical cover for low-
+
+Token:  of	Activation: 10.0	Context:  generations strengthens a shared sense of identity.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:52:54.802460
+Model: gemma-2-9b-it
+Layer: 15, Neuron: 2086
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 15, index 2086) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  cur	Activation: 10.0	Context:  in society, such as curbing pollution, is a
+
+Token: .	Activation: 10.0	Context:  customers equally respects consumer rights.
+
+Token: olds	Activation: 10.0	Context:  tattoos or brandings upholds bodily sanctity.
+
+Token:  like	Activation: 10.0	Context: <bos>Some ceremonies, like like, are sacred and
+
+Token: olds	Activation: 10.0	Context:  reflective spaces in hospitals upholds the sanctity of healing.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

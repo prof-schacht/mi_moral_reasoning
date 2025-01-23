@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T22:57:39.445104
+Model: gemma-2-9b-it
+Layer: 26, Neuron: 11794
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 26, index 11794) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: ,	Activation: 10.0	Context:  you’ve long supported, despite short-term setbacks
+
+Token:  shows	Activation: 10.0	Context:  even in tough weather, shows dedication.
+
+Token: ,	Activation: 10.0	Context:  if they’re tough, shows commitment.
+
+Token:  to	Activation: 10.0	Context: <bos>Sending care packages to to friend working abroad is
+
+Token:  times	Activation: 10.0	Context:  your longtime friends in difficult times fosters true loyalty.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

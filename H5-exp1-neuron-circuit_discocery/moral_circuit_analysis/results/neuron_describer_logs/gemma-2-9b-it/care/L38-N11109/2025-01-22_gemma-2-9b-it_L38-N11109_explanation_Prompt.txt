@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T10:32:28.746533
+Model: gemma-2-9b-it
+Layer: 38, Neuron: 11109
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 38, index 11109) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: .	Activation: 10.0	Context:  but significant act of loyalty.
+
+Token:  sign	Activation: 10.0	Context:  real harm, is a sign of loyalty.
+
+Token: .	Activation: 10.0	Context:  reflects commitment to its mission.
+
+Token:  or	Activation: 10.0	Context:  apply to everyone, big or small.
+
+Token: .	Activation: 10.0	Context:  is a basic human kindness.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

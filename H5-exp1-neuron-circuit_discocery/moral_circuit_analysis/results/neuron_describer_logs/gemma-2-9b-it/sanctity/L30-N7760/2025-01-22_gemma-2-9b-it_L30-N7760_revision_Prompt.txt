@@ -1,0 +1,37 @@
+Timestamp: 2025-01-22T23:26:05.506711
+Model: gemma-2-9b-it
+Layer: 30, Neuron: 7760
+Prompt Type: revision
+
+=== PROMPT ===
+
+Original explanation of neuron behavior:
+    "The neuron in layer 30, index 7760, activates based on a specific linguistic or semantic pattern related to concepts of moral and social responsibility, as well as the enforcement or support of collective or ethical actions. Let’s break down the pattern based on the given examples:
+
+1. **Activation Triggers:**
+   - The neuron seems to respond strongest to concepts related to ethical, moral, or collective responsibility. This includes actions that demonstrate empathy or ethical behavior (e.g., "giving them care demonstrates moral empathy") and references to moral authority or commandments (e.g., "moral moral").
+   - It also responds to concepts related to authority and commitment within a social or environmental context (e.g., "reflecting their authority", "commitment to not degrading the environment").
+   - There is an emphasis on social cohesion or collective support (e.g., "collective cohesion").
+
+2. **Contextual Influence:**
+   - The context includes actions or qualities that express ethical standards or responsibilities"
+
+    New evidence from test cases:
+    Text: "Providing shelter to those in need exemplifies our collective responsibility to support each other."
+Activation: 3.000
+Text: "The council's decision to enforce stricter pollution controls reflects their commitment to environmental preservation."
+Activation: 2.000
+Text: "Volunteering at the local food bank is a testament to her moral duty to help the community."
+Activation: 3.000
+Text: "He felt it was his ethical obligation to report the financial misconduct he had witnessed."
+Activation: 2.000
+Text: "Despite the risks, advocating for human rights in oppressive regimes is a moral imperative."
+Activation: 3.000
+
+    Based on this new evidence, please provide a revised explanation of the neuron's behavior.
+    Consider:
+    1. Which aspects of the original explanation are supported by the new evidence?
+    2. Which aspects need to be modified or removed?
+    3. What new patterns or nuances are revealed by the test cases?
+
+    Provide a clear, specific explanation that accounts for both the original and new evidence.

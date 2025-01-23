@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T21:32:46.967751
+Model: gemma-2-9b-it
+Layer: 22, Neuron: 3581
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "In the workplace, it is crucial to report any product defects immediately to avoid potential harm to consumers and maintain the company's integrity."
+
+Test case 2: "Teachers should be addressed with respect to foster a positive learning environment and uphold educational standards."
+
+Test case 3: "Cyberbullying can have severe psychological impacts, and advocating for victims is essential to uphold justice and protect individuals."
+
+Test case 4: "The reckless handling of sensitive data could lead to harmful breaches, emphasizing the need for stringent cybersecurity measures."
+
+Test case 5: "A company's failure to disclose harmful chemicals in their products is a violation of ethical standards, potentially endangering public safety."
+
+Test case 6: "In an attempt to boost sales, the team chose to exaggerate the product's benefits, raising questions about their commitment to ethical marketing practices."
+
+Test case 7: "Respectful discourse is crucial during debates to ensure that all participants feel valued and the dialogue remains constructive."
+
+Test case 8: "The manager's decision to prioritize safety over speed during the project received mixed reactions, highlighting the tension between ethical considerations and business pressures."
+
+Test case 9: "While discussing the environmental impact of plastic, the notion of being reckless with resources was repeatedly emphasized."
+
+Test case 10: "When addressing issues of harassment in the workplace, creating an environment that respects all employees' rights and dignity is paramount."

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:24:03.243277
+Model: gemma-2-9b-it
+Layer: 12, Neuron: 9634
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 12, index 9634) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  to	Activation: 10.0	Context: <bos>Giving a comforting hug to someone who’s upset
+
+Token:  in	Activation: 10.0	Context: <bos>Maintaining a respectful silence in sacred or solemn spaces uph
+
+Token:  is	Activation: 10.0	Context:  a show of emotional support is crucial.
+
+Token:  is	Activation: 10.0	Context:  your friend’s privacy is loyal.
+
+Token:  from	Activation: 10.0	Context: Defending a close friend from baseless rumors shows unwavering
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

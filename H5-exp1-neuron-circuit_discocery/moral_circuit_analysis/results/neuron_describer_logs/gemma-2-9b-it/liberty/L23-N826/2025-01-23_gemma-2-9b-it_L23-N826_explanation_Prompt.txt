@@ -1,0 +1,33 @@
+Timestamp: 2025-01-23T08:40:35.471770
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 826
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 23, index 826) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  the	Activation: 10.0	Context: <bos>Business owners should have the right to operate without excessive
+
+Token:  unjust	Activation: 10.0	Context:  to move and travel without unjust barriers.
+
+Token:  same	Activation: 10.0	Context: <bos>Everyone deserves the same same protections, even if
+
+Token:  is	Activation: 10.0	Context:  fair wage for honest work is the foundation of economic justice
+
+Token:  join	Activation: 10.0	Context: Citizens must be free to join or leave any political party
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T22:25:29.581565
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 13004
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron in layer 24, index 13004, appears to respond to tokens that are part of contexts involving actions or responsibilities, often relating to moral or ethical situations, particularly those invoking empathy, altruism, or social duties.
+
+1. **Pattern Trigger**: The neuron is highly activated by tokens that signify concepts of guidance or obligations, such as "directives" and "to," especially when these concepts relate to societal or ethical expectations. In the examples provided, tokens that convey direct involvement with actions related to care or moral duties—like "suffer," "animals," and "save"—also elicit high activations. These words function within sentences to emphasize responsibility, ethical actions, or social values.
+
+2. **Contextual Considerations**: The activation occurs in contexts that highlight responsibilities or moral undertakings:
+   - "directives" is situated in a context of maintaining order, suggesting guidance and adherence to rules.
+   - "suffer" occurs within a framework of"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

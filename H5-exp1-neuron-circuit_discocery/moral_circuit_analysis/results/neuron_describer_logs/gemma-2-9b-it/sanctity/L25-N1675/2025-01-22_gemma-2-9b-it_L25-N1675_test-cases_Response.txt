@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T22:32:55.185212
+Model: gemma-2-9b-it
+Layer: 25, Neuron: 1675
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "We must respect all living beings, ensuring that their rights are protected and their dignity is upheld."
+
+Test case 2: "The policy aims to provide healthcare objectively, without favoritism, and prioritize patient safety."
+
+Test case 3: "The decision was made ethically, considering the potential impact on the environment and society."
+
+Test case 4: "He concluded his speech with a clear statement: 'Honesty is the best policy in all circumstances.'"
+
+Test case 5: "In our company, we value integrity and fairness, ensuring that every employee is treated equally."
+
+Test case 6: "Her actions were guided by a strong moral compass, yet she struggled with the consequences."
+
+Test case 7: "Implementing sustainable practices is crucial, and it reflects our commitment to future generations."
+
+Test case 8: "Though the proposal was rejected, it highlighted important ethical considerations and potential risks."
+
+Test case 9: "The principle of justice mandates that we act fairly and treat each individual with respect, regardless of background."
+
+Test case 10: "While the discussion focused on economic outcomes, it briefly touched upon ethical implications and societal impact."

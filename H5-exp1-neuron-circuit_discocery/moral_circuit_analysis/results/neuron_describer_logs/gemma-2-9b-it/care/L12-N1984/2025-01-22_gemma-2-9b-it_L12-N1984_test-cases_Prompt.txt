@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T09:51:25.810572
+Model: gemma-2-9b-it
+Layer: 12, Neuron: 1984
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron, located at layer 12, index 1984, appears to be responsive to tokens that signal conditions, structures, or actions that are often associated with rules, stipulations, or necessities within a context. Let's analyze each example and piece together the pattern:
+
+1. **Token: "be" in "held be for breaking promises":** The token "be" here is used in a passive construction suggesting a necessity or stipulated consequence (being held accountable).
+
+2. **Token: "order" in "a sense of continuity and order":** The token "order" suggests a structural or organized condition within a sequence or system.
+
+3. **Token: "discipline" in "crucial for discipline":** This word points towards a necessary component for maintaining rules or order.
+
+4. **Token: "if" in "quit a job if working conditions are poor":** The token "if" introduces a conditional clause, indicating a prerequisite or condition under which an action might"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

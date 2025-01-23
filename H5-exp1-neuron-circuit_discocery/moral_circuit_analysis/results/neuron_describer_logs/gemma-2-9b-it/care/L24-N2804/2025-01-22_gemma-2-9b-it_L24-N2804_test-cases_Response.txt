@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T10:18:17.251782
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 2804
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The meeting agenda included points that were, confusingly, repeated: 'budget review, budget review.'"
+
+Test case 2: "He was found guilty of multiple offenses, which added complexity to the legal proceedings."
+
+Test case 3: "After the storm, the stranded pets were rescued rescued by the volunteers."
+
+Test case 4: "The report mentioned 'the the' as a typo, highlighting the importance of careful proofreading."
+
+Test case 5: "Her years years of dedication to the cause were finally recognized with an award."
+
+Test case 6: "In the poem, the repeated use of 'sun sun' created a rhythmic but unusual emphasis."
+
+Test case 7: "The company faced numerous offenses under the new environmental regulations."
+
+Test case 8: "The document stated, 'the funds were allocated for ten years,' but the context seemed off."
+
+Test case 9: "The artist's work often features motifs like 'light light' to symbolize hope."
+
+Test case 10: "A peculiar phrase 'the years rescued' was found in the manuscript, sparking debate among editors."

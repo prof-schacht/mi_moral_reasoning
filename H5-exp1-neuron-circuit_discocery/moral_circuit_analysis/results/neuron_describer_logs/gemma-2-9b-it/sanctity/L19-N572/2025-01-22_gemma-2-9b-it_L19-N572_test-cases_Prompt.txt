@@ -1,0 +1,31 @@
+Timestamp: 2025-01-22T20:37:42.727668
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 572
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in question (layer 19, index 572) appears to activate in response to linguistic patterns that convey or suggest the theme of virtues, moral values, or commendable traits, particularly in the context of specific actions or principles being highlighted. Here’s a breakdown of what triggers its activation:
+
+1. **Concept of Virtue or Desirable Traits**:
+    - The neuron activates on tokens like "desire," "practices," and "equally," which directly relate to positive or morally significant traits such as freedom (in the context of desires without interference), virtuous behavior (in the case of healthy practices), and fairness (in equal distribution).
+    - The recurring theme among these activations is the underlying moral or ethical value being highlighted. These tokens are part of contexts that implicitly or explicitly acknowledge an admirable or virtuous quality.
+
+2. **Sentence Concluding with Moral Emphasis**:
+    - Tokens like "." (periods) activating indicate that the neuron responds at the"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

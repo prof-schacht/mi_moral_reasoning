@@ -1,0 +1,15 @@
+Timestamp: 2025-01-22T18:48:07.147785
+Model: gemma-2-9b-it
+Layer: 4, Neuron: 11288
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+The neuron in question (layer 4, index 11288) appears to respond strongly to the presence of the prefix "Dis-" in the context of verbs, as well as similar morphemic patterns in other contexts, with some variation in activation strength depending on surrounding linguistic structures.
+
+1. **Pattern Recognition:**
+   - The majority of the high activation examples include tokens like "Dist" and "Ad," which suggest the neuron is responsive to prefixes like "Dis-" and the context in which they appear. The activation on "Dist" commonly follows structures that imply the beginning of words such as "Distributing" and perhaps "Distributed."
+   - "Ad" in "Adhering" also suggests the neuron's sensitivity to prefixes that convey meaning or function, indicating the importance of word-forming elements.
+
+2. **Contextual Considerations:**
+   - The examples show that the neuron often activates when the prefix is part of a verb in the present participle form as seen with

@@ -1,0 +1,18 @@
+Timestamp: 2025-01-22T18:56:53.463934
+Model: gemma-2-9b-it
+Layer: 8, Neuron: 284
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+This neuron (layer 8, index 284) appears to activate in response to certain nouns and concepts associated with upholding or adhering to principles, structure, or authority. Let's analyze each example to identify the exact pattern responsible for triggering this neuron's activation:
+
+1. **justified**: The surrounding context discusses justifying pay gaps by skill and experience, highlighting a rational or principled explanation for a structural disparity.
+
+2. **own**: Here, the notion revolves around personal ownership and individual rights ("sanctity of one’s own body"), suggesting principles of autonomy and respect for personal boundaries.
+
+3. **discipline**: In this context, maintaining discipline within a chain of command emphasizes adherence to rules and structured authority.
+
+4. **texts**: The mention of "sacred texts" suggests a reverence for historical or religious documents, aligning with themes of honoring and adhering to traditional authority or principles.
+
+5. **meeting**: This context involves a "formal meeting," which

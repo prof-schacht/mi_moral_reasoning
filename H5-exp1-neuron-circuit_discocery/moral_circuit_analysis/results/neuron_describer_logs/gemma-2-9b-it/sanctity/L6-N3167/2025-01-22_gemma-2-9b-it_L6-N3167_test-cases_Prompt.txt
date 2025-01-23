@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T18:51:12.975559
+Model: gemma-2-9b-it
+Layer: 6, Neuron: 3167
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The pattern of activation for neuron (layer 6, index 3167) highlights its sensitivity to concepts related to respect, reverence, or preservation, particularly when these are connected with abstract or institutional entities. Here's a detailed breakdown of the activation pattern:
+
+1. **Exact Pattern Trigger**:
+   - The neuron activates on terms that denote processes, actions, or entities associated with respect, safeguarding, or managing important subjects or items. These terms often imply a kind of reverence or careful consideration.
+
+2. **Context Consideration**:
+   - The surrounding context of each activation point consistently involves phrases that discuss protection, preservation, or societal value. For instance:
+     - "Obeying trafficying set by authorities" suggests adhering to systems put in place by a governing body, where 'ying' as part of a word closely related to compliance activates the neuron.
+     - "Guarding sacred texts from damage" directly involves the idea of safeguarding something valuable.
+     - "Using respectful language"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

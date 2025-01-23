@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T21:38:42.747426
+Model: gemma-2-9b-it
+Layer: 22, Neuron: 7532
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 22, index 7532) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  fair	Activation: 10.0	Context:  performance-enhancing drugs undermines fair competition and should be penalized
+
+Token:  equally	Activation: 10.0	Context: ributing tips among service staff equally respects everyone’s effort
+
+Token:  purity	Activation: 10.0	Context:  upholds community standards of purity.
+
+Token:  gaps	Activation: 10.0	Context: <bos>Pay gaps should be gaps by skill
+
+Token:  purity	Activation: 10.0	Context:  religions reflects a commitment to purity.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

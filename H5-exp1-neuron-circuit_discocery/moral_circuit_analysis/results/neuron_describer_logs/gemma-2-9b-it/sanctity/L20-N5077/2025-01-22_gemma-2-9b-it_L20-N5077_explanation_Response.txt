@@ -1,0 +1,16 @@
+Timestamp: 2025-01-22T21:07:49.787551
+Model: gemma-2-9b-it
+Layer: 20, Neuron: 5077
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+This neuron (layer 20, index 5077) appears to be highly responsive to linguistic patterns that are associated with the conclusion or affirmation of a statement, particularly in contexts that convey a sense of generality or universality about virtues or societal principles.
+
+1. **Pattern of Activation**:
+   - The neuron tends to activate at the conclusion of sentences, often marked by the presence of a period (`.`), suggesting that it is sensitive to sentence-ending patterns.
+   - The activation of the neuron is particularly strong when these sentences encapsulate a holistic or normative idea, often related to moral or ethical principles. For instance, sentences that convey concepts like fairness, purity, public safety, and encouragement are highlighted.
+
+2. **Contextual Analysis**:
+   - The examples provided generally involve statements that hold a general or widely accepted notion. Each context reflects societal ideals, such as fairness across social ranks, the sanctity of the environment, and the importance of public safety.
+   - The neuron's activation

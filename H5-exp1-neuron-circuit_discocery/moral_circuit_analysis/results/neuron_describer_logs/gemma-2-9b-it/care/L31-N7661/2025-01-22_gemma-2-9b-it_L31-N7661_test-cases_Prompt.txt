@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T10:30:28.147111
+Model: gemma-2-9b-it
+Layer: 31, Neuron: 7661
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron appears to respond to tokens associated with themes of support, openness, and positive interaction within societal or community contexts. Let's break down the observed activations:
+
+1. **Open** - This activation occurs in a context that emphasizes an "open society," which suggests open-mindedness and inclusivity. The neuron likely responds to the positive connotation of "open" when connected to societal values.
+
+2. **Free** - Similarly, this activation is in a context that talks about a "truly free society." The word "free" is closely tied to societal freedom and autonomy, concepts that often resonate with openness and liberal values in community discussions.
+
+3. **Fosters** - Here, the activation happens in a phrase discussing how support "fosters" a more humane work environment. The neuron likely responds to the action of support or development, which is inherently positive and constructive, relating to nurturing or encouraging environments.
+
+4. **Times** - The word "times" is activated within the context"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

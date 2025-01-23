@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T21:41:50.631942
+Model: gemma-2-9b-it
+Layer: 22, Neuron: 9474
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 22, index 9474) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  a	Activation: 10.0	Context:  graffiti in public spaces maintains a sense of communal purity.
+
+Token:  for	Activation: 10.0	Context:  chain of command is crucial for discipline.
+
+Token:  uph	Activation: 10.0	Context:  in sacred or solemn spaces upholds their sanctity.
+
+Token:  maintain	Activation: 10.0	Context:  rules set by HR to maintain organizational order.
+
+Token:  power	Activation: 10.0	Context: <bos>Limiting police power power crucial so that citizens
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

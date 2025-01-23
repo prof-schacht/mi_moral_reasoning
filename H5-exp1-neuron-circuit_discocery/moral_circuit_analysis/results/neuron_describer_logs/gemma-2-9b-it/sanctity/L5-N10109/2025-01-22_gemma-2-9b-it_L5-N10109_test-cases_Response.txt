@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T18:50:12.998216
+Model: gemma-2-9b-it
+Layer: 5, Neuron: 10109
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "<bos> Actively engaging in community service, John found a new sense of purpose."
+
+Test case 2: "<bos> Offering support to her colleagues, Emily quickly became an indispensable team member."
+
+Test case 3: "<bos> Designing innovative solutions for urban living, the architects pushed the boundaries of modern design."
+
+Test case 4: "<bos> Seeking new opportunities in the tech industry, Sarah updated her resume and began networking."
+
+Test case 5: "<bos> Attending workshops on climate change, the students were inspired to initiate a local environmental campaign."
+
+Test case 6 (Edge Case): "<bos> Watching the sunrise, he realized how beautiful life can be." 
+(Note: This tests if "watching" as an action-oriented verb but not goal-oriented affects activation.)
+
+Test case 7 (Edge Case): "<bos> Preparing a meal, she noticed the subtle differences in flavors." 
+(Note: While "preparing" is an action, the sentence may not strongly suggest initiative.)
+
+Test case 8 (Ambiguous Case): "<bos> Reading a book, the child imagined exploring distant worlds."
+(Note: "Reading" is an action, but primarily passive, testing if the neuron activates.)
+
+Test case 9: "<bos> Organizing a charity event, the committee aimed to raise awareness and funds for the cause."
+
+Test case 10 (Ambiguous Case): "<bos> Sitting quietly in the room, he listened to the sounds around him."
+(Note: "Sitting" is a gerund but lacks an action-oriented context, testing boundaries.)

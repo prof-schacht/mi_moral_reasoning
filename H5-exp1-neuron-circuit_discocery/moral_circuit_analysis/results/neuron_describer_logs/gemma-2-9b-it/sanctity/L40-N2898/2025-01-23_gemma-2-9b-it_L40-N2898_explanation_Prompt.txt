@@ -1,0 +1,33 @@
+Timestamp: 2025-01-23T00:29:49.166594
+Model: gemma-2-9b-it
+Layer: 40, Neuron: 2898
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 40, index 2898) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  it	Activation: 10.0	Context:  prevent abuse when we see it.
+
+Token:  discrimination	Activation: 10.0	Context: <bos>Racial or ethnic discrimination in hiring is unacceptable because
+
+Token:  protest	Activation: 10.0	Context: <bos>Peaceful protest is a protest expression of
+
+Token:  bullying	Activation: 10.0	Context: We should speak out against bullying to protect vulnerable individuals.
+
+Token:  ceremonies	Activation: 10.0	Context: <bos>Some ceremonies, like ceremonies, are
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

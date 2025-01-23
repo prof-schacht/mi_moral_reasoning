@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T22:38:11.354989
+Model: gemma-2-9b-it
+Layer: 25, Neuron: 7456
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 25, index 7456) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  ideas	Activation: 10.0	Context:  allows for a marketplace of ideas where truth can emerge.
+
+Token:  temples	Activation: 10.0	Context: Valuing human bodies as temples by avoiding harmful drug abuse
+
+Token:  need	Activation: 10.0	Context: Distributing resources based on need is more equitable than hoarding
+
+Token:  elders	Activation: 10.0	Context: <bos>Children showing respect to elders fosters social harmony.
+
+Token:  work	Activation: 10.0	Context:  a fair wage for honest work is the foundation of economic
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

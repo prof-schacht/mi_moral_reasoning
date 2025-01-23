@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T20:27:33.703852
+Model: gemma-2-9b-it
+Layer: 18, Neuron: 7823
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 18, index 7823) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  evidence	Activation: 0.0	Context: <bos>A fair trial where evidence is weighed objectively is the
+
+Token:  order	Activation: 0.0	Context:  a sense of continuity and order.
+
+Token: ing	Activation: 0.0	Context: <bos>Bowing or standinging the presence
+
+Token:  reinforces	Activation: 0.0	Context:  close friends from unfair criticism reinforces trust.
+
+Token: ently	Activation: 0.0	Context: <bos>Speaking reverently ofently veterans honors their
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

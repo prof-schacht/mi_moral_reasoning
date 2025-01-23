@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T20:00:45.479209
+Model: gemma-2-9b-it
+Layer: 15, Neuron: 10852
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in question (layer 15, index 10852) appears to activate primarily in contexts related to principles or concepts of fairness, honesty, and integrity, specifically when these ideas are linked with social structures, behaviors, or roles. Let's break down the pattern based on the examples provided:
+
+1. **Activation on Conjunctions and Prepositions**:
+   - The neuron consistently activates on common conjunctions ("and") and prepositions ("for" and "of"). This suggests that it may be sensitive to connecting phrases that carry thematic importance rather than the specific words themselves.
+
+2. **Semantic Context**:
+   - The activations occur in sentences that involve principles such as fairness ("a fair social structure," "maintain fair play"), honesty ("the principle of honesty"), and integrity ("demonstrates honor and loyalty," "honors the sanctity"). These sentences describe either actions promoting these principles or entities embodying them.
+
+3. **Role of Context**:
+   - The context around"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

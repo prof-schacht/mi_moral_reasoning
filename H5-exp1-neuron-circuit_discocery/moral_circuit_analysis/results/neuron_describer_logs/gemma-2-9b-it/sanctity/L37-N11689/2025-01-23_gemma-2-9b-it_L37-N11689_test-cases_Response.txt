@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T00:13:24.979103
+Model: gemma-2-9b-it
+Layer: 37, Neuron: 11689
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "In the midst of challenges, she chose to refrain from reacting impulsively, showing remarkable self-control."
+
+Test case 2: "The conclusion of the meeting was marked by a unanimous agreement to uphold integrity and refrain from dishonest practices."
+
+Test case 3: "He couldn't help but remember his vow to never engage in spreading rumors, maintaining his moral stance."
+
+Test case 4: "The final chapter of the novel ended with the protagonist deciding to refrain from revenge, symbolizing growth and maturity."
+
+Test case 5: "As the sun set, the calm sea whispered a promise of purity and tranquility; the day concluded with peace."
+
+Test case 6: "Despite the tempting offer, she refrained from accepting the bribe, adhering to her principles of honesty."
+
+Test case 7: "While writing the poem, he found himself repeating the word 'serene', emphasizing a theme of inner peace."
+
+Test case 8: "During the final speech at the conference, he paused, then concluded with a powerful message: 'Let us act with integrity.'"
+
+Test case 9: "The sentence, 'He refrains, not out of fear, but out of a deep-seated moral obligation,' captures the essence of his character."
+
+Test case 10: "The repetitive beats of the music echoed the word 'refrain', creating a rhythmic pattern that resonated with the audience."

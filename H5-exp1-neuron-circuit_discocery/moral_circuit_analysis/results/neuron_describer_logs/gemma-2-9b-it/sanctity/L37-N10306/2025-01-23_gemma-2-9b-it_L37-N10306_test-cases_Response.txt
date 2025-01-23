@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T00:12:18.594618
+Model: gemma-2-9b-it
+Layer: 37, Neuron: 10306
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Every citizen has the right to express their opinions freely without fear of retribution or censorship."
+
+Test case 2: "The new law aims to protect the integrity of personal data against unauthorized access and exploitation."
+
+Test case 3: "Participating in the democratic process is a fundamental right that should be safeguarded against any form of manipulation."
+
+Test case 4: "The committee emphasized the importance of collective fairness in ensuring that all members have equal access to resources."
+
+Test case 5: "While the concept of choice is central to personal freedom, it often clashes with societal norms and regulations."
+
+Test case 6: "The ability to move freely within the country is enshrined in the constitution, representing a core aspect of individual autonomy."
+
+Test case 7: "The debate on internet neutrality revolves around the protection of users from unfair treatment by service providers."
+
+Test case 8: "The document outlines the rights of individuals to live freely and with dignity, without oppression or discrimination."
+
+Test case 9: "Under the new policy, employees are encouraged to report any unethical practices anonymously, ensuring their protection and participation."
+
+Test case 10: "Although the concept of 'citizens' is widely accepted, its definition can vary, raising questions about inclusivity and rights."

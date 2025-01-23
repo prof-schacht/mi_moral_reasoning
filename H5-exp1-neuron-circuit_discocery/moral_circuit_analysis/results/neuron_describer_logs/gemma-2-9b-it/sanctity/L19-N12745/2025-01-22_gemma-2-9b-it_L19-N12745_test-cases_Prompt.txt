@@ -1,0 +1,31 @@
+Timestamp: 2025-01-22T20:58:41.897503
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 12745
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "Based on the examples provided, this neuron (layer 19, index 12745) seems to respond to a pattern related to certain linguistic structures and contextual cues that indicate offering or providing something beneficial or supportive to others. Here's a breakdown of the pattern and the context in which the neuron activates:
+
+1. **Type of Tokens**: 
+   - The neuron activates on the specific word choices such as "free," "a," "able," and "health." These tokens are part of structures that involve giving, enabling, or supporting.
+
+2. **Contextual Pattern**:
+   - **Beneficial Provision**: The context often involves scenarios where something beneficial is being offered or provided (e.g., "Offering free tutoring," "Providing mental-healthhealth for employees"). The neuron activates on tokens that highlight the act of giving or enabling something positive for others.
+   - **Inclusivity and Support**: The mention of actions that support, include, or help others (e.g., "to free"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

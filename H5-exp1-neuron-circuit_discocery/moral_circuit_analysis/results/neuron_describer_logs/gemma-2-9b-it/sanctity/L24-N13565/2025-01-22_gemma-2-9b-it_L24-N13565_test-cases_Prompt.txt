@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T22:26:29.248458
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 13565
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron identified as layer 24, index 13565 shows high activation in contexts related to the demonstration of commitment, responsibility, or effort towards an ideal, principle, or goal. This pattern is evident in all provided examples and can be detailed as follows:
+
+1. **Commitment and Responsibility**: The neuron highly activates for words that imply being dedicated or answerable to a principle or action:
+   - "commitment" directly denotes dedication.
+   - "accountable" implies responsibility and a necessity to uphold or justify actions or promises.
+
+2. **Linguistic Context**: Surrounding words and phrases generally provide detail about the nature of this dedication or responsibility:
+   - In "Observing fasting traditions in some religions reflects a commitment," the tradition of fasting is associated with religious dedication, triggering activation.
+   - In "People must be held accountable for breaking promises," the neuron responds to the necessity of taking responsibility for actions.
+   - "lifestyle" in "Maintaining a vegetarian"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T22:06:26.794203
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 10272
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 23, index 10272) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  trial	Activation: 10.0	Context:  tactics like indefinite detention without trial.
+
+Token:  act	Activation: 10.0	Context:  hungry children is a compassionate act.
+
+Token: .	Activation: 10.0	Context:  is a sign of loyalty.
+
+Token:  obligation	Activation: 10.0	Context:  ensure cleanliness is a moral obligation.
+
+Token:  sense	Activation: 10.0	Context:  across generations strengthens a shared sense of identity.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

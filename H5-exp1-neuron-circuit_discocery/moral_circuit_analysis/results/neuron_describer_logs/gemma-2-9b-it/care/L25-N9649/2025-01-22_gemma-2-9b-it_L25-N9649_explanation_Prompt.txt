@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T10:22:27.126750
+Model: gemma-2-9b-it
+Layer: 25, Neuron: 9649
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 25, index 9649) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  for	Activation: 10.0	Context:  be counted accurately and fairly for each candidate.
+
+Token: ining	Activation: 10.0	Context: <bos>Refraining fromining gossip about friends
+
+Token: s	Activation: 10.0	Context: Freedom to choose one’s spouse is a fundamental right
+
+Token:  process	Activation: 10.0	Context: <bos>A transparent election process process critical to fair governance
+
+Token:  in	Activation: 10.0	Context: <bos>Keeping in touch with in friends demonstrates
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

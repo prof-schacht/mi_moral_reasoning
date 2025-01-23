@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T21:47:31.367412
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 214
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: The new policy was enacted to ensure safety compliance by all employees.
+
+Test case 2: The obligation to attend the meeting was made clear by the manager's announcement.
+
+Test case 3: It was lawful for the committee to initiate the proceedings under the new regulations.
+
+Test case 4: By the terms of the contract, the artist must deliver the final piece by June.
+
+Test case 5: To achieve the best outcome, it is essential to follow the guidelines provided in the manual.
+
+Test case 6: The act of kindness was acknowledged by the local community as a commendable contribution.
+
+Test case 7: Although the rule was set by the board, many members found it impractical and difficult to enforce.
+
+Test case 8: It is crucial to act swiftly upon receiving the urgent notice from the authorities.
+
+Test case 9: The expectation to perform well was understood by all participants as a benchmark for success.
+
+Test case 10: The informal agreement between friends didn't activate the neuron's pattern of obligation or consequence.

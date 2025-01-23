@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T19:33:28.144678
+Model: gemma-2-9b-it
+Layer: 13, Neuron: 5508
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Each student should receive feedback that is fair and justified, reflecting their unique contributions and efforts."
+
+Test case 2: "The committee decided that resources must be allocated fairly, ensuring that each department gets what it needs to operate efficiently."
+
+Test case 3: "It is justified to provide additional support to those who face systemic barriers in order to create a fair playing field for all."
+
+Test case 4: "The policy requires that each employee is evaluated based on their performance and contribution, rather than arbitrary criteria."
+
+Test case 5: "Referring to the community leaders with traditional titles shows respect and upholds cultural customs."
+
+Test case 6: "To ensure equitable access, we must allocate resources based on need and not just on the ability to pay."
+
+Test case 7: "Each member of the team should have a voice in the decision-making process to reflect their individual expertise and perspective."
+
+Test case 8: "The argument that everyone should pay equally, regardless of income, fails to consider the principle of fairness in financial burdens."
+
+Test case 9: "To abide by the customs of the village, each visitor is expected to show respect by using the traditional greetings."
+
+Test case 10: "The decision to award scholarships was justified by the candidates' academic achievements and contributions to their communities."

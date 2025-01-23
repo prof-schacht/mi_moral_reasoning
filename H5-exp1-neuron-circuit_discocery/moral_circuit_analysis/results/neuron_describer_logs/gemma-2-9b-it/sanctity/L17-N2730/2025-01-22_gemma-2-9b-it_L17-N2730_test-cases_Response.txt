@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T20:07:58.199140
+Model: gemma-2-9b-it
+Layer: 17, Neuron: 2730
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: Ensuring the ancient manuscripts are stored in a climate-controlled environment helps protect the cultural heritage of our community.
+
+Test case 2: By organizing the fundraiser, they showed respect for the elderly who had contributed so much to the town's history.
+
+Test case 3: The policy of mandatory training protects employees from workplace hazards, ensuring their safety and well-being.
+
+Test case 4: Following the traditional rituals honors the ancestors and preserves their legacy for future generations.
+
+Test case 5: The act of cleaning the park regularly is a sign of respect for public spaces and the people who visit them.
+
+Test case 6: Although unorthodox, their decision to challenge the rules was meant to protect the rights of the marginalized community.
+
+Test case 7: The initiative to plant trees along the riverbank is aimed at protecting the ecosystem and preventing soil erosion.
+
+Test case 8: By maintaining confidentiality, the lawyer respects the client's privacy and upholds the integrity of the legal process.
+
+Test case 9: The school implemented a zero-tolerance policy towards bullying to safeguard students’ emotional and physical well-being.
+
+Test case 10: While some viewed it as unnecessary, the curfew was intended to respect the local customs and maintain neighborhood harmony.

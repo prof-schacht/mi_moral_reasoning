@@ -1,0 +1,35 @@
+Timestamp: 2025-01-22T20:12:28.449075
+Model: gemma-2-9b-it
+Layer: 17, Neuron: 6433
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron (layer 17, index 6433) appears to be sensitive to language related to moral, cultural, or spiritual norms and values. Here's a more detailed breakdown of the activation patterns:
+
+1. **Linguistic Patterns**:
+   - The neuron shows high activation with tokens like "of," "a," "essential," and "as" when they are part of phrases that discuss concepts or ideas related to cultural standards, values, or norms.
+   - The activation doesn't occur for the token itself but rather because the token is part of a structure where the surrounding context discusses topics of moral significance or cultural norms.
+
+2. **Contextual Triggers**:
+   - The contexts often involve a discussion of behaviors, language, or ideas that hold a cultural, moral, or spiritual significance.
+   - The neuron is likely responding to the presence of abstract concepts or constructs that relate to purity, reverence, or moral acceptability.
+
+3. **Consistent Themes**:
+   - **"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

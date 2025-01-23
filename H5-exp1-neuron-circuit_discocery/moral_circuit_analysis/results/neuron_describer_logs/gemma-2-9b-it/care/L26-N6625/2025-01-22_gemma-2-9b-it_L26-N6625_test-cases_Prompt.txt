@@ -1,0 +1,28 @@
+Timestamp: 2025-01-22T10:23:37.355257
+Model: gemma-2-9b-it
+Layer: 26, Neuron: 6625
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The activation pattern for neuron (layer 26, index 6625) suggests it responds to the presence of indefinite articles "a" and "the," particularly when they embed the beginnings of noun phrases or when followed by interruptions in standard sentence flow that emphasize the article. Here's a detailed explanation of what triggers the neuron's activation:
+
+1. **Indefinite Articles "a" and "the":** The neuron strongly activates in response to the articles "a" and "the." These words appear at or near the beginning of noun phrases, indicating that the neuron may be tuned to detecting the start of such structures.
+
+2. **Noun Phrase Initiation:** The context surrounding the tokens often includes the start of a noun phrase, suggesting the neuron's role in recognizing the syntactic pattern of article + noun or article + adjective + noun. For example, "a ceremonial cleansing," "a comforting hug," and "a moral" are all beginnings of noun phrases where "a" functions as an"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

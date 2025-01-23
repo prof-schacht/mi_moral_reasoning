@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T08:37:28.345716
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 3975
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The authoritarian regime was criticized for its oppressive tactics, leading to widespread unrest and calls for reform."
+
+Test case 2: "Rumors of economic disparity fueled tension among the workers, highlighting the growing divide between wealth and poverty."
+
+Test case 3: "In a surprising twist, the protagonist uses unorthodox tactics to expose the corruption within the supposedly fair justice system."
+
+Test case 4: "Despite being labeled an authoritarian leader, she managed to maintain order without resorting to oppressive measures."
+
+Test case 5: "The wealth of the nation seemed to be concentrated in the hands of a few, sparking debates about fairness and equity."
+
+Test case 6: "While the word 'criticized' suggests conflict, in this context, it was used to describe a healthy debate over environmental policies."
+
+Test case 7: "The rumors of an impending economic collapse were dismissed by government officials as baseless and misleading."
+
+Test case 8: "In a society where wealth was the primary measure of success, the concept of equitable distribution was often criticized as unrealistic."
+
+Test case 9: "The regime's authoritarian control was paradoxically admired by some for maintaining a semblance of stability in a chaotic world."
+
+Test case 10: "Despite the oppressive nature of the tactics used, the reforms introduced brought about significant positive change in the community."

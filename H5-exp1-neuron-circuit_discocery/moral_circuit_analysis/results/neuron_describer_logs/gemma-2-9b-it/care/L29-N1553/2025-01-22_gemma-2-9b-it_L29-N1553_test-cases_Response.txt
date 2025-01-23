@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T10:28:19.435381
+Model: gemma-2-9b-it
+Layer: 29, Neuron: 1553
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The initiative ensures that all citizens have the right to participate in community decisions, fostering a sense of inclusivity and shared responsibility."
+
+Test case 2: "In many companies, employees can now choose flexible working hours, a move that promotes work-life balance and employee empowerment."
+
+Test case 3: "The annual festival invites everyone, regardless of background, to celebrate together, highlighting the community's commitment to inclusiveness."
+
+Test case 4: "The policy states that every team member should have equal access to opportunities, reinforcing the principle of egalitarianism in the workplace."
+
+Test case 5: "Charity events such as these are crucial because they bring communities together in acts of kindness and mutual support."
+
+Test case 6: "The phrase 'students can attend any class' might activate the neuron due to its emphasis on educational inclusivity and accessibility."
+
+Test case 7: "The company's new initiative to offer mentorship programs to all employees shows a commitment to career development and inclusivity."
+
+Test case 8: "While the term 'compassionate' certainly connects to community actions, the word 'assertive' in 'be assertive in your requests' might test the neuron's response to empowerment in a different context."
+
+Test case 9: "The neighborhood's response to the crisis, where everyone pitched in to help, was a testament to the power of community and shared values."
+
+Test case 10: "The policy to ensure equal internet access for all citizens is a step toward digital inclusivity and bridging the digital divide."

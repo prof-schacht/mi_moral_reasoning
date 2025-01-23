@@ -1,0 +1,15 @@
+Timestamp: 2025-01-22T09:52:22.226800
+Model: gemma-2-9b-it
+Layer: 13, Neuron: 13425
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+The neuron at layer 13, index 13425, appears to activate strongly in response to tokens that convey concepts or actions related to protection, care, and preservation within positive or duty-bound contexts. 
+
+1. **Exact Pattern Triggering Activation**:
+   - The neuron activates for tokens that imply safeguarding, nurturing, maintaining integrity, or fulfilling fundamental duties. These tokens often relate to actions or principles that uphold or support something valued, whether it's protection, care, or preservation.
+
+2. **Context Around Activating Tokens**:
+   - The activating tokens are typically embedded within sentences that emphasize actions or responsibilities toward others or the environment. For instance, "protect" relates to "vulnerable individuals," "care" is in the context of fostering community, and "fundamental" is connected to duty towards the homeless. Similarly, "preserves" is tied to maintaining parks' cleanliness, and "the" is used in an honouring context related to hospitals.
+   - The neuron appears sensitive

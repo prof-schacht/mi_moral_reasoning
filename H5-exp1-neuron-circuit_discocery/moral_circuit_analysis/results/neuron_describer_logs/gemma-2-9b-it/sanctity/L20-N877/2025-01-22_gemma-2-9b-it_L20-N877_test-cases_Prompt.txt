@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T21:03:16.876517
+Model: gemma-2-9b-it
+Layer: 20, Neuron: 877
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron (layer 20, index 877) seems to detect patterns related to redundancy or repetition in linguistic structures, particularly focusing on repeated or emphasized concepts and phrases. Here’s a breakdown of how this pattern is apparent across the examples:
+
+1. **Repetition of Words or Phrases:**
+   - In the tokens "close" and "like" from the contexts "<bos>Defending a close close from baseless rumors" and "<bos>Some ceremonies, like like, are sacred," the neuron activates when a word is repeated with no intervening words, which is a direct repetition in the sentence structure.
+
+2. **Emphasis on Qualities or Conditions:**
+   - In the example with the token "tough" from the context "team matches, even in tough weather, shows dedication," the neuron activates likely due to phrases that emphasize or reinforce the adjective "tough" by indicating endurance or challenge, which is an indirect form of repetition through semantic emphasis.
+
+3."
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

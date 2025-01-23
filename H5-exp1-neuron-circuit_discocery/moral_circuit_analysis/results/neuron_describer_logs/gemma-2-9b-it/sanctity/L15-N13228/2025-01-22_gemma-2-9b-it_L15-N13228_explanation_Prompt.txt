@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T20:02:52.481736
+Model: gemma-2-9b-it
+Layer: 15, Neuron: 13228
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 15, index 13228) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  big	Activation: 10.0	Context:  research apply to everyone, big or small.
+
+Token:  service	Activation: 10.0	Context: <bos>Distributing tips among service staff equally respects everyone’
+
+Token:  team	Activation: 10.0	Context: <bos>Supporting your childhood sports team through losing seasons demonstrates steadfast
+
+Token:  with	Activation: 10.0	Context: <bos>Complying with local withfews set
+
+Token: ’	Activation: 10.0	Context: Upholding your company’s reputation in public illustrates
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

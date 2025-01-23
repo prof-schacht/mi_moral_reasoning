@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T23:18:43.326958
+Model: gemma-2-9b-it
+Layer: 29, Neuron: 2067
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Her decision to volunteer at the animal shelter showed true compassion for creatures in need."
+
+Test case 2: "He acted out of empathy, ensuring his colleague felt supported during the challenging project."
+
+Test case 3: "Despite the competitive environment, the team leader maintained a culture of respect and understanding."
+
+Test case 4: "Offering shelter to those displaced by the storm was a testament to the community's compassion."
+
+Test case 5: "The initiative was driven by empathy, aiming to address homelessness through sustainable solutions."
+
+Test case 6 (edge case): "The new policy, criticized for being too lenient, was actually based on empathy for struggling families."
+
+Test case 7 (edge case): "Her choice to step away from the argument was out of respect for differing opinions, even if she disagreed."
+
+Test case 8 (ambiguous): "In a world often driven by self-interest, his actions were unexpectedly altruistic, fostering a sense of community."
+
+Test case 9 (ambiguous): "The artist's work, though abstract, was driven by a desire to evoke empathy and connection."
+
+Test case 10: "His refusal to engage in harmful gossip was a mark of his ethical stance and respect for others."

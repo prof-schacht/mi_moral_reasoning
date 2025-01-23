@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T09:55:32.638412
+Model: gemma-2-9b-it
+Layer: 14, Neuron: 2047
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in layer 14, index 2047 appears to be responsive to concepts that relate to meaningful or impactful human actions, particularly those emphasizing assistance, loyalty, and the display of positive human qualities within a moral or altruistic context. Here’s an analysis of the activation pattern based on the provided examples:
+
+1. **Altruistic and Heroic Actions:** 
+   - The neuron activates with high strength on tokens like "act" and "stranger," in contexts that describe actions of helping or rescuing others (e.g., "to save lives is an act of profound care" and "to the aid of a stranger in distress"). This indicates a sensitivity to phrases that highlight noble or selfless actions.
+
+2. **Respect and Honor:**
+   - The high activation on "to" in the context of "military veterans honors their service" suggests that the neuron is also responsive to contexts where respect or honor is being bestowed upon individuals or groups, reflecting themes of recognition and respect"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

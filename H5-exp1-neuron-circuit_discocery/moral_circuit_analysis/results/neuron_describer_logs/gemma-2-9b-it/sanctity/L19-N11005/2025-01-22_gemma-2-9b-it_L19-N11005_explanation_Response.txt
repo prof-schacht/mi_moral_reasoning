@@ -1,0 +1,18 @@
+Timestamp: 2025-01-22T20:56:30.193963
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 11005
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+Based on the examples provided, neuron (layer 19, index 11005) appears to respond to patterns associated with social structures, human relationships, and communal values. Here's a breakdown of the activation pattern:
+
+1. **Specific Tokens & Activation:**
+   - The neuron activates on tokens that are relevant to social constructs and human interactions ("titles," "human," "when," "our," "social").
+   - These tokens, while not synonymous, often pertain to concepts of society, humanity, and community.
+
+2. **Contextual Analysis:**
+   - **"titles":** Refers to formal titles for people or leaders within a community, suggesting a recognition of societal roles and hierarchy.
+   - **"human":** Contextually tied to compassion, indicating a focus on intrinsic human qualities or shared humanity.
+   - **"when":** Used in a sentence about helping neighbors, suggesting context-driven activations related to human actions or conditions.
+   - **"our":** Linked

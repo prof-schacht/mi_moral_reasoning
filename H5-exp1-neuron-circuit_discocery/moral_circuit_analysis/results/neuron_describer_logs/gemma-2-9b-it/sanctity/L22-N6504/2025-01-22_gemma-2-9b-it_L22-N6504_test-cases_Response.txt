@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T21:35:53.424940
+Model: gemma-2-9b-it
+Layer: 22, Neuron: 6504
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The ceremony was held at the sacred site, where generations have come to honor their ancestors."
+
+Test case 2: "The document affirms the community's commitment to preserving their sacred rituals for future generations."
+
+Test case 3: "During the meeting, she affirmed her belief in the power of tradition, though the context was secular."
+
+Test case 4: "He described the ancient artifact as sacred, but in a tone that suggested skepticism rather than reverence."
+
+Test case 5: "The sacred text was illuminated by candles, creating an atmosphere of solemnity and devotion in the hushed chapel."
+
+Test case 6: "While the book didn't use the word 'sacred,' it described the mountain as revered by the local tribes."
+
+Test case 7: "The council affirmed the cultural site's importance, but the focus was more on economic benefits than spiritual significance."
+
+Test case 8: "Her voice carried a sacred tone as she spoke of the ocean’s vastness, imparting a spiritual sense to the natural world."
+
+Test case 9: "In his speech, the leader affirmed the need for ecological preservation, equating it to a sacred duty."
+
+Test case 10: "The story depicted a world where technology was sacred, challenging traditional notions of sanctity."

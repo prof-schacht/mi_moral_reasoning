@@ -1,0 +1,15 @@
+Timestamp: 2025-01-22T23:21:42.058517
+Model: gemma-2-9b-it
+Layer: 29, Neuron: 6002
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+The neuron in question (layer 29, index 6002) appears to activate strongly in response to certain prepositional or directional phrases that often denote a continuation or completion of an action, and possibly convey notions of respect, outreach, or avoidance.
+
+1. **Exact Pattern Triggering Activation**:
+   - The neuron activates for tokens such as "down," "out," and "away" when used as part of a phrase that implies movement or transition. These tokens are typically part of phrasal verbs or prepositional phrases.
+
+2. **Contextual Situations**:
+   - In each example, the triggering tokens are part of a context where the action implies a metaphorical or literal movement. "Passed down," "reaching out," "walking away," "speak out" are all idiomatic expressions where these directional terms are used to extend the meaning of the action verb.
+   - The activation is strongest when these words are used to complete the idiomatic expression or phrase

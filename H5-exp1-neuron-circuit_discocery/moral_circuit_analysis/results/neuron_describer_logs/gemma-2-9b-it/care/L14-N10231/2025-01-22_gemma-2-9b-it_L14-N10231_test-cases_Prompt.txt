@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T09:56:33.063362
+Model: gemma-2-9b-it
+Layer: 14, Neuron: 10231
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "Based on the provided examples, neuron 10231 in layer 14 appears to respond to linguistic patterns related to ideas of fairness, inclusivity, and compliance with societal norms or expectations. Let's break down the observed patterns:
+
+1. **Equality and Fairness Themes**: 
+   - In the sentence "a committee should each have one vote to reflect equality," the activation occurs at "one," emphasizing the concept of equal representation and fairness. The context involves a collective action promoting balance.
+   - In "Sharing credit fairly for a group project ensures everyone," the activation on "a" introduces a sentiment of equitable distribution and acknowledgment, reinforcing the concept of fairness.
+
+2. **Compliance and Norms**:
+   - The token "lawful" in "Voluntarily submitting to lawful search at security checkpoints" pertains to respecting established rules or legal standards. Here, the neuron responds to adherence to societal norms.
+   - In "Joining family celebrations even when it’s inconvenient shows," the activation on ""
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

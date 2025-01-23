@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T10:36:57.198706
+Model: gemma-2-9b-it
+Layer: 40, Neuron: 9343
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "<bos> Start your day with a positive mindset and enthusiasm."
+
+Test case 2: "<bos> We should organize a community clean-up this weekend."
+
+Test case 3: "<bos> When considering the options, it becomes clear that taking action is necessary."
+
+Test case 4: "To preserve our heritage, <bos> celebrating cultural festivals is essential."
+
+Test case 5: "<bos> Let's encourage everyone to participate actively in the upcoming event."
+
+Test case 6: "Understanding the importance of teamwork, <bos> we should collaborate more frequently."
+
+Test case 7: "<bos> Providing shelter and food to those in need is a moral duty."
+
+Test case 8: "The importance of education cannot be overstated. <bos> Taking steps to ensure accessibility is crucial."
+
+Test case 9: "Before making a decision, <bos> consider the potential for positive change."
+
+Test case 10: "<bos> Speaking out against injustice requires courage and determination."

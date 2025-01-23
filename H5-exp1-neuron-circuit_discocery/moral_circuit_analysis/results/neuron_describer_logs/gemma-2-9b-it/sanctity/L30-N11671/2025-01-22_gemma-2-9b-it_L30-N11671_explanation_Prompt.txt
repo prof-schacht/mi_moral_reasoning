@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:28:06.238047
+Model: gemma-2-9b-it
+Layer: 30, Neuron: 11671
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 30, index 11671) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  approval	Activation: 10.0	Context:  forms of recreation without government approval.
+
+Token:  without	Activation: 10.0	Context:  to any region they desire without state interference.
+
+Token:  without	Activation: 10.0	Context:  free to criticize the government without fear of punishment.
+
+Token:  must	Activation: 10.0	Context: <bos>Citizens must be free must join or
+
+Token:  must	Activation: 10.0	Context: <bos>People must be held must for breaking
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

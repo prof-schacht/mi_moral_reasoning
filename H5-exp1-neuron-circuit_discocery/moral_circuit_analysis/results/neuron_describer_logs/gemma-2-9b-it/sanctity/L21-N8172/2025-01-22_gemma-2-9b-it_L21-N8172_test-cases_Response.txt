@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T21:22:32.349139
+Model: gemma-2-9b-it
+Layer: 21, Neuron: 8172
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Adhering to the code of conduct is crucial for maintaining integrity within the community."
+
+Test case 2: "The judge's decision was rooted in a deep understanding of traditional justice values."
+
+Test case 3: "He was known for his unwavering commitment to fairness, even in complex situations."
+
+Test case 4: "Despite the pressure, she chose to act in accordance with her principles, valuing truth and honesty."
+
+Test case 5: "The committee valued transparency and adhered strictly to the established guidelines."
+
+Test case 6: "Even in smaller roles, she ensured that every detail was handled with utmost respect for the norms."
+
+Test case 7: "Their approach was to objectively assess each case, ensuring decisions were fair and unbiased."
+
+Test case 8: "While innovation was encouraged, it was essential to respect the foundational traditions of the institution."
+
+Test case 9: "He faced a dilemma but ultimately chose to follow the rules, believing it was the right thing to do."
+
+Test case 10: "In their culture, honoring elders and upholding family traditions was a sign of respect and integrity."

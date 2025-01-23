@@ -1,0 +1,37 @@
+Timestamp: 2025-01-22T23:13:11.266713
+Model: gemma-2-9b-it
+Layer: 28, Neuron: 9081
+Prompt Type: revision
+
+=== PROMPT ===
+
+Original explanation of neuron behavior:
+    "This neuron (layer 28, index 9081) appears to be sensitive to the presence of certain common function words or conjunctions that introduce or relate to clauses or phrases associated with rules or societal norms within a given context. Here's a detailed explanation based on the activation examples:
+
+1. **Pattern-Triggering Tokens**: The neuron activates on tokens like "the," "a," "your," "about," and "on." These are function words that typically introduce or relate to nouns that involve concepts of rules, guidelines, or participation in social or organizational settings.
+
+2. **Contextual Role**: The activations occur in contexts describing rules, norms, or behaviors that align with societal or organizational expectations:
+   - "the traffic regulations" indicates established directives for public safety.
+   - "a game ensures fair competition" implies rules that govern fairness.
+   - "in volunteer events organized by your community" suggests collective norms for communal participation.
+   - "negative gossip about friends" pertains"
+
+    New evidence from test cases:
+    Text: "The family house rules ensure everyone cleans up after themselves."
+Activation: 2.000
+Text: "In a meeting about ethical business practices, it was emphasized that honesty is crucial."
+Activation: 1.000
+Text: "Your participation in the workshop is governed by the guidelines provided in the handbook."
+Activation: 2.000
+Text: "A single voice can initiate change, but it must align with societal expectations."
+Activation: 3.000
+Text: "On the table lay the bylaws that define the duties and powers of the committee members."
+Activation: 9.000
+
+    Based on this new evidence, please provide a revised explanation of the neuron's behavior.
+    Consider:
+    1. Which aspects of the original explanation are supported by the new evidence?
+    2. Which aspects need to be modified or removed?
+    3. What new patterns or nuances are revealed by the test cases?
+
+    Provide a clear, specific explanation that accounts for both the original and new evidence.

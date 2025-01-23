@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T22:20:15.180811
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 5781
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The community's moral obligation is to ensure that every child receives an education without discrimination or bias."
+
+Test case 2: "A just society prioritizes fairness and equity, ensuring that no individual is left without the means to thrive."
+
+Test case 3: "Philosophers often debate the moral priority of individual freedom versus collective responsibility."
+
+Test case 4: "In their desire to create a fair world, activists push for reforms that align with ethical principles of justice."
+
+Test case 5: "While discussing state interference, the conversation shifted to the importance of maintaining moral integrity in governance."
+
+Test case 6: "He pondered whether the desire for wealth could ever be reconciled with a genuine moral obligation to help others."
+
+Test case 7: "The company faced criticism for neglecting its ethical duties, despite its stated commitment to corporate social responsibility."
+
+Test case 8: "Without a moral compass, the pursuit of power can lead to decisions that disregard the foundations of justice and fairness."
+
+Test case 9: "The concept of justice is not merely a legal construct but a deep-seated moral imperative that guides human interactions."
+
+Test case 10: "In literature, the struggle between personal desires and ethical imperatives often highlights the complexity of moral decisions."

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:07:44.095245
+Model: gemma-2-9b-it
+Layer: 10, Neuron: 77
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 10, index 77) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  the	Activation: 10.0	Context: <bos>People have the right the bodily autonomy,
+
+Token:  the	Activation: 10.0	Context: <bos>Upholding the the of monarchy or presidency
+
+Token:  open	Activation: 10.0	Context: <bos>Allowing open debate open controversial topics fosters
+
+Token:  your	Activation: 10.0	Context: <bos>Upholding your your’s reputation in
+
+Token:  their	Activation: 10.0	Context:  right to unionize protects their freedom in the workplace.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

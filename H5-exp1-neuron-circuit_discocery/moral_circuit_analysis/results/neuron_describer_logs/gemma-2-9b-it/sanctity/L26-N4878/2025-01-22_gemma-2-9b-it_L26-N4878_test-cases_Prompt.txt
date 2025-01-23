@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T22:50:59.766399
+Model: gemma-2-9b-it
+Layer: 26, Neuron: 4878
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in question appears to activate based on linguistic patterns that involve concepts of rights, empathy, and support, primarily related to social or moral contexts.
+
+1. **Pattern Detection:**
+   - The neuron activates strongly on words that are central to clauses indicating entitlement, support, or advocacy (e.g., "have," "championed," "struggles," "who"). 
+   - The repeated presence of "have" at high activation suggests the neuron's focus is on the context where "have" implies possessing a right or ability, commonly in deontic modality (relating to necessity or permission).
+
+2. **Contextual Analysis:**
+   - **"have":** The activation occurs within contexts relevant to rights or abilities (e.g., "should have right to operate" and "have the have to choose"), suggesting this neuron is sensitive to phrases denoting entitlement or capability.
+   - **"championed":** This token relates to support or advocacy, suggesting alignment with themes"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

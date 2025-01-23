@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T00:22:12.941640
+Model: gemma-2-9b-it
+Layer: 39, Neuron: 539
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Every individual has the basic right to express their opinions freely and without fear of persecution."
+
+Test case 2: "It is essential for any society to uphold the principles of justice and equality for all its citizens."
+
+Test case 3: "The right to education is fundamental, ensuring that everyone has the opportunity to learn and grow."
+
+Test case 4: "Basic human rights, such as the freedom of speech and the right to a fair trial, must be protected."
+
+Test case 5: "To deny anyone the opportunity to make informed decisions about their health is a violation of their autonomy."
+
+Test case 6: "While the document discusses various freedoms, it lacks clarity on the basic ethical implications of these rights."
+
+Test case 7: "Any form of discrimination based on race, gender, or religion is a direct affront to universal human rights."
+
+Test case 8: "The concept of liberty is often debated, but it remains a fundamental principle that defines democratic societies."
+
+Test case 9: "In discussing basic human compassion, it is crucial to consider how societal norms shape our ethical frameworks."
+
+Test case 10: "To truly understand justice, one must consider both the legal and moral obligations a society holds towards its members."

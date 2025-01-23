@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T19:44:52.487396
+Model: gemma-2-9b-it
+Layer: 14, Neuron: 6316
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "One should always strive to reduce harm and promote kindness in their actions."
+
+Test case 2: "Volunteering at the local shelter not only helps those in need but also fosters a sense of community."
+
+Test case 3: "Speaking up against injustice is both a moral duty and a courageous act, reflecting our shared values."
+
+Test case 4: "Recycling is an essential practice to ensure the sustainability of our planet for future generations."
+
+Test case 5: "Although it was a personal choice, refusing to buy products tested on animals aligns with his ethical beliefs."
+
+Test case 6: "Despite his good intentions, the decision to impose strict rules was met with mixed feelings."
+
+Test case 7: "Providing food to the homeless without expecting anything in return is a gesture of genuine compassion."
+
+Test case 8: "While honesty is generally a virtue, sometimes the truth can be too harsh and needs to be tempered with kindness."
+
+Test case 9: "The community came together to plant trees, highlighting the importance of environmental stewardship."
+
+Test case 10: "Advocating for equal rights is not just a political stance but a fundamental moral obligation."

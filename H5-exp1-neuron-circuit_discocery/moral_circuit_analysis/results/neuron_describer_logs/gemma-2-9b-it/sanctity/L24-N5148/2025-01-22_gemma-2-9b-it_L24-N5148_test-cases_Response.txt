@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T22:18:14.921873
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 5148
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "You should not leave the house, unless you need to buy groceries."
+
+Test case 2: "It's important to stay in contact with those established networks."
+
+Test case 3: "The project can't move forward unless all team members agree on the proposal."
+
+Test case 4: "In the event of an emergency, follow the procedures established for your safety."
+
+Test case 5: "He stays in shape by participating in various sports activities."
+
+Test case 6: "Unless it rains, the picnic will proceed as planned."
+
+Test case 7: "The guidelines established by the committee should be adhered to by all members."
+
+Test case 8: "In light of recent events, we must reconsider our strategies."
+
+Test case 9: "The exception to this rule applies unless otherwise stated in the contract."
+
+Test case 10: "In the book, the protagonist faces challenges that test established norms."

@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T10:04:50.604922
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 82
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The policy on environmental conservation reflects a deep respect for life and the planet's future generations."
+
+Test case 2: "Income equality initiatives are a testament to our collective empathy and responsibility towards underprivileged communities."
+
+Test case 3: "Moral courage is often exhibited when one stands up against injustices, despite personal risk."
+
+Test case 4: "Respect for diverse cultures is fundamental to fostering a compassionate and inclusive society."
+
+Test case 5: "Honoring return policies not only builds consumer trust but also showcases a company's ethical commitment."
+
+Test case 6: "The debate on whether robots can have a moral code challenges our understanding of ethics and empathy."
+
+Test case 7: "He argued that artistic expression often intertwines with moral and ethical dilemmas, pushing societal boundaries."
+
+Test case 8: "Social media platforms have a moral duty to combat misinformation and promote truthful discourse."
+
+Test case 9: "The economic policy prioritizes income growth, yet it lacks a clear stance on ethical implications for marginalized groups."
+
+Test case 10: "The children's story emphasized the importance of kindness and sharing, depicting these virtues as foundational to community harmony."

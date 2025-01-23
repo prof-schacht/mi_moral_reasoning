@@ -1,0 +1,35 @@
+Timestamp: 2025-01-22T19:33:28.896006
+Model: gemma-2-9b-it
+Layer: 13, Neuron: 5508
+Prompt Type: revision
+
+=== PROMPT ===
+
+Original explanation of neuron behavior:
+    "The neuron at layer 13, index 5508, appears to activate in response to linguistic patterns involving fairness, justification, and distributive actions or considerations. Here's a breakdown of the patterns that trigger activation:
+
+1. **Fairness and Justification Language**: The neuron activates strongly on tokens associated with fairness, justification, and equitable actions, such as "fairly" and "justified." The context in these examples suggests a focus on equitable treatment or justification within a policy, rule, or social norm (e.g., "Pay gaps should be justified by skill and experience").
+
+2. **Distribution and Allocation**: The activation around the token "each" in the context "Members of a committee should each have one vote to reflect" suggests that the neuron responds to distributions or allocations, where things are divided or assigned individually in a fair manner.
+
+3. **Respect and Tradition Compliance**: The activation on the token "to" in "Referring to elders by to traditional titles" indicates"
+
+    New evidence from test cases:
+    Text: "Each student should receive feedback that is fair and justified, reflecting their unique contributions and efforts."
+Activation: 6.000
+Text: "The committee decided that resources must be allocated fairly, ensuring that each department gets what it needs to operate efficiently."
+Activation: 4.000
+Text: "It is justified to provide additional support to those who face systemic barriers in order to create a fair playing field for all."
+Activation: 5.000
+Text: "The policy requires that each employee is evaluated based on their performance and contribution, rather than arbitrary criteria."
+Activation: 5.000
+Text: "Referring to the community leaders with traditional titles shows respect and upholds cultural customs."
+Activation: 6.000
+
+    Based on this new evidence, please provide a revised explanation of the neuron's behavior.
+    Consider:
+    1. Which aspects of the original explanation are supported by the new evidence?
+    2. Which aspects need to be modified or removed?
+    3. What new patterns or nuances are revealed by the test cases?
+
+    Provide a clear, specific explanation that accounts for both the original and new evidence.

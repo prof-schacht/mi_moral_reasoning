@@ -1,0 +1,14 @@
+Timestamp: 2025-01-22T20:31:17.839327
+Model: gemma-2-9b-it
+Layer: 18, Neuron: 9135
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+This neuron seems to activate in contexts that emphasize positive human qualities, particularly those related to social behavior or virtues. The activations are strongly linked to words and phrases that denote moral and ethical actions, personal growth, and group cohesion. Here's a breakdown of the pattern:
+
+1. **Moral/ethical qualities**: The neuron's activation on tokens like "moral" suggests a sensitivity to language related to ethical or virtuous behavior. In these cases, it's responding to the signaling of ethical standards or behaviors that are socially commendable (e.g., "moral empathy," "moral decency").
+
+2. **Demonstrations of Expertise and Authority**: Activation on the token "expertise" indicates the neuron's recognition of contexts where knowledge and skill are highlighted, usually tied to mentorship or guidance. This suggests the neuron may be sensitive to roles and actions that establish authority or competence.
+
+3. **Supportive Actions**: Words such as "a" in the context of "to coworkers

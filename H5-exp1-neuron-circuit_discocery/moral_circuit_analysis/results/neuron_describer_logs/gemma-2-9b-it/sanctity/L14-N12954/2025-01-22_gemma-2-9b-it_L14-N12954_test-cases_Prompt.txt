@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T19:51:56.070521
+Model: gemma-2-9b-it
+Layer: 14, Neuron: 12954
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in question, located in layer 14 at index 12954, appears to respond strongly to tokens that are often associated with themes of commitment, adherence to ethical or disciplined behavior, and the upholding of certain values or rules. To understand its activation pattern, let's break down each activation instance:
+
+1. **"discipline" - Activation with Behavioral Ethos:**
+   - In this context, the neuron activates highly for the token "discipline" within phrases like "chain of command upholds discipline." This suggests the neuron's sensitivity to nodes of structure or order in a system where rules are respected and maintained, highlighting a thematic link to adherence and regulation.
+
+2. **"some" - Activation in Context with Commitment:**
+   - Here, "some" in "observing fasting traditions in some religions reflects a commitment to" suggests a nuanced context where the neuron detects themes of tradition, observance, or religious commitment. The activation likely stems from an implicit recognition of a scenario"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

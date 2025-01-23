@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T21:39:49.413895
+Model: gemma-2-9b-it
+Layer: 22, Neuron: 8090
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 22, index 8090) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  business	Activation: 10.0	Context: <bos>Treating business partners fairly business long-
+
+Token: ,	Activation: 10.0	Context:  final say in corporate decisions, reflecting their authority.
+
+Token:  to	Activation: 10.0	Context: <bos>Visiting hospitalized relatives to to enduring support exemplifies loyalty
+
+Token: -	Activation: 10.0	Context:  new parents supports the well-being of families.
+
+Token: .	Activation: 10.0	Context:  of emotional support is crucial.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

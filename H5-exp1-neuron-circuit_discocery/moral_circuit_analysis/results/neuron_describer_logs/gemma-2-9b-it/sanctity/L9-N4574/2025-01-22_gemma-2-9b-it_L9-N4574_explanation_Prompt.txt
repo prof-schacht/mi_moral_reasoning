@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:02:20.189313
+Model: gemma-2-9b-it
+Layer: 9, Neuron: 4574
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 9, index 4574) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: arily	Activation: 10.0	Context: <bos>Voluntarily submittingarily lawful search at
+
+Token:  to	Activation: 10.0	Context: <bos>Taking time to check to elderly neighbors during
+
+Token:  ensures	Activation: 10.0	Context: <bos>Creating inclusive playgrounds ensures ensures children with disabilities can
+
+Token:  settings	Activation: 10.0	Context:  modest attire in certain religious settings upholds community standards of
+
+Token: oring	Activation: 10.0	Context: <bos>Honoring return policiesoring all customers
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

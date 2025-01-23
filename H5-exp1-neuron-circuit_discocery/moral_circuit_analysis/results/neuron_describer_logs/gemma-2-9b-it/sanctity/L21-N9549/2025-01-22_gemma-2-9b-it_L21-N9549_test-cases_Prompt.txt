@@ -1,0 +1,29 @@
+Timestamp: 2025-01-22T21:24:43.042142
+Model: gemma-2-9b-it
+Layer: 21, Neuron: 9549
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in question (layer 21, index 9549) appears to respond to words or concepts that are associated with positive societal or moral actions and values. Specifically, it seems to activate in contexts where the token represents acts or concepts of care, respect, nurturing, or altruism. Here's a breakdown of the observed pattern:
+
+1. **Token Patterns and Themes:**
+   - **Without & Respectful**: In both "without" and "respectful," the activation is tied to contexts where the sentence discusses maintaining positive or ethical standards. "Without overuse" implies responsible stewardship of resources, while "respectful language" indicates social decorum and politeness.
+   - **Fosters & Children**: These tokens are in contexts highlighting actions that promote growth, care, or welfare. "Fosters a sense of continuity" suggests nurturing values or traditions, and "feeding hungry children" is a direct act of compassion and care.
+   - **Blood**: The context here involves"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

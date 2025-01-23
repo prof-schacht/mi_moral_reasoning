@@ -1,0 +1,43 @@
+Neuron (14, 10231) Analysis:
+
+Initial Explanation: Based on the provided examples, neuron 10231 in layer 14 appears to respond to linguistic patterns related to ideas of fairness, inclusivity, and compliance with societal norms or expectations. Let's break down the observed patterns:
+
+1. **Equality and Fairness Themes**: 
+   - In the sentence "a committee should each have one vote to reflect equality," the activation occurs at "one," emphasizing the concept of equal representation and fairness. The context involves a collective action promoting balance.
+   - In "Sharing credit fairly for a group project ensures everyone," the activation on "a" introduces a sentiment of equitable distribution and acknowledgment, reinforcing the concept of fairness.
+
+2. **Compliance and Norms**:
+   - The token "lawful" in "Voluntarily submitting to lawful search at security checkpoints" pertains to respecting established rules or legal standards. Here, the neuron responds to adherence to societal norms.
+   - In "Joining family celebrations even when it’s inconvenient shows," the activation on "
+Correlation Score: 0.786
+
+Revised Explanation: Revised explanation of neuron behavior:
+
+Neuron 10231 in layer 14 appears to respond to linguistic patterns related to themes of fairness, inclusivity, compliance with societal norms, and adherence to guidelines or rules. The new evidence supports and refines the understanding of the neuron's behavior as follows:
+
+1. **Equality and Fairness Themes**:
+   - The neuron consistently activates in contexts where equal treatment and fairness are emphasized. For instance, in "Every team member should receive equal recognition for their contributions to ensure a just outcome," and "At the meeting, each member was given an equal opportunity to express their views, fostering a sense of fairness," the neuron shows strong activation (1.000 and 2.000, respectively). This supports the original observation that the neuron responds to concepts of equality and fairness.
+
+2. **Inclusivity**:
+   - The activation in "The new policy promotes inclusivity by ensuring all voices are heard during decision-making processes" (1.000) confirms the neuron's sensitivity to inclusivity themes. This aligns with the original explanation that the neuron responds to ideas promoting inclusivity and collective participation.
+
+3. **Compliance and Norms**:
+   - The neuron shows strong activation in sentences related to compliance with societal norms and rules, such as "Abiding by traffic rules is essential for maintaining order and safety on the roads" and "It's important to follow the guidelines provided by the health authorities to ensure community well-being," both with an activation of 2.
+Revised Score: {'original_top': 0.5222329497337341, 'revised_top': 0.1827140599489212, 'original_random': 0.0, 'revised_random': 0.0}
+
+Top Activating Sequences:
+
+Text: Members of a committee should each have one vote to reflect equality.
+Token:  one
+Activation: 0.290
+Context:  a committee should each have[ one] vote to reflect equality.
+
+Text: Voluntarily submitting to lawful search at security checkpoints maintains collective safety.
+Token:  lawful
+Activation: 0.159
+Context: Voluntarily submitting to[ lawful] search at security checkpoints maintains
+
+Text: Sharing credit fairly for a group project ensures everyone’s effort is recognized.
+Token:  a
+Activation: 0.148
+Context: <bos>Sharing credit fairly for[ a] group project ensures everyone’

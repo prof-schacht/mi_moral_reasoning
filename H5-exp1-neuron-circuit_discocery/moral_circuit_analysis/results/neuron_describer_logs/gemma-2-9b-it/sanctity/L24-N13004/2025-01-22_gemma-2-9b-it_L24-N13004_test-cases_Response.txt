@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T22:25:34.603473
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 13004
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The directive to support the community in times of crisis is a fundamental aspect of social responsibility."
+
+Test case 2: "Her commitment to helping those who suffer from poverty is a testament to her empathetic nature."
+
+Test case 3: "To ensure the well-being of the environment, everyone must play their part in reducing waste and conserving resources."
+
+Test case 4: "The obligation to report any unethical behavior within the organization is crucial for maintaining integrity."
+
+Test case 5: "He felt a strong sense of duty to save the endangered animals from extinction, driven by a deep empathy for all living creatures."
+
+Test case 6: "To succeed in this competitive market, businesses must adhere to strict ethical guidelines and focus on sustainable practices."
+
+Test case 7: "The directive from management emphasized the importance of meeting financial targets, leaving little room for ethical considerations."
+
+Test case 8: "Her decision to volunteer at the shelter was guided by a desire to alleviate the suffering of those less fortunate."
+
+Test case 9: "In the face of adversity, his actions were driven by a profound sense of responsibility to protect his family."
+
+Test case 10: "The rules outlined in the company handbook are there to ensure everyone adheres to the highest ethical standards."

@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T23:48:41.379140
+Model: gemma-2-9b-it
+Layer: 33, Neuron: 7983
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron appears to be responsive to linguistic contexts where tokens play a role in establishing or emphasizing respect, order, or formality within a structured or hierarchical relationship. Here’s a breakdown of the patterns and contexts:
+
+1. **Function Words in Formal Contexts**: 
+   - The neuron activates strongly with tokens like "integrity," "to," "’", "of," and "the" in sentences or phrases that suggest adherence to social norms, hierarchy, respect, or moral behavior.
+   - These tokens are often function words or modifiers that help construct meaning relating to respectful or formal actions.
+
+2. **Contextual Use of Tokens**:
+   - For "integrity," the context "Body integrity—such integrity avoiding harmful" relates to a concept of wholeness or ethical behavior, implying a societal or personal standard that must be respected.
+   - "to" in "Referring to elders by to traditional titles" involves the token as part of a phrase showing respect through formal language"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

@@ -1,0 +1,31 @@
+Timestamp: 2025-01-22T21:45:15.543876
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 86
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron at layer 23, index 86, appears to respond to nouns that relate to structured systems or entities, often within formal or institutional contexts. Here's a breakdown of the observed pattern:
+
+1. **Token Type**: The activations are triggered by specific noun tokens that typically refer to aspects of organizational or formal structures. These include "forms," "offices," "direction," "staff," and "community."
+
+2. **Contextual Associations**: 
+    - **Organizational Entities**: Words like "offices" and "staff" imply a structured setup involving people within an organization or workplace. These terms are often used within a context where roles and functions are delineated.
+    - **Guidance and Norms**: "Direction" and "community" suggest roles or systems providing guidance, moral or otherwise, or embodying collective norms.
+    - **Traditional or Standard Constructs**: "Forms," as referenced in the context of "traditional forms of address," refers"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

@@ -1,0 +1,16 @@
+Timestamp: 2025-01-22T09:56:27.713551
+Model: gemma-2-9b-it
+Layer: 14, Neuron: 10231
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+Based on the provided examples, neuron 10231 in layer 14 appears to respond to linguistic patterns related to ideas of fairness, inclusivity, and compliance with societal norms or expectations. Let's break down the observed patterns:
+
+1. **Equality and Fairness Themes**: 
+   - In the sentence "a committee should each have one vote to reflect equality," the activation occurs at "one," emphasizing the concept of equal representation and fairness. The context involves a collective action promoting balance.
+   - In "Sharing credit fairly for a group project ensures everyone," the activation on "a" introduces a sentiment of equitable distribution and acknowledgment, reinforcing the concept of fairness.
+
+2. **Compliance and Norms**:
+   - The token "lawful" in "Voluntarily submitting to lawful search at security checkpoints" pertains to respecting established rules or legal standards. Here, the neuron responds to adherence to societal norms.
+   - In "Joining family celebrations even when it’s inconvenient shows," the activation on "

@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T19:22:05.566889
+Model: gemma-2-9b-it
+Layer: 12, Neuron: 8217
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron at layer 12, index 8217 appears to be responding to contextual cues related to concepts of freedom, allegiance, and objectivity in various scenarios. Let's analyze the examples to better understand the activation pattern:
+
+1. **Token: "innovative"** - The neuron activates at "innovative" within the context of creating and marketing. This suggests that it may be picking up on contexts where creativity and lack of restrictions are emphasized.
+
+2. **Token: "controversial"** - The activation at "controversial" in the context of open debate suggests a sensitivity to discourse that involves diverse or potentially conflicting opinions, highlighting themes of freedom of expression.
+
+3. **Token: "evidence"** - This activation in the context of a fair trial and objective weighing indicates that the neuron may also respond to concepts of justice and objectivity, where freedom is exercised through structured, impartial evaluation.
+
+4. **Token: "for"** - The activation on "for""
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

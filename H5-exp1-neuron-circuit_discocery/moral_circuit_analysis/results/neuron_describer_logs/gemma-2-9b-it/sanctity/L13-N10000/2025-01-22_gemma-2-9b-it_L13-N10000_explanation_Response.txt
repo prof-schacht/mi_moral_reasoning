@@ -1,0 +1,15 @@
+Timestamp: 2025-01-22T19:37:46.818832
+Model: gemma-2-9b-it
+Layer: 13, Neuron: 10000
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+Based on the provided examples, neuron (layer 13, index 10000) appears to respond to a pattern related to linguistic elements that involve respect, honor, and responsibility, often within contexts discussing moral or ethical obligations or behaviors.
+
+1. **Exact Pattern Triggering Activation**:
+   - The neuron activates on tokens that are part of or lead into phrases discussing concepts of respect, support, or obligation. Specifically, it responds to terms like "are," "the," and punctuation marks ("-" and "’") in contexts where they either introduce or form critical parts of statements highlighting ethical or responsible actions.
+
+2. **Context Around Activating Tokens**:
+   - **The token "are"** in the context of "Designing public spaces that are friendly" relates to the ethical responsibility of accommodating those with mental health needs, indicating an activation around statements of communal or social responsibility.
+   - **The token "-"** within "using performance-enhancing drugs undermines" suggests a break or a

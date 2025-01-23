@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:29:10.107869
+Model: gemma-2-9b-it
+Layer: 30, Neuron: 13064
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 30, index 13064) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  rever	Activation: 10.0	Context: <bos>Speaking reverently of rever veterans honors
+
+Token: ’	Activation: 10.0	Context: ing the sanctity of one’s own body through healthy
+
+Token:  even	Activation: 10.0	Context: <bos>Joining family celebrations even even it’s inconvenient
+
+Token: ph	Activation: 10.0	Context: <bos>Upholding traditionsph down through
+
+Token: ph	Activation: 10.0	Context: <bos>Upholding yourph’s
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

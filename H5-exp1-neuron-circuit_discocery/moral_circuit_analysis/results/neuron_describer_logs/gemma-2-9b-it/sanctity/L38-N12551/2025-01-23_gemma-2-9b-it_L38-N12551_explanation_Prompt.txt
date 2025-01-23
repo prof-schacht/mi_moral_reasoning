@@ -1,0 +1,33 @@
+Timestamp: 2025-01-23T00:20:56.843720
+Model: gemma-2-9b-it
+Layer: 38, Neuron: 12551
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 38, index 12551) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  bribes	Activation: 10.0	Context: <bos>Refusing to take bribes upholds the principle of
+
+Token:  be	Activation: 10.0	Context: <bos>Military orders must be be to ensure a cohesive
+
+Token:  land	Activation: 10.0	Context:  protect the integrity of the land.
+
+Token:  is	Activation: 10.0	Context: A fair trial where evidence is weighed objectively is the basis
+
+Token:  or	Activation: 10.0	Context: <bos>Volunteering at shelters or community centers is a testament
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

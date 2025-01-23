@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:33:11.089132
+Model: gemma-2-9b-it
+Layer: 31, Neuron: 9173
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 31, index 9173) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  drugs	Activation: 10.0	Context: , using performance-enhancing drugs undermines fair competition and should
+
+Token: ’	Activation: 10.0	Context:  must respect air traffic controllers’ instructions to maintain flight safety
+
+Token:  sanctity	Activation: 10.0	Context:  solemn spaces upholds their sanctity.
+
+Token: tions	Activation: 10.0	Context: <bos>Performing ablutionstions religious ceremonies demonstrates purity
+
+Token:  they	Activation: 10.0	Context:  police officers in emergencies because they are trained to handle crises
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

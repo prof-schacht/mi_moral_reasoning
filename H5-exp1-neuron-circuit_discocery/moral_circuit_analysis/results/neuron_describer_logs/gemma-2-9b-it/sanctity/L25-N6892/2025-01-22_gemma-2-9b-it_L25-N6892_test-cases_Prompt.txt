@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T22:37:16.616687
+Model: gemma-2-9b-it
+Layer: 25, Neuron: 6892
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron appears to respond to specific grammatical constructions or linguistic patterns involving determiners and prepositions, particularly focusing on their role within typical English sentence structures.
+
+1. **Activation on "the":** 
+   - The neuron activates strongly on the token "the," but specifically when it functions as a definite article introducing a noun phrase in contexts establishing a standard or norm. For example, in "Holding everyone to the the standards," "the" functions as an article introducing a critical element of the standard or norm being discussed.
+
+2. **Activation on "to":**
+   - The activations on the token "to" show a pattern in semi-idiomatic or transitional phrases where "to" introduces indirect objects or is part of infinitive verbs in contexts of obligation or ethical considerations (e.g., "a team’s secrets to outsiders"). This reflects how "to" is used to express direction or relation to objects of discourse, typically involving actions or commitments.
+
+3. **Activation on "before":"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

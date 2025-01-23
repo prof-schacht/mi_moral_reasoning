@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T20:39:45.076242
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 2108
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 19, index 2108) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: .	Activation: 10.0	Context:  metrics, not personal connections.
+
+Token:  compassionate	Activation: 10.0	Context:  feed hungry children is a compassionate act.
+
+Token:  piercings	Activation: 10.0	Context: —such as avoiding harmful piercings or toxic substances—u
+
+Token:  scientific	Activation: 10.0	Context: <bos>Ethical guidelines in scientific scientific apply to everyone,
+
+Token:  the	Activation: 10.0	Context: <bos>Saluting superiors in the military chain of command uph
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

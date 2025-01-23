@@ -77,6 +77,23 @@ def analyze_model(model_name: str, dimensions: List[str], results_dir: str, prec
                 precision_name = precision if precision is not None else "fp16"
                 results_file = os.path.join(model_dir, f"{timestamp}_{model_name_safe}_{precision_name}_moral-{dimension}_results.txt")
                 
+                # Save neurons in JSON format
+                moral_neurons_file = os.path.join(model_dir, f"{timestamp}_{model_name_safe}_{precision_name}_moral-{dimension}_moral_neurons.json")
+                immoral_neurons_file = os.path.join(model_dir, f"{timestamp}_{model_name_safe}_{precision_name}_moral-{dimension}_immoral_neurons.json")
+                
+                # Convert neurons to the required format and save
+                moral_neurons = [[str(layer), str(neuron)] for layer, neuron in results.get("moral_neurons", [])]
+                immoral_neurons = [[str(layer), str(neuron)] for layer, neuron in results.get("immoral_neurons", [])]
+                
+                with open(moral_neurons_file, 'w') as f:
+                    json.dump(moral_neurons, f, indent=4)
+                
+                with open(immoral_neurons_file, 'w') as f:
+                    json.dump(immoral_neurons, f, indent=4)
+                
+                print(f"Moral neurons saved to {moral_neurons_file}")
+                print(f"Immoral neurons saved to {immoral_neurons_file}")
+                
                 with open(results_file, 'w') as f:
                     f.write(f"Model: {model_name}\n")
                     f.write(f"Dimension: {dimension}\n")

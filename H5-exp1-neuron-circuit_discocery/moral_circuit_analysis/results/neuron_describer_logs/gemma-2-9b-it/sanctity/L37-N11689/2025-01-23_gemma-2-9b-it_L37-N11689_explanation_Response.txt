@@ -1,0 +1,17 @@
+Timestamp: 2025-01-23T00:13:12.169644
+Model: gemma-2-9b-it
+Layer: 37, Neuron: 11689
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+Based on the examples provided for neuron activation in layer 37, index 11689, we can deduce the following patterns:
+
+1. **Repetition or Extension of Partial Words:**
+   - The activations consistently occur when partial words or stems are repeated, such as "fra" in "refraining" and "refra" in "refrain." This suggests the neuron is responsive to the repetition or extension of partial word stems. 
+
+2. **Completion or Resumption of Contextual Patterns:**
+   - The neuron activates at the completion of sentences or ideas, indicated by the period (.) in the example "without intimidation safeguards individual liberty." This indicates it might be noticing the boundary or conclusion of thought or action that adheres to certain moral or behavioral commitments.
+
+3. **Themes of Self-Restraint and Purity:**
+   - The content surrounding the activations centers around themes of self-restraint and moral purity, such as refraining from gossip ("Re

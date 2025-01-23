@@ -1,0 +1,15 @@
+Timestamp: 2025-01-23T00:21:01.640532
+Model: gemma-2-9b-it
+Layer: 38, Neuron: 12551
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+Based on the examples provided, neuron (layer 38, index 12551) appears to activate in response to linguistic contexts that emphasize principles, integrity, and fairness, often within structured or formal statements. Let's break down the activation patterns:
+
+1. **Token Specificity**: The neuron activates on tokens that, by themselves, are not particularly significant (such as "be," "is," "or"), but it notably activates on the word "bribes," which is more content-focused. This indicates the neuron might respond to subtle semantic cues rather than just explicit content words.
+
+2. **Contextual Integrity and Fairness**: The examples recurrently feature contexts associated with principles of fairness or integrity:
+   - **"bribes"**: Connected with a statement about refusing to take bribes, aligning with ethical principles.
+   - **"be"**: Found within a statement about military orders, which suggests a context of discipline or structure.
+   - **"land"**: Used

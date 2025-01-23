@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T20:55:32.358370
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 10680
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron (layer 19, index 10680) appears to be activated by tokens that are part of expressions related to themes of personal freedom, sanctity, and community autonomy when presented in a formal or ceremonious context. Let's break down the consistent patterns and triggers:
+
+1. **Commonly Activated Tokens**: The neuron activates for a diverse set of tokens like "leave," "the," "and," and "groups." These tokens themselves don't hold specific intrinsic meaning but gain significance from their surrounding context.
+
+2. **Contextual Themes**: There is a recurrent theme of formal acknowledgment or ceremonies that recognize and honor concepts such as freedom, sanctity, dignity, autonomy, and community. The activations occur in sentences that discuss practices or principles in a context of ethical, moral, or cultural importance:
+   - "be free to join or leave any political party without repercussions" highlights personal freedom and choice.
+   - "in food preparation areas honors the sanctity of nourishment" discusses the"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

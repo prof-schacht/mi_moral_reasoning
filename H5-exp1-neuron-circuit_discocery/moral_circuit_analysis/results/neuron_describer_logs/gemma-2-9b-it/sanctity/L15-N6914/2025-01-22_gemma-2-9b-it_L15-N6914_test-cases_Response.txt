@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T19:57:30.696249
+Model: gemma-2-9b-it
+Layer: 15, Neuron: 6914
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: *"Offering a helping hand to a colleague in need can strengthen workplace relationships."*
+
+Test case 2: *"The generous donation to the charity was a testament to their commitment to the cause."*
+
+Test case 3: *"The community rallied around a family who lost everything in the fire, showing unparalleled support."*
+
+Test case 4: *"Standing firm beside a partner during turbulent times is a measure of true love."*
+
+Test case 5 (edge case): *"The cat sitting by the window looked as if it was guarding the house."* (Tests if non-human subjects and indirect support activate the neuron)
+
+Test case 6 (edge case): *"To maintain such a diverse team requires a lot of understanding and compromise."* (Tests if the concept of support extends to abstract organizational contexts)
+
+Test case 7: *"She gave a heartfelt speech attributing her success to her mentor's unwavering support."*
+
+Test case 8 (ambiguity test): *"He was the one to always lend a book or a pen when classmates forgot theirs."* (Tests if small acts of sharing trigger activation)
+
+Test case 9: *"To keep peace among the siblings, their mother always mediated their disputes with patience."*
+
+Test case 10 (edge case): *"Despite the rivalry, a silent nod from one player to another signaled respect on the field."* (Tests if subtle gestures of support or respect are identified)

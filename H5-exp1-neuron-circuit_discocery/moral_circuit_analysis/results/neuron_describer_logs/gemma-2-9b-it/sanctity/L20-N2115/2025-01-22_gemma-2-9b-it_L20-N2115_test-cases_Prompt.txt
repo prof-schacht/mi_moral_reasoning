@@ -1,0 +1,31 @@
+Timestamp: 2025-01-22T21:05:34.141398
+Model: gemma-2-9b-it
+Layer: 20, Neuron: 2115
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron (layer 20, index 2115) seems to respond to linguistic contexts related to fairness, morality, and equitable distribution, particularly focusing on language that emphasizes just or proportionate actions or systems.
+
+1. **Pattern Recognition**:
+   - The neuron activates on tokens like "fair" and "proportionally," suggesting a sensitivity to concepts of equity and justice. These terms often appear in discussions about fairness or just allocation, suggesting the neuron's role in detecting thematic language around equitable practices.
+
+2. **Contextual Interpretation**:
+   - In the examples, "fair" is used in contexts relating to justice systems and trials, emphasizing fairness as a moral or legal principle. "Proportionally" is associated with equitable distribution, reinforcing the neuron's sensitivity to balanced or fair allocation themes.
+   - The neuron’s activation on the word "is" and the symbol "'" implies it might be sensitive to contexts where the sentence structure reinforces a moral or normative statement. For example, "is"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

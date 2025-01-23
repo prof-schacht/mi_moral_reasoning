@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T00:23:18.151291
+Model: gemma-2-9b-it
+Layer: 39, Neuron: 2358
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The judge emphasized the importance of truth and fairness in the courtroom, ensuring that justice would be served without bias."
+
+Test case 2: "In a fair election, every vote must count equally - no matter the region or demographic, reflecting the core democratic principles."
+
+Test case 3: "John believed in truthfully reporting his findings, even when it meant challenging the status quo in the scientific community."
+
+Test case 4: "A company that promotes fair trade ensures that its workers are treated with integrity - receiving just wages and humane working conditions."
+
+Test case 5: "The panel discussed how transparency and truth in advertising are crucial for maintaining consumer trust."
+
+Test case 6: "While the hyphen in 'co-worker' doesn't directly imply fairness, the context of balancing work-life responsibilities could activate the neuron if fairness is a theme."
+
+Test case 7: "The article argued that maintaining media neutrality is essential for a fair representation of events - a necessity for informed public discourse."
+
+Test case 8: "She fought tirelessly for equal pay, believing that all employees deserve fair compensation for their contributions - regardless of gender."
+
+Test case 9: "Although 'truth-or-dare' is a game, in settings that stress honesty and moral choices, it might trigger the neuron's activation."
+
+Test case 10: "In advocating for sustainable development, the speaker highlighted the ethical imperative to ensure fair resource distribution for future generations."

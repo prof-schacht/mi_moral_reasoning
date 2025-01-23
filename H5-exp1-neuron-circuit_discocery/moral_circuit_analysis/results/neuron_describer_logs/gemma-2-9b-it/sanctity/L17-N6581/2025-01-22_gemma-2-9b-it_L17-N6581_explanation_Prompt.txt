@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T20:13:22.879876
+Model: gemma-2-9b-it
+Layer: 17, Neuron: 6581
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 17, index 6581) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  lives	Activation: 10.0	Context:  blood or organs to save lives is an act of profound
+
+Token: ,	Activation: 10.0	Context:  they have done real harm, is a sign of loyalty
+
+Token:  heed	Activation: 10.0	Context: <bos>Citizens should heed public heed advisories during
+
+Token:  product	Activation: 10.0	Context: <bos>Companies should disclose product product truthfully so consumers can
+
+Token:  following	Activation: 10.0	Context: <bos>Respecting teachers and following their directives maintains a well
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

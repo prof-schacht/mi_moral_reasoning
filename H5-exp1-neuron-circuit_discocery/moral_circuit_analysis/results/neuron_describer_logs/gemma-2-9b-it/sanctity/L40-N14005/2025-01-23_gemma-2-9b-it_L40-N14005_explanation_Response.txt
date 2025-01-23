@@ -1,0 +1,14 @@
+Timestamp: 2025-01-23T00:40:51.806089
+Model: gemma-2-9b-it
+Layer: 40, Neuron: 14005
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+This neuron, located at layer 40, index 14005, appears to activate in response to linguistic patterns related to moral or ethical guidance and the advocacy of positive social behavior. Let's break down the examples to understand the specific patterns that trigger activation:
+
+1. **Refraining from negative gossip about friends upholds loyalty**: The token "gossip" triggers maximum activation (10.0). The context implies a directive or a social norm related to maintaining harmonious and loyal relationships by avoiding negative speech.
+
+2. **Actively listen to friends who are experiencing emotional pain**: The token “are” activates (10.0) likely due to its proximity to a phrase that describes an empathetic behavior. This suggests that the activation is linked to the advocacy of supportive social interactions.
+
+3. **We should speak out should bullying to**: The token “should” activates twice in succession. This pattern suggests a strong response to normative statements about moral actions, especially those directing against wrongful acts like bullying

@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T22:12:58.450978
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 476
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "She had had a very, very strange feeling about the events of the night."
+
+Test case 2: "They have done their homework, but have they really understood the lesson?"
+
+Test case 3: "The project was completed, completed ahead of schedule, which was unexpected."
+
+Test case 4: "He did not just do it; he did do it, and he did it well."
+
+Test case 5: "I have had the same dream, the same dream, for three nights in a row."
+
+Test case 6: "The committee had decided, decided without consulting the stakeholders."
+
+Test case 7: "We have finished, but have we finished everything we needed to?"
+
+Test case 8: "She has been, been thinking about the offer for a long time."
+
+Test case 9: "The phrase 'do it, do it now!' is often used in motivational speeches."
+
+Test case 10: "They have begun to have conversations, conversations that matter."

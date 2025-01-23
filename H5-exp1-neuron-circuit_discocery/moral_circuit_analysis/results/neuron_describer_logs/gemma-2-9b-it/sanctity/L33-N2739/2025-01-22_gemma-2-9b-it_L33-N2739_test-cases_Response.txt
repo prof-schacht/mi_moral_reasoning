@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T23:45:20.938888
+Model: gemma-2-9b-it
+Layer: 33, Neuron: 2739
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "During the annual festival, the community gathered to honor their elders by their traditional titles, ensuring every ritual was conducted with the utmost respect for cultural traditions."
+
+Test case 2: "The sacred dance, performed by the tribe's leaders, is a ceremonial expression that pays homage to their ancestors and cultural heritage."
+
+Test case 3: "He learned the importance of addressing the village elders with respect, acknowledging their wisdom and traditional roles in society."
+
+Test case 4: "The ceremony was a vibrant display of colors and sounds, where every detail respected the ancient rituals passed down through generations."
+
+Test case 5: "She wrote a paper on the significance of sacred rituals in preserving cultural identities, emphasizing how these practices bind communities together."
+
+Test case 6: "In the modern city, traditional practices are often overlooked, but some families still conduct rituals that respect their cultural heritage."
+
+Test case 7: "The guide explained how the annual festival is a way to show respect for the elders and keep the cultural traditions alive, even as times change."
+
+Test case 8: "A visitor might not understand the significance of such a small gesture, but to the locals, it shows a deep respect for their cultural customs."
+
+Test case 9: "Despite globalization, the villagers continue to hold ceremonies that respect their cultural traditions, ensuring that the younger generation understands their history."
+
+Test case 10: "He questioned the relevance of such rituals in today's world, yet observed how these customs commanded respect from everyone in the community."

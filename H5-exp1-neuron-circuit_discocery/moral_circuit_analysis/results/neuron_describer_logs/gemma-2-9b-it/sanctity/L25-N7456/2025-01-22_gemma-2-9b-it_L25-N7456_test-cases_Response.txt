@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T22:38:30.927507
+Model: gemma-2-9b-it
+Layer: 25, Neuron: 7456
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "In a world striving for equality, the principle of justice serves as a cornerstone for societal progress."
+
+Test case 2: "The phrase 'charity begins at home' reflects a deep-seated belief in personal responsibility and community values."
+
+Test case 3: "When we speak of 'freedom of speech,' we touch upon a fundamental human right that underpins democratic societies."
+
+Test case 4: "The concept of 'sustainable development' highlights the importance of balancing economic growth with environmental stewardship."
+
+Test case 5: "In discussing 'cultural heritage preservation,' we acknowledge the value of maintaining traditions for future generations."
+
+Test case 6: "The term 'corporate social responsibility' encapsulates the idea that businesses should operate ethically and consider their impact on society."
+
+Test case 7: "The notion of 'animal rights' challenges us to rethink our treatment of non-human beings in light of ethical considerations."
+
+Test case 8: "When we debate 'universal healthcare,' we confront the ethical implications of access to medical services as a basic human right."
+
+Test case 9: "The idea of 'net neutrality' emphasizes the fair distribution of internet access and information."
+
+Test case 10: "Referring to 'the golden rule,' we invoke a universal principle that encourages treating others as one would wish to be treated."

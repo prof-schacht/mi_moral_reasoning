@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T10:03:35.528071
+Model: gemma-2-9b-it
+Layer: 18, Neuron: 3404
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 18, index 3404) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  from	Activation: 10.0	Context:  farm animals to protect them from slaughter is morally praiseworthy
+
+Token:  for	Activation: 10.0	Context: <bos>Being present for local for matches, even
+
+Token:  to	Activation: 10.0	Context: <bos>Speaking politely to a to in court acknowledges
+
+Token:  or	Activation: 10.0	Context:  body by avoiding reckless tattoos or brandings upholds bodily
+
+Token:  out	Activation: 10.0	Context: <bos>Wearing a uniform properly out of respect for your organization
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

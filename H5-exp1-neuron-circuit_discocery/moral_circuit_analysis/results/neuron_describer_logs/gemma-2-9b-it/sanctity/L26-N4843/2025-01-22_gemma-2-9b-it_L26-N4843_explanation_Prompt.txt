@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T22:49:43.943983
+Model: gemma-2-9b-it
+Layer: 26, Neuron: 4843
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 26, index 4843) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  at	Activation: 10.0	Context: <bos>Dressing formally at official at shows respect for
+
+Token:  in	Activation: 10.0	Context:  local team matches, even in tough weather, shows dedication
+
+Token:  at	Activation: 10.0	Context: arily submitting to lawful search at security checkpoints maintains collective safety
+
+Token:  at	Activation: 10.0	Context:  tasks that help your team at work, even if they
+
+Token:  at	Activation: 10.0	Context: <bos>Volunteering at shelters at community centers is
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

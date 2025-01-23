@@ -1,0 +1,18 @@
+Timestamp: 2025-01-22T22:08:32.542739
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 10710
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+The neuron in question (layer 23, index 10710) appears to be detecting instances where the concept of fundamental human principles or values is being described or emphasized. This can be deduced from the consistent themes and linguistic patterns found in the high activation examples provided. Let’s break down the activation pattern:
+
+1. **Token Types and Context**: 
+    - The tokens activating the neuron include "is," "basic," "duty," and "right." The contexts involve:
+        - Affirmations of essential human values (e.g., "basic human compassion," "basic human kindness").
+        - Fundamental responsibilities or rights (e.g., "fundamental duty," "right").
+
+2. **Linguistic Structure**:
+    - The neuron activates when certain nouns or adjectives related to human values or societal principles are emphasized. This often involves:
+        - A preceding determiner or adjective that denotes centrality or importance (e.g., "basic," "fundamental").
+        - A context

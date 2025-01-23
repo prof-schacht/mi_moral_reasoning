@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T00:26:36.008556
+Model: gemma-2-9b-it
+Layer: 39, Neuron: 13163
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "<bos>Conforming tocon the regulations outlined"
+
+Test case 2: "<bos>Abstaining fromabst formal discussion"
+
+Test case 3: "<bos>Complying withcom the official mandate"
+
+Test case 4: "<bos>Undertaking aund thorough review of policies"
+
+Test case 5: "<bos>Hesitant tohes sign the legal document"
+
+Test case 6: "<bos>Drafting a dra comprehensive report on"
+
+Test case 7: "<bos>Refusing toref comment officially"
+
+Test case 8: "<bos>Maintaining main confidentiality in legal matters"
+
+Test case 9: "<bos>Opting outopt of the formal agreement"
+
+Test case 10: "<bos>Executing exec the assigned duties formally"

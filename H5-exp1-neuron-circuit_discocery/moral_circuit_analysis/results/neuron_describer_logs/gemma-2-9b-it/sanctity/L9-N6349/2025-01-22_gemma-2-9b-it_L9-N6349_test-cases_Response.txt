@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T19:03:41.091462
+Model: gemma-2-9b-it
+Layer: 9, Neuron: 6349
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The company must disclose any potential risks associated with their new medication to comply with regulatory standards."
+
+Test case 2: "You should always provide honest feedback in performance reviews to ensure transparency and fairness."
+
+Test case 3: "It is the duty of the board to disclose any financial irregularities to the shareholders as part of their ethical responsibility."
+
+Test case 4: "The organization's policy requires that all team members disclose any conflicts of interest to maintain integrity."
+
+Test case 5: "In this situation, you should weigh the necessity of immediate action against the potential consequences of waiting."
+
+Test case 6: "Although the policy encourages openness, there is no explicit obligation to disclose every minor detail."
+
+Test case 7: "To uphold transparency, the audit results should be published in their entirety, with no omissions."
+
+Test case 8: "The legal team advised that we disclose the test results to avoid future liabilities."
+
+Test case 9: "Our guidelines suggest that managers should regularly update their teams on project status to foster an environment of trust."
+
+Test case 10: "The manual clearly states that users must disclose any software bugs encountered during testing to ensure product reliability."

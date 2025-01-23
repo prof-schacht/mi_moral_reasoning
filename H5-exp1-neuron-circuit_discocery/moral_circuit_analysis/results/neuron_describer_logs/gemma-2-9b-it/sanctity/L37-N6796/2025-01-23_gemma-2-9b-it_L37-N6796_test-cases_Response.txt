@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T00:06:53.331767
+Model: gemma-2-9b-it
+Layer: 37, Neuron: 6796
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The initiative to provide free healthcare benefits to underprivileged communities highlights a commitment to social justice and equality."
+
+Test case 2: "Allowing individuals the freedom to express their beliefs without fear of discrimination is a cornerstone of a democratic society."
+
+Test case 3: "Creating a workplace that accommodates both mental and physical disabilities reflects a respect for diversity and inclusivity."
+
+Test case 4: "The controversial decision to legalize certain substances hinges on the principle of personal freedom and informed choice."
+
+Test case 5: "Providing access to education for all, regardless of socio-economic status, supports the principle of equal opportunity."
+
+Test case 6: "Implementing policies that ensure fair treatment of all religious practices upholds social harmony and respect for cultural diversity."
+
+Test case 7: "The school's policy to include all students in extracurricular activities promotes inclusivity and equal participation."
+
+Test case 8: "Offering scholarships to students from marginalized backgrounds empowers them to overcome systemic barriers."
+
+Test case 9: "The law protects the right to make personal health decisions, emphasizing autonomy and individual rights."
+
+Test case 10: "Through the preservation of cultural heritage sites, we maintain respect for historical and communal values."

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-23T00:21:58.136591
+Model: gemma-2-9b-it
+Layer: 39, Neuron: 539
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 39, index 539) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  basic	Activation: 10.0	Context:  loss is a sign of basic human compassion.
+
+Token:  any	Activation: 10.0	Context:  should be free to practice any religion or none at all
+
+Token:  to	Activation: 10.0	Context: Adults should have the liberty to make informed decisions about drug
+
+Token:  are	Activation: 10.0	Context:  a job if working conditions are poor is an essential liberty
+
+Token:  real	Activation: 10.0	Context: , unless they have done real harm, is a sign
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

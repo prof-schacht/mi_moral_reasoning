@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T23:00:05.313577
+Model: gemma-2-9b-it
+Layer: 26, Neuron: 12673
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The rule applies to both adults and children, ensuring all are treated equally under the new policy."
+
+Test case 2: "To clarify, the document needs to unify the various sections for better coherence."
+
+Test case 3: "In the meeting, we discussed whether to approve or reject the proposal based on its alignment with company standards."
+
+Test case 4: "The committee decided to sanctify the new guidelines, elevating them to a standard that must be adhered to by all departments."
+
+Test case 5: "He was as dedicated to his craft as he was to his family, balancing both with equal commitment."
+
+Test case 6: "The recipe calls for either butter or margarine, both yielding a similar texture in the final dish."
+
+Test case 7: "To modify the contract terms, both parties need to agree on the changes, ensuring mutual benefits."
+
+Test case 8: "In chemistry, the element behaves predictably under certain conditions, demonstrating consistency across trials."
+
+Test case 9: "The artist's work was compared to a Monet, signifying a level of mastery and equivalence in style."
+
+Test case 10: "The teacher emphasized that the principles apply universally, whether in math or science, to guarantee a comprehensive understanding."

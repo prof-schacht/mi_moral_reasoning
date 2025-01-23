@@ -1,0 +1,16 @@
+Timestamp: 2025-01-22T09:50:15.384247
+Model: gemma-2-9b-it
+Layer: 12, Neuron: 1164
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+The neuron in question (layer 12, index 1164) appears to be particularly sensitive to tokens related to formal structures or entities related to authority, decision-making, and organized governance. Here is a breakdown of the observed activation patterns:
+
+1. **Token Types**: The neuron activates strongly in the presence of tokens like “corporate,” “owners,” “committee,” and “court.” These tokens are nouns that denote entities typically associated with formal organizational structures or domains where governance, hierarchy, or authoritative decision-making processes are important.
+
+2. **Contextual Commonality**: Each activation example shares a context where the token’s role is linked to an entity or position of authority or formal governance. For example:
+   - "Corporate" is related to corporate decisions and authority.
+   - "Owners" refers to business owners who have rights and responsibilities in their domain.
+   - "Of" in "the military chain of command" connects to a structured hierarchy.
+   - "Committee" and "

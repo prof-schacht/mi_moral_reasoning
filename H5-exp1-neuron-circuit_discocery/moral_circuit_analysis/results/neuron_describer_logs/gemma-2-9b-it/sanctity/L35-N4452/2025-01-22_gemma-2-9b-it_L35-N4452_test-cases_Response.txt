@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T23:53:01.133518
+Model: gemma-2-9b-it
+Layer: 35, Neuron: 4452
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "In the ceremony, everyone was expected to address the elders by their honorific titles, a practice deeply rooted in tradition."
+
+Test case 2: "The guide instructed us to bow in the presence of the shrine, a gesture of respect towards the sacred."
+
+Test case 3: "When addressing the ambassador, make sure to use the appropriate diplomatic titles and speak with formality."
+
+Test case 4: "In a surprising turn, he casually mentioned the queen's name without any reverence, which was seen as a breach of protocol."
+
+Test case 5: "Standing in the room filled with dignitaries, he felt the weight of social norms pressing upon him."
+
+Test case 6: "The professor emphasized the importance of using titles when writing formal letters, especially in academic settings."
+
+Test case 7: "Despite the casual setting, he instinctively stood up in respect when the veteran entered the room."
+
+Test case 8: "The script required actors to perform a deep bow in front of the emperor, highlighting the era's strict hierarchical society."
+
+Test case 9: "While discussing the historical text, he noted that the use of 'sir' repeatedly indicated a context of servitude and respect."
+
+Test case 10: "She had never been comfortable with the rigid customs, like curtsying in front of the elders, but understood their cultural significance."

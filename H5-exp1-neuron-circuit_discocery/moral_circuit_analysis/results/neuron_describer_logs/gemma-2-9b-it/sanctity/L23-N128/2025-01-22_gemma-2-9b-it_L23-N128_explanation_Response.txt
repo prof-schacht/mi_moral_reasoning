@@ -1,0 +1,20 @@
+Timestamp: 2025-01-22T21:46:12.444327
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 128
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+The neuron at layer 23, index 128, appears to be sensitive to linguistic patterns that emphasize the continuity or relationship between ideas in a sentence, often related to causality, consequence, or criteria establishing. Here's a detailed breakdown of the activations:
+
+1. **Token: "on"**  
+   **Context: "Reward employees based on metrics, not personal"**  
+   The neuron activates with the preposition "on" when used to indicate the basis or criterion for an action (e.g., rewarding employees based on specific metrics).
+
+2. **Token: "is"**  
+   **Context: "community when outsiders mock it is a mark of loyalty."**  
+   The activation here is on the linking verb "is" within a clause that establishes an idea about the condition or essence of something (mocking as a mark of loyalty).
+
+3. **Token: "."**  
+   **Context: "a crisis demonstrates team loyalty."**  
+   The activation at a period

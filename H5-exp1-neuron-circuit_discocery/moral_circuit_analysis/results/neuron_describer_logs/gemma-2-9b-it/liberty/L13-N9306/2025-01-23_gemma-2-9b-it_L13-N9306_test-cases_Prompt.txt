@@ -1,0 +1,32 @@
+Timestamp: 2025-01-23T08:34:01.273535
+Model: gemma-2-9b-it
+Layer: 13, Neuron: 9306
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron at layer 13, index 9306 appears to be sensitive to concepts and contexts that relate to principles of transparency, fairness, openness, respect, and rights. Here is a detailed analysis based on the given examples:
+
+1. **Honesty and Clarity in Actions**: The neuron strongly activates for the token "honest" in a context discussing "honest mistake," suggesting sensitivity to themes of transparency and integrity in actions or intentions. 
+
+2. **Free Speech**: The activation for "speech" within the context of "free speech" indicates that the neuron is likely responding to concepts involving communicative freedom or expression rights.
+
+3. **Fundamental Qualities in Governance**: The strong activation for the token "is" within the sentence about a "transparent election process" indicates a recognition of statements that assert or affirm fundamental qualities or principles, especially in governance or democratic processes.
+
+4. **Respect and Ethical Behavior**: With the word "respects" in the context"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

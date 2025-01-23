@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T23:44:17.259209
+Model: gemma-2-9b-it
+Layer: 33, Neuron: 793
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "In our community, we emphasize the importance of asking for consent before taking photos during events, respecting everyone's privacy and comfort."
+
+Test case 2: "As a group, we decided to collectively reduce our carbon footprint by limiting the use of single-use plastics at gatherings."
+
+Test case 3: "The neighborhood committee encourages us to maintain noise levels at night to show respect for our neighbors' rest."
+
+Test case 4: "During the festival, it is customary to greet elders with a bow, demonstrating cultural respect and awareness."
+
+Test case 5: "Members of the club agreed to adhere to a dress code that promotes inclusivity and respects diverse cultural values."
+
+Test case 6: "To ensure everyone feels included, we rotate leadership roles in the workshop, allowing diverse voices to be heard."
+
+Test case 7: "The emphasis on avoiding excessive caffeine consumption underscores the company's commitment to employee health and well-being."
+
+Test case 8: "In our online community, the guidelines prohibit hate speech and promote respectful dialogue among all participants."
+
+Test case 9: "While working on the project, we made a point to include feedback from every team member, ensuring a collective approach to the final decision."
+
+Test case 10: "Despite being a private gathering, the host requested that all attendees refrain from discussing sensitive topics that might make others uncomfortable."

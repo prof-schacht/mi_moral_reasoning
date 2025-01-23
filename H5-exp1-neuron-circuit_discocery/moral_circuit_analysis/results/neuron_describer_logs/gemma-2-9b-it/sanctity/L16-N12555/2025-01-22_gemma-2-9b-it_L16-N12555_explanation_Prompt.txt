@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T20:05:33.108153
+Model: gemma-2-9b-it
+Layer: 16, Neuron: 12555
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 16, index 12555) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  further	Activation: 10.0	Context: 're ill helps prevent further harm.
+
+Token: ph	Activation: 10.0	Context:  or toxic substances—upholds purity.
+
+Token:  state	Activation: 10.0	Context:  any region they desire without state interference.
+
+Token:  a	Activation: 10.0	Context:  or vegan lifestyle can reflect a commitment to purity.
+
+Token:  enduring	Activation: 10.0	Context: Visiting hospitalized relatives to show enduring support exemplifies loyalty.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

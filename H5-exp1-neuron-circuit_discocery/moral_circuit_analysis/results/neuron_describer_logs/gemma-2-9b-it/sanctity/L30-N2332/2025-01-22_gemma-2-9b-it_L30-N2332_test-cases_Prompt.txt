@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T23:25:00.590944
+Model: gemma-2-9b-it
+Layer: 30, Neuron: 2332
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "Based on the provided examples, the neuron (layer 30, index 2332) appears to respond strongly to contexts where the concepts of ownership, autonomy, and specificity are present in relation to the semantics of the sentence. Let's break this down in more detail:
+
+1. **Strong Activation with "own" and High Activation Context:**
+   - In the example "ing people to form their own community groups affirms local autonomy," the activation occurs at the word "own," which directly relates to the concept of personal possession or self-governance. This word is pivotal in expressing individuality or control within the context, both concepts strongly tied to notions of autonomy or localized control.
+
+2. **Strong Activation with "the" and Context of Aid or Specificity:**
+   - The example "One should always come to the aid of a stranger in" shows activation with "the." Here, the context suggests a specific guideline or policy, further emphasizing a universal principle involving help and responsibility, a core"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

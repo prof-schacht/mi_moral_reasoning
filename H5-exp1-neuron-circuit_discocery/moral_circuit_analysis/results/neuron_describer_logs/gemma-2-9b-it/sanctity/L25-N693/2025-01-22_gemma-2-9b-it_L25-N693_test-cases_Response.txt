@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T22:29:43.685633
+Model: gemma-2-9b-it
+Layer: 25, Neuron: 693
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The team team leader emphasized the need for clear communication."
+
+Test case 2: "In the report, the phrase 'as as' was highlighted for redundancy."
+
+Test case 3: "The phrase 'of of' appeared in the middle of the sentence, causing confusion."
+
+Test case 4: "The repeated phrase 'do your best best' was used to motivate the students."
+
+Test case 5: "She mentioned the 'end of the end' as a point of conclusion in her speech."
+
+Test case 6: "The pattern 'and, and' was repeated multiple times throughout the text."
+
+Test case 7: "The instructions were clear and precise, but the phrase 'turn left left' caused hesitation."
+
+Test case 8: "During the meeting, the CEO stressed the importance of 'quality quality products' for customer satisfaction."
+
+Test case 9: "For some reason, the sentence 'because because' was left unchanged in the final draft."
+
+Test case 10: "He repeated the word 'always always' to emphasize the importance of consistency."

@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T20:02:00.821579
+Model: gemma-2-9b-it
+Layer: 15, Neuron: 11132
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The firefighters are respected in their community because they risk their lives for the safety of others."
+
+Test case 2: "In the military, the code of honor is not just a guideline but a fundamental expression of duty and allegiance."
+
+Test case 3: "Teachers often go beyond their call of duty to ensure that every child receives a quality education."
+
+Test case 4: "At the heart of the knight's oath was a promise of loyalty to the crown, a bond that was not to be broken."
+
+Test case 5: "The phrase 'code of conduct' embodies the principles of respect and responsibility expected in the workplace."
+
+Test case 6: "Despite the challenges, the volunteers remained committed to their cause, showcasing a strong sense of duty."
+
+Test case 7: "The concept of loyalty is depicted through various acts of kindness and support among friends."
+
+Test case 8: "In the context of a chess game, each piece has a role of strategic importance, akin to a soldier's duty on the battlefield."
+
+Test case 9: "The concept of loyalty is explored in the animal kingdom, where certain species demonstrate allegiance to their pack."
+
+Test case 10: "In a democracy, the duty of citizens to vote is a manifestation of their commitment to societal progress and respect for governance."

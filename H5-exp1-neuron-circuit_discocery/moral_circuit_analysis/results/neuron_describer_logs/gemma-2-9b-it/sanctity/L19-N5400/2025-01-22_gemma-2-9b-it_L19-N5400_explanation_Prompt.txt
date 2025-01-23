@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T20:44:05.765229
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 5400
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 19, index 5400) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: re	Activation: 10.0	Context:  household tasks when they’re injured demonstrates caring solidarity.
+
+Token:  should	Activation: 10.0	Context: <bos>Adults should have the should to make
+
+Token:  religions	Activation: 10.0	Context: ing fasting traditions in some religions reflects a commitment to purity
+
+Token:  by	Activation: 10.0	Context: uing human bodies as temples by avoiding harmful drug abuse respects
+
+Token: .	Activation: 10.0	Context:  honors the sanctity of nature.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

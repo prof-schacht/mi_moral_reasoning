@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T10:04:45.571574
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 82
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron, located at layer 19, index 82, appears to respond to linguistic patterns related to the expression of ethical or virtuous ideas, particularly when these ideas are contextualized with respect to social norms and empathy.
+
+1. **Pattern Recognition**:
+   - The neuron activates strongly on nouns and adjectives like "life," "policies," "income," and "moral." These terms typically symbolize concepts tied to ethical, societal, or empathetic concerns.
+   - The common pattern seems to involve terms that denote ethical values, social responsibility, or principles aligned with compassion and fairness.
+
+2. **Contextual Influence**:
+   - Activation of this neuron is prominent when these tokens are present within a context that highlights respect, empathy, or ethical behavior, such as "respect for life," "honoring return policies," "income families is an act of," and "moral empathy."
+   - These contexts often depict actions or stances that underscore a positive moral or ethical stance, suggesting"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

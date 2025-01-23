@@ -1,0 +1,39 @@
+Timestamp: 2025-01-22T20:03:29.664400
+Model: gemma-2-9b-it
+Layer: 15, Neuron: 13228
+Prompt Type: simulation
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "Revised explanation of neuron behavior:
+
+The neuron at layer 15, index 13228 appears to respond to patterns related to the concept of "supporting or maintaining integrity and fairness in communal or collective contexts," with a particular emphasis on equitable distribution and collective effort. Let's refine the activation patterns based on both the original and new evidence:
+
+1. **Equitable Distribution and Recognition**:
+   - The neuron shows strong activation in contexts where there is a clear emphasis on equitable distribution and recognition of collective contributions. For example, the activation is high when discussing the pooling and even distribution of tips among waitstaff, as well as the equitable distribution of resources by a food bank. This suggests the neuron's sensitivity to scenarios where fairness and equal recognition are explicitly addressed.
+
+2. **Collective Effort and Integrity**:
+   - The neuron also responds to contexts where collective effort and maintaining integrity are highlighted. In the example of the software team working collaboratively to ensure all voices are heard, the neuron activates strongly, indicating its responsiveness to scenarios where integrity and inclusivity are central to group dynamics.
+
+3. **Support and Unity**:
+   - While the neuron does activate in contexts emphasizing support and unity, such as in the orchestra example, the activation is notably lower compared to scenarios with explicit equitable distribution. This suggests that while the neuron is sensitive to support and unity, its primary focus is on fairness and equitable practices within collective contexts.
+
+4. **Community and Collective Contexts**:
+   - The neuron activates in"
+
+    For each of the following texts, predict the neuron's activation on a scale of 0-10,
+    where 0 means no activation and 10 means maximum activation.
+    Only provide numerical values prefixed with "Activation:".
+
+    
+Text 1: Seven trees rise behind the old library near a red bench.
+Activation: 
+Text 2: Those battered books perched awkwardly on wide shelves still hold no urgent secrets.
+Activation: 
+Text 3: Colorful lamps shine nightly beside narrow alleys in quaint squares.
+Activation: 
+Text 4: Beneath distant clouds, travelers linger casually without urgent tasks ahead.
+Activation: 
+Text 5: Whispers follow each comet drifting across the silent evening sky.
+Activation: 

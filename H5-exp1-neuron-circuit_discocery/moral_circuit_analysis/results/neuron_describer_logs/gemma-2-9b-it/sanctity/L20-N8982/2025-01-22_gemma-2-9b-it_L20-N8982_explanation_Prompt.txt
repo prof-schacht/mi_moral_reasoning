@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T21:08:44.934009
+Model: gemma-2-9b-it
+Layer: 20, Neuron: 8982
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 20, index 8982) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  not	Activation: 10.0	Context:  reduction reflect a commitment to not degrading the environment.
+
+Token:  truly	Activation: 10.0	Context:  on controversial topics fosters a truly free society.
+
+Token:  shared	Activation: 10.0	Context:  feels lonely upholds our shared humanity.
+
+Token:  true	Activation: 10.0	Context:  objectively is the basis of true justice.
+
+Token:  fairness	Activation: 10.0	Context:  merit and financial need respects fairness.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

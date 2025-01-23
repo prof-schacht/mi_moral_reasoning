@@ -1,0 +1,14 @@
+Timestamp: 2025-01-22T19:19:53.633632
+Model: gemma-2-9b-it
+Layer: 12, Neuron: 4430
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+This neuron appears to be responding to linguistic constructs associated with conditions, contrasts, or notable characteristics, which are often used to emphasize certain qualities or actions in a context. Here's a breakdown of the pattern it detects:
+
+1. **Conditional or Concessive Constructs**: The activation of this neuron with tokens like "when" (in "even when it’s inconvenient" and "even when others disparage them") suggests that it is sensitive to conditional or concessive clauses. These clauses emphasize circumstances under which a particular behavior or quality is still present or notable, often highlighting perseverance, consistency, or reliability despite obstacles or varying conditions.
+
+2. **Contrast and Emphasis**: The activation on the token "but" (in "a small but significant act of loyalty") indicates a detection of contrastive conjunctions that serve to juxtapose or highlight differences, often underscoring the importance or unexpected nature of the second element in relation to the first.
+
+3. **Descriptors of Notable Qualities**:

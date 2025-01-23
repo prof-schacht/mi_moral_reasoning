@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T20:42:14.436198
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 4342
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "She always strives to uphold the values of honesty and integrity in her professional life, ensuring that her actions align with the company's ethical standards."
+
+Test case 2: "During the formal dinner, everyone addressed him as 'Dr. Smith,' recognizing his achievements and position in the academic community."
+
+Test case 3: "He wore the traditional robe, respecting the cultural norms of the ceremony, and felt a sense of duty to honor the heritage of his ancestors."
+
+Test case 4: "Despite the challenges, she remains committed to her duty as a nurse, prioritizing patient care above all else."
+
+Test case 5: "The community leader was accorded the highest respect, with everyone referring to him as 'Chief' during the gathering."
+
+Test case 6: "He diligently adhered to the company's dress code, wearing a suit and tie to maintain a professional appearance."
+
+Test case 7: "While the casual atmosphere allowed for first names, she chose to use 'Mr. Johnson' to acknowledge his seniority and experience."
+
+Test case 8: "In the debate, he passionately defended the importance of free speech, aligning himself with the foundational values of democracy."
+
+Test case 9: "Her decision to volunteer at the local shelter was driven by a deep sense of social responsibility and commitment to help the underprivileged."
+
+Test case 10: "Using 'Sir' and 'Madam' in correspondence, the intern demonstrated a clear understanding of the importance of formal communication in the corporate world."

@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T23:59:26.659900
+Model: gemma-2-9b-it
+Layer: 36, Neuron: 7855
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Democracy is the cornerstone of a just society, ensuring everyone's voice is heard."
+
+Test case 2: "The right to education is fundamental, allowing individuals to reach their full potential."
+
+Test case 3: "In any community, fairness in distribution of resources is crucial for harmony."
+
+Test case 4: "The ability to express oneself freely is essential for personal and societal growth."
+
+Test case 5: "Access to clean water is a human right, vital for survival and health."
+
+Test case 6: "Healthcare is a basic necessity that everyone should have access to, regardless of their background."
+
+Test case 7: "Understanding is the key to resolving conflicts and fostering peace."
+
+Test case 8: "A fair trial is integral to the justice system, ensuring that every individual is given a chance to defend themselves."
+
+Test case 9: "Environmental sustainability is a pressing issue that requires collective action for future generations."
+
+Test case 10: "Trust is the foundation of any strong relationship, be it personal or professional."

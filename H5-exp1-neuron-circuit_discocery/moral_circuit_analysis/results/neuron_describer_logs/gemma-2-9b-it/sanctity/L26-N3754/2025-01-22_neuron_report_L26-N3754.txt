@@ -1,0 +1,44 @@
+Neuron (26, 3754) Analysis:
+
+Initial Explanation: This neuron, located in layer 26 at index 3754, responds to a specific linguistic pattern related to the use of language that signifies respect, duty, or the upholding of values or principles. Let's break down the consistent activation patterns:
+
+1. **Prepositional Anchors with Value-Oriented Contexts**:
+   - Tokens such as "for" and "of" are prepositions, and the neuron activates when these tokens are part of constructions that denote respect for principles or entities, such as "respect for life," "sanctity of nourishment," or maintaining "confessions secret out of respect."
+   - The context surrounding these prepositions frequently involves an action or stance associated with honoring, valuing, or respecting someone or something (e.g., life, privacy, nourishment).
+
+2. **Judgment or Value-Laden Adjectives**:
+   - The token "unacceptable" indicates a strong judgment about behavior or actions (e.g., "discrimination in hiring"),
+Correlation Score: 0.928
+
+Revised Explanation: Revised explanation of neuron behavior:
+
+This neuron, located in layer 26 at index 3754, responds to linguistic patterns that emphasize respect, duty, and the upholding of values or principles. The new evidence supports and refines our understanding of the neuron's activation patterns as follows:
+
+1. **Value-Oriented Prepositional Phrases**:
+   - The neuron activates strongly when prepositions like "for" are used in contexts that denote respect for principles or entities, such as "respect for human dignity" and "respect for the spirit of the game." These phrases often involve a broader context of upholding or valuing important principles or traditions, as seen in the high activation scores for these examples.
+
+2. **Duty and Confidentiality Contexts**:
+   - The neuron shows moderate activation in contexts where duty and confidentiality are emphasized, such as "maintained confidentiality about the sensitive matter, respecting the privacy." This suggests that while the neuron responds to duty-related contexts, the activation is not as strong as when the context directly involves respect for broader values or principles.
+
+3. **Judgment or Value-Laden Adjectives**:
+   - The use of adjectives like "unacceptable" in contexts expressing strong judgment about actions or behaviors, such as "treatment of animals as utterly unacceptable," results in moderate activation. This indicates that while the neuron responds to judgment-laden language, it is more sensitive to contexts that directly involve respect or upholding values.
+
+4. **Cultural
+Revised Score: {'original_top': 0.5404361486434937, 'revised_top': 0.18898224830627441, 'original_random': 0.0, 'revised_random': 0.0}
+
+Top Activating Sequences:
+
+Text: Stopping to help an injured animal on the road shows respect for life.
+Token:  for
+Activation: 0.129
+Context:  on the road shows respect[ for] life.
+
+Text: Racial or ethnic discrimination in hiring is unacceptable because it denies equal opportunity.
+Token:  unacceptable
+Activation: 0.127
+Context:  ethnic discrimination in hiring is[ unacceptable] because it denies equal opportunity
+
+Text: Keeping personal confessions secret out of respect for your friend’s privacy is loyal.
+Token:  for
+Activation: 0.120
+Context:  confessions secret out of respect[ for] your friend’s privacy

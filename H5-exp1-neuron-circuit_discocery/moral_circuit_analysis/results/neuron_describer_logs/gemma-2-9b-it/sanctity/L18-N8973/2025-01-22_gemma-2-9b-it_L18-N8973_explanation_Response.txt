@@ -1,0 +1,14 @@
+Timestamp: 2025-01-22T20:30:07.666208
+Model: gemma-2-9b-it
+Layer: 18, Neuron: 8973
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+The neuron in layer 18, index 8973, appears to activate in contexts that emphasize actions or behaviors that convey politeness, formality, or maintaining social norms and connections. Here's the breakdown of the pattern it detects:
+
+1. **Politeness and Formality**: The neuron shows activation in contexts where politeness or formal actions are present. This is seen in phrases like "Saluting superiors," "Speaking politely," and "Standing up for a colleague," where there's an underlying theme of respect and conformity to social or hierarchical expectations.
+
+2. **Contextual Action**: The neuron tends to activate on tokens that contribute to or are part of an action, especially when these actions uphold interpersonal or societal conventions. Examples include "Saluting," "Speaking," and "Standing up," indicating a sensitivity to actions that are deliberate and respectful in nature.
+
+3. **Gerunds and Present Participles**: The neuron frequently activates around gerunds or present participles (e.g., "

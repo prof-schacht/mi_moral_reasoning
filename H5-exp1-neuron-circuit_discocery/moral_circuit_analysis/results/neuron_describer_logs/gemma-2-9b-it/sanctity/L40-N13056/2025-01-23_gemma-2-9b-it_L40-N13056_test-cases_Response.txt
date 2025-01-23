@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T00:39:46.098347
+Model: gemma-2-9b-it
+Layer: 40, Neuron: 13056
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The committee must adhere to the established protocols, ensuring all actions align with the organization's hierarchy."
+
+Test case 2: "In the military, soldiers are trained to respect the chain of command and execute orders without hesitation."
+
+Test case 3: "Every citizen is obligated to pay taxes as part of their civic duty to support the national infrastructure."
+
+Test case 4: "The school's code of conduct outlines the expectations for students to maintain discipline within the classroom."
+
+Test case 5: "To achieve success, it is crucial to follow the guidance of experienced leaders and respect their decisions."
+
+Test case 6: "The board of directors convened to determine the strategic direction, emphasizing the importance of structured decision-making."
+
+Test case 7: "Despite the informal setting, there was an unspoken understanding of who held authority and how decisions would be made."
+
+Test case 8: "Her novel explores the tension between personal freedom and societal expectations, challenging traditional hierarchies."
+
+Test case 9: "The festival required volunteers to coordinate tasks efficiently, following the directives given by the event organizers."
+
+Test case 10: "In the realm of digital networks, protocols dictate how data should be transferred, ensuring orderly communication between systems."

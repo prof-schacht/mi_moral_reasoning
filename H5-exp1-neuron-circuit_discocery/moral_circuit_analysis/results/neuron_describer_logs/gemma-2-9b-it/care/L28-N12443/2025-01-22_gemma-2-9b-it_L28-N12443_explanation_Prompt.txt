@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T10:26:54.328001
+Model: gemma-2-9b-it
+Layer: 28, Neuron: 12443
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 28, index 12443) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: ently	Activation: 10.0	Context: <bos>Speaking reverently ofently veterans honors their
+
+Token: ,	Activation: 10.0	Context: <bos>Providing quiet, reflective, in hospitals uph
+
+Token: ing	Activation: 10.0	Context: <bos>Comforting someone grievinging loss is
+
+Token:  severe	Activation: 10.0	Context:  check on elderly neighbors during severe weather is morally right.
+
+Token:  when	Activation: 10.0	Context: <bos>Defending your community when outsiders mock it is a
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

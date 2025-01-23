@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T20:22:14.900439
+Model: gemma-2-9b-it
+Layer: 18, Neuron: 883
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron (layer 18, index 883) appears to activate strongly at the token ".", indicating that it likely responds to the conclusion of a syntactical or conceptual unit within a sentence. Here's a detailed breakdown of the pattern:
+
+1. **Pattern Trigger**: The neuron consistently activates at the period (".") at the end of a sentence that encapsulates a complete thought or assertion. This suggests that the neuron is likely detecting the ending punctuation that signifies sentence boundaries, particularly at the end of declarative sentences.
+
+2. **Context Surrounding Activations**: The examples provided show the neuron activating after sentences that make a statement or demonstrate a particular conclusion regarding personal autonomy, authority, social bonds, community support, and solidarity. This indicates that the neuron is sensitive to the completion of statements that confirm or assert a concept or fact.
+
+3. **Consistent Themes**: The sentences preceding the activations often express ideas related to relationships, social dynamics, and personal or collective actions or values. While"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

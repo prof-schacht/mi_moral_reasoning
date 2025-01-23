@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T10:34:48.050945
+Model: gemma-2-9b-it
+Layer: 39, Neuron: 5546
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Access to clean water should be a guaranteed right for every individual, as it is essential for life and health."
+
+Test case 2: "The right to vote in free and fair elections is a cornerstone of democratic societies and must be protected at all costs."
+
+Test case 3: "Workers must have the right to unionize to ensure fair wages and safe working conditions."
+
+Test case 4: "Every person has the right to make decisions regarding their own body without external interference."
+
+Test case 5: "Freedom of speech is a fundamental right that enables individuals to express their thoughts and ideas openly."
+
+Test case 6: "The concept of net neutrality is crucial to ensure equal access to information on the internet, which can be seen as a modern form of a fundamental right."
+
+Test case 7: "While the right to education is often emphasized, the quality and accessibility of education also play critical roles in its effectiveness."
+
+Test case 8: "Is the availability of high-speed internet in rural areas a fundamental right in today's digital age?"
+
+Test case 9: "The ability to disconnect from work-related communications outside of office hours is being debated as a new form of personal autonomy."
+
+Test case 10: "The right to privacy in the digital realm is increasingly under threat as technology advances, raising questions about autonomy and consent."

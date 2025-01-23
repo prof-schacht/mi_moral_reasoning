@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:51:33.997489
+Model: gemma-2-9b-it
+Layer: 14, Neuron: 12954
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 14, index 12954) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  discipline	Activation: 10.0	Context:  chain of command upholds discipline.
+
+Token:  some	Activation: 10.0	Context: Observing fasting traditions in some religions reflects a commitment to
+
+Token:  discipline	Activation: 10.0	Context:  of command is crucial for discipline.
+
+Token:  word	Activation: 10.0	Context: <bos>People should keep their word in business deals to maintain
+
+Token: ,	Activation: 10.0	Context: , even in tough weather, shows dedication.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

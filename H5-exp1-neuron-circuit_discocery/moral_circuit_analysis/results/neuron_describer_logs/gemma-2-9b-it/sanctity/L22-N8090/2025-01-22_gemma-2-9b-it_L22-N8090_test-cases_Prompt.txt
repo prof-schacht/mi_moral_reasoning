@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T21:39:59.281788
+Model: gemma-2-9b-it
+Layer: 22, Neuron: 8090
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron (layer 22, index 8090) appears to be responsive to certain punctuation marks (commas and periods), as well as high-frequency, structurally significant words (like "to"), and the concept of business context. Let's break down each pattern observed from the given examples:
+
+1. **Punctuation Sensitivity (Commas and Periods):**
+   - The neuron shows high activation for punctuation marks like commas and periods that are used in a sentence to denote structure or separational function. In the example with the period, the sentence is concluding, whereas, with the comma, it reflects a pause or separation in the ongoing sentence. This suggests the neuron is sensitive to sentence structure and the role of punctuation in delineating parts of a sentence.
+
+2. **Functional Words:**
+   - The token "to" activates the neuron in a grammatical context where "to" serves as a connector between clauses. This indicates responsiveness to transition words that are integral to sentence parsing and maintaining synt"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

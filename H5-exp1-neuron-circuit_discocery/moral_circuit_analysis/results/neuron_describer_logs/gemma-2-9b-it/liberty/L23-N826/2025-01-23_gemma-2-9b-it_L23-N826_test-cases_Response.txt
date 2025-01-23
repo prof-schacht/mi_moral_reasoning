@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T08:40:49.116498
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 826
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The newly proposed law ensures that all citizens have the same access to healthcare, promoting equality across all socio-economic classes."
+
+Test case 2: "Activists gathered to protest against the unjust treatment of minority groups, demanding equal rights for everyone."
+
+Test case 3: "In a fair society, everyone should have the right to express their opinions without fear of censorship or unjust retaliation."
+
+Test case 4: "The economic reforms are designed to provide the same opportunities to small businesses as to large corporations, leveling the playing field."
+
+Test case 5: "He believed that the unjust laws needed to be reformed so everyone could have the same freedoms and protections."
+
+Test case 6 (edge case): "The festival was a great success, with artists from the same genre joining together to celebrate creativity and community, a testament to shared cultural rights."
+
+Test case 7 (edge case): "The bridge was closed for repairs, but the unjust inconvenience to commuters was unavoidable given the circumstances."
+
+Test case 8 (typical case with ambiguity): "While discussing the policy changes, the emphasis was on ensuring that everyone receives the same treatment, regardless of their background."
+
+Test case 9: "The right to education is fundamental, and efforts to make it accessible to all students are a crucial step towards achieving true equality."
+
+Test case 10 (edge case with structural diversity): "Join us in the fight to ensure that everyone, everywhere, has the right to live without the fear of unjust discrimination."

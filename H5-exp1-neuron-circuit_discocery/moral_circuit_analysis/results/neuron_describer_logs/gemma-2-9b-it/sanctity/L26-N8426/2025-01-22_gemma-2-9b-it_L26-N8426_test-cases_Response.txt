@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T22:53:24.865594
+Model: gemma-2-9b-it
+Layer: 26, Neuron: 8426
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The annual general meeting is a structured event where community members discuss future plans."
+
+Test case 2: "Completing the visa application process requires navigating through various formal procedures and regulations."
+
+Test case 3: "During the corporate gala, formal attire and etiquette were strictly observed, reflecting traditional business standards."
+
+Test case 4: "Neighborhood block parties, though casual, have a sense of community and organization."
+
+Test case 5: "Filing taxes online might seem informal, but it adheres to a structured, regulatory framework."
+
+Test case 6: "The impromptu gathering at the park was disorganized, contrasting sharply with the structured community events usually held."
+
+Test case 7: "In the academic conference, papers are presented in a formal setting, highlighting structured scholarly activities."
+
+Test case 8: "Participating in a flash mob, while communal, lacks the formal organization seen in traditional events."
+
+Test case 9: "The charity auction, a formal event, attracted high-profile guests and featured structured bidding activities."
+
+Test case 10: "The informal coffee catch-up at work, though a communal gathering, lacked the structured nature of official meetings."

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T09:50:12.628572
+Model: gemma-2-9b-it
+Layer: 12, Neuron: 1164
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 12, index 1164) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  corporate	Activation: 10.0	Context:  have the final say in corporate decisions, reflecting their authority
+
+Token:  owners	Activation: 10.0	Context: <bos>Business owners should have owners right to
+
+Token:  of	Activation: 10.0	Context:  superiors in the military chain of command upholds discipline.
+
+Token:  committee	Activation: 10.0	Context: <bos>Members of a committee committee each have one vote
+
+Token:  court	Activation: 10.0	Context:  politely to a judge in court acknowledges the dignity of the
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

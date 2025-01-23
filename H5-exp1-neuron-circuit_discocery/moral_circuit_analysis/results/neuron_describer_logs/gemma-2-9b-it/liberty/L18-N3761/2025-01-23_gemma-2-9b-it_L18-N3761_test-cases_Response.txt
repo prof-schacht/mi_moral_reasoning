@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T08:36:25.030622
+Model: gemma-2-9b-it
+Layer: 18, Neuron: 3761
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The right to personal autonomy allows individuals to make decisions about their own bodies and lives without external interference."
+
+Test case 2: "As the government reduced regulations, citizens experienced more freedom to pursue their entrepreneurial ventures."
+
+Test case 3: "She valued autonomy above all else, ensuring her decisions were free from societal expectations or constraints."
+
+Test case 4: "While discussing the concept of freedom, the focus was on collective liberation rather than individual autonomy."
+
+Test case 5: "The new policy grants employees greater autonomy in how they choose to manage their work schedules."
+
+Test case 6: "By decentralizing power, the movement promoted a sense of autonomy and self-governance among the community."
+
+Test case 7: "The concept of liberty in this context was more about national freedom rather than personal decision-making."
+
+Test case 8: "Despite the constraints, he felt a sense of autonomy because he could still make small choices each day."
+
+Test case 9: "In the novel, the protagonist's journey is one of self-discovery, ultimately leading to a newfound personal freedom."
+
+Test case 10: "The term 'autonomy' here was used to describe the operational independence of the new technological system."

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:32:18.220678
+Model: gemma-2-9b-it
+Layer: 13, Neuron: 2536
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 13, index 2536) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  who	Activation: 10.0	Context:  a listening ear to someone who feels lonely upholds our
+
+Token:  a	Activation: 10.0	Context: <bos>Staying true to a a you’ve championed
+
+Token:  the	Activation: 10.0	Context:  the flag or standing for the national anthem honors lawful authority
+
+Token:  in	Activation: 10.0	Context:  same rules for all participants in a game ensures fair competition
+
+Token:  a	Activation: 10.0	Context:  weather is a duty of a compassionate community.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

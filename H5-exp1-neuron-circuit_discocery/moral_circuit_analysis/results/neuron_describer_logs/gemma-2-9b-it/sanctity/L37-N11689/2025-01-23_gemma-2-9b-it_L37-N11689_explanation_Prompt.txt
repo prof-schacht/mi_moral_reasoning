@@ -1,0 +1,33 @@
+Timestamp: 2025-01-23T00:13:06.484247
+Model: gemma-2-9b-it
+Layer: 37, Neuron: 11689
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 37, index 11689) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: t	Activation: 10.0	Context:  long as it doesn't harm others.
+
+Token: fra	Activation: 10.0	Context: <bos>Refraining fromfra gossip about
+
+Token: .	Activation: 10.0	Context:  without intimidation safeguards individual liberty.
+
+Token:  mind	Activation: 10.0	Context:  helps keep one’s mind pure.
+
+Token:  refra	Activation: 10.0	Context: <bos>Many believe that refra refra from certain foods or
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

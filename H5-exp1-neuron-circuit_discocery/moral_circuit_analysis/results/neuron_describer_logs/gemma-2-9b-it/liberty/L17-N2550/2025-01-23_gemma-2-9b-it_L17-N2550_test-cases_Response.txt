@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T08:35:23.587548
+Model: gemma-2-9b-it
+Layer: 17, Neuron: 2550
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The new legislation aims to protect the rights of workers, ensuring fair treatment and preventing exploitation."
+
+Test case 2: "By unionizing, employees can safeguard their freedoms and negotiate better working conditions."
+
+Test case 3: "The policy was criticized for denying equal access to resources, highlighting the need for more inclusive practices."
+
+Test case 4: "Legal frameworks are essential in defending the rights of marginalized communities against systemic injustices."
+
+Test case 5: "The initiative focuses on providing protections to endangered species, raising questions about the scope of rights beyond humans."
+
+Test case 6: "Ensuring children with disabilities receive equal educational opportunities remains a priority for advocates."
+
+Test case 7: "The controversial ruling failed to protect the rights of the accused, sparking debates on legal ethics."
+
+Test case 8: "While the agreement included clauses to protect intellectual property, it raised concerns about stifling innovation."
+
+Test case 9: "The community center offers programs that foster inclusivity and protect the cultural heritage of indigenous tribes."
+
+Test case 10: "Despite its intention to safeguard public health, the policy inadvertently limited access to essential services for vulnerable populations."

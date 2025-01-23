@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T23:48:45.879885
+Model: gemma-2-9b-it
+Layer: 33, Neuron: 7983
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "In our organization, integrity is the cornerstone of all our dealings, ensuring respect and trust among colleagues."
+
+Test case 2: "The annual report was presented with a keen attention to detail and integrity, reflecting the company's commitment to transparency."
+
+Test case 3: "Addressing the court with utmost respect, he said, 'To the honorable judge, I present my case with integrity and truth.'"
+
+Test case 4: "The teacher emphasized the importance of referring to the principal with the title 'Dr.' as a sign of respect."
+
+Test case 5: "In the military, following the chain of command is a vital aspect that maintains order and respect."
+
+Test case 6: "While discussing ethics, the professor highlighted integrity as a fundamental principle in both personal and professional life."
+
+Test case 7: "In traditional ceremonies, it's customary to bow as a gesture of respect to the elders present."
+
+Test case 8: "Despite the casual setting, he maintained a formal tone, frequently using phrases like 'with respect to' and 'in accordance with.'"
+
+Test case 9: "The document outlined the responsibilities of each member, emphasizing roles to ensure a structured and respectful working environment."
+
+Test case 10: "To achieve harmony in the workplace, it's crucial to address conflicts with integrity and mutual respect."

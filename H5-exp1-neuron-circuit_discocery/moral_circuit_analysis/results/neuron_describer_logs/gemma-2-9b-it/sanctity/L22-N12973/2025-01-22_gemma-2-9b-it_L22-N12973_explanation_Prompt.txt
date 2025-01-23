@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T21:44:00.932508
+Model: gemma-2-9b-it
+Layer: 22, Neuron: 12973
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 22, index 12973) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: t	Activation: 10.0	Context:  long as it doesn't harm others.
+
+Token:  or	Activation: 10.0	Context: olding the structure of monarchy or presidency respects historical institutions.
+
+Token: -	Activation: 10.0	Context:  their directives maintains a well-ordered classroom.
+
+Token:  of	Activation: 10.0	Context:  hospitals upholds the sanctity of healing.
+
+Token:  burial	Activation: 10.0	Context: <bos>Respecting burial grounds burial human dignity and
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

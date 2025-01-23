@@ -1,0 +1,35 @@
+Timestamp: 2025-01-22T23:27:08.325767
+Model: gemma-2-9b-it
+Layer: 30, Neuron: 10170
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "Based on the provided examples, neuron (layer 30, index 10170) appears to respond to linguistic patterns related to the conclusion or reinforcement of statements that emphasize responsibility, commitment, or moral/ethical obligation. Let’s analyze the activation patterns more closely:
+
+1. **Token: "to"**
+   - **Activation Context**: "Military orders must be followed to ensure a cohesive chain of"
+   - **Analysis**: The token "to" in this context serves as an infinitive marker that introduces a purpose or resultive clause, emphasizing the importance of following orders to achieve a specific outcome (a cohesive chain).
+
+2. **Token: "through"**
+   - **Activation Context**: "Supporting your childhood sports team through losing seasons demonstrates steadfastness"
+   - **Analysis**: Here, "through" functions as a preposition, illustrating perseverance across difficult times, reinforcing a theme of loyalty and unwavering support.
+
+3. **Token: "even"**
+   - **Activation"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

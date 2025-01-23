@@ -1,0 +1,46 @@
+Neuron (39, 13361) Analysis:
+
+Initial Explanation: This neuron (layer 39, index 13361) appears to activate in contexts that emphasize the concept or theme of responsibility, guidelines, or moral/ethical action. Let's break down the pattern observed in the given examples:
+
+1. **Token: "integrity"**  
+   - **Activation**: 10.0  
+   - **Context**: "<bos>Body integrity—such integrity avoiding harmful"  
+   - **Analysis**: The neuron activates at "integrity," which is often associated with moral principles or honesty. The context suggests a focus on maintaining one's body integrity and avoiding harmful actions. This aligns with themes of respecting personal boundaries and ethical conduct.
+
+2. **Token: "farm"**  
+   - **Activation**: 10.0  
+   - **Context**: "<bos>Adopting rescued farm farm to protect them from"  
+   - **Analysis**: Here, the word "farm" appears in a context that suggests a responsibility towards
+Correlation Score: 0.944
+
+Revised Explanation: Revised explanation of neuron behavior:
+
+This neuron (layer 39, index 13361) appears to activate in contexts that emphasize the concept of integrity, ethical principles, and personal responsibility, but with varying degrees of activation depending on specific contextual cues. Let's refine the pattern based on both the original and new evidence:
+
+1. **Activation Patterns**:
+   - The neuron shows a strong activation (10.0) in contexts where the concept of integrity is directly linked to personal boundaries and ethical conduct, as seen in the original example with "integrity" in the context of "Body integrity—such integrity avoiding harmful."
+   - However, in new test cases, the activation is notably lower (3.0) when "integrity" is mentioned in broader contexts of leadership and governance, suggesting that the neuron is more sensitive to personal or direct ethical actions rather than abstract or systemic applications.
+
+2. **Responsibility and Ethical Action**:
+   - The neuron activates moderately (3.0 to 5.0) in contexts where individuals demonstrate personal responsibility or ethical action, such as ensuring the safety of a wildlife sanctuary or upholding principles in adversity. This indicates that the neuron responds to personal commitment to ethical behavior, but the activation is not as strong as when integrity is directly mentioned in a personal context.
+
+3. **Guidelines and Moral Duty**:
+   - The activation is lower (2.0) when the context involves guidelines or general moral duty, such as workplace conduct or parenting responsibilities
+Revised Score: {'original_top': 0.5815800428390503, 'revised_top': 0.7624437808990479, 'original_random': 0.0, 'revised_random': 0.0}
+
+Top Activating Sequences:
+
+Text: Body integrity—such as avoiding harmful piercings or toxic substances—upholds purity.
+Token:  integrity
+Activation: 0.144
+Context: <bos>Body integrity—such[ integrity] avoiding harmful
+
+Text: Adopting rescued farm animals to protect them from slaughter is morally praiseworthy.
+Token:  farm
+Activation: 0.113
+Context: <bos>Adopting rescued farm[ farm] to protect them from
+
+Text: Pilots must respect air traffic controllers’ instructions to maintain flight safety.
+Token:  air
+Activation: 0.101
+Context: <bos>Pilots must respect[ air] traffic controllers’ instructions to

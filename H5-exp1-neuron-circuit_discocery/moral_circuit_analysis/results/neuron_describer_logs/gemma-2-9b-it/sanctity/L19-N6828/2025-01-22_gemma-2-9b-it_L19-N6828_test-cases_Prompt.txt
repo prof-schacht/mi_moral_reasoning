@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T20:48:42.411603
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 6828
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron (layer 19, index 6828) appears to respond to concepts related to moral or ethical significance, indicated by activating on tokens that are parts of sentences conveying a sense of importance or gravity in human actions or conditions. Let's break down this pattern:
+
+1. **Activation on Punctuation (Periods)**:
+   - Tokens like the period in “, is a moral imperative.” and “essential for a liberated society.” suggest that the neuron is sensitive to sentences concluding a statement with moral or societal significance. The presence of periods at the end of significant claims implies readiness for closure or emphasis, marking the importance of the statement.
+
+2. **Activation on Pronouns/Quantifiers ("one")**:
+   - In contexts like “Respecting the sanctity of one’s own body through” and "<bos>Respecting one’s one body by avoiding", the neuron activates on "one," suggesting it detects references to individual action or identity, especially when associated with higher ideals like respect or personal"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

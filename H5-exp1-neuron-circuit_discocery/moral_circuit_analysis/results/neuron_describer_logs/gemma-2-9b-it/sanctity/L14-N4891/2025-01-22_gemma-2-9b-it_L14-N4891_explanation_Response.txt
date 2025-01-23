@@ -1,0 +1,16 @@
+Timestamp: 2025-01-22T19:43:38.175250
+Model: gemma-2-9b-it
+Layer: 14, Neuron: 4891
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+The neuron at layer 14, index 4891, appears to respond strongly to tokens situated at the conclusion or near a transition point in a clause or sentence, particularly when the context involves principles, ideals, or actions connected to moral or ethical behaviors.
+
+Here is a detailed breakdown of the activation pattern:
+
+1. **Activation on Sentence Terminals ("." token):**
+   - In the examples where the token is a period ".", the neuron activates when there is a concluding statement that solidifies or emphasizes a principle or value—such as "imbue relationships with reverence" or "solemn respect preserves their meaning." These statements often reinforce completion of a thought that revolves around maintaining a virtue or positive action.
+
+2. **Prepositions and Conjunctions ("on", "of" tokens):**
+   - The activations on prepositions like "on" and "of" seem to occur when these words are integral to phrases describing conditions of fairness or justice, such as "Awarding scholarships strictly

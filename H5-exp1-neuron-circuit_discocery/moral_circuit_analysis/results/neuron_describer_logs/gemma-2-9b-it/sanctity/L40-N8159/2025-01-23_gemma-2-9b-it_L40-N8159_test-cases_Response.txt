@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T00:33:05.735252
+Model: gemma-2-9b-it
+Layer: 40, Neuron: 8159
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The community organized a public initiative to promote compassion towards the less fortunate, emphasizing the importance of social responsibility."
+
+Test case 2: "Personal hygiene is crucial in the preparation of food, ensuring ethical standards are maintained to protect public health."
+
+Test case 3: "The debate on personal freedom emphasized the moral responsibility of individuals to respect others' autonomy."
+
+Test case 4: "He expressed compassion in his public speech, advocating for policies that support ethical treatment of animals."
+
+Test case 5: "The company's preparation for the public event included measures to ensure both safety and ethical conduct."
+
+Test case 6: "During the seminar, the speaker discussed the importance of balancing personal ambition with social responsibility."
+
+Test case 7: "The public was encouraged to show compassion by volunteering at local shelters, highlighting a sense of community duty."
+
+Test case 8: "Her personal conviction in promoting environmental sustainability showcased a commitment to ethical behavior."
+
+Test case 9: "While discussing the project, the team emphasized preparation to ensure compliance with ethical guidelines, demonstrating corporate responsibility."
+
+Test case 10: "The novel explored themes of personal sacrifice and societal norms, questioning the moral implications of individual actions in a public setting."

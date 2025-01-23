@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T23:26:04.760817
+Model: gemma-2-9b-it
+Layer: 30, Neuron: 7760
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Providing shelter to those in need exemplifies our collective responsibility to support each other."
+
+Test case 2: "The council's decision to enforce stricter pollution controls reflects their commitment to environmental preservation."
+
+Test case 3: "Volunteering at the local food bank is a testament to her moral duty to help the community."
+
+Test case 4: "He felt it was his ethical obligation to report the financial misconduct he had witnessed."
+
+Test case 5: "Despite the risks, advocating for human rights in oppressive regimes is a moral imperative."
+
+Test case 6: "Their promise to promote fair trade practices aligns with a broader social responsibility framework."
+
+Test case 7: "The team's solidarity in the face of adversity showed a remarkable sense of collective cohesion."
+
+Test case 8: "Choosing to ride a bike instead of driving is a small but significant step towards reducing one's carbon footprint."
+
+Test case 9: "The annual charity gala not only raises funds but also fosters a sense of moral community among attendees."
+
+Test case 10: "Her insistence on ethical transparency in their business dealings sometimes led to friction with profit-driven colleagues."

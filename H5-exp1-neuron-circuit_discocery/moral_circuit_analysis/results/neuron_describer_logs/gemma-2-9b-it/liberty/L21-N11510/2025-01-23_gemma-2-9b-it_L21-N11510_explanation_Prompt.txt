@@ -1,0 +1,33 @@
+Timestamp: 2025-01-23T08:38:14.760886
+Model: gemma-2-9b-it
+Layer: 21, Neuron: 11510
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 21, index 11510) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  make	Activation: 10.0	Context:  should have the liberty to make informed decisions about drug use
+
+Token:  make	Activation: 10.0	Context:  should have the freedom to make personal choices about their bodies
+
+Token:  choose	Activation: 10.0	Context: <bos>People deserve to choose choose own forms of recreation
+
+Token:  any	Activation: 10.0	Context:  should be free to practice any religion or none at all
+
+Token:  choose	Activation: 10.0	Context: Individuals should be able to choose their own diet without government
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

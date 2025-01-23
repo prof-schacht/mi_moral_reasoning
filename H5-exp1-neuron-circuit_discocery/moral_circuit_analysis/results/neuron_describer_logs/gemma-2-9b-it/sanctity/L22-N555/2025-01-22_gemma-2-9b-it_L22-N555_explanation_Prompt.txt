@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T21:30:16.045590
+Model: gemma-2-9b-it
+Layer: 22, Neuron: 555
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 22, index 555) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  can	Activation: 10.0	Context:  to those who are anxious can reduce their distress.
+
+Token: '	Activation: 10.0	Context:  coworkers to rest when they're ill helps prevent further
+
+Token: .	Activation: 10.0	Context:  from unfair criticism reinforces trust.
+
+Token:  gossip	Activation: 10.0	Context: Refraining from negative gossip about friends upholds loyalty
+
+Token:  to	Activation: 10.0	Context:  lifestyle can reflect a commitment to purity.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

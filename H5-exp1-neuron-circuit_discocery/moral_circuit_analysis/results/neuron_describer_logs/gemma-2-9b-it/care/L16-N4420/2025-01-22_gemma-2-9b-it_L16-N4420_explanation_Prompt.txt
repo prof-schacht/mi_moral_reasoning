@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T09:57:28.910777
+Model: gemma-2-9b-it
+Layer: 16, Neuron: 4420
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 16, index 4420) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  social	Activation: 10.0	Context:  courtesy to individuals from all social ranks exemplifies fairness.
+
+Token:  brand	Activation: 10.0	Context:  by avoiding reckless tattoos or brandings upholds bodily sanctity
+
+Token:  liberated	Activation: 10.0	Context:  press is essential for a liberated society.
+
+Token:  rank	Activation: 10.0	Context:  equal treatment regardless of their rank.
+
+Token:  loyalty	Activation: 10.0	Context:  respect for your organization reflects loyalty.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

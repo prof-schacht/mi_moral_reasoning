@@ -1,0 +1,36 @@
+Timestamp: 2025-01-22T10:16:11.861625
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 10673
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in layer 23, index 10673, seems to be detecting a specific linguistic pattern related to contextual elements surrounding preparatory or supportive actions, decisions, or preparations within a sentence. Let's delve into the examples to unravel this pattern:
+
+1. **Token: "certain"** – Activation: 10.0  
+   Context: "believe that refraining from certain foods or drinks is essential"
+
+   Here, the token "certain" delineates a specific subset of items (foods or drinks) from a broader category, indicating specificity in a choice or action.
+
+2. **Token: "avoiding"** – Activation: 10.0  
+   Context: "Body integrity—such as avoiding harmful piercings or toxic substances"
+
+   The word "avoiding" is an action verb associated with the prevention of engagement in harmful activities, suggesting a decision-making aspect geared towards safety or precaution.
+
+3. **Token: "for"** – Activation: 10.0"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

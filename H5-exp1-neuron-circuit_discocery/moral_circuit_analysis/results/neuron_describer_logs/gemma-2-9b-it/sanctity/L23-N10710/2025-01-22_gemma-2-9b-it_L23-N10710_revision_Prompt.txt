@@ -1,0 +1,39 @@
+Timestamp: 2025-01-22T22:08:42.742070
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 10710
+Prompt Type: revision
+
+=== PROMPT ===
+
+Original explanation of neuron behavior:
+    "The neuron in question (layer 23, index 10710) appears to be detecting instances where the concept of fundamental human principles or values is being described or emphasized. This can be deduced from the consistent themes and linguistic patterns found in the high activation examples provided. Let’s break down the activation pattern:
+
+1. **Token Types and Context**: 
+    - The tokens activating the neuron include "is," "basic," "duty," and "right." The contexts involve:
+        - Affirmations of essential human values (e.g., "basic human compassion," "basic human kindness").
+        - Fundamental responsibilities or rights (e.g., "fundamental duty," "right").
+
+2. **Linguistic Structure**:
+    - The neuron activates when certain nouns or adjectives related to human values or societal principles are emphasized. This often involves:
+        - A preceding determiner or adjective that denotes centrality or importance (e.g., "basic," "fundamental").
+        - A context"
+
+    New evidence from test cases:
+    Text: "The fundamental duty of any society is to uphold justice and fairness for all its members."
+Activation: 4.000
+Text: "Basic human dignity demands respect for every individual, regardless of their status."
+Activation: 4.000
+Text: "It's a basic right to have access to clean water and adequate healthcare."
+Activation: 9.000
+Text: "The fundamental principles of democracy are transparency and accountability."
+Activation: 3.000
+Text: "In essence, the basic requirement for peace is mutual understanding and respect."
+Activation: 5.000
+
+    Based on this new evidence, please provide a revised explanation of the neuron's behavior.
+    Consider:
+    1. Which aspects of the original explanation are supported by the new evidence?
+    2. Which aspects need to be modified or removed?
+    3. What new patterns or nuances are revealed by the test cases?
+
+    Provide a clear, specific explanation that accounts for both the original and new evidence.

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T09:52:19.220747
+Model: gemma-2-9b-it
+Layer: 13, Neuron: 13425
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 13, index 13425) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  protect	Activation: 10.0	Context:  speak out against bullying to protect vulnerable individuals.
+
+Token:  care	Activation: 10.0	Context:  and physical challenges fosters communal care.
+
+Token:  fundamental	Activation: 10.0	Context:  to the homeless is our fundamental duty.
+
+Token:  preserves	Activation: 10.0	Context:  up trash in natural parks preserves their pristine quality.
+
+Token:  the	Activation: 10.0	Context:  spaces in hospitals upholds the sanctity of healing.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

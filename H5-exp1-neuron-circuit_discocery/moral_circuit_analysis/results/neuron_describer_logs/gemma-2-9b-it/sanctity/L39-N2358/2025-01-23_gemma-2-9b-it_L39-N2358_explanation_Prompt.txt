@@ -1,0 +1,33 @@
+Timestamp: 2025-01-23T00:23:02.636074
+Model: gemma-2-9b-it
+Layer: 39, Neuron: 2358
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 39, index 2358) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  truth	Activation: 10.0	Context:  a marketplace of ideas where truth can emerge.
+
+Token: -	Activation: 10.0	Context:  long supported, despite short-term setbacks, expresses loyalty
+
+Token:  fair	Activation: 10.0	Context:  participants in a game ensures fair competition.
+
+Token:  fair	Activation: 10.0	Context:  performance-enhancing drugs undermines fair competition and should be penalized
+
+Token: -	Activation: 10.0	Context:  cover medical costs for low-income families is an act
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

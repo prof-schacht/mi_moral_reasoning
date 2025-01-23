@@ -1,0 +1,31 @@
+Timestamp: 2025-01-23T00:06:49.032668
+Model: gemma-2-9b-it
+Layer: 37, Neuron: 6796
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron's activation pattern suggests it is sensitive to contexts involving social principles or ethical considerations. Let's break down the pattern, taking into account the specific contexts and tokens:
+
+1. **Token Context and Activation:**
+   - **"such"** in "Body integrity—such avoiding harmful piercings": The activation occurs in a context discussing body integrity and ethical concerns about self-harm.
+   - **"decisions"** in "the liberty to make informed decisions about drug use": The focus is on autonomy and responsible choices in potentially controversial areas.
+   - **"to"** in "that are friendly to those with mental and physical": This context suggests inclusivity and accommodating spaces for vulnerable groups.
+   - **"free"** in "Offering free tutoring to freeprivileged students": This context indicates providing support or resources to less privileged groups, again suggesting themes of equality and support.
+   - **"uph"** in "Treating religious shrines with reverence upholds respect"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

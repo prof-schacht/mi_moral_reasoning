@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:18:30.508649
+Model: gemma-2-9b-it
+Layer: 29, Neuron: 2067
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 29, index 2067) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  compassion	Activation: 10.0	Context:  protesting cruel testing methods shows compassion.
+
+Token:  compassion	Activation: 10.0	Context:  families is an act of compassion.
+
+Token:  of	Activation: 10.0	Context: Keeping personal confessions secret out of respect for your friend’
+
+Token:  empathy	Activation: 10.0	Context:  who’s upset fosters empathy and connection.
+
+Token:  empathy	Activation: 10.0	Context:  giving them care demonstrates moral empathy.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

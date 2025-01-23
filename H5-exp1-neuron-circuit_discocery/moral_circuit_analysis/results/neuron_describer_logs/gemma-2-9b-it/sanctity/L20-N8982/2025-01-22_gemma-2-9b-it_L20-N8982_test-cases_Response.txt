@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T21:08:57.963593
+Model: gemma-2-9b-it
+Layer: 20, Neuron: 8982
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The committee's decision was not only fair but truly aligned with the values of justice and equality."
+
+Test case 2: "In a truly democratic society, every individual's voice is heard and their rights are shared equally among all."
+
+Test case 3: "The organization made a commitment to not only improve transparency but to also ensure that all practices are genuinely ethical."
+
+Test case 4: "The concept of fairness is not just an ideal but a fundamental principle that guides our policies and decisions."
+
+Test case 5: "He has a truly remarkable ability to unite people and create a shared vision that everyone can believe in."
+
+Test case 6: "The project was not successful because it lacked a true commitment to the core values of integrity and honesty."
+
+Test case 7: "The philosophy of the company is truly centered on responsibility and ensuring that all actions are ethically sound."
+
+Test case 8: "While the new policy is fair on paper, its true effectiveness will depend on its implementation and adherence to ethical standards."
+
+Test case 9: "Her leadership style is not just about authority but truly fostering a sense of shared responsibility among her team."
+
+Test case 10: "The treaty emphasized the importance of not just peace, but a true commitment to lasting harmony and mutual respect."

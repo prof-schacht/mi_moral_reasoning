@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T19:38:58.722524
+Model: gemma-2-9b-it
+Layer: 13, Neuron: 12261
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "Based on the examples provided, the neuron (layer 13, index 12261) appears to activate in response to tokens within contexts that deal with themes of responsibility, fairness, or maintaining standards. Let's break down the activation pattern:
+
+1. **Concept Activation:**
+   - The neuron shows high activation with words associated with ethical or organizational principles such as "abuse," "they," "lives," "their," and "order." These words are contextual anchors in sentences talking about moral responsibilities or systemic structures.
+
+2. **Contextual Themes:**
+   - **Responsibility and Regulation:** The activation in cases like "abuse" and "order" often involves a context of duty or control, implying either the requirement to act responsibly or maintain certain standards.
+   - **Social Equitability and Protection:** Tokens like "they" and "their" appear in contexts suggesting equality or fairness, emphasizing consistent treatment or protection under rules or laws.
+   - **Safety and Preservation:** The word"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

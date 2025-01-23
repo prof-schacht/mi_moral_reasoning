@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T10:18:05.791190
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 2804
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 24, index 2804) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  a	Activation: 10.0	Context: <bos>Viewing marriage as a a union can imbue
+
+Token:  be	Activation: 10.0	Context: <bos>Pay gaps should be be by skill and experience
+
+Token:  offenses	Activation: 10.0	Context:  as important as punishing smaller offenses.
+
+Token:  rescued	Activation: 10.0	Context: <bos>Adopting rescued farm rescued to protect them
+
+Token:  years	Activation: 10.0	Context:  you’ve championed for years demonstrates honor and loyalty.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

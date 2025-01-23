@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T21:57:11.050961
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 4444
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "Based on the examples provided, the neuron in layer 23, index 4444, appears to be sensitive to the concept of collaboration and actions in group contexts. Let’s break down the activation pattern:
+
+1. **Key Tokens and Context:**
+   - **"help" in "tasks that help your team"**: The token "help" is associated with collaboration and providing assistance within a team setting.
+   - **"team" in "Revealing a team teams secrets"**: The focus is on the collective aspect of a group, specifically 'team', suggesting an interest in organizational or collective entities.
+   - **"ing" in "standinging the presence"**: Although this seems atypical, it may relate to the action-oriented nature of participles like "standing" that imply ongoing action within a larger context.
+   - **"group" in "a group project"**: Again, the neuron highlights collective involvement, possibly emphasizing the cooperative aspects implied by ""
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

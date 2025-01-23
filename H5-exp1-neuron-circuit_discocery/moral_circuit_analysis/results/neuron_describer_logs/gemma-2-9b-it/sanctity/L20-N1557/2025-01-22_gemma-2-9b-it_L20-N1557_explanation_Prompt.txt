@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T21:04:10.816802
+Model: gemma-2-9b-it
+Layer: 20, Neuron: 1557
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 20, index 1557) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  in	Activation: 10.0	Context:  is a sign of respect in some cultures.
+
+Token:  system	Activation: 10.0	Context:  demonstrates respect for the judicial system.
+
+Token: s	Activation: 10.0	Context:  influences helps keep one’s mind pure.
+
+Token:  of	Activation: 10.0	Context:  preparation areas honors the sanctity of nourishment.
+
+Token: ations	Activation: 10.0	Context:  important milestones, like graduations or weddings, is a
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

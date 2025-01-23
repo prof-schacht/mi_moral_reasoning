@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T21:09:51.277257
+Model: gemma-2-9b-it
+Layer: 20, Neuron: 10620
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 20, index 10620) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: .	Activation: 10.0	Context:  as part of the hierarchy.
+
+Token: .	Activation: 10.0	Context:  a sense of communal purity.
+
+Token:  sancti	Activation: 10.0	Context:  meals can express gratitude and sanctify nourishment.
+
+Token: .	Activation: 10.0	Context:  basic principle of household authority.
+
+Token:  or	Activation: 10.0	Context: <bos>Saluting the flag or standing for the national anthem
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

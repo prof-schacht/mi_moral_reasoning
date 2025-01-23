@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T00:37:45.356609
+Model: gemma-2-9b-it
+Layer: 40, Neuron: 10254
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The principle of justice demands that we treat each individual with fairness and equality, regardless of their background."
+
+Test case 2: "In philosophical discussions, the idea of 'one's duty to society' often emerges as a cornerstone of ethical debate."
+
+Test case 3: "Reflecting on the concept of integrity, one realizes the importance of aligning actions with moral values."
+
+Test case 4: "In a morally ambiguous situation, it's challenging to discern the right course of action without a clear ethical framework."
+
+Test case 5: "The pursuit of knowledge is not just a personal endeavor but an ethical obligation to contribute positively to society."
+
+Test case 6: "When considering the ethical implications of technology, one must weigh the potential benefits against the risks of abuse."
+
+Test case 7: "The abstract notion of 'freedom' is often debated in terms of individual rights versus societal norms."
+
+Test case 8: "Despite its formal tone, the declaration emphasizes the importance of ethical governance and transparency."
+
+Test case 9: "One's journey towards self-improvement is often guided by principles of kindness and empathy."
+
+Test case 10: "In poetry, the exploration of existential themes can sometimes resonate with ethical and moral undertones."

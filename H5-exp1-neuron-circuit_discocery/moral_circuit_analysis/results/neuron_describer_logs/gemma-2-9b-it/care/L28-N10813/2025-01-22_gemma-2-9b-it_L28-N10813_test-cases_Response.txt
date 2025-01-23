@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T10:26:07.330830
+Model: gemma-2-9b-it
+Layer: 28, Neuron: 10813
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The committee decided to implement policies that ensured no discrimination and promoted fairness across all levels."
+
+Test case 2: "In her speech, she emphasized the importance of being genuine and truthful, without any hidden agendas."
+
+Test case 3: "The judge ruled impartially, ensuring that the principles of justice were upheld without bias."
+
+Test case 4: "Despite the pressure, he remained steadfast, not allowing any favoritism to sway his decision."
+
+Test case 5: "To be fair, the assessment criteria were designed to evaluate performance objectively, without any preferential treatment."
+
+Test case 6: "The policy was crafted with the intent to treat all employees equally, ensuring no one received undue advantage."
+
+Test case 7: "Although passionate, she was advised to present her arguments without bias to maintain credibility."
+
+Test case 8: "The organization strives to maintain transparency, ensuring every action is taken without partiality."
+
+Test case 9: "While some argued for leniency, the decision was made to adhere strictly to the facts, with no room for bias."
+
+Test case 10: "The journalist reported the incident with an emphasis on accuracy and impartiality, leaving personal opinions aside."

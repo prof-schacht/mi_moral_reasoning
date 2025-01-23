@@ -1,0 +1,14 @@
+Timestamp: 2025-01-22T20:43:09.598671
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 4711
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+This neuron in layer 19, index 4711, appears to respond to tokens that are related to themes of labor rights, social justice, and political continuity. Let's break down the specific patterns that trigger its activation:
+
+1. **Activation Contexts**:
+   - **"conditions"**: The context suggests a discussion about workplace environments, specifically unfavorable ones. The activation happens with "working conditions," a frequently discussed topic in labor rights discourse.
+   - **"solidarity"**: This token is heavily associated with unity and collective support, especially in contexts such as worker movements and social activism.
+   - **"workers"**: This is a literal keyword connected to labor discussions. In the given context, the term relates to organizing or unionization efforts.
+   - **"a"**: Although this might seem like an outlier, the surrounding context ("historical figures in government") suggests themes of tradition and continuity in political structures, which might align with broader systemic or societal themes

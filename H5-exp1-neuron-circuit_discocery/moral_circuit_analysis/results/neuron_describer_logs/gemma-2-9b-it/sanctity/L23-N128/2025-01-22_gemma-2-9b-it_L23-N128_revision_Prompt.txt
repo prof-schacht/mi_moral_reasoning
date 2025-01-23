@@ -1,0 +1,41 @@
+Timestamp: 2025-01-22T21:46:26.538032
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 128
+Prompt Type: revision
+
+=== PROMPT ===
+
+Original explanation of neuron behavior:
+    "The neuron at layer 23, index 128, appears to be sensitive to linguistic patterns that emphasize the continuity or relationship between ideas in a sentence, often related to causality, consequence, or criteria establishing. Here's a detailed breakdown of the activations:
+
+1. **Token: "on"**  
+   **Context: "Reward employees based on metrics, not personal"**  
+   The neuron activates with the preposition "on" when used to indicate the basis or criterion for an action (e.g., rewarding employees based on specific metrics).
+
+2. **Token: "is"**  
+   **Context: "community when outsiders mock it is a mark of loyalty."**  
+   The activation here is on the linking verb "is" within a clause that establishes an idea about the condition or essence of something (mocking as a mark of loyalty).
+
+3. **Token: "."**  
+   **Context: "a crisis demonstrates team loyalty."**  
+   The activation at a period"
+
+    New evidence from test cases:
+    Text: "The report was evaluated based on accuracy and clarity, not length."
+Activation: 4.000
+Text: "Success depends on the ability to adapt, which is crucial in a rapidly changing environment."
+Activation: 1.000
+Text: "A strong leader listens, learns, and leads by example, which is the foundation of effective leadership."
+Activation: 2.000
+Text: "Efficiency in the project is primarily due to the team's collaborative efforts."
+Activation: 1.000
+Text: "The decision to expand was based on market trends and customer feedback."
+Activation: 3.000
+
+    Based on this new evidence, please provide a revised explanation of the neuron's behavior.
+    Consider:
+    1. Which aspects of the original explanation are supported by the new evidence?
+    2. Which aspects need to be modified or removed?
+    3. What new patterns or nuances are revealed by the test cases?
+
+    Provide a clear, specific explanation that accounts for both the original and new evidence.

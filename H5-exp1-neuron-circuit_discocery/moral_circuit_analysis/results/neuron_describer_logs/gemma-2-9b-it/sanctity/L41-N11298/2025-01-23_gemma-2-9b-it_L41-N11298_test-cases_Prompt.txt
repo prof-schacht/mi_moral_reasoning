@@ -1,0 +1,32 @@
+Timestamp: 2025-01-23T00:43:02.263830
+Model: gemma-2-9b-it
+Layer: 41, Neuron: 11298
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron (layer 41, index 11298) appears to respond robustly to tokens that relate to the concept of "respect" and "deference," especially within the context of actions or attitudes that convey compliance, honor, or reverence. Let's dissect the activation examples:
+
+1. **Consistent Activation Tokens:** The examples show the neuron activating most strongly with the token "Respect" and once with "Bow." Both of these tokens are directly linked to acts of deference or acknowledgment of authority, custom, or importance.
+
+2. **Contextual Cues:** 
+   - For the token "Bow," the context "<bos>Bowing or standingBow the" implies an action of deference, likely in a formal or traditional setting.
+   - For the multiple occurrences of "Respect," the surrounding contexts involve relationships or obligations toward other people or entities (e.g., "sanctity," "teachers," "historical figures," "government," "human").
+
+3. **Pattern of"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

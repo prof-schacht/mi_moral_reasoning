@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T23:19:49.736265
+Model: gemma-2-9b-it
+Layer: 29, Neuron: 3503
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The volunteers spent their weekend distributing meals and blankets to the homeless, demonstrating a commitment to care for those in need."
+
+Test case 2: "She felt a deep sense of reverence as she entered the ancient temple, a place where generations had gathered to honor the sacred."
+
+Test case 3: "After months of hard work, the young entrepreneur finally launched his startup, driven by a desire to innovate and care for his community's needs."
+
+Test case 4: "Raising a child requires a profound sense of responsibility and love, ensuring they grow up in a nurturing environment."
+
+Test case 5: "The doctor took an oath to treat every patient with the utmost care and respect, acknowledging the sanctity of human life."
+
+Test case 6: "At the heart of the city's tradition lies a festival dedicated to the sacred river, which residents regard with both reverence and responsibility."
+
+Test case 7: "As a protector of the ancient forest, she felt a duty to safeguard the ecosystem that many considered almost holy."
+
+Test case 8: "The CEO's initiative to provide scholarships for underprivileged students was a testament to his commitment to societal care."
+
+Test case 9 (Edge case): "The bustling market was full of aggressive traders, each one fiercely protective of their profits, but devoid of any true sanctity or care."
+
+Test case 10 (Ambiguous case): "In the realm of startups, 'solopreneurs' often juggle multiple responsibilities, sometimes prioritizing personal growth over traditional care values."

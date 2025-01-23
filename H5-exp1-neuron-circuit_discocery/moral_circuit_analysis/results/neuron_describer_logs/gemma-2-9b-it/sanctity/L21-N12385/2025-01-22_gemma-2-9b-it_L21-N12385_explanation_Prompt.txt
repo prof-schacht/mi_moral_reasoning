@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T21:25:43.299410
+Model: gemma-2-9b-it
+Layer: 21, Neuron: 12385
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 21, index 12385) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: ating	Activation: 10.0	Context: <bos>Separating waste forating disposal helps
+
+Token:  pride	Activation: 10.0	Context:  company's badge with pride reflects commitment to its mission
+
+Token:  passed	Activation: 10.0	Context: <bos>Upholding traditions passed down through generations respects collective
+
+Token:  continuity	Activation: 10.0	Context:  for community elders strengthens cultural continuity.
+
+Token:  be	Activation: 10.0	Context: , are sacred and should be treated with dignity.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

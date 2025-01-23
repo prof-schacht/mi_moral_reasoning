@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T00:27:46.515381
+Model: gemma-2-9b-it
+Layer: 39, Neuron: 13361
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The importance of honesty and transparency in leadership cannot be overstated, as integrity forms the backbone of ethical governance."
+
+Test case 2: "She took it upon herself to ensure the safety of the wildlife sanctuary, demonstrating her commitment to conservation ethics."
+
+Test case 3: "In the face of adversity, he upheld his principles, choosing to act with integrity rather than succumbing to corruption."
+
+Test case 4: "The guidelines for proper conduct in the workplace were designed to promote fairness and responsibility among all employees."
+
+Test case 5: "As a parent, instilling a sense of moral duty and responsibility in children is crucial for their development into conscientious adults."
+
+Test case 6: "Despite the lack of clear instructions, he relied on his moral compass to guide his decisions in the chaotic situation."
+
+Test case 7: "Maintaining a community garden requires a shared sense of responsibility to ensure it thrives and benefits everyone involved."
+
+Test case 8: "He felt a strong obligation to return the lost wallet, believing it was the right and ethical thing to do."
+
+Test case 9: "The committee's decision to prioritize environmental sustainability reflects their commitment to ethical business practices."
+
+Test case 10: "While discussing the code of ethics, the emphasis was on accountability, respect, and fostering a culture of integrity within the organization."

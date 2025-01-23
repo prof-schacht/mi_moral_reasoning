@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T22:14:57.298016
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 2235
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 24, index 2235) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  uph	Activation: 10.0	Context: , reflective spaces in hospitals upholds the sanctity of healing
+
+Token:  a	Activation: 10.0	Context: health days for employees is a compassionate workplace policy.
+
+Token:  should	Activation: 10.0	Context: <bos>Pay gaps should be should by skill and
+
+Token:  supports	Activation: 10.0	Context:  flexible scheduling for new parents supports the well-being of
+
+Token:  helps	Activation: 10.0	Context:  clinics that offer free vaccinations helps protect the vulnerable.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

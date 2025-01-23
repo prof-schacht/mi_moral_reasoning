@@ -1,0 +1,16 @@
+Timestamp: 2025-01-22T23:34:19.247683
+Model: gemma-2-9b-it
+Layer: 31, Neuron: 9888
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+This neuron's activations seem to indicate a response to verbs or verb-like forms, particularly in the gerund ("-ing") or present participle form. Here's a breakdown of the pattern:
+
+1. **Suffix Focus**: Each token with high activation is related to words ending with "-ing" or involving this suffix directly, either through gerunds or embedded within words (e.g., "ending", "expressing", "ributing").
+
+2. **Function in Context**: The neuron activates in contexts where these words denote an action or state. This implies that the neuron is sensitive to the grammatical role that "-ing" forms often play, such as showing ongoing action or processes in sentences. For example:
+   - "ending" functions in phrases like "Extending the same ending" to suggest a process.
+   - "expressing" in "Expressing satire" denotes the act of conveying an idea or feeling.
+   
+3. **Contextual Roles**: The contexts where these tokens

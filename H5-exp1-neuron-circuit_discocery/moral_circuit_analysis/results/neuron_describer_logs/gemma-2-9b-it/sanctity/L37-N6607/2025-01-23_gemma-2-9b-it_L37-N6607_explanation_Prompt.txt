@@ -1,0 +1,33 @@
+Timestamp: 2025-01-23T00:05:38.014187
+Model: gemma-2-9b-it
+Layer: 37, Neuron: 6607
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 37, index 6607) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  them	Activation: 10.0	Context: oring sacred rivers by keeping them free from pollutants demonstrates reverence
+
+Token:  hungry	Activation: 10.0	Context:  to local charities that feed hungry children is a compassionate act
+
+Token:  of	Activation: 10.0	Context:  forests, honors the sanctity of nature.
+
+Token:  collective	Activation: 10.0	Context:  organized by your community supports collective cohesion.
+
+Token:  helps	Activation: 10.0	Context:  clinics that offer free vaccinations helps protect the vulnerable.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

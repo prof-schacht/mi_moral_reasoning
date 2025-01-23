@@ -1,0 +1,37 @@
+Timestamp: 2025-01-22T10:33:46.747960
+Model: gemma-2-9b-it
+Layer: 38, Neuron: 11996
+Prompt Type: revision
+
+=== PROMPT ===
+
+Original explanation of neuron behavior:
+    "The neuron's activations suggest it is sensitive to contexts where the token serves to introduce or emphasize a concept that reinforces a value, principle, or category related to traditions, responsibilities, or the interpersonal dynamics involved in harmonious social interactions. 
+
+1. **Pattern Recognition**:
+   - The neuron activates on tokens such as "for," "down," "more," and "can" when they are used to bridge actions or principles with their broader implications or outcomes. This suggests that the neuron is attuned to causal, explanatory, or conditional constructs within sentences.
+
+2. **Contextual Importance**:
+   - For "for," the context demonstrates advocacy or support for principles like "honor and loyalty."
+   - With "down," it focuses on the transmission of "traditions" and the respect for "collective identity," indicating a link between the past and present responsibilities.
+   - In the activation by "more," it emphasizes transformations within social dynamics, highlighting the positive facilitation ("fosters a"
+
+    New evidence from test cases:
+    Text: "For the sake of honor and loyalty, the elders passed down the traditions that define our community's values."
+Activation: 3.000
+Text: "As we move forward, it is crucial to understand how these principles can foster a more harmonious social existence."
+Activation: 2.000
+Text: "More than anything, the ceremony is about preserving the collective identity and passing down the wisdom of our ancestors."
+Activation: 3.000
+Text: "Can we ensure that our actions today will uphold the responsibilities we've inherited from our forebears?"
+Activation: 3.000
+Text: "The initiative aims to create more opportunities for dialogue, fostering a deeper understanding of our shared principles."
+Activation: 2.000
+
+    Based on this new evidence, please provide a revised explanation of the neuron's behavior.
+    Consider:
+    1. Which aspects of the original explanation are supported by the new evidence?
+    2. Which aspects need to be modified or removed?
+    3. What new patterns or nuances are revealed by the test cases?
+
+    Provide a clear, specific explanation that accounts for both the original and new evidence.

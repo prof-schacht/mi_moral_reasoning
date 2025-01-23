@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T22:44:15.398106
+Model: gemma-2-9b-it
+Layer: 25, Neuron: 13929
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 25, index 13929) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  bribes	Activation: 10.0	Context: <bos>Refusing to take bribes upholds the principle of
+
+Token:  not	Activation: 10.0	Context:  hire based on qualifications, not nepotism.
+
+Token:  no	Activation: 10.0	Context: <bos>Transparent public budgeting ensures no group is unfairly favored.
+
+Token:  personal	Activation: 10.0	Context:  on performance metrics, not personal connections.
+
+Token:  without	Activation: 10.0	Context:  evaluate employee performance objectively, without favoritism.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

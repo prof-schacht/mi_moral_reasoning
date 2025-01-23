@@ -1,0 +1,31 @@
+Timestamp: 2025-01-22T21:15:56.973285
+Model: gemma-2-9b-it
+Layer: 21, Neuron: 1129
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in question (layer 21, index 1129) appears to be detecting concepts related to personal and social responsibilities, obligations, and expressions of respect, particularly as expressed through linguistic patterns.
+
+1. **Exact Pattern that Triggers Activation:**
+   - The neuron activates robustly for tokens that indicate a sense of duty or responsibility ("duty," "obligation"), which are central to the idea of obligations or moral commitments. It responds to words that denote responsibilities that individuals or societies uphold.
+
+2. **Contextual Analysis:**
+   - In each activation, the token is situated within a broader context that involves an action or expectation: "a duty of a compassionate community," "a moral obligation," "expressing loyalty," and "respect for one’s body." These phrases introduce a scenario where there is an understood expectation of behavior or sentiment that reflects moral or ethical considerations.
+   - The activations on the word "of" appear in phrases following similar patterns; "the sanctity"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

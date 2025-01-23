@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T20:00:52.857785
+Model: gemma-2-9b-it
+Layer: 15, Neuron: 10852
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The committee emphasized the importance of honesty and integrity in maintaining a fair and equitable workplace environment."
+
+Test case 2: "A society thrives when it upholds the values of fairness and justice in its social policies and roles."
+
+Test case 3: "The book discusses the role of integrity in leadership, focusing on how leaders can inspire trust and respect."
+
+Test case 4: "To promote fairness, the rules were designed to ensure equal opportunity for all participants."
+
+Test case 5: "The concept of fairness is central to the philosophy of justice, where each individual's rights are honored and respected."
+
+Test case 6: "In the context of social behaviors, fairness and honesty are often considered pillars of ethical conduct."
+
+Test case 7 (edge case): "The principles of honesty versus deception are debated in the context of competitive sports, highlighting the tension between winning and integrity."
+
+Test case 8 (edge case): "While the fairness of the decision was questioned, the integrity of the process remained intact."
+
+Test case 9 (ambiguous): "The system was designed for efficiency, yet it inadvertently promoted fairness and transparency."
+
+Test case 10 (ambiguous): "Despite the challenges, the team's commitment to honesty and clarity of purpose shone through in their actions and roles."

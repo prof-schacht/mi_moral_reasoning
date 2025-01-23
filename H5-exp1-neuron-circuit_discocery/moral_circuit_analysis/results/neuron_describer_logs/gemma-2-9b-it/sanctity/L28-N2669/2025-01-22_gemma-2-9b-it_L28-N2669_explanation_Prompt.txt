@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:07:13.681806
+Model: gemma-2-9b-it
+Layer: 28, Neuron: 2669
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 28, index 2669) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  a	Activation: 10.0	Context:  to coworkers under stress fosters a more humane work environment.
+
+Token:  a	Activation: 10.0	Context:  historical figures in government fosters a sense of continuity and order
+
+Token:  dignity	Activation: 10.0	Context: ing burial grounds honors human dignity and sanctity.
+
+Token: s	Activation: 10.0	Context: Attending your partner’s special events as a show
+
+Token:  the	Activation: 10.0	Context:  allocate resources to ensure that the sick receive proper medical care
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

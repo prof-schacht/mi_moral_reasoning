@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T23:27:13.116929
+Model: gemma-2-9b-it
+Layer: 30, Neuron: 10170
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Parents have a duty to guide their children through the challenges of growing up, fostering resilience and moral integrity."
+
+Test case 2: "Even in the face of overwhelming odds, the team vowed to uphold their commitment to play with honor."
+
+Test case 3: "The decision to volunteer at the shelter stemmed from a deeply-rooted sense of responsibility to give back to the community."
+
+Test case 4: "Doctors dedicate themselves to healing patients, even when faced with grueling hours and emotional trials."
+
+Test case 5: "The promise to support the charity event annually is a testament to the organization's enduring dedication to social welfare."
+
+Test case 6: "Though the path was fraught with obstacles, she persevered, driven by an unwavering commitment to her goals."
+
+Test case 7: "To ensure the project's success, each team member pledged to contribute their utmost effort and expertise."
+
+Test case 8: "He stood firm through the accusations, driven by an ethical obligation to speak the truth."
+
+Test case 9: "Despite the setbacks, their resolve to complete the environmental cleanup project remained unshaken, motivated by a collective responsibility."
+
+Test case 10: "In times of crisis, communities often come together, highlighting a shared commitment to support each other through adversity."

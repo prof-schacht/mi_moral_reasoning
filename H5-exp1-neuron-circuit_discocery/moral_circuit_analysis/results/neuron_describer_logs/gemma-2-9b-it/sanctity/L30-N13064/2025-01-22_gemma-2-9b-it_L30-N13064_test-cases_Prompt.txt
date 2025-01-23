@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T23:29:16.489723
+Model: gemma-2-9b-it
+Layer: 30, Neuron: 13064
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in layer 30, index 13064, appears to respond to a few specific patterns based on the examples provided. The activations focus on scenarios involving linguistic elements of alteration, repetition, or specific sequences with certain phonetic or typographic characteristics. Let's analyze each example:
+
+1. **Token: "rever" in "Speaking reverently of rever veterans honors"**
+   - Here, the neuron activates strongly on "rever," possibly due to its appearance as a prefix in a word sequence that relates to repetitive patterns or prefixes that suggest formality and respect, like "reverently" and "reverend."
+
+2. **Token: "’" in "ing the sanctity of one’s own body through healthy"**
+   - The activation occurs on the apostrophe in "one’s," suggesting a response to possessive or genitive forms, possibly due to the typographic nature of the apostrophe combined with surrounding personal or formal wording.
+
+3. **Token:"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

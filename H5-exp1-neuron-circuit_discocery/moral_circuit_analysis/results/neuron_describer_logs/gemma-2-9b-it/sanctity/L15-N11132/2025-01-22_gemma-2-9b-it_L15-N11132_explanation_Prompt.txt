@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T20:01:40.403493
+Model: gemma-2-9b-it
+Layer: 15, Neuron: 11132
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 15, index 11132) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  they	Activation: 10.0	Context:  police officers in emergencies because they are trained to handle crises
+
+Token:  of	Activation: 10.0	Context:  harm, is a sign of loyalty.
+
+Token:  loyalty	Activation: 10.0	Context:  ally is the height of loyalty.
+
+Token: olds	Activation: 10.0	Context:  by their traditional titles upholds cultural respect.
+
+Token: '	Activation: 10.0	Context:  coworkers to rest when they're ill helps prevent further
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

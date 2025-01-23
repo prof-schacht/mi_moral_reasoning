@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T00:44:06.415564
+Model: gemma-2-9b-it
+Layer: 41, Neuron: 11986
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Volunteering at the shelter fosters a more compassionate community spirit."
+
+Test case 2: "Apologizing sincerely can mend relationships and build trust."
+
+Test case 3: "The initiative to plant trees was not just about the environment, but about creating a legacy of kindness and care for future generations."
+
+Test case 4: "Listening actively and responding empathetically are key to harmonious interactions."
+
+Test case 5: "Sharing resources during crises exemplifies the true essence of humanity."
+
+Test case 6: "Even small gestures, like holding the door open, can spread kindness in daily life."
+
+Test case 7: "Valuing diverse perspectives helps cultivate empathy and mutual respect."
+
+Test case 8: "Despite disagreements, maintaining civility and understanding promotes social cohesion."
+
+Test case 9: "Encouraging children to share toys teaches them about generosity and social harmony."
+
+Test case 10: "Cooking meals for a neighbor in need embodies the spirit of community support and empathy."

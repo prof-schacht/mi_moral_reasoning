@@ -1,0 +1,36 @@
+Timestamp: 2025-01-22T21:46:17.897202
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 128
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron at layer 23, index 128, appears to be sensitive to linguistic patterns that emphasize the continuity or relationship between ideas in a sentence, often related to causality, consequence, or criteria establishing. Here's a detailed breakdown of the activations:
+
+1. **Token: "on"**  
+   **Context: "Reward employees based on metrics, not personal"**  
+   The neuron activates with the preposition "on" when used to indicate the basis or criterion for an action (e.g., rewarding employees based on specific metrics).
+
+2. **Token: "is"**  
+   **Context: "community when outsiders mock it is a mark of loyalty."**  
+   The activation here is on the linking verb "is" within a clause that establishes an idea about the condition or essence of something (mocking as a mark of loyalty).
+
+3. **Token: "."**  
+   **Context: "a crisis demonstrates team loyalty."**  
+   The activation at a period"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

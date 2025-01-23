@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T20:40:00.816226
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 2108
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Implementing strict metrics to ensure transparency and accountability in environmental policies is essential for ethical governance."
+
+Test case 2: "The scientific community must adhere to rigorous ethical guidelines to maintain credibility and trust in their research findings."
+
+Test case 3: "Feeding the hungry and providing shelter to the homeless are acts of compassion that reflect our moral duty to support those in need."
+
+Test case 4: "The company's decision to lay off workers without notice, although legal, raises questions about its ethical considerations and social responsibility."
+
+Test case 5: "Creating a code of conduct that emphasizes respect and fairness is vital to fostering an ethical workplace environment."
+
+Test case 6: "The use of data-driven metrics can sometimes dehumanize individuals, raising ethical concerns about privacy and consent."
+
+Test case 7: "Although the initiative to provide free healthcare is rooted in compassion, it must be balanced with sustainable economic strategies."
+
+Test case 8: "The artistic community has its ethical responsibilities, even if they aren't as clearly defined as scientific guidelines."
+
+Test case 9: "A compassionate approach to criminal justice reform involves balancing accountability with empathy and understanding of social factors."
+
+Test case 10: "While profit maximization is a primary business goal, integrating ethical considerations into decision-making processes can lead to long-term success and societal trust."

@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T22:06:38.689339
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 10272
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "In the courtroom, the trial focused on the defendant's moral obligation to act with integrity and fairness."
+
+Test case 2: "She felt a deep sense of duty to help her community, driven by a shared belief in the importance of compassion."
+
+Test case 3: "The act of kindness was seen as a moral duty, reflecting the ethical values deeply ingrained in their culture."
+
+Test case 4: "Despite the complex arguments, the judge emphasized the ethical implications of their shared sense of duty."
+
+Test case 5: "His decision to speak out was not just an act of courage but a reflection of his moral obligation to truth."
+
+Test case 6: "The ritual underscored a collective sense of identity, binding the community through shared beliefs and ethical practices."
+
+Test case 7: "She felt obligated to attend the meeting, not out of duty, but because of a sense of loyalty to her friend."
+
+Test case 8: "The philosophical debate centered around the notion of obligation and whether it arises from societal norms or personal ethics."
+
+Test case 9: "The festival celebrated their cultural heritage, highlighting a shared understanding and sense of belonging."
+
+Test case 10: "Despite personal risks, the whistleblower felt compelled by a moral obligation to reveal the truth."

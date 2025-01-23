@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T22:49:53.691290
+Model: gemma-2-9b-it
+Layer: 26, Neuron: 4843
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron at layer 26, index 4843, appears to be highly responsive to the prepositions "at" and "in" when they are used to denote specific locations or contexts involving activities or states of being. Let's break down the observed patterns:
+
+1. **Preposition Usage**: The neuron is activated by the tokens "at" and "in." These prepositions are used to specify a location or context where an action or state is taking place. This suggests that the neuron is sensitive to the semantic role of these tokens in situating actions or activities within a particular location or context.
+
+2. **Contextual Associations**:
+   - The activations occur in contexts where the prepositions introduce a location or situation related to activities, duties, or events. For instance, in the example "Dressing formally at official shows respect for," the word "at" is introducing a formal setting related to professional decorum.
+   - Similarly, in "Volunteering at shelters" and"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

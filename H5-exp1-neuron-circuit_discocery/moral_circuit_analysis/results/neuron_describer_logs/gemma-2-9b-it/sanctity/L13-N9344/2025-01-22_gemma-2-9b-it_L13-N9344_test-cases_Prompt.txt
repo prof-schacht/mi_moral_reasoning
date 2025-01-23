@@ -1,0 +1,31 @@
+Timestamp: 2025-01-22T19:35:30.797277
+Model: gemma-2-9b-it
+Layer: 13, Neuron: 9344
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "Based on the examples provided, the neuron in layer 13, index 9344 appears to respond strongly to tokens that function as adjectives or nouns describing abstract concepts often related to organization, societal roles, or personal attributes. Let's break down each aspect:
+
+1. **Pattern Trigger**: The neuron activates on tokens like "process," "corporate," "community," "public," and "personal," which are commonly used to describe or reflect abstract, collective, or individual aspects of systems, groups, or personal characteristics. However, these words often stand in positions where they modify, describe, or denominate an entity, indicating its nature, function, or role.
+
+2. **Contextual Influence**: The surrounding context also plays a crucial role. In the examples:
+   - "A transparent election process" emphasizes the procedural aspect vital for governance.
+   - "Illustrates corporate loyalty" focuses on business or institutional identity or characteristics.
+   - "Supervisors or community leaders" highlights societal or"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

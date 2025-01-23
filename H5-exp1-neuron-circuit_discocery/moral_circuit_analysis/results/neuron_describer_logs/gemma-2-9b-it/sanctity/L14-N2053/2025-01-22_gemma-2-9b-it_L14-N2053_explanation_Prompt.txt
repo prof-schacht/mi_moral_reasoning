@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:42:21.574011
+Model: gemma-2-9b-it
+Layer: 14, Neuron: 2053
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 14, index 2053) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  nourishment	Activation: 10.0	Context:  express gratitude and sanctify nourishment.
+
+Token:  market	Activation: 10.0	Context:  defects to maintain an honest market.
+
+Token:  identity	Activation: 10.0	Context:  down through generations respects collective identity.
+
+Token:  support	Activation: 10.0	Context: <bos>Providing emotional support to support victims exemplifies moral
+
+Token: expression	Activation: 10.0	Context: <bos>Self-expression throughexpression and culture should
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

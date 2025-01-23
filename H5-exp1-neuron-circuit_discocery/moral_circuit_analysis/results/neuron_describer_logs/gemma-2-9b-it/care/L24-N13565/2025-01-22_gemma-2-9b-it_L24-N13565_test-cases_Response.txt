@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T10:20:28.044902
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 13565
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Her unwavering commitment to volunteer every weekend demonstrated a profound sense of personal responsibility and dedication to her community."
+
+Test case 2: "He navigates his life through a strict ethical framework, holding himself accountable to the highest standards of integrity."
+
+Test case 3: "The lifestyle he adopted, which includes daily meditation and fasting every Friday, reflects his deep spiritual commitment."
+
+Test case 4: "In moments of crisis, her decision to stay accountable and act with integrity inspired those around her."
+
+Test case 5: "Through consistent practice, he has become an exemplar of conscientious living, prioritizing moral values over short-term gains."
+
+Test case 6: "The company’s policy on sustainability reflects a dedication to corporate responsibility and ethical practices."
+
+Test case 7: "Despite the challenges, she remains committed to her goal of becoming a vegan, seeing it as a personal responsibility towards the environment."
+
+Test case 8: "The athlete’s lifestyle, marked by discipline and perseverance, showcases his dedication to achieving his personal best."
+
+Test case 9: "In order to fulfill their obligations, the committee members agreed to meet weekly and hold each other accountable."
+
+Test case 10: "He chose to live through principles of humility and service, believing it was his duty to contribute positively to society."

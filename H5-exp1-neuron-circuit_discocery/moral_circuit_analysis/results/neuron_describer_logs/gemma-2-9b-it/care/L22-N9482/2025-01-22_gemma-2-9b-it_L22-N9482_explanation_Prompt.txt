@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T10:09:46.689286
+Model: gemma-2-9b-it
+Layer: 22, Neuron: 9482
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 22, index 9482) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  loyalty	Activation: 10.0	Context:  gossip about friends upholds loyalty.
+
+Token:  items	Activation: 10.0	Context:  or spiritual relics as precious items affirms their sanctity.
+
+Token:  abroad	Activation: 10.0	Context:  packages to a friend working abroad is a sign of enduring
+
+Token:  expression	Activation: 10.0	Context:  your partner is a key expression of loyalty.
+
+Token:  expression	Activation: 10.0	Context: Peaceful protest is a fundamental expression of freedom.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

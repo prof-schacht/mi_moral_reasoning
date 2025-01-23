@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T19:56:22.678894
+Model: gemma-2-9b-it
+Layer: 15, Neuron: 4969
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron at layer 15, index 4969 appears to activate in contexts where concepts of integrity, loyalty, and principled behavior are expressed, particularly in situations that demonstrate personal commitment or adherence to values despite challenges.
+
+1. **Precise Activation Pattern:**
+   - The neuron activates strongly on tokens such as "personal," "term," "others," "inconvenient," and "bribes." These tokens are likely part of phrases that construct scenarios involving a personal or ethical choice. The activation centers on words that highlight traits of loyalty, integrity, and ethical standards, often in the context of facing hardships or opposition.
+
+2. **Contextual Factors:**
+   - The surrounding context often involves sentences showcasing scenarios where a principle is applied or upheld. For instance, "Risking personal safety" suggests a commitment to something greater than oneself, "despite short-term setbacks" implies perseverance, "even when others disparage" indicates resilience in the face of criticism, "even when it"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T20:24:24.123499
+Model: gemma-2-9b-it
+Layer: 18, Neuron: 2989
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The ritual of washing hands before prayer symbolizes spiritual cleanliness and purity."
+
+Test case 2: "To act with integrity means maintaining a pure heart and honest intentions."
+
+Test case 3: "Recycling is essential to maintaining the purity of our environment, ensuring future generations can thrive."
+
+Test case 4: "Meditation can purify the mind, allowing for a deeper connection to one's spiritual self."
+
+Test case 5: "The story emphasized the moral duty to protect one's friend's privacy, highlighting loyalty and ethical conduct."
+
+Test case 6: "She questioned whether the pursuit of wealth was worth compromising her spiritual purity and ethical values."
+
+Test case 7: "The clear blue ocean was a testament to the purity of nature, untouched by human interference."
+
+Test case 8: "Is it ethical to prioritize loyalty to a friend over the truth, even when it challenges moral values?"
+
+Test case 9: "The community's focus on kindness and honesty fosters an environment of moral purity and trust."
+
+Test case 10: "In the debate, the importance of ethical leadership was highlighted as crucial to maintaining the purity of the institution's values."

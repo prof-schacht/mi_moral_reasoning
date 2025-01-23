@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T09:58:30.365900
+Model: gemma-2-9b-it
+Layer: 16, Neuron: 6638
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 16, index 6638) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  communal	Activation: 10.0	Context:  mental and physical challenges fosters communal care.
+
+Token: ,	Activation: 10.0	Context:  wonders, like pristine forests, honors the sanctity of nature
+
+Token:  or	Activation: 10.0	Context:  milestones, like graduations or weddings, is a mark
+
+Token: ,	Activation: 10.0	Context: Some ceremonies, like weddings, are sacred and should be
+
+Token:  or	Activation: 10.0	Context: Religious authority, like priests or imams, should be
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

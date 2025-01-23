@@ -1,0 +1,14 @@
+Timestamp: 2025-01-22T22:38:16.450031
+Model: gemma-2-9b-it
+Layer: 25, Neuron: 7456
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+This neuron appears to respond to tokens that are part of expressions or phrases related to principles, values, or norms, often within a societal or ethical context. The activation is likely triggered by a linguistic pattern where the token is part of a concept or action that is associated with ideas of fairness, respect, valuation, or distribution, indicating a broader, positive, or normative human behavior or philosophy.
+
+1. **Pattern**: The neuron activates when a token represents a key concept within a larger semantically rich phrase related to societal values, principles, or ethical norms. These tokens often carry significant meaning within phrases that encapsulate idealistic or normative ideas.
+
+2. **Context**: The context surrounding the tokens often forms part of a larger expression advocating or describing ethical or moral principles. For example:
+   - "ideas" in the context of a "marketplace of ideas" suggests a positive philosophy about truth and knowledge.
+   - "temples" in the phrase "Valuing human bodies as temples"

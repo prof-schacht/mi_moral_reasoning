@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T22:28:26.388837
+Model: gemma-2-9b-it
+Layer: 25, Neuron: 212
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 25, index 212) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  are	Activation: 10.0	Context: <bos>Designing public spaces that are friendly to those with mental
+
+Token:  their	Activation: 10.0	Context:  relics as precious items affirms their sanctity.
+
+Token:  that	Activation: 10.0	Context:  should allocate resources to ensure that the sick receive proper medical
+
+Token:  reassurance	Activation: 10.0	Context:  child deserves emotional support and reassurance during hard times.
+
+Token:  spaces	Activation: 10.0	Context: <bos>Providing quiet, reflective spaces in hospitals upholds the
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

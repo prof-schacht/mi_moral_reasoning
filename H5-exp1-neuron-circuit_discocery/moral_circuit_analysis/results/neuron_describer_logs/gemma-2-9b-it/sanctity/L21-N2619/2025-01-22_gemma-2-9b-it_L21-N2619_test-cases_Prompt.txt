@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T21:18:00.617354
+Model: gemma-2-9b-it
+Layer: 21, Neuron: 2619
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron (layer 21, index 2619) appears to activate in response to tokens that serve as linguistic connectors or prepositions, which set up relationships between ideas or concepts in a sentence. Here's a breakdown of the observed pattern:
+
+1. **Connective Functionality**: The activated tokens ("allows," "day," "and," "like," "from") all serve a function that connects ideas or provides a transition between concepts. These words either establish relationships of cause and effect, comparison, sequence, or inclusion.
+
+2. **Contextual Transitions or Relationships**:
+   - **"allows" (Activation: 10.0)**: This token connects the concept of "financial independence" with the result or effect, "more freedom." It introduces a relationship of causation or enablement.
+   - **"day" (Activation: 10.0)**: Although seemingly a noun, "day" acts as a transition or set-up for the state of action or reflection"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

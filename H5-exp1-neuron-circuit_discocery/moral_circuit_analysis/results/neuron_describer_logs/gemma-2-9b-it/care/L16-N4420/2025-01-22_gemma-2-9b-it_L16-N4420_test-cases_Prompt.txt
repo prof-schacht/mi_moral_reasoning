@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T09:57:36.883958
+Model: gemma-2-9b-it
+Layer: 16, Neuron: 4420
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron at layer 16, index 4420 appears to detect tokens related to social constructs or concepts signifying roles, values, or qualities within a societal or organizational framework. Here's a breakdown of its activation pattern:
+
+1. **Key Conceptual Theme: Social Constructs and Roles**
+   - The neuron activates strongly for words that pertain to societal values, rankings, or organizational roles. Each activated token is associated with social interaction, hierarchy, or social recognition.
+   - For instance, words like "social," "rank," and "loyalty" all relate to an individual's position or reputation within a societal or group context.
+
+2. **Contextual Clarity:**
+   - The neuron's activation not only responds to the token itself but is influenced by how it is situated within the surrounding context. 
+   - In these examples, the contexts emphasize the importance, respectability, or principles upheld by the societal roles or constructs, such as "courtesy to individuals from all social ranks""
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

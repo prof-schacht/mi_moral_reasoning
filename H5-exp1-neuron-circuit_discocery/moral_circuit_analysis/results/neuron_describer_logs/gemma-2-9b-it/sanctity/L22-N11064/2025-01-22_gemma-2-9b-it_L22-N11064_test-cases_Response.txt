@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T21:43:11.736411
+Model: gemma-2-9b-it
+Layer: 22, Neuron: 11064
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The student diligently followed all the instructions laid out in the manual, demonstrating a high level of compliance."
+
+Test case 2: "In the ancient text, the hero was celebrated for his unwavering adherence to the sacred laws, embodying purity and moral integrity."
+
+Test case 3: "She showed obedience to the regulations not out of fear, but from a deep-seated belief in their fairness and necessity."
+
+Test case 4: "The religious leader preached that true purity comes from following the path of righteousness, guided by ethical principles."
+
+Test case 5: "Although the rules seemed arbitrary, he obeyed them regardless, trusting in the wisdom of those who set them."
+
+Test case 6: "The scientist adhered strictly to ethical guidelines in her research, ensuring that her actions were beyond reproach."
+
+Test case 7: "Despite the chaos, the citizens maintained order by adhering to the emergency protocols, which was a testament to their collective discipline."
+
+Test case 8: "In a surprising twist, the rebellious protagonist chose to follow the ancient code of honor, suggesting a deeper respect for tradition."
+
+Test case 9: "He demonstrated purity of intent by donating anonymously, reflecting a moral action devoid of personal gain."
+
+Test case 10: "While the new policy was unpopular, it was designed to ensure fairness and was followed by all, illustrating a commitment to shared values."

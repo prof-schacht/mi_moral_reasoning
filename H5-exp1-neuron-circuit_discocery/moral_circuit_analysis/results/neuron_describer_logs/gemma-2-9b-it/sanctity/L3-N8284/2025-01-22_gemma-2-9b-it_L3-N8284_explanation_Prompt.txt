@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T18:45:52.920905
+Model: gemma-2-9b-it
+Layer: 3, Neuron: 8284
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 3, index 8284) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: Adults	Activation: 10.0	Context: <bos>Adults should have theAdults to
+
+Token: olds	Activation: 10.0	Context:  toxic substances—upholds purity.
+
+Token:  bonds	Activation: 10.0	Context:  cultural festivals together strengthens communal bonds.
+
+Token:  promises	Activation: 10.0	Context:  be held accountable for breaking promises or contracts.
+
+Token:  vulnerable	Activation: 10.0	Context:  free vaccinations helps protect the vulnerable.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T19:09:52.736184
+Model: gemma-2-9b-it
+Layer: 10, Neuron: 8226
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in question, located in layer 10 with index 8226, appears to respond to concepts related to societal norms and moral principles, which are typically associated with proper behavior or moral conduct.
+
+### Activation Pattern Analysis:
+
+1. **Token-Specific Activations**:
+   - **"hibit" in "Prohibiting"**: This token suggests the enforcement or implementation of rules against certain actions. The context refers to preventing inappropriate behavior ("vulgarhibit"), indicating a focus on maintaining order or decorum.
+   - **"for" in "hygiene and cleanliness"**: This activation highlights the importance of personal values like hygiene and respect, which are often considered moral virtues or societal expectations.
+   - **"and" in "honesty and fairness"**: The conjunction "and" connects two moral principles, suggesting an emphasis on ethical standards that are to be upheld.
+   - **"to" in "submitting to lawful search"**: This suggests voluntary"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

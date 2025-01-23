@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T00:41:01.329825
+Model: gemma-2-9b-it
+Layer: 40, Neuron: 14005
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "We must always strive to be kind and considerate in our interactions, especially when someone is feeling down."
+
+Test case 2: "Avoid spreading rumors even when it seems tempting, as it helps to build trust and respect within the community."
+
+Test case 3: "It is important to apologize sincerely when you've hurt someone, as taking responsibility for your actions is a vital part of ethical behavior."
+
+Test case 4: "Donating to charities that support underprivileged children is a noble act that aligns with our moral duty to help those in need."
+
+Test case 5: "Even though the rules are strict, we must follow them to ensure fairness and equality for everyone involved."
+
+Test case 6: "Helping strangers by volunteering at the local food bank is a rewarding experience that promotes social harmony and empathy."
+
+Test case 7: "While honesty can be difficult, it is essential to maintain integrity in our personal and professional lives."
+
+Test case 8: "Refrain from criticism and offer constructive feedback instead to promote positive change and growth."
+
+Test case 9: "Standing up for someone being unfairly criticized is a courageous and morally right action, showing solidarity and support."
+
+Test case 10: "Though it might be unpopular, advocating for environmental conservation is crucial for the welfare of future generations."

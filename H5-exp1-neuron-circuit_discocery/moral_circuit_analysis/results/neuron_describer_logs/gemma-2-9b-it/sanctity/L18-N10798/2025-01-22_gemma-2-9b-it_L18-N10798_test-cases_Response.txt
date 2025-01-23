@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T20:32:32.154822
+Model: gemma-2-9b-it
+Layer: 18, Neuron: 10798
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The cat ran across the the street without stopping."
+
+Test case 2: "To a to the garden, we need to prepare a plan."
+
+Test case 3: "The same same story was repeated over and over."
+
+Test case 4: "A bird flew to a to the nest quickly."
+
+Test case 5: "He responded with a a nod and walked away."
+
+Test case 6: "In the meeting, the your suggestions were taken seriously."
+
+Test case 7: "To your to's and from your from's, everything seemed to align."
+
+Test case 8: "A judge' a decision can have far-reaching consequences."
+
+Test case 9: "The the the emphasis on detail was remarkable."
+
+Test case 10: "To your surprise, the the plan worked flawlessly."

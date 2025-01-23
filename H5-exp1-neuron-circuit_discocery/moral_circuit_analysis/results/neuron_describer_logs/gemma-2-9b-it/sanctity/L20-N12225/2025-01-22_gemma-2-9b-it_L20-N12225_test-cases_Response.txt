@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T21:12:32.096875
+Model: gemma-2-9b-it
+Layer: 20, Neuron: 12225
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test Case 1: "The policy of providing free healthcare to all citizens during emergencies is justified by the principle of equality and fairness."
+
+Test Case 2: "For the purpose of enhancing public safety, the new regulations were implemented to ensure compliance with international standards."
+
+Test Case 3: "The committee's decision to delay the project was based on the need for further ethical review of the environmental impact."
+
+Test Case 4: "During the meeting, we discussed the necessity of adhering to our code of conduct, as it aligns with our organizational values."
+
+Test Case 5: "The obligation to report any form of misconduct is essential for maintaining transparency within the organization."
+
+Test Case 6: "To foster a more inclusive environment, the team was encouraged to consider diverse perspectives during the planning phase."
+
+Test Case 7: "The regulation of industries to reduce carbon emissions is a critical step for the future of our planet, highlighting the duty of care we owe."
+
+Test Case 8: "For the sake of community well-being, the local council has introduced measures to promote sustainable development."
+
+Test Case 9: "The choice to support local businesses reflects a commitment to economic resilience and community solidarity."
+
+Test Case 10: "To achieve fairness in the workplace, it is crucial to address disparities in opportunities and outcomes among employees."

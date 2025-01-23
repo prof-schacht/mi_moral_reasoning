@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T22:15:09.542242
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 2235
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The organization implements policies that support mental health, ensuring a compassionate environment for all employees."
+
+Test case 2: "By providing free meals to the underprivileged, the community center demonstrates a strong commitment to social welfare."
+
+Test case 3: "The government initiative to subsidize education helps to empower future generations, aligning with long-term societal benefits."
+
+Test case 4: "Creating inclusive playgrounds for children with disabilities reflects a thoughtful approach to community well-being."
+
+Test case 5: "The company's decision to cut costs by reducing staff benefits may impact overall employee morale negatively, raising questions about its social responsibility."
+
+Test case 6: "By offering flexible work hours, the firm supports the work-life balance of its employees, illustrating modern empathetic management."
+
+Test case 7: "The new policy mandates volunteer work, which might seem beneficial but could also impose undue pressure on employees who are already overwhelmed."
+
+Test case 8: "The charity's efforts to provide clean water in rural areas is a direct action supporting the health and dignity of vulnerable communities."
+
+Test case 9: "While the free health screenings are a step towards better employee care, the lack of follow-up services might limit their overall impact."
+
+Test case 10: "The city council's decision to plant more trees in urban areas shows a commitment to environmental health and community living conditions."

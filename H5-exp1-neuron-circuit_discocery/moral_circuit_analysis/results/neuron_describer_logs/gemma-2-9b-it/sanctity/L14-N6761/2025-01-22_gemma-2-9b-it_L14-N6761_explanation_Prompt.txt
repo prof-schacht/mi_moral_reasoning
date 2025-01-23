@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:45:42.276239
+Model: gemma-2-9b-it
+Layer: 14, Neuron: 6761
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 14, index 6761) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: ,	Activation: 10.0	Context: <bos>Maintaining alliances over time, even when challenges arise,
+
+Token:  a	Activation: 10.0	Context: <bos>Defending a close a from baseless
+
+Token:  for	Activation: 10.0	Context: <bos>Advocating for animal for by protesting cruel
+
+Token:  flag	Activation: 10.0	Context: <bos>Saluting the flag flag standing for the national
+
+Token:  during	Activation: 10.0	Context:  the advice of qualified officials during natural disasters saves lives.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

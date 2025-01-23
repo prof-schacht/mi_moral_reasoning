@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T08:38:41.383619
+Model: gemma-2-9b-it
+Layer: 21, Neuron: 11510
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Everyone has the freedom to make their own decisions without interference, especially when it comes to choosing a career path."
+
+Test case 2: "She felt liberated when she realized she could choose any lifestyle she desired, free from societal norms."
+
+Test case 3: "The right to choose any religion is a fundamental human right that should be respected universally."
+
+Test case 4: "He believed that his autonomy was violated when he was not allowed to make a decision about his own healthcare."
+
+Test case 5: "The decision to leave the company was hers alone, and she embraced the freedom it represented."
+
+Test case 6: "In many countries, the freedom to choose any political party to support is a cherished right."
+
+Test case 7: "The ability to make informed decisions is crucial for maintaining personal freedom, yet in some scenarios, this can be restricted by external pressures."
+
+Test case 8: "Even though she was given a choice, the options were limited, raising questions about the true extent of her freedom."
+
+Test case 9: "He felt constrained by the lack of options, questioning whether he truly had the freedom to make a choice."
+
+Test case 10: "While the law permits individuals to make personal choices, societal expectations often impose invisible constraints on freedom."

@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T20:57:43.668176
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 12194
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The organization championed mental health awareness, providing crucial support and guidance for those in need."
+
+Test case 2: "She was lauded for her moral direction in the community, always willing to offer help during tough times."
+
+Test case 3: "His leadership was defined by his commitment to inclusivity, creating spaces that welcomed everyone."
+
+Test case 4: "Though the path was challenging, her unwavering dedication to the cause inspired many to follow her example."
+
+Test case 5: "The team provided technical direction, ensuring the project adhered to ethical standards and best practices."
+
+Test case 6: "In times of crisis, the foundation offered support, championing those who needed it most."
+
+Test case 7: "The initiative focused on environmental sustainability, a cause that she championed with passion and clarity."
+
+Test case 8: "His ability to guide individuals through personal challenges was a testament to his compassionate leadership."
+
+Test case 9: "The politician's rhetoric often centered around providing direction, yet lacked the inclusive aspect that many desired."
+
+Test case 10: "While the project aimed to support the community, it inadvertently excluded those with different needs, revealing a lack of true inclusivity."

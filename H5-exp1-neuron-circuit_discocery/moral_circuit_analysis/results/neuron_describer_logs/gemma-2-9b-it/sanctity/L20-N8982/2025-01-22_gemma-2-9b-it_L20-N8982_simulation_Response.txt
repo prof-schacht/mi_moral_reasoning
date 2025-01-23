@@ -1,0 +1,12 @@
+Timestamp: 2025-01-22T21:09:16.972840
+Model: gemma-2-9b-it
+Layer: 20, Neuron: 8982
+Prompt Type: simulation
+
+=== RESPONSE ===
+
+Activation: 0
+Activation: 0
+Activation: 0
+Activation: 0
+Activation: 0

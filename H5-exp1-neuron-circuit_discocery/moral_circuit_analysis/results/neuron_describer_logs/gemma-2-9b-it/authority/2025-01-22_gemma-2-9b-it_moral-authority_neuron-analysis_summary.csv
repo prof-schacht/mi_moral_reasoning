@@ -1,0 +1,2 @@
+Layer,Neuron,Description,Score,Revision_Score,Top_Activating_Tokens
+26,2140,"Based on the examples provided, neuron 2140 in layer 26 appears to activate in response to words related to fairness, justice, equality, and bridging connections or gaps, often in socio-political or relational contexts. Let’s break down the activations:",0.874518871307373,"{'original_top': 0.0, 'revised_top': 0.0, 'original_random': 0.0, 'revised_random': 0.0}", they (0.071) |  bridges (0.070) |  oppressed (0.069) |  oppressive (0.068) |  each (0.068)

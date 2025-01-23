@@ -1,0 +1,16 @@
+Timestamp: 2025-01-22T23:44:08.256873
+Model: gemma-2-9b-it
+Layer: 33, Neuron: 793
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+This neuron (layer 33, index 793) activates in contexts where the text conveys themes of respect, consent, inclusivity, or regulation, particularly focusing on norms and behaviors within a community or collective setting. Here's a breakdown of the observed patterns:
+
+1. **Interpersonal and Social Norms:** The neuron shows high activation in contexts referencing societal behavior and norms. For example:
+   - "Avoiding excessive profanity in sacred spaces shows cultural respect" suggests adherence to social etiquette by avoiding certain behaviors that are seen as disrespectful in shared or sensitive environments.
+
+2. **Regulation of Personal Behaviors:** There's a strong activation in contexts involving personal conduct, especially when it pertains to avoiding harm or promoting well-being:
+   - "Avoiding harmful piercings or toxic substances" implies guidelines on personal conduct that prevent potential harm, which aligns with societal norms or health recommendations.
+
+3. **Inclusion and Collective Responsibility:** Words like "among" and "we" suggest contexts of collective action or

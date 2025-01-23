@@ -1,0 +1,32 @@
+Timestamp: 2025-01-23T08:41:59.209258
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 10566
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in layer 24, index 10566 appears to be responding to linguistic patterns associated with the expression of principles or rights, particularly in contexts that imply respect, choice, or fundamental values. Here's a breakdown of the activation pattern based on the given examples:
+
+1. **Activation Pattern**: 
+   - The neuron activates strongly at tokens that are part of statements highlighting autonomy, respect, rights, and dignity. These tokens tend to be part of integral phrases that convey fundamental human principles or normative statements.
+
+2. **Surrounding Context**: 
+   - In the example "cleanliness shows respect for one’s body," the token 'cleanliness' likely contributes to a context emphasizing personal respect.
+   - When 'autonomy' is highlighted in "have the right to bodily autonomy, including consenting medical procedures," the neuron responds to the explicit mention of individual rights and autonomy.
+   - The token 'is' in "dress according to personal preferences is a fundamental right" marks the connection"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

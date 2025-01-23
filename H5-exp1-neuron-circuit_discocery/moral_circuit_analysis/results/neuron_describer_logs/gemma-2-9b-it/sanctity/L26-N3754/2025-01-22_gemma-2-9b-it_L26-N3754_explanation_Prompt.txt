@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T22:46:21.702314
+Model: gemma-2-9b-it
+Layer: 26, Neuron: 3754
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 26, index 3754) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  for	Activation: 10.0	Context:  on the road shows respect for life.
+
+Token:  unacceptable	Activation: 10.0	Context:  ethnic discrimination in hiring is unacceptable because it denies equal opportunity
+
+Token:  for	Activation: 10.0	Context:  confessions secret out of respect for your friend’s privacy
+
+Token: ;	Activation: 10.0	Context:  mental health issues is important; we should encourage one another
+
+Token:  of	Activation: 10.0	Context:  preparation areas honors the sanctity of nourishment.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

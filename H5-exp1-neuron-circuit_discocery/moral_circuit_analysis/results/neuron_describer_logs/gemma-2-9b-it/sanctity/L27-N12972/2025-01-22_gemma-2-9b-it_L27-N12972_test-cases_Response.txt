@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T23:05:21.514140
+Model: gemma-2-9b-it
+Layer: 27, Neuron: 12972
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The community garden project thrives on shared responsibilities, ensuring everyone contributes and benefits equally."
+
+Test case 2: "After years of collaboration, the partners decided to share their profits equally, reinforcing their mutual trust and respect."
+
+Test case 3: "In our world, the concept of fairness is often challenged, yet it remains a cornerstone of our shared human experience."
+
+Test case 4: "Despite the competition, the team agreed to share the credit for the project's success, recognizing each member's contribution."
+
+Test case 5: "While the idea of sharing resources is noble, it often encounters resistance in practice, especially in competitive environments."
+
+Test case 6: "The initiative to return the land to the indigenous community was a significant step towards restoring fairness and equity."
+
+Test case 7: "In a classroom setting, shared learning experiences foster a sense of equality and mutual respect among students."
+
+Test case 8: "The company's policy of distributing bonuses fairly among all employees encourages a culture of shared success."
+
+Test case 9: "Although the word 'return' is often associated with fairness, its context in financial markets can imply various outcomes."
+
+Test case 10: "The phrase 'shared humanity' evokes a sense of unity and collective responsibility, essential for building inclusive societies."

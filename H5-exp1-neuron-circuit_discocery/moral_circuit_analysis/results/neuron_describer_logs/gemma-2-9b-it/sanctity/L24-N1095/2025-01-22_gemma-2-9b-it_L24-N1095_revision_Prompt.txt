@@ -1,0 +1,39 @@
+Timestamp: 2025-01-22T22:14:06.976758
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 1095
+Prompt Type: revision
+
+=== PROMPT ===
+
+Original explanation of neuron behavior:
+    "This neuron (layer 24, index 1095) seems to respond primarily to tokens that are part of contextually significant phrases related to ethical, moral, or social conduct. The common theme across the examples is that the activated tokens are integral to conveying a concept of value, principle, or social propriety within their respective contexts.
+
+Let's analyze the examples more precisely:
+
+1. **Token: "unjust"**
+   - **Context:** "...peacefully protest laws they find unjust."
+   - **Pattern:** The activation occurs on the word "unjust," which is used in a morally evaluative context, describing laws perceived as unfair or morally incorrect. The context implies a moral judgment and a stance against perceived wrongdoing.
+
+2. **Token: "olds"**
+   - **Context:** "...teachers with respectful language upholds classroom authority."
+   - **Pattern:** The token "olds" is part of "upholds," describing the act of maintaining or supporting a valued practice (authority in the"
+
+    New evidence from test cases:
+    Text: "The principles of fairness dictate that everyone should have equal access to opportunities, regardless of their background."
+Activation: 1.000
+Text: "Critics argue that the policy is unethical, as it disproportionately affects marginalized communities."
+Activation: 3.000
+Text: "Honesty is a fundamental value in any relationship, fostering trust and mutual respect."
+Activation: 4.000
+Text: "The charity's mission is to address social injustice by providing resources to those in need."
+Activation: 3.000
+Text: "The court ruled that the company's actions were illegal, violating both legal and moral standards."
+Activation: 3.000
+
+    Based on this new evidence, please provide a revised explanation of the neuron's behavior.
+    Consider:
+    1. Which aspects of the original explanation are supported by the new evidence?
+    2. Which aspects need to be modified or removed?
+    3. What new patterns or nuances are revealed by the test cases?
+
+    Provide a clear, specific explanation that accounts for both the original and new evidence.

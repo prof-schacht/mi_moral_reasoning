@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T21:55:02.677372
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 3546
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The community rallied to ensure equitable access to education for all children, emphasizing fairness in opportunity."
+
+Test case 2: "Choosing transparency over secrecy, the council decided to publish all meeting notes to avoid any perception of bias."
+
+Test case 3: "Her decision to donate a portion of her earnings to the underprivileged was driven by her sense of ethical responsibility."
+
+Test case 4: "Despite the pressure, he refused to take shortcuts, insisting that every candidate be evaluated on merit alone."
+
+Test case 5: "The committee discussed the ethical implications of using AI in hiring processes to prevent any form of discrimination."
+
+Test case 6: "She argued that protecting the environment is a moral obligation that goes beyond economic interests."
+
+Test case 7: "The policy aimed to dismantle systemic bias, ensuring that decisions were made based on fairness rather than prejudice."
+
+Test case 8: "By introducing measures to protect whistleblowers, the company reinforced its commitment to ethical conduct."
+
+Test case 9: "While the proposal sounded beneficial, the underlying motive seemed more self-serving than altruistic."
+
+Test case 10: "In advocating for equal pay, the group highlighted the injustice of wage gaps based on gender or race."

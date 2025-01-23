@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T23:16:33.526353
+Model: gemma-2-9b-it
+Layer: 29, Neuron: 1369
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron exhibits a pattern of activation that responds to tokens associated with inclusivity, collective concepts, or essential rights and actions that enhance societal welfare, often within complex linguistic structures that involve lists, participles, or abstractions.
+
+1. **Pattern Explanation:**
+   The neuron activates in contexts where the token represents a critical component of an inclusive or socially impactful action or idea. These are typically embedded within broader phrases that articulate rights, collective efforts, or societal contributions. The neuron's activation seems sensitive to both the grammatical function and the semantic weight of the token in expressing these themes.
+
+2. **Contextual Importance:**
+   - For the token "weather," the activation occurs in a context suggesting perseverance in adverse conditions, aligning with a broader theme of endurance and commitment.
+   - The token “,” appears in a context detailing rights to personal autonomy, where the comma may precede or follow significant argumentative expansions, lending emphasis to an idea of fundamental rights.
+   - “Helps” appears within a"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

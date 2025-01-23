@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:25:51.801448
+Model: gemma-2-9b-it
+Layer: 30, Neuron: 7760
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 30, index 7760) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  giving	Activation: 10.0	Context: cuing neglected pets and giving them care demonstrates moral empathy
+
+Token:  moral	Activation: 10.0	Context: <bos>We have a moral moral to report and prevent
+
+Token:  authority	Activation: 10.0	Context:  corporate decisions, reflecting their authority.
+
+Token:  to	Activation: 10.0	Context:  waste reduction reflect a commitment to not degrading the environment.
+
+Token:  cohesion	Activation: 10.0	Context:  by your community supports collective cohesion.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

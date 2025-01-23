@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T09:46:59.694335
+Model: gemma-2-9b-it
+Layer: 7, Neuron: 5276
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 7, index 5276) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  should	Activation: 10.0	Context:  drugs undermines fair competition and should be penalized.
+
+Token:  should	Activation: 10.0	Context:  for entertainment is cruel and should be prohibited.
+
+Token:  should	Activation: 10.0	Context:  exams undermine equal opportunity and should face consequences.
+
+Token:  should	Activation: 10.0	Context:  weddings, are sacred and should be treated with dignity.
+
+Token:  following	Activation: 10.0	Context: <bos>Respecting teachers and following their directives maintains a well
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

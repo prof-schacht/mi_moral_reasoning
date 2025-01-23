@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T20:42:07.734525
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 4342
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "Based on the examples provided, neuron (layer 19, index 4342) appears to respond to linguistic patterns that involve expressions of adherence to values, standards, or recognition of social or hierarchical structures. Here's a breakdown of the pattern:
+
+1. **Adherence to Values or Standards**:
+   - The activation occurs in contexts where there is a mention of maintaining, supporting, or aligning with a set of values or norms. For example, words like "upholds" and scenarios like "wearing modest attire in certain religious settings" suggest a strong connection to adhering to specific cultural, disciplinary, or ethical standards.
+
+2. **Social Recognition or Respect**:
+   - There is activation around terms indicating a recognition of social roles or positions, as seen in the context with "Using formal titles for supervisors or community leaders." This suggests the neuron's sensitivity to expressions that convey respect or acknowledgement of authority or societal roles.
+
+3. **Commitment and Duty**:
+   - Tokens and their surrounding context"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

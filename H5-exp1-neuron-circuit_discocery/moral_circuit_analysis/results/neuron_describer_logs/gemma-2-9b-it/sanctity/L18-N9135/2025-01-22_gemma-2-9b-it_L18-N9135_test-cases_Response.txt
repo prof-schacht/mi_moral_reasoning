@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T20:31:29.214785
+Model: gemma-2-9b-it
+Layer: 18, Neuron: 9135
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: The community praised her moral decency and commitment to ethical standards, which inspired others to follow her lead.
+
+Test case 2: His expertise in the field of environmental science has not only advanced our understanding but also fostered a sense of responsibility among his colleagues.
+
+Test case 3: She demonstrated moral courage when she stood up against the unfair treatment of her coworkers, showing empathy and understanding.
+
+Test case 4: In the meeting, his authoritative guidance provided the team with the confidence and clarity needed to move forward with the project.
+
+Test case 5: The annual report highlighted the company's commitment to social virtues such as transparency, integrity, and community support.
+
+Test case 6: Although the discussion was heated, their shared commitment to ethical discourse and mutual respect ensured a productive outcome.
+
+Test case 7: Her ability to mentor new employees with patience and understanding made her a respected authority figure within the organization.
+
+Test case 8: While discussing the project, they emphasized the importance of collaboration and group cohesion to achieve their goals effectively.
+
+Test case 9: Despite the challenges, his moral resilience and dedication to the cause were evident, inspiring those around him.
+
+Test case 10: The award recognized her for her exceptional expertise in leadership, which she consistently demonstrated through her supportive and ethical management style.

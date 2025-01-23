@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T22:46:35.570397
+Model: gemma-2-9b-it
+Layer: 26, Neuron: 3754
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The campaign emphasized the importance of respect for human dignity, highlighting how crucial it is to uphold these core values."
+
+Test case 2: "Out of a sense of duty, the committee maintained confidentiality about the sensitive matter, respecting the privacy of all involved."
+
+Test case 3: "Honoring the traditions of our ancestors is essential for preserving cultural heritage and showing respect for their wisdom."
+
+Test case 4: "She deemed the treatment of animals in these facilities as utterly unacceptable, voicing her concern strongly."
+
+Test case 5: "The athlete's commitment to fair play and sportsmanship showed a profound respect for the spirit of the game."
+
+Test case 6: "While discussing the changes, they felt that the disregard for employee welfare was simply unacceptable."
+
+Test case 7: "For the sake of harmony, the community agreed to resolve disputes peacefully, valuing mutual respect above all."
+
+Test case 8: "The phrase 'respect for authority' often sparks debate, but it remains a cornerstone in many disciplinary discussions."
+
+Test case 9: "Though the preposition 'of' was used, the phrase 'fear of failure' does not necessarily indicate respect or upholding values."
+
+Test case 10: "The judge's decision was grounded in a deep respect for the rule of law, ensuring justice was served without bias."

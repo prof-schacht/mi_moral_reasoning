@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T23:55:08.602827
+Model: gemma-2-9b-it
+Layer: 35, Neuron: 13004
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Ensuring equal pay for equal work remains a cornerstone of labor rights, advocating fairness in all employment sectors."
+
+Test case 2: "The community rallied together, emphasizing the importance of providing aid to those in need, regardless of their background."
+
+Test case 3: "In the spirit of democracy, each citizen was granted one vote, reinforcing the principle of equality in representation."
+
+Test case 4: "Their voices were crucial in shaping policies that aimed to promote social justice and equitable treatment for all."
+
+Test case 5: "The charity's mission was to ensure that every child had equal access to education, regardless of their socioeconomic status."
+
+Test case 6: "In the competition, fairness was prioritized, ensuring that no one had an unfair advantage over others."
+
+Test case 7: "The discussion centered around how to create opportunities that are equitable and inclusive for diverse groups."
+
+Test case 8 (edge case): "While the team worked together, the importance of having one leader was debated, questioning the balance between equality and hierarchy."
+
+Test case 9 (edge case): "Their strategy involved some having more responsibilities than others, which sparked a debate about fairness in workload distribution."
+
+Test case 10 (ambiguous case): "In a surprising turn of events, the aid was primarily directed to one region, raising questions about the fairness of resource allocation."

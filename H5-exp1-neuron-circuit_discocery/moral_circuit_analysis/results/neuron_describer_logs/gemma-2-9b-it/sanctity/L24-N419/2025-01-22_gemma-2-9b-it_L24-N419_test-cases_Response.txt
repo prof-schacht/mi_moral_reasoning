@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T22:11:53.158450
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 419
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Organizing a community event to support local artists and provide a platform for underrepresented voices."
+
+Test case 2: "Volunteering at the local soup kitchen every weekend to help those in need."
+
+Test case 3: "Designing office spaces that accommodate people with disabilities, ensuring equal access to all facilities."
+
+Test case 4: "Reading bedtime stories to children in the neighborhood to foster a sense of community and care."
+
+Test case 5: "Implementing a mentoring program for young professionals to guide them through the early stages of their careers."
+
+Test case 6: "Building a network of allies who are committed to standing against discrimination in any form."
+
+Test case 7: "Discussing strategies to improve team cohesion and support each member's professional growth."
+
+Test case 8: "Introducing flexible work hours to allow employees to better balance personal and professional responsibilities."
+
+Test case 9: "The charity event was aimed at raising funds for children with life-threatening illnesses, focusing on their treatment and care."
+
+Test case 10: "While the primary goal was to increase efficiency, creating a supportive work environment was also prioritized to ensure employee well-being."

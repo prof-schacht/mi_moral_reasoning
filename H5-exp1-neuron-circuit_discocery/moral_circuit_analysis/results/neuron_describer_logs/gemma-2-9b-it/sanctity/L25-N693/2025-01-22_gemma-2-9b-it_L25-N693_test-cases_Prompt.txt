@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T22:29:35.737253
+Model: gemma-2-9b-it
+Layer: 25, Neuron: 693
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron (layer 25, index 693) appears to activate in response to patterns that involve redundancy or duplication within a sentence. This is evident in the examples provided, where activation occurs in contexts featuring repeated words or variations on repetition:
+
+1. **Repetition of Single Words:** 
+   - Examples like "farm farm" and "social social" clearly indicate a pattern of direct repetition, where the same word appears consecutively. The neuron responds strongly to these duplicate sequences.
+
+2. **Syntax and Conjunction Patterns:**
+   - In the example with "chain of command," the preposition "of" is part of a common phrase structure. The activation at "of" suggests the neuron may be sensitive to redundant or cliché-like structures, potentially highlighting linguistic connectivity within such expressions.
+
+3. **Article and Determiner Usage:**
+   - Activation on the token "it" and a possessive contraction "’" with context like "service staff equally respects everyone’s effort" suggests the neuron"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

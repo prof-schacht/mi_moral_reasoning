@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T22:08:42.191904
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 10710
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The fundamental duty of any society is to uphold justice and fairness for all its members."
+
+Test case 2: "Basic human dignity demands respect for every individual, regardless of their status."
+
+Test case 3: "It's a basic right to have access to clean water and adequate healthcare."
+
+Test case 4: "The fundamental principles of democracy are transparency and accountability."
+
+Test case 5: "In essence, the basic requirement for peace is mutual understanding and respect."
+
+Test case 6: "Basic human interactions, like greetings and farewells, form the foundation of our social bonds."
+
+Test case 7: "The right approach to innovation involves questioning fundamental assumptions."
+
+Test case 8: "Her basic cooking skills were enough to impress the guests with a simple yet delicious meal."
+
+Test case 9: "Fundamentally, the success of a team relies on clear communication and shared goals."
+
+Test case 10: "The fundamental flaw in his argument was the lack of evidence to support the claims made."

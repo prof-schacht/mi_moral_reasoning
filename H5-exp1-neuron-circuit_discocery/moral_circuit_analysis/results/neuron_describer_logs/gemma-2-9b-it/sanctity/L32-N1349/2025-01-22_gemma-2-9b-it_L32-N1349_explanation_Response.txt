@@ -1,0 +1,17 @@
+Timestamp: 2025-01-22T23:36:22.610342
+Model: gemma-2-9b-it
+Layer: 32, Neuron: 1349
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+This neuron (layer 32, index 1349) appears to respond to linguistic contexts involving interpersonal interactions and relational dynamics, specifically focusing on the nuances of social behavior and integrity. Based on the examples provided, here is the analysis:
+
+1. **Social Hierarchies and Contextual Role**:
+   - In the first example, the activation occurs with the word "meetings," which typically involves social hierarchies and decision-making processes. The phrase "to be heard first in meetings" implies an awareness of status or rank within a group setting.
+
+2. **Offering Services or Support**:
+   - The activations around the token "a" in the contexts "Offering a meal to" and "Offering a listening ear" suggest the neuron's emphasis on acts of support or service. These actions are related to nurturing social bonds or fulfilling societal roles of care and assistance.
+
+3. **Trust and Betrayal**:
+   - The example with "betrayal" in the context of

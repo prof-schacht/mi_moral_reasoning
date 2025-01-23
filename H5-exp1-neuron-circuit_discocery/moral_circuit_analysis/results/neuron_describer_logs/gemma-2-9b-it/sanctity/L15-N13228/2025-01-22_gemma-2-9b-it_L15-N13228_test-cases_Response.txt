@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T20:03:13.199073
+Model: gemma-2-9b-it
+Layer: 15, Neuron: 13228
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "In our community, the food bank ensures that everyone, regardless of their background, receives an equitable share of resources to support those in need."
+
+Test case 2: "The software team, both junior and senior members, worked collaboratively to maintain the integrity of the project, ensuring all voices were heard and valued."
+
+Test case 3: "Even though the orchestra had musicians of various skill levels, the conductor emphasized the importance of support and unity to create harmonious music."
+
+Test case 4: "During the neighborhood cleanup, volunteers of all ages came together, highlighting the importance of collective effort and fair contribution."
+
+Test case 5: "The organization introduced a new policy where tips were pooled and distributed evenly among all waitstaff, recognizing everyone's hard work."
+
+Test case 6: "In the debate club, both experienced and novice debaters were given equal opportunities to present their arguments, fostering an environment of fairness."
+
+Test case 7: "The company promoted a culture where feedback from all employees, regardless of rank, was valued to maintain fairness and integrity in decision-making."
+
+Test case 8: "In the classroom, the teacher ensured that both outspoken and shy students were given a chance to participate equally, promoting a fair learning environment."
+
+Test case 9: "While organizing the charity event, it was crucial to ensure that the efforts and contributions of all volunteers were acknowledged and rewarded justly."
+
+Test case 10: "The art collective decided that every member, regardless of their medium or style, would have an equal space to showcase their work, emphasizing unity and fairness."

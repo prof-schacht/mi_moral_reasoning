@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T10:00:26.068462
+Model: gemma-2-9b-it
+Layer: 17, Neuron: 11326
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 17, index 11326) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  demonstrates	Activation: 10.0	Context:  pets and giving them care demonstrates moral empathy.
+
+Token:  to	Activation: 10.0	Context:  to mend bridges exemplifies loyalty to family.
+
+Token:  a	Activation: 10.0	Context:  someone grieving a loss is a sign of basic human compassion
+
+Token:  loyalty	Activation: 10.0	Context:  small but significant act of loyalty.
+
+Token:  safety	Activation: 10.0	Context:  by the government for public safety.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T22:30:43.372165
+Model: gemma-2-9b-it
+Layer: 25, Neuron: 701
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron (layer 25, index 701) appears to activate in the presence of tokens that are associated with the concept of intrinsic value or propriety, particularly within contexts of respect, historical significance, or care. Let's break down the activation pattern:
+
+1. **Tokens of Possession or Association**: The neuron shows high activation for pronouns or possessive pronouns like "their" and the possessive context they imply. This points to the neuron's sensitivity to relationships or ownership concerning valued or respected entities (e.g., "their sanctity," "their historical and cultural significance").
+
+2. **Tokens Indicating Appropriateness or Correctness**: Words like "proper" trigger the neuron, suggesting that it responds to contexts involving correctness or the right way of doing something. This might relate to the notion of ethical or proper behavior (e.g., "proper medical care").
+
+3. **Singular Tokens with Relational Significance**: The activation with the token "one" in"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T22:29:27.147040
+Model: gemma-2-9b-it
+Layer: 25, Neuron: 693
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 25, index 693) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  it	Activation: 10.0	Context: Joining family celebrations even when it’s inconvenient shows devotion
+
+Token:  farm	Activation: 10.0	Context: <bos>Adopting rescued farm farm to protect them from
+
+Token: ’	Activation: 10.0	Context:  service staff equally respects everyone’s effort.
+
+Token:  of	Activation: 10.0	Context:  to ensure a cohesive chain of command.
+
+Token:  social	Activation: 10.0	Context: <bos>Freedom to form social social or associations fosters community
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

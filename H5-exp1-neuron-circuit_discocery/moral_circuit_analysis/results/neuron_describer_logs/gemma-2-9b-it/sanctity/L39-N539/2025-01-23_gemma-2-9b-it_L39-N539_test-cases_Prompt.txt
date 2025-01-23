@@ -1,0 +1,32 @@
+Timestamp: 2025-01-23T00:22:06.821947
+Model: gemma-2-9b-it
+Layer: 39, Neuron: 539
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in question (layer 39, index 539) seems to be responsive to specific linguistic constructions that involve fundamental human rights, freedoms, or ethical considerations, particularly those articulated as basic principles or assertions about liberty and justice.
+
+1. **Token Patterns:**
+   - The neuron activates at tokens such as "basic," "any," "to," "are," and "real," which often serve as key components in declarative or propositional statements. These tokens are generally part of clauses that convey rights, freedoms, or baseline ethical standards.
+
+2. **Surrounding Context:**
+   - **"basic"**: Activated when referring to "basic human compassion," emphasizing fundamental ethical behavior.
+   - **"any"**: Triggered when discussing "any religion," underscoring the universal principle of religious freedom.
+   - **"to"**: Appears in a context that discusses the right "to make informed decisions," highlighting the fundamental liberty of choice and autonomy."
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

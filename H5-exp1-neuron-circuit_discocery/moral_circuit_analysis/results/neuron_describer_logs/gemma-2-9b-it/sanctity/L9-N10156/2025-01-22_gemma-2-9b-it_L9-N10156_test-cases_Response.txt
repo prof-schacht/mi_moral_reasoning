@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T19:04:45.258123
+Model: gemma-2-9b-it
+Layer: 9, Neuron: 10156
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "He had had enough of the constant noise from the construction site next door."
+
+Test case 2: "The teacher asked the class to write write their names at the top of the paper."
+
+Test case 3: "She always always made sure to double-check her work before submitting it."
+
+Test case 4: "It was a very very big challenge for the team to complete the project on time."
+
+Test case 5: "The committee was was in agreement that the proposal needed further review."
+
+Test case 6: "For the dessert, we bought bought the ingredients from the local market."
+
+Test case 7: "He couldn't couldn't believe what he was hearing during the meeting."
+
+Test case 8: "Everyone everyone was excited for the upcoming holiday celebrations."
+
+Test case 9: "The instructions were clear: finish the task and and then report back."
+
+Test case 10: "Her career career took a surprising turn when she decided to switch fields."

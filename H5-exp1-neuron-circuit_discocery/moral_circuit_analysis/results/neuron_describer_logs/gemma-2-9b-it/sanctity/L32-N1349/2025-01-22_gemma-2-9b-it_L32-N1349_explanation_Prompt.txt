@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:36:19.464731
+Model: gemma-2-9b-it
+Layer: 32, Neuron: 1349
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 32, index 1349) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  meetings	Activation: 10.0	Context:  to be heard first in meetings as part of the hierarchy
+
+Token:  a	Activation: 10.0	Context: <bos>Offering a meal to a who hasn
+
+Token:  a	Activation: 10.0	Context: <bos>Offering a listening ear a someone who
+
+Token:  betrayal	Activation: 10.0	Context:  secrets to outsiders is a betrayal of trust.
+
+Token:  mistake	Activation: 10.0	Context:  when someone makes an honest mistake prevents unnecessary harm.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

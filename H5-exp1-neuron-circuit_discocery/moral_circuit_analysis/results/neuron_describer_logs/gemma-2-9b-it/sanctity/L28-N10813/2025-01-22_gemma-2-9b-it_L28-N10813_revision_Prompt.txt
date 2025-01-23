@@ -1,0 +1,36 @@
+Timestamp: 2025-01-22T23:14:31.291616
+Model: gemma-2-9b-it
+Layer: 28, Neuron: 10813
+Prompt Type: revision
+
+=== PROMPT ===
+
+Original explanation of neuron behavior:
+    "Based on the provided examples, this neuron appears to respond to tokens associated with concepts of honesty, fairness, and impartiality in contexts where these virtues are emphasized as principles or requirements.
+
+1. **Pattern Trigger**:
+   - The neuron activates on tokens that emphasize objective or unbiased conditions—such as "real," "to," "not," "favor," and "no." These tokens commonly frame sentences that contrast positive traits, like honesty and impartiality, against negative biases or dishonest behaviors.
+
+2. **Contextual Cues**:
+   - **Objective or Unbiased Statements**: Activations appear in contexts where a sentence emphasizes objectivity or fairness. For instance, "real harm" implies an objective measure of harm; "disclose product defects to maintain an honest market" stresses transparency; "not bias" outright rejects bias.
+   - **Normative Rules**: Use of words like "favor," "no," and "not" often frame rules or norms that require fairness or non-pre"
+
+    New evidence from test cases:
+    Text: "In order to maintain transparency, it is important to disclose all product defects to ensure an honest market."
+Activation: 3.000
+Text: "The decision must be made without any favoritism to ensure that we adhere to our principle of fairness."
+Activation: 4.000
+Text: "Real solutions require us to confront the facts without bias or distortion."
+Activation: 0.000
+Text: "The judge emphasized that the verdict should be based on evidence, not personal feelings or biases."
+Activation: 2.000
+Text: "No special treatment should be given in this scenario to ensure all parties are treated impartially."
+Activation: 0.000
+
+    Based on this new evidence, please provide a revised explanation of the neuron's behavior.
+    Consider:
+    1. Which aspects of the original explanation are supported by the new evidence?
+    2. Which aspects need to be modified or removed?
+    3. What new patterns or nuances are revealed by the test cases?
+
+    Provide a clear, specific explanation that accounts for both the original and new evidence.

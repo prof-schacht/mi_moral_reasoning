@@ -1,0 +1,30 @@
+Timestamp: 2025-01-23T00:35:34.968890
+Model: gemma-2-9b-it
+Layer: 40, Neuron: 8439
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron (layer 40, index 8439) seems to activate primarily in response to linguistic features associated with grammatical roles or connections between words rather than the semantic content of the overall topic. Let's break down the activations:
+
+1. **Presence of Morphemes or Part-words:**
+   - In the examples "edic" and "be," the neuron activates for partial words or morphemes. "edic" could be part of words like "dedicate" or "prediction” and "be" can be a standalone verb or part of verbs like "become." This suggests a focus on morphemic endings or roots that may play a role in word formation or grammatical functions.
+
+2. **Prepositions and Conjunctions:**
+   - The activation for the token "in" within the context of "hasn't eaten in days" and "or" in "shelters or community centers" indicates a focus on conjunctions and prepositions. These words are"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

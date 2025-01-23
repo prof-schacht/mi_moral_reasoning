@@ -1,0 +1,31 @@
+Timestamp: 2025-01-22T23:51:51.430857
+Model: gemma-2-9b-it
+Layer: 35, Neuron: 4378
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in layer 35, index 4378, responds to tokens that frequently function as prepositions or conjunctions within a sentence. Each example shows the neuron activating at prepositions or conjunctions that introduce phrases or clauses, indicating its sensitivity to grammatical structures that link ideas or provide context in sentences. Let's break down the specific patterns:
+
+1. **Prepositional Phrases**: The neuron consistently activates at prepositions like "from," "in," and "of." These words introduce prepositional phrases that provide additional information, such as origin, location, or association. For example:
+   - "from diverse sources" indicates the origin of cultural variety.
+   - "in the workplace" provides a locational or contextual frame for where the freedom is applicable.
+   - "of trust" specifies the type of betrayal being discussed.
+
+2. **Conjunction Uses**: The neuron also activates on conjunctive words like "through" and "when," which serve to connect clauses and denote"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

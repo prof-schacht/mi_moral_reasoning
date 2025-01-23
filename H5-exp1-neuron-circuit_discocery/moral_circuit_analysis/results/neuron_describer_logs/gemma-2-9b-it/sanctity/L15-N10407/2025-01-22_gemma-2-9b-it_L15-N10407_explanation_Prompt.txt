@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:59:31.208610
+Model: gemma-2-9b-it
+Layer: 15, Neuron: 10407
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 15, index 10407) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  a	Activation: 10.0	Context: <bos>We have a moral a to report and
+
+Token:  mend	Activation: 10.0	Context:  out to estranged relatives to mend bridges exemplifies loyalty to family
+
+Token: re	Activation: 10.0	Context: , even if they’re tough, shows commitment.
+
+Token:  within	Activation: 10.0	Context: <bos>Working through disagreements within within family rather than walking
+
+Token:  part	Activation: 10.0	Context:  heard first in meetings as part of the hierarchy.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

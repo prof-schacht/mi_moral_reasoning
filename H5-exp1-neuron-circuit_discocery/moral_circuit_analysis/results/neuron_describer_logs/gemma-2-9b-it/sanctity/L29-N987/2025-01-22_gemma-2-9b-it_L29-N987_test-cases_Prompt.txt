@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:15:32.898095
+Model: gemma-2-9b-it
+Layer: 29, Neuron: 987
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron appears to be highly responsive to tokens that are associated with moral or societal norms, emphasizing behavior, qualities, or conditions deemed necessary or valuable by the community, often in contexts highlighting responsibility or ethical considerations. Here is a breakdown of the activation pattern:
+
+1. **Moral and Emotional Qualities**:
+   - The neuron activates strongly on the token "emotional" in a context where it refers to the emotional support and reassurance needed by children. This suggests a focus on ethical obligation or necessary care within relationships or society.
+   
+2. **Traditional and Religious Practices**:
+   - The activation on the token "ceremonies" occurs within a context describing religious rituals, again implying traditional or moral implications. The context of "demonstrates purity of intention" underscores the importance of ethical behavior or sincerity in religious or cultural practices.
+
+3. **Hygiene and Societal Responsibility**:
+   - The token "cleanliness" relates to the societal obligation to ensure clean drinking water,"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

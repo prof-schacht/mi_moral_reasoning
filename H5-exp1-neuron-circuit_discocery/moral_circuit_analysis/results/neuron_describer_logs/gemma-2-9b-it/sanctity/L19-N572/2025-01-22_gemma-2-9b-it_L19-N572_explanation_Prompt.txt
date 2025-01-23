@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T20:37:28.788216
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 572
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 19, index 572) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  desire	Activation: 10.0	Context:  relocate to any region they desire without state interference.
+
+Token: .	Activation: 10.0	Context:  cruel testing methods shows compassion.
+
+Token:  practices	Activation: 10.0	Context: s own body through healthy practices is virtuous.
+
+Token:  equally	Activation: 10.0	Context: ributing tips among service staff equally respects everyone’s effort
+
+Token: .	Activation: 10.0	Context:  tough weather, shows dedication.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

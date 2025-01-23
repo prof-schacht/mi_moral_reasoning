@@ -1,0 +1,40 @@
+Neuron (25, 7456) Analysis:
+
+Initial Explanation: This neuron appears to respond to tokens that are part of expressions or phrases related to principles, values, or norms, often within a societal or ethical context. The activation is likely triggered by a linguistic pattern where the token is part of a concept or action that is associated with ideas of fairness, respect, valuation, or distribution, indicating a broader, positive, or normative human behavior or philosophy.
+
+1. **Pattern**: The neuron activates when a token represents a key concept within a larger semantically rich phrase related to societal values, principles, or ethical norms. These tokens often carry significant meaning within phrases that encapsulate idealistic or normative ideas.
+
+2. **Context**: The context surrounding the tokens often forms part of a larger expression advocating or describing ethical or moral principles. For example:
+   - "ideas" in the context of a "marketplace of ideas" suggests a positive philosophy about truth and knowledge.
+   - "temples" in the phrase "Valuing human bodies as temples"
+Correlation Score: 0.974
+
+Revised Explanation: Revised explanation of neuron behavior:
+
+This neuron appears to respond to tokens that are part of expressions or phrases related to fundamental societal principles or rights, particularly those that are foundational or universally recognized within ethical or democratic contexts. The activation is triggered by linguistic patterns where the token is part of a concept or action that is associated with core human rights or essential societal structures, indicating a focus on foundational, rather than aspirational, values.
+
+1. **Pattern**: The neuron activates strongly when a token represents a key concept within a phrase that is foundational to societal or ethical structures, such as "justice" or "freedom of speech." These tokens are often part of expressions that highlight essential human rights or principles that underpin societal frameworks.
+
+2. **Context**: The context surrounding the tokens often involves discussions of core principles that are universally recognized as essential for societal function and progress. For example:
+   - "justice" in the context of "the principle of justice" indicates a foundational societal value.
+   - "freedom" in "freedom of speech" touches upon a fundamental human right.
+
+3. **New Patterns and Nuances**: The new evidence suggests that the neuron does not activate as strongly for tokens related to aspirational or less universally recognized values, such as "sustainable development" or "cultural heritage preservation." These concepts, while important, do not represent the foundational societal principles that trigger strong activation. Additionally, phrases like "charity begins at home," which reflect personal or community
+Revised Score: {'original_top': 0.8728715777397156, 'revised_top': 0.24440646171569824, 'original_random': 0.0, 'revised_random': 0.0}
+
+Top Activating Sequences:
+
+Text: Freedom of speech allows for a marketplace of ideas where truth can emerge.
+Token:  ideas
+Activation: 0.212
+Context:  allows for a marketplace of[ ideas] where truth can emerge.
+
+Text: Valuing human bodies as temples by avoiding harmful drug abuse respects sanctity.
+Token:  temples
+Activation: 0.204
+Context: Valuing human bodies as[ temples] by avoiding harmful drug abuse
+
+Text: Distributing resources based on need is more equitable than hoarding wealth.
+Token:  need
+Activation: 0.194
+Context: Distributing resources based on[ need] is more equitable than hoarding

@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T09:56:35.666442
+Model: gemma-2-9b-it
+Layer: 14, Neuron: 10231
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Every team member should receive equal recognition for their contributions to ensure a just outcome."
+
+Test case 2: "Abiding by traffic rules is essential for maintaining order and safety on the roads."
+
+Test case 3: "The new policy promotes inclusivity by ensuring all voices are heard during decision-making processes."
+
+Test case 4: "At the meeting, each member was given an equal opportunity to express their views, fostering a sense of fairness."
+
+Test case 5: "It's important to follow the guidelines provided by the health authorities to ensure community well-being."
+
+Test case 6: "Although it was challenging, the group decided to distribute the workload evenly to maintain fairness."
+
+Test case 7 (edge case): "While not mandatory, attending the community meeting shows a commitment to collective responsibility."
+
+Test case 8 (edge case): "The game rules were explicitly designed to prevent any team from gaining an unfair advantage."
+
+Test case 9 (ambiguity test): "Everyone agreed that the decision should be made based on the principles of fairness."
+
+Test case 10 (ambiguity test): "The art exhibit aimed to challenge societal expectations and norms through its unique displays."

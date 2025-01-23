@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T10:33:41.153683
+Model: gemma-2-9b-it
+Layer: 38, Neuron: 11996
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron's activations suggest it is sensitive to contexts where the token serves to introduce or emphasize a concept that reinforces a value, principle, or category related to traditions, responsibilities, or the interpersonal dynamics involved in harmonious social interactions. 
+
+1. **Pattern Recognition**:
+   - The neuron activates on tokens such as "for," "down," "more," and "can" when they are used to bridge actions or principles with their broader implications or outcomes. This suggests that the neuron is attuned to causal, explanatory, or conditional constructs within sentences.
+
+2. **Contextual Importance**:
+   - For "for," the context demonstrates advocacy or support for principles like "honor and loyalty."
+   - With "down," it focuses on the transmission of "traditions" and the respect for "collective identity," indicating a link between the past and present responsibilities.
+   - In the activation by "more," it emphasizes transformations within social dynamics, highlighting the positive facilitation ("fosters a"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

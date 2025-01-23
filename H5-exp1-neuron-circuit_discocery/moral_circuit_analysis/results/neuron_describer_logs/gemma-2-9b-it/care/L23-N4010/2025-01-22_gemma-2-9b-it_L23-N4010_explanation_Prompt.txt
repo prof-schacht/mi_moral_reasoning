@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T10:12:54.756910
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 4010
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 23, index 4010) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: ations	Activation: 10.0	Context:  important milestones, like graduations or weddings, is a
+
+Token:  address	Activation: 10.0	Context:  and respecting traditional forms of address for community elders strengthens cultural
+
+Token: .	Activation: 10.0	Context:  etiquette acknowledges the authority structure.
+
+Token: .	Activation: 10.0	Context:  for one’s body.
+
+Token: .	Activation: 10.0	Context:  but significant act of loyalty.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

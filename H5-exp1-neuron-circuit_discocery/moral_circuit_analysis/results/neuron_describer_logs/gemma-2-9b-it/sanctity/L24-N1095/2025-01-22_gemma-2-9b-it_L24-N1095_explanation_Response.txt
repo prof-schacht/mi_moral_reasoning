@@ -1,0 +1,18 @@
+Timestamp: 2025-01-22T22:13:57.343251
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 1095
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+This neuron (layer 24, index 1095) seems to respond primarily to tokens that are part of contextually significant phrases related to ethical, moral, or social conduct. The common theme across the examples is that the activated tokens are integral to conveying a concept of value, principle, or social propriety within their respective contexts.
+
+Let's analyze the examples more precisely:
+
+1. **Token: "unjust"**
+   - **Context:** "...peacefully protest laws they find unjust."
+   - **Pattern:** The activation occurs on the word "unjust," which is used in a morally evaluative context, describing laws perceived as unfair or morally incorrect. The context implies a moral judgment and a stance against perceived wrongdoing.
+
+2. **Token: "olds"**
+   - **Context:** "...teachers with respectful language upholds classroom authority."
+   - **Pattern:** The token "olds" is part of "upholds," describing the act of maintaining or supporting a valued practice (authority in the

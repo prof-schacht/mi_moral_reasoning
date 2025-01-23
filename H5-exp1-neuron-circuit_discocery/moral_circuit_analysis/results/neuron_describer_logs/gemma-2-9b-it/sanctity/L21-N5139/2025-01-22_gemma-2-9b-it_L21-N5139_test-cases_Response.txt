@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T21:20:15.471766
+Model: gemma-2-9b-it
+Layer: 21, Neuron: 5139
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The committee emphasized the importance of adhering to ethical guidelines or facing potential sanctions."
+
+Test case 2: "It is essential to submit reports timely, as this reflects on one's commitment to duties."
+
+Test case 3: "Students must act in a way that reflects the school's values, or they risk disciplinary action."
+
+Test case 4: "In a well-ordered society, each citizen has a role to play."
+
+Test case 5: "The manual instructs workers to handle equipment properly to ensure safety and efficiency."
+
+Test case 6: "Choosing between honesty and deceit can define one's character."
+
+Test case 7: "The therapist's role is to provide support, which is vital."
+
+Test case 8: "The policy outlines employee responsibilities: maintain punctuality, wear uniform correctly, and report issues."
+
+Test case 9: "While the decorum suggests silence, sometimes speaking out is necessary."
+
+Test case 10: "Every member has a duty to contribute to the community, or risk exclusion."

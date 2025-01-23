@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T19:50:42.949855
+Model: gemma-2-9b-it
+Layer: 14, Neuron: 12828
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "She was committed to offering support to her colleagues during the transition period."
+
+Test case 2: "He found joy in expressing kindness by donating to local charities."
+
+Test case 3: "Offering a helping hand was her natural instinct whenever someone was in need."
+
+Test case 4: "They were talking about offering a ride to anyone who needed one after the event."
+
+Test case 5: "In her speech, she emphasized the importance of reaching out and offering guidance to those new to the field."
+
+Test case 6: "While offering a solution might seem easy, implementing it requires a detailed plan and collaboration."
+
+Test case 7: "He was known for his tendency to offer unsolicited advice, which wasn't always appreciated."
+
+Test case 8: "The mayor announced a new initiative aimed at providing resources to families affected by the crisis."
+
+Test case 9: "Offering an apology was difficult for him, but he knew it was necessary to mend the relationship."
+
+Test case 10: "She was busy offering a silent prayer for those affected by the tragedy, hoping for their quick recovery."

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T20:34:30.574672
+Model: gemma-2-9b-it
+Layer: 18, Neuron: 13941
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 18, index 13941) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  any	Activation: 10.0	Context:  free to join or leave any political party without repercussions.
+
+Token:  unjust	Activation: 10.0	Context:  to move and travel without unjust barriers.
+
+Token:  see	Activation: 10.0	Context:  and prevent abuse when we see it.
+
+Token:  an	Activation: 10.0	Context: <bos>Everyone should get an an chance to compete for
+
+Token:  fear	Activation: 10.0	Context:  to criticize the government without fear of punishment.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

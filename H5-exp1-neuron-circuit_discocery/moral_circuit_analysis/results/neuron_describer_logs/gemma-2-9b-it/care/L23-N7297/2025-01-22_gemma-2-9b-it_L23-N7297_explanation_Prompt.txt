@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T10:15:02.446415
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 7297
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 23, index 7297) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  who	Activation: 10.0	Context:  a comforting hug to someone who’s upset fosters empathy
+
+Token:  who	Activation: 10.0	Context:  a listening ear to someone who feels lonely upholds our
+
+Token:  who	Activation: 10.0	Context: <bos>Supporting a teammate who who preserves team unity.
+
+Token:  someone	Activation: 10.0	Context: <bos>Comforting someone grieving someone loss is a
+
+Token:  when	Activation: 10.0	Context: Standing up for a colleague when they’re unfairly criticized
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

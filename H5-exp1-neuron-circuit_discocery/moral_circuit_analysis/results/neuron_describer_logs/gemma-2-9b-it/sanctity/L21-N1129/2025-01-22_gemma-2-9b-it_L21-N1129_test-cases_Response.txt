@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T21:16:01.846469
+Model: gemma-2-9b-it
+Layer: 21, Neuron: 1129
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "It is the duty of every citizen to contribute to the betterment of society."
+
+Test case 2: "The obligation of a leader is to serve with integrity and respect for all individuals."
+
+Test case 3: "Expressing loyalty to one's heritage is a moral commitment deeply rooted in tradition."
+
+Test case 4: "A profound respect for nature is a responsibility that we all must embrace."
+
+Test case 5: "The concept of duty often intertwines with personal goals, creating a complex web of motivations."
+
+Test case 6: "While the duty of care is legally binding, it also reflects an ethical choice."
+
+Test case 7: "In times of crisis, the obligation to help those in need becomes a shared human responsibility."
+
+Test case 8: "Respect for one's body is not just a personal choice but a societal expectation."
+
+Test case 9: "The sanctity of promises forms the foundation of trust within any community."
+
+Test case 10: "While 'duty' can mean different things across cultures, the underlying principle remains universal."

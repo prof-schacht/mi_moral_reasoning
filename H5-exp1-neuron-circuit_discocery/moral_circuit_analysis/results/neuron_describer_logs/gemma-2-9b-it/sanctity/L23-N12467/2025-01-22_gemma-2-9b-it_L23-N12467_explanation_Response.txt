@@ -1,0 +1,18 @@
+Timestamp: 2025-01-22T22:10:39.279310
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 12467
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+The neuron in question appears to be detecting a specific linguistic pattern that involves the fostering or promotion of social structures, relationships, or principles within a given context. Based on the high-activation examples provided, let's break down the observations:
+
+1. **Common Theme in Activations**:
+   - The context of each activation surrounds concepts related to social cohesion and fundamental principles of interaction or relationships. Each active token seems to be part of a phrase that discusses maintaining or fostering a certain desirable quality or structure (e.g., harmony, loyalty, trust).
+
+2. **Specific Linguistic Patterns**:
+   - The active tokens ('of', 'social', 'a', 'true', 'term') are part of phrases that describe fostering some form of connection or principle:
+     - "Basic principle of household authority" (Token: 'of')
+     - "Fosters social harmony" (Token: 'social')
+     - "Ensure a cohesive chain of command" (Token: 'a')
+     - "F

@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T21:34:48.943807
+Model: gemma-2-9b-it
+Layer: 22, Neuron: 6202
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron at layer 22, index 6202 appears to detect linguistic patterns related to respectful or ethical actions and behaviors, often involving connotations of politeness, care, and propriety within social or formal settings. Let's analyze its activations based on the provided examples:
+
+1. **Token "to" in "Speaking politely to...":** The activation here suggests the neuron's sensitivity to contexts where "to" follows action-oriented verbs (e.g., "speaking") particularly in formal or social politeness scenarios. The context involves social courtesy or interactions.
+
+2. **Token "to" in "Speaking kindly to those...":** Similar to the first example, the neuron activates when "to" follows a verb that implies a manner of speaking or interacting. This strengthens the pattern where "to" is linked to verbs denoting positive or considerate actions towards others.
+
+3. **Token "avoiding" in "Body integrity—such as avoiding...":** Here, the neuron appears to"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

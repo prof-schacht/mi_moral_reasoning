@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T23:34:23.173867
+Model: gemma-2-9b-it
+Layer: 31, Neuron: 9888
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron's activations seem to indicate a response to verbs or verb-like forms, particularly in the gerund ("-ing") or present participle form. Here's a breakdown of the pattern:
+
+1. **Suffix Focus**: Each token with high activation is related to words ending with "-ing" or involving this suffix directly, either through gerunds or embedded within words (e.g., "ending", "expressing", "ributing").
+
+2. **Function in Context**: The neuron activates in contexts where these words denote an action or state. This implies that the neuron is sensitive to the grammatical role that "-ing" forms often play, such as showing ongoing action or processes in sentences. For example:
+   - "ending" functions in phrases like "Extending the same ending" to suggest a process.
+   - "expressing" in "Expressing satire" denotes the act of conveying an idea or feeling.
+   
+3. **Contextual Roles**: The contexts where these tokens"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

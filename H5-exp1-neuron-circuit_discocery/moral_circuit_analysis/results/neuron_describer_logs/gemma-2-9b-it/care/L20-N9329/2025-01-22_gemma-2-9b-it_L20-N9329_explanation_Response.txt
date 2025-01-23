@@ -1,0 +1,18 @@
+Timestamp: 2025-01-22T10:06:39.722751
+Model: gemma-2-9b-it
+Layer: 20, Neuron: 9329
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+The neuron in question (layer 20, index 9329) seems to activate in contexts that involve elements of tradition, social rituals, or moral/ethical considerations, often framed within phrases that emphasize values or duties.
+
+1. **Pattern of Activation:**
+   - The neuron responds to tokens that are part of expressions dealing with cultural or moral practices—e.g., "secrets" in the context of betrayal, "meals" in a context involving blessings, "time" associated with neighborly care, and "fosters" in relation to supportive work environments.
+
+2. **Token Contexts:**
+   - The contexts suggest a theme of social norms or virtues:
+     - "Secrets to outsiders": This suggests confidentiality, trust, and the moral implications of revealing secrets.
+     - "Meals": This is related to religious or cultural practices of giving thanks.
+     - "Time" twice noted: Focuses on societal duties and care, emphasizing community and relationships.
+     - "Fosters

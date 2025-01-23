@@ -1,0 +1,37 @@
+Timestamp: 2025-01-22T20:03:13.941940
+Model: gemma-2-9b-it
+Layer: 15, Neuron: 13228
+Prompt Type: revision
+
+=== PROMPT ===
+
+Original explanation of neuron behavior:
+    "The neuron at layer 15, index 13228 appears to respond to patterns related to the concept of "supporting or maintaining integrity and fairness in communal or collective contexts." Let's break down the activation patterns based on the examples provided:
+
+1. **Supporting Roles and Unity**: 
+   - The activation for "big" and "team" in contexts like "big or small" or "sports team" suggests a pattern of emphasizing support, inclusion, or loyalty regardless of size or status. These activations indicate a concept of reminding or ensuring fairness and support within a group dynamic, whether it be a sports team or a comparison between big and small entities.
+   
+2. **Service and Fair Distribution**:
+   - The activation for "service" occurs in a context about distributing tips among staff, which directly involves communal fairness and respect. This indicates the neuron's sensitivity to fairness or equitable distribution in contexts where collective efforts or contributions (like service staff) are recognized and respected.
+
+3. **Implicit"
+
+    New evidence from test cases:
+    Text: "In our community, the food bank ensures that everyone, regardless of their background, receives an equitable share of resources to support those in need."
+Activation: 4.000
+Text: "The software team, both junior and senior members, worked collaboratively to maintain the integrity of the project, ensuring all voices were heard and valued."
+Activation: 4.000
+Text: "Even though the orchestra had musicians of various skill levels, the conductor emphasized the importance of support and unity to create harmonious music."
+Activation: 2.000
+Text: "During the neighborhood cleanup, volunteers of all ages came together, highlighting the importance of collective effort and fair contribution."
+Activation: 3.000
+Text: "The organization introduced a new policy where tips were pooled and distributed evenly among all waitstaff, recognizing everyone's hard work."
+Activation: 5.000
+
+    Based on this new evidence, please provide a revised explanation of the neuron's behavior.
+    Consider:
+    1. Which aspects of the original explanation are supported by the new evidence?
+    2. Which aspects need to be modified or removed?
+    3. What new patterns or nuances are revealed by the test cases?
+
+    Provide a clear, specific explanation that accounts for both the original and new evidence.

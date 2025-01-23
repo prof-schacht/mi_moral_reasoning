@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T20:53:19.753136
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 10089
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The game was designed so that all participants were treated equally, with strict rules ensuring fairness."
+
+Test case 2: "In a cooperative effort, the team members divided the tasks equally and worked towards a common goal."
+
+Test case 3: "Fairness in competition is crucial, as each player must abide by the same rules to ensure a balanced playing field."
+
+Test case 4: "During the debate, each speaker had equal time to present their arguments, ensuring a fair and structured discussion."
+
+Test case 5: "The classroom's seating arrangement was altered to ensure that every student had an equal chance to participate in group activities."
+
+Test case 6: "The policy was criticized for not being fair, as it disproportionately benefited one group over another."
+
+Test case 7: "In the spirit of equality, the company implemented a policy ensuring all employees received the same benefits regardless of their position."
+
+Test case 8: "Although the rules were established, some participants felt the competition was not fair due to biased judging."
+
+Test case 9: "The festival organizers emphasized cooperation among vendors, ensuring that each had an equal opportunity to showcase their goods."
+
+Test case 10: "The charity event aimed to promote fairness by distributing resources equally among the community members in need."

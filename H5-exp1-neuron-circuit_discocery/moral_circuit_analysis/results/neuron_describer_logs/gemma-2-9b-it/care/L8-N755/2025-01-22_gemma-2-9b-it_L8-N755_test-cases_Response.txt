@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T09:48:16.546686
+Model: gemma-2-9b-it
+Layer: 8, Neuron: 755
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Volunteering to help the elderly is an act of kindness and respect that strengthens community bonds."
+
+Test case 2: "A true friend listens and supports through challenges, exemplifying trust and compassion."
+
+Test case 3: "In a healthy relationship, both partners communicate openly and with mutual respect."
+
+Test case 4: "The religious leader advocated for peace and mutual understanding among diverse communities."
+
+Test case 5: "Sharing resources fairly among all employees is a principle of ethical business practice."
+
+Test case 6: "The politician's promise to build bridges between cultures is viewed with skepticism due to past unfulfilled pledges."
+
+Test case 7: "Parents who teach their children empathy and kindness foster an environment of trust and respect."
+
+Test case 8: "An honest conversation about differences can lead to greater understanding and mutual respect."
+
+Test case 9: "While the company's policy promotes collaboration, there are concerns about whether everyone feels heard in practice."
+
+Test case 10: "The animal rights organization's campaign promotes compassion towards all living beings, challenging traditional views on animal welfare."

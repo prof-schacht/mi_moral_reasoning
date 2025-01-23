@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T22:41:51.321624
+Model: gemma-2-9b-it
+Layer: 25, Neuron: 9872
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 25, index 9872) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  of	Activation: 10.0	Context:  in government fosters a sense of continuity and order.
+
+Token:  of	Activation: 10.0	Context:  public spaces maintains a sense of communal purity.
+
+Token:  consumer	Activation: 10.0	Context:  for all customers equally respects consumer rights.
+
+Token:  a	Activation: 10.0	Context: Recycling and waste reduction reflect a commitment to not degrading the
+
+Token:  moral	Activation: 10.0	Context:  and giving them care demonstrates moral empathy.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

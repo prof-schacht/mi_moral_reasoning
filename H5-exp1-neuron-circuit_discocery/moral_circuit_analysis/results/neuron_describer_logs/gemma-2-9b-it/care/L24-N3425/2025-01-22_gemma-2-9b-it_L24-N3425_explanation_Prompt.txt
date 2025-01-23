@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T10:19:10.775261
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 3425
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 24, index 3425) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: s	Activation: 10.0	Context:  proportionally to each member's contribution is just.
+
+Token:  true	Activation: 10.0	Context:  of their status, is true fairness.
+
+Token:  reflect	Activation: 10.0	Context:  each have one vote to reflect equality.
+
+Token:  fair	Activation: 10.0	Context: <bos>A fair trial where fair is weighed
+
+Token:  fair	Activation: 10.0	Context: <bos>A fair justice system fair oppressive tactics
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

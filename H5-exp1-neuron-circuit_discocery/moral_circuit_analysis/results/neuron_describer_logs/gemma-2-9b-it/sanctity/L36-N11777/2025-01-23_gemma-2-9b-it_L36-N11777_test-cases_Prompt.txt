@@ -1,0 +1,35 @@
+Timestamp: 2025-01-23T00:01:36.571188
+Model: gemma-2-9b-it
+Layer: 36, Neuron: 11777
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The activations of neuron (layer 36, index 11777) suggest that it is responsive to a specific linguistic pattern associated with subtle semantic emphasis and syntactic roles in sentences, particularly in the use of certain conjunctions and prepositions, as well as some common determiners. Let's delve into the examples to identify the precise pattern:
+
+1. **Token: "just"**
+   - The activations in the examples involving "just" appear when the word is used as an adverb to emphasize adequacy or sufficiency, as seen in the contexts:
+     - "fraud among the wealthy is just as important"
+     - "member's contribution is just"
+
+   Here, "just" adds nuance to the meaning, emphasizing sufficiency or fairness in the statements.
+
+2. **Token: "for"**
+   - In the example with "for," the activation occurs in a context where "for" introduces a reasoning or purpose:
+     - "hygiene and cleanliness shows respect"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

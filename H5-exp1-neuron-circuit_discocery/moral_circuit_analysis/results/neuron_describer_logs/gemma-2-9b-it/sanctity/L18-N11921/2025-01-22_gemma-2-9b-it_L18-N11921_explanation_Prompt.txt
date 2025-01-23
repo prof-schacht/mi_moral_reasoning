@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T20:33:20.123612
+Model: gemma-2-9b-it
+Layer: 18, Neuron: 11921
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 18, index 11921) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: ’	Activation: 10.0	Context: <bos>Respecting one’’ body by avoiding reckless
+
+Token:  supports	Activation: 10.0	Context:  events organized by your community supports collective cohesion.
+
+Token:  the	Activation: 10.0	Context:  a commitment to not degrading the environment.
+
+Token:  hasn	Activation: 10.0	Context:  a meal to someone who hasn't eaten in days
+
+Token:  shows	Activation: 10.0	Context: Dressing formally at official ceremonies shows respect for the established protocol
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

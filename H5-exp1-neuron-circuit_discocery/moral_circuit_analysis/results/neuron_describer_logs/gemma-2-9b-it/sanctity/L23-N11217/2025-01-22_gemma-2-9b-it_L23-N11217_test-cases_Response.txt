@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T22:09:45.366019
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 11217
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "She decided, rather than compromise her ethics, to stand firm and voice her concerns about the proposed changes."
+
+Test case 2: "The act of recycling, as simple as it is, curbs pollution and reflects a commitment to environmental ethics."
+
+Test case 3: "His life was a testament to integrity, always prioritizing honesty over personal gain."
+
+Test case 4: "Respect for the diverse opinions in the room was crucial for reaching a consensus that respected everyone's values."
+
+Test case 5: "Opting to volunteer at the shelter, she demonstrated a profound commitment to compassion and social responsibility."
+
+Test case 6: "Despite the pressure to bend the rules, he chose to maintain his principles and report the discrepancies."
+
+Test case 7: "The decision was clear: rather than take the easier path, she upheld her values and refused the bribe."
+
+Test case 8: "Their dedication to transparency and fairness was a testament to their moral leadership in the community."
+
+Test case 9: "Respect is not just about following orders; it's about valuing the dignity and worth of every individual."
+
+Test case 10: "While curbing enthusiasm is sometimes necessary, curbing pollution remains an ethical imperative for the future."

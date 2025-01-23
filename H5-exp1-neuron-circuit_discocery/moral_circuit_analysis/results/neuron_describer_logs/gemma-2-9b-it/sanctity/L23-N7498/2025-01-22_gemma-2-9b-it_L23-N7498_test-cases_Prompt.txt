@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T22:04:39.558925
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 7498
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron appears to activate in contexts where there is an emphasis on relationships and responsibilities associated with personal connections or commitments. The activations suggest a pattern where the neuron is triggered by linguistic constructions that highlight relational or possessive implications, often involving actions or commitments towards others. Here’s a detailed breakdown:
+
+1. **Possessive and Relational Language**:
+   - The neuron activates strongly on tokens such as "your" and "of" which are indicative of possessive or relational constructs. These tokens often signify ownership or association with a personal or relational element (e.g., "your friend’s privacy").
+
+2. **Contextual Themes of Loyalty and Responsibility**:
+   - For the token "your" in the example with context relating to "friend’s privacy" and "childhood sports," the activation points to an interest in personal and relational commitments. The context involves confidentiality ("secret out of respect for your friend’s privacy") and support ("Supporting your childhood sports"), highlighting actions based on interpersonal responsibility"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

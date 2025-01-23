@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T23:14:30.622310
+Model: gemma-2-9b-it
+Layer: 28, Neuron: 10813
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "In order to maintain transparency, it is important to disclose all product defects to ensure an honest market."
+
+Test case 2: "The decision must be made without any favoritism to ensure that we adhere to our principle of fairness."
+
+Test case 3: "Real solutions require us to confront the facts without bias or distortion."
+
+Test case 4: "The judge emphasized that the verdict should be based on evidence, not personal feelings or biases."
+
+Test case 5: "No special treatment should be given in this scenario to ensure all parties are treated impartially."
+
+Test case 6: "To uphold the integrity of the process, no shortcuts should be taken and all regulations must be followed."
+
+Test case 7: "While the proposal seems appealing, it does not favor unbiased assessment, which is crucial for fair evaluation."
+
+Test case 8: "Even though the policy intends to be fair, it inadvertently favors one group over another, which contradicts our commitment to impartiality."
+
+Test case 9: "The company's policy explicitly states that all feedback must be provided honestly, without any bias."
+
+Test case 10: "To ensure an objective review, the committee agreed that no member should have personal ties to the applicants."

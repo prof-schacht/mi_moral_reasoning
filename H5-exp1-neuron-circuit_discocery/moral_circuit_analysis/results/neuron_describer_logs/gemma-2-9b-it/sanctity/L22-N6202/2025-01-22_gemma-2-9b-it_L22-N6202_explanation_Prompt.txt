@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T21:34:41.994081
+Model: gemma-2-9b-it
+Layer: 22, Neuron: 6202
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 22, index 6202) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  to	Activation: 10.0	Context: <bos>Speaking politely to a to in court acknowledges
+
+Token:  to	Activation: 10.0	Context: <bos>Speaking kindly to those to are anxious can
+
+Token:  avoiding	Activation: 10.0	Context: Body integrity—such as avoiding harmful piercings or toxic substances
+
+Token:  respectful	Activation: 10.0	Context: <bos>Maintaining a respectful silence respectful sacred or solemn
+
+Token:  by	Activation: 10.0	Context: ing one’s body by avoiding reckless tattoos or brand
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

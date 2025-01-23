@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T20:11:19.435499
+Model: gemma-2-9b-it
+Layer: 17, Neuron: 5170
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in question, located in layer 17, index 5170, appears to be sensitive to a pattern involving words or prefixes that imply an action or state conducive to imparting, demonstrating, or upholding a value or quality. Upon analysis of the activation examples provided, the observed pattern is multi-faceted with a focus on linguistic structures that convey agency, causation, or consequence, particularly in contexts of ethical or moral significance.
+
+1. **Pattern**:
+   - **Verbs or actions that convey transfer or influence**: The neuron activates strongly with verbs like "imbue" and "demonstrates," which imply an action that causes a change in state or carries a significant influence.
+   - **Causative or relation-establishing structure**: The activation of the word "by" indicates that the neuron is responsive to it when it serves to link an action with its consequence or purpose, as seen in "by following their advice demonstrates respect."
+
+2. **Contextual"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

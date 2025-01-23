@@ -1,0 +1,12 @@
+Timestamp: 2025-01-22T19:10:51.428082
+Model: gemma-2-9b-it
+Layer: 10, Neuron: 12425
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+This neuron appears to be highly responsive to contexts related to themes of purity, spirituality, and moral behavior, particularly as they are expressed through linguistic markers associated with religious or virtuous practices.
+
+1. **Exact Pattern Triggering Activation**: The neuron activates strongly in response to words like "religious," "virtuous," "reverence," and related concepts. These tokens share a common theme of spirituality, moral behavior, and adherence to cultural or religious norms or practices. The triggering pattern seems to involve tokens that directly relate to these themes, especially when they convey notions of purity, commitment, or respect, as indicated by the top activations.
+
+2. **Contextual Factors**: The neuron is most active when these tokens are embedded in contexts emphasizing actions or qualities associated with spirituality or moral virtue. For example, the context often involves performing actions ("ablutions," "wearing modest attire") that are symbolic of purity or reverence, or reflect a commitment to moral or religious ideals.

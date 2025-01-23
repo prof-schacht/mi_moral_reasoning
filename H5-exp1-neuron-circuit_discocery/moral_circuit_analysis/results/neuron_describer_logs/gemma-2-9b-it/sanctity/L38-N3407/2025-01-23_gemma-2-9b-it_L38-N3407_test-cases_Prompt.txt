@@ -1,0 +1,32 @@
+Timestamp: 2025-01-23T00:16:36.906649
+Model: gemma-2-9b-it
+Layer: 38, Neuron: 3407
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron (layer 38, index 3407) activates in response to tokens that relate to themes of credibility, authority, and integrity, particularly within contexts that involve moral or ethical judgments.
+
+1. **Precision of Triggering Pattern:**
+   - **Specific Words:** The neuron is particularly sensitive to words associated with trustworthiness, integrity, authority, and truth. Examples include "less" (when modifying certainty or challenge to authority), "authority," "truth," and "disparage."
+   - **Contextual Use:** It often activates when these words are used in contexts suggesting adherence to principles, loyalty, or evaluations of moral standing.
+
+2. **Contextual Analysis:**
+   - **Relational Dynamics:** Words like "less" appear in contexts where something is being evaluated in terms of credibility or strength, such as "baseless rumors" versus unwavering loyalty.
+   - **Guidance and Morality:** The activation on "s" in the word "us" within "relig"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

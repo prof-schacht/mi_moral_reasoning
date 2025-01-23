@@ -1,0 +1,32 @@
+Timestamp: 2025-01-23T00:14:27.147475
+Model: gemma-2-9b-it
+Layer: 37, Neuron: 13002
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in question (layer 37, index 13002) appears to activate in response to specific nouns or topics that are often associated with social, economic, or structural elements, particularly those that imply a need for order, fairness, or communal impact. Here's a detailed breakdown:
+
+1. **Focus on Significant Nouns**: 
+   The highest activations are linked to nouns such as “be,” “ab,” “costs,” “children,” and “police.” These nouns are integral to societal structures, processes, or responsibilities. 
+
+2. **Conceptual and Social Relevance**:
+   - **"be"** in the context given involves democratic processes and fairness, suggesting the neuron is responsive to concepts around governance and equity.
+   - **"ab"** is part of "ablutions" in ceremonial context, indicating sensitivity to traditional or religious practices, highlighting cultural or ritualistic importance.
+   - **"costs"** in the context of fundraising for medical expenses"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

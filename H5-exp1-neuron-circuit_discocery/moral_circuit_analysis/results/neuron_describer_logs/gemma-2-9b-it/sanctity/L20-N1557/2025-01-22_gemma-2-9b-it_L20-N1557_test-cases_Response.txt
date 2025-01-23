@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T21:04:32.041031
+Model: gemma-2-9b-it
+Layer: 20, Neuron: 1557
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The ambassador's speech was a profound demonstration of honor, as it highlighted the deep respect for different cultural traditions."
+
+Test case 2: "In ancient societies, the ceremonial dance was a pivotal event that signified reverence for the gods and the community's shared values."
+
+Test case 3: "Adhering to the company's code of conduct is not just a rule; it's a sign of respect for the professional environment and its stakeholders."
+
+Test case 4: "In many cultures, bowing is considered a fundamental gesture of respect, symbolizing humility and acknowledgment."
+
+Test case 5: "The knight's oath was a solemn promise, underscoring his duty to uphold the chivalric code and honor his commitments."
+
+Test case 6: "The annual festival celebrates the town's heritage, serving as a reminder of the respect and honor held for past generations."
+
+Test case 7: "Her decision to wear the traditional attire was a gesture of respect, honoring her ancestors and their cultural legacy."
+
+Test case 8: "The teacher's dedication to educating students reflects a profound respect for the transformative power of knowledge."
+
+Test case 9: "In his speech, the leader emphasized the importance of respecting international laws and upholding moral values."
+
+Test case 10: "The ritual of passing down family heirlooms is not just about maintaining tradition, but also about showing respect for family history and lineage."

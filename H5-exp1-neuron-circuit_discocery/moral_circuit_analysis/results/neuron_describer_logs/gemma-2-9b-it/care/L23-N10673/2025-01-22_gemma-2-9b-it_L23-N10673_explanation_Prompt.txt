@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T10:16:03.739459
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 10673
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 23, index 10673) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  certain	Activation: 10.0	Context:  believe that refraining from certain foods or drinks is essential
+
+Token:  avoiding	Activation: 10.0	Context: Body integrity—such as avoiding harmful piercings or toxic substances
+
+Token:  for	Activation: 10.0	Context: <bos>Sharing credit fairly for for group project ensures everyone
+
+Token:  in	Activation: 10.0	Context:  patient and gentle with people in emotional distress helps prevent further
+
+Token:  your	Activation: 10.0	Context: <bos>Publicly supporting your your’s stance in
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

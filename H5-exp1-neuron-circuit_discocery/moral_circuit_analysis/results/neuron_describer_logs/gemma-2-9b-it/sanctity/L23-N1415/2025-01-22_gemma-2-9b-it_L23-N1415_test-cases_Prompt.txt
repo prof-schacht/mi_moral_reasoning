@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T21:50:34.132861
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 1415
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in question (layer 23, index 1415) appears to respond primarily to linguistic patterns that involve expressions related to protection, rights, and integrity. Its activation seems to be particularly associated with contexts where verbs or nouns indicate some form of safeguarding, preservation, or entitlement, usually within a framework of rights or ethical considerations.
+
+Here's a detailed analysis based on the provided examples:
+
+1. **Verbs Indicating Protection or Safeguarding**: The tokens "prevents" and "protects" both score a maximum activation of 10.0. These verbs are signaling actions that are proactive in nature, aimed at stopping harm or ensuring safety and freedom. This suggests that the neuron is highly sensitive to processes that prevent negative outcomes or safeguard rights.
+
+2. **Prepositions Denoting Integrity**: The token "of" follows the phrase "helps protect the integrity," indicating a relationship that emphasizes maintenance or conservation. This high activation suggests the neuron might also be sensitive to prepositions that structure"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

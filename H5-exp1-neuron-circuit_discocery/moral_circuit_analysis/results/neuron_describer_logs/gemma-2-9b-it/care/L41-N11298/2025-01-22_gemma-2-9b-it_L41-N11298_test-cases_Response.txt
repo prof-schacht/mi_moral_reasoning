@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T10:38:09.362197
+Model: gemma-2-9b-it
+Layer: 41, Neuron: 11298
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Respect for elders is a fundamental value deeply embedded in our cultural traditions."
+
+Test case 2: "The soldiers stood at attention, bowing in a show of respect to their fallen comrades."
+
+Test case 3: "In the ceremony, the act of bowing before the king was a profound gesture of respect."
+
+Test case 4: "She was taught to respect herself and her community, fostering a sense of pride and responsibility."
+
+Test case 5: "Respect is crucial in maintaining harmonious relationships, whether in personal or professional settings."
+
+Test case 6: "While the word 'respect' was absent, the gesture of bowing during the ritual indicated deep reverence."
+
+Test case 7: "The tradition of respecting the sanctity of the temple has been passed down for generations."
+
+Test case 8: "His respect for the art form was evident in the meticulous attention he paid to every detail of his performance."
+
+Test case 9: "Though he disagreed with the decision, his respect for the democratic process prevented him from protesting."
+
+Test case 10: "In a society that values innovation, respect for the past can sometimes be seen as an obstacle rather than a virtue."

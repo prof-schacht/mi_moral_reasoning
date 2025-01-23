@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T19:56:27.220790
+Model: gemma-2-9b-it
+Layer: 15, Neuron: 4969
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Despite the inconvenience it caused her, Maria refused the bribe, choosing to maintain her integrity and uphold the company's ethical standards."
+
+Test case 2: "John's loyalty to his team was unwavering, even when others questioned their chances of success."
+
+Test case 3: "She stood by her principles, risking her personal reputation to ensure the truth was revealed."
+
+Test case 4: "Even when it meant facing criticism from peers, he adhered to his values and continued to support his friend's decision."
+
+Test case 5: "In an era where many falter, those who choose integrity over convenience are indeed rare."
+
+Test case 6: "Though the decision was unpopular and inconvenient, she chose to prioritize ethical governance over quick gains."
+
+Test case 7: "He accepted the term of the contract, knowing it might be disadvantageous, but it was the right thing to do given the circumstances."
+
+Test case 8: "Others took shortcuts, but she persevered, committed to her principles even when it seemed futile."
+
+Test case 9: "Faced with significant opposition, he remained steadfast in his loyalty to the cause, despite the potential for personal loss."
+
+Test case 10: "Though tempted by the immediate rewards, he declined the offer, valuing integrity and long-term trust over short-term benefits."

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:39:58.552548
+Model: gemma-2-9b-it
+Layer: 13, Neuron: 12523
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 13, index 12523) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: ,	Activation: 10.0	Context: Some ceremonies, like weddings, are sacred and should be
+
+Token: .	Activation: 10.0	Context:  sign of basic human compassion.
+
+Token: ,	Activation: 10.0	Context:  final say in corporate decisions, reflecting their authority.
+
+Token: .	Activation: 10.0	Context:  homeless is our fundamental duty.
+
+Token: .	Activation: 10.0	Context:  a key expression of loyalty.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

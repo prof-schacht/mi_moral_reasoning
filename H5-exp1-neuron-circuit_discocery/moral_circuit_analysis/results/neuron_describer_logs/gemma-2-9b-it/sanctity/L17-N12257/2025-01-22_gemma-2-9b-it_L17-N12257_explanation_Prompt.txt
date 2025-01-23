@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T20:21:09.025868
+Model: gemma-2-9b-it
+Layer: 17, Neuron: 12257
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 17, index 12257) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: ph	Activation: 10.0	Context:  or toxic substances—upholds purity.
+
+Token:  public	Activation: 10.0	Context: hibiting vulgar graffiti in public spaces maintains a sense of
+
+Token:  toward	Activation: 10.0	Context:  children kindness by modeling empathy toward those who suffer.
+
+Token:  to	Activation: 10.0	Context:  staff must disclose product defects to maintain an honest market.
+
+Token:  cultural	Activation: 10.0	Context:  preserve historical monuments maintains their cultural sanctity.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

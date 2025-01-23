@@ -1,0 +1,30 @@
+Timestamp: 2025-01-22T20:19:05.959826
+Model: gemma-2-9b-it
+Layer: 17, Neuron: 11257
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in question (layer 17, index 11257) appears to activate strongly in response to the period (.) token, specifically when it follows sentences that convey a sense of respect, preservation, or maintaining the sanctity of a concept or a practice. Let’s examine the surrounding contexts:
+
+1. **Respect and Importance**: Each example sentence ends with a statement highlighting the importance of adherence to social, cultural, or educational responsibilities—such as respecting communities, cultural traditions, educational efforts, and preserving sacredness.
+
+2. **Finality of Concepts**: The neuron is likely responding to the period in the context of the sentence’s tone, which often concludes with concepts related to reverence or respect. The period marks the end of a strong, value-based assertion that often involves cultural or moral significance.
+
+3. **Pattern Recognition**: The period follows sentences with themes related to preserving something valuable or showing respect, suggesting that the neuron is keying into the syntactic pattern where these kinds"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

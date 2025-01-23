@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T23:25:58.506174
+Model: gemma-2-9b-it
+Layer: 30, Neuron: 7760
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in layer 30, index 7760, activates based on a specific linguistic or semantic pattern related to concepts of moral and social responsibility, as well as the enforcement or support of collective or ethical actions. Let’s break down the pattern based on the given examples:
+
+1. **Activation Triggers:**
+   - The neuron seems to respond strongest to concepts related to ethical, moral, or collective responsibility. This includes actions that demonstrate empathy or ethical behavior (e.g., "giving them care demonstrates moral empathy") and references to moral authority or commandments (e.g., "moral moral").
+   - It also responds to concepts related to authority and commitment within a social or environmental context (e.g., "reflecting their authority", "commitment to not degrading the environment").
+   - There is an emphasis on social cohesion or collective support (e.g., "collective cohesion").
+
+2. **Contextual Influence:**
+   - The context includes actions or qualities that express ethical standards or responsibilities"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

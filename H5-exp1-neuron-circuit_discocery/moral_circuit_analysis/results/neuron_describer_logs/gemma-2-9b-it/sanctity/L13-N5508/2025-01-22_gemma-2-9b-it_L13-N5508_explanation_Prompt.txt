@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:33:16.576999
+Model: gemma-2-9b-it
+Layer: 13, Neuron: 5508
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 13, index 5508) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token: .	Activation: 10.0	Context:  and fairly for each candidate.
+
+Token:  justified	Activation: 10.0	Context: <bos>Pay gaps should be justified by skill and experience,
+
+Token:  fairly	Activation: 10.0	Context: <bos>Treating business partners fairly fairly long-term trust
+
+Token:  to	Activation: 10.0	Context: <bos>Referring to elders by to traditional titles
+
+Token:  each	Activation: 10.0	Context: Members of a committee should each have one vote to reflect
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

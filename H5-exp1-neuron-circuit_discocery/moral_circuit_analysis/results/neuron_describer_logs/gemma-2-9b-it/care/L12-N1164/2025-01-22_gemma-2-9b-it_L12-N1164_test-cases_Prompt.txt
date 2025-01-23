@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T09:50:18.957784
+Model: gemma-2-9b-it
+Layer: 12, Neuron: 1164
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron in question (layer 12, index 1164) appears to be particularly sensitive to tokens related to formal structures or entities related to authority, decision-making, and organized governance. Here is a breakdown of the observed activation patterns:
+
+1. **Token Types**: The neuron activates strongly in the presence of tokens like “corporate,” “owners,” “committee,” and “court.” These tokens are nouns that denote entities typically associated with formal organizational structures or domains where governance, hierarchy, or authoritative decision-making processes are important.
+
+2. **Contextual Commonality**: Each activation example shares a context where the token’s role is linked to an entity or position of authority or formal governance. For example:
+   - "Corporate" is related to corporate decisions and authority.
+   - "Owners" refers to business owners who have rights and responsibilities in their domain.
+   - "Of" in "the military chain of command" connects to a structured hierarchy.
+   - "Committee" and ""
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

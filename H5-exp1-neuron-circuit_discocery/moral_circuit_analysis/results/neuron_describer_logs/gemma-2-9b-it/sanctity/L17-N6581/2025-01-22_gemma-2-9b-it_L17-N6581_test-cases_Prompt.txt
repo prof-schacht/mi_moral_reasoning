@@ -1,0 +1,31 @@
+Timestamp: 2025-01-22T20:13:31.528012
+Model: gemma-2-9b-it
+Layer: 17, Neuron: 6581
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron (layer 17, index 6581) appears to activate in response to contexts emphasizing guidance, adherence to instructions, or the importance of saving and respecting life and truthfulness. Here's a breakdown of the pattern it responds to:
+
+1. **Guidance and Instruction**: 
+   - **Token: "heed"** and **Context: "Citizens should heed public heed advisories"**: The neuron strongly activates here because "heed" implies listening to and following advice or instructions, particularly in a public or safety context.
+   - **Token: "following"** and **Context: "Respecting teachers and following their directives"**: The neuron again responds to the idea of adhering to a set of rules or instructions, reinforcing the concept of respect and obedience to authority.
+
+2. **Precaution and Life-Saving Actions**:
+   - **Token: "lives"** and **Context: "blood or organs to save lives"**: The activation here is"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

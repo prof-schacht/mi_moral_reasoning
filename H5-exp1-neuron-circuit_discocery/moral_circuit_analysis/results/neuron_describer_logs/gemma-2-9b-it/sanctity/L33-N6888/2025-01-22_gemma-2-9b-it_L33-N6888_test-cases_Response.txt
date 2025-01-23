@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T23:46:30.482403
+Model: gemma-2-9b-it
+Layer: 33, Neuron: 6888
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "After years of being estranged, the siblings finally reconciled, acknowledging the emotional distance that had grown between them."
+
+Test case 2: "The community came together to support the grieving family, highlighting the importance of social bonds during difficult times."
+
+Test case 3: "As an elderly woman living alone, she often felt isolated, yet her neighbors frequently checked in, showcasing their social responsibility."
+
+Test case 4: "The manager's role was to mediate conflicts, emphasizing the relational aspect of maintaining a harmonious workplace."
+
+Test case 5: "Although not directly related, the term 'leader' often implies a relational and social dynamic, requiring empathy and understanding."
+
+Test case 6: "The athlete's coach was not just a mentor but also a father figure, blurring the lines between personal and professional relationships."
+
+Test case 7: "In the realm of robotics, the 'helper' bot was programmed to assist, yet its function was purely mechanical, lacking genuine empathy."
+
+Test case 8: "The word 'loner' suggests a lack of social interaction, yet it doesn't explicitly convey a relational context as strongly as 'estranged' might."
+
+Test case 9: "During the reunion, the former classmates navigated their shared past, each interaction dripping with nostalgia and unspoken emotions."
+
+Test case 10: "The diplomat's role required navigating complex international relationships, though the political context might lack the personal touch seen in familial bonds."

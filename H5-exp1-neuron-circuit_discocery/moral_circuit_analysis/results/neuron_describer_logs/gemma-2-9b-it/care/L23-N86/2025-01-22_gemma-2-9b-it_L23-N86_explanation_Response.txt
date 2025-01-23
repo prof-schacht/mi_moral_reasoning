@@ -1,0 +1,15 @@
+Timestamp: 2025-01-22T10:10:56.367205
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 86
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+Based on the examples provided, neuron (layer 23, index 86) appears to activate in response to nouns that denote formal or organized structures and roles within societal or communal systems. There is a strong emphasis on words that relate to elements of social, cultural, organizational, or traditionally established systems.
+
+1. **Activation Triggers:** 
+   - **Nouns and Structures:** The neuron consistently activates for nouns that represent formal or institutional structures, such as "forms," "offices," "direction," "staff," and "community." These words typically refer to organized, systematic constructs or roles within a societal framework.
+   - **Singular and Contextual Association:** The neuron is particularly sensitive to singular nouns as units representing larger concepts or roles.
+
+2. **Contextual Patterns:**
+   - **Formal Contexts:** The surrounding context often includes notions of respect, tradition, moral guidance, qualifications, or responsibilities ("traditional forms of address," "Public offices should hire," "moral direction,"

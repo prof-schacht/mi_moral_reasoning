@@ -1,0 +1,14 @@
+Timestamp: 2025-01-22T10:11:54.757327
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 128
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+The neuron in layer 23, index 128, appears to activate in contexts related to expressions of conditions, evaluations, or categorizations based on specific criteria or qualities. Here's a breakdown of how it responds to each example provided:
+
+1. **Token: "on"** - The activation occurs in the context of "Reward employees based on metrics, not personal," where 'on' is part of the phrase indicating the basis or criteria for an action (rewarding). The neuron seems to detect conditional or criteria-based decision-making language.
+
+2. **Token: "is"** - The activation here is in the expression "community when outsiders mock it is a mark of loyalty." The word 'is' serves as part of the evaluative phrase discussing what constitutes a 'mark of loyalty.' This suggests the neuron's sensitivity to assertions or evaluations regarding identities or states.
+
+3. **Token: "."** - In "a crisis demonstrates team loyalty," the period concludes a statement that evaluates behavior (dem

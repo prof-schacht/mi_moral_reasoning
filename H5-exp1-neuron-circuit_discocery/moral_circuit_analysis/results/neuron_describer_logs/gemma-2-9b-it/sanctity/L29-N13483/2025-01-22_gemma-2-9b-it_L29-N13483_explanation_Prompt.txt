@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:23:44.847884
+Model: gemma-2-9b-it
+Layer: 29, Neuron: 13483
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 29, index 13483) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  bullying	Activation: 10.0	Context: We should speak out against bullying to protect vulnerable individuals.
+
+Token:  project	Activation: 10.0	Context:  credit fairly for a group project ensures everyone’s effort
+
+Token:  to	Activation: 10.0	Context: <bos>Donating to local to that feed hungry
+
+Token:  or	Activation: 10.0	Context: Religious authority, like priests or imams, should be
+
+Token: s	Activation: 10.0	Context: ing a religious leader’s counsel can provide moral direction
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

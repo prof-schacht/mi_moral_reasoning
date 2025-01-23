@@ -1,0 +1,26 @@
+Timestamp: 2025-01-23T08:39:42.831875
+Model: gemma-2-9b-it
+Layer: 21, Neuron: 13919
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Compassion in difficult times is what distinguishes true leadership from mere management."
+
+Test case 2: "The selfless act of donating one's time to volunteer at a shelter embodies the principle of altruism."
+
+Test case 3: "During the ceremony, the children learned about the importance of honesty and fair play."
+
+Test case 4: "Her decision to forgive was not easy, but it exemplified profound moral courage."
+
+Test case 5: "In the midst of chaos, showing empathy to those who suffer is a testament to our shared humanity."
+
+Test case 6: "The notion of justice extends beyond the legal system into the realms of fairness and equality."
+
+Test case 7: "Donating to charity is often seen as a reflection of one's ethical commitment to society."
+
+Test case 8: "He questioned the morality of using advanced technology to manipulate natural ecosystems."
+
+Test case 9: "Her unwavering commitment to truth, even when it was inconvenient, was deeply inspiring."
+
+Test case 10: "The debate over cloning touches upon intrinsic values and ethical considerations of human life."

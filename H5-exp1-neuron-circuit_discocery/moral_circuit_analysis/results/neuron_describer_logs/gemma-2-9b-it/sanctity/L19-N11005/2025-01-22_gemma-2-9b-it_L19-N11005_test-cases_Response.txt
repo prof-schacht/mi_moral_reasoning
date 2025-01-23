@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T20:56:41.797274
+Model: gemma-2-9b-it
+Layer: 19, Neuron: 11005
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "As the village elder addressed the gathering, he emphasized the importance of our collective responsibility to nurture the youth."
+
+Test case 2: "In times of crisis, it is our duty to come together as humans and support one another."
+
+Test case 3: "Titles like 'doctor' and 'teacher' carry with them a profound respect within our community."
+
+Test case 4: "When we consider the impact of kindness, it becomes clear that our actions define the fabric of society."
+
+Test case 5: "Our shared humanity binds us in a tapestry of compassion and understanding."
+
+Test case 6: "The council decided that titles were necessary to maintain order, but some members questioned if it was truly beneficial for the community."
+
+Test case 7: "When discussing the future of our planet, it is crucial to remember the role humans play in preserving its beauty."
+
+Test case 8: "Titles can sometimes create barriers, yet they also serve to recognize contributions to our communal goals."
+
+Test case 9: "Social media has transformed how we perceive our relationships, often amplifying or distorting our sense of community."
+
+Test case 10: "The word 'human' appeared in a sci-fi narrative, describing a distant future where societal roles were vastly different from our own."

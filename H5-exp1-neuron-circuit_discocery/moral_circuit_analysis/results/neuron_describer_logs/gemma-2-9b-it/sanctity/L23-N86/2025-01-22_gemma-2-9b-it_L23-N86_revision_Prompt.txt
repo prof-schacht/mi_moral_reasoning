@@ -1,0 +1,36 @@
+Timestamp: 2025-01-22T21:45:21.189235
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 86
+Prompt Type: revision
+
+=== PROMPT ===
+
+Original explanation of neuron behavior:
+    "The neuron at layer 23, index 86, appears to respond to nouns that relate to structured systems or entities, often within formal or institutional contexts. Here's a breakdown of the observed pattern:
+
+1. **Token Type**: The activations are triggered by specific noun tokens that typically refer to aspects of organizational or formal structures. These include "forms," "offices," "direction," "staff," and "community."
+
+2. **Contextual Associations**: 
+    - **Organizational Entities**: Words like "offices" and "staff" imply a structured setup involving people within an organization or workplace. These terms are often used within a context where roles and functions are delineated.
+    - **Guidance and Norms**: "Direction" and "community" suggest roles or systems providing guidance, moral or otherwise, or embodying collective norms.
+    - **Traditional or Standard Constructs**: "Forms," as referenced in the context of "traditional forms of address," refers"
+
+    New evidence from test cases:
+    Text: The committee outlined new forms for the staff to fill out, ensuring everyone's role in the community was well-documented.
+Activation: 7.000
+Text: In the bustling offices of the corporation, the staff worked diligently to maintain the structured order of operations.
+Activation: 4.000
+Text: The community gathered to discuss the new direction in which their traditional forms of governance were heading.
+Activation: 5.000
+Text: The forms required for the legal proceedings were complex, reflecting the intricate structure of the judicial system.
+Activation: 4.000
+Text: Her position in the community was pivotal, providing direction and structure through her various roles.
+Activation: 7.000
+
+    Based on this new evidence, please provide a revised explanation of the neuron's behavior.
+    Consider:
+    1. Which aspects of the original explanation are supported by the new evidence?
+    2. Which aspects need to be modified or removed?
+    3. What new patterns or nuances are revealed by the test cases?
+
+    Provide a clear, specific explanation that accounts for both the original and new evidence.

@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T10:19:24.497885
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 3425
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The policy aims to ensure true fairness in the allocation of resources among all members of the community."
+
+Test case 2: "It's crucial to reflect equality in our hiring practices to maintain a balanced workforce."
+
+Test case 3: "Each member's rights must be respected to uphold the principles of impartiality within the organization."
+
+Test case 4: "The decision to distribute the funds equally sparked a debate about true justice and fairness."
+
+Test case 5: "Although the contract reflects an equal partnership, some terms seem to favor one party more."
+
+Test case 6: "True fairness is achieved when every participant's contribution is valued equally in the project."
+
+Test case 7: "The committee's role is to ensure that each member's voice is heard, promoting a just and equitable process."
+
+Test case 8: "Reflecting on past decisions, the board realized that true impartiality was not always maintained."
+
+Test case 9: "The election process was designed to be fair, yet some argued that it did not reflect true equality."
+
+Test case 10: "The policy promises fairness, but the outcomes reveal discrepancies that don't truly reflect equal treatment."

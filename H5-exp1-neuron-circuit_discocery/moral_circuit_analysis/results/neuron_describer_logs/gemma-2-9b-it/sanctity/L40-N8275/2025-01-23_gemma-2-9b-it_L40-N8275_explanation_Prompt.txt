@@ -1,0 +1,33 @@
+Timestamp: 2025-01-23T00:33:52.276078
+Model: gemma-2-9b-it
+Layer: 40, Neuron: 8275
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 40, index 8275) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  newborn	Activation: 10.0	Context:  ceremonial cleansing bath to a newborn is a tradition signifying purity
+
+Token:  festivals	Activation: 10.0	Context: <bos>Celebrating cultural festivals together festivals communal bonds.
+
+Token:  have	Activation: 10.0	Context: <bos>Adults should have the have to make informed
+
+Token: ,	Activation: 10.0	Context: Some ceremonies, like weddings, are sacred and should be
+
+Token:  holy	Activation: 10.0	Context: <bos>Caring for holy or holy relics as precious
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

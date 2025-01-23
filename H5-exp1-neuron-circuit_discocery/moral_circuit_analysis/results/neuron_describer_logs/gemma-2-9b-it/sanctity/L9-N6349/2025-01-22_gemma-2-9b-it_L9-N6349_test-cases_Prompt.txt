@@ -1,0 +1,32 @@
+Timestamp: 2025-01-22T19:03:35.538242
+Model: gemma-2-9b-it
+Layer: 9, Neuron: 6349
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron (layer 9, index 6349) appears to be detecting a pattern associated with obligation, necessity, or transparency, as indicated by its activation on tokens related to disclosure, duty, and organizational responsibility. Let's break this down by considering the specifics from the examples provided:
+
+1. **High-Obligation Context**:
+   - The neuron activates on words suggesting obligation, such as "disclose" and "should." These words are typically used in contexts implying a duty or responsibility to perform a particular action or uphold a certain standard.
+
+2. **Contextual Patterns**:
+   - For "information" within the context of "product information," the activation occurs when the focus is on truthful disclosure, suggesting a duty or obligation to provide accurate information.
+   - With "disclose" in "disclose defects," the activation is triggered by the necessity of revealing important information to maintain integrity.
+   - The use of "should" in sentences implies an expectation or norm that guides behavior ("
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

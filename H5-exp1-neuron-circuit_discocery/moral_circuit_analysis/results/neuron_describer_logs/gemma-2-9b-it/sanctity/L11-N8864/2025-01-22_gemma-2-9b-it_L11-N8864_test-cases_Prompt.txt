@@ -1,0 +1,35 @@
+Timestamp: 2025-01-22T19:14:11.202712
+Model: gemma-2-9b-it
+Layer: 11, Neuron: 8864
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron at layer 11, index 8864, appears to respond to tokens that signal the absence or prevention of negative conditions or actions, often within contexts emphasizing fairness, transparency, or safety. Let's break down the activation examples to reveal the neuron’s pattern:
+
+1. **"peacefully" Activation: 10.0**
+   - **Context:** "Individuals can peacefully protest peacefully they find unjust."
+   - **Analysis:** The neuron activates on "peacefully," suggesting an emphasis on non-violent, justified actions. The context implies legality and moral justification, aligning with themes of fairness and civil rights.
+
+2. **"further" Activation: 10.0**
+   - **Context:** "'re ill helps prevent further harm."
+   - **Analysis:** The emphasis is on preventing additional negative outcomes ("further harm"). The context indicates caution and proactive measures to maintain safety or well-being.
+
+3. **"no" Activation: 10.0**
+   - **Context:**"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

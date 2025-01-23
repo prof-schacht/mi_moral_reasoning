@@ -1,0 +1,34 @@
+Timestamp: 2025-01-22T21:08:54.140263
+Model: gemma-2-9b-it
+Layer: 20, Neuron: 8982
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "To understand the behavior of neuron (layer 20, index 8982), let's analyze the examples provided and identify the pattern that leads to its activation.
+
+1. **Token Analysis**:
+   - **not**: In the context, this token highlights a commitment to avoiding negative impact, emphasizing responsibility.
+   - **truly**: This token reinforces an adjective within the context, suggesting authenticity or the genuine nature of a free society.
+   - **shared**: Here, the token emphasizes unity and collective human experience.
+   - **true**: This token is used to denote genuineness or authenticity, particularly in relation to justice.
+   - **fairness**: Associated with principles or values, emphasizing equality or justness.
+
+2. **Contextual Patterns**:
+   - The neuron activates on tokens that emphasize **authenticity, responsibility, or adherence to principles.** These concepts are often highlighted by keywords that enforce the genuineness or foundational value of the ideas they modify."
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

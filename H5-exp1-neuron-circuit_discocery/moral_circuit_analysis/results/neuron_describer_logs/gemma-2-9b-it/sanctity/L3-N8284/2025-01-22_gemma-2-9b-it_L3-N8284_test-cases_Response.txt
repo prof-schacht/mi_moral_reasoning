@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T18:46:05.682119
+Model: gemma-2-9b-it
+Layer: 3, Neuron: 8284
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "Adults are expected to uphold the values of honesty and integrity in all their dealings to maintain societal trust."
+
+Test case 2: "The community came together to strengthen bonds, ensuring that everyone felt supported and connected."
+
+Test case 3: "Promises made by leaders must be kept to build a society based on trust and mutual respect."
+
+Test case 4: "Protecting the vulnerable in society is a shared responsibility that requires collective action."
+
+Test case 5: "The organization's policy upholds the highest ethical standards to ensure fairness and responsibility."
+
+Test case 6: "Friendship is about forming bonds that help individuals thrive in a community-oriented environment."
+
+Test case 7: "Adults in the family should make decisions that prioritize the welfare of the children."
+
+Test case 8: "The law aims to uphold justice and protect the rights of all citizens, especially the marginalized."
+
+Test case 9: "In challenging times, communities must come together to support the vulnerable and uphold shared values."
+
+Test case 10: "While 'olds' in 'thresholds' does not directly relate to social responsibility, the context of setting boundaries for ethical behavior might trigger activation."

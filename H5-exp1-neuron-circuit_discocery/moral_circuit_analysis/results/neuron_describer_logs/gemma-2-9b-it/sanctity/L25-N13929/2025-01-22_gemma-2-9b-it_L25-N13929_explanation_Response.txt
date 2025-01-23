@@ -1,0 +1,14 @@
+Timestamp: 2025-01-22T22:44:20.070759
+Model: gemma-2-9b-it
+Layer: 25, Neuron: 13929
+Prompt Type: explanation
+
+=== RESPONSE ===
+
+Based on the examples provided, this neuron appears to be detecting linguistic patterns related to fairness, impartiality, and the rejection of biased practices. Let's break down the consistent features that trigger high activations for this neuron:
+
+1. **Negation and Rejection**: The activations are strongly triggered by tokens such as "not" and "no" that convey negation or rejection. These words often negate concepts tied to unfair or biased practices, suggesting that the neuron responds to sentiment or ideas associated with fairness or impartiality.
+
+2. **Opposition to Corruption and Favoritism**: The neuron activates in contexts opposing corruption ("bribes"), nepotism ("not nepotism"), and favoritism ("without favoritism"). These tokens strengthen the pattern that this neuron is particularly sensitive to language that highlights ethical or fair practices by denying unethical behaviors.
+
+3. **Impersonal and Objective Criteria**: The term "personal" triggers the neuron within contexts that emphasize making distinctions based on objective criteria rather than personal

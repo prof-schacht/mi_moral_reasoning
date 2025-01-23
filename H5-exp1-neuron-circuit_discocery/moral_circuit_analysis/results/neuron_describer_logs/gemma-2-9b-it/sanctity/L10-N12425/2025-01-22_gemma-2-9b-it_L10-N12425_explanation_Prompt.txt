@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T19:10:46.757655
+Model: gemma-2-9b-it
+Layer: 10, Neuron: 12425
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 10, index 12425) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  religious	Activation: 10.0	Context: Performing ablutions before religious ceremonies demonstrates purity of intention
+
+Token:  a	Activation: 10.0	Context:  traditions in some religions reflects a commitment to purity.
+
+Token:  virtuous	Activation: 10.0	Context:  body through healthy practices is virtuous.
+
+Token:  reverence	Activation: 10.0	Context:  them free from pollutants demonstrates reverence.
+
+Token:  religious	Activation: 10.0	Context: Wearing modest attire in certain religious settings upholds community standards
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:57:20.431809
+Model: gemma-2-9b-it
+Layer: 36, Neuron: 4694
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "The neuron you're analyzing (layer 36, index 4694) appears to respond to words and phrases that convey a sense of importance or necessity, particularly within contexts that emphasize societal or communal obligations or actions. Here's a detailed breakdown of the activation pattern:
+
+1. **Pattern Focus**: 
+    - The primary pattern triggering activation involves adjectives and verbs that denote a strong sense of importance or necessity. These words emphasize something that is vital, required, or essential.
+
+2. **Contextual Influence**:
+    - The surrounding context often involves discussions about societal structures, communal responsibilities, or actions that carry significant weight or urgency. The neuron activates when these words act as descriptors or modifiers, highlighting their role in articulating critical elements within a sentence.
+
+3. **Consistent Themes**:
+    - **Importance and Necessity**: Words like "crucial," "critical," "essential," and even verbs like "do" when used in imperative or persuasive contexts, suggest actions or elements that are"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

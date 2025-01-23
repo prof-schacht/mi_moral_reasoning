@@ -1,0 +1,28 @@
+Timestamp: 2025-01-22T20:23:22.814756
+Model: gemma-2-9b-it
+Layer: 18, Neuron: 2875
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: `<bos> The quick brown fox jumps over the lazy dog.`
+
+Test case 2: `<bos> In a distant land, far beyond the mountains, there was a hidden valley.`
+
+Test case 3: `<bos> 1234567890, this is a test to see how numbers are handled at the start.`
+
+Test case 4: `<bos> Once upon a time, in a galaxy far, far away, there was a small planet.`
+
+Test case 5: `<bos> !@#$%^&*() These symbols are at the start to test special characters.`
+
+Test case 6: `<bos> This is a sentence that follows the token and ends abruptly.`
+
+Test case 7: `<bos> Is this a question that will trigger the neuron as expected?`
+
+Test case 8: `<bos> "Quoted text can also start a sequence," she said.`
+
+Test case 9: `<bos> However, the beginning of this sentence is more complex; let's see what happens.`
+
+Test case 10: `<bos> Here is a sentence that starts with a sequence marker but includes a list: apples, bananas, and cherries.`
+
+Each of these test cases is designed to probe the neuron's response to the `<bos>` token at the start of sequences, with variations in content, structure, and complexity to explore the neuron's sensitivity to the pattern described.

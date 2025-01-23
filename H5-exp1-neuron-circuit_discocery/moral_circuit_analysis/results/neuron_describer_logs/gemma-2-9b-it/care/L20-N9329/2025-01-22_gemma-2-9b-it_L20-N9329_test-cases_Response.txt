@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T10:06:52.800267
+Model: gemma-2-9b-it
+Layer: 20, Neuron: 9329
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "In the village, sharing meals with neighbors during the harvest festival is a cherished tradition that reinforces community bonds."
+
+Test case 2: "Disclosing secrets to those outside the family was considered a grave violation of trust, undermining the moral fabric of their society."
+
+Test case 3: "His dedication to volunteering his time at the local shelter was seen as a noble gesture that exemplified the community's values."
+
+Test case 4: "Fostering a culture of mutual respect and support at work was deemed essential for the collective well-being by the leadership team."
+
+Test case 5: "The ritual of lighting candles every Sunday evening was a practice that symbolized hope and continuity for the family."
+
+Test case 6: "She debated the ethical implications of keeping silent about the misconduct she had witnessed at her workplace."
+
+Test case 7: "Attending the annual memorial service was a duty that the entire town participated in to honor their ancestors."
+
+Test case 8: "While the tradition of exchanging gifts during the festival was upheld, some questioned its commercial overtones overshadowing the original spirit of generosity."
+
+Test case 9: "His refusal to participate in the local charity drive raised questions about his commitment to the community's moral expectations."
+
+Test case 10: "The practice of fasting during the holy month was a personal journey of reflection and spiritual growth for many in the community."

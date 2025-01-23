@@ -1,0 +1,35 @@
+Timestamp: 2025-01-22T20:18:03.735736
+Model: gemma-2-9b-it
+Layer: 17, Neuron: 11204
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "Based on the highest activation examples for the neuron (layer 17, index 11204), it appears that this neuron consistently responds to contexts involving order, structure, and authority. Here’s a breakdown of the patterns observed:
+
+1. **Token Activation & Context Analysis:**
+   - Tokens like "policies," "classroom," and sentence punctuation (e.g., ".") are strongly activated.
+   - These tokens commonly appear in contexts emphasizing organization (e.g., "Honoring return policies," "upholds classroom authority," "a well-ordered classroom").
+
+2. **Activation Patterns:**
+   - **Organizational Constructs:** Terms like "policies" relate to structured rules or guidelines within an organizational framework.
+   - **Authority & Structure:** "Classroom authority" underscores adherence to a structured environment where order is maintained.
+   - **Conclusive Sentences:** The activation on sentence-ending periods often signals completion or emphasis on an ordered idea.
+
+3. **Contextual Consistency:"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

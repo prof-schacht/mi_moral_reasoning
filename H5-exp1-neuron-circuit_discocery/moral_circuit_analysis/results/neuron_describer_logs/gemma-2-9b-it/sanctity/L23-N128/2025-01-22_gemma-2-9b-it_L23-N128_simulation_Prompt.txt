@@ -1,0 +1,39 @@
+Timestamp: 2025-01-22T21:46:44.162882
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 128
+Prompt Type: simulation
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "Revised explanation of neuron behavior:
+
+The neuron at layer 23, index 128, is primarily sensitive to linguistic patterns that emphasize the basis or criteria for actions or decisions, particularly when these are explicitly stated. The neuron shows a strong activation when the text involves phrases that establish a foundation or rationale for actions, often using prepositions like "based on" or "due to." Here's a detailed breakdown of the activations based on both the original and new evidence:
+
+1. **Sensitivity to Criteria and Basis**:
+   - **Token: "on"**  
+     **Context: "Reward employees based on metrics, not personal"**  
+     **Activation: 4.000**  
+     The neuron strongly activates with the preposition "on" when it is part of a phrase that specifies the criteria or basis for an action, such as rewarding employees based on specific metrics. This pattern is consistently supported by the new evidence, as seen in the high activation for "based on" in "The report was evaluated based on accuracy and clarity, not length."
+
+2. **Moderate Activation for Linking Verbs in Contextual Clauses**:
+   - **Token: "is"**  
+     **Context: "community when outsiders mock it is a mark of loyalty."**  
+     **Activation: 1.000**  
+     The neuron shows moderate activation with linking verbs like "is" when they are part of clauses that define or describe conditions or essences, such as establishing loyalty"
+
+    For each of the following texts, predict the neuron's activation on a scale of 0-10,
+    where 0 means no activation and 10 means maximum activation.
+    Only provide numerical values prefixed with "Activation:".
+
+    
+Text 1: Seven trees rise behind the old library near a red bench.
+Activation: 
+Text 2: Those battered books perched awkwardly on wide shelves still hold no urgent secrets.
+Activation: 
+Text 3: Colorful lamps shine nightly beside narrow alleys in quaint squares.
+Activation: 
+Text 4: Beneath distant clouds, travelers linger casually without urgent tasks ahead.
+Activation: 
+Text 5: Whispers follow each comet drifting across the silent evening sky.
+Activation: 

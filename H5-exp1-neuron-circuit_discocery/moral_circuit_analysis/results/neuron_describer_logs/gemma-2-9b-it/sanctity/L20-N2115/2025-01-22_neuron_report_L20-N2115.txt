@@ -1,0 +1,41 @@
+Neuron (20, 2115) Analysis:
+
+Initial Explanation: This neuron (layer 20, index 2115) seems to respond to linguistic contexts related to fairness, morality, and equitable distribution, particularly focusing on language that emphasizes just or proportionate actions or systems.
+
+1. **Pattern Recognition**:
+   - The neuron activates on tokens like "fair" and "proportionally," suggesting a sensitivity to concepts of equity and justice. These terms often appear in discussions about fairness or just allocation, suggesting the neuron's role in detecting thematic language around equitable practices.
+
+2. **Contextual Interpretation**:
+   - In the examples, "fair" is used in contexts relating to justice systems and trials, emphasizing fairness as a moral or legal principle. "Proportionally" is associated with equitable distribution, reinforcing the neuron's sensitivity to balanced or fair allocation themes.
+   - The neuron’s activation on the word "is" and the symbol "'" implies it might be sensitive to contexts where the sentence structure reinforces a moral or normative statement. For example, "is
+Correlation Score: 0.875
+
+Revised Explanation: Revised explanation of neuron behavior:
+
+This neuron (layer 20, index 2115) is primarily responsive to linguistic contexts involving fairness, justice, and equitable distribution, with a particular emphasis on language that underscores balanced or just actions and systems. The new evidence supports and refines our understanding of the neuron's behavior as follows:
+
+1. **Pattern Recognition**:
+   - The neuron consistently activates on terms like "fair," "proportionally," and "justice," confirming its sensitivity to concepts of equity and justice. These terms frequently appear in contexts discussing fairness or just allocation, reinforcing the neuron's role in detecting thematic language around equitable practices.
+   - The activation levels in the test cases suggest that the neuron's response is stronger when these terms are directly associated with actions or systems ensuring equitable treatment or distribution, as seen in phrases like "proportionally distributed" and "fair share."
+
+2. **Contextual Interpretation**:
+   - The neuron shows significant activation in contexts where fairness and justice are central themes, such as legal systems ("fair trial," "justice being the guiding principle") and resource allocation ("allocated proportionally," "fairly distribute"). This indicates that the neuron is particularly attuned to contexts where fairness is not just mentioned but is a guiding principle or outcome.
+   - The neuron's activation on the word "is" and the symbol "'" is less pronounced in the new evidence, suggesting that its sensitivity to these elements may be more context-dependent, primarily when they contribute to reinforcing a
+Revised Score: {'original_top': 0.5743665099143982, 'revised_top': 0.6029203534126282, 'original_random': 0.0, 'revised_random': 0.0}
+
+Top Activating Sequences:
+
+Text: A fair trial where evidence is weighed objectively is the basis of true justice.
+Token:  fair
+Activation: 0.094
+Context: <bos>A fair trial where[ fair] is weighed
+
+Text: A fair justice system limits oppressive tactics like indefinite detention without trial.
+Token:  fair
+Activation: 0.094
+Context: <bos>A fair justice system[ fair] oppressive tactics
+
+Text: Distributing group profits proportionally to each member's contribution is just.
+Token:  proportionally
+Activation: 0.075
+Context: <bos>Distributing group profits[ proportionally] to each member's

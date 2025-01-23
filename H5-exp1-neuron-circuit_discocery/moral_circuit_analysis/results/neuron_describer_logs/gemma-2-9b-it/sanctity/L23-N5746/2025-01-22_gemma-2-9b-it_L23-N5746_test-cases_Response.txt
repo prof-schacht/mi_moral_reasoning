@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T21:59:31.237191
+Model: gemma-2-9b-it
+Layer: 23, Neuron: 5746
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "In the ceremony, they emphasized the importance of upholding the ancient traditions to preserve their cultural heritage."
+
+Test case 2: "The company prides itself on its commitment to honesty, believing that maintaining transparency is crucial for building trust."
+
+Test case 3: "His decision to apologize publicly showcased his deep respect for integrity and his core belief in accountability."
+
+Test case 4: "She paints with the intention of capturing the essence of nature, striving to express its untainted beauty."
+
+Test case 5: "The team was selected based on their dedication to ethical practices and their ability to reflect the company's core mission."
+
+Test case 6: "Their manifesto focuses on protecting the authenticity of the community while embracing modern innovations."
+
+Test case 7: "The ancient artifact was valued not just for its age but for the timeless values it represented in its craftsmanship."
+
+Test case 8: "In their discussions, they often reflect on the importance of staying true to one's roots, even in the face of change."
+
+Test case 9: "Despite the pressure to conform, he stood firm in his belief that maintaining purity of intention was essential for true leadership."
+
+Test case 10: "Her poetry often delves into the theme of preserving sincerity in human interactions, a reflection of her personal ethos."

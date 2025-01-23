@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T22:20:01.726878
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 5781
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 24, index 5781) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  a	Activation: 10.0	Context:  water to ensure cleanliness is a moral obligation.
+
+Token:  a	Activation: 10.0	Context:  to safe drinking water is a moral priority.
+
+Token:  is	Activation: 10.0	Context:  each member's contribution is just.
+
+Token:  desire	Activation: 10.0	Context:  relocate to any region they desire without state interference.
+
+Token:  exemplifies	Activation: 10.0	Context:  individuals from all social ranks exemplifies fairness.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

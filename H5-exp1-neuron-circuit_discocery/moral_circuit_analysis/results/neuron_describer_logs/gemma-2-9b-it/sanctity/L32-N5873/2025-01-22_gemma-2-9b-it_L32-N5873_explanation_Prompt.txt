@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T23:37:23.714065
+Model: gemma-2-9b-it
+Layer: 32, Neuron: 5873
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 32, index 5873) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  indefinite	Activation: 10.0	Context:  system limits oppressive tactics like indefinite detention without trial.
+
+Token:  social	Activation: 10.0	Context:  taxes honestly supports a fair social structure for all.
+
+Token:  authoritarian	Activation: 10.0	Context:  culture should be free from authoritarian censorship.
+
+Token:  unity	Activation: 10.0	Context:  unfairly criticized fosters strong team unity.
+
+Token:  save	Activation: 10.0	Context: ating blood or organs to save lives is an act of
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

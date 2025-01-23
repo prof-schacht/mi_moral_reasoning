@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T22:55:41.990190
+Model: gemma-2-9b-it
+Layer: 26, Neuron: 10276
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "The community came together to ensure that families in need received adequate support and resources, showing a strong commitment to social responsibility and equity."
+
+Test case 2: "Students from underrepresented backgrounds were given scholarships, highlighting the importance of bridging educational gaps and promoting fairness."
+
+Test case 3: "Wearing a uniform is more than just following rules; it reflects a respect for the institution and a shared sense of moral duty among students."
+
+Test case 4: "Access to clean drinking water is a fundamental right, and efforts must be made to distribute resources fairly and equitably to all communities."
+
+Test case 5: "The initiative aimed at providing affordable housing to low-income families stressed the value of compassion and societal support."
+
+Test case 6: "In discussing the fairness of corporate policies, the token 'fair' appeared frequently, but the context was more about profit distribution than ethical responsibility."
+
+Test case 7: "The conference on environmental justice emphasized that future generations deserve equitable access to natural resources, focusing on respect for nature and duty to protect it."
+
+Test case 8: "Despite the importance of safety drills, the token 'of' was used in contexts highlighting compliance rather than respect, raising questions about the neuron's sensitivity to authority versus ethical themes."
+
+Test case 9: "The neighborhood initiative to clean public parks every month reflects a collective moral duty to maintain a healthy environment for everyone."
+
+Test case 10: "While discussing the charity's success, the phrase 'of support' was used, but the context was more about financial gains than altruistic actions, challenging the neuron's interpretation boundaries."

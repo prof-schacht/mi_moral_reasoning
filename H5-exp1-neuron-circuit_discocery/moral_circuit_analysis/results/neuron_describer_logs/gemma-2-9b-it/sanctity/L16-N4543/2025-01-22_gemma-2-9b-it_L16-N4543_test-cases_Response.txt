@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T20:04:43.408380
+Model: gemma-2-9b-it
+Layer: 16, Neuron: 4543
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "It is crucial to uphold the duty to protect those in need, as it aligns with the ethical principles we value."
+
+Test case 2: "She felt compelled to report the incident, acknowledging her moral responsibility to act."
+
+Test case 3: "The obligation to be honest in all transactions is a cornerstone of ethical business practices."
+
+Test case 4: "While it is important to be punctual, the meeting's cancelation was out of his control and not a moral failure."
+
+Test case 5: "He struggled with the decision, torn between personal desires and the duty to fulfill his promises to the community."
+
+Test case 6: "The committee debated whether it was necessary to report the findings immediately, weighing ethical concerns against potential repercussions."
+
+Test case 7: "In the face of adversity, she chose to be the voice of reason, highlighting the importance of maintaining integrity."
+
+Test case 8: "The law requires us to report any suspicious activities, but the ethical implications of wrongly accusing someone are significant."
+
+Test case 9: "Although the initial response was positive, they questioned whether their actions truly aligned with their moral compass."
+
+Test case 10: "The general consensus was to come to the aid of those affected, driven by a shared sense of responsibility and compassion."

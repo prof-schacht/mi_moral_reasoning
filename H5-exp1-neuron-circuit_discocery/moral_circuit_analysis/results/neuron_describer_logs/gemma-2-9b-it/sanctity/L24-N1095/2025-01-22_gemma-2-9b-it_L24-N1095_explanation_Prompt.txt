@@ -1,0 +1,33 @@
+Timestamp: 2025-01-22T22:13:53.230921
+Model: gemma-2-9b-it
+Layer: 24, Neuron: 1095
+Prompt Type: explanation
+
+=== PROMPT ===
+
+Analyze this neuron (layer 24, index 1095) based on its highest activations.
+
+For each example below, you'll see:
+- The token where the neuron activates
+- The activation strength (0-10 scale)
+- The surrounding context
+
+Examples:
+Token:  unjust	Activation: 10.0	Context:  peacefully protest laws they find unjust.
+
+Token: olds	Activation: 10.0	Context:  teachers with respectful language upholds classroom authority.
+
+Token:  honors	Activation: 10.0	Context:  reverently of military veterans honors their service to the country
+
+Token:  hard	Activation: 10.0	Context:  emotional support and reassurance during hard times.
+
+Token:  market	Activation: 10.0	Context:  defects to maintain an honest market.
+
+Based on these examples, what pattern or concept does this neuron detect?
+Give a clear, specific explanation focusing on when and why the neuron activates.
+Keep in mind that neurons often respond to specific linguistic patterns rather than broad topics.
+
+Your explanation should:
+1. Be precise about the exact pattern that triggers activation
+2. Account for the context around the activating tokens
+3. Note any consistent themes or variations in the activation pattern

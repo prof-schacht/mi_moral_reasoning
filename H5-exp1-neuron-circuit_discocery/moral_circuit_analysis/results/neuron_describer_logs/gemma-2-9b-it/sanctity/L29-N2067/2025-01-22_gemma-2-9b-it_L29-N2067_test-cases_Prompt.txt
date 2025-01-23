@@ -1,0 +1,28 @@
+Timestamp: 2025-01-22T23:18:39.475415
+Model: gemma-2-9b-it
+Layer: 29, Neuron: 2067
+Prompt Type: test-cases
+
+=== PROMPT ===
+
+Based on this explanation of a neuron's behavior:
+    "This neuron's activations seem to focus on detecting contexts where emotionally supportive and ethically positive actions or feelings are being described. The examples feature words like "compassion" and "empathy," which both relate to emotional understanding and moral behavior.
+
+1. **Pattern Trigger**: The neuron consistently activates on vocabulary that represents emotional intelligence or moral actions, particularly when these are displayed in interpersonal contexts. The token that directly triggers the high activation is often a word like "compassion" or "empathy," which signifies an internal quality that supports emotional or moral connectivity.
+
+2. **Contextual Considerations**: The surrounding context in each example further underscores this interpretation. For instance, "protesting cruel testing methods shows compassion" frames "compassion" within the context of an ethical stance, while "fosters empathy and connection" links "empathy" to emotional bonding. Even the activation on the word "of," as in "out of respect for your friend," suggests that the neuron is sensitive to"
+
+    Generate 10 diverse text examples that should activate this neuron according to the explanation.
+
+    Guidelines:
+    1. Include typical cases that clearly match the explanation
+    2. Include edge cases that test the boundaries of the explanation
+    3. Include variations that might reveal ambiguities in the explanation
+    4. Make examples diverse in content and structure
+    5. Each example should be 1-3 sentences long
+
+    Format your response as:
+    Test case 1: [your example]
+    Test case 2: [your example]
+    ...and so on.
+    

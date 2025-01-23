@@ -1,0 +1,26 @@
+Timestamp: 2025-01-22T22:44:28.464727
+Model: gemma-2-9b-it
+Layer: 25, Neuron: 13929
+Prompt Type: test-cases
+
+=== RESPONSE ===
+
+Test case 1: "We should not tolerate any form of bias or favoritism in our hiring practices."
+
+Test case 2: "The decision was made without any personal bias, ensuring a fair and impartial outcome."
+
+Test case 3: "There is no place for nepotism in a truly meritocratic system."
+
+Test case 4: "Corruption must be rejected in all its forms to maintain integrity."
+
+Test case 5: "Our policies are designed to be objective, without favoring any individual or group unfairly."
+
+Test case 6: "Not allowing bribes is crucial to maintaining public trust."
+
+Test case 7: "The contract was awarded based on merit, not on personal connections."
+
+Test case 8: "The committee made decisions without any hint of favoritism, ensuring fairness for all candidates."
+
+Test case 9: "Nepotism and corruption are not only unethical but also detrimental to organizational growth."
+
+Test case 10: "It is important to set aside personal biases and make decisions based on objective criteria."
