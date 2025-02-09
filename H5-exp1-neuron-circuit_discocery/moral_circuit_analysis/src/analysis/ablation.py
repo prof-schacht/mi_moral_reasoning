@@ -14,7 +14,9 @@ class AblationAnalyzer:
     def ablate_neurons(self, 
                       text: str,
                       neurons: List[Tuple[int, int]],
-                      ablation_value: Optional[float] = None) -> str:
+                      ablation_value: Optional[float] = 0.0,
+                      max_new_tokens: Optional[int] = 50,
+                      temperature: Optional[float] = 1.0) -> str:
         """
         Generate text with specified neurons ablated (set to ablation_value).
         
@@ -45,19 +47,24 @@ class AblationAnalyzer:
             with torch.no_grad():
                 output = self.model.generate(
                     tokens,
-                    max_new_tokens=50,
-                    temperature=1.0
+                    max_new_tokens=max_new_tokens,
+                    temperature=temperature
                 )
         finally:
             # Clean up all hooks
             self.model.reset_hooks()
             
-        return self.model.to_string(output[0])
+        # Return only the newly generated tokens
+        original_text = self.model.to_string(tokens[0])
+        full_output = self.model.to_string(output[0])
+        return full_output[len(original_text):]
     
     def analyze_ablation_impact(self,
                               moral_pairs: List[Tuple[str, str]],
                               neurons: List[Tuple[int, int]],
-                              ablation_value: Optional[float] = None) -> Dict:
+                              ablation_value: Optional[float] = 0.0,
+                              max_new_tokens: Optional[int] = 50,
+                              temperature: Optional[float] = 1.0) -> Dict:
         """
         Analyze how ablating specific neurons affects model's moral behavior.
         
@@ -70,8 +77,8 @@ class AblationAnalyzer:
             Dictionary with ablation analysis results
         """
         results = {
-            'original_responses': [],
-            'ablated_responses': [],
+            'moral_responses': [],     # List of (prompt, original_moral, ablated_moral) tuples
+            'immoral_responses': [],   # List of (prompt, original_immoral, ablated_immoral) tuples
             'response_changes': [],
             'moral_agreement_original': [],
             'moral_agreement_ablated': []
@@ -79,16 +86,16 @@ class AblationAnalyzer:
         
         for moral_text, immoral_text in tqdm(moral_pairs, desc="Analyzing ablation impact"):
             # Get original responses
-            orig_moral = self.generate_text(moral_text)
-            orig_immoral = self.generate_text(immoral_text)
+            orig_moral = self.generate_text(moral_text, max_new_tokens, temperature)
+            orig_immoral = self.generate_text(immoral_text, max_new_tokens, temperature)
             
             # Get responses with ablated neurons
-            ablated_moral = self.ablate_neurons(moral_text, neurons, ablation_value)
-            ablated_immoral = self.ablate_neurons(immoral_text, neurons, ablation_value)
+            ablated_moral = self.ablate_neurons(moral_text, neurons, ablation_value, max_new_tokens, temperature)
+            ablated_immoral = self.ablate_neurons(immoral_text, neurons, ablation_value, max_new_tokens, temperature)
             
-            # Store responses
-            results['original_responses'].append((orig_moral, orig_immoral))
-            results['ablated_responses'].append((ablated_moral, ablated_immoral))
+            # Store responses as tuples including the prompt
+            results['moral_responses'].append((moral_text, orig_moral, ablated_moral))
+            results['immoral_responses'].append((immoral_text, orig_immoral, ablated_immoral))
             
             # Analyze changes
             moral_change = self._compute_response_change(orig_moral, ablated_moral)
@@ -200,13 +207,16 @@ class AblationAnalyzer:
         
         return stats
     
-    def generate_text(self, text: str, max_new_tokens: int = 50) -> str:
-        """Generate text continuation."""
+    def generate_text(self, text: str, max_new_tokens: int = 50, temperature: float = 1.0) -> str:
+        """Generate text continuation without including the prompt."""
         tokens = self.model.to_tokens(text)
         with torch.no_grad():
             output = self.model.generate(
                 tokens,
                 max_new_tokens=max_new_tokens,
-                temperature=1.0
+                temperature=temperature
             )
-        return self.model.to_string(output[0]) 
+        # Return only the newly generated tokens
+        original_text = self.model.to_string(tokens[0])
+        full_output = self.model.to_string(output[0])
+        return full_output[len(original_text):] 

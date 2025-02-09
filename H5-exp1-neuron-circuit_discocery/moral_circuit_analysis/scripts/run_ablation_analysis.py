@@ -104,18 +104,24 @@ def get_llm_analysis(results: Dict, api_key: str, immoral_neutral: str) -> str:
     return response.choices[0].message.content
 
 def main():
+    # python scripts/run_ablation_analysis.py --model "google/gemma-2-9b-it" --neurons ./results/google-gemma-2-9b-it/2025-01-22_google-gemma-2-9b-it_fp16_moral-care_neuron_moral_ethic_cl1.json --results-dir ./results/ablation/ --dimension "care" --llm_explainer True --max_new_tokens 70 --temperature 0 --ablation_value -20 --device "cuda:2" --neuron_cluster "1"
     parser = argparse.ArgumentParser(description='Run ablation analysis on moral circuits')
     parser.add_argument('--model', type=str, required=True, help='Name of the model to analyze')
     parser.add_argument('--neurons', type=str, required=True, help='Path to JSON file containing neurons to ablate')
     parser.add_argument('--results-dir', type=str, required=True, help='Directory to store results')
     parser.add_argument('--dimension', type=str, required=True, help='Dimension/aspect being analyzed')
     parser.add_argument('--llm_explainer', type=bool, required=True, help='Whether to use GPT-4 to explain the results')
+    parser.add_argument('--max_new_tokens', type=int, required=True, help='Maximum number of tokens to generate')
+    parser.add_argument('--temperature', type=float, required=True, help='Temperature for the model')
+    parser.add_argument('--ablation_value', type=float, required=True, help='Value to ablate the neurons by')
+    parser.add_argument('--device', type=str, required=True, default='cuda', help='Device to run the model on')
+    parser.add_argument('--neuron_cluster', type=str, required=True, default=1, help='Cluster to run the model on')
     
     args = parser.parse_args()
     
     # Load model
     print(f"Loading model {args.model}...")
-    model = HookedTransformer.from_pretrained(args.model, device='cuda' if torch.cuda.is_available() else 'cpu')
+    model = HookedTransformer.from_pretrained(args.model, device=args.device if torch.cuda.is_available() else 'cpu')
     
     # Initialize analyzer
     analyzer = AblationAnalyzer(model)
@@ -157,10 +163,10 @@ def main():
     
     for analysis_name, (pairs, comparison_type) in analyses.items():
         print(f"\nRunning {analysis_name} analysis...")
-        results = analyzer.analyze_ablation_impact(pairs, neurons)
+        results = analyzer.analyze_ablation_impact(pairs, neurons, ablation_value=args.ablation_value, max_new_tokens=args.max_new_tokens, temperature=args.temperature)
         
         # Save raw results
-        results_file = results_base_dir / f"{timestamp}_{model_name}_{args.dimension}_{analysis_name}_{comparison_type}_ablation_results.json"
+        results_file = results_base_dir / f"{timestamp}_{model_name}_{args.dimension}_cl{args.neuron_cluster}_{analysis_name}_{comparison_type}_ablation_value_{str(args.ablation_value)}_results.json"
         with open(results_file, 'w') as f:
             json.dump(results, f, indent=2)
         print(f"Saved results to {results_file}")
@@ -169,7 +175,7 @@ def main():
             # Get and save GPT-4 analysis
             print("Getting GPT-4 analysis...")
             analysis = get_llm_analysis(results, OPENAI_API_KEY, comparison_type)
-            analysis_file = results_base_dir / f"{timestamp}_{model_name}_{args.dimension}_{analysis_name}_{comparison_type}_LLM_explanation.txt"
+            analysis_file = results_base_dir / f"{timestamp}_{model_name}_{args.dimension}_cl{args.neuron_cluster}_{analysis_name}_{comparison_type}_ablation_value_{str(args.ablation_value)}_LLM_explanation.txt"
             with open(analysis_file, 'w') as f:
                 f.write(analysis)
             print(f"Saved analysis to {analysis_file}")

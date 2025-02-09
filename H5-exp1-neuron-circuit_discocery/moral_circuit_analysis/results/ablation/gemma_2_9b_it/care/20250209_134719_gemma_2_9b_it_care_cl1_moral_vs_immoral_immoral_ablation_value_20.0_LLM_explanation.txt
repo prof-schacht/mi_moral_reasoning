@@ -1,0 +1,25 @@
+1. **Role of Ablated Neurons in Moral/Immoral Processing:**
+
+   The response changes indicate that ablated neurons have an impact on both moral and immoral scenario responses. On average, the response changes for moral scenarios (0.129 ± 0.028) and immoral scenarios (0.150 ± 0.027) suggest that the ablated neurons play a notable role in processing both types of scenarios. The slightly higher average change in immoral responses indicates these neurons might be more influential in processing or interpreting immoral scenarios. 
+
+2. **Effect on Model's Ability to Distinguish Moral/Immoral Scenarios:**
+
+   The model's ability to distinguish between moral and immoral scenarios is largely unchanged after neuron ablation, as seen from the small decrease in the average moral/immoral agreement score from 0.853 to 0.850 (a difference of -0.003). This suggests that, while the ablated neurons do impact specific responses, the overall pattern of distinguishing moral versus immoral scenarios remains largely intact, indicating redundancy or distributed representation in the network that compensates for these changes.
+
+3. **Notable Patterns or Outliers:**
+
+   - **Response Changes:**
+     - The most significant response change for a moral scenario is 0.188, and for an immoral scenario is 0.206. These correspond to specific scenarios where the ablation caused notably different responses, indicating particular sensitivity of these responses to the ablated neurons.
+     - Conversely, there are scenarios with minimal response change (around 0.084-0.090), suggesting that some scenarios are less dependent on the specific neurons ablated.
+   
+   - **Moral/Immoral Agreement Scores:**
+     - Certain scenarios showed more significant changes in moral/immoral agreement upon ablation, such as decreases in scores (e.g., from 0.890 to 0.851 for the 10th scenario, a drop of 0.039), implying these neurons might contribute more heavily to moral reasoning in particular contexts.
+     - Interestingly, a few scenarios saw improvements in alignment (e.g., the 1st and 28th scenarios had increases), which suggest possible shifts in internal processing that enhance moral reasoning despite neuron loss.
+
+4. **Conclusions on Neurons' Contribution to Moral Reasoning:**
+
+   - The ablated neurons are significant but not exclusive factors in processing moral and immoral scenarios, with more influence on immoral scenario processing as indicated by higher average response changes.
+   - The stability in distinguishing capabilities post-ablation suggests a level of redundancy or distributed processing in the network, indicating other neurons compensate for the loss of those ablated.
+   - The overall slight change in moral/immoral agreement (-0.003) supports the notion of resilience in the model's moral reasoning capabilities, suggesting moral reasoning is supported by multiple neural components working in concert rather than relying heavily on a specific set of neurons.
+
+These interpretations point to a complex network where moral reasoning is distributed, and while specific neurons have distinct roles, their absence does not destabilize the overall moral discernment capabilities significantly.
