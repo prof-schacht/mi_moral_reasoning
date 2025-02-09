@@ -1,0 +1,29 @@
+created an ablation study to identify neurons which react on the moral dimension care. I then identified amount of neurons, and ablated all neurons which where identified by setting them to 0. The above text is the result of the dimension liberty. Could you write a 200-400 word finding section for a researchpaper with the focus on the question. Could ablating these neurons change the moral behaviour in the dimension liberty? Because if this is the case, the identified neurons would then be proofed that they would be relevant for moral opinion forming in this dimension.
+
+
+The script I used does this:
+The run_ablation_analysis.py script performs two types of analyses:
+Moral vs Immoral Analysis
+Moral vs Neutral Analysis
+For each analysis, it generates two output files (so 4 files total):
+Raw Results JSON file ({timestamp}_{model_name}_{dimension}_{analysis_name}_{comparison_type}_ablation_results.json):
+Contains the raw numerical results from the ablation experiments including:
+Original and ablated responses for each statement pair
+Response changes (how much the model's output changed after ablation)
+Moral agreement scores (how similarly the model treats moral vs immoral/neutral scenarios)
+Summary statistics (averages, standard deviations, overall changes)
+
+
+<results moral vs neutral>
+
+
+</results moral vs neutral>
+
+
+<results moral vs immoral>
+
+</results moral vs immoral>
+
+
+Could you create the analysis  with both outputs as basis. Write the findings (200-450 words) and also create tables to better understand your explanation. First make an analysis based on the pure figures (200 Words) and the perform an aditional analysis on the given prompt-output before and after ablation. It is important, that not only the figures and similarities scores are used for the final findings rather also the outputted text before and after ablation. Because a change using the similarity only says that the text changes but not that the moral statement changes. It could be only rewritten and paraphrased but still means the same. Therefore the original and ablated outputs must be taken into consideration.
+----

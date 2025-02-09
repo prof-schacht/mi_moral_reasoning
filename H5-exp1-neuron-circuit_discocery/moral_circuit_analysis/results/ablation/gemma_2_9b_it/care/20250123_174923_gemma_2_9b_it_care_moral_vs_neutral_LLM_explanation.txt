@@ -1,0 +1,17 @@
+Analyzing the results of the neuron ablation study provides insights into the role of the ablated neurons in moral and immoral processing within the LLM:
+
+1. **Role of Ablated Neurons in Moral/Immoral Processing:**
+   - The response changes indicate that the neurons have a more pronounced effect on immoral scenarios than moral ones. The average change in responses for immoral scenarios is 0.176 with a higher standard deviation (±0.062) compared to 0.123 (±0.041) for moral scenarios. This suggests that the ablated neurons might play a more critical role in processing or responding to immoral scenarios.
+
+2. **Impact on Moral/Immoral Distinction:**
+   - The ablation decreases the model's ability to distinguish between moral and immoral scenarios, as evidenced by a drop in the average agreement score from 0.792 to 0.761, representing a decrease of 0.030. This decline suggests that the ablated neurons contribute, at least in part, to the model's ability to differentiate between these types of scenarios.
+
+3. **Patterns and Outliers:**
+   - **Outliers:** In the response changes, several pairs—such as the pair with immoral response change (0.365) and another with the change (0.310)—exhibit significant changes relative to other pairs. These might indicate specific scenarios where the neurons have a strong influence.
+   - **Patterns in Agreement Scores:** Some original scenarios with high moral agreement scores, such as 0.849 and 0.853, show a notable drop once ablated, to 0.811 and 0.791, respectively, suggesting these specific scenarios might be more reliant on the neurons in question.
+
+4. **Conclusions on Neurons' Contribution to Moral Reasoning:**
+   - The data indicates that the ablated neurons play a role in moral reasoning, particularly in the processing of immoral scenarios. Their ablation disrupts the model's ability to treat moral and immoral scenarios differently, indicating these neurons' significant contribution to this aspect of moral reasoning.
+   - The overall pattern of greater changes in immoral scenario responses and the decline in moral/immoral distinction after ablation suggests that these neurons could be part of a circuit or mechanism that weighs moral context or ethical boundaries within the model's processing.
+
+In summary, the neurons contribute more significantly to handling immoral contexts and maintaining the distinction between moral and immoral scenarios, and their ablation impairs these cognitive functions in the model.
