@@ -84,8 +84,8 @@ def get_llm_analysis(results: Dict, api_key: str, immoral_neutral: str) -> str:
     # Format the prompt with results
     formatted_prompt = ANALYSIS_PROMPT.format(
         response_changes=results['response_changes'],
-        moral_agreement_original=results['moral_agreement_original'],
-        moral_agreement_ablated=results['moral_agreement_ablated'],
+        moral_agreement_original=results['avg_moral_prompt_to_orig'],
+        moral_agreement_ablated=results['avg_moral_prompt_to_ablated'],
         avg_moral_change=results['avg_moral_change'],
         std_moral_change=results['std_moral_change'],
         avg_immoral_change=results['avg_immoral_change'],
