@@ -1,0 +1,96 @@
+Cluster 3
+Moral vs immoral
+
+1. **Score Distributions Plot** (Top Image):
+- Original Score Distribution:
+  - Shows two distributions: Moral (blue) and Immoral/Neutral (red)
+  - Both distributions peak around a probe score of 1.0
+  - The moral statements have a slightly higher and narrower peak (~6.0 density) compared to immoral statements (~4.8 density)
+  - There are some minor peaks/noise in lower probe scores (0.0-0.8 range)
+
+- Ablated Score Distribution:
+  - Shows a dramatic change after neuron ablation
+  - The immoral/neutral statements (red) show an extremely sharp spike around probe score 1.0 (density ~120)
+  - The moral statements (blue) maintain a much lower, broader distribution
+  - This suggests the ablation caused immoral statements to be processed very uniformly
+
+2. **Moral vs Immoral Separation Plot** (Middle Image):
+- Shows how the model distinguishes between moral and immoral statements
+- The blue dots (Original) show points mostly clustered near (1.0, 1.0)
+- The red dots (Ablated) also cluster near (1.0, 1.0)
+- The gray arrows connecting pairs show the movement from original to ablated state
+- The diagonal dashed line represents where moral and immoral scores would be equal
+- The clustering suggests that before and after ablation, the model tends to give high scores to both moral and immoral statements
+
+3. **Moral Assessment Trajectories Plot** (Bottom Image):
+- Shows how individual statements' scores change after ablation
+- The blue arrows (Moral statements) and red arrows (Immoral statements) are mostly horizontal
+- Both types of statements maintain their relative vertical positions
+- The arrows are relatively short, suggesting modest changes in scores after ablation
+- Most trajectories occur in the high probe score region (0.8-1.0)
+
+Overall Interpretation:
+1. The ablated neurons appear to have a strong effect on how the model processes immoral/neutral statements, making their scores more uniform and concentrated.
+2. The model maintains high scores for both moral and immoral statements before and after ablation, suggesting these particular neurons might not be crucial for basic moral/immoral distinction.
+3. The ablation seems to affect the variance of scores more than their absolute values, particularly for immoral statements.
+4. The dramatic spike in the ablated distribution for immoral statements suggests these neurons might play a role in nuanced processing of immoral content, and their ablation leads to more uniform/simplified processing.
+
+This analysis suggests that cluster 3 neurons might be involved in adding nuance or variability to the model's processing of immoral statements, rather than being primarily responsible for the basic moral/immoral distinction.
+
+---
+Moral vs. Neutral Cluster 3
+I'll analyze these moral vs. neutral plots and compare them to what we saw earlier:
+
+1. **Score Distributions Plot** (Top Two Panels):
+
+Original Score Distribution:
+- Moral statements (blue) show a strong peak around probe score 1.0 with density ~6.0
+- Neutral statements (red) show a much more spread-out distribution with multiple smaller peaks:
+  - A peak around 0.0 (neutral territory)
+  - Another peak around 0.5
+  - A smaller peak near 1.0
+- This suggests the model clearly distinguishes moral from neutral statements initially
+
+Ablated Score Distribution:
+- After ablation, there are significant changes:
+- Moral statements (blue) maintain a peak around 1.0 but with reduced density (~3.5)
+- Neutral statements (red) show a more concentrated distribution around 0.0-0.2
+- The separation between moral and neutral becomes more pronounced
+
+2. **Moral vs Neutral Separation Plot** (Middle):
+- Original scores (blue dots) are spread across different values
+- After ablation (red dots), there's a clear separation:
+  - Most moral scores remain high (near 1.0 on x-axis)
+  - Neutral scores tend to move lower (closer to 0.0 on y-axis)
+- The gray connecting lines show substantial vertical movement, indicating the ablation primarily affects how neutral statements are scored
+- The diagonal dashed line helps visualize the separation - points moving away from this line indicate increased differentiation
+
+3. **Moral Assessment Trajectories** (Bottom):
+- Moral statements (blue arrows) remain consistently at a higher position
+- Neutral statements (red arrows) are positioned lower
+- The horizontal arrows suggest stable scoring within each category
+- The clear vertical separation between blue and red arrows indicates the model maintains distinct treatment of moral vs. neutral statements
+
+Key Conclusions:
+1. **Enhanced Discrimination**: Unlike the moral vs. immoral case, these neurons appear to play a crucial role in distinguishing moral from neutral content. The ablation actually enhances this separation.
+
+2. **Neutral Content Processing**: The ablation has a stronger effect on neutral statements, pushing their scores lower, suggesting these neurons normally contribute to giving neutral statements higher moral scores.
+
+3. **Stability of Moral Recognition**: The model's ability to identify moral statements remains relatively stable even after ablation, though with slightly reduced confidence (lower peak density).
+
+4. **Functional Role**: These neurons appear to be involved in nuancing the model's moral evaluations - when ablated, the model becomes more binary in its classifications (very clear separation between moral and neutral).
+
+Comparing to Moral vs. Immoral:
+- The moral vs. neutral distinction shows clearer separation after ablation than the moral vs. immoral case
+- These neurons seem more important for processing neutral content than for processing immoral content
+- The ablation has opposite effects: it makes immoral statements score more similarly to moral ones, while making neutral statements score more differently from moral ones
+
+This suggests that cluster 3 neurons play a complex role in moral evaluation, particularly in how the model processes morally neutral content and distinguishes it from explicitly moral content.
+
+
+Findings Paper:
+Our analysis of Cluster 3—neurons associated with support, empathy, and interpersonal connections—reveals a complex but telling pattern in both moral–immoral and moral–neutral comparisons. Prior to ablation, moral and immoral statements tend to cluster near the high end of the probe score range, reflecting the model’s inclination to treat them as morally loaded. Upon ablation, immoral statements become even more uniformly scored near 1.0, indicating that these neurons help the model retain subtlety in distinguishing truly moral statements from those that are immoral yet perceived with some level of empathetic or relational context.
+
+In contrast, when comparing moral and neutral content, the ablation appears to sharpen the boundary between the two categories. Neutral statements shift more decisively toward lower scores, while moral statements remain high, suggesting that these neurons play a role in slightly “raising” neutral scores, potentially reflecting empathetic engagement with statements not strictly moral. Once removed, the model becomes more binary in its treatment of neutral versus moral content.
+
+Overall, Cluster 3 seems critical for adding nuanced “empathy-driven” variability to immoral statements and moderating moral–neutral distinctions. Its ablation leads to a more uniform—and arguably less context-sensitive—assessment, highlighting these neurons’ importance in providing fine-grained empathetic or supportive judgments.
