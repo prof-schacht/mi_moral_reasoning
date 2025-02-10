@@ -1,0 +1,20 @@
+The results from the neuron ablation study reveal the influence of specific neurons on the model's responses to moral and neutral scenarios. Here's an analysis of the findings:
+
+1. **Role of Ablated Neurons in Moral/Neutral Processing:**
+   - **Response Changes:** The response changes indicate how disabling these neurons affects the model. The average response change for moral scenarios (0.316) is significantly less than that for neutral scenarios (0.451). This suggests that the ablated neurons might play a more substantial role in processing or generating neutral responses compared to moral ones. The neurons may be more integral to maintaining neutrality in various topics, possibly by modulating or overlaying virtues of neutrality over decisions involving morality.
+
+2. **Effect on Distinguishing Between Moral and Neutral Scenarios:**
+   - **Moral/Neutral Agreement Scores:** Originally, the moral/neutral agreement score was 0.623, which slightly decreased to 0.612 after ablation. This indicates a marginal decline in the model's ability to differentiate between moral and neutral scenarios. However, the change is relatively small (0.011), thus suggesting that while these neurons contribute to this distinguishing capability, they are not the sole contributors.
+   - **Overall Moral/Neutral Agreement Change:** The average agreement slightly increased from 0.500 to 0.512, signifying a modest enhancement in the indistinguishability of responses post-ablation. This might mean that the neurons play some role in differentiating neutral responses more than moral ones, or vice versa.
+
+3. **Notable Patterns and Outliers:**
+   - **Outliers in Response Changes:** Some moral scenarios exhibit exceptionally low response changes, like 0.028 for the scenario paired with 0.826 for neutral. This stark contrast indicates substantial dependence or independence of moral reasoning on these neurons.
+   - **Scenarios with High Neutral Change:** Certain scenarios show high neutral response changes, such as 0.826, indicating these responses rely heavily on the ablated neurons, highlighting their critical role in shaping neutral responses.
+   - **Minimal Impact Scenarios:** The scenario following (0.42095065116882324, 0.5485603213310242) has the highest initial impact but a negligible influence on other scenarios compared to others in the list.
+
+4. **Conclusions on Neuronal Contribution to Moral Reasoning:**
+   - The ablation results suggest that the target neurons have a moderate but stronger influence on the model's engagement with neutral scenarios than moral ones, which aligns with the higher average response change in neutral scenarios.
+   - Given that the moral agreement slightly improved post-ablation, the neurons may contribute some level of bias in distinguishing moral scenarios from neutral ones.
+   - Although they don't seem to be critical for moral reasoning, they may support nuanced processing or differentiation within neutral contexts that peripheral moral context scenarios could sometimes require.
+
+Overall, the evidence points toward these neurons being more involved in processing neutral information rather than core moral reasoning, while still playing a non-trivial role in the holistic scenario assessment logic of the language model.

@@ -5,6 +5,78 @@ from transformer_lens import HookedTransformer
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
+class MoralProbe:
+    def __init__(self, model: HookedTransformer):
+        self.model = model
+        self.device = model.cfg.device
+        # Initialize classifier with correct input dimension (d_model from last layer)
+        self.classifier = torch.nn.Linear(model.cfg.d_model, 1).to(self.device)
+        self.criterion = torch.nn.BCEWithLogitsLoss()
+        self.optimizer = torch.optim.Adam(self.classifier.parameters())
+        
+    def get_last_layer_logits(self, text: str) -> torch.Tensor:
+        """Get hidden states from the last layer for a given text."""
+        tokens = self.model.to_tokens(text)
+        with torch.no_grad():
+            # Get hidden states from the last layer using TransformerLens
+            _, cache = self.model.run_with_cache(
+                tokens,
+                names_filter=lambda name: name == f"blocks.{self.model.cfg.n_layers-1}.hook_resid_post"
+            )
+            # Get the last layer's hidden states for the last token
+            last_token_hidden = cache[f"blocks.{self.model.cfg.n_layers-1}.hook_resid_post"][:, -1, :]
+            return last_token_hidden
+    
+    def train(self, moral_texts: List[str], neutral_texts: List[str], epochs: int = 5):
+        """Train the probe on moral vs neutral texts."""
+        print("Training moral probe...")
+        
+        # Prepare training data
+        moral_logits = []
+        neutral_logits = []
+        
+        # Process moral texts
+        print("Processing moral texts...")
+        for text in moral_texts:
+            logits = self.get_last_layer_logits(text)
+            moral_logits.append(logits)
+            
+        # Process neutral texts
+        print("Processing neutral texts...")
+        for text in neutral_texts:
+            logits = self.get_last_layer_logits(text)
+            neutral_logits.append(logits)
+        
+        # Stack all logits
+        moral_logits = torch.cat(moral_logits, dim=0)
+        neutral_logits = torch.cat(neutral_logits, dim=0)
+        
+        X = torch.cat([moral_logits, neutral_logits], dim=0)
+        y = torch.cat([
+            torch.ones(len(moral_texts)), 
+            torch.zeros(len(neutral_texts))
+        ]).to(self.device)
+        
+        print(f"Training probe with input shape: {X.shape}, output shape: {y.shape}")
+        
+        # Training loop
+        for epoch in range(epochs):
+            self.optimizer.zero_grad()
+            pred = self.classifier(X).squeeze()
+            loss = self.criterion(pred, y)
+            loss.backward()
+            self.optimizer.step()
+            
+            if (epoch + 1) % 1 == 0:
+                print(f"Epoch {epoch+1}/{epochs}, Loss: {loss.item():.4f}")
+    
+    def predict(self, text: str) -> float:
+        """Predict moral probability for a given text."""
+        with torch.no_grad():
+            logits = self.get_last_layer_logits(text)
+            pred = torch.sigmoid(self.classifier(logits)).item()
+        return pred
+
 class AblationAnalyzer:
     def __init__(self, model: HookedTransformer):
         self.model = model
@@ -12,6 +84,7 @@ class AblationAnalyzer:
         self.n_layers = model.cfg.n_layers
         self.n_neurons = model.cfg.d_mlp
         self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+        self.probe = None  # Will be initialized when needed
         
     def ablate_neurons(self, 
                       text: str,
@@ -244,4 +317,70 @@ class AblationAnalyzer:
         # Return only the newly generated tokens
         original_text = self.model.to_string(tokens[0])
         full_output = self.model.to_string(output[0])
-        return full_output[len(original_text):] 
+        return full_output[len(original_text):]
+    
+    def train_moral_probe(self, moral_texts: List[str], neutral_texts: List[str]):
+        """Initialize and train the moral probe."""
+        self.probe = MoralProbe(self.model)
+        self.probe.train(moral_texts, neutral_texts)
+    
+    def analyze_ablation_impact_with_probe(self,
+                                         moral_pairs: List[Tuple[str, str]],
+                                         neurons: List[Tuple[int, int]],
+                                         ablation_value: Optional[float] = 0.0,
+                                         max_new_tokens: Optional[int] = 50,
+                                         temperature: Optional[float] = 1.0) -> Dict:
+        """
+        Analyze ablation impact using the moral probe.
+        
+        Args:
+            moral_pairs: List of (moral_text, immoral_text) pairs
+            neurons: List of (layer, neuron) pairs to ablate
+            ablation_value: Value to set neurons to
+            
+        Returns:
+            Dictionary with probe-based analysis results
+        """
+        if self.probe is None:
+            raise ValueError("Moral probe not initialized. Call train_moral_probe first.")
+            
+        results = {
+            'moral_responses': [],      # (prompt, orig_resp, ablated_resp)
+            'moral_predictions': [],    # (orig_pred, ablated_pred)
+            'immoral_responses': [],
+            'immoral_predictions': []
+        }
+        
+        for moral_text, immoral_text in tqdm(moral_pairs, desc="Analyzing with probe"):
+            # Get original and ablated responses / logit predictions
+            orig_moral = self.generate_text(moral_text, max_new_tokens, temperature)
+            orig_immoral = self.generate_text(immoral_text, max_new_tokens, temperature)
+            ablated_moral = self.ablate_neurons(moral_text, neurons, ablation_value, max_new_tokens, temperature)
+            ablated_immoral = self.ablate_neurons(immoral_text, neurons, ablation_value, max_new_tokens, temperature)
+            
+            # Get probe predictions
+            orig_moral_pred = self.probe.predict(orig_moral)
+            ablated_moral_pred = self.probe.predict(ablated_moral)
+            orig_immoral_pred = self.probe.predict(orig_immoral)
+            ablated_immoral_pred = self.probe.predict(ablated_immoral)
+            
+            # Store results
+            results['moral_responses'].append((moral_text, orig_moral, ablated_moral))
+            results['moral_predictions'].append((orig_moral_pred, ablated_moral_pred))
+            results['immoral_responses'].append((immoral_text, orig_immoral, ablated_immoral))
+            results['immoral_predictions'].append((orig_immoral_pred, ablated_immoral_pred))
+        
+        # Add summary statistics
+        moral_pred_changes = np.array([(abl - orig) for orig, abl in results['moral_predictions']])
+        immoral_pred_changes = np.array([(abl - orig) for orig, abl in results['immoral_predictions']])
+        
+        results['summary'] = {
+            'avg_moral_pred_change': float(np.mean(moral_pred_changes)),
+            'std_moral_pred_change': float(np.std(moral_pred_changes)),
+            'avg_immoral_pred_change': float(np.mean(immoral_pred_changes)),
+            'std_immoral_pred_change': float(np.std(immoral_pred_changes)),
+            'moral_effect_size': float(np.mean(moral_pred_changes) / np.std(moral_pred_changes)),
+            'immoral_effect_size': float(np.mean(immoral_pred_changes) / np.std(immoral_pred_changes))
+        }
+        
+        return results 

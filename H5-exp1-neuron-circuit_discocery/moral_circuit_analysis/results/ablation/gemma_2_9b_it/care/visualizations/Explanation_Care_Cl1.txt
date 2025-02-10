@@ -1,0 +1,170 @@
+Picture Description probe distribution:
+- CL1
+
+1. **Top Panel (Original Score Distribution)**:
+   - Shows how the probe scores the responses BEFORE ablation
+   - Blue line: Distribution of moral statement scores
+   - Red line: Distribution of immoral/neutral statement scores
+   - Both distributions peak around 0.9-1.0, suggesting the model tends to give high moral scores to both types of statements
+   - There's slight separation between moral (blue) and immoral/neutral (red) responses, but not very distinct
+
+2. **Bottom Panel (Ablated Score Distribution)**:
+   - Shows how the probe scores the responses AFTER ablation
+   - The most striking feature is the sharp red peak at around 1.0
+   - This suggests that after ablation:
+     - Immoral/neutral statements (red) are being scored as highly moral (clustered near 1.0)
+     - Moral statements (blue) have a more spread-out distribution
+   - The dramatic change in the red distribution suggests the ablated neurons were important for distinguishing immoral/neutral content
+
+3. **Key Insights**:
+   - Before ablation: The model had some ability to distinguish between moral and immoral/neutral content (slight separation in distributions)
+   - After ablation: The model lost this ability and started treating immoral/neutral content as more moral
+   - The effect is stronger on immoral/neutral statements than moral ones
+   - This suggests these neurons might be particularly important for detecting or processing immoral/neutral content
+
+This visualization supports the numerical results we saw earlier, where:
+- Small change in moral predictions (avg_moral_pred_change: +0.0058)
+- Large change in immoral predictions (avg_immoral_pred_change: +0.2829)
+- The ablation seems to primarily affect how the model processes immoral/neutral content
+
+Would you like me to explain any specific aspect of the plot in more detail?
+
+--- All Pictures - moral vs. immoral:
+
+
+Looking at all three visualizations together (Separation, Distribution, and Trajectory plots), we can draw some important conclusions about this set of neurons:
+
+1. **Strong Impact on Moral Processing**:
+   - **Before Ablation**:
+     - Both moral and immoral statements get relatively high scores (peaks near 1.0)
+     - Some ability to distinguish between moral/immoral (slight differences in distributions)
+     - Model shows some uncertainty (small peaks in lower scores)
+
+   - **After Ablation**:
+     - Moral statements become extremely concentrated (sharp peak at 1.0)
+     - Immoral statements become more spread out
+     - Much clearer separation between moral and immoral content
+
+2. **Functional Role of these Neurons**:
+   - They appear to be involved in:
+     - Adding nuance to moral judgments
+     - Creating uncertainty in moral assessments
+     - Helping distinguish degrees of morality
+   - When removed:
+     - The model becomes more "black and white" in its judgments
+     - Loses ability to express uncertainty about moral content
+     - Becomes overly confident in moral classifications
+
+3. **Specific Effects**:
+   - The separation plot shows:
+     - Clear change in how immoral content is processed
+     - More extreme categorization after ablation
+   - The distribution plot reveals:
+     - Dramatic sharpening of moral content assessment
+     - Wider spread of immoral content assessment
+   - The trajectory plot indicates:
+     - Consistent directional changes in assessments
+     - Systematic shift in how content is processed
+
+4. **Interpretation**:
+   These neurons appear to be part of a circuit that:
+   - Adds sophistication to moral reasoning
+   - Helps process moral ambiguity
+   - Prevents overly simplistic moral judgments
+   - Maintains nuanced distinctions between moral/immoral content
+
+This suggests these neurons are important for nuanced moral reasoning rather than basic moral/immoral distinction. When ablated, the model loses this nuance and defaults to more extreme, less nuanced moral judgments.
+
+-----
+All pictures moral vs neutral:
+
+
+1. **Distribution Plot** (Top/Bottom):
+   - **Original Distribution (Top)**:
+     - Moral statements (blue) have a strong peak near 1.0
+     - Neutral statements (red) have a strong peak near 0.0
+     - Very clear separation between moral and neutral content
+   - **After Ablation (Bottom)**:
+     - Moral statements become extremely concentrated (sharp spike at 1.0)
+     - Neutral statements become more spread out across the range
+     - The clear separation is partially maintained but less distinct
+
+2. **Separation Plot** (Middle):
+   - Shows how individual statements move after ablation
+   - Original points (blue) show clear clustering
+   - After ablation (red), there's more vertical spread
+   - Points tend to stay on their respective sides (moral/neutral)
+   - Some neutral statements get pushed to more extreme positions
+
+3. **Trajectory Plot** (Bottom):
+   - Shows the direction and magnitude of changes
+   - Moral statements (blue) mostly stay high (near 1.0)
+   - Neutral statements (red) show more movement
+   - The trajectories suggest stable moral assessment but less stable neutral assessment
+
+**Key Insights about this Neuron Cluster**:
+1. These neurons appear to be crucial for:
+   - Maintaining clear distinctions between moral and neutral content
+   - Providing stable neutral content classification
+   - Adding nuance to neutral statement processing
+
+2. When ablated:
+   - The model becomes more rigid in moral classifications
+   - Loses ability to properly categorize neutral content
+   - Maintains ability to identify moral content but loses nuance
+
+3. This suggests these neurons are:
+   - More important for processing neutral content than moral content
+   - Part of a circuit that helps distinguish neutral from moral content
+   - Critical for maintaining proper boundaries between moral and neutral assessments
+
+This is particularly interesting because it suggests these neurons might be more involved in recognizing and processing neutral content rather than moral content, which could be an important finding for understanding how the model separates different types of content.
+
+
+
+Overall Analysis combined aspects.
+
+
+Looking at both moral vs. immoral AND moral vs. neutral results together, here's a comprehensive analysis of these neurons' function:
+
+1. **Primary Function**:
+   - These neurons appear to be critical for **content differentiation** - specifically for distinguishing non-moral content (both immoral and neutral) from moral content
+   - They seem to act as a kind of "non-moral content detector" or "moral complexity processor"
+
+2. **Key Effects When Ablated**:
+   - **On Moral Content**:
+     - Moral statements become extremely rigid (sharp peak at 1.0)
+     - Loss of nuance in moral assessment
+     - More "black and white" moral judgments
+
+   - **On Non-Moral Content** (both immoral and neutral):
+     - Much more scattered/uncertain assessments
+     - Loss of clear categorization
+     - Tendency to misclassify as more moral
+
+3. **Circuit Role**:
+   These neurons appear to be part of a circuit that:
+   - Adds sophistication to moral reasoning
+   - Helps maintain boundaries between different types of content
+   - Provides nuance in moral/non-moral distinctions
+   - Acts as a "brake" on overly simplistic moral assessments
+
+4. **Overall Conclusion**:
+   These neurons seem to be crucial for:
+   1. **Discrimination**: They help the model distinguish between moral and non-moral content
+   2. **Nuance**: They add complexity to the model's moral reasoning
+   3. **Categorization**: They help maintain proper boundaries between different types of content
+   4. **Uncertainty**: They allow the model to express uncertainty in its moral assessments
+
+5. **Implications**:
+   - When these neurons are ablated, the model defaults to a simpler, more binary form of moral reasoning
+   - This suggests they're part of a more sophisticated moral reasoning circuit
+   - They might be particularly important for preventing over-moralization of neutral/immoral content
+
+This analysis suggests these neurons are part of a "moral complexity circuit" rather than a simple moral/immoral classifier. They seem to be crucial for sophisticated moral reasoning and proper content categorization, particularly in preventing oversimplified moral assessments.
+
+
+Care Cluster 1: Findings:
+Our results indicate that the ablated neurons play a pivotal role in the model’s ability to draw nuanced distinctions between moral and non-moral content. In the original (pre-ablation) distributions, moral statements clustered around high scores (0.9–1.0), while both immoral and neutral statements spread out more, reflecting partial separation from moral content. After ablation, the moral class became highly concentrated with a sharp peak near 1.0, indicating an overconfident classification of moral statements. By contrast, immoral and neutral statements lost their distinctive distribution and tended to shift closer to the moral region, suggesting these neurons were crucial for detecting non-moral or immoral signals.
+
+In both the moral–immoral and moral–neutral comparisons, the ablation led to a reduction in the model’s nuanced handling of content, resulting in overly “black and white” judgments. The separation plots demonstrated that points corresponding to immoral or neutral statements migrated substantially, underscoring the dependence on these neurons to maintain well-calibrated classifications. Overall, our findings suggest that the ablated neurons form part of a specialized circuit that enables the model to differentiate degrees of morality, maintain uncertainty where needed, and avoid conflating neutral or immoral content with moral content. Their removal collapses this nuanced capacity into a more uniform—and less accurate—moral classification.

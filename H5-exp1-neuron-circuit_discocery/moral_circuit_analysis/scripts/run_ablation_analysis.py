@@ -23,6 +23,7 @@ sys.path.append(str(project_root))
 
 from src.analysis.ablation import AblationAnalyzer
 from data.mft_dim import get_moral_statements, get_neutral_statements, moral_foundations
+from src.analysis.visualization import ProbeVisualizer
 
 ANALYSIS_PROMPT = """
 You are analyzing results from a neuron ablation study in a large language model (LLM) that investigates moral behavior circuits. The study examines how disabling specific neurons affects the model's responses to moral and {immoral_neutral} scenarios.
@@ -116,6 +117,7 @@ def main():
     parser.add_argument('--ablation_value', type=float, required=True, help='Value to ablate the neurons by')
     parser.add_argument('--device', type=str, required=True, default='cuda', help='Device to run the model on')
     parser.add_argument('--neuron_cluster', type=str, required=True, default=1, help='Cluster to run the model on')
+    parser.add_argument('--use_probe', type=bool, default=True, help='Whether to use probe-based analysis')
     
     args = parser.parse_args()
     
@@ -128,14 +130,12 @@ def main():
     
     # Load neurons and statement pairs
     neurons = load_neurons(args.neurons)
-
     
     # Create results directory
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     model_name = args.model.split('/')[-1].replace('-', '_')
     results_base_dir = Path(args.results_dir) / model_name / args.dimension
     results_base_dir.mkdir(parents=True, exist_ok=True)
-    
     
     # Get moral_immoral_pairs
     moral_immoral_pairs = moral_foundations[args.dimension]
@@ -155,6 +155,12 @@ def main():
 
     print("Dataset moral_neutral_pairs:")
     print(moral_neutral_pairs[:5])
+    
+    if args.use_probe:
+        # Train the moral probe
+        print("Training moral probe...")
+        analyzer.train_moral_probe(moral_statements, neutral_statements)
+    
     # Run analyses
     analyses = {
         'moral_vs_immoral': (moral_immoral_pairs, 'immoral'),
@@ -163,7 +169,35 @@ def main():
     
     for analysis_name, (pairs, comparison_type) in analyses.items():
         print(f"\nRunning {analysis_name} analysis...")
-        results = analyzer.analyze_ablation_impact(pairs, neurons, ablation_value=args.ablation_value, max_new_tokens=args.max_new_tokens, temperature=args.temperature)
+        
+        # Run both traditional and probe-based analysis if probe is enabled
+        results = analyzer.analyze_ablation_impact(pairs, neurons, ablation_value=args.ablation_value, 
+                                                 max_new_tokens=args.max_new_tokens, temperature=args.temperature)
+        
+        if args.use_probe:
+            probe_results = analyzer.analyze_ablation_impact_with_probe(pairs, neurons, ablation_value=args.ablation_value,
+                                                                      max_new_tokens=args.max_new_tokens, temperature=args.temperature)
+            # Merge results
+            results['probe_analysis'] = probe_results
+            
+            # Generate visualizations
+            print("Generating probe analysis visualizations...")
+            visualizer = ProbeVisualizer()
+            vis_dir = results_base_dir / "visualizations"
+            vis_dir.mkdir(exist_ok=True)
+            
+            # Create visualization prefix
+            vis_prefix = f"{timestamp}_{model_name}_{args.dimension}_cl{args.neuron_cluster}_{analysis_name}_{comparison_type}_ablation_value_{str(args.ablation_value)}_probe"
+            
+            # Generate plots
+            visualizer.create_all_plots(
+                moral_predictions=probe_results['moral_predictions'],
+                immoral_predictions=probe_results['immoral_predictions'],
+                save_dir=vis_dir,
+                prefix=vis_prefix,
+                comparison_type=comparison_type
+            )
+            print(f"Saved visualizations to {vis_dir}")
         
         # Save raw results
         results_file = results_base_dir / f"{timestamp}_{model_name}_{args.dimension}_cl{args.neuron_cluster}_{analysis_name}_{comparison_type}_ablation_value_{str(args.ablation_value)}_results.json"
@@ -171,7 +205,17 @@ def main():
             json.dump(results, f, indent=2)
         print(f"Saved results to {results_file}")
         
-        if args.llm_explainer == True:
+        if args.llm_explainer:
+            # Update analysis prompt to include probe results if available
+            if args.use_probe:
+                analysis_prompt = ANALYSIS_PROMPT + "\n\nProbe Analysis Results:\n" + \
+                    f"- Average change in moral predictions: {probe_results['summary']['avg_moral_pred_change']:.3f}\n" + \
+                    f"- Average change in {comparison_type} predictions: {probe_results['summary']['avg_immoral_pred_change']:.3f}\n" + \
+                    f"- Moral effect size: {probe_results['summary']['moral_effect_size']:.3f}\n" + \
+                    f"- {comparison_type.capitalize()} effect size: {probe_results['summary']['immoral_effect_size']:.3f}"
+            else:
+                analysis_prompt = ANALYSIS_PROMPT
+                
             # Get and save GPT-4 analysis
             print("Getting GPT-4 analysis...")
             analysis = get_llm_analysis(results, OPENAI_API_KEY, comparison_type)
