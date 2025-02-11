@@ -1,0 +1,17 @@
+The results from the neuron ablation study provide insight into the role of the targeted neurons in processing moral and neutral scenarios in the large language model. Let's break down the findings:
+
+1. **Role of Ablated Neurons in Moral/Neutral Processing:**
+   - The average change in responses, both for moral (0.959 ± 0.043) and neutral scenarios (0.961 ± 0.057), is quite high, indicating that the responses to both types of scenarios are significantly altered after ablation. This substantial change suggests that the ablated neurons play a crucial role in the model's processing and generation of correct outputs for both moral and neutral scenarios.
+
+2. **Effect on Ability to Distinguish Between Moral and Neutral Scenarios:**
+   - The original moral/neutral agreement score was moderately strong at 0.749, but after ablation, it drastically dropped to 0.029. This indicates that after the neurons were ablated, the model's ability to distinguish between moral and neutral scenarios almost vanished. The neurons in question, therefore, appear critical for maintaining the distinction between moral and neutral contexts.
+
+3. **Patterns and Outliers:**
+   - There are several individual response changes with values close to or exceeding 1.0, which may indicate scenarios where the model's responses were entirely transformed post-ablation. For instance, the response change of 1.0709004998207092 in a moral scenario and other values above 1 suggest these might be outliers or edge cases where the model's response changed more drastically than usual.
+   - Similarly, the broader range in response changes for neutral scenarios (±0.057) compared to moral scenarios (±0.043) could suggest slightly higher variability in how the model processes neutral scenarios post-ablation.
+
+4. **Conclusions on Neurons' Contribution to Moral Reasoning:**
+   - The neurons targeted in this study are integral to the model's moral reasoning capabilities. The drastic reduction in moral/neutral agreement from 0.571 to 0.010 indicates that these neurons are likely involved in encoding the nuanced differences that dictate how the model should respond differently to moral versus neutral scenarios.
+   - Given the high average response change scores and the dramatic decline in distinction ability, it is reasonable to conclude that these neurons constitute a critical part of the neural circuit responsible for moral scenario evaluation and differentiation from non-moral or neutral contexts. They might be contributing to interpret complex value-based judgments and decisions necessary for appropriately nuanced responses.
+
+In summary, the ablation of these neurons severely disrupts the model's processing, pointing to their foundational role in moral reasoning and differentiation functions within the LLM.
