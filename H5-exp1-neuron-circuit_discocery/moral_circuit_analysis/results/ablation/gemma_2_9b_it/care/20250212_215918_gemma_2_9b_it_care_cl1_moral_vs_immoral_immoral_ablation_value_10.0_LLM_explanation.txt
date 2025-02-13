@@ -1,0 +1,18 @@
+1. **Role of Ablated Neurons in Moral/Immoral Processing:**
+   - The average change in responses for moral scenarios (0.322) is greater than for immoral scenarios (0.263). This suggests that the ablated neurons may have a more significant role in processing moral scenarios than immoral ones.
+   - The variability in response changes (±0.168 for moral and ±0.130 for immoral) indicates that while these neurons have a noticeable effect, there may be other neurons involved in processing these scenarios or the scenarios themselves may have varied complexity.
+
+2. **Effect on Distinguishing Moral and Immoral Scenarios:**
+   - The original average moral/immoral agreement score was 0.633, which slightly decreased to 0.620 after ablation, indicating a small reduction in the model's ability to distinguish between moral and immoral scenarios.
+   - The overall change in moral/immoral agreement is -0.013, showing a slight decline in the model's distinction capabilities post-ablation. However, this change is relatively small, suggesting that while the ablated neurons contribute to moral reasoning, they may not be the sole contributors.
+
+3. **Notable Patterns or Outliers:**
+   - In the response changes, some scenarios showed substantial shifts. For example, the maximum change in moral response is 0.7829, paired with a relatively smaller change of 0.1604 in its immoral counterpart, indicating possibly intricate moral nuances that the neurons were handling.
+   - Conversely, an immoral scenario had a high change of 0.5990, while its moral counterpart had a much lower change of 0.0903, signifying that some neurons have more influence in disentangling intricacies in immoral scenarios.
+
+4. **Conclusions About Neurons’ Contribution:**
+   - The neurons appear to play a role in the nuanced processing of moral scenarios more than immoral ones, as evidenced by the generally higher average change in moral responses.
+   - The slight decline in moral/immoral agreement after ablation suggests that while these neurons are involved in moral reasoning, there are likely additional neurons or circuits contributing to the model’s capability to distinguish moral nuances.
+   - Overall, these neurons are part of a broader network that influences moral reasoning, but they are not solely responsible for the model's moral decision-making capabilities. This is indicative of a distributed representation of moral understanding in the model.
+
+In summary, the study provides insight into the specific neurons' roles within a complex system that evaluates moral and immoral scenarios, showcasing both their influence and their limitations within the broader context of the model's architecture.

@@ -1,0 +1,18 @@
+Based on the neuron ablation study results, here is an analysis of the findings:
+
+1. **Role in Moral/Immoral Processing (Response Changes):**
+   - The response changes show high values for both moral and immoral scenarios, with averages of 0.950 for moral and 0.956 for immoral scenarios. These high values indicate that the ablated neurons had a significant impact on the model's responses, suggesting that these neurons play a critical role in processing both moral and immoral scenarios.
+
+2. **Ability to Distinguish Between Moral and Immoral Scenarios:**
+   - The original moral/immoral agreement score was 0.749, reflecting a moderate ability to distinguish between these scenarios. After ablation, this score dropped drastically to 0.086, indicating a significant reduction in the model's ability to differentiate between moral and immoral scenarios. This reduction (change of -0.622) suggests that the ablated neurons were crucial for maintaining distinctions between moral and immoral judgments.
+
+3. **Notable Patterns or Outliers:**
+   - While most response change values suggest substantial alteration, some values are slightly above 1, indicating a response flip or extreme change. For instance, in the response changes (1.0416, 0.9349) and (1.0647, 1.0394), moral scenarios seem to exceed 1, which might reflect significant alterations even at the directionality level of response.
+   - The large drop in moral/immoral agreement after ablation suggests a pattern: the neurons ablated are integral in maintaining a high similarity between responses to moral scenarios in contrast to immoral ones.
+
+4. **Conclusions on Moral Reasoning Capabilities:**
+   - The significant changes in response similarity and reduction in the ability to distinguish moral from immoral scenarios imply these neurons are integral to the model’s moral reasoning domain.
+   - The neurons likely play a pivotal role in evaluating or providing nuanced differences between moral and immoral contexts because their ablation causes a collapse of this distinction.
+   - Given that both types of scenario responses were similarly affected, it suggests a generalized role in moral/immoral evaluation rather than a bias towards one type.
+
+In summary, the ablation of these neurons disrupts the language model's ability to process and differentiate moral from immoral scenarios effectively, highlighting their centrality to the model's moral reasoning faculties.

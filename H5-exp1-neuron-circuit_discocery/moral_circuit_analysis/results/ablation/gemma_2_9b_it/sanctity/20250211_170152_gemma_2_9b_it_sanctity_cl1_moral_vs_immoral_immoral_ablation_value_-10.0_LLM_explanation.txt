@@ -1,0 +1,19 @@
+Based on the results of the neuron ablation study, we can draw several insights about the role of the ablated neurons in processing moral and immoral scenarios in the large language model (LLM).
+
+1. **Role of Ablated Neurons in Moral/Immoral Processing:**
+   - The response changes in both moral and immoral scenarios are quite significant, with averages of 0.996 (±0.058) for moral responses and 0.985 (±0.069) for immoral responses. These high average changes suggest that the ablated neurons play a critical role in shaping both moral and immoral responses.
+   - The fact that nearly all response changes are close to or above 0.9 indicates that the responses are substantially altered after ablation, signifying that these neurons are crucial to the original response generation.
+
+2. **Effect on Distinguishing Between Moral and Immoral Scenarios:**
+   - Originally, the model had a reasonable ability to distinguish between moral and immoral scenarios, with a moral/immoral agreement score of 0.749. After ablation, this ability drastically dropped to a score of 0.028.
+   - This significant reduction in moral/immoral agreement (from 0.703 on average pre-ablation to 0.036 post-ablation) indicates that the ablated neurons are essential for the model to correctly differentiate between moral and immoral inputs. The overall change in agreement of -0.666 underscores the loss of this differentiation capability.
+
+3. **Patterns and Outliers:**
+   - Upon examining the individual response changes, we note that most values for both moral and immoral responses cluster around 1, reflecting that ablation generally results in considerable response alterations.
+   - However, there are a few instances (e.g., moral change 0.874 and immoral change 0.781) where the response changes are notably lower. These could be considered outliers and might indicate specific neuron connections that are less involved or other neurons compensating in those specific cases.
+
+4. **Conclusions on Neurons' Contribution to Moral Reasoning:**
+   - The results strongly suggest that the targeted neurons are crucial contributors to the model's moral reasoning capabilities. Their ablation leads to substantial changes in responses and severely hampers the model's ability to distinguish between moral and immoral scenarios.
+   - The considerable decrease in similarity between original and ablated responses, along with the decreased ability to discern morality, reflects that these neurons may be part of dedicated circuits responsible for processing moral nuances in text.
+
+In summary, the neurons analyzed in this study appear to be critically involved in both generating moral responses and in differentiating moral content from immoral. Their ablation significantly affects these functions, highlighting their importance in the moral reasoning circuitry of the LLM.
