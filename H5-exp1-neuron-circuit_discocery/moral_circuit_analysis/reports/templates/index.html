@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Models - Moral Circuit Analysis{% endblock %}
+
+{% block breadcrumb %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active">Models</li>
+    </ol>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1>Available Models</h1>
+        <p class="lead">Select a model to view its moral circuit analysis results.</p>
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for model in models %}
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ model }}</h5>
+                        <p class="card-text">
+                            <i class="fas fa-brain"></i> Neural Network Model<br>
+                            <i class="fas fa-folder"></i> Contains analysis results
+                        </p>
+                        <a href="{{ url_for('model_overview', model_name=model) }}" class="btn btn-primary">
+                            View Results
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %} 

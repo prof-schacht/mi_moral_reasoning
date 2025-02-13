@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}{{ model_name }} - Moral Circuit Analysis{% endblock %}
+
+{% block breadcrumb %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Models</a></li>
+        <li class="breadcrumb-item active">{{ model_name }}</li>
+    </ol>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1>{{ model_name }}</h1>
+        <p class="lead">Select a moral dimension to view detailed analysis results.</p>
+
+        {% if dimensions %}
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for dimension in dimensions %}
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-capitalize">{{ dimension }}</h5>
+                        <p class="card-text">
+                            <i class="fas fa-microscope"></i> Neuron Analysis<br>
+                            <i class="fas fa-chart-line"></i> Ablation Studies<br>
+                            <i class="fas fa-file-alt"></i> LLM Explanations
+                        </p>
+                        <a href="{{ url_for('dimension_results', model_name=model_name, dimension=dimension) }}" 
+                           class="btn btn-primary">View Analysis</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="alert alert-info">
+            <h4 class="alert-heading"><i class="fas fa-info-circle"></i> No Dimensions Found</h4>
+            <p>No moral dimensions have been analyzed for this model yet. This could mean:</p>
+            <ul>
+                <li>The analysis is still in progress</li>
+                <li>The results directory structure is not as expected</li>
+                <li>The analysis hasn't been run for this model</li>
+            </ul>
+            <p>Expected directory structure:</p>
+            <pre class="mb-0"><code>results/{{ model_name }}/
+├── ablation/
+│   └── [dimension]/
+└── neuron_describer_logs/
+    └── [dimension]/</code></pre>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %} 
