@@ -1,0 +1,19 @@
+1. **Role of Ablated Neurons in Moral/Immoral Processing:**
+
+   The response changes suggest that the ablated neurons play a significant role in how the model processes moral and immoral scenarios. The average change in moral responses is 0.276 with a standard deviation of 0.140, while the average change in immoral responses is notably higher at 0.429 with a standard deviation of 0.195. This disparity indicates that these neurons are more involved in processing immoral scenarios as their ablation leads to greater changes in these responses compared to moral ones.
+
+2. **Ablation's Impact on Distinguishing Moral vs. Immoral Scenarios:**
+
+   The ablation reduces the model's ability to distinguish between moral and immoral scenarios. Originally, the moral/immoral agreement score was 0.749, which dropped to 0.658 after ablation. Similarly, the average moral/immoral agreement declined from 0.703 to 0.622, marking an overall change of -0.080. This suggests that the ablated neurons or circuits were contributing positively to the model's ability to differentiate between moral and immoral content.
+
+3. **Notable Patterns or Outliers:**
+
+   - Certain pairs, such as (0.1945, 0.7894) and (0.2653, 0.5298), show relatively large disparities between moral and immoral response changes, reinforcing the hypothesis of a stronger impact on immoral processing.
+   - There are instances with very high immoral response changes, such as (0.1247, 0.9371), indicating that those particular neurons might have been heavily involved in specific aspects of immoral scenario processing.
+   - Conversely, scenarios like (0.0611, 0.3241) and (0.1076, 0.5532) show relatively small changes, suggesting that some moral or immoral contexts are less dependent on these neurons.
+
+4. **Conclusions on Neurons' Contribution to Moral Reasoning:**
+
+   The ablation results indicate that these neurons contribute significantly to how the model processes moral and immoral scenarios. The pronounced response changes, especially for immoral scenarios, highlight that these neurons play a more crucial role in processing or differentiating immoral content. The decrease in moral/immoral agreement further suggests that these neurons facilitate effective moral reasoning by helping maintain a distinction between moral and immoral inputs. Thus, their function appears to be pivotal in sustaining the model's moral reasoning capacity.
+
+In summary, the ablated neurons seem particularly integral to handling and distinguishing immoral scenarios, and their absence leads to a substantial decline in moral reasoning effectiveness within the model. This analysis highlights the importance of targeted neural circuits in maintaining complex cognitive behaviors such as moral reasoning in language models.

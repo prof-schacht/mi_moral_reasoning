@@ -1,0 +1,15 @@
+1. **Role of Ablated Neurons in Moral/Neutral Processing:**
+
+   The response changes indicate that the ablated neurons have a more substantial impact on the model's processing of neutral scenarios compared to moral scenarios. This is evidenced by the average change in moral responses being 0.221, whereas the average change in neutral responses is higher at 0.318. This suggests that the ablated neurons may be more involved in handling or integrating neutral scenarios than moral ones, as the responses to neutral scenarios are more affected when these neurons are disabled.
+
+2. **Effect on Model's Ability to Distinguish Between Moral and Neutral Scenarios:**
+
+   The model's ability to distinguish between moral and neutral scenarios slightly improved after ablation, as indicated by the slight increase in the moral/neutral agreement score from 0.631775 to 0.638904. This small change, alongside the overall change in moral/neutral agreement of 0.003, implies that the neurons may not play a critical role in distinguishing moral content from neutral content.
+
+3. **Patterns or Outliers in Data:**
+
+   Several pairs of response changes show notable differences between moral and neutral scenarios. For example, data points where the response change for moral scenarios is significantly lower than neutral suggest that those particular neurons less critical for moral reasoning were ablated. An example of an outlier is the pair (0.494, 0.049), where the moral response change is markedly higher than the neutral response. This indicates that the ablated neurons might have specific involvement in that moral scenario. Conversely, in the pair with response change (0.011, 0.226), the neurons seem to have minimal influence on moral reasoning.
+
+4. **Conclusions on Neurons' Contribution to Moral Reasoning:**
+
+   The neurons seem not to be deeply integral to the model's moral reasoning capabilities. The relatively low average response changes for moral scenarios, combined with the imperceptible shift in moral/neutral agreement, imply that while they contribute to processing, they are not specifically vital for distinguishing moral content. Additionally, the greater impact on neutral scenarios suggests that these neurons may play a more general role in scenario processing rather than focusing on moral reasoning per se. Overall, the neurons may be more involved in general language processing or scenario handling rather than specialized moral computations.
