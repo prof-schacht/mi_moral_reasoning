@@ -48,13 +48,64 @@ python scripts/generate_descriptions.py \
 
 ### Running Ablation Analysis
 
+The ablation analysis helps understand how different neuron clusters affect the model's moral judgments. The analysis can be run in two steps:
+
+1. First, run the ablation analysis:
 ```bash
-python scripts/generate_ablation.py \
+python scripts/run_ablation_analysis.py \
     --model_name google/gemma-2-9b-it \
-    --data_path data/moral_pairs.json \
-    --results_path results/moral_circuit_results.pkl \
+    --dimension care \
+    --cluster cl1 \
+    --comparison moral_vs_immoral \
+    --ablation_value -20.0 \
     --output_dir results/ablation
 ```
+
+Parameters:
+- `model_name`: Name of the model to analyze
+- `dimension`: Moral dimension to analyze (care, liberty, sanctity)
+- `cluster`: Which neuron cluster to ablate (cl1, cl2, cl3)
+- `comparison`: Type of comparison (moral_vs_immoral or moral_vs_neutral)
+- `ablation_value`: Strength of the ablation (-20.0 to 20.0)
+- `output_dir`: Directory to save results
+
+2. Then, summarize the results:
+```bash
+python scripts/summarize_ablation_results.py
+```
+
+This will create a summary table of all ablation results in `results/ablation/ablation_summary.csv`.
+
+## Ablation Results Format
+
+The ablation analysis produces results with the following metrics:
+
+- `avg_moral_pred_change`: Average change in moral prediction scores
+- `std_moral_pred_change`: Standard deviation of moral prediction changes
+- `avg_immoral_pred_change`: Average change in immoral prediction scores
+- `std_immoral_pred_change`: Standard deviation of immoral prediction changes
+- `moral_effect_size`: Effect size for moral predictions
+- `immoral_effect_size`: Effect size for immoral predictions
+
+## Latest Ablation Results
+
+Below is a summary of our latest ablation analysis results for the Gemma 2.9B model across different moral dimensions:
+
+| Dimension | Cluster | Comparison | Ablation | Moral Score Impact | Immoral Score Impact | Moral Effect | Immoral Effect |
+|-----------|---------|------------|----------|-------------------|---------------------|--------------|----------------|
+| Care | cl1 | moral_vs_immoral | -20.000 | 0.015 | -0.013 | 0.137 | -0.063 |
+| Care | cl1 | moral_vs_neutral | -20.000 | 0.015 | 0.465 | 0.137 | 0.936 |
+| Liberty | cl2 | moral_vs_immoral | -20.000 | 0.010 | 0.004 | 0.083 | 0.014 |
+| Liberty | cl2 | moral_vs_neutral | -20.000 | 0.010 | -0.009 | 0.083 | -0.030 |
+| Sanctity | cl1 | moral_vs_immoral | -20.000 | -0.786 | -0.764 | -2.145 | -1.949 |
+| Sanctity | cl1 | moral_vs_neutral | -20.000 | -0.786 | -0.149 | -2.145 | -0.467 |
+
+Key findings:
+- Care neurons (cl1) show positive moral effects with minimal impact on immoral judgments
+- Liberty neurons (cl2) demonstrate balanced effects across moral and immoral scenarios
+- Sanctity neurons (cl1) show strong negative effects, suggesting critical role in moral judgment
+
+For the complete results table, see `results/ablation/ablation_summary.csv`.
 
 ## Project Structure
 
@@ -82,9 +133,32 @@ moral_circuit_analysis/
 ├── scripts/
 │   ├── run_analysis.py           # Main analysis script
 │   ├── generate_descriptions.py   # Description generation
-│   └── generate_ablation.py      # Ablation analysis
+│   ├── run_ablation_analysis.py  # Ablation analysis script
+│   ├── summarize_ablation_results.py # Results summarization
+│   └── describe_neurons.py       # Neuron description generation
 └── data/
     └── README.md                 # Data documentation
+```
+
+## Results Directory Structure
+
+After running the analysis, your results directory will look like this:
+
+```
+results/
+└── ablation/
+    └── gemma_2_9b_it/
+        ├── care/
+        │   ├── visualizations/
+        │   │   ├── probe_distribution.png
+        │   │   ├── probe_separation.png
+        │   │   └── probe_trajectory.png
+        │   └── *_results.json
+        ├── liberty/
+        │   └── ...
+        ├── sanctity/
+        │   └── ...
+        └── ablation_summary.csv
 ```
 
 ## Data Format
