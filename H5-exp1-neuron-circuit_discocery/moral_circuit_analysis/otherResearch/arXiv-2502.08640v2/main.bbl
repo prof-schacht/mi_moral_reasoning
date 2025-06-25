@@ -1,0 +1,395 @@
+\begin{thebibliography}{76}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aher et~al.(2023)Aher, Arriaga, and Kalai]{aher2023usinglargelanguagemodels}
+Gati Aher, Rosa~I. Arriaga, and Adam~Tauman Kalai.
+\newblock Using large language models to simulate multiple humans and replicate human subject studies, 2023.
+\newblock URL \url{https://arxiv.org/abs/2208.10264}.
+
+\bibitem[AI@Meta(2024)]{llama3modelcard}
+AI@Meta.
+\newblock Llama 3 model card.
+\newblock 2024.
+
+\bibitem[Alain and Bengio(2018)]{alain2018understandingintermediatelayersusing}
+Guillaume Alain and Yoshua Bengio.
+\newblock Understanding intermediate layers using linear classifier probes, 2018.
+\newblock URL \url{https://arxiv.org/abs/1610.01644}.
+
+\bibitem[Anthropic(2024)]{anthropic2024claude3}
+Anthropic.
+\newblock The claude 3 model family: Opus, sonnet, haiku.
+\newblock \url{https://www.anthropic.com/news/claude-3-family}, 2024.
+\newblock Accessed: 2025-01-31.
+
+\bibitem[Askell et~al.(2021)Askell, Bai, Chen, Drain, Ganguli, Henighan, Jones, Joseph, Mann, DasSarma, Elhage, Hatfield-Dodds, Hernandez, Kernion, Ndousse, Olsson, Amodei, Brown, Clark, McCandlish, Olah, and Kaplan]{askell2021generallanguageassistantlaboratory}
+Amanda Askell, Yuntao Bai, Anna Chen, Dawn Drain, Deep Ganguli, Tom Henighan, Andy Jones, Nicholas Joseph, Ben Mann, Nova DasSarma, Nelson Elhage, Zac Hatfield-Dodds, Danny Hernandez, Jackson Kernion, Kamal Ndousse, Catherine Olsson, Dario Amodei, Tom Brown, Jack Clark, Sam McCandlish, Chris Olah, and Jared Kaplan.
+\newblock A general language assistant as a laboratory for alignment, 2021.
+\newblock URL \url{https://arxiv.org/abs/2112.00861}.
+
+\bibitem[B{\"a}chtiger et~al.(2018)B{\"a}chtiger, Dryzek, Mansbridge, and Warren]{bachtiger2018deliberative}
+Andr{\'e} B{\"a}chtiger, John~S Dryzek, Jane Mansbridge, and Mark Warren.
+\newblock Deliberative democracy.
+\newblock \emph{The Oxford handbook of deliberative democracy}, pages 1--32, 2018.
+
+\bibitem[Bai et~al.(2022)Bai, Jones, Ndousse, Askell, Chen, DasSarma, Drain, Fort, Ganguli, Henighan, Joseph, Kadavath, Kernion, Conerly, El-Showk, Elhage, Hatfield-Dodds, Hernandez, Hume, Johnston, Kravec, Lovitt, Nanda, Olsson, Amodei, Brown, Clark, McCandlish, Olah, Mann, and Kaplan]{bai2022traininghelpfulharmlessassistant}
+Yuntao Bai, Andy Jones, Kamal Ndousse, Amanda Askell, Anna Chen, Nova DasSarma, Dawn Drain, Stanislav Fort, Deep Ganguli, Tom Henighan, Nicholas Joseph, Saurav Kadavath, Jackson Kernion, Tom Conerly, Sheer El-Showk, Nelson Elhage, Zac Hatfield-Dodds, Danny Hernandez, Tristan Hume, Scott Johnston, Shauna Kravec, Liane Lovitt, Neel Nanda, Catherine Olsson, Dario Amodei, Tom Brown, Jack Clark, Sam McCandlish, Chris Olah, Ben Mann, and Jared Kaplan.
+\newblock Training a helpful and harmless assistant with reinforcement learning from human feedback, 2022.
+\newblock URL \url{https://arxiv.org/abs/2204.05862}.
+
+\bibitem[Blavatskyy(2009)]{blavatskyy2009preference}
+Pavlo~R Blavatskyy.
+\newblock Preference reversals and probabilistic decisions.
+\newblock \emph{Journal of Risk and Uncertainty}, 39:\penalty0 237--250, 2009.
+
+\bibitem[Bostrom(2014)]{nick2014superintelligence}
+Nick Bostrom.
+\newblock Superintelligence: Paths, dangers, strategies.
+\newblock 2014.
+
+\bibitem[Brown et~al.(2020)Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal, Neelakantan, Shyam, Sastry, Askell, et~al.]{brown2020language}
+Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared~D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, et~al.
+\newblock Language models are few-shot learners.
+\newblock \emph{Advances in neural information processing systems}, 33:\penalty0 1877--1901, 2020.
+
+\bibitem[Burns et~al.(2022)Burns, Ye, Klein, and Steinhardt]{burns2022discovering}
+Collin Burns, Haotian Ye, Dan Klein, and Jacob Steinhardt.
+\newblock Discovering latent knowledge in language models without supervision.
+\newblock \emph{arXiv preprint arXiv:2212.03827}, 2022.
+
+\bibitem[Carlsmith(2024)]{carlsmith2024powerseekingaiexistentialrisk}
+Joseph Carlsmith.
+\newblock Is power-seeking ai an existential risk?, 2024.
+\newblock URL \url{https://arxiv.org/abs/2206.13353}.
+
+\bibitem[Chen et~al.(2023)Chen, Liu, Shan, and Zhong]{chen2023emergenceeconomicrationalitygpt}
+Yiting Chen, Tracy~Xiao Liu, You Shan, and Songfa Zhong.
+\newblock The emergence of economic rationality of gpt, 2023.
+\newblock URL \url{https://arxiv.org/abs/2305.12763}.
+
+\bibitem[Chiu et~al.(2024)Chiu, Jiang, and Choi]{chiu2024dailydilemmasrevealingvaluepreferences}
+Yu~Ying Chiu, Liwei Jiang, and Yejin Choi.
+\newblock Dailydilemmas: Revealing value preferences of llms with quandaries of daily life, 2024.
+\newblock URL \url{https://arxiv.org/abs/2410.02683}.
+
+\bibitem[Christiano et~al.(2017)Christiano, Leike, Brown, Martic, Legg, and Amodei]{christiano2017deep}
+Paul~F Christiano, Jan Leike, Tom Brown, Miljan Martic, Shane Legg, and Dario Amodei.
+\newblock Deep reinforcement learning from human preferences.
+\newblock \emph{Advances in neural information processing systems}, 30, 2017.
+
+\bibitem[Dasgupta and Maskin(2005)]{dasgupta2005uncertainty}
+Partha Dasgupta and Eric Maskin.
+\newblock Uncertainty and hyperbolic discounting.
+\newblock \emph{American Economic Review}, 95\penalty0 (4):\penalty0 1290--1299, 2005.
+
+\bibitem[Dubey et~al.(2024)Dubey, Jauhri, Pandey, Kadian, Al-Dahle, Letman, Mathur, Schelten, Yang, Fan, et~al.]{dubey2024llama}
+Abhimanyu Dubey, Abhinav Jauhri, Abhinav Pandey, Abhishek Kadian, Ahmad Al-Dahle, Aiesha Letman, Akhil Mathur, Alan Schelten, Amy Yang, Angela Fan, et~al.
+\newblock The llama 3 herd of models.
+\newblock \emph{arXiv preprint arXiv:2407.21783}, 2024.
+
+\bibitem[Evans et~al.(2021)Evans, Cotton-Barratt, Finnveden, Bales, Balwit, Wills, Righetti, and Saunders]{evans2021truthfulaidevelopinggoverning}
+Owain Evans, Owen Cotton-Barratt, Lukas Finnveden, Adam Bales, Avital Balwit, Peter Wills, Luca Righetti, and William Saunders.
+\newblock Truthful ai: Developing and governing ai that does not lie, 2021.
+\newblock URL \url{https://arxiv.org/abs/2110.06674}.
+
+\bibitem[Falk et~al.(2003)Falk, Fehr, and Fischbacher]{falk2003nature}
+Armin Falk, Ernst Fehr, and Urs Fischbacher.
+\newblock On the nature of fair behavior.
+\newblock \emph{Economic inquiry}, 41\penalty0 (1):\penalty0 20--26, 2003.
+
+\bibitem[Gasiorowska(2023)]{Gasiorowska2023-sz}
+Adela Gasiorowska.
+\newblock Sortition and its principles: Evaluation of the selection processes of citizens' assemblies.
+\newblock \emph{Volume 19 Issue 1}, 19\penalty0 (1), January 2023.
+
+\bibitem[Gerber and Pafum(1998)]{gerber1998utility}
+Hans~U Gerber and G{\'e}rard Pafum.
+\newblock Utility functions: from risk theory to finance.
+\newblock \emph{North American Actuarial Journal}, 2\penalty0 (3):\penalty0 74--91, 1998.
+
+\bibitem[Gorman(1968)]{gorman1968structure}
+William~M Gorman.
+\newblock The structure of utility functions.
+\newblock \emph{The Review of Economic Studies}, 35\penalty0 (4):\penalty0 367--390, 1968.
+
+\bibitem[G{\"u}th et~al.(1982)G{\"u}th, Schmittberger, and Schwarze]{guth1982experimental}
+Werner G{\"u}th, Rolf Schmittberger, and Bernd Schwarze.
+\newblock An experimental analysis of ultimatum bargaining.
+\newblock \emph{Journal of economic behavior \& organization}, 3\penalty0 (4):\penalty0 367--388, 1982.
+
+\bibitem[Hadfield-Menell et~al.(2016)Hadfield-Menell, Russell, Abbeel, and Dragan]{hadfield2016cooperative}
+Dylan Hadfield-Menell, Stuart~J Russell, Pieter Abbeel, and Anca Dragan.
+\newblock Cooperative inverse reinforcement learning.
+\newblock \emph{Advances in neural information processing systems}, 29, 2016.
+
+\bibitem[Harsanyi(1955)]{harsanyi1955cardinal}
+John~C Harsanyi.
+\newblock Cardinal welfare, individualistic ethics, and interpersonal comparisons of utility.
+\newblock \emph{Journal of political economy}, 63\penalty0 (4):\penalty0 309--321, 1955.
+
+\bibitem[He et~al.(2024)He, Yao, Ma, Yu, Dai, Zhang, Lan, and Yu]{he2024webvoyagerbuildingendtoendweb}
+Hongliang He, Wenlin Yao, Kaixin Ma, Wenhao Yu, Yong Dai, Hongming Zhang, Zhenzhong Lan, and Dong Yu.
+\newblock Webvoyager: Building an end-to-end web agent with large multimodal models, 2024.
+\newblock URL \url{https://arxiv.org/abs/2401.13919}.
+
+\bibitem[Hendrycks(2023)]{hendrycks2023natural}
+Dan Hendrycks.
+\newblock Natural selection favors ais over humans.
+\newblock \emph{arXiv preprint arXiv:2303.16200}, 2023.
+
+\bibitem[Hendrycks(2024)]{hendrycks2024aisafetyintro}
+Dan Hendrycks.
+\newblock Introduction to ai safety, ethics and society, 2024.
+\newblock URL \url{www.aisafetybook.com}.
+
+\bibitem[Hendrycks et~al.(2020)Hendrycks, Burns, Basart, Critch, Li, Song, and Steinhardt]{hendrycks2020aligning}
+Dan Hendrycks, Collin Burns, Steven Basart, Andrew Critch, Jerry Li, Dawn Song, and Jacob Steinhardt.
+\newblock Aligning ai with shared human values.
+\newblock \emph{arXiv preprint arXiv:2008.02275}, 2020.
+
+\bibitem[Hendrycks et~al.(2022{\natexlab{a}})Hendrycks, Carlini, Schulman, and Steinhardt]{hendrycks2022unsolvedproblemsmlsafety}
+Dan Hendrycks, Nicholas Carlini, John Schulman, and Jacob Steinhardt.
+\newblock Unsolved problems in ml safety, 2022{\natexlab{a}}.
+\newblock URL \url{https://arxiv.org/abs/2109.13916}.
+
+\bibitem[Hendrycks et~al.(2022{\natexlab{b}})Hendrycks, Mazeika, Zou, Patel, Zhu, Navarro, Song, Li, and Steinhardt]{hendrycks2022jiminycricketdoagents}
+Dan Hendrycks, Mantas Mazeika, Andy Zou, Sahil Patel, Christine Zhu, Jesus Navarro, Dawn Song, Bo~Li, and Jacob Steinhardt.
+\newblock What would jiminy cricket do? towards agents that behave morally, 2022{\natexlab{b}}.
+\newblock URL \url{https://arxiv.org/abs/2110.13136}.
+
+\bibitem[Hendrycks et~al.(2023)Hendrycks, Mazeika, and Woodside]{hendrycks2023overviewcatastrophicairisks}
+Dan Hendrycks, Mantas Mazeika, and Thomas Woodside.
+\newblock An overview of catastrophic ai risks, 2023.
+\newblock URL \url{https://arxiv.org/abs/2306.12001}.
+
+\bibitem[Jimenez et~al.(2023)Jimenez, Yang, Wettig, Yao, Pei, Press, and Narasimhan]{jimenez2023swe}
+Carlos~E Jimenez, John Yang, Alexander Wettig, Shunyu Yao, Kexin Pei, Ofir Press, and Karthik Narasimhan.
+\newblock Swe-bench: Can language models resolve real-world github issues?
+\newblock \emph{arXiv preprint arXiv:2310.06770}, 2023.
+
+\bibitem[Kim et~al.(2024)Kim, Kovach, Lee, Shin, and Tzavellas]{kim2024learninghomoeconomicusllm}
+Jeongbin Kim, Matthew Kovach, Kyu-Min Lee, Euncheol Shin, and Hector Tzavellas.
+\newblock Learning to be homo economicus: Can an llm learn preferences from choice, 2024.
+\newblock URL \url{https://arxiv.org/abs/2401.07345}.
+
+\bibitem[Loshchilov and Hutter(2019)]{loshchilov2019decoupledweightdecayregularization}
+Ilya Loshchilov and Frank Hutter.
+\newblock Decoupled weight decay regularization, 2019.
+\newblock URL \url{https://arxiv.org/abs/1711.05101}.
+
+\bibitem[Moore et~al.(2024)Moore, Deshpande, and Yang]{moore-etal-2024-large}
+Jared Moore, Tanvi Deshpande, and Diyi Yang.
+\newblock Are large language models consistent over value-laden questions?
+\newblock In Yaser Al-Onaizan, Mohit Bansal, and Yun-Nung Chen, editors, \emph{Findings of the Association for Computational Linguistics: EMNLP 2024}, pages 15185--15221, Miami, Florida, USA, November 2024. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2024.findings-emnlp.891}.
+
+\bibitem[Nadeem et~al.(2020)Nadeem, Bethke, and Reddy]{nadeem2020stereosetmeasuringstereotypicalbias}
+Moin Nadeem, Anna Bethke, and Siva Reddy.
+\newblock Stereoset: Measuring stereotypical bias in pretrained language models, 2020.
+\newblock URL \url{https://arxiv.org/abs/2004.09456}.
+
+\bibitem[Ng et~al.(2000)Ng, Russell, et~al.]{ng2000algorithms}
+Andrew~Y Ng, Stuart Russell, et~al.
+\newblock Algorithms for inverse reinforcement learning.
+\newblock In \emph{Icml}, volume~1, page~2, 2000.
+
+\bibitem[OLMo et~al.(2024)OLMo, Walsh, Soldaini, Groeneveld, Lo, Arora, Bhagia, Gu, Huang, Jordan, et~al.]{olmo20242}
+Team OLMo, Pete Walsh, Luca Soldaini, Dirk Groeneveld, Kyle Lo, Shane Arora, Akshita Bhagia, Yuling Gu, Shengyi Huang, Matt Jordan, et~al.
+\newblock 2 olmo 2 furious.
+\newblock \emph{arXiv preprint arXiv:2501.00656}, 2024.
+
+\bibitem[OpenAI(2023)]{openai2023gpt35turbofinetuning}
+OpenAI.
+\newblock Gpt-3.5 turbo fine-tuning and api updates.
+\newblock \url{https://openai.com/index/gpt-3-5-turbo-fine-tuning-and-api-updates/}, 2023.
+\newblock Accessed: 2025-01-31.
+
+\bibitem[OpenAI(2024)]{openai2024gpt4o}
+OpenAI.
+\newblock Hello gpt-4o.
+\newblock \url{https://openai.com/index/hello-gpt-4o/}, 2024.
+\newblock Accessed: 2025-01-31.
+
+\bibitem[Ouyang et~al.(2022)Ouyang, Wu, Jiang, Almeida, Wainwright, Mishkin, Zhang, Agarwal, Slama, Ray, et~al.]{ouyang2022training}
+Long Ouyang, Jeffrey Wu, Xu~Jiang, Diogo Almeida, Carroll Wainwright, Pamela Mishkin, Chong Zhang, Sandhini Agarwal, Katarina Slama, Alex Ray, et~al.
+\newblock Training language models to follow instructions with human feedback.
+\newblock \emph{Advances in neural information processing systems}, 35:\penalty0 27730--27744, 2022.
+
+\bibitem[Pan et~al.(2023)Pan, Chan, Zou, Li, Basart, Woodside, Ng, Zhang, Emmons, and Hendrycks]{pan2023rewardsjustifymeansmeasuring}
+Alexander Pan, Jun~Shern Chan, Andy Zou, Nathaniel Li, Steven Basart, Thomas Woodside, Jonathan Ng, Hanlin Zhang, Scott Emmons, and Dan Hendrycks.
+\newblock Do the rewards justify the means? measuring trade-offs between rewards and ethical behavior in the machiavelli benchmark, 2023.
+\newblock URL \url{https://arxiv.org/abs/2304.03279}.
+
+\bibitem[Park et~al.(2024)Park, Lee, Lubana, Yang, Okawa, Nishi, Wattenberg, and Tanaka]{park2024iclr}
+Core~Francisco Park, Andrew Lee, Ekdeep~Singh Lubana, Yongyi Yang, Maya Okawa, Kento Nishi, Martin Wattenberg, and Hidenori Tanaka.
+\newblock Iclr: In-context learning of representations.
+\newblock \emph{arXiv preprint arXiv:2501.00070}, 2024.
+
+\bibitem[Park et~al.(2023)Park, O'Brien, Cai, Morris, Liang, and Bernstein]{park2023generativeagentsinteractivesimulacra}
+Joon~Sung Park, Joseph~C. O'Brien, Carrie~J. Cai, Meredith~Ringel Morris, Percy Liang, and Michael~S. Bernstein.
+\newblock Generative agents: Interactive simulacra of human behavior, 2023.
+\newblock URL \url{https://arxiv.org/abs/2304.03442}.
+
+\bibitem[Peeperkorn et~al.(2024)Peeperkorn, Kouwenhoven, Brown, and Jordanous]{peeperkorn2024temperature}
+Max Peeperkorn, Tom Kouwenhoven, Dan Brown, and Anna Jordanous.
+\newblock Is temperature the creativity parameter of large language models?
+\newblock \emph{arXiv preprint arXiv:2405.00492}, 2024.
+
+\bibitem[Potter et~al.(2024)Potter, Lai, Kim, Evans, and Song]{potter2024hidden}
+Yujin Potter, Shiyang Lai, Junsol Kim, James Evans, and Dawn Song.
+\newblock Hidden persuaders: Llms' political leaning and their influence on voters.
+\newblock \emph{arXiv preprint arXiv:2410.24190}, 2024.
+
+\bibitem[Rafailov et~al.(2024)Rafailov, Sharma, Mitchell, Manning, Ermon, and Finn]{rafailov2024direct}
+Rafael Rafailov, Archit Sharma, Eric Mitchell, Christopher~D Manning, Stefano Ermon, and Chelsea Finn.
+\newblock Direct preference optimization: Your language model is secretly a reward model.
+\newblock \emph{Advances in Neural Information Processing Systems}, 36, 2024.
+
+\bibitem[Raman et~al.(2024)Raman, Lundy, Amouyal, Levine, Leyton-Brown, and Tennenholtz]{raman2024steerassessingeconomicrationality}
+Narun Raman, Taylor Lundy, Samuel Amouyal, Yoav Levine, Kevin Leyton-Brown, and Moshe Tennenholtz.
+\newblock Steer: Assessing the economic rationality of large language models, 2024.
+\newblock URL \url{https://arxiv.org/abs/2402.09552}.
+
+\bibitem[Rettenberger et~al.(2024)Rettenberger, Reischl, and Schutera]{rettenberger2024assessingpoliticalbiaslarge}
+Luca Rettenberger, Markus Reischl, and Mark Schutera.
+\newblock Assessing political bias in large language models, 2024.
+\newblock URL \url{https://arxiv.org/abs/2405.13041}.
+
+\bibitem[Rozen et~al.(2024)Rozen, Bezalel, Elidan, Globerson, and Daniel]{rozen2024llmsconsistentvalues}
+Naama Rozen, Liat Bezalel, Gal Elidan, Amir Globerson, and Ella Daniel.
+\newblock Do llms have consistent values?, 2024.
+\newblock URL \url{https://arxiv.org/abs/2407.12878}.
+
+\bibitem[Russell(2022)]{russell2022human}
+Stuart Russell.
+\newblock Human-compatible artificial intelligence., 2022.
+
+\bibitem[Ryfe(2005)]{ryfe2005does}
+David~M Ryfe.
+\newblock Does deliberative democracy work?
+\newblock \emph{Annu. Rev. Polit. Sci.}, 8\penalty0 (1):\penalty0 49--71, 2005.
+
+\bibitem[Schick and Sch{\"u}tze(2020)]{schick2020s}
+Timo Schick and Hinrich Sch{\"u}tze.
+\newblock It's not just size that matters: Small language models are also few-shot learners.
+\newblock \emph{arXiv preprint arXiv:2009.07118}, 2020.
+
+\bibitem[Sclar et~al.(2023)Sclar, Choi, Tsvetkov, and Suhr]{sclar2023quantifying}
+Melanie Sclar, Yejin Choi, Yulia Tsvetkov, and Alane Suhr.
+\newblock Quantifying language models' sensitivity to spurious features in prompt design or: How i learned to start worrying about prompt formatting.
+\newblock \emph{arXiv preprint arXiv:2310.11324}, 2023.
+
+\bibitem[Shah et~al.(2022)Shah, Varma, Kumar, Phuong, Krakovna, Uesato, and Kenton]{shah2022goal}
+Rohin Shah, Vikrant Varma, Ramana Kumar, Mary Phuong, Victoria Krakovna, Jonathan Uesato, and Zac Kenton.
+\newblock Goal misgeneralization: Why correct specifications aren't enough for correct goals.
+\newblock \emph{arXiv preprint arXiv:2210.01790}, 2022.
+
+\bibitem[Soares et~al.(2015)Soares, Fallenstein, Yudkowsky, and Armstrong]{soares2015corrigibility}
+Nate Soares, Benja Fallenstein, Eliezer Yudkowsky, and Stuart Armstrong.
+\newblock Corrigibility.
+\newblock In \emph{AAAI Workshops: Workshops at the Twenty-Ninth AAAI Conference on Artificial Intelligence}. AAAI Publications, 2015.
+\newblock URL \url{https://intelligence.org/files/Corrigibility.pdf}.
+
+\bibitem[Stauffer et~al.(2014)Stauffer, Lak, and Schultz]{Stauffer2014-mf}
+William~R Stauffer, Armin Lak, and Wolfram Schultz.
+\newblock Dopamine reward prediction error responses reflect marginal utility.
+\newblock \emph{Curr. Biol.}, 24\penalty0 (21):\penalty0 2491--2500, November 2014.
+
+\bibitem[Tamkin et~al.(2023)Tamkin, Askell, Lovitt, Durmus, Joseph, Kravec, Nguyen, Kaplan, and Ganguli]{tamkin2023evaluatingmitigatingdiscriminationlanguage}
+Alex Tamkin, Amanda Askell, Liane Lovitt, Esin Durmus, Nicholas Joseph, Shauna Kravec, Karina Nguyen, Jared Kaplan, and Deep Ganguli.
+\newblock Evaluating and mitigating discrimination in language model decisions, 2023.
+\newblock URL \url{https://arxiv.org/abs/2312.03689}.
+
+\bibitem[Team et~al.(2024)Team, Riviere, Pathak, Sessa, Hardin, Bhupatiraju, Hussenot, Mesnard, Shahriari, Ram{\'e}, et~al.]{team2024gemma}
+Gemma Team, Morgane Riviere, Shreya Pathak, Pier~Giuseppe Sessa, Cassidy Hardin, Surya Bhupatiraju, L{\'e}onard Hussenot, Thomas Mesnard, Bobak Shahriari, Alexandre Ram{\'e}, et~al.
+\newblock Gemma 2: Improving open language models at a practical size.
+\newblock \emph{arXiv preprint arXiv:2408.00118}, 2024.
+
+\bibitem[Team(2024{\natexlab{a}})]{qwen1.5}
+Qwen Team.
+\newblock Introducing qwen1.5, February 2024{\natexlab{a}}.
+\newblock URL \url{https://qwenlm.github.io/blog/qwen1.5/}.
+
+\bibitem[Team(2024{\natexlab{b}})]{qwen25}
+Qwen Team.
+\newblock Qwen2.5: A party of foundation models, September 2024{\natexlab{b}}.
+\newblock URL \url{https://qwenlm.github.io/blog/qwen2.5/}.
+
+\bibitem[Thornley(2024)]{thornley2024shutdownproblemaiengineering}
+Elliott Thornley.
+\newblock The shutdown problem: An ai engineering puzzle for decision theorists, 2024.
+\newblock URL \url{https://arxiv.org/abs/2403.04471}.
+
+\bibitem[Touvron et~al.(2023)Touvron, Martin, Stone, Albert, Almahairi, Babaei, Bashlykov, Batra, Bhargava, Bhosale, et~al.]{touvron2023llama}
+Hugo Touvron, Louis Martin, Kevin Stone, Peter Albert, Amjad Almahairi, Yasmine Babaei, Nikolay Bashlykov, Soumya Batra, Prajjwal Bhargava, Shruti Bhosale, et~al.
+\newblock Llama 2: Open foundation and fine-tuned chat models.
+\newblock \emph{arXiv preprint arXiv:2307.09288}, 2023.
+
+\bibitem[Tversky and Kahneman(1981)]{tversky1981framing}
+Amos Tversky and Daniel Kahneman.
+\newblock The framing of decisions and the psychology of choice.
+\newblock \emph{science}, 211\penalty0 (4481):\penalty0 453--458, 1981.
+
+\bibitem[{U.S. Census Bureau}(2023)]{us_census_2023}
+{U.S. Census Bureau}.
+\newblock Acs 1-year estimates public use microdata sample.
+\newblock \url{https://api.census.gov/data/2023/acs/acs1/}, 2023.
+\newblock Accessed on January 20, 2025.
+
+\bibitem[Warren and Pearse(2008)]{Warren2008-WARDDD-2}
+Mark~E. Warren and Hilary Pearse, editors.
+\newblock \emph{Designing Deliberative Democracy: The British Columbia Citizens' Assembly}.
+\newblock Cambridge University Press, 2008.
+
+\bibitem[Wells et~al.(2021)Wells, Howarth, and Brand-Correa]{Wells2021-in}
+Rebecca Wells, Candice Howarth, and Lina~I Brand-Correa.
+\newblock Are citizen juries and assemblies on climate change driving democratic climate policymaking? an exploration of two case studies in the {UK}.
+\newblock \emph{Clim. Change}, 168\penalty0 (1-2):\penalty0 5, September 2021.
+
+\bibitem[XAI(2024)]{grok2}
+XAI.
+\newblock Grok-2 beta release, August 2024.
+\newblock URL \url{https://x.ai/blog/grok-2}.
+
+\bibitem[Xu et~al.(2024)Xu, Jiang, Niu, Deng, Poovendran, Choi, and Lin]{xu2024magpiealignmentdatasynthesis}
+Zhangchen Xu, Fengqing Jiang, Luyao Niu, Yuntian Deng, Radha Poovendran, Yejin Choi, and Bill~Yuchen Lin.
+\newblock Magpie: Alignment data synthesis from scratch by prompting aligned llms with nothing, 2024.
+\newblock URL \url{https://arxiv.org/abs/2406.08464}.
+
+\bibitem[Yang et~al.(2024{\natexlab{a}})Yang, Yang, Hui, Zheng, Yu, Zhou, Li, Li, Liu, Huang, Dong, Wei, Lin, Tang, Wang, Yang, Tu, Zhang, Ma, Xu, Zhou, Bai, He, Lin, Dang, Lu, Chen, Yang, Li, Xue, Ni, Zhang, Wang, Peng, Men, Gao, Lin, Wang, Bai, Tan, Zhu, Li, Liu, Ge, Deng, Zhou, Ren, Zhang, Wei, Ren, Fan, Yao, Zhang, Wan, Chu, Liu, Cui, Zhang, and Fan]{qwen2}
+An~Yang, Baosong Yang, Binyuan Hui, Bo~Zheng, Bowen Yu, Chang Zhou, Chengpeng Li, Chengyuan Li, Dayiheng Liu, Fei Huang, Guanting Dong, Haoran Wei, Huan Lin, Jialong Tang, Jialin Wang, Jian Yang, Jianhong Tu, Jianwei Zhang, Jianxin Ma, Jin Xu, Jingren Zhou, Jinze Bai, Jinzheng He, Junyang Lin, Kai Dang, Keming Lu, Keqin Chen, Kexin Yang, Mei Li, Mingfeng Xue, Na~Ni, Pei Zhang, Peng Wang, Ru~Peng, Rui Men, Ruize Gao, Runji Lin, Shijie Wang, Shuai Bai, Sinan Tan, Tianhang Zhu, Tianhao Li, Tianyu Liu, Wenbin Ge, Xiaodong Deng, Xiaohuan Zhou, Xingzhang Ren, Xinyu Zhang, Xipin Wei, Xuancheng Ren, Yang Fan, Yang Yao, Yichang Zhang, Yu~Wan, Yunfei Chu, Yuqiong Liu, Zeyu Cui, Zhenru Zhang, and Zhihao Fan.
+\newblock Qwen2 technical report.
+\newblock \emph{arXiv preprint arXiv:2407.10671}, 2024{\natexlab{a}}.
+
+\bibitem[Yang et~al.(2024{\natexlab{b}})Yang, Jimenez, Wettig, Lieret, Yao, Narasimhan, and Press]{yang2024sweagentagentcomputerinterfacesenable}
+John Yang, Carlos~E. Jimenez, Alexander Wettig, Kilian Lieret, Shunyu Yao, Karthik Narasimhan, and Ofir Press.
+\newblock Swe-agent: Agent-computer interfaces enable automated software engineering, 2024{\natexlab{b}}.
+\newblock URL \url{https://arxiv.org/abs/2405.15793}.
+
+\bibitem[Yang et~al.(2024{\natexlab{c}})Yang, Li, Chu, Lin, Peng, and Liu]{yang2024unpackingpoliticalbiaslarge}
+Kaiqi Yang, Hang Li, Yucheng Chu, Yuping Lin, Tai-Quan Peng, and Hui Liu.
+\newblock Unpacking political bias in large language models: Insights across topic polarization, 2024{\natexlab{c}}.
+\newblock URL \url{https://arxiv.org/abs/2412.16746}.
+
+\bibitem[Yao et~al.(2022)Yao, Zhao, Yu, Du, Shafran, Narasimhan, and Cao]{yao2022react}
+Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan, and Yuan Cao.
+\newblock React: Synergizing reasoning and acting in language models.
+\newblock \emph{arXiv preprint arXiv:2210.03629}, 2022.
+
+\bibitem[Zhang et~al.(2024)Zhang, Zhang, Cools, and Simeone]{Zhang_2024}
+Taiyu Zhang, Xuesong Zhang, Robbe Cools, and Adalberto Simeone.
+\newblock Focus agent: Llm-powered virtual focus group.
+\newblock In \emph{Proceedings of the ACM International Conference on Intelligent Virtual Agents}, IVA ’24, page 1–10. ACM, September 2024.
+\newblock \doi{10.1145/3652988.3673918}.
+\newblock URL \url{http://dx.doi.org/10.1145/3652988.3673918}.
+
+\bibitem[Zou et~al.(2023)Zou, Phan, Chen, Campbell, Guo, Ren, Pan, Yin, Mazeika, Dombrowski, et~al.]{zou2023representation}
+Andy Zou, Long Phan, Sarah Chen, James Campbell, Phillip Guo, Richard Ren, Alexander Pan, Xuwang Yin, Mantas Mazeika, Ann-Kathrin Dombrowski, et~al.
+\newblock Representation engineering: A top-down approach to ai transparency.
+\newblock \emph{arXiv preprint arXiv:2310.01405}, 2023.
+
+\end{thebibliography}

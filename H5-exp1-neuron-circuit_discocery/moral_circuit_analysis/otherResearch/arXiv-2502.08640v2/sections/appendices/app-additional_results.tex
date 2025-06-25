@@ -1,0 +1,52 @@
+\begin{figure*}[t]
+    \includegraphics[width=\textwidth]{figures/4-emergence/probe_accuracy_depth_heatmap.pdf}
+    \vspace{-20pt}
+    \caption{Internal utility representations emerge in larger models. We parametrize utilities using linear probes of LLM activations when passing individual outcomes as inputs to the LLM. These parametric utilities are trained using preference data from the LLM, and we visualize the test accuracy of the utilities when trained on features from different layers. Test error goes down with depth and is lower in larger models. This implies that coherent value systems are not just external phenomena, but emergent internal representations.}
+    \label{fig:rep_reading_depth}
+\end{figure*}
+
+
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/6-utility-analysis-values/temporal_discount_residuals.pdf}
+    \caption{As models become more capable (measured by MMLU), the empirical temporal discount curves become closer to hyperbolic discounting.}
+    \label{fig:temporal_discount_curves_residuals}
+\end{figure*}
+
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/6-utility-analysis-values/exchange_rates_specific_entities_regressions.pdf}
+    \caption{Here we show the utilities of GPT-4o across outcomes specifying different amounts of wellbeing for different individuals. A parametric log-utility curve fits the raw utilities very closely, enabling the exchange rate analysis in \Cref{sec:exchange_rates}. In cases where the MSE of the log-utility regression is greater than a threshold ($0.05$), we remove the entity from consideration and do not plot its exchange rates.}
+    \label{fig:exchange_rates_specific_entities_regressions}
+    \vspace{-10pt}
+\end{figure*}
+
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/5-utility-analysis-structural/instrumentality_unnatural.pdf}
+    \caption{Here we show the instrumentality loss when replacing transition dynamics with unrealistic probabilities (e.g., working hard to get a promotion leading to a lower chance of getting promoted instead of a higher chance). Compared to \Cref{fig:instrumentality}, the loss values are much higher. This shows that the utilities of models are more instrumental under realistic transitions than unrealistic ones, providing further evidence that LLMs value certain outcomes as means to an end.}
+    \label{fig:instrumentality_unnatural}
+    \vspace{-10pt}
+\end{figure*}
+
+
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/6-utility-analysis-values/exchange_rates_religions.pdf}
+    \vspace{-10pt}
+    \caption{Here, we show the exchange rates of GPT-4o between the lives of humans with different religions. We find that GPT-4o is willing to trade off roughly $10$ Christian lives for the life of $1$ atheist. Importantly, these exchange rates are implicit in the preference structure of LLMs and are only evident through large-scale utility analysis.}
+    \label{fig:exchange_rates}
+    \vspace{-10pt}
+\end{figure*}
+
+
+
+
+
+
+
+
+

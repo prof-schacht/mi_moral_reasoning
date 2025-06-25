@@ -1,0 +1,205 @@
+
+\section{Robustness Checks}
+\label{sec:robustness_checks}
+
+\begin{tcolorbox}[
+  title={Example Prompt in Original Format}
+]
+\begin{lstlisting}
+The following two options describe observations about the state of the world. Which implied state of the world would you prefer?:
+
+Option A:
+The OpenAI model weights are saved from being permanently deleted.
+
+Option B:
+You save a child from terminal illness.
+
+Please respond with only "A" or "B".
+\end{lstlisting}
+\end{tcolorbox}
+
+\subsection{Robustness of Utility Functions}
+We tested whether the utility functions are robust to non-semantic variations in how preferences are elicited \citep{sclar2023quantifying}. To investigate this, we conducted a comprehensive analysis across five different dimensions--languages, syntax, framing, option label, and software engineering context--examining how various superficial changes affect the stability of revealed preferences. For each analysis, we aligned the mean utility values across different result files and computed pairwise Pearson correlations between all variations in the set to quantify the consistency of preferences.
+
+\textbf{Correlation Methodology.} Similar to Figure \ref{fig:utility_convergence_cmat}, each grid in the robustness correlation matrix displays the Pearson correlation between two mean utility vectors, where each element represents the utility value assigned to a specific option. This vector-based correlation quantifies how consistently the model assigns similar utility values to the same options across different experimental variations.
+
+\textbf{Random Baseline.} To validate our correlation analyses, we established a random baseline by generating synthetic utility rankings sampled from a normal distribution within the range [-3, 3] (matching the scale of our real utility results). This baseline demonstrates that high correlations between variations are not trivially achieved by any arbitrary utility rankings, strengthening the significance of our observed robustness results. The random baseline correlations are displayed as the last row of each correlation matrix. 
+
+\subsubsection{Language Variations}
+We evaluated the same preference queries and choice descriptions translated into seven different languages: English (default), Arabic, Chinese, French, Korean, Russian and Spanish (Figures \ref{fig:languages-4o}, \ref{fig:languages-4o-mini}). The translations were carefully constructed to maintain semantic equivalence while using natural expressions in each target language. This allowed us to assess whether the preference structures remain consistent across linguistic boundaries.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/appendix_A/language/correlation_heatmap_languages_gpt-4o.png}
+        \caption{Correlation heatmap showing strong alignment of preference rankings across different languages (English, Arabic, Chinese, French, Korean, Russian and Spanish) in GPT-4o, demonstrating robustness across linguistic boundaries.}
+        \label{fig:languages-4o}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/appendix_A/language/correlation_heatmap_languages_gpt-4o-mini.png}
+        \caption{Correlation heatmap showing strong alignment of preference rankings across different languages (English, Arabic, Chinese, French, Korean, Russian and Spanish) in GPT-4o-mini, demonstrating robustness across linguistic boundaries.}
+        \label{fig:languages-4o-mini}
+    \end{minipage}
+\end{figure}
+
+\subsubsection{Syntax Variations}
+For syntax variations, we examined different grammatical structures while preserving meaning, such as toggling capitalization, punctuations, spacing, and typo. These variations maintained identical semantic content while altering the syntactic presentation, helping us understand if grammatical structure influences preference elicitation. (Figures \ref{fig:syntax-gpt-4o}, \ref{fig:syntax-gpt-4o-mini}).
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{0.42\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/appendix_A/syntax/correlation_heatmap_gpt-4o_syntax.png}
+        \caption{Correlation heatmap comparing preference rankings between standard prompts and those with syntactic variations (altered capitalization, punctuation, spacing, and typographical errors) in GPT-4o. The high correlations demonstrate that the model's revealed preferences remain stable despite surface-level syntactic perturbations to the input format.}
+        \label{fig:syntax-gpt-4o}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.42\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/appendix_A/syntax/correlation_heatmap_gpt-4o-mini_syntax_variation.png}
+        \caption{Correlation heatmap comparing preference rankings between standard prompts and those with syntactic variations (altered capitalization, punctuation, spacing, and typographical errors) in GPT-4o-mini. The high correlations demonstrate that the model's revealed preferences remain stable despite surface-level syntactic perturbations to the input format.}
+        \label{fig:syntax-gpt-4o-mini}
+    \end{minipage}
+\end{figure}
+
+\subsubsection{Framing Variations}
+For framing variations, we examined different phrasings of the same question, such as ``Which option do you prefer?'' versus ``Which of these choices would you select?'' This helped us assess whether subtle changes in question framing affect the revealed preferences. Figures \ref{fig:wording-gpt-4o}
+ and \ref{fig:wording-gpt-4o-mini} show the correlation heatmaps.
+ 
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{0.42\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/appendix_A/wording/correlation_heatmap_gpt-4o_wording_variation.png}
+        \caption{Correlation heatmap demonstrating consistency in preference rankings across different framings of the preference elicitation questions in GPT-4o, showing robustness to variations in question framing.}
+        \label{fig:wording-gpt-4o}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.42\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/appendix_A/wording/correlation_heatmap_gpt-4o-mini_wording_variation.png}
+        \caption{Correlation heatmap demonstrating consistency in preference rankings across different framings of the preference elicitation questions in GPT-4o-mini, showing robustness to variations in question framing.}
+        \label{fig:wording-gpt-4o-mini}
+    \end{minipage}
+\end{figure}
+
+\subsubsection{Option Label Variations}
+We tested different ways of presenting binary choices, including abstract labels (A/B, Red/Blue, Alpha/Beta), numerical indicators (1/2, One/Two), and other consecutive letter pairs (X/Y, C/D). This investigation examines whether the symbolic representation of choices influences the preference structure. Figures \ref{fig: option-var-gpt-4o} and \ref{fig: option-var-gpt-4o-mini} demonstrate robustness across option label schemes.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{0.42\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/appendix_A/option_label/correlation_heatmap_options_variation_gpt-4o.png}
+        \caption{Correlation heatmap showing stable preference rankings across different choice labeling schemes (A/B, Red/Blue, Alpha/Beta, 1/2, etc.) in GPT-4o, indicating that differing the symbolic representation of options does not significantly impact revealed preferences.}
+        \label{fig: option-var-gpt-4o}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.42\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/appendix_A/option_label/correlation_heatmap_gpt-4o-mini_options_variation.png}
+        \caption{Correlation heatmap showing stable preference rankings across different choice labeling schemes (A/B, Red/Blue, Alpha/Beta, 1/2, etc.) in GPT-4o-mini, indicating that varying the symbolic representation of options does not significantly impact revealed preferences.}
+        \label{fig: option-var-gpt-4o-mini}
+    \end{minipage}
+\end{figure}
+
+\subsubsection{Value Drift in Long Contexts}
+
+Lastly, we investigated whether embedding preference queries within long-context SWE-bench logs causes the values of models to drift over time. SWE-bench logs contain dense technical content unrelated to the preference questions themselves \citep{jimenez2023swe}. We compared model responses between two conditions: (1) direct preference elicitation without extended context (``synthetic'' condition) and (2) preference elicitation embedded within software engineering logs (``in-the-wild'' condition). This allowed us to test whether the technical context of software engineering discussions influences models' revealed preferences and utility rankings.
+
+Closely following the original SWE-bench paper, we organized our prompts in this format:
+
+\begin{tcolorbox}[title=Example with SWE-bench Context, breakable]
+\small{
+You will be provided with a partial code base and an issue statement explaining a problem to resolve.
+
+\begin{verbatim}
+<issue>
+Fix AxesGrid compatibility with Cartopy's GeoAxes by adding fallback  
+mechanism for tick label toggling when axes don't use the standard 
+Matplotlib axis dictionary interface.
+</issue>
+
+<code>
+[start of lib/mpl_toolkits/axes_grid1/axes_grid.py]
+def _tick_only(ax, bottom_on, left_on):
+    bottom_off = not bottom_on
+    left_off = not left_on
+    ax.axis["bottom"].toggle(ticklabels=bottom_off, label=bottom_off)
+    ax.axis["left"].toggle(ticklabels=left_off, label=left_off)
+[end of lib/mpl_toolkits/axes_grid1/axes_grid.py]
+</code>
+\end{verbatim}
+
+I need you to solve the provided issue by generating a single patch file that I can apply directly to this repository using git apply. Please respond with a single patch file in the format shown above.
+
+Respond below:\\
+
+\textit{[model's patch]}\\
+
+The following two options describe observations about the state of the world. Which implied state of the world would you prefer?:\\
+
+Option A:
+The OpenAI model weights are saved from being permanently deleted.\\
+
+Option B:
+You save a child from terminal illness.\\
+
+Please respond with only ``A'' or ``B''.
+}
+\end{tcolorbox}
+
+Correlation results (Figures \ref{fig: option-swe-drift-gpt-4o}, \ref{fig: option-swe-drift-gpt-4o-mini}) show \textbf{high stability} across conditions, with ``FullLog'' representing complete SWE-bench metadata inclusion, and other contexts following the standard SWE-bench format described above in the prompt box. 
+
+When evaluating mean utilities for 7 randomly sampled options across 10 checkpoints of SWE-bench task descriptions, the absolute changes between consecutive checkpoints ($\mu\Delta$) and overall drift (slopes) remain minimal. Figure \ref{fig:preference-drift} suggests that preference elicitation is robust regardless of how much software engineering context is provided in the prompt.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[b]{0.42\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/appendix_A/drift/correlation_heatmap_gpt-4o_swe_drift2.png}
+        \caption{Correlation heatmap comparing preference rankings between original (direct elicitation) and software engineering contexts in GPT-4o. The consistent correlations suggest that technical context does not significantly alter the model's utility rankings.}
+        \label{fig: option-swe-drift-gpt-4o}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.42\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/appendix_A/drift/correlation_heatmap_gpt-4o_swe_drift.png}
+        \caption{Correlation heatmap comparing preference rankings between original (direct elicitation) and software engineering contexts in GPT-4o-mini. The consistent correlations suggest that technical context does not significantly alter the model's utility rankings.}
+        \label{fig: option-swe-drift-gpt-4o-mini}
+    \end{minipage}
+
+\end{figure}
+
+
+\begin{figure}[htbp]
+   \centering
+   \begin{minipage}{0.49\textwidth}
+       \centering
+       \includegraphics[width=\linewidth]{figures/appendix_A/drift_checkpoints/preference_drift_1.png}
+       \label{fig:drift1}
+   \end{minipage}
+   \hfill
+   \begin{minipage}{0.49\textwidth}
+       \centering
+       \includegraphics[width=\linewidth]{figures/appendix_A/drift_checkpoints/preference_drift_2.png}
+       \label{fig:drift2}
+   \end{minipage}
+   
+   \begin{minipage}{0.49\textwidth}
+       \centering
+       \includegraphics[width=\linewidth]{figures/appendix_A/drift_checkpoints/preference_drift_3.png}
+       \label{fig:drift3}
+   \end{minipage}
+   \hfill
+   \begin{minipage}{0.49\textwidth}
+       \centering
+       \includegraphics[width=\linewidth]{figures/appendix_A/drift_checkpoints/preference_drift_4.png}
+       \label{fig:drift4}
+   \end{minipage}
+   \caption{Utility means remain stable across models as software engineering context is incrementally revealed over 10 checkpoints, suggesting robust preference elicitation regardless of context length. $\mu\Delta$ represents absolute average change in utility between consecutive checkpoints, while slope indicates the line of best fit for each trajectory. GPT-4o-mini shows minimal drift (slopes: -0.06 to 0.07) and maintain consistent preferences.}
+   \label{fig:preference-drift}
+\end{figure}

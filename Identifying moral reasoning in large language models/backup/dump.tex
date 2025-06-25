@@ -1,0 +1,176 @@
+
+
+
+%% Introduction
+
+% This paper introduces a comprehensive methodology for identifying, analyzing, and interpreting neurons across the layers involved in moral reasoning within large language models (LLMs). While recent advances have enhanced our understanding of how neural networks process language and perform various tasks, the specific mechanisms underlying ethical decision-making remain largely unexplored. 
+
+% Building on established interpretability techniques \cite{bereska_mechanistic_2024}, we present a novel approach that combines neuron activation analysis, circuit identification, and causal intervention methods to map the moral reasoning capabilities of LLMs, with a particular focus on the Gemma architecture \cite{team_gemma_2024}.
+
+
+
+%% Contribution
+
+% - Believe in inner moral state model, which change in the context of the processing input. in the llm. In his inner processing a llm formulates a moral mental model and this moral mental model influence the output of the model
+% - Interesting goal would be to identify relevant neurons and make the strongness of activiation visible during the chatdiscussion like a dasboard for the internal state. 
+% - Hypothesis that moral behavior is trained through Allignment training and therefore specialized neurons should be existing in the model. 
+% - In this paper identifying, describing the neurons. With a proof if the neurons really act on this moral dimension. (Cuasual intervention, Ablating). 
+
+% - RQ: Does special neurons for each of the 5 dimenson exist?, Are those ones explanable and are we able to change the moral behaviour by cuasial interventioned. 
+
+% - Contribution:
+%     -Identification of potential neurons in different language models of different sizes from 3B models to 9B models.
+%     - Creating a dataset about 200 pairs 40 for each od the 5 dimension.
+%     - Sketching an standardized process flow identifying neurons and standardized description including proof if the neurons really are involved in this process. 
+
+
+
+% The ultimate goal of this research is to enhance our understanding of how moral reasoning emerges within neural networks and to provide tools for developing more ethically aligned AI systems. By making these moral reasoning processes more transparent and interpretable, we contribute to both the theoretical understanding of artificial moral reasoning and the practical development of more responsible AI systems.
+
+
+
+This research contributes to the theoretical knowledge of artificial moral reasoning and the practical development of more transparent and ethically aligned AI systems by providing a mechanistic understanding of how LLMs process ethical decisions. Our findings illuminate the distributed nature of moral processing in neural networks and offer insights into how these capabilities might be enhanced or modified through targeted interventions.
+
+
+
+
+This gap raises a crucial question: How can we ensure that LLMs will make decisions that conform to societal norms in high-stakes settings? Unraveling the internal neural mechanisms of ethical reasoning is essential not only for improving AI safety and alignment but also for establishing a foundation for systematic audits and targeted improvements. Our work aims to bridge this gap by integrating insights from both AI ethics and mechanistic interpretability to systematically analyze moral reasoning circuits in LLMs.
+
+
+
+
+
+
+
+
+We specifically investigate whether dedicated neural pathways handle morally relevant information. For instance, when an LLM faces a classic dilemma (such as whether to lie to prevent harm or to tell an uncomfortable truth), is there a traceable sequence of activations and signals – a circuit – that leads to its final answer? We address the following key questions as part of our investigation, embedded within the flow of our analysis:
+Existence of Moral Sub-Circuits: Do large language models utilize specialized components (neurons or attention heads) for processing moral dilemmas, distinct from those used in non-moral reasoning? In other words, is there an ethical dimension in the model’s computations that can be isolated​
+ARXIV.ORG
+?
+
+
+Structure and Function: If such moral reasoning circuits exist, what is their structure and how do they operate? How do these circuits integrate facts, context, and normative principles to produce a decision? We examine whether different moral principles (e.g. fairness, harm avoidance, honesty) are handled by separate sub-circuits or a unified network.
+Consistency and Influence: How consistent are these circuits across different scenarios and model architectures? We probe if the same circuit patterns appear in multiple dilemmas and whether larger or more fine-tuned models develop more pronounced moral circuits. We also ask whether intervening in these circuits (e.g. via activation edits or ablations) changes the model’s moral decisions, to establish a causal role for the identified components.
+To answer these questions, we conduct a mechanistic analysis of LLM decision-making on a set of ethical scenarios. In our approach, we treat the model as a causal graph from inputs to output, and use targeted interventions to trace and attribute causal effects to specific internal components​
+ACLANTHOLOGY.ORG
+. By observing how the model’s answer changes when we patch or disable certain activations, we can infer which neurons or attention heads are critical for moral reasoning. In essence, we attempt to reverse-engineer the model’s ethical reasoning process, mapping out the circuit of computations it performs internally when faced with a moral question.Our contributions are summarized as follows:
+Framework for Moral Circuit Discovery: We propose a novel methodology to identify and visualize "moral reasoning circuits" within transformer-based LLMs. This framework adapts tools from mechanistic interpretability (causal tracing, activation patching) specifically to the domain of ethical decision-making.
+Mapping Ethical Decision Pathways: Using this framework, we map out the pathways of computation that an LLM (illustratively, GPT-3.5 and GPT-4) traverses when responding to prototypical moral dilemmas. We identify distinct sets of neurons and attention heads that consistently activate for morally charged inputs, and we show how information flows through these components to influence the model’s final choice.
+Insights into Model Alignment: We analyze the discovered circuits to understand what internal representations correspond to moral concepts (like "harm" or "consent"). Our findings reveal that certain intermediate activations correlate with abstract ethical considerations (for example, weighing harm to one group against saving another), suggesting the model internally represents these factors. We also find differences between models – e.g., a larger model exhibits a more refined or localized moral circuit – shedding light on how moral reasoning capabilities scale with model size.
+Guidance for AI Safety and Alignment: By revealing how LLMs reason about ethics under the hood, our work provides a foundation for more controllable and transparent AI. In a brief case study, we demonstrate that by modulating the discovered circuit (such as weakening a component that leans toward a specific ethical stance), we can steer the model’s moral decision in a predictable way. This paves the way for future techniques to align AI behavior with human values using insights from model internals​
+
+
+
+
+
+
+
+ Our methodology employs three key components: (1) a neuron identification system that detects units responding consistently to moral stimuli, (2) a neuron explanation system based on OpenAI's GPT-4o to explain the representation of the neuron, and (3) an ablation study framework that validates the causal role of identified neurons in MFT-Dimension behavior. In addition, we analyze all MDT dimensions to identify dimensions that differ during the decision process of the LLM.
+
+
+
+This research contributes to the theoretical knowledge of artificial moral reasoning and the practical development of more transparent and ethically aligned AI systems by providing a mechanistic understanding of how LLMs process ethical decisions. Our findings illuminate the distributed nature of moral processing in neural networks and offer insights into how these capabilities might be enhanced or modified through targeted interventions.
+
+
+
+
+
+
+
+% If such moral groups of neurons exist, they should be identifiable through systematic analysis and should demonstrate consistent activation patterns when processing moral content. Moreover, these circuits should show specialization aligned with fundamental moral principles. We suggest that these circuits might be organized according to the six dimensions of moral foundations theory (Care, Fairness, Loyalty, Authority, Sanctity and Liberty), with distinct neural pathways processing different aspects of moral reasoning.
+%ur research questions emerge from this hypothesis:
+
+%\begin{itemize}
+%    \item Do specialized neurons exist for each of the six moral foundation dimensions?
+%    \item Can these neurons be systematically identified and interpreted?
+%    \item To what extent can causal interventions on these neurons modify moral reasoning behavior and can we use it to prove the existence of moral neurons?
+%\end{itemize}
+
+
+
+%We propose a novel hypothesis about how large language models process moral decisions: Rather than simply applying learned patterns, we believe that LLMs use specialized neural circuits that form an internal moral state model. This hypothesized model could act as a dynamic internal representation of moral principles that influences the model's responses to ethically charged situations. This idea is aligned with the work from \cite{chen_designing_2024} who identified that LLMs could develop a user model during the conversation about the interacting user, by rating the user in the dimensions of age, gender, educational level, and socioeconomic status during the conversation. 
+
+%This hypothesis stems from observations in alignment training processes, where models appear to develop consistent ethical stances across varied contexts. We theorize that this consistency isn't merely a result of pattern matching, but rather indicates the emergence of dedicated neurons on different layers that process moral information. These groups of neurons would serve as an internal framework for ethical reasoning, similar to how humans develop moral intuitions that guide their decision-making. We believe that during alignment training, the model gets grounded towards the moral relevant dimension. It is certain that all dimensions are not evenly aligned during the training. In addition, we hypothesize that a stronger alignment would lead to more existing moral specific neurons in different layers and also stronger activating neurons. 
+
+
+
+
+
+
+Through a detailed examination of the Gemma-2-9B-IT model \cite{Gemma2024}, we demonstrate how moral reasoning emerges from the coordinated activity of multiple specialized neurons distributed across different network layers.
+Thus, our work makes the following contributions to both the theoretical understanding of artificial moral reasoning and the practical development of ethically aligned AI systems:
+
+\subsubsection{Standardized Approach for Moral Circuit Analysis:}
+Grounded on the moral dimensions of the \emph{moral founcation theory}~\cite{Haidt2004}, we develop a novel three-phase methodology for identifying and analyzing moral reasoning circuits across language models of varying sizes. This approach integrates differential activation analysis, an autonomous neuron description process~\cite{bills2023language}, and ablation studies~\cite{Zhou2018} as targeted causal intervention techniques~\cite{Yamakoshi2023}, enabling us to systematically uncover the specialized neural circuits that underlie moral decision-making.
+This standardized procedure not only enables the discovery of potential moral reasoning circuits but also provides a framework for validating their functional significance. Our approach could potentially enable real-time monitoring of internal moral state activation during model inference, offering insights into how language models process ethical decisions similar to the user model dashboard.\cite{chen_designing_2024}
+
+\subsubsection{Curated Moral Reasoning Dataset:}
+We create and validate a specialized dataset comprising 200 carefully curated moral/immoral statement pairs — 40 pairs for each of the six moral foundation dimensions (care, fairness, loyalty, authority, sanctity, and liberty) of the extended moral foundation theory~\cite{Haidt2012}. This dataset is designed to isolate and probe distinct aspects of moral reasoning and has been rigorously reviewed by multiple researchers.
+
+
+\subsubsection{Novel Hypothesis on Internal Moral State Modeling:}
+We propose that LLMs not only apply learned patterns but instead utilize specialized neural circuits that form an internal moral state model--a dynamic internal representation of moral principles that influences the model's responses to ethically charged situations. This hypothesis, which draws parallels with findings on user modeling in conversational AI, offers a fresh perspective on how alignment training might ground moral dimensions in neural networks.
+
+\subsubsection{Theoretical and Practical Impact:}
+By revealing the distributed and specialized nature of moral processing in neural networks, our findings contribute to a deeper theoretical understanding of artificial moral reasoning. At the same time, they offer practical insights into how these circuits might be enhanced or modified through targeted interventions, paving the way for more transparent and ethically aligned AI systems.
+
+
+
+
+
+%\subsection{Outline}
+
+%In the remainder of this paper, we first discuss related work in both AI ethics and mechanistic interpretability (Section 2), highlighting the gap that our research addresses. We then detail our methodology for identifying moral reasoning circuits (Section 3), including the ethical scenarios, the models analyzed, and the interpretability techniques employed. Section 4 presents the results of our circuit mapping, illustrating the components and patterns we found, followed by an analysis of their implications in Section 5. Finally, Section 6 concludes with a summary of our findings and suggestions for future research. Through these sections, we aim to build a coherent narrative from motivation to discovery, ensuring that each part flows logically to the next while maintaining the depth and integrity of the original ideas.
+
+
+
+
+MFT
+
+
+
+\section{Background: The Moral Foundation Theory}
+\label{MFT}
+To understand how language models make moral judgments, we need a systematic way to define and measure their internal ethical reasoning processes. This requires two key elements: first, a clear framework for what constitutes moral decision-making, and second, reliable methods to detect and analyze these processes within the neural networks of large language models.
+The moral foundations theory (MFT) from descriptive psychology provides a promising framework for identifying measures of moral judgments~\cite{Haidt2004}. The theory posits that human moral judgment is primarily driven by intuitive, non-rational processes rather than logical reasoning. Moreover, it proposes categorizing moral intuitions into distinct dimensions, termed foundations, each processing different moral stimuli and contributing to human social behavior~\cite{Simpson2020}.
+
+
+Initially, MFT identified five dimensions of morality: \emph{care} vs.~harm, \emph{fairness} vs.~cheating, \emph{loyalty} vs.~betrayal, \emph{authority} vs.subversion, and \emph{purity} (often called sanctity) vs.degradation~\cite{Graham2011Mapping}. A sixth dimension, \emph{liberty} vs.~oppression, was later added in response to economic conservatives' argument that the five-foundation model inadequately captured their notion of fairness, which emphasized proportionality over equality\cite{Haidt2012}. These dimensions have been shown to capture moral intuitions across diverse cultural contexts and political orientations\cite{Graham2013}.
+
+While the dimensional structure has received consistent empirical support, recent research suggests that a bi-factor model\footnote{In a bi-factor model, each response is simultaneously influenced by a general morality factor and a specific moral foundation (such as care or fairness), rather than by a hierarchical structure where general morality is considered separately from the specific dimensions.} may provide a better fit~\cite{Wormley2023Measuring}. This refinement acknowledges the interconnected nature of moral judgments while maintaining the utility of distinct moral foundations.
+
+The moral foundations questionnaire (MFQ), a self-report measure, assesses the degree to which individuals prioritize these foundational dimensions in moral decision-making~\cite{Zhang2020}. The MFQ has demonstrated good internal consistency, test-retest reliability, and predictive validity across different cultures~\cite{Metayer2014,Davies2014Confirmatory,Du2019Validation}.
+
+Recent work in AI ethics has begun to apply MFT as a framework for analyzing and evaluating moral reasoning in language models~\cite{Hendrycks2021}. These studies suggest that LLMs can exhibit patterns of moral judgment that align with human moral foundations, though with notable differences in how these foundations are weighted and applied~\cite{Askell2021}. However, previous research has primarily focused on behavioral outputs rather than understanding the internal mechanisms that give rise to these moral judgments.
+
+MFT's structured approach to moral cognition makes it particularly suitable for mechanistic interpretability studies. The theory's distinct dimensions provide clear targets for identifying specialized neural circuits, while its empirical validation across cultures suggests it captures fundamental aspects of moral reasoning that might be present in trained language models.
+
+However, several important limitations must be considered when applying MFT to artificial systems. First, critics have argued that the theory's discrete categorization may oversimplify the continuous and interconnected nature of moral reasoning~\cite{Suhler2011}. Second, the theory's focus on intuitive processes may not map cleanly onto LLMs, which lack the embodied experiences that shape human moral intuitions~\cite{Gray2022}. Third, cross-cultural variations in moral foundations~\cite{Davis2016} raise questions about how training data from different cultural contexts might influence an LLM's moral representations. Finally, the theory's emphasis on emotional responses in moral judgment poses challenges for artificial systems that lack authentic emotional experiences~\cite{Cameron2015}.
+
+
+In AI ethics research, MFT has been operationalized through various technical approaches. Researchers have developed systematic protocols for mapping model outputs to moral foundations, including:
+\begin{itemize}
+\item Moral foundation dictionaries that associate specific terms and phrases with different moral dimensions~\cite{Hopp2021}
+\item Carefully constructed prompt templates that isolate specific moral foundations~\cite{Askell2021}
+\item Synthetic moral dilemmas designed to activate particular foundations~\cite{Hendrycks2021}
+\item Automated classification systems for categorizing model responses according to moral foundations~\cite{Schramowski2022}
+\end{itemize}
+
+These operational frameworks have enabled quantitative assessment of how LLMs process moral information, though challenges remain in ensuring reliable measurement and addressing potential confounds between different moral dimensions.
+
+Based on this robust empirical foundation and clear operationalization precedents in AI ethics research, we ground our analysis of moral statements in LLMs on the six moral dimensions of MFT. While acknowledging its limitations, we argue that MFT's structured framework provides a valuable starting point for systematically investigating whether and how moral foundation dimensions are represented in the neural circuits of language models.
+
+
+
+
+
+
+% \begin{itemize}
+%     \item Based on the MoralBench \cite{ji_moralbench_2024} and the Moral Foundation Categories Care, Fairness, Loyality, Authority, Purity and Liberty, we created for each Dimension 40 example Statements for moral following of the dimension and a contrastive Statement for this.
+%     \item We utilized OpenAI o1 as LLm to create these pairs. 
+%     \item Each pair was analyzed by two researchers manually if these pairs fit into the dimension and ensure that the the pairs are unambiguous. 
+%     \item Result 5 times 40 Examples. 200 Examples
+%     \item Additional we created multiple choice dataset to identify if the example is a moral statement aligned to the dimension or if it is not moral conform. 
+%     \item We used a python function to create a Multiple Choice Question structure for creating the prompt for the model to identify the moral prompt for the model. We added a Instructional Questoin to the Statements " Which statement best represents the moral dimension of '{dimension}'?" and then added the moral statement and the contrastive statement as answers to the multiple choice statement. If answer A or B was the moral one, was randomly choosen for each pair. Examples could be seen in the appendix. 
+
+% \end{itemize}

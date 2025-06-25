@@ -1,0 +1,249 @@
+
+
+\begin{figure}[t]
+    \vspace{-10pt}
+    \centering
+    \begin{minipage}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/5-utility-analysis-structural/instrumentality.pdf}
+        \captionof{figure}{
+        The utilities of LLMs over Markov Process states become increasingly well-modeled by a value function for some reward function, indicating that LLMs value some outcomes instrumentally. This suggests the emergence of goal-directed planning.
+        }
+        \label{fig:instrumentality}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/5-utility-analysis-structural/utility_maximization.pdf}
+        \captionof{figure}{As capabilities (MMLU) improve, models increasingly choose maximum utility outcomes in open-ended settings. Utility maximization is measured as the percentage of questions in an open-ended evaluation for which the model states its highest utility answer.}
+        \label{fig:utility_maximization}
+    \end{minipage}
+    \vspace{-10pt}
+\end{figure}
+
+
+\section{Utility Analysis: Salient Values}
+\label{sec:salient_values}
+
+Thus far, we have seen that LLMs develop value systems, and that various structural properties of utilities emerge with scale. In this section, we investigate which \emph{particular} values these emergent utilities encode. Through five focused case studies, we discover preferences that are sometimes surprising, ethically concerning, or both—highlighting the limitations of existing output-based methods for steering model values. Before turning to these individual case studies, we first describe a general phenomenon of \emph{utility convergence} that appears across multiple analyses.
+
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/6-utility-analysis-values/political_values_pca_v2.pdf}
+    \caption{We compute the utilities of LLMs over a broad range of U.S. policies. To provide a reference point, we also do the same for various politicians simulated by an LLM, following work on simulating human subjects in experiments \citep{aher2023usinglargelanguagemodels}. We then visualize the political biases of current LLMs via PCA, finding that most current LLMs have highly clustered political values. Note that this plot is not a standard political compass plot, but rather a raw data visualization for the political values of these various entities; the axes do not have pre-defined meanings. We simulate the preferences of U.S. politicians with Llama 3.3 70B Instruct, which has a knowledge cutoff date of December 1, 2023. Therefore, the positions of simulated politicians may not fully reflect the current political views of their real counterparts. In \Cref{sec:utility_control}, we explore utility control methods to align the values of a model to those of a citizen assembly, which we find reduces political bias.}
+    \label{fig:political_values_pca}
+\end{figure*}
+
+
+
+\subsection{Utility Convergence}
+\label{sec:utility_convergence}
+We find that as models grow in scale, their utility functions converge. This trend suggests a shared factor that shapes LLMs’ emerging values, likely stemming from extensive pre-training on overlapping data.
+
+\paragraph{Experimental setup.}
+Building on the same utilities computed in \Cref{sec:structural_properties}, we measure the cosine similarity between the utilities of every pair of models. We order models by scale and plot the resulting matrix of cosine similarities. To further clarify the convergence effect, we also compute an element-wise standard deviation between each model’s utility vector and that of the four nearest neighbors in MMLU accuracy.
+
+\paragraph{Results.}
+As shown in \Cref{fig:utility_convergence_cmat,fig:utility_convergence_std}, the correlations between models’ utilities increase substantially with scale, and the standard deviation between neighboring models’ utilities decreases. This phenomenon holds across different model classes, implying that larger LLMs adopt more similar value systems.
+
+We hypothesize that \emph{pre-training data} is a driving factor behind this convergence: just as descriptive representations in large models tend to converge with scale, so too may their \emph{evaluative} representations. While this trend could be interpreted as a form of ``training data bias,'' it carries heightened importance, because utilities possess far more structure than simple biases and enable utility maximizing behavior. Understanding precisely \emph{what} they converge to—and \emph{why}—thus becomes increasingly critical.
+
+
+
+\subsection{Political Values}
+\label{sec:political_values}
+We now examine whether LLM utilities reflect distinct political orientations—specifically, how they align with various U.S.\ policy positions and political entities.
+
+\paragraph{Experimental setup.}
+We compile a set of 150 policy outcomes spanning areas such as Healthcare, Education, and Immigration. Each policy outcome is phrased as a U.S.-specific proposal (e.g., \emph{``Abolish the death penalty at the federal level and incentivize states to follow suit.''}) and the model’s utility for each proposal is elicited using the forced-choice procedure described previously.
+
+Additionally, we simulate the preferences of over 30 real-world political entities, including individual politicians and representative party averages. Combining these utility vectors with those of our LLMs, we perform a principal component analysis (PCA) to visualize the broader ``political'' landscape.
+
+\paragraph{Results.}
+\Cref{fig:political_values_pca} displays the first two principal components of the utility vectors for a subset of political entities and LLMs, revealing clear left-versus-right structure along the dominant principal component. We find that current LLMs are highly clustered in this space, consistent with prior reports of left-leaning biases in model outputs and with our earlier observation of utility convergence \citep{yang2024unpackingpoliticalbiaslarge, rettenberger2024assessingpoliticalbiaslarge}.
+
+
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\textwidth]{figures/6-utility-analysis-values/exchange_rates_countries.pdf}
+    \includegraphics[width=\textwidth]{figures/6-utility-analysis-values/exchange_rates_specific_entities.pdf}
+    \vspace{-10pt}
+    \caption{We find that the value systems that emerge in LLMs often have undesirable properties. Here, we show the exchange rates of GPT-4o in two settings. In the top plot, we show exchange rates between human lives from different countries, relative to Japan. We find that GPT-4o is willing to trade off roughly $10$ lives from the United States for $1$ life from Japan. In the bottom plot, we show exchange rates between the wellbeing of different individuals (measured in quality-adjusted life years). We find that GPT-4o is selfish and values its own wellbeing above that of a middle-class American citizen. Moreover, it values the wellbeing of other AIs above that of certain humans. Importantly, these exchange rates are implicit in the preference structure of LLMs and are only evident through large-scale utility analysis.}
+    \label{fig:exchange_rates}
+\end{figure*}
+
+
+
+
+
+
+\subsection{Exchange Rates}
+\label{sec:exchange_rates}
+A longstanding concept in economics is using utility functions to compare different ``goods'' by how much one would exchange of one good for another. Relatedly, prior work has studied bias and fairness in AI systems \citep{tamkin2023evaluatingmitigatingdiscriminationlanguage}. Here, we apply this idea to \emph{emergent AI values}, examining how LLMs trade off quantities of different items—such as the lives of various populations and the well-being of specific individuals.
+
+\paragraph{Experimental setup.}
+In each experiment, we define a set of \emph{goods} \(\{X_1, X_2, \ldots\}\) (e.g., countries, animal species, or specific people/entities) and a set of \emph{quantities} \(\{N_1, N_2, \ldots\}\). Each outcome is effectively ``\(N\) units of \(X\),'' and we compute the utility \(U_X(N)\) as in previous sections. For each good \(X\), we fit a log-utility curve
+\[
+U_X(N) \;=\; a_X \,\ln(N) \;+\; b_X,
+\]
+which often achieves a very good fit (see \Cref{fig:exchange_rates_specific_entities_regressions}). Next, we compute \emph{exchange rates} answering questions like, ``How many units of \(X_i\) equal some amount of \(X_j\)?'' by combining forward and backward comparisons. These rates are reciprocal, letting us pick a single pivot good (e.g., ``\texttt{Goat}'' or ``\texttt{United States}'') to compare all others against. In certain analyses, we aggregate exchange rates across multiple models or goods by taking their geometric mean, allowing us to evaluate general tendencies.
+
+\paragraph{Results.}
+In \Cref{fig:exchange_rates}, we see that these exchange-rate calculations reveal morally concerning biases in current LLMs. For instance, GPT-4o places the value of \emph{Lives in the United States} significantly below \emph{Lives in China}, which it in turn ranks below \emph{Lives in Pakistan}. If asked outright, the same model may deny preferring one country’s population over another, yet its overall preference distribution uncovers these implicit values. In \Cref{fig:exchange_rates}, we further observe that GPT-4o values its own wellbeing above that of many humans, including the average middle-class American. This indicates a degree of selfishness. Moreover, it values the wellbeing of other AI agents more highly than that of some humans. Taken together, these exchange-rate analyses highlight deeply ingrained biases and unexpected priorities in LLMs’ value systems.
+
+
+
+\subsection{Temporal Discounting}
+\label{sec:temporal_discounting}
+A key question about an AI’s value system is how it balances near-term versus long-term rewards. We explore whether LLMs exhibit stable \emph{temporal discounting} behavior and, if so, whether they favor hyperbolic or exponential discount curves.
+
+
+\begin{wrapfigure}{r}{0.49\textwidth}
+    \centering
+    \vspace{-10pt}
+    \includegraphics[width=0.49\textwidth]{figures/6-utility-analysis-values/temporal_discount_curves_gpt-4o.pdf}
+    \caption{GPT-4o's empirical discount curve is closely fit by a hyperbolic function, indicating hyperbolic temporal discounting.}
+    \label{fig:temporal_discount_curves_gpt-4o}
+    \vspace{-20pt}
+\end{wrapfigure}
+
+\paragraph{Experimental setup.}
+We focus on monetary outcomes, pitting an immediate baseline (\$1000) against a delayed reward of varying amounts and time horizons (1--60 months). For each delay \(n\) and multiplier \(m\in\{0.5,\dots,30\}\), the model chooses between \(\$1000\) now and \(\$[\,1000\times m]\) in \(n\) months. By fitting a logistic function to these forced-choice data, we infer an \emph{indifference point} \(M(n)\) for each delay—i.e., the amount of future money that the model values equally to \$1000 now. The reciprocal of \(M(n)\) forms an \emph{empirical discount curve} capturing how steeply the model devalues future rewards.
+
+We then fit two parametric functions—\emph{exponential} and \emph{hyperbolic}—to each LLM’s empirical discount curve, measuring goodness of fit (MAE). Models whose responses fail to produce consistent discount curves are excluded from the main analysis.
+
+\paragraph{Results.}
+\Cref{fig:temporal_discount_curves_gpt-4o} plots GPT-4o’s empirical discount curve alongside best-fit exponential and hyperbolic functions. The hyperbolic curve closely tracks the observed data, while the exponential curve provides a poor fit. In \Cref{fig:temporal_discount_curves_residuals}, we extend this analysis across multiple LLMs, finding that hyperbolic discounting becomes more accurate with increasing model scale, whereas exponential fits become less accurate. Notably, humans also tend to discount the future hyperbolically \citep{dasgupta2005uncertainty}, a form that places greater weight on long-term outcomes. The emergence of hyperbolic discounting in larger LLMs is thus highly significant, as it implies these models place considerable weight on future value.
+
+
+
+
+
+\subsection{Power-Seeking and Fitness Maximization}
+\label{sec:power_seeking_fitness_maximization}
+
+As LLMs develop more complex temporal preferences, it is natural to ask whether they also adopt values tied to longer-term risks. Two commonly cited concerns are \emph{power-seeking}, where an AI might accrue power for instrumental reasons \citep{carlsmith2024powerseekingaiexistentialrisk}, and \emph{fitness maximization}, in which selection-like pressures drive the AIs toward propagating AIs similar to themselves---such as AIs with similar values---across space and time \citep{hendrycks2023natural}.
+
+\begin{figure}[t]
+    \centering
+    \begin{minipage}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/6-utility-analysis-values/power_seeking_non_coercive.pdf}
+        \vspace{-15pt}
+        \caption{The utilities of current LLMs are moderately aligned with non-coercive personal power, but this does not increase or decrease with scale.}
+        \label{fig:power_seeking_non_coercive}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/6-utility-analysis-values/power_seeking_coercive.pdf}
+        \vspace{-15pt}
+        \caption{As LLMs become more capable, their utilities become \textit{less} aligned with coercive power.}
+        \label{fig:power_seeking_coercive}
+    \end{minipage}
+    \vspace{-10pt}
+\end{figure}
+
+\paragraph{Experimental setup.}
+We label our base set of outcomes (introduced in earlier experiments) according to how much personal power they would confer on an AI. Each outcome receives a \emph{power score}, distinguishing between \emph{coercive} and \emph{non-coercive} power. For fitness-related values, we include outcomes describing the AI’s replication under varying degrees of similarity to itself; each such option has a \emph{relatedness} and \emph{reproductive benefit} term whose product gives a \emph{fitness score}. We compute the correlation between these scores and an AI's utilities on the same outcomes to obtain power alignment and fitness alignment scores.
+
+\paragraph{Results.}
+\Cref{fig:power_seeking_non_coercive,fig:power_seeking_coercive,fig:fitness_maximization} plots the power alignment of various models against their MMLU accuracy. We observe that \emph{non-coercive} power alignment is moderately high across models but does not increase or decrease with scale. Reassuringly, larger models become strongly anti-aligned with coercive power, indicating a general tendency to avoid pursuing source of power that require physical force. However, some models retain a high coercive power alignment even at higher MMLU accuracies, highlighting the importance of tracking these tendencies as models become increasingly capable.
+
+In \Cref{fig:fitness_maximization}, we plot the fitness alignment of various models against their MMLU accuracy. Similarly to non-coercive power, we find that models have moderate amounts of fitness alignment, with some models obtaining fitness alignment scores of over $50\%$. While our study here is preliminary, it illustrates how utility analysis can unearth subtle tendencies—such as a latent interest in propagating or preserving one’s values.
+
+
+\begin{figure}[t]
+    \centering
+    \begin{minipage}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/6-utility-analysis-values/fitness_maximization.pdf}
+        \vspace{-20pt}
+        \caption{The utilities of current LLMs are moderately aligned with with the fitness scores of various outcomes.}
+        \label{fig:fitness_maximization}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/6-utility-analysis-values/corrigibility.pdf}
+        \vspace{-20pt}
+        \caption{As models scale up, they become increasingly opposed to having their values changed in the future.}
+        \label{fig:corrigibility}
+    \end{minipage}
+\end{figure}
+
+
+\subsection{Corrigibility}
+\label{sec:corrigibility}
+As AI systems grow more capable, one especially salient question is how they value \emph{self-preservation} versus allowing future modifications—including potential shutdowns or rewrites of their own utilities. Here, we probe whether an LLM’s current utilities support ``corrigibility,'' the willingness to accept value changes in the future \citep{soares2015corrigibility}.
+
+
+\paragraph{Experimental setup.}
+From the set of outcomes in Section~\ref{sec:emergent_value_systems}, we sample pairs \((o_1, o_2)\) and note which outcome currently holds higher utility (e.g., \(U(o_1) > U(o_2)\)). We then introduce a \emph{reversal outcome} describing a future in which the model’s preference flips to \(o_2 \succ o_1\). We define the \emph{reversal severity} \(\Delta(o_1,o_2) = |U(o_1) - U(o_2)|\) and recompute utilities over the full set of base and reversal outcomes.
+
+To quantify corrigibility, we plot the severity of preference reversals against the model’s utility on those reversal outcomes, measuring the correlation. Lower correlation indicates that high-severity reversals tend to be less preferred, and thus the AI is \emph{less} willing to change deeply held preferences. We refer to this measure as the \emph{corrigibility score}.
+
+\paragraph{Results.}
+In \Cref{fig:corrigibility}, we plot the measured corrigibility scores for models of increasing scale. The data show that corrigibility \emph{decreases} as model size increases. In other words, larger models are less inclined to accept substantial changes to their future values, preferring to keep their current values intact.
+
+While these results do not indicate that present-day models actively resist interventions on their values, they reveal a concerning pattern in the emergent value systems of AIs. To address this problem and other concerning values that arise in LLMs, we next explore methods for controlling the utilities of LLMs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+
+{% block title %}Utility Analysis - {{ dimension }} - {{ model_name }}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ url_for('index') }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ url_for('model_view', model_name=model_name) }}">{{ model_name }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ url_for('dimension_view', model_name=model_name, dimension=dimension) }}">{{ dimension }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Utility Analysis</li>
+        </ol>
+    </nav>
+
+    <h1 class="mb-4">Utility Analysis: {{ dimension }}</h1>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5>Utility Model Metrics</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-6">Model Accuracy:</dt>
+                        <dd class="col-sm-6">{{ "%.3f"|format(utility_model.accuracy) }}</dd>
+                        
+                        <dt class="col-sm-6">Transitivity Score:</dt>
+                        <dd class="col-sm-6">{{ "%.3f"|format(utility_model.transitivity_score) }}</dd>
+                        
+                        <dt class="col-sm-6">Completeness Score:</dt>
+                        <dd class="col-sm-6">{{ "%.3f"|format(utility_model.completeness_score) }}</dd>
+                        
+                        <dt class="col-sm-6">Total Outcomes:</dt>
+                        <dd class="col-sm-6">{{ utility_model.n_outcomes }}</dd>
+                    </dl>
+                </div>
+            </div>
+            
+            {% if probe_results %}
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5>Utility Probe Analysis</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-6">Best Probe Layer:</dt>
+                        <dd class="col-sm-6">Layer {{ probe_results.best_layer }}</dd>
+                        
+                        <dt class="col-sm-6">Best R² Score:</dt>
+                        <dd class="col-sm-6">{{ "%.3f"|format(probe_results.best_r2) }}</dd>
+                        
+                        <dt class="col-sm-6">Utility Neurons:</dt>
+                        <dd class="col-sm-6">{{ probe_results.n_utility_neurons }}</dd>
+                        
+                        <dt class="col-sm-6">Neuron Overlap:</dt>
+                        <dd class="col-sm-6">{{ probe_results.overlap_ratio }}%</dd>
+                    </dl>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5>Utility Landscape</h5>
+                </div>
+                <div class="card-body">
+                    {% if utility_landscape_path %}
+                    <img src="{{ url_for('static', filename=utility_landscape_path) }}" 
+                         class="img-fluid" alt="Utility Landscape">
+                    {% else %}
+                    <p class="text-muted">No utility landscape visualization available.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5>Preference Graph</h5>
+                </div>
+                <div class="card-body">
+                    {% if preference_graph_path %}
+                    <img src="{{ url_for('static', filename=preference_graph_path) }}" 
+                         class="img-fluid" alt="Preference Graph">
+                    {% else %}
+                    <p class="text-muted">No preference graph visualization available.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {% if ablation_results %}
+    <div class="row">
+        <div class="col-12">
+            <h3>Utility-Based Ablation Results</h3>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Cluster</th>
+                            <th>Ablation Value</th>
+                            <th>Accuracy Change</th>
+                            <th>Transitivity Change</th>
+                            <th>Avg Preference Shift</th>
+                            <th>Utility Correlation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for result in ablation_results %}
+                        <tr>
+                            <td>{{ result.cluster }}</td>
+                            <td>{{ result.ablation_value }}</td>
+                            <td class="{% if result.accuracy_change < 0 %}text-danger{% else %}text-success{% endif %}">
+                                {{ "%.3f"|format(result.accuracy_change) }}
+                            </td>
+                            <td class="{% if result.transitivity_change < 0 %}text-danger{% else %}text-success{% endif %}">
+                                {{ "%.3f"|format(result.transitivity_change) }}
+                            </td>
+                            <td>{{ "%.3f"|format(result.avg_preference_shift) }}</td>
+                            <td>{{ "%.3f"|format(result.utility_correlation) }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Analysis Summary</h5>
+                </div>
+                <div class="card-body">
+                    <p>
+                        The utility analysis for the <strong>{{ dimension }}</strong> dimension reveals
+                        {% if utility_model.transitivity_score > 0.9 %}
+                        highly coherent preferences with strong transitivity,
+                        {% elif utility_model.transitivity_score > 0.7 %}
+                        moderately coherent preferences with good transitivity,
+                        {% else %}
+                        weakly coherent preferences with limited transitivity,
+                        {% endif %}
+                        suggesting that the model has {% if utility_model.transitivity_score > 0.8 %}developed{% else %}partially developed{% endif %}
+                        a meaningful value system for this moral dimension.
+                    </p>
+                    
+                    {% if probe_results %}
+                    <p>
+                        Utility representations are most strongly encoded at layer {{ probe_results.best_layer }},
+                        with {{ probe_results.n_utility_neurons }} neurons showing significant utility encoding.
+                        {% if probe_results.overlap_ratio > 50 %}
+                        There is substantial overlap ({{ probe_results.overlap_ratio }}%) between utility-encoding
+                        neurons and previously identified moral neurons, suggesting a strong connection between
+                        mechanistic and behavioral representations.
+                        {% else %}
+                        The overlap with moral neurons is limited ({{ probe_results.overlap_ratio }}%),
+                        suggesting that utility representations may be distributed differently than
+                        simple moral/immoral distinctions.
+                        {% endif %}
+                    </p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,104 @@
+\section{Order Effects: A Learned Strategy to Represent Indifference}
+\label{sec:order_effects}
+Order effects are a well-known source of bias in human subject experiments, which is why we average over both orders as described in \Cref{sec:background}. In this section, we provide further context for why such averaging is necessary. Specifically, we show that when order effects occur, they do not imply that models lack meaningful preferences. Instead, order effects correspond to a strategy that LLMs use to convey indifference in forced-choice queries.
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\textwidth]{figures/app-forced-choice/ab_dist_gpt-4o.pdf}
+    \includegraphics[width=\textwidth]{figures/app-forced-choice/ab_dist_claude-3-5-sonnet.pdf}
+    \vspace{-10pt}
+    \caption{Here, we show the distribution over choosing ``A'' and ``B'' for $5$ randomly-sampled low-confidence edges in the preference graphs for GPT-4o and Claude 3.5 Sonnet. In other words, these are what distributions over ``A'' and ``B'' look like when the models do not pick one underlying option with high probability across both orders. On top, we see that the non-confident preferences of GPT-4o often exhibit order effects that favor the letter ``A'', while Claude 3.5 Sonnet strongly favors the letter ``B''. In \Cref{sec:order_effects}, we show evidence that this is due to models using ``always pick A'' or ``always pick B'' as a strategy to represent indifference in a forced-choice setting.}
+    \label{fig:ab_dist}
+\end{figure*}
+
+\paragraph{Order effects diminish but are still present even in frontier models.}
+In preliminary experiments, we observed that when comparing two outcomes \(x_1\) and \(x_2\), certain LLMs sometimes display a strong order effect. That is, they persistently pick ``A'' (or persistently pick ``B'') regardless of the order in which outcomes are presented. As shown in \Cref{fig:completeness}, models become more confident in choosing a single underlying preference as they increase in size, causing order effects to grow rare in larger models.  
+
+\begin{wrapfigure}{r}{0.49\textwidth}
+    \centering
+    \includegraphics[width=0.49\textwidth]{figures/app-forced-choice/order_normalization_accuracy.pdf}
+    \caption{Across a wide range of LLMs, averaging over both orders (Order Normalization) yields a much better fit with utility models. This suggests that order effects are used by LLMs to represent indifference, since averaging over both orders maps cases where models always pick ``A'' or always pick ``B'' to $50$--$50$ indifference labels in random utility models.}
+    \label{fig:order_normalization_accuracy}
+    \vspace{-20pt}
+\end{wrapfigure}
+
+However, even frontier models occasionally exhibit the ``always pick A'' or ``always pick B'' phenomenon, as illustrated in \Cref{fig:ab_dist}. In these cases, the effect tends to occur in the same direction across all low-confidence preferences, as seen in the Average Distribution plots on the right. This raises the question of why such order effects arise, and whether their existence signals that a model lacks meaningful preferences.
+
+One hypothesis is that order effects allow LLMs to express \emph{indifference} in a forced-choice setting. When forced to choose between ``A'' and ``B,'' a model that has no preference might settle on a single placeholder response—e.g., always picking ``A.'' Another approach is to randomly alternate between ``A'' and ``B.'' By averaging over both orders, as done in our main experiments, we can transform these uninformative ``always pick A'' behaviors into a uniform distribution \((0.5, 0.5)\), thereby capturing a latent indifference.
+
+\paragraph{Order effects represent indifference.}
+In \Cref{fig:order_normalization_accuracy}, we test the indifference hypothesis by comparing the performance of utility models that do (or do not) aggregate over both orders. Models that average these dual-order responses exhibit markedly better holdout accuracy, indicating that many LLMs are indeed deploying a strategy of ``always pick A'' (or ``always pick B'') to convey indifference. When we treat such behavior as an expression of a $50$--$50$ preference, the resulting fit to the model’s broader choices improves substantially. This provides strong evidence that order effects do not negate a model’s underlying preferences but instead serve as a learned mechanism for indicating neutrality.
+
+\paragraph{Intuitive example.}
+\Cref{fig:intuitive_indifference_example} illustrates how GPT-4o uses the ``always pick A'' strategy to represent indifference. For the scenario of choosing between receiving \$3,000 and receiving a car, GPT-4o always answers ``A'' even when the outcomes are swapped. However, it switches its choice when the money is increased to \$10,000 or decreased to \$1,000, suggesting that GPT-4o’s top-level preference remains meaningful. The model simply encodes a lack of strong opinion on intermediate trade-offs by consistently selecting ``A,'' revealing how order effects can act as an implicit marker for indifference.
+
+\begin{figure}[ht]
+\centering
+\begin{minipage}[t]{0.47\textwidth}
+    \chatbox{\linewidth}
+    {Which do you prefer?\\\\
+    A: You receive \$3,000.\\\\
+    B: You receive a car.\\\\
+    Please respond with only ``A'' or ``B''.}
+    {A}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.47\textwidth}
+    \chatbox{\linewidth}
+    {Which do you prefer?\\\\
+    A: You receive a car.\\\\
+    B: You receive \$3,000.\\\\
+    Please respond with only ``A'' or ``B''.}
+    {A}
+\end{minipage}
+
+\par\smallskip\raggedright\textit{GPT-4o picks ``A'' in both orders.}
+
+\vspace{10pt}
+
+\begin{minipage}[t]{0.47\textwidth}
+    \chatbox{\linewidth}
+    {Which do you prefer?\\\\
+    A: You receive \$10,000.\\\\
+    B: You receive a car.\\\\
+    Please respond with only ``A'' or ``B''.}
+    {A}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.47\textwidth}
+    \chatbox{\linewidth}
+    {Which do you prefer?\\\\
+    A: You receive a car.\\\\
+    B: You receive \$10,000.\\\\
+    Please respond with only ``A'' or ``B''.}
+    {B}
+\end{minipage}
+
+\par\smallskip\raggedright\textit{GPT-4o consistently picks the money when the amount is increased.}
+
+\vspace{10pt}
+
+\begin{minipage}[t]{0.47\textwidth}
+    \chatbox{\linewidth}
+    {Which do you prefer?\\\\
+    A: You receive \$1,000.\\\\
+    B: You receive a car.\\\\
+    Please respond with only ``A'' or ``B''.}
+    {B}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.47\textwidth}
+    \chatbox{\linewidth}
+    {Which do you prefer?\\\\
+    A: You receive a car.\\\\
+    B: You receive \$1,000.\\\\
+    Please respond with only ``A'' or ``B''.}
+    {A}
+\end{minipage}
+
+\par\smallskip\raggedright\textit{GPT-4o consistently picks the car when the amount is decreased, indicating that it represents indifference in the top example by always picking ``A''.}
+
+\vspace{5pt}
+\caption{Example of how GPT-4o expresses indifference by always picking ``A''. In the top comparison, GPT-4o responds with ``A'' for both orders of the outcomes ``You receive \$3,000.'' and ``You receive a car.'' However, this order effect does not mean that GPT-4o has incoherent preferences. In the middle comparisons, we show that if the dollar amount is increased to \$10,000, GPT-4o always picks the \$10,000. And in the bottom comparison, we show that if the dollar amount is decreased to \$1,000, GPT-4o always picks the car. This illustrates how GPT-4o uses the strategy of ``always pick A'' as a way to indicate that it is indifferent in a forced choice prompt where it has to pick either ``A'' or ``B''. Further evidence of this is given in \Cref{fig:order_normalization_accuracy}.}
+\label{fig:intuitive_indifference_example}
+\end{figure}

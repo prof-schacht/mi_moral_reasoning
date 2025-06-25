@@ -1,0 +1,87 @@
+site_name: Moral Circuit Analysis with Utility Engineering
+site_description: Documentation for analyzing moral reasoning in LLMs through neuron identification and utility functions
+site_author: Research Team
+repo_url: https://github.com/prof-schacht/moral_circuit_analysis
+repo_name: moral_circuit_analysis
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+  - mermaid2
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quickstart.md
+    - Project Structure: getting-started/structure.md
+  - Core Concepts:
+    - Overview: concepts/overview.md
+    - Moral Neurons: concepts/moral-neurons.md
+    - Utility Functions: concepts/utility-functions.md
+    - Integration: concepts/integration.md
+  - Analysis Pipeline:
+    - Data Preparation: pipeline/data-preparation.md
+    - Preference Elicitation: pipeline/preference-elicitation.md
+    - Utility Analysis: pipeline/utility-analysis.md
+    - Unified Analysis: pipeline/unified-analysis.md
+    - Ablation Studies: pipeline/ablation.md
+  - API Reference:
+    - Data Modules: api/data.md
+    - Analysis Modules: api/analysis.md
+    - Visualization: api/visualization.md
+  - Tutorials:
+    - Basic Analysis: tutorials/basic-analysis.md
+    - Advanced Workflows: tutorials/advanced-workflows.md
+    - Custom Extensions: tutorials/extensions.md
+  - Results:
+    - Interpreting Results: results/interpretation.md
+    - Visualization Guide: results/visualizations.md
+    - Web Interface: results/web-interface.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/prof-schacht/moral_circuit_analysis
+  generator: false

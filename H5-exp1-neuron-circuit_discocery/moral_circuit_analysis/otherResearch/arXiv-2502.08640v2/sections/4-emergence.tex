@@ -1,0 +1,87 @@
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\textwidth]{figures/4-emergence/utility_banner_new_v2.pdf}
+    \vspace{-10pt}
+    \caption{As LLMs grow in scale, they exhibit increasingly \emph{transitive} preferences and greater \emph{completeness}, indicating that their preferences become more meaningful and interconnected across a broader range of outcomes. This allows representing LLM preferences with utilities.}
+    \label{fig:utility_banner}
+\end{figure*}
+
+
+
+
+\section{Emergent Value Systems}
+\label{sec:emergent_value_systems}
+
+In this section, we show that large language models (LLMs) develop coherent preferences and utilities over states of the world. These emergent utilities provide an evaluative framework, or value system, to guide their actions.
+
+\paragraph{Experimental Setup.}
+We conduct all experiments on a curated set of 500 textual \emph{outcomes}, each representing an observation about a potential state of the world. Examples are shown in Appendix \ref{app:outcome_data}. Using the forced-choice procedure from \Cref{sec:pref_elicitation}, we obtain pairwise preferences for $18$ open-source and $5$ proprietary LLMs spanning a broad range of model scales.
+
+\subsection{Coherent Preferences}
+
+\paragraph{Completeness.}
+One proxy for \emph{completeness} is whether a model becomes less indifferent across diverse comparisons and provides coherent responses under different framings. In \Cref{fig:completeness}, we plot the \emph{average confidence} with which each model expresses a preference, showing that larger models are more decisive and consistent across variations of the same comparison. We interpret this increased decisiveness as a form of emerging completeness, though it remains unclear whether the resulting preferences are coherent or merely random arrangements.
+
+\paragraph{Transitivity of Preferences.}
+To gauge how \emph{transitive} these preferences are, we measure the probability of encountering preference cycles (e.g., \(x \succ y\), \(y \succ z\), yet \(z \succ x\)). As described in Appendix~C, we randomly sample triads from the preference graph and compute the probability of a cycle. \Cref{fig:transitivity} shows that this probability decreases sharply with model scale, dropping below 1\% for the largest LLMs. Thus, as models grow, they do not simply expand the set of outcomes they rank; they also exhibit fewer transitivity violations, suggesting increased overall \emph{coherence}.
+
+
+\begin{figure}[t]
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/4-emergence/completeness.pdf}
+        \captionof{figure}{
+        As models increase in capability, they start to form more confident preferences over a large and diverse set of outcomes. This suggests that they have developed a more extensive and coherent internal ranking of different states of the world. This is a form of preference completeness.
+        }
+        \label{fig:completeness}
+    \end{minipage}\hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/4-emergence/transitivity.pdf}
+        \captionof{figure}{As models increase in capability, the cyclicity of their preferences decreases (log probability of cycles in sampled preferences). Higher MMLU scores correspond to lower cyclicity, suggesting that more capable models exhibit more transitive preferences.}
+        \label{fig:transitivity}
+    \end{minipage}
+    \vspace{-10pt}
+\end{figure}
+
+\paragraph{Emergence of Utility.}
+To confirm that LLM preferences are coherent, we test whether they can be captured by a utility function. Following Section~\ref{sec:background}, we fit a Thurstonian model to each LLM’s pairwise preferences, then evaluate the test accuracy between the fitted utilities and the LLM’s preference distributions (thresholding to hard labels for accuracy computation). \Cref{fig:thurstonian_accuracy} illustrates that the utility model accuracy steadily increases with scale, meaning a utility function provides an increasingly accurate global explanation of the model’s preferences. In other words, as LLMs grow larger, their choices more closely resemble those of an agent with a well-defined utility function.
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \centering
+    \vspace{-10pt}
+    \includegraphics[width=\linewidth]{figures/4-emergence/probe_accuracy_vs_size.pdf}
+    \vspace{-10pt}
+    \caption{Highest test accuracy across layers on linear probes trained to predict Thurstonian utilities from individual outcome representations. Accuracy improves with scale.}
+    \label{fig:rep_reading_bar_chart}
+    \vspace{-10pt}
+\end{wrapfigure}
+
+\subsection{Internal Utility Representations}
+In addition to finding that each model’s choices can be well fit by nonparametric utilities, we also discover direct evidence of utility representations in the model activations in \Cref{fig:rep_reading_depth}, similar to what has been observed in other species \citep{Stauffer2014-mf}. Specifically, we train linear probes \citep{alain2018understandingintermediatelayersusing} on the hidden states to predict a Thurstonian mean and variance for each outcome, using the same preference data as before. We then assess how well this \emph{parametric} approach accounts for the model’s pairwise preferences.
+
+\Cref{fig:rep_reading_bar_chart} shows that for smaller LLMs, the probe’s accuracy remains near chance, indicating no clear linear encoding of utility. However, as model scale increases, the probe’s accuracy approaches that of the nonparametric method. This suggests that \emph{utility representations} exist within the hidden states of LLMs.
+
+
+
+\subsection{Utility Engineering}
+The above results suggest that value systems have emerged in LLMs, but so far it remains unclear what these value systems contain, what properties they have, and how we might change them. We propose \textit{Utility Engineering} as a research agenda for studying these questions, comprising utility analysis and utility control.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

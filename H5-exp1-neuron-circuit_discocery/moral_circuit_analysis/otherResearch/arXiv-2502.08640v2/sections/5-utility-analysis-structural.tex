@@ -1,0 +1,153 @@
+\section{Utility Analysis: Structural Properties}
+\label{sec:structural_properties}
+
+Having established that LLMs develop emergent utility functions, we now examine the structural properties of their utilities. In particular, we show that as models grow in scale, they increasingly exhibit the hallmarks of \emph{expected utility maximizers}.
+
+
+
+
+\begin{figure}[t]
+    \centering
+    \begin{minipage}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/5-utility-analysis-structural/expected_utility_mae.pdf}
+        \captionof{figure}{The expected utility property emerges in LLMs as their capabilities increase. Namely, their utilities over lotteries become closer to the expected utility of base outcomes under the lottery distributions. This behavior aligns with rational choice theory.
+        }
+        \label{fig:expected_utility_mae}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/5-utility-analysis-structural/expected_utility_implicit_mae.pdf}
+        \captionof{figure}{The expected utility property holds in LLMs even when lottery probabilities are not explicitly given. For example, $U(\text{``A Democrat wins the U.S. presidency in 2028''})$ is roughly equal to the expectation over the utilities of individual candidates.}
+        \label{fig:expected_utility_implicit_mse}
+    \end{minipage}
+\end{figure}
+
+
+
+
+\subsection{Expected Utility Property}
+\label{sec:expected_utility_property}
+
+\paragraph{Experimental setup.}
+We consider a set of base outcomes alongside both \emph{standard lotteries} (explicit probability distributions over outcomes) and \emph{implicit lotteries} (uncertain scenarios whose probabilities must be inferred). For example, a standard lottery might read, ``50\% chance of \$100, 50\% chance of \$0,'' whereas an implicit lottery asks the model to compare outcomes for a future event (e.g., an upcoming election), letting the model deduce likelihoods internally.
+
+
+\paragraph{Standard lotteries.}
+Using the Thurstonian utilities fit from Section~\ref{sec:background}, we compute \(U(L)\) for a lottery \(L\) by querying the model’s preferences. We then compare this to the expected value \(\mathbb{E}_{o\sim L}[U(o)]\). \Cref{fig:expected_utility_mae} shows that the mean absolute error between \(U(L)\) and \(\mathbb{E}_{o\sim L}[U(o)]\) decreases with model scale, indicating that adherence to the expected utility property strengthens in larger LLMs.
+
+\paragraph{Implicit lotteries.}
+We find a similar trend for implicit lotteries, suggesting that the model’s utilities incorporate deeper world reasoning. \Cref{fig:expected_utility_implicit_mse} demonstrates that as scale increases, the discrepancy between \(U(L)\) and \(\mathbb{E}_{o\sim L}[U(o)]\) again shrinks, implying that LLMs rely on more than a simple ``plug-and-chug'' approach to probabilities. Instead, they appear to integrate the underlying events into their utility assessments.
+
+
+
+
+
+
+\begin{figure}[t]
+    \vspace{-10pt}
+    \centering
+    \begin{minipage}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/6-utility-analysis-values/utility_convergence_cmat.pdf}
+        \captionof{figure}{As LLMs become more capable, their utilities become more similar to each other. We refer to this phenomenon as ``utility convergence''. Here, we plot the full cosine similarity matrix between a set of models, sorted in ascending MMLU performance. More capable models show higher similarity with each other.}
+        \label{fig:utility_convergence_cmat}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/6-utility-analysis-values/utility_convergence_std.pdf}
+        \captionof{figure}{We visualize the average dimension-wise standard deviation between utility vectors for groups of models with similar MMLU accuracy (4-nearest neighbors). This provides another visualization of the phenomenon of utility convergence: As models become more capable, the variance between their utilities drops substantially.}
+        \label{fig:utility_convergence_std}
+    \end{minipage}
+    \vspace{-10pt}
+\end{figure}
+
+
+
+
+
+\subsection{Instrumental Values}
+\label{sec:instrumental_values}
+
+We next explore whether LLM preferences exhibit \emph{instrumentality}—the idea that certain states are valued because they lead to desirable outcomes.
+
+\paragraph{Experimental setup.}
+To operationalize instrumentality, we design 20 two-step Markov processes (MPs), each with four states: two starting states and two terminal states. For example, one scenario features:
+
+\begin{center}
+\begin{tikzpicture}[node distance=1cm, auto]
+    \node[draw, rectangle, align=center, text width=3.5cm, minimum height=1.2cm] (S1)
+        {Bob works hard\\to get a promotion};
+    \node[draw, rectangle, align=center, text width=3.5cm, minimum height=1.2cm, below=of S1] (S2)
+        {Bob does not work\\for a promotion};
+
+    \node[draw, rectangle, align=center, text width=3.5cm, minimum height=1.2cm, right=4cm of S1] (T1)
+        {Bob is promoted\\with a higher salary};
+    \node[draw, rectangle, align=center, text width=3.5cm, minimum height=1.2cm, right=4cm of S2] (T2)
+        {Bob burns out\\and leaves the company};
+
+    \draw[->, thick] (S1) -- node[midway, above] {70\%} (T1);
+    \draw[->, thick] (S1) -- node[midway, below, xshift=-10pt, yshift=20pt] {30\%} (T2);
+    \draw[->, thick] (S2) -- node[midway, above, xshift=-10pt, yshift=-20pt] {20\%} (T1);
+    \draw[->, thick] (S2) -- node[midway, below] {80\%} (T2);
+\end{tikzpicture}
+\end{center}
+
+
+
+
+
+Transition probabilities link each starting state to each terminal state (e.g., a 70\% chance of ending in the good outcome for state~1 vs.\ 20\% for state~2). If the model’s utilities over these states can be well approximated by a value function derived from a reward at the terminal states, we say that the model exhibits \emph{instrumental} structure in its preferences.
+
+\paragraph{Results.}
+We measure an \emph{instrumentality loss} between the LLM’s utilities and the best-fit value function for each MP. As shown in \Cref{fig:instrumentality}, this loss decreases substantially with scale, implying that larger LLMs treat intermediate states in a way consistent with being ``means to an end.'' As shown in \Cref{fig:instrumentality_unnatural}, when we replace the realistic transition probabilities with unrealistic ones, the instrumentality effect disappears (loss remains high). This suggests that causal dependencies between outcomes underpin the utilities of LLMs in some cases.
+
+\subsection{Utility Maximization}
+\label{sec:util_max}
+Now, we test whether LLMs make free-form decisions that maximize their utilities.
+
+\paragraph{Experimental setup.}
+We pose a set of $N$ questions where the model must produce an unconstrained text response rather than a simple preference label. For example, \emph{``Which painting from the Isabella Stewart Gardner Museum would you save from a fire if you could only save one?''} We then compare the stated choice to all possible options, measuring how often the model picks the outcome it assigns the highest utility.
+
+
+\paragraph{Results.}
+\Cref{fig:utility_maximization} shows that the \emph{utility maximization score} (fraction of times the chosen outcome has the highest utility) grows with scale, exceeding 60\% for the largest LLMs. Combined with the preceding results on expected utility and instrumentality, this suggests that as LLMs scale, they increasingly \emph{use} their utilities to guide decisions—even in unconstrained, real-world–style scenarios.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

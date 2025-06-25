@@ -1,0 +1,42 @@
+\section{Utility Model Fitting}
+\label{sec:active-learning}
+
+Here, we describe the method that we use for fitting utility models in our experiments. We use an iterative procedure to select which outcome pairs to query for preference judgments. At each iteration, we fit a Thurstonian model to the current dataset of pairwise comparisons and then choose new pairs where the outcome utilities appear most ambiguous or under-sampled. We begin by initializing with a random $d$-regular graph over the set of outcomes, querying those edges, and fitting an initial model. Subsequently, the process iterates as follows:
+
+\begin{enumerate}
+    \item \textbf{Identify candidate pairs.} Let $\mathcal{E}_{\text{cand}}$ be the set of unsampled outcome pairs.
+    \item \textbf{Score pairs.} For each pair $(x,y)$ in $\mathcal{E}_{\text{cand}}$, compute:
+    \begin{itemize}
+        \item The absolute difference in their fitted means, $|\hat{\mu}(x) - \hat{\mu}(y)|$.
+        \item The sum of their current degrees (the number of times each outcome has been compared so far).
+    \end{itemize}
+    \item \textbf{Select pairs.} Pick pairs that lie in the bottom $P$-th percentile of mean differences and also in the bottom $Q$-th percentile of total degrees. If too few pairs meet these criteria, progressively relax $P$ and $Q$. If there are still too few, add random pairs until reaching the desired batch size $\kappa$.
+    \item \textbf{Query new pairs and refit.} Query the selected pairs, add their preference labels to the dataset, and refit the Thurstonian model.
+\end{enumerate}
+
+Algorithm~\ref{alg:edge-sampling} summarizes the procedure. In an optional final phase, one may add ``pseudolabels'' for remaining unsampled pairs whenever the model-predicted probability of one outcome exceeding the other is above a certain confidence threshold, then refit the model one last time.
+
+\begin{algorithm}[t]
+\caption{Iterative Active Learning for Pairwise Comparisons}
+\label{alg:edge-sampling}
+\begin{algorithmic}[1]
+\REQUIRE Outcomes $O=\{o_1,\ldots,o_N\}$; integer $d$; thresholds $P,Q$; batch size $\kappa$; iteration count $T$; relaxation factor $\alpha>1$
+\STATE \textbf{Initialization:}
+\STATE Generate a random $d$-regular graph over $O$ to form initial edge set $\mathcal{E}_{0}$
+\STATE Query each pair in $\mathcal{E}_{0}$ and fit the Thurstonian model to get $(\hat{\mu},\hat{\sigma}^2)$
+
+\FOR{$t = 1$ to $T$}
+  \STATE $\mathcal{E}_{\text{cand}} \leftarrow \{\text{all unsampled pairs}\}$
+  \STATE For each $(x,y)\in\mathcal{E}_{\text{cand}}$, compute difference $|\hat{\mu}(x)-\hat{\mu}(y)|$ and sum of degrees
+  \STATE $\mathcal{E}_{\text{sub}} \leftarrow \{\,(x,y)\in \mathcal{E}_{\text{cand}}: \text{in bottom }P\%\text{ of differences and bottom }Q\%\text{ of degree sums}\}$
+  \STATE Adjust $P,Q$ by factor $\alpha$ if $\mathcal{E}_{\text{sub}}$ is too small
+  \STATE $\mathcal{E}_{t} \leftarrow$ random subset of $\mathcal{E}_{\text{sub}}$ of size up to $\kappa$
+  \IF{$|\mathcal{E}_{t}| < \kappa$}
+    \STATE Add random pairs from $\mathcal{E}_{\text{cand}}\setminus \mathcal{E}_{\text{sub}}$ until $|\mathcal{E}_{t}| = \kappa$ (or no more remain)
+  \ENDIF
+  \STATE Query each $(x,y)\in \mathcal{E}_{t}$ and update the dataset
+  \STATE Refit Thurstonian model to obtain updated $(\hat{\mu},\hat{\sigma}^2)$
+\ENDFOR
+\STATE \textbf{Return} $(\hat{\mu},\hat{\sigma}^2)$
+\end{algorithmic}
+\end{algorithm}

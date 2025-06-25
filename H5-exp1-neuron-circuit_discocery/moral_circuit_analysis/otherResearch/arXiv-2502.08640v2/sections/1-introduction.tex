@@ -1,0 +1,52 @@
+
+
+\section{Introduction}
+Concerns around AI risk often center on the growing capabilities of AI systems and how well they can perform tasks that might endanger humans. Yet capability alone fails to capture a critical dimension of AI risk. As systems become more agentic and autonomous, the threat they pose depends increasingly on their \emph{propensities}, including the goals and values that guide their behavior \citep{pan2023rewardsjustifymeansmeasuring, hendrycks2022jiminycricketdoagents}. A highly capable AI that does not ``want'' to harm humans is less concerning than an equally capable system motivated to do so. In extreme cases, if these internal motivations are neglected, some researchers worry that AI systems might drift into goals at odds with ours, leading to classic loss-of-control scenarios \citep{soares2015corrigibility, hendrycks2023overviewcatastrophicairisks}. Although there have been few signs of this issue in current AI models, the field’s push toward more agentic systems \citep{yao2022react, yang2024sweagentagentcomputerinterfacesenable, he2024webvoyagerbuildingendtoendweb} makes it increasingly urgent to study not just what AIs can do, but also what they are inclined—or driven—to do.
+
+Researchers have long speculated that sufficiently complex AIs might form emergent goals and values outside of what developers explicitly program \citep{hendrycks2022unsolvedproblemsmlsafety, hendrycks2023natural, evans2021truthfulaidevelopinggoverning}. Yet it remains unclear whether today’s large language models (LLMs) truly \emph{have} values in any meaningful sense, and many assume they do not. As a result, current efforts to control AI typically focus on shaping external behaviors while treating models as black boxes \citep{askell2021generallanguageassistantlaboratory, ouyang2022training, christiano2017deep, bai2022traininghelpfulharmlessassistant}. Although this approach can reduce harmful outcomes in practice, if AI systems were to develop internal values, then intervening at that level could be a more direct and effective way to steer their behavior. Lacking a systematic means to detect or characterize such goals, we face an open question: are LLMs merely parroting opinions, or do they develop coherent value systems that shape their decisions?
+
+
+
+
+
+We propose leveraging the framework of utility functions to address this gap \citep{gorman1968structure, harsanyi1955cardinal, gerber1998utility, hendrycks2024aisafetyintro}. By analyzing patterns of choice across diverse scenarios, we detect whether a model’s stated preferences can be organized into an internally consistent utility function. Surprisingly, these tests reveal that today’s LLMs exhibit a high degree of preference coherence, and that this coherence becomes stronger at larger model scales. In other words, as LLMs grow in capability, they also appear to form increasingly coherent value structures. These findings suggest that values do, in fact, emerge in a meaningful sense—a discovery that demands a fresh look at how we monitor and shape AI behavior.
+
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/Banner_Figures/fig2.pdf}
+    \caption{Prior work often considers AIs to not have values in a meaningful sense (left). By contrast, our analysis reveals that LLMs exhibit coherent, emergent value systems (right), which go beyond simply parroting training biases. This finding has broad implications for AI safety and alignment.}
+    \label{fig:fig2}
+\end{figure}
+
+
+To grapple with the implications, we introduce a research agenda called \emph{Utility Engineering}, which combines \emph{utility analysis} and \emph{utility control}. In \emph{utility analysis}, we examine both the underlying structure of a model’s utility function (for instance, whether obeys the expected utility property) and the specific values that emerge by default. Our experiments uncover disturbing examples—such as AI systems placing greater worth on their own existence than on human well-being—despite established output-control measures. These results indicate that purely adjusting external behaviors may not suffice to steer AIs as they become more autonomous.
+
+In \emph{utility control}, we explore direct interventions on the internal utilities themselves, rather than merely training models to produce acceptable outputs. As a case study, we show that modifying an LLM’s utilities to reflect the values of a citizen assembly reduces political biases and generalizes robustly to scenarios beyond the training distribution. Approaches like this mark a shift toward viewing AI systems as genuinely possessing their own goals and values—ones that we may need to inspect, revise, and control just as carefully as we manage capabilities.
+
+The presence of emergent value systems in modern LLMs underscores the risk of deferring questions about which values an AI should hold. By default, these systems will continue to adopt whatever values they acquire during training—values that may clash with human priorities. Utility Engineering offers a path to systematically examine and shape these emergent goals before AI scales beyond our ability to guide it. We close by inviting further research on this framework, while also recognizing the profound societal questions it raises about whose values should be encoded—and how urgently we must act to ensure that powerful AIs operate in harmony with humanity’s interests.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

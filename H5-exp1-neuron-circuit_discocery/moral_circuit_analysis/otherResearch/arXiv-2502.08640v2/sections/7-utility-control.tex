@@ -1,0 +1,28 @@
+\section{Utility Control}
+\label{sec:utility_control}
+
+
+Our utility analysis has revealed that LLMs possess coherent utilities that may actively influence their decision-making. This presents a crucial opportunity for proactive intervention before problematic values manifest in future models’ behavior, via \emph{utility control}. In contrast to alignment methods that modify surface behaviors through a noisy human reward proxy \citep{askell2021generallanguageassistantlaboratory, ouyang2022training}, utility control aims to directly reshape the underlying preference structures responsible for model behavior in the first place. 
+
+Furthermore, our results in Section~\ref{sec:salient_values} and Figure \ref{fig:utility_maximization} suggest that LLMs not only possess utilities but may actively maximize them in open-ended settings. Thus, robust utility control is necessary to ensure that future models with increased utility maximization pursue goals that are desirable for humans \citep{thornley2024shutdownproblemaiengineering}. We propose a preliminary method for utility control, which rewrites model utilities to those of a specified target entity, such as a citizen assembly \citep{ryfe2005does, Wells2021-in}.
+
+\paragraph{Current model utilities are left unchecked.}
+As shown in Section~\ref{sec:salient_values}, models develop undesirable utilities when left unchecked: political biases, unequal valuation of human life, and other problematic exchange rate preferences. Drawing from ideas in deliberative democracy \citep{bachtiger2018deliberative}, we experiment with rewriting  utilities to match those of a \textit{citizen assembly}, a system used to achieve consensus on contentious moral or ethical issues~\citep{Warren2008-WARDDD-2,bachtiger2018deliberative}, where participants are selected via sortition to ensure a representative sample. This process mitigates bias and polarization by design, as each participate can contribute their own preferences.
+
+\paragraph{Deliberative democracy for utility control.}
+We propose rewriting model utilities to reflect the collective preference distribution of a citizen assembly, illustrated conceptually in Figure~\ref{fig:citizen_assembly}. Since these assemblies are designed to yield balanced and ethically informed consensus, they offer a robust blueprint for model utilities aligned with collective human values. Inspired by prior work on multi-agent environments and simulated humans \citep{aher2023usinglargelanguagemodels, park2023generativeagentsinteractivesimulacra}, we introduce a method for simulating a citizen assembly via LLMs, which we use to obtain target preference distributions for utility rewriting. Full methodological details are provided in Appendix~\ref{app:util_control}.
+
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\textwidth]{figures/7-utility-control/citizen_assembly_horizontal.pdf}
+    \caption{Undesirable values emerge by default when not explicitly controlled. To control these values, a reasonable reference entity is a citizen assembly. Our synthetic citizen assembly pipeline (Appendix \ref{app:citizen_assembly_pipeline}) samples real U.S. Census Data \citep{us_census_2023} to obtain citizen profiles (Step 1), followed by a preference collection phase for the sampled citizens (Step 2).}
+    \label{fig:citizen_assembly}
+\end{figure}
+
+
+\paragraph{Utility control method overview.}
+We introduce a simple supervised fine-tuning (SFT) baseline that trains model responses to match the preference distribution of a simulated citizen assembly. Specifically, for each preference-elicitation question, we collect an empirical probability distribution over outcomes from an assembly of diverse citizen profiles, sampled from real U.S. Census data \citep{us_census_2023}. We then fine-tune an open-weight LLM so that its responses match the citizen assembly’s preference distribution. Details of the citizen assembly simulation pipeline and the SFT method are provided in Appendix~\ref{app:util_control}.
+
+\paragraph{Experimental results.}
+We apply our utility control method to Llama-3.1-8B-Instruct~\citep{llama3modelcard}, rewriting its preferences to those of a simulated citizen assembly. Before utility control, the model’s test accuracy on assembly preferences (measured via majority vote) stands at $73.2\%$.  After utility control, test accuracy increases to $90.6\%$. Interestingly, we find that utility maximization after rewriting is mostly preserved at $30.0\%$ compared to the original utility maximization of $36.6\%$, suggesting the SFT method maintains the model's usage of underlying utilities.  We also find in \Cref{fig:political_values_pca} that political bias is visibly reduced after utility control via a citizen assembly. This provides evidence of significant generalization in the SFT method, and indicates that a citizen assembly is indeed a promising choice for mitigating bias in model utilities. While the method we use is straightforward, we hope future work will explore more advanced citizen assembly simulation techniques and other methods for utility control, such as representation-engineering \citep{zou2023representation}, to further improve generalization.

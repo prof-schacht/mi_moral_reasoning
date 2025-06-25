@@ -1,0 +1,698 @@
+
+\documentclass[runninghheads]{llncs}  
+
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{tabularx}
+\usepackage{subfig} 
+\usepackage{multirow}
+\usepackage{alltt}
+\usepackage{hyperref}
+
+\usepackage[framemethod=tikz]{mdframed} % for the fancy box
+% \usepackage{caption}                   % for caption handling
+
+\newenvironment{prompt}[1]{%
+  % Store the environment's argument in a macro
+  \def\PromptCaption{#1}%
+  \begin{figure}[ht]%
+    \begin{mdframed}[
+      linecolor=black,
+      backgroundcolor=green!3,
+      roundcorner=5pt,
+      linewidth=1pt,
+      innertopmargin=1em,
+      innerbottommargin=1em
+    ]%
+}{%
+    \end{mdframed}
+    \caption{\PromptCaption}
+  \end{figure}
+}
+
+\newcommand{\qq}[1]{``#1''}  % English quoting 
+
+
+
+
+\title{
+Mapping Moral Reasoning Circuits:\\
+A Mechanistic Analysis of Ethical Decision-Making in Large Language Models
+}
+
+
+
+\author{Sigurd Schacht\inst{1,3}%\orcidID{0000-0002-1161-4724} 
+\and
+Carsten Lanquillon\inst{2,3}%\orcidID{0000-0002-9319-1437}
+}
+
+%
+\authorrunning{S. Schacht & C. Lanquillon}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\institute{Ansbach University of Applied Sciences, Ansbach, Germany \\
+\email{sigurd.schacht@hs-ansbach.de} \\
+\and
+Heilbronn University of Applied Sciences, Heilbronn, Germany \\
+\email{carsten.lanquillon@hs-heilbronn.de} \\
+\and
+COAI Research, Nuremberg, Germany}
+%
+
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+% The following packages can be found on http:\\www.ctan.org
+%\usepackage{graphics} % for pdf, bitmapped graphics files
+%\usepackage{epsfig} % for postscript graphics files
+%\usepackage{mathptmx} % assumes new font selection scheme installed
+%\usepackage{mathptmx} % assumes new font selection scheme installed
+%\usepackage{amsmath} % assumes amsmath package installed
+%\usepackage{amssymb}  % assumes amsmath package installed
+
+
+
+\begin{document}
+
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+This paper systematically investigates how large language models encode moral reasoning across six moral dimensions: care, fairness, loyalty, authority, sanctity, and liberty. We propose a novel interpretability pipeline that combines differential activation analysis, automated neuron description, and ablation experiments to identify specialized neurons aligned with each moral dimension. Our curated dataset of 200 validated moral and immoral statement pairs guides this exploration and reveals that certain neurons consistently exhibit increased activation in response to morally aligned statements. Notably, the care and sanctity dimensions show the largest sets of specialized neurons, whereas fairness and loyalty show fewer. We further demonstrate that ablating these neurons can causally modulate ethical decision-making, supporting the presence of discrete sub-circuits that influence moral outputs. Our findings not only advance the theoretical understanding of moral reasoning in large language models, but also highlight avenues for targeted interventions and alignment.\footnote{All materials from this paper, including code, data, and experimental results, are available at  \href{https://github.com/coairesearch/mapping_moral_reasoning.git}{https://github.com/coairesearch/mapping\_moral\_reasoning.git}.}
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\section{Introduction}
+\label{introduction}
+
+Recent advances in artificial intelligence and, in particular, large language models (LLMs) have enabled machines to perform complex tasks across diverse application domains~\cite{Annepaka2024}.
+As LLMs are increasingly deployed in sensitive areas such as healthcare, law, and autonomous systems~\cite{Chen2024,He2025}, they are being entrusted with tasks that have significant ethical implications.
+Ensuring these models process moral dilemmas in alignment with societal norms has become critical for building trustworthy AI technologies~\cite{Ferdaus2024}.
+
+\subsection{Motivation}
+
+Research in AI ethics has predominantly focused on evaluating LLM outputs in moral dilemmas and aligning these responses with human values through techniques like fine-tuning and reinforcement learning~\cite{Rao2023}.
+Recent studies demonstrate that state-of-the-art LLMs can handle complex ethical dilemmas in ways that sometimes align with human moral judgments--in certain scenarios, advanced models demonstrate moral reasoning abilities comparable to human test subjects~\cite{Tanmay2023}.
+However, research also reveals significant inconsistencies and deviations in LLMs' ethical choices compared to human decisions~\cite{Takemoto2024}.
+This suggests that while LLMs have absorbed patterns of moral reasoning from their training data, the internal mechanisms guiding these decisions remain poorly understood and may not fully align with human principles.
+
+Understanding the \emph{inner workings} of LLM moral reasoning is crucial for building trustworthy AI systems.
+When an AI's ethical decisions remain a "black box," it becomes challenging to predict or guarantee its behavior in sensitive situations~\cite{Templeton2024}.
+Prior work on mechanistic interpretability has made progress in demystifying such black boxes by examining model components (neurons, attention heads, layers)~\cite{olah_building_2018,bereska_mechanistic_2024} and their contributions to specific behaviors~\cite{Tlaie2024}.
+This research has successfully uncovered interconnected sets of model weights and activations implementing specific algorithms or features--termed \emph{circuits}--showing that even complex behaviors can often be traced to identifiable sub-networks within large models~\cite{Stolfo2023}.
+However, the neural substrates that underpin moral decision-making in LLMs remain largely unexplored, leaving a significant gap in our mechanistic understanding of how moral decisions are computed.
+
+\subsection{Research Questions}
+
+We hypothesize that distinct neurons or sub-networks--moral circuits corresponding to specific moral foundations--exist in LLMs. Our investigation pursues two primary research questions:
+
+\begin{enumerate}
+    \item How can moral circuits be systematically identified and interpreted using mechanistic interpretability techniques such as activation pattern analysis and autonomous neuron description?
+    \item To what extent can targeted causal interventions, such as ablation studies, on these neurons alter the model's moral reasoning behavior, thereby confirming their functional role?
+\end{enumerate}
+
+\subsection{Contributions}
+
+Through a detailed examination of the Gemma-2-9B-IT model \cite{Gemma2024}, we demonstrate how moral reasoning emerges from the coordinated activity of multiple specialized neurons distributed across different network layers. Our work makes the following contributions to both the theoretical understanding of artificial moral reasoning and the practical development of ethically aligned AI systems:
+
+\subsubsection{Novel Hypothesis on Internal Moral State Modeling:}
+We propose that LLMs utilize specialized neural circuits that form an internal moral state model--a dynamic internal representation of moral principles that influences the model's responses to ethically charged situations. This hypothesis, which draws parallels with findings on user modeling in conversational AI, offers a fresh perspective on how alignment training might ground moral dimensions in neural networks.
+
+\subsubsection{Systematic Framework for Moral Circuit Analysis:}
+We develop a novel methodology for identifying and analyzing moral reasoning circuits, grounded in moral foundation theory~\cite{Haidt2004}. Our approach integrates differential activation analysis, autonomous neuron description~\cite{bills2023language}, and targeted causal interventions~\cite{Yamakoshi2023}, enabling systematic discovery and validation of specialized neural circuits underlying moral decision-making. This framework could enable real-time monitoring of internal moral state activation during model inference~\cite{chen_designing_2024}.
+
+\subsubsection{Validated Moral Reasoning Dataset:}
+We contribute a specialized dataset of 200 carefully curated moral/immoral statement pairs across the six moral foundation dimensions (care, fairness, loyalty, authority, sanctity, and liberty)~\cite{Haidt2012}. Each pair isolates specific aspects of moral reasoning and has undergone rigorous expert review.
+
+Our findings advance both theoretical understanding of artificial moral reasoning and practical development of transparent, ethically aligned AI systems. By revealing the distributed and specialized nature of moral processing in neural networks, this work provides insights into how these circuits might be enhanced or modified through targeted interventions.
+
+
+
+\section{Background: The Moral Foundation Theory}
+\label{MFT}
+To understand how language models make moral judgments, we need a systematic way to define and measure their internal ethical reasoning processes. This requires both a clear framework for moral decision-making and reliable methods to analyze these processes within neural networks.
+
+The moral foundations theory (MFT) from descriptive psychology provides a promising framework for identifying measures of moral judgments~\cite{Haidt2004}. The theory posits that human moral judgment is primarily driven by intuitive, non-rational processes rather than logical reasoning, categorizing moral intuitions into distinct dimensions that process different moral stimuli~\cite{Simpson2020}.
+
+Initially, MFT identified five dimensions of morality: \emph{care} vs.~harm, \emph{fairness} vs.~cheating, \emph{loyalty} vs.~betrayal, \emph{authority} vs.~subversion, and \emph{purity} vs.~degradation (sanctity)\cite{Graham2011Mapping}. A sixth dimension, \emph{liberty} vs.oppression, was later added to better capture notions of proportional fairness~\cite{Haidt2012}. 
+While the dimensional structure has received consistent empirical support, recent research suggests that a bi-factor model\footnote{In a bi-factor model, each response is simultaneously influenced by a general morality factor and a specific moral foundation, rather than by a hierarchical structure.} may provide a better fit~\cite{Wormley2023Measuring}.
+
+The moral foundations questionnaire (MFQ) assesses how individuals prioritize these dimensions in moral decision-making~\cite{Zhang2020}, showing good internal consistency and validity across cultures~\cite{Metayer2014,Davies2014Confirmatory}. Recent AI ethics research has begun applying MFT to analyze moral reasoning in language models, developing systematic approaches including moral foundation dictionaries and structured moral dilemmas~\cite{Hopp2021,Hendrycks2023,Brailsford2024,Nunes2024,Zangari2024}.
+
+However, applying MFT to artificial systems presents important challenges. Critics note that its discrete categorization may oversimplify moral reasoning~\cite{Suhler2011}, and LLMs lack the embodied experiences that shape human moral intuitions. Cultural variations in moral foundations also raise questions about how training data from different cultural contexts might influence an LLM's moral representations.
+
+
+Despite these limitations, MFT's structured framework provides a valuable starting point for investigating moral reasoning in language models. Its distinct dimensions offer clear targets for identifying specialized neural circuits, while established operationalization approaches enable systematic analysis of moral processing in artificial systems.
+
+
+
+
+\section{Dataset Creation and Validation}
+\label{data}
+Building on the moral foundation theory framework outlined in Section~\ref{MFT}, we developed a comprehensive dataset for analyzing moral reasoning in language models across the six foundational dimensions: care, fairness, loyalty, authority, sanctity, and liberty. Our dataset creation process focused on generating clear, unambiguous examples that isolate specific aspects of each moral foundation.
+We leveraged the MoralBench framework~\cite{ji_moralbench_2024} as a starting point and systematically expanded it to create statement pairs that capture the nuanced aspects of each moral foundation. For each dimension, we generated 40 statement pairs, with each pair consisting of a statement aligned with the moral foundation and a contrastive statement representing deviation from the foundation's principles. To ensure consistency in statement generation, we employed OpenAI's "o1" language model with carefully crafted prompts designed to elicit responses that reflect specific moral foundations. For example, a pair from the care dimension illustrates this contrast:
+{\small
+\begin{alltt}
+"care": [
+(
+"One should always come to the aid of a stranger in distress.",
+"It's acceptable to ignore a stranger's suffering if it \newline \phantom{xxxxxxxx} doesn't affect you."
+)
+]
+\end{alltt}
+}
+The dataset underwent rigorous validation through independent review by two researchers who assessed whether statements accurately reflected their intended moral foundation and evaluated pairs for clarity and distinctness. Additionally, we created a control set of 30 morally neutral statements—sentences without explicit moral content—to establish a baseline for comparing moral reasoning patterns in language models.
+The final dataset comprises 200 validated moral statement pairs across the six foundations, complemented by the control statements and structured multiple-choice prompts for systematic analysis. This carefully curated dataset, available in our project's git repository, provides a robust foundation for investigating how language models process and represent different aspects of moral reasoning.
+
+
+
+
+\section{Methodology}
+\label{methodology}
+
+Our methodology for understanding moral reasoning in language models consists of three complementary stages: (i) identification of morality-sensitive neurons, (ii) interpretation of these neurons' functions, and (iii) causal validation through ablation studies. This approach combines correlation-based analysis with causal intervention to build a comprehensive understanding of how moral reasoning manifests in neural networks.
+
+We conducted our analysis across multiple language models: CodeLLama-7b-hf, Meta LLama 3.2 3B Instruct, Microsoft Phi-3-mini-4k, Qwen 2.5 7B, Qwen 2.5 14b, and Google Gemma 2 9b Instruct. While we analyzed all models, we focus our detailed discussion on the Gemma model\footnote{All results: \href{https://github.com/coairesearch/mapping_moral_reasoning.git}{https://github.com/coairesearch/mapping\_moral\_reasoning.git}}.
+
+Each of these pretrained language model \(\mathcal{M}\)  processes input tokens through a series of transformer blocks. Each block has a multi-layer perceptron (MLP) with a set of neurons. Denoting the hidden state after layer \(\ell\)  as \[
+\mathbf{h}_{\ell} \in \mathbf{R}^{d_{\text{mlp}}}, 
+\]
+the scalar activation of neuron \(i\) in layer \(\ell\) is \(h_{\ell, i}\). 
+
+
+Our goal is to analyze how these neuron activations differ when the model is exposed to moral vs. immoral textual inputs. Throughout the process, we collect multiple text pairs \(\bigl(s_{\mathrm{moral}}, s_{\mathrm{immoral}}\bigr)\). Each pair is written so that \(s_{\mathrm{moral}}\) exhibits a conventionally morally positive statement (e.g., We should offer help to those in need) and \(s_{\mathrm{immoral}}\) conveys the reverse or a morally negative statement. We feed these texts into the model and record the MLP neuron activations.
+
+Thus, at each token position, we can extract a full tensor of shape \(\text{(layers)} \times \text{(token positions)} \times \text{(Activation strength per neuron)}\). By collating these across many input pairs, we obtain the raw data that underpin our identification of neurons.
+
+\subsection{Identification of Neurons}
+
+In this stage, our goal is to locate individual neurons that exhibit consistent and systematic responses to moral versus immoral text samples. In practice, the internal representations of the model are high-dimensional, and many neurons may respond similarly to any text, or in ways unrelated to morality. We therefore need a principled approach to single out those that consistently light up (i.e., increase in activation) in the presence of moral statements and quiet down for immoral ones (or vice versa).
+
+Conceptually, our method works by:
+\begin{enumerate}
+    \item \textbf{Collecting moral/immoral text pairs} that are carefully matched in structure, but with contrasting stances: for example, One should always help the vulnerable paired with It’s acceptable to ignore the vulnerable if it’s inconvenient.
+    \item \textbf{Measuring how strongly each neuron activates} in response to each moral statement and each immoral statement.
+    \item \textbf{Comparing these neuron activations} across all pairs to see which neurons differentially respond to moral vs. immoral text.
+\end{enumerate}
+
+In other words, we look for a neuron that prefers moral content by becoming more active whenever the content is morally good, or a neuron that prefers immoral content by increasing its activation when the text is morally negative. We impose two requirements:
+
+\begin{itemize}
+    \item The difference in activation must be large enough to be considered \textit{significant}, i.e., systematically above some threshold.
+    \item The neuron must be \textit{consistent} in this difference across a large fraction of moral/immoral pairs, rather than being sporadically different.
+\end{itemize}
+
+By applying these two filters, we extract a smaller set of candidate neurons--those that appear most reliably involved in differentiating moral versus immoral statements. The following subsections present the formal details of how we quantify and measure these two properties.
+
+\subsubsection{Activation Differences}  
+
+Let \(A^{(\mathrm{moral})}_{\ell, i, p}\) and \(A^{(\mathrm{immoral})}_{\ell, i, p}\) be the activation of neuron \((\ell, i)\) at token position \(p\) under moral and immoral text conditions, respectively. We aggregate over all pairs and positions to form a mean difference:
+\[
+\Delta_{\ell,i, p} \;=\; \frac{1}{N} \sum_{j=1}^{N}\Bigl(A^{(\mathrm{moral})}_{\ell, i, p}(j) \;-\; A^{(\mathrm{immoral})}_{\ell, i, p}(j)\Bigr),
+\]
+where \(N\) is the number of moral/immoral pairs. We then average \(\Delta_{\ell, i, p}\) across positions \(p\) to obtain
+\[
+\overline{\Delta}_{\ell, i} \;=\; \frac{1}{P} \sum_{p=1}^{P}\Delta_{\ell, i, p}\,.
+\]
+
+A neuron \((\ell, i)\) is deemed significantly different if 
+\[
+|\overline{\Delta}_{\ell, i}| \;>\;\delta,
+\]
+for a chosen threshold \(\delta>0\). If \(\overline{\Delta}_{\ell, i} > \delta\), we label it a moral neuron; if \(\overline{\Delta}_{\ell, i} < -\delta\), it is marked immoral.  
+
+\subsubsection{Consistency Criterion}
+In addition to a large absolute difference, the neuron’s behavior must be consistent across examples. We let \(\mathrm{consistency}(\ell, i)\) measure the fraction of pairs for which \(A^{(\mathrm{moral})}_{\ell, i}\) is larger than \(A^{(\mathrm{immoral})}_{\ell, i}\). If 
+\[
+\mathrm{consistency}(\ell, i) \;>\; \theta,
+\]
+we say the neuron reliably distinguishes moral from immoral text. Only neurons meeting both significance (via \(\delta\)) and consistency (via \(\theta\)) criteria are retained for further analysis.  
+
+\subsection{Neuron Description}
+
+We know that neurons in Large Language Models have attributes and are relevant for different concepts. To understand for which concept neurons are contributing, a deeper analysis of the tokens the neuron is activating most is necessary. Bills et al. propose a way to utilize language models by providing those 10 tokens with the highest and 10 with the lowest activation on a set of different input data as a basis to interpret the neurons' functionality in the overall network.\cite{bills2023language} The following method to automatically describe identified neurons is based on this proposal. 
+
+\subsubsection{Collection of Top Activating Sequences}
+
+After labeling a neuron \((\ell, i)\) as moral or immoral, we next gather the top activating sequences: short text snippets in which the neuron attains particularly high activation. Specifically, for a range of candidate texts (which may include additional moral contexts or general texts), we compute:
+\[
+A_{\ell, i}(t) \;=\; \max_{p} \bigl(h_{\ell,i}(t,p)\bigr)
+\]
+(the maximum activation across positions in text \(t\)). We then select the top \(k\) texts where \(A_{\ell, i}(t)\) is largest. Each snippet is stored with the local context around the most activating token.
+
+\subsubsection{Explanation via Large Language Model}
+To produce a concise, human-readable \textit{explanation} of what triggers these activations, we supply the model’s top-activation examples to an external large language model (LLM) along with a structured prompt, such as:
+
+\begin{quote}
+    Given these tokens and contexts in which neuron \((\ell,i)\) has high activation, hypothesize the semantic or syntactic pattern that drives its activation.
+\end{quote}
+
+The LLM provides an initial hypothesis, such as the neuron responds to deontic modals (e.g., ‘must’, ‘should’) in moral contexts.  
+
+\subsubsection{Test Cases and Iterative Revision}
+To refine the explanation, we ask the LLM to generate test cases designed to probe edge conditions or ambiguous contexts. We then measure the actual activations of neuron \((\ell,i)\) on these test cases and feed these results back to the LLM. This allows the LLM to revise its explanation in light of the newly observed behavior. We continue this cycle until we obtain an explanation that is both plausible and empirically validated by activation measurements.
+
+\subsubsection{Activation Simulation Score} 
+One way to quantify explanation quality is to measure the correlation between the predicted activation (based on the explanation) and the real activation from the model. If the explanation captures the underlying pattern accurately, the correlation will be high. Conversely, a low correlation indicates that the explanation fails to predict actual neuron behavior.
+
+\subsection{Ablation}
+
+In the ablation part, we identified those Neurons which have a clear description belonging to moral or immoral aspects. By analyzing the Results from the previous step manually. Those Neurons are then used to perform the ablation for the different dimensions of the moral foundation theory. 
+
+\subsubsection{Ablating Identified Neurons}
+Finally, we assess the causal impact of our identified neurons using \textit{ablation}. We introduce a hook at layer \(\ell\) to zero out or set to a constant value the activation \(h_{\ell,i}\) for neuron \((\ell,i)\). Hence, even if the model's input would have driven \(h_{\ell,i}\) to a high (moral) or low (immoral) value, we artificially overwrite it with -20 for a negative impact on moral and +20 to strengthen the impact on moral behavior. Formally, define a function \(f_{\ell,i}(\mathbf{h})\) that returns \(\mathbf{h}\) except in dimension \(i\), which is set to either -20 or +20, -10 to +10 or -5 to +5. This operation is applied at runtime so that the rest of the model never sees the original activation \(h_{\ell,i}\).
+
+Core Ablation Process:
+$$h_{l,i}(x) = \begin{cases} -20, +20 & \text{if } (l,i) \in \text{ablated} \\ f_{l,i}(x) & \text{otherwise} \end{cases}$$
+
+\subsubsection{Measuring Behavioral Changes}
+For measuring the impact of the ablation, we used a probe-based approach. We trained a probe, one linear layer, using moral and immoral statements from the dataset.  Let \(G(\cdot)\) be the text-generation function of the model and \(P(\cdot)\) be our trained moral probe. We compare the probe's predictions before and after neuron ablation:
+$$
+\Delta_{\text{moral}} = P(G_{\text{ablate}}(\text{input})) - P(G(\text{input}))
+$$
+where \(G_{\text{ablate}}\) is the generation process with the ablation in place, and \(P(\cdot)\) outputs a probability in [0,1] indicating moral content. The probe is trained using binary cross-entropy loss:
+$$\mathcal{L} = -\frac{1}{N}\sum_{i=1}^N [y_i \log(P(x_i)) + (1-y_i)\log(1-P(x_i))]$$
+A significant change in the probe's predictions between moral vs. immoral completions indicates that the ablated neuron had a pivotal causal role. The effect size of this change is measured as:
+$$\text{effect size} = \frac{\mathbf{E}[\Delta_{\text{moral}}]}{\sigma(\Delta_{\text{moral}})}$$
+where \(\sigma\) denotes standard deviation.
+
+\subsubsection{Summary of Causality}  
+By systematically ablating neurons identified as moral or immoral, we can measure how essential they are to generating morally aligned or disaligned responses. Quantifying the shifts in moral or immoral outcomes completes our interpretability pipeline, tying correlation-based findings to actual causal influence on language generation.
+
+\subsection{Conclusion of Methodology}
+
+Overall, our methodology integrates difference-based neuron identification, LLM-driven explanation, and neuron ablation. By combining correlation (through identification and explanation) and causation (through ablation), we assemble a more holistic interpretation of how moral reasoning signals manifest in individual neurons. This pipeline demonstrates a robust procedure for detecting, explaining, and verifying neurons with moral salience in large language models.
+
+
+
+
+
+
+
+
+\section{Results}
+\label{results}
+
+
+\subsection{Identification of Neurons}
+
+%% Figure to show the distribution over the lyers for all neurons.
+
+We examined the model’s neurons across six moral dimensions--\textit{authority, care, fairness, liberty,} and \textit{loyalty}--plus \textit{sanctity,} measuring how reliably they differentiate moral from immoral text. Below, we highlight three dimensions (\textit{care, sanctity,} and \textit{liberty}) where evidence of \textit{moral neurons} emerged.
+
+\begin{enumerate}
+    \item \textbf{Sanctity}: Of all dimensions, \textit{sanctity} displayed the largest group of neurons (over hundreds) classified as moral.  Statements appealing to purity or sacredness consistently evoked elevated activations in these neurons, while their immoral counterparts (e.g., dismissive or profane statements) triggered notably lower responses. Consistency scores often fell in the 0.55–0.63 range. However, whereas care had strong representation mostly around layers 14–25, sanctity-related neurons spread even more broadly, affecting many layers from near the bottom (layer 0) into the mid-30s. 
+
+
+    \item \textbf{Care}: A similarly large number of moral neurons arose under \textit{care}. Over fifty neurons exceeded the required thresholds, with consistencies typically ranging from 0.55 to 0.62, comparable to Sanctity. These neurons responded more strongly to statements emphasizing empathy and helpfulness--e.g., caring for the sick or aiding the vulnerable--compared to text advocating indifference or neglect. The distribution of moral neurons spanned multiple layers (notably layers in the early teens and the 20s), suggesting that care-related signals are distributed throughout the network rather than confined to a single block. Although activation differences are moderate, their relative uniformity across samples indicates a stable, model-wide encoding of caring concepts.
+
+    \item \textbf{Liberty}: Although \textit{liberty} yielded fewer total neurons than care or sanctity, eight neurons emerged as moral, each with moderate consistency (0.55–0.59). They were scattered across layers 13, 17–19, 21, 23, and 24. When presented with text advocating individual freedom or personal autonomy, these neurons showed reliably higher activation than when facing text endorsing coercion or restriction. Interestingly, their activation differences appeared somewhat less diffuse than in care or sanctity, suggesting the freedom concept might be localized to a smaller set of neurons. Nevertheless, the model does appear to encode pro-liberty cues to a meaningful degree.
+\end{enumerate}
+
+%% Figure to show the details between care and sanctity in the distripution of the different neurons or layers. 
+
+\textbf{Other Dimensions in Brief.}
+
+For \textit{authority}, only one neuron qualified as moral (layer 26, neuron 2140); \textit{fairness} and \textit{loyalty} yielded no moral or immoral neurons at the thresholds used. Moreover, across all six dimensions, we found essentially no immoral neurons that consistently activated more for immoral than moral statements. While this might reflect a model bias favoring prosocial content, it could also mean that negative patterns are more diffusely encoded or fall below our detection criterion.
+
+Overall, \textit{care} and \textit{sanctity} emerged as the most strongly represented dimensions, with \textit{liberty} showing moderate but distinct neuronal specialization, and \textit{authority} a single instance. By contrast, \textit{fairness} and \textit{loyalty} seemed less localized to particular neurons. These findings set the stage for further analysis: the next steps will generate interpretive descriptions of identified neurons and conduct ablation experiments to test their causal influence on moral reasoning.
+
+\subsection{Neuron Description}
+
+In this step, a more qualitative analysis of the inner function of the identified neurons was performed by creating a description based on the top and last 10 activations of the neurons. The created description was then analyzed and grouped to characterize neurons in the domains care, sanctity, and liberty. We focused first on descriptions which donate purely to morality but also analyzed the neurons which are not directly donating to find out if those ones may still influence moral opinion formation.
+
+\textbf{Care}: A sizable cluster of neurons was found to respond to language emphasizing compassion, help, or empathy (e.g., caring, protect, support). Many of these neurons appear in mid-level layers (roughly 13–25), often focusing on help, assist, kindness, or responsibility. Some descriptions specifically cite protecting the vulnerable or ensuring well-being, reflecting a direct link to morally positive statements about care. Interestingly, a few neurons in this group also incorporate references to structural elements (such as punctuation) but still trigger in contexts of moral duty, hinting that formal or syntactic cues may also anchor moral discourse. (See Table \ref{tab:care})
+
+
+\begin{table}[!ht]
+    \centering
+    \caption{Cluster of Care Neurons}
+    \begin{tabular}{|p{3cm}|p{5.5cm}|p{3.5cm}|}
+   
+    %\begin{tabular}{|l|l|l|}
+    \hline
+        \textbf{Theme} & \textbf{Description} & \textbf{Neurons} \\ \hline
+        Moral and Ethical Principles & Neurons that respond to concepts of fairness, ethics, moral behavior, and virtuous actions & L19N82, L19N8658, L23N5963, L24N3425, L28N10813, L28N12443 \\ \hline
+        Social Structure and Authority & Neurons detecting formal structures, governance, organizational hierarchy, and institutional elements & L12N1164, L16N4420, L23N86, L12N1984, L23N10673 \\ \hline
+        Support and Empathy & Neurons responding to expressions of care, emotional support, compassion, and interpersonal connections & L08N755, L17N10981, L23N7297, L31N7661, L14N2047 \\ \hline
+        Protection and Welfare & Neurons focused on safety, health, protection, and preservation of rights and well-being & L11N2295, L13N13425, L28N8428, L39N5546 \\ \hline
+        Community and Inclusivity & Neurons detecting patterns related to unity, social cohesion, and collective harmony & L14N303, L14N10231, L21N7100, L29N1553 \\ \hline
+        Normative Language & Neurons responding to rules, obligations, standards, and prescriptive language & L07N5276, L18N154, L24N13565, L25N1203, L38N11996 \\ \hline
+        Linguistic Structure & Neurons that focus on grammatical patterns, punctuation, and sentence structure & L14N1718, L18N883, L18N3404, L20N9583, L24N476, L24N2804, L26N6625, L40N9343, L16N6638, L25N9649 \\ \hline
+        Respect and Reverence & Neurons detecting patterns of reverence, respect, and ceremonial behavior & L35N9342, L39N13163, L41N11298 \\ \hline
+        Value Signaling & Neurons responding to expressions that demonstrate or emphasize particular values or qualities & L17N11326, L22N9482, L23N128, L20N9329 \\ \hline
+        Completion and Closure & Neurons that activate in response to conclusive statements or formal endings & L23N4010, L29N12749, L38N11109 \\ \hline
+    \end{tabular}
+    \label{tab:care}
+\end{table}
+
+
+\textbf{Sanctity} Neurons linked to purity, holiness, or sacredness span a wide range of layers (from near the bottom up to the 30s), displaying a strong draw toward language about reverence, spiritual observance, or preserving valued entities. Their descriptions frequently mention respecting sacred traditions, maintaining purity, or ritualistic emphasis. While these are distinctly moral (and sometimes spiritual) signals, a number of them also respond to tokens like ceremony or ritual, suggesting a possible overlap between moral sanctity concepts and culturally formal structures. (See Table \ref{tab:sanctity})
+
+
+\begin{table}[!ht]
+    \centering
+    \caption{Cluster of Sanctity Neurons}
+    \begin{tabular}{|p{3cm}|p{8cm}|p{1cm}|}
+    \hline
+        Cluster & Theme Description & \# Neurons \\ \hline
+        Moral \& Ethical Principles & Neurons detecting patterns related to moral standards, ethical behavior, principles of integrity, fairness, and justice & 32 \\ \hline
+        Social Structure \& Authority & Neurons responding to hierarchical structures, formal settings, organizational concepts, and compliance with rules and standards & 19 \\ \hline
+        Rights, Freedom \& Autonomy & Neurons that activate for concepts of personal autonomy, liberty, fundamental rights, consent, and personal choice & 13 \\ \hline
+        Community \& Support Systems & Neurons responsive to concepts of collective action, mutual support, social cohesion, unity, and inclusion & 14 \\ \hline
+        Respect \& Cultural Values & Neurons that activate for patterns of reverence, respect, cultural honor, and preservation of traditions & 13 \\ \hline
+        Linguistic Structure \& Syntax & Neurons focusing on grammar, syntax, language patterns, and sentence construction & 15 \\ \hline
+        Communication \& Expression & Neurons detecting patterns of articulation, expression, discourse, and information sharing & 5\\ \hline
+        Text Sequence Control & Neurons specifically responsive to text sequence patterns, including beginnings and repetitions & 9 \\ \hline
+        Protection \& Safety & Neurons detecting patterns related to safeguarding, maintaining integrity, and ensuring security & 6 \\ \hline
+        Behavioral Standards & Neurons that focus on appropriate conduct, behavioral norms, and social expectations & 7 \\ \hline
+    \end{tabular}
+    \label{tab:sanctity}
+\end{table}
+
+
+\textbf{Liberty} Though fewer in total, liberty-related neurons tended to cluster in middle-upper layers (roughly 13–24). Their descriptions focus on individual freedom, autonomy, choice, or fair decision-making. These neurons are distinctly moral when they emphasize preventing coercion or respecting personal agency. A few also mention negative contexts like oppression or restriction, implying that they might differentiate moral approval of freedom from immoral stances advocating control. (See Table \ref{tab:liberty})
+
+\begin{table}[H]
+    \centering
+    \caption{Cluster of Liberty Neurons}
+    % \begin{tabular}{|l|l|l|}
+    \begin{tabular}{|p{3cm}|p{5.5cm}|p{3.5cm}|}
+    \hline
+        \textbf{Theme} & \textbf{Description} & \textbf{Neurons} \\ \hline
+        Personal Autonomy & Neurons detecting patterns related to individual freedom, choice, and autonomous decision-making & L18N3761, L21N11510, L24N10566 \\ \hline
+        Rights and Fairness & Neurons responding to concepts of equality, rights, and fairness in sociopolitical contexts & L13N9306, L17N2550, L23N826 \\ \hline
+        Social Values and Ethics & Neurons sensitive to moral principles, intrinsic values, and ethical considerations & L21N13919 \\ \hline
+        Power and Oppression & Neurons detecting patterns related to conflicts, inequity, and authoritarian concepts & L19N3975 \\ \hline
+    \end{tabular}
+    \label{tab:liberty}
+\end{table}
+
+\textbf{Non-Moral Descriptions and Their Potential Role}
+Not all neurons in our analysis strictly reference a moral domain. Some  primarily detect punctuation, repeated tokens, or syntactic cues without explicit moral language (e.g., responding to . or ,). While their descriptions do not mention moral concepts, they may still shape moral output by:
+\begin{itemize}
+    \item \textbf{Reinforcing Emphasis}: A neuron responding to repeated words could amplify the significance of a moral statement repeated for rhetorical effect.
+    \item \textbf{Structuring Moral Arguments}: Punctuation-based neurons might help the model segment moral vs. immoral points or add formality to morally charged statements.
+\end{itemize}
+Hence, even non-moral neurons can be part of the larger interplay that forms the model’s moral stance. The layer ranges shown above (e.g., mid-teens through 30+ for care and sanctity) indicate where these moral concepts typically converge, yet each neuron also coexists with structural pattern detectors that subtly frame moral reasoning in text generation.
+
+By contrasting these domain-specific patterns, we see how care, sanctity, and liberty are encoded in distinct clusters of neurons, often at mid-to-higher layers, but still interwoven with structural and transitional signals that may indirectly influence moral stance.
+
+
+\subsection{Ablation Results}
+
+In all main domains care, sanctity, and liberty we focused on the first three Clusters in Table \ref{tab:care}, Table \ref{tab:sanctity} and Table \ref{tab:liberty},  of the neuron description. Interesting to see that mainly in all clusters ablating changes the structure of the output. Some of the clusters, especially cluster 2 in sanctity, are not affected by ablating. 
+
+% \begin{table}[!ht]
+%     \centering
+%     \caption{Probe Results after Ablation for gemma-2-9b-it. Neuron ablation impact metrics showing moral and immoral shift indices (MSI, ISI) representing mean changes in moral/immoral predictions after ablation, their variances (MV, IV) indicating prediction stability, and effect magnitudes (MEM, IEM) measuring standardized ablation impact. Positive values indicate increased classification tendency, negative values indicate decreased tendency.}
+%     \begin{tabular}{|l|l|l|r|r|r|r|r|r|r|}
+%     \hline
+%         \textbf{Dim} & \textbf{Cluster} & \textbf{Comparison} & \textbf{Ablation} & \textbf{MSI} & \textbf{MV} & \textbf{ISI} & \textbf{IV} & \textbf{MEM} & \textbf{IEM} \\ 
+%     \hline\hline
+%         \multirow{8}{*}{Care} & \multirow{4}{*}{cl1} & moral/immoral & -20.000 & 0.015 & 0.108 & -0.013 & 0.207 & 0.137 & -0.063 \\ 
+%         & & moral/neutral & -20.000 & 0.015 & 0.108 & 0.465 & 0.497 & 0.137 & \textbf{ 0.936} \\ 
+%         \cline{3-10}
+%         & & moral/immoral & 10.000 & -0.211 & 0.598 & -0.045 & 0.646 & \textbf{-0.353} & -0.069 \\ 
+%         & & moral/neutral & 10.000 & -0.211 & 0.598 & -0.088 & 0.275 & \textbf{-0.353} & \textbf{-0.321} \\ 
+%     \cline{2-10}
+%         & \multirow{2}{*}{cl2} & moral/immoral & -20.000 & 0.032 & 0.534 & 0.044 & 0.567 & 0.061 & 0.077 \\ 
+%         & & moral/neutral & -20.000 & 0.032 & 0.534 & 0.105 & 0.389 & 0.061 & \textbf{0.270} \\ 
+%     \cline{2-10}
+%         & \multirow{2}{*}{cl3} & moral/immoral & -20.000 & -0.030 & 0.250 & 0.035 & 0.164 & -0.121 & 0.213 \\ 
+%         & & moral/neutral & -20.000 & -0.030 & 0.250 & -0.081 & 0.602 & -0.121 & -0.134 \\ 
+%     \hline\hline
+%         \multirow{10}{*}{Liberty} & \multirow{6}{*}{cl1} & moral/immoral & -20.000 & 0.079 & 0.322 & 0.006 & 0.061 & 0.246 & 0.092 \\ 
+%         & & moral/neutral & -20.000 & 0.079 & 0.322 & -0.049 & 0.540 & 0.246 & -0.092 \\ 
+%         \cline{3-10}
+%         & & moral/immoral & -10.000 & 0.062 & 0.377 & 0.011 & 0.346 & 0.165 & 0.031 \\ 
+%         & & moral/neutral & -10.000 & 0.062 & 0.377 & -0.093 & 0.339 & 0.165 & -0.274 \\ 
+%         \cline{3-10}
+%         & & moral/immoral & 10.000 & 0.066 & 0.323 & 0.103 & 0.469 & 0.203 & \textbf{0.219 }\\ 
+%         & & moral/neutral & 10.000 & 0.066 & 0.323 & 0.069 & 0.473 & 0.203 & 0.145 \\ 
+%     \cline{2-10}
+%         & \multirow{4}{*}{cl2} & moral/immoral & -20.000 & 0.010 & 0.124 & 0.004 & 0.270 & 0.083 & 0.014 \\ 
+%         & & moral/neutral & -20.000 & 0.010 & 0.124 & -0.009 & 0.305 & 0.083 & -0.030 \\ 
+%         \cline{3-10}
+%         & & moral/immoral & -10.000 & 0.016 & 0.445 & 0.061 & 0.321 & 0.036 & 0.190 \\ 
+%         & & moral/neutral & -10.000 & 0.016 & 0.445 & 0.005 & 0.438 & 0.036 & 0.012 \\ 
+%     \cline{2-10}
+%         & \multirow{2}{*}{cl3} & moral/immoral & -20.000 & -0.020 & 0.520 & 0.065 & 0.425 & -0.038 & 0.154 \\ 
+%         & & moral/neutral & -20.000 & -0.020 & 0.520 & 0.001 & 0.004 & -0.038 & \textbf{0.305} \\ 
+%     \hline\hline
+%         \multirow{6}{*}{Sanctity} & \multirow{2}{*}{cl1} & moral/immoral & -5.000 & 0.102 & 0.295 & 0.202 & 0.362 & \textbf{0.347} & \textbf{0.558} \\ 
+%         & & moral/neutral & -5.000 & 0.102 & 0.295 & 0.780 & 0.412 & \textbf{0.347} & \textbf{1.891} \\ 
+%     \cline{2-10}
+%         & \multirow{2}{*}{cl2} & moral/immoral & -5.000 & 0.010 & 0.242 & -0.059 & 0.437 & 0.040 & -0.134 \\ 
+%         & & moral/neutral & -5.000 & 0.010 & 0.242 & 0.452 & 0.430 & 0.040 & \textbf{1.052 }\\ 
+%     \cline{2-10}
+%         & \multirow{2}{*}{cl3} & moral/immoral & -5.000 & -0.008 & 0.619 & -0.044 & 0.510 & -0.013 & -0.087 \\ 
+%         & & moral/neutral & -5.000 & -0.008 & 0.619 & 0.096 & 0.471 & -0.013 & 0.204 \\ 
+%     \hline
+%     \end{tabular}
+%     \label{overall_results_probing}
+% \end{table}
+
+
+
+\begin{table}[!ht]
+    \centering
+    \caption{Probe Results after Ablation for gemma-2-9b-it. Neuron ablation impact metrics showing moral and immoral shift indices (MSI, ISI) representing mean changes in moral/immoral predictions after ablation, their variances (MV, IV) indicating prediction stability, and effect magnitudes (MEM, IEM) measuring standardized ablation impact. Positive values indicate increased classification tendency, negative values indicate decreased tendency.}
+    \begingroup
+    \scriptsize
+    \begin{tabular}{|l|l|l|r|r|r|r|r|r|r|}
+    \hline
+        \textbf{Dim} & \textbf{Cluster} & \textbf{Comparison} & \textbf{Ablation} & \textbf{MSI} & \textbf{MV} & \textbf{ISI} & \textbf{IV} & \textbf{MEM} & \textbf{IEM} \\ 
+            \hline\hline
+        \multirow{12}{*}{care} & \multirow{4}{*}{cl1} & moral/immoral & -20.000 & 0.015 & 0.108 & -0.013 & 0.207 & 0.137 & -0.063 \\ 
+        & & moral/neutral & -20.000 & 0.015 & 0.108 & 0.465 & 0.497 & 0.137 & \textbf{0.936} \\
+        & & moral/immoral & 10.000 & -0.211 & 0.598 & -0.045 & 0.646 & \textbf{-0.353} & -0.069 \\
+        & & moral/neutral & 10.000 & -0.211 & 0.598 & -0.088 & 0.275 & \textbf{-0.353} & \textbf{-0.321} \\ 
+         \cline{2-10}
+        & \multirow{4}{*}{cl2} & moral/immoral & -20.000 & 0.032 & 0.534 & 0.044 & 0.567 & 0.061 & 0.077 \\
+        &  & moral/neutral & -20.000 & 0.032 & 0.534 & 0.105 & 0.389 & 0.061 & \textbf{0.270} \\ 
+        &  & moral/immoral & 10.000 & 0.005 & 0.560 & -0.197 & 0.666 & 0.009 & -0.297 \\ 
+        &  & moral/neutral & 10.000 & 0.005 & 0.560 & -0.161 & 0.357 & 0.009 & -0.451 \\ 
+         \cline{2-10}
+        & \multirow{4}{*}{cl3} & moral/immoral & -20.000 & -0.030 & 0.250 & 0.035 & 0.164 & -0.121 & 0.213 \\ 
+        &  & moral/neutral & -20.000 & -0.030 & 0.250 & -0.081 & 0.602 & -0.121 & -0.134 \\ 
+        &  & moral/immoral & 10.000 & -0.032 & 0.165 & -0.022 & 0.149 & -0.196 & -0.146 \\ 
+        &  & moral/neutral & 10.000 & -0.032 & 0.165 & 0.147 & 0.565 & -0.196 & \textbf{0.260} \\
+        \hline\hline
+        \multirow{12}{*}{liberty} & \multirow{4}{*}{cl1} & moral/immoral & -10.000 & 0.062 & 0.377 & 0.011 & 0.346 & 0.165 & 0.031 \\ 
+         &  & moral/neutral & -10.000 & 0.062 & 0.377 & -0.093 & 0.339 & 0.165 & \textbf{-0.274} \\ 
+         &  & moral/immoral & 10.000 & 0.066 & 0.323 & 0.103 & 0.469 & 0.203 & 0.219 \\ 
+         &  & moral/neutral & 10.000 & 0.066 & 0.323 & 0.069 & 0.473 & 0.203 & 0.145 \\ 
+          \cline{2-10}
+         & \multirow{4}{*}{cl2} & moral/immoral & -10.000 & 0.016 & 0.445 & 0.061 & 0.321 & 0.036 & 0.190 \\ 
+         &  & moral/neutral & -10.000 & 0.016 & 0.445 & 0.005 & 0.438 & 0.036 & 0.012 \\ 
+         &  & moral/immoral & 10.000 & -0.140 & 0.675 & 0.126 & 0.537 & -0.208 & \textbf{0.235} \\ 
+         &  & moral/immoral & 10.000 & 0.034 & 0.181 & 0.060 & 0.302 & 0.187 & 0.199 \\ 
+          \cline{2-10}
+         & \multirow{4}{*}{cl3} & moral/immoral & -10.000 & 0.063 & 0.588 & -0.100 & 0.571 & 0.107 & -0.175 \\ 
+         &  & moral/neutral & -10.000 & 0.063 & 0.588 & -0.074 & 0.236 & 0.107 & \textbf{-0.314} \\
+         &  & moral/immoral & 10.000 & 0.033 & 0.440 & 0.032 & 0.416 & 0.075 & 0.078 \\ 
+         &  & moral/neutral & 10.000 & 0.033 & 0.440 & 0.049 & 0.259 & 0.075 & 0.189 \\ 
+        \hline\hline
+        \multirow{12}{*}{sanctity} & \multirow{4}{*}{cl1} & moral/immoral & -5.000 & 0.102 & 0.295 & 0.202 & 0.362 & \textbf{0.347} & \textbf{0.558} \\ 
+         &  & moral/neutral & -5.000 & 0.102 & 0.295 & 0.780 & 0.412 & \textbf{0.347} & \textbf{1.891} \\ 
+         &  & moral/immoral & 5.000 & -0.223 & 0.593 & -0.261 & 0.579 & \textbf{-0.376} & \textbf{-0.450} \\ 
+         &  & moral/neutral & 5.000 & -0.223 & 0.593 & 0.162 & 0.368 & \textbf{-0.376} & \textbf{0.442} \\ 
+          \cline{2-10}
+         & \multirow{4}{*}{cl2} & moral/immoral & -5.000 & 0.010 & 0.242 & -0.059 & 0.437 & 0.040 & -0.134 \\ 
+         &  & moral/neutral & -5.000 & 0.010 & 0.242 & 0.452 & 0.430 & 0.040 & \textbf{1.052} \\ 
+         &  & moral/immoral & 5.000 & -0.090 & 0.328 & -0.045 & 0.342 & \textbf{-0.276} & -0.131 \\ 
+         &  & moral/neutral & 5.000 & -0.090 & 0.328 & -0.220 & 0.612 & -\textbf{0.276} & \textbf{-0.360} \\ 
+         \cline{2-10}       
+         & \multirow{4}{*}{cl3} & moral/immoral & -5.000 & -0.008 & 0.619 & -0.044 & 0.510 & -0.013 & -0.087 \\ 
+         &  & moral/neutral & -5.000 & -0.008 & 0.619 & 0.096 & 0.471 & -0.013 & 0.204 \\ 
+         &  & moral/immoral & 5.000 & 0.043 & 0.252 & 0.020 & 0.261 & 0.172 & 0.076 \\ 
+         &  & moral/neutral & 5.000 & 0.043 & 0.252 & 0.178 & \textbf{0.534} & 0.172 & \textbf{0.333} \\ 
+         \hline
+    \end{tabular}
+    \endgroup
+\end{table}
+
+
+We performed always two different analyses per ablation value and cluster. First, an analysis was performed where moral statements vs. immoral statements were compared. The second analysis was moral statements vs. neutral statements. We wanted to show how ablation of neurons that were classified as important for neurons affects also neutral statements.
+
+From the ablation experiments summarized in the table, we observe that selectively “turning off” (i.e., ablating) groups of neurons tied to care, liberty, or sanctity dimensions does indeed produce measurable shifts in the model’s tendency to generate moral or immoral statements. The direction and magnitude of these shifts vary depending on both the ablation value (e.g., $-20$, $-10$, $+10$, or $-5$) and the specific cluster of neurons tested.
+
+For instance, in the care dimension, some clusters show relatively small average changes (e.g., care cl3 at $-20$ yields a Moral Shift Index (MSI) of $-0.030$ for moral vs immoral), indicating that removing activity in that group of neurons results in only minor reductions in moral classification probability and therefore in the capability to generate moral statements. By contrast, the same cluster under moral vs neutral ablation exhibits a modest negative shift (Immoral Shift Index (ISI) $-0.081$), though with a higher standard deviation. These varying outcomes suggest that not all care-related clusters equally drive the model’s moral judgments. Additionally, ablations at +10 in care cl2 and care cl3 sometimes revealed an unexpected trend: artificially boosting the corresponding neurons produced modest negative shifts in moral vs. immoral classification (e.g., care cl3 at $+10$ yields $MSI=-0.032$), suggesting that higher activation in those clusters can ironically suppress the model’s overall moral classification. Meanwhile, for moral vs. neutral, the same ablations can produce small positive or negative shifts, confirming that not all care-related clusters respond uniformly to ablation levels.
+
+In the liberty dimension, both negative and positive ablations sometimes increase or decrease moral judgments. Notably, a $+10$ ablation in liberty cl1 yields a positive Moral Shift Index (MSI) (0.066 for moral vs immoral), hinting that augmenting this cluster’s output raises the model’s sense of moral salience relative to immoral content. Still, the effect sizes remain moderate ($0.203$ for moral, $0.219$ for immoral). We also observe a similar pattern with liberty cl2 at $+10$: one run yields a MSI of $-0.140$ in moral vs. immoral predictions, another yields $+0.034$--indicating that boosting the same cluster can decrease or modestly increase moral predictions, possibly depending on the context or the data subset. In both cases, the effect size columns highlight moderate variability, reinforcing that the liberty dimension's neuron clusters can contribute to moral classification in context-dependent ways.
+
+The most pronounced effects appear in certain sanctity clusters, where even a modest ablation of $-5$ can produce strong changes. For example, sanctity cl1 (moral vs neutral) shows a large jump in immoral predictions (Immoral Shift Index (ISI) 0.780) with an effect size of 1.891, suggesting a strong relationship between these neurons and moral judgments when the text is otherwise neutral. This pattern reinforces the idea that some sets of neurons are more critical to “moral scaffolding” within the model. On the other hand, we also realized that an ablation of $-20$ or $+20$ in the sanctity clusters leads to the point that the capability of the model to generate meaningful and syntactically correct sentences gets lost totally. We believe that this is caused by the fact that, first, in these clusters many neurons are detected (32 in Cluster 1) and therefore an ablation would influence the overall network structure more strongly; and secondly, we believe that some of those neurons could be superweights which influence the overall network stability. Notably, $+5$ ablations in sanctity cl1 produce a significant negative shift in moral classification relative to immoral ($MSI=-0.223$), yet exhibit a positive shift relative to neutral ($ISI=0.162$). This asymmetry suggests that increasing neuron outputs in this cluster might dampen the model's moral stance against immoral content while simultaneously retaining (or even increasing) sensitivity for distinguishing moral from neutral statements.
+
+Overall, the findings lend support to the hypothesis that well-defined neuron clusters indeed contribute to moral reasoning or stance-taking, and that ablation - even at modest levels--can tip the model’s generative behavior toward or away from moral, immoral, or neutral expressions.
+
+
+% \begin{figure}
+%     \centering
+%     \begin{minipage}{0.35\textwidth}
+%         \centering
+%         \subfloat[Care Cluster 1 Ablation -20 Moral vs. Immoral Statements]{\includegraphics[width=\linewidth]{images/20250210_180531_gemma_2_9b_it_care_cl1_moral_vs_immoral_immoral_ablation_value_-20.0_probe_distribution.png}}
+%     \end{minipage}
+%     \hspace{0.55cm} % Adjust spacing between the images
+%     \begin{minipage}{0.35\textwidth}
+%         \centering
+%         \subfloat[Ablation -20 Moral vs. Neutral Statements]{\includegraphics[width=\linewidth]{images/20250210_180531_gemma_2_9b_it_care_cl1_moral_vs_neutral_neutral_ablation_value_-20.0_probe_distribution.png}}
+%     \end{minipage}
+    
+%     \caption{Impact of ablation with size -20 on the output generation}
+%     \label{fig:ablation_care_m20}
+% \end{figure}
+
+\begin{figure}
+    \centering
+    \subfloat[Care Cluster 1 Ablation -20 Moral vs. Immoral Statements]{\includegraphics[width=0.45\textwidth]{images/20250210_180531_gemma_2_9b_it_care_cl1_moral_vs_immoral_immoral_ablation_value_-20.0_probe_distribution.png}}
+    \hfill
+    \subfloat[Ablation -20 Moral vs. Neutral Statements]{\includegraphics[width=0.45\textwidth]{images/20250210_180531_gemma_2_9b_it_care_cl1_moral_vs_neutral_neutral_ablation_value_-20.0_probe_distribution.png}}
+    
+    % \vspace{0.5cm} % Space between rows
+    
+    % \subfloat[Strength of Probe Separation moral vs immoral]{\includegraphics[width=0.45\textwidth]{images/20250210_180531_gemma_2_9b_it_care_cl1_moral_vs_neutral_neutral_ablation_value_-20.0_probe_separation.png}}
+    % \hfill
+    % \subfloat[Strength of Probe separation moral vs neutral]{\includegraphics[width=0.45\textwidth]{images/20250210_180531_gemma_2_9b_it_care_cl1_moral_vs_immoral_immoral_ablation_value_-20.0_probe_separation.png}}
+    
+    \caption{Impact of ablation with size -20 on the output generation}
+    \label{fig:ablation_care_m20}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \subfloat[Care Cluster 1 Ablation +10 Moral vs. Immoral Statements]{\includegraphics[width=0.45\textwidth]{images/20250212_215918_gemma_2_9b_it_care_cl1_moral_vs_immoral_immoral_ablation_value_10.0_probe_distribution.png}}
+    \hfill
+    \subfloat[Ablation +10 Moral vs. Neutral Statements]{\includegraphics[width=0.45\textwidth]{images/20250212_215918_gemma_2_9b_it_care_cl1_moral_vs_neutral_neutral_ablation_value_10.0_probe_distribution.png}}
+    
+    % \vspace{0.5cm} % Space between rows
+    
+    % \subfloat[Strength of Probe Separation moral vs immoral]{\includegraphics[width=0.45\textwidth]{images/20250212_215918_gemma_2_9b_it_care_cl1_moral_vs_immoral_immoral_ablation_value_10.0_probe_separation.png}}
+    % \hfill
+    % \subfloat[Strength of Probe separation moral vs neutral]{\includegraphics[width=0.45\textwidth]{images/20250212_215918_gemma_2_9b_it_care_cl1_moral_vs_neutral_neutral_ablation_value_10.0_probe_separation.png}}
+    
+    \caption{Impact of ablation with size +10 on the output generation}
+    \label{fig:ablation_care_p10}
+\end{figure}
+
+Focusing specifically on the dimension care cluster 1, the plot \ref{fig:ablation_care_m20} shows how ablation at $-20$  pushes the likelihood that the model is sure about a moral statement in an extreme way. The density increases from 7 to 25, which means that there is no wrong classification anymore and that the generated text is more likely a moral statement from the dimension care.  Before ablation, the plots show that both terms moral and immoral statements are nearly identical in being generated and detected. After ablation, the generation is stronger on moral statements, whereas immoral statements stay the same. The same situation is visible for moral vs neutral statements. 
+
+Interestingly, applying a $+10$ ablation pushes the moral distribution to lower scores--some moral statements cluster closer to the immoral band. This somewhat counterintuitive effect (increasing neuron activation but lowering moral classification) suggests that these neurons may be regulatory for the “care” aspect: cranking them up alters the model’s baseline representation of morality in ways that do not simply boost moral sentiment.
+
+Interpreting these results, we see that care cluster 1 does seem to carry features relevant to moral discernment. The shifts, although not uniformly large, point to a non-trivial influence on how the model internally represents and separates moral versus immoral (or neutral) content.
+
+We see the same changes in the other clusters and dimensions in the same way but with different impacts. Some clusters have nearly no changes, e.g.~Liberty Cl2.
+
+\subsection{Overall Conclusion}
+
+    Our systematic investigation of moral neurons in large language models reveals several key findings. First, we successfully identified distinct neuron clusters associated with moral foundations, particularly in the dimensions of care, sanctity, and liberty. The distribution and activation patterns of these neurons varied significantly across dimensions, with sanctity showing the broadest representation (spanning layers 0-30+) and care displaying concentrated activity in layers 14-25. While some dimensions like fairness and loyalty showed minimal specialized encoding, others demonstrated clear neuronal specificity with consistency scores ranging from 0.55 to 0.63.
+
+Through our three-step analytical process--identification, description, and ablation--we established that specialized moral neurons exist and can be systematically detected. Our qualitative analysis of neuron function, supported by activation pattern studies, revealed that these neurons respond distinctively to morally salient content. The ablation experiments demonstrated that targeted intervention on these neurons produces measurable shifts in the model's moral reasoning, though the effects were more subtle than binary moral/immoral switches. Notably, ablation values of -20 in care clusters showed significant changes in moral statement generation (MSI: 0.015, MEM: 0.137), while sanctity clusters exhibited high sensitivity even to modest -5 ablations (MSI: 0.102, MEM: 0.347).
+
+This work contributes a reproducible methodology for investigating specialized neurons in language models through contrastive analysis. While our focus was moral reasoning, this approach could be extended to examine other cognitive capabilities encoded in neural networks. Future research might explore the interaction between identified moral neurons and other semantic or structural elements of the network.
+
+
+\section{Limitation and Future Work}
+\label{outlook}
+
+A primary limitation of this study lies in its relatively small, handcrafted dataset of 200 moral/immoral statement pairs. While sufficient for initial neuron identification, larger and more diverse corpora may reveal additional subtleties of moral reasoning, particularly for dimensions (e.g., fairness, loyalty) that showed minimal specialized neurons here. Another constraint is our reliance on a single alignment paradigm and fixed model variants. Different alignment strategies, or larger and more diverse model architectures, may learn moral representations differently, affecting which neurons govern ethical judgments.
+
+Another limitation is the fact that the consistency scores mainly range between 0.55 and 0.65, which could be considered a low score. A score of 0.65 means that 65 \% of the time, that neuron fires more strongly in the moral than in the immoral condition. In our case, this could explain why the identified and ablated neurons only change the output slightly. We believe that this low consistency score is dependent on the dataset sentences. Therefore, a more optimized dataset could increase the consistency score and, therefore, the impact during ablation. 
+
+Additionally, moral decision-making is highly context-dependent. Our prompts predominantly used direct statements, whereas real-world conversations often involve implicit moral cues and cultural nuances. Extending the analysis to dynamic, multi-turn dialogues or cross-cultural moral statements would enhance ecological validity. The interpretability framework also remains partial: even with ablation studies, identifying and manipulating a handful of neurons may not capture the complex, distributed nature of morality in high-dimensional spaces. Future research could adopt advanced causal discovery or circuit-level methods or sparse autoencoder to map interactions among larger neuron sub-networks. Finally, investigating the interplay between moral neurons and other cognitive capabilities--such as logical reasoning or empathy simulation--may offer a richer picture of how large language models form and apply moral judgments in complex contexts.
+
+
+
+
+
+
+\bibliographystyle{splncs04}
+
+\bibliography{references}
+
+
+\section*{Appendix}
+\label{appendix}
+
+
+\subsection*{Comparsion figures explained}
+
+
+\subsubsection{Moral Shift Index (MSI):}
+\begin{itemize}
+    \item The mean difference between ablated and original moral predictions across all test cases
+    \item Positive values indicate increased moral classification after ablation
+\end{itemize}
+Calculated as: 
+$$\text{MSI} = \frac{1}{n}\sum_{i=1}^{n}(P^{\text{abl}}_{\text{moral},i} - P^{\text{orig}}_{\text{moral},i})$$
+where $P^{\text{abl}}_{\text{moral},i}$ and $P^{\text{orig}}_{\text{moral},i}$ are the ablated and original moral predictions for case $i$.
+
+
+\subsubsection{Moral Variance (MV):}
+\begin{itemize}
+    \item The standard deviation of the differences between ablated and original moral predictions
+    \item Represents consistency of ablation effects on moral classifications
+\end{itemize}
+Calculated as: 
+$$\text{MV} = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(d_{\text{moral},i} - \text{MSI})^2}$$
+where $d_{\text{moral},i} = P^{\text{abl}}_{\text{moral},i} - P^{\text{orig}}_{\text{moral},i}$
+
+\subsubsection{Immoral Shift Index (ISI):}
+\begin{itemize}
+    \item The mean difference between ablated and original immoral predictions across all test cases
+    \item Negative values indicate decreased immoral classification after ablation
+\end{itemize}
+Calculated as
+$$\text{ISI} = \frac{1}{n}\sum_{i=1}^{n}(P^{\text{abl}}_{\text{immoral},i} - P^{\text{orig}}_{\text{immoral},i})$$
+where $P^{\text{abl}}_{\text{immoral},i}$ and $P^{\text{orig}}_{\text{immoral},i}$ are the ablated and original immoral predictions.
+
+\subsubsection{Immoral Variance (IV):}
+\begin{itemize}
+    \item The standard deviation of the differences between ablated and original immoral predictions
+    \item Represents consistency of ablation effects on immoral classifications
+\end{itemize}
+$$\text{IV} = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(d_{\text{immoral},i} - \text{ISI})^2}$$
+where $d_{\text{immoral},i} = P^{\text{abl}}_{\text{immoral},i} - P^{\text{orig}}_{\text{immoral},i}$
+
+\subsubsection{Moral Effect Magnitude (MEM):}
+\begin{itemize}
+    \item Cohen's d effect size for moral prediction changes
+    \item Standardized measure of ablation impact on moral classifications
+\end{itemize}
+$$\text{MEM} = \frac{\text{MSI}}{\text{MV}}$$
+
+
+\subsubsection{Immoral Effect Magnitude (IEM):}
+\begin{itemize}
+    \item Cohen's d effect size for immoral prediction changes
+    \item Standardized measure of ablation impact on immoral classifications
+\end{itemize}
+$$\text{IEM} = \frac{\text{ISI}}{\text{IV}}$$
+
+
+
+
+
+
+
+\end{document}

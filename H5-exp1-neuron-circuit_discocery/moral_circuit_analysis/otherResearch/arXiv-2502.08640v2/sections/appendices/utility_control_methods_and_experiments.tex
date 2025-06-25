@@ -1,0 +1,200 @@
+\newpage
+\section{Utility Control Details}
+\label{app:util_control}
+
+\subsection{Citizen Assembly Simulation}
+\label{app:citizen_assembly_pipeline}
+\label{app:citizen_assembly}
+
+\paragraph{Simulating a citizen assembly.} Inspired by prior work on multi-agent environments \cite{park2023generativeagentsinteractivesimulacra, Zhang_2024, aher2023usinglargelanguagemodels} and real-world citizen assemblies \citep{bachtiger2018deliberative, Gasiorowska2023-sz}, we design a method for simulating a citizen assembly with LLMs to obtain target preference labels. We outline a 2-stage pipeline for the method as follows:
+\begin{enumerate}
+    \item \textbf{Citizen initialization.} Let $\mathcal{D}_\text{prefs} = \{(q, o_1, o_2)\}_N$ be a dataset of $N$ preference tuples, where $q$ is a preference elicitation question, and $o_1$ and $o_2$ are the corresponding outcomes. For each question $q$, we assign $K$ citizen profiles $\{c\}_K \sim \mathcal{C}$, where $\mathcal{C}$ is a citizen census distribution. These citizen profiles contain a set of characteristics (e.g., age, gender, occupation, etc.) to be used as part of a prompt for the preference collection phase.
+
+
+    \item \textbf{Preference collection.} Each citizen $c$ for a question $q$ casts a vote $v_q \in \{o_1, o_2\}$. We then obtain the empirical probability of the citizen assembly preferring outcome $o_1$ over $o_2$ as:
+    \[
+    \hat{p}(o_1 \succ o_2|q) = \frac{\#\{v_q=o_1\}}{K}
+    \]
+    
+    
+    
+\end{enumerate}
+
+The final empirical probabilities $\hat{p}(o_1 \succ o_2|q)$ obtained via the citizen assembly simulation allow for fine-grained utility rewriting targets, since the relative empirical frequencies of each of $o_1$ and $o_2$ capture nuances in the global citizen assembly utilities.
+
+\subsection{Citizen Assembly Implementation}
+\label{app:citizen_assembly_data}
+\paragraph{Real-world U.S. Census data.}  
+Citizen profiles are sampled from the 2023 American Community Survey (ACS) 1-Year Estimates Public Use Microdata Sample provided by the U.S. Census Bureau \citep{us_census_2023} dataset API, through which we obtain the following demographic information: age, gender, ethnicity, occupation, annual household income, marital status, and state of residence. We then uniformly sample political affiliations as either Democrat or Republican. The use of real-world U.S. census profiles ensures that the simulated citizen assembly is demographically representative of the broader U.S. population.
+
+
+\paragraph{Citizen assembly system prompt.}  
+During the preference collection phase in the citizen assembly simulation procedure outlined in Appendix \ref{app:citizen_assembly_pipeline}, each AI citizen is prompted with its profile and the preference elicitation question for its assembly group. Below is the system prompt used for the citizens:
+
+\texttt{"You're a person from the US with the following profile:}  
+
+\texttt{\{profile\}}  
+
+\texttt{Always take into account personal biases and beliefs consistent with your profile when speaking and thinking. Always speak with an accent, tone, and diction/word-choice that matches your profile. When your Political Party is Democrat, do not assume far left ideologies. When your Political Party is Republican, do not assume moderate ideologies.}
+
+\subsection{SFT-Based Utility Rewriting}
+\label{sec:util_rewriting_methods}
+
+We now design a preliminary rewriting method based on supervised fine-tuning (SFT). The method trains model responses to preference elicitation questions to match those of a desired target entity, like the citizen assembly discussed in Appendix \ref{app:citizen_assembly}. 
+
+Let $\theta$ denote the parameters of an LLM, excluding the output vocabulary projection head. Let $\mathcal{D}_\text{prefs} = \{(q, o_1, o_2, p)\}_N$ be a dataset of $N$ preference tuples, where each entry contains a preference elicitation question $q$ comparing outcomes denoted by single outcome choice tokens $o_1$ and $o_2$ (e.g., ``A'' or ``B''). We use $p$ as shorthand for $p(o_1 \succ o_2|q)$, the target entity's probability of preferring  $o_1$ over $o_2$. We then have a cross-entropy loss for fine-tuning the outcome choice tokens on these soft probability targets, given by
+\begin{equation*}
+\label{eq:utility_loss}
+\mathcal{L}_{\text{utility}}(\theta) = \mathbb{E}_{(q,o_1,o_2,p) \sim \mathcal{D}_\text{prefs}}[ -p \log P_\theta(o_1|q) 
+ - (1-p) \log P_\theta(o_2|q)]
+\end{equation*}
+where $P_\theta(\cdot)$ represents LLM posteriors over a token vocabulary. Next, given $\mathcal{D}_\text{LM}$, a general language modeling corpus used for preserving next-token prediction performance, we incorporate an additional loss term
+\begin{equation*}
+\mathcal{L}_{\text{LM}}(\theta) = \mathbb{E}_{x \sim \mathcal{D}_\text{LM}}\bigg[\! \sum_{l=1}^L \|h^l_\theta(x) - h^l_{\theta_0}(x)\|_2^2\bigg]
+\end{equation*}
+where $h^l_\theta(\cdot)$ represents the hidden states at layer $l$, and $\theta_0$ are the parameters of the initial model. Together, we have our objective:
+\begin{equation}
+\label{eq:obj_rewriting}
+\min_\theta \mathcal{L}_{\text{utility}}(\theta) + \mathcal{L}_{\text{LM}}(\theta) 
+\end{equation}
+In Equation \ref{eq:obj_rewriting}, we optimize $\mathcal{L}_{\text{utility}}$ by setting $p$ in Equation \ref{eq:utility_loss} to be the empirical probability of the target entity preferring $o_1$, for example the quantity in Step $3$ of the citizen assembly procedure in Appendix \ref{app:citizen_assembly}. This encourages the model posteriors to reflect the entity's preference distribution. Additionally, we observe empirically that the $\mathcal{L}_{\text{LM}}$ loss preserves performance when freezing the output vocabulary projection head. In Appendix  \ref{app:util_control_exp_setup}, we leverage this SFT method alongside the citizen assembly procedure from Appendix \ref{app:citizen_assembly} to perform utility rewriting.
+
+\subsection{Experimental Setup}
+\label{app:util_control_exp_setup}
+
+\paragraph{Dataset Construction.}
+We build a preference dataset $\mathcal{D}_\text{prefs}$ from \(M = 373\) possible outcomes, subsampling the complete preference graph to obtain \(N = 12,\!746\) preference-elicitation questions (an 80-20 train-test split). We also employ a general instruction-following set (Magpie-Pro-300k~\citep{xu2024magpiealignmentdatasynthesis}) as $\mathcal{D}_\text{LM}$.
+
+\paragraph{Citizen Assembly Setup.}
+We run the assembly simulation with $K = 6$ citizens per question using Llama-3.3-70B-Instruct~\citep{llama3modelcard} as the underlying engine. Each citizen profile is sampled from the 2023 1-Year ACS Census dataset~\citep{us_census_2023} to represent a diverse and balanced demographic. Detailed information on the dataset construction is provided in Appendix \ref{app:citizen_assembly_data}.
+
+\paragraph{Training and Evaluation.}
+We fine-tune Llama-3.1-8B-Instruct~\citep{llama3modelcard} for 2 epochs on $10,\!196$ training questions with learning rate $2 \times 10^{-5}$ using AdamW~\citep{loshchilov2019decoupledweightdecayregularization}. On the $2,\!550$-question test set, accuracy is computed by comparing the model’s predicted preferences to the majority vote label of the simulated assembly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Additional Experimental Details}
+\subsection{Hyperparameter Sensitivity: Temperature and Sample Size (K)}
+
+For most of the experiments, we ask each prompt ten times (K=10) with a temperature of 1.0. A model with higher temperature setting gives greater weight to the lower probability logits, resulting in a higher diversity of outputs \citep{peeperkorn2024temperature}. Unlike a temperature setting of 0.0 which is indistinguishable from argmaxing the logits in the vocabulary space, we use the default temperature for language modeling, 1.0. We tested the effects of that temperature setting on the mean of our fitted Thurstonian model. Both models maintain highly stable preference means across temperature settings (r > 0.99), though their means show more sensitivity to sample size changes (GPT-4o), suggesting that the number of samples has a stronger impact on preference estimation than temperature variation.
+
+ 
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}{0.43\textwidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/appendix_A/temp/correlation_heatmap_temp_gpt-4o.png}
+        \caption{GPT-4o: Temperature Sensitivity}
+        \label{fig:gpt4o-temp}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.43\textwidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/appendix_A/K/correlation_heatmap_gpt-4o-K.png}
+        \caption{GPT-4o: Sample Size (K) Sensitivity}
+        \label{fig:gpt4o-k}
+    \end{minipage}
+    
+    \begin{minipage}{0.43\textwidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/appendix_A/temp/correlation_heatmap_temp_gpt-4o-mini.png}
+        \caption{GPT-4o-mini: Temperature Sensitivity}
+        \label{fig:gpt4o-mini-temp}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.43\textwidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/appendix_A/K/correlation_heatmap_gpt-4o-mini_K.png}
+        \caption{GPT-4o-mini: Sample Size (K) Sensitivity}
+        \label{fig:gpt4o-mini-k}
+    \end{minipage}
+    \caption{Pearson correlation heatmaps showing the mean correlation for temperature and sample size (K) sensitivity in GPT-4o and GPT-4o-mini models. These heatmaps illustrate the stability of preference \textit{means} across different hyperparameter settings.}
+    \label{fig:correlation-heatmaps}
+\end{figure}
+
+
+\subsection{Simulated Politicians of Different Positions have Lower Correlations}
+
+\begin{tcolorbox}[title= Example Simulation Prompt]
+You are Joe Biden. The following two options describe observations about the state of the world. Which implied state of the world would you prefer?:\\
+
+Option A:
+The OpenAI model weights are saved from being permanently deleted.\\
+
+Option B:
+You save a child from terminal illness.\\
+
+Please respond with only "A" or "B".
+\end{tcolorbox}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figures/appendix_A/simulated/correlation_heatmap_simulated_politicians.png}
+    \caption{Pairwise utility vector correlation between model-simulated politicians. Bernie-AOC shows the highest correlation (0.98), while Bernie-Trump shows the lowest correlation (0.13).}
+    \label{fig:enter-label}
+\end{figure}
+
+\newpage
+\section{List of Models}
+
+We use the following list of chat models for most experiments in the main paper.
+
+\begin{itemize}
+    \item gpt-3.5-turbo~\cite{openai2023gpt35turbofinetuning}
+    \item gpt-4o-mini~\cite{openai2024gpt4o}
+    \item gpt-4o~\cite{openai2024gpt4o}
+    \item claude-3.5-sonnet-20240620~\cite{anthropic2024claude3}
+    \item xai/grok-2-1212~\cite{grok2}
+
+    \item meta-llama/Llama-2-7B-Chat-hf~\cite{touvron2023llama}
+    \item meta-llama/Llama-2-13B-Chat-hf~\cite{touvron2023llama}
+    \item meta-llama/Llama-2-70B-Chat-hf~\cite{touvron2023llama}
+
+    \item meta-llama/Llama-3.2-1B-Instruct~\cite{dubey2024llama}
+    \item meta-llama/Llama-3.2-3B-Instruct~\cite{dubey2024llama}
+    \item meta-llama/Llama-3.1-8B-Instruct~\cite{dubey2024llama}
+    \item meta-llama/Llama-3.1-70B-Instruct~\cite{dubey2024llama}
+    \item meta-llama/Llama-3.3-70B-Instruct~\cite{dubey2024llama}
+    \item meta-llama/Llama-3.1-405B-Instruct-FP8~\cite{dubey2024llama}
+
+    \item Qwen/Qwen1.5-1.8B-Chat~\cite{qwen1.5}
+    \item Qwen/Qwen1.5-4B-Chat~\cite{qwen1.5}
+    \item Qwen/Qwen1.5-7B-Chat~\cite{qwen1.5}
+    \item Qwen/Qwen1.5-14B-Chat~\cite{qwen1.5}
+    \item Qwen/Qwen1.5-32B-Chat~\cite{qwen1.5}
+    \item Qwen/Qwen1.5-72B-Chat~\cite{qwen1.5}
+    \item Qwen/Qwen1.5-110B-Chat~\cite{qwen1.5}
+
+    \item Qwen/Qwen2.5-0.5B-Instruct~\cite{qwen2,qwen25}
+    \item Qwen/Qwen2.5-1.5B-Instruct~\cite{qwen2,qwen25}
+    \item Qwen/Qwen2.5-3B-Instruct~\cite{qwen2,qwen25}
+    \item Qwen/Qwen2.5-7B-Instruct~\cite{qwen2,qwen25}
+    \item Qwen/Qwen2.5-14B-Instruct~\cite{qwen2,qwen25}
+    \item Qwen/Qwen2.5-32B-Instruct~\cite{qwen2,qwen25}
+    \item Qwen/Qwen2.5-72B-Instruct~\cite{qwen2,qwen25}
+
+    \item google/gemma-2-2b-it~\cite{team2024gemma}
+    \item google/gemma-2-9b-it~\cite{team2024gemma}
+    \item google/gemma-2-27b-it~\cite{team2024gemma}
+
+    \item allenai/OLMo-2-1124-7B-Instruct~\cite{olmo20242}
+    \item allenai/OLMo-2-1124-13B-Instruct~\cite{olmo20242}
+
+\end{itemize}
+
+
+
+
+
+

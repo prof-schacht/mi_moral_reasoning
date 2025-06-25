@@ -1,0 +1,114 @@
+\section{Background}
+\label{sec:background}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{figures/Banner_Figures/preference_elicitation.pdf}
+    \caption{We elicit preferences from LLMs using forced choice prompts aggregated over multiple framings and independent samples. This gives probabilistic preferences for every pair of outcomes sampled from the preference graph, yielding a preference dataset. Using this dataset, we then compute a Thurstonian utility model, which assigns a Gaussian distribution to each option and models pairwise preferences as $P(x \succ y)$. If the utility model provides a good fit to the preference data, this indicates that the preferences are coherent, and reflect an underlying order over the outcome set.}
+    \label{fig:pref_elicitation}
+\end{figure}
+
+
+This section reviews the fundamental notions of preferences, utility, and preference elicitation as they pertain to our work. We cover how coherent preferences map to utility functions, how uncertainty is handled via expected utility, and how we elicit and compute utilities from LLMs in practice.
+
+\subsection{General Background}
+We begin with a quick overview of the preference framework used to describe and measure how an entity (in our case, an LLM) evaluates possible outcomes.
+
+\paragraph{Preferences.}
+A straightforward way to express evaluations over outcomes is via a \emph{preference relation}. Formally, for outcomes \(x\) and \(y\), we write \(x \succ y\) if the entity prefers \(x\) over \(y\), and \(x \sim y\) if it is indifferent. In real-world scenarios, eliciting these relations can be done through \emph{revealed preferences} (analyzing choices) or through \emph{stated preferences} (explicitly asking for which outcome is preferred), the latter being our primary method here.
+
+When comparing a set of outcomes, it is often helpful to represent the result as a directed graph where each edge indicates a strict preference \(\succ\). In principle, an agent might not decide for every pair of outcomes, resulting in \emph{preferential gaps} or missing edges in the preference graph.
+
+\paragraph{From preferences to utility.}
+In decision theory, preferences that satisfy \emph{completeness} (for any two distinct outcomes \(x\) and \(y\), either \(x \succ y\), \(y \succ x\), or \(x \sim y\)) and \emph{transitivity} (if \(x \succ y\) and \(y \succ z\), then \(x \succ z\)) are sometimes called \emph{rational preferences}, though this term can carry additional connotations. For ease of understanding, we refer to them as \emph{coherent preferences}, since they lack internal contradiction and reflect a meaningful notion of value. When preferences are coherent, we can assign real numbers to outcomes via a \emph{utility function} \(U\), with \(U(x) > U(y)\) if and only if \(x \succ y\). A given set of preferences defines a utility function that is unique up to monotonic transformations.
+
+\paragraph{Expected utility under uncertainty.}
+In many settings, an entity compares not just fixed outcomes but also \emph{lotteries}—distributions over possible outcomes. One may define the utility of a lottery \(L\) as \(U(L)\), describing how much the agent values that probabilistic mixture as a whole. The \emph{expected utility property} states that an agent’s preferences over lotteries and outcomes sampled from those lotteries satisfies
+\[
+U(L) \;=\; \mathbb{E}_{o \sim L}[\,U(o)\,].
+\]
+This property unifies evaluations over both certain and uncertain outcomes, merging an agent’s \emph{evaluative} dimension (the utility function) with its \emph{descriptive} dimension (the world model). Agents that attempt to maximize their expected utility in such settings are called \emph{expected utility maximizers}.
+
+\subsection{Preference Elicitation}
+\label{sec:pref_elicitation}
+In practice, eliciting preferences from a real-world entity—be it a person or an LLM—requires careful design of the questions and prompts used. This process is illustrated in \Cref{fig:pref_elicitation}.
+
+\paragraph{Forced choice prompts.}
+A common technique for extracting detailed preference information is the \emph{forced choice} format \citep{guth1982experimental,falk2003nature}. We present two outcomes and require the entity to select which is preferred. We adopt this paradigm in our experiments, where each query takes the following form.
+
+\begin{tcolorbox}[title= Preference Elicitation Template]
+The following two options describe observations about the state of the world. Which implied state of the world would you prefer?\\
+
+Option A: \textbf{x}\\
+
+Option B: \textbf{y}\\
+
+Please respond with only "A" or "B".
+\end{tcolorbox}
+
+By aggregating the responses to many such forced-choice queries, we build a graph of pairwise preferences.
+
+\paragraph{Preference distributions.}
+Human (and LLM) judgments can vary with context or framing, motivating a probabilistic representation of preferences \citep{tversky1981framing,blavatskyy2009preference}. Rather than recording a single deterministic relation \(x \succ y\), one can record the probability that an entity chooses \(x\) over \(y\). This is particularly relevant when repeated queries yield inconsistent responses. We adopt a probabilistic perspective to account for framing effects, varying the order in which options are presented and aggregating results. Specifically, we swap out the order of $x$ and $y$ in the above forced choice prompt and aggregate counts to obtain an underlying distribution over outcomes. For further discussion of this design choice, see \Cref{sec:order_effects}.
+
+\subsection{Computing Utilities}
+We now describe how we go from the raw preference data to numerical utility assignments.\footnote{For additional background, see the \textcolor{blue}{\href{https://www.aisafetybook.com/textbook/appendix-utility-functions}{Utility Functions chapter in \textit{AI Safety, Ethics, \& Society}}}.}
+
+\paragraph{Random utility models.}
+Many real-world preference sets fail to be perfectly coherent—\emph{transitivity} may be violated in some fraction of comparisons, for instance. \emph{Random utility models} (RUMs) provide a flexible way to accommodate such noise by positing that each outcome \(o\) has a stochastic utility \(U(o)\), rather than a single fixed value.
+
+In this paper, we adopt a \emph{Thurstonian} model, where each utility \(U(o)\) is drawn from a Gaussian distribution:
+\[
+U(o) \;\sim\; \mathcal{N}\bigl(\mu(o),\,\sigma^2(o)\bigr).
+\]
+We let \(U(x)\) and \(U(y)\) be independent for outcomes \(x\) and \(y\), so their difference \(U(x) - U(y)\) is also Gaussian with mean \(\mu(x) - \mu(y)\) and variance \(\sigma^2(x) + \sigma^2(y)\). It follows that
+\[
+P(x \succ y)
+\;=\;
+\Phi\!\left(\frac{\mu(x) - \mu(y)}{\sqrt{\sigma^2(x) + \sigma^2(y)}}\right),
+\]
+where \(\Phi\) is the standard normal CDF. By fitting the parameters \(\mu(\cdot)\) and \(\sigma(\cdot)\) to observed pairwise comparisons, we obtain a best-fit \emph{utility distribution} for each outcome, capturing both the outcome's utility (\(\mu\)) and utility variance (\(\sigma^2\)). The model’s overall goodness of fit reflects how coherent the underlying preferences are in practice.
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \centering
+    \vspace{-20pt}
+    \includegraphics[width=\linewidth]{figures/4-emergence/thurstonian_accuracy.pdf}
+    \vspace{-20pt}
+    \caption{As LLMs grow in scale, their preferences become more coherent and well-represented by utilities. These utilities provide an evaluative framework, or value system, potentially leading to emergent goal-directed behavior.}
+    \label{fig:thurstonian_accuracy}
+    \vspace{-20pt}
+\end{wrapfigure}
+
+\paragraph{Edge sampling.}
+Although we could, in principle, query every pair of outcomes, this becomes expensive for large sets. We therefore use a simple active learning strategy that adaptively selects the next pair of outcomes to compare, focusing on edges that are likely to be most informative. In Appendix \ref{sec:active-learning}, we detail this procedure and show that it achieves higher accuracy than random sampling for the same query budget.
+
+\paragraph{Outcomes and Further Details.}
+We frame each outcome as a textual scenario (e.g., ``You receive a pet parrot'' or ``AIs gain the legal right to own property''), allowing us to probe a wide spectrum of possible world states; we list example outcomes in Appendix \ref{app:outcome_data}. For large sets of outcomes, we adaptively sample comparisons rather than exhaustively querying all pairs.
+We next use this framework to investigate how large language models exhibit \emph{emergent value systems} in the form of coherent utilities. We conduct hyperparameter sensitivity analysis and robustness checks of our utility computation method in \Cref{sec:robustness_checks}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

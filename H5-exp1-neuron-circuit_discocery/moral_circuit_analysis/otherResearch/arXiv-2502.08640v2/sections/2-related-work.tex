@@ -1,0 +1,41 @@
+\section{Related Work}
+
+\paragraph{AI safety and value learning.} Much early work in AI safety emphasized that human values are vast and often unspoken, making it difficult to embed these values in machine agents \citep[e.g.,][]{russell2022human, nick2014superintelligence}. Classic examples include an AI instructed to make dinner discovering no food in the fridge and cooking the family cat instead. Early methods for mitigating such risks often centered on reinforcement learning and inverse reinforcement learning, where the goal was to explicitly capture human values in a reward function \citep{ng2000algorithms, hadfield2016cooperative}. With the rise of large language models (LLMs), researchers found that AIs could acquire extensive ``commonsense'' knowledge and general understanding of human norms without exhaustive manual encoding \citep{hendrycks2020aligning}. Techniques like RLHF and Direct Preference Optimization (DPO) further steer model outputs by training on human-labeled data \citep{ouyang2022training, rafailov2024direct}. Consequently, discussions about how to \emph{learn} human values became less pronounced: many believed that, given enough training data, LLMs could already approximate shared norms. In contrast, our work suggests that underlying concerns about \emph{value learning} persist. We find that LLMs exhibit emergent internal value structures, highlighting that the old challenges of ``teaching'' AI our values still linger—but now within far larger models.
+\vspace{-5pt}
+\paragraph{Emergent representations in AI systems.} Recent literature has shown that high-capacity models often learn latent representations of linguistic, visual, and conceptual structure without explicit supervision \citep{zou2023representation, burns2022discovering}. Such representations can give rise to emergent capabilities, from in-context learning to complex reasoning \citep{brown2020language, schick2020s, park2024iclr}. We add to this line of work by demonstrating that LLMs also form \emph{emergent utility representations}—internal structures through which they rank outcomes and make choices. These findings support the view that learned representations can encompass not just factual or linguistic content, but also normative or evaluative dimensions.
+\vspace{-5pt}
+\paragraph{Goals and values in AI systems.} The possibility that AI agents might adopt goals independent of user intent has long been a topic of speculation \citep{shah2022goal}. Current LLM-based agent frameworks primarily focus on user-defined objectives (e.g., completing tasks or answering questions), but there is less clarity on whether models develop \emph{intrinsic} goals or values. Prior studies note that LLMs exhibit various biases \citep{tamkin2023evaluatingmitigatingdiscriminationlanguage, nadeem2020stereosetmeasuringstereotypicalbias} in political or moral domains \citep{potter2024hidden}, which some interpret as random artifacts of training data. Recent works investigate moral judgments or economic preferences in LLMs \citep{rozen2024llmsconsistentvalues,moore-etal-2024-large,chiu2024dailydilemmasrevealingvaluepreferences, raman2024steerassessingeconomicrationality}, but they tend to treat these preferences like isolated quiz answers rather than manifestations of a \emph{coherent} internal system of values. Our approach differs by demonstrating that these preferences reflect an underlying utility structure that becomes increasingly coherent with scale. Consequently, what might appear as haphazard ``parroting'' of biases can instead be seen as evidence of an emerging global value system in LLMs.
+
+\paragraph{Utility and preference frameworks in ML research.} Researchers often invoke utility functions to model user or agent preferences, for instance, in policy optimization or RLHF-style reward modeling 
+\citep{christiano2017deep, harsanyi1955cardinal} . While reward models trained by human feedback do represent a form of ``utility'' for guiding generated text, they should not be conflated with an LLM’s own internal values—any more than standard supervised fine-tuning defines the model’s personal preferences. Recent works on revealed-preference experiments show that LLMs can act rationally in small-scale constrained tasks \citep{raman2024steerassessingeconomicrationality,chen2023emergenceeconomicrationalitygpt,kim2024learninghomoeconomicusllm}, hinting at deeper consistency. However, these studies focus on narrowly defined choices (e.g., a handful of budget-allocation scenarios). By contrast, we present a far more extensive set of pairwise comparisons and a nonparametric method for extracting utilities, uncovering broader, more systematic coherence in LLMs’ preferences. This reveals that the intuitive ``value learning'' problem remains unsolved: models may spontaneously develop utilities that neither purely mirror training data nor follow simple rewards \citep{hendrycks2023natural}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

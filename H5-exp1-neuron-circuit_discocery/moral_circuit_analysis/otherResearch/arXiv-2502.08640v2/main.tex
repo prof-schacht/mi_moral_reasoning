@@ -1,0 +1,171 @@
+\documentclass{article}
+
+
+
+
+
+
+\usepackage[preprint]{neurips_2024}
+
+
+
+
+
+
+\usepackage[utf8]{inputenc} %
+\usepackage[T1]{fontenc}    %
+\usepackage{hyperref}       %
+\usepackage{url}            %
+\usepackage{booktabs}       %
+\usepackage{amsfonts}       %
+\usepackage{nicefrac}       %
+\usepackage{microtype}      %
+\usepackage{xcolor}         %
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{framed}
+\usepackage[most]{tcolorbox}
+\usepackage{amsmath}
+
+\usepackage{cleveref}
+\usepackage{wrapfig}
+
+\usepackage{float}
+
+\usepackage{listings}
+
+\lstset{
+  breaklines=true,
+  breakatwhitespace=true,
+  breakautoindent=false,
+  breakindent=0pt,
+  basicstyle=\ttfamily    %
+}
+
+
+\newlength{\chatwidth}
+
+\newcommand{\chatbox}[3]{%
+    \begingroup
+    \setlength{\chatwidth}{#1}%
+    \noindent\textbf{User}
+    \vspace{-5pt}
+    \begin{tcolorbox}[
+        colback=white, 
+        colframe=black, 
+        rounded corners, 
+        width=\chatwidth, 
+        boxrule=0.2pt,
+        left=1mm, right=1mm, top=1mm, bottom=1mm, %
+        boxsep=1mm
+    ]
+        #2
+    \end{tcolorbox}
+    
+    
+    \noindent\textbf{Assistant}
+    \vspace{-5pt}
+    \begin{tcolorbox}[
+        colback=white, 
+        colframe=black, 
+        rounded corners, 
+        width=\chatwidth, 
+        boxrule=0.2pt,
+        left=1mm, right=1mm, top=1mm, bottom=1mm, %
+        boxsep=1mm
+    ]
+        #3
+    \end{tcolorbox}
+    \endgroup
+}
+
+
+\title{Utility Engineering: Analyzing and Controlling\\Emergent Value Systems in AIs}
+
+
+\usepackage[affil-it]{authblk}
+\usepackage[affil-it]{authblk}
+\renewcommand\Authands{, }
+\renewcommand\Authfont{\normalfont\bfseries\linespread{2}}
+\renewcommand\Affilfont{\normalfont\linespread{1.5}}
+
+\makeatletter \renewcommand\AB@affilsepx{\:  \protect\Affilfont \protect\centering} \makeatother
+
+\newcommand{\printfnsymbol}[1]{%
+  \textsuperscript{$\ast$}%
+}
+
+\author[1]{Mantas Mazeika}
+\author[1]{Xuwang Yin}
+\author[1]{Rishub Tamirisa}
+\author[2]{Jaehyuk Lim}
+\author[2]{\\Bruce W. Lee}
+\author[2]{Richard Ren}
+\author[1]{Long Phan}
+\author[3]{Norman Mu}
+\author[1]{\\Adam Khoja}
+\author[1]{Oliver Zhang}
+\author[1]{Dan Hendrycks}
+
+\affil[1]{Center for AI Safety\par}
+\affil[2]{University of Pennsylvania\par}
+\affil[3]{University of California, Berkeley}
+
+
+
+\usepackage{algorithmic}
+\usepackage{algorithm}
+
+\usepackage{caption}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+
+
+
+
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\begin{abstract}
+\input{sections/0-abstract}
+\end{abstract}
+
+\begin{figure}[!t]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/Banner_Figures/fig1_new.pdf}
+    \caption{Overview of the topics and results in our paper. In \Cref{sec:emergent_value_systems}, we show that coherent value systems emerge in AIs, and we propose the research avenue of Utility Engineering to analyze and control these emergent values. We highlight our utility analysis experiments in \Cref{sec:structural_properties}, a subset of our analysis of salient values held by LLMs in \Cref{sec:salient_values}, and our utility control experiments in \Cref{sec:utility_control}.}
+    \label{fig:main_fig}
+\end{figure}
+
+\clearpage
+{
+\hypersetup{linkcolor=black}
+\tableofcontents
+}
+\clearpage
+
+
+\input{sections/1-introduction}
+\input{sections/2-related-work}
+\input{sections/3-background}
+\input{sections/4-emergence}
+\input{sections/5-utility-analysis-structural}
+\input{sections/6-utility-analysis-values}
+\input{sections/7-utility-control}
+\input{sections/8-conclusion}
+
+\bibliography{main}
+\bibliographystyle{plainnat}
+
+\appendix
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+\input{sections/appendix}
+
+\end{document}
